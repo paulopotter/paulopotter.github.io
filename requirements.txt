@@ -1,0 +1,14 @@
+pelican
+Markdown
+typogrify
+feedgenerator
+jinja2
+pygments
+docutils
+pytz
+blinker
+unidecode
+MarkupSafe
+python-dateutil
+ghp-import
+beautifulsoup4
