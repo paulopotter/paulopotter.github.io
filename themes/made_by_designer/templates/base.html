@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  <meta charset="utf-8" />
+  <title>---{% block title %}{% endblock %}{{ SITENAME }}</title>
+
+  {% block meta %}
+    <meta name="keywords" content="1231">
+    <meta name="description" content="{{ SITEDESCRIPTION }}">
+    <meta name="author" content="{{ AUTHOR }}">
+    <meta name="robots" content="">
+  {% endblock %}
+
+  {% block css_top %}
+  {% endblock css_top %}
+
+  {% block js_top %}
+  {% endblock %}
+</head>
+<body>
+  <header class='header_site' id="start-page">
+    <div class="column_wrapper header_site--wrapper">
+      <p class="header_site--menu"><span class="menu-anchor">Menu</span></p>
+      <h1 class="header_site--title">
+        {% block header_site %}
+          <a href="{{ SITEURL }}" class="header_site--title-link">{{ SITENAME }}</a>
+        {% endblock header_site %}
+      </h1>
+
+      <ul class="header_site-social">
+        {% for name, link in SOCIAL %}
+          <li class="header_site-social--item">
+            <a class="header_site-social--item-link logo-{{ name }}" href="{{ link }}" target="_blank">
+              <i class="header_site-social--item-text">{{ name }}</i>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </header>
+
+  <menu class="site_menu">
+    <form action=""><input type="text"></form>
+    <ul class="site_menu--list">
+        <li class='site_menu--list-item'>
+          <a href="{{ SITEURL }}/">/home</a>
+        </li>
+        {% for page in pages|sort(attribute='title') %}
+          <li class='site_menu--list-item'>
+            <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+  </menu>
+
+
+<div class="wrapper_site">
+  <div class="wrapper_site--content column_wrapper" id="start-site">
+    {% block content %}
+    {% endblock content %}
+  </div>
+</div>
+
+<div class='footer_float'>
+  <div class="column_wrapper footer_float--wrapper">
+    {% block footer_float %}
+      <p class="footer_float--menu">
+        <span class="menu-anchor">Menu</span>
+      </p>
+
+      <p class="footer_float--title">
+        {% block footer_float_title %}
+          <a href="#start-site">
+                {{ SITENAME }}
+          </a>
+        {% endblock footer_float_title %}
+      </p>
+
+      <ul class="footer_float--social">
+        {% block footer_float_social %}
+            {% for name, link in SOCIAL %}
+              <li class="footer_float--social-item">
+                <a class="footer_float--social-item-link logo-{{ name }}" href="{{ link }}" target="_blank">
+                  <i class="footer_float--social-item-text">{{ name }}</i>
+                </a>
+              </li>
+            {% endfor %}
+        {% endblock footer_float_social %}
+      </ul>
+
+    {% endblock footer_float %}
+  </div>
+</div>
+
+</body>
+
+{% block css_bottom %}{% endblock css_bottom %}
+
+{% block js_bottom %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/menu.js"></script>
+  <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/float-footer.js"></script>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77202031-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+{% endblock %}
+</html>

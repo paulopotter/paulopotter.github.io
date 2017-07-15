@@ -1,0 +1,41 @@
+{% extends "./base.html" %}
+
+{% block css_top %}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL}}{{ THEME_STATIC_URL }}/css/index.css"/>
+{% endblock css_top %}
+
+{% block content %}
+    <section class="home_content column_wrapper">
+      {% for article in articles_page.object_list %}
+        <article class='home_content--article'>
+          <header class="home_content--article-header">
+
+            <p class="home_content--article-header-category">
+              <a href="{{ SITEURL }}/{{ article.category.url }}" class='home_content--article-header-category-link logo-{{article.category|lower}}'>
+                <span class="home_content--article-header-category-tooltip">{{ article.category|upper }}</span>
+              </a>
+            </p>
+
+            <h2 class='home_content--article-header-title'>
+              <a href="{{ SITEURL }}/{{ article.url }}" class='home_content--article-header-title-link'>{{ article.title }}</a>
+            </h2>
+          </header>
+
+          <div class='home_content--article-body'>
+            {% if summarise or article.metadata['summary'] or article.metadata['summarize'] %}
+              {{ article.summary }}
+            {% else %}
+              {{ article.content }}
+            {% endif %}
+
+          </div>
+
+          <footer class="home_content--article-footer">
+            {% if summarise or article.metadata['summary'] or article.metadata['summarize'] %}
+                <a class="home_content--article-body-link_more" href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">Continue lendo...</a>
+            {% endif %}
+          </footer>
+        </article>
+      {% endfor %}
+    </section>
+{% endblock %}
