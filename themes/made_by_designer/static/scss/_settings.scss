@@ -13,7 +13,7 @@ $letter-spacing: 0.05em;
 
 // Font families
 
-$font-primary: 'Montserrat-bold', sans-serif;
+$font-primary: 'Montserrat', sans-serif;
 $font-secondary: 'Bitter', serif;
 $font-mono: "Consolas", monospace;
 $font-print-primary: "Georgia", "Times New Roman", "Times", serif;
@@ -111,7 +111,8 @@ $colors: (
     "primary":   #68757e,
     "secondary": #6f11fb,
     "heading":   #384a56,
-    "inverted":  white
+    "inverted":  white,
+    "dated":     #a8b3ba
   ),
 
   background: (
