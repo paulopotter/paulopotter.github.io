@@ -10,8 +10,10 @@ SITEURL = ''
 # SITEURL = 'https://umdevqualquer.com.br'
 
 PATH = 'content'
-TIMEZONE = u'America/Sao_Paulo'
+LOCALE = ('bra', 'pt_BR')
 DEFAULT_LANG = u'pt_BR'
+TIMEZONE = u'America/Sao_Paulo'
+DEFAULT_DATE_FORMAT = ('%d %b %Y')
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
