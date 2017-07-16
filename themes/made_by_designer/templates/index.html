@@ -5,9 +5,9 @@
 {% endblock css_top %}
 
 {% block content %}
-    <section class="home_content column_wrapper">
+    <section class="home_content column_wrapper" grid="row justify-around stretch">
       {% for article in articles_page.object_list %}
-        <article class='home_content--article'>
+        <article class='home_content--article' column="3 +1">
           <header class="home_content--article-header">
 
             <p class="home_content--article-header-category">
@@ -22,18 +22,11 @@
           </header>
 
           <div class='home_content--article-body'>
-            {% if summarise or article.metadata['summary'] or article.metadata['summarize'] %}
               {{ article.summary }}
-            {% else %}
-              {{ article.content }}
-            {% endif %}
-
           </div>
 
           <footer class="home_content--article-footer">
-            {% if summarise or article.metadata['summary'] or article.metadata['summarize'] %}
-                <a class="home_content--article-body-link_more" href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">Continue lendo...</a>
-            {% endif %}
+            {{ article.date }}
           </footer>
         </article>
       {% endfor %}

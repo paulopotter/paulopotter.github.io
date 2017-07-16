@@ -3,7 +3,9 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Paulo Oliveira'
-SITENAME = u'Um dev qualquer || Paulo Oliveira'
+SITE_BAR_TITLE = u'Paulo Oliveira || Um dev qualquer'
+SITENAME = u'Paulo Oliveira'
+SITE_NAME_SUBTITLE = u'Full stack web Developer'
 SITEURL = ''
 # SITEURL = 'https://umdevqualquer.com.br'
 
@@ -33,4 +35,19 @@ SLUGIFY_SOURCE = 'title'
 THEME = u'./themes/made_by_designer'
 DEFAULT_CATEGORY = 'Sem categoria'
 THEME_STATIC_URL = u'/theme'
-# THEME_STATIC_URL = THEME + u'/static'
+
+# Disqus
+DISQUS_SITENAME = u'umdevqualquer'
+DISQUS_SECRET_KEY = u'XdODToOxeAJ9o3hRoTPjx78PZZm0WcTtowolBCStey0men2ufj9UIXHxuXmhWf74'
+DISQUS_PUBLIC_KEY = u'KQs0QcpVN6AoH9AqAPSGj7qmPQDB7RmGSdvEizPYkEM6452phejHRUSfKkprC5Qi'
+
+# Plugins
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['summary']
+
+# Markdown Extensions
+MARKDOWN_EXTENSIONS = [
+    'codehilite(css_class=highlight, linenums=True, use_pygments=True)',
+    'extra'
+]
+

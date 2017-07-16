@@ -2,13 +2,19 @@
 <html lang="{{ DEFAULT_LANG }}">
 <head>
   <meta charset="utf-8" />
-  <title>---{% block title %}{% endblock %}{{ SITENAME }}</title>
+  <title>{% block title %}{% endblock %}{{ SITE_BAR_TITLE }}</title>
 
   {% block meta %}
     <meta name="keywords" content="1231">
     <meta name="description" content="{{ SITEDESCRIPTION }}">
     <meta name="author" content="{{ AUTHOR }}">
     <meta name="robots" content="">
+  {% endblock %}
+
+  {% block css_vendor_top%}
+    {# <link href="https://cdn.concisecss.com/concise.min.css" rel="stylesheet" /> #}
+    <link href="./{{ THEME_STATIC_DIR }}/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
   {% endblock %}
 
   {% block css_top %}
@@ -18,12 +24,14 @@
   {% endblock %}
 </head>
 <body>
-  <header class='header_site' id="start-page">
-    <div class="column_wrapper header_site--wrapper">
-      <p class="header_site--menu"><span class="menu-anchor">Menu</span></p>
+  <header class='header_site' id="start-page" container>
+    <div class="header_site--wrapper">
+      {# <p class="header_site--menu"><span class="menu-anchor">Menu</span></p> #}
       <h1 class="header_site--title">
         {% block header_site %}
-          <a href="{{ SITEURL }}" class="header_site--title-link">{{ SITENAME }}</a>
+          <a href="{{ SITEURL }}" class="header_site--title-link">
+            <span class="header_site--title-name">{{ SITENAME }}</span> {{ SITE_NAME_SUBTITLE }}
+            </a>
         {% endblock header_site %}
       </h1>
 
@@ -40,6 +48,7 @@
     </div>
   </header>
 
+  {#
   <menu class="site_menu">
     <form action=""><input type="text"></form>
     <ul class="site_menu--list">
@@ -53,16 +62,17 @@
         {% endfor %}
       </ul>
   </menu>
+   #}
 
 
-<div class="wrapper_site">
+<div class="wrapper_site" container>
   <div class="wrapper_site--content column_wrapper" id="start-site">
     {% block content %}
     {% endblock content %}
   </div>
 </div>
 
-<div class='footer_float'>
+{# <div class='footer_float'>
   <div class="column_wrapper footer_float--wrapper">
     {% block footer_float %}
       <p class="footer_float--menu">
@@ -91,7 +101,7 @@
 
     {% endblock footer_float %}
   </div>
-</div>
+</div> #}
 
 </body>
 
@@ -99,8 +109,8 @@
 
 {% block js_bottom %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/menu.js"></script>
-  <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/float-footer.js"></script>
+  {#<script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/menu.js"></script>
+  <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/float-footer.js"></script>#}
 
 
   <script>
