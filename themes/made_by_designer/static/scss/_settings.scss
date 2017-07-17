@@ -39,6 +39,7 @@ $transition-duration: 150ms;
 @custom-media --only-small (480px < width <= 768px);
 @custom-media --only-medium (768px < width <= 980px);
 @custom-media --only-large (980px < width <= 1100px);
+@custom-media --extra-large-down (width <= 1100px);
 
 // Spacing variables
 $spacing-xs: 0.5lh;

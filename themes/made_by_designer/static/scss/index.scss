@@ -1,7 +1,15 @@
-@import "base";
+@import "./base";
 
+
+@media (max-width: 1130px) {
+    .home_content {
+        margin: auto auto 1rem;
+        justify-content: center;
+    }
+}
 .home_content {
     flex-wrap: wrap;
+    margin-bottom: 1rem;
 
     &--article {
         background-color: #ffffff;
@@ -9,6 +17,9 @@
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
+        min-width: 350px;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
 
         &-header {
             margin: 1rem 0;

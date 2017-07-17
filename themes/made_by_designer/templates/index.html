@@ -5,9 +5,9 @@
 {% endblock css_top %}
 
 {% block content %}
-    <section class="home_content column_wrapper" grid="row justify-around stretch">
+    <section class="home_content column_wrapper" grid="row justify-between stretch">
       {% for article in articles_page.object_list %}
-        <article class='home_content--article' column="3 +1">
+        <article class='home_content--article' column="2">
           <header class="home_content--article-header">
 
             <p class="home_content--article-header-category">
