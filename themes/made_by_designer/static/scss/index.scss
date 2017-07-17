@@ -1,7 +1,7 @@
 @import "./base";
 
 
-@media (max-width: 1130px) {
+@media (max-width: 1157px) {
     .home_content {
         margin: auto auto 1rem;
         justify-content: center;
@@ -17,9 +17,10 @@
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
-        min-width: 350px;
+        min-width: 370px;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
+        padding: 1rem 2rem;
 
         &-header {
             margin: 1rem 0;
