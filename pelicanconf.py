@@ -45,7 +45,11 @@ DISQUS_PUBLIC_KEY = u'KQs0QcpVN6AoH9AqAPSGj7qmPQDB7RmGSdvEizPYkEM6452phejHRUSfKk
 
 # Plugins
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['summary']
+PLUGINS = [
+    'summary',
+    'series',
+    'related_posts'
+]
 
 # Markdown Extensions
 MARKDOWN_EXTENSIONS = [
