@@ -13,7 +13,6 @@
   {% endblock %}
 
   {% block css_vendor_top%}
-    {# <link href="https://cdn.concisecss.com/concise.min.css" rel="stylesheet" /> #}
     <link href="./{{ THEME_STATIC_DIR }}/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
   {% endblock %}
@@ -73,56 +72,7 @@
   </div>
 </div>
 
-{# <div class='footer_float'>
-  <div class="column_wrapper footer_float--wrapper">
-    {% block footer_float %}
-      <p class="footer_float--menu">
-        <span class="menu-anchor">Menu</span>
-      </p>
-
-      <p class="footer_float--title">
-        {% block footer_float_title %}
-          <a href="#start-site">
-                {{ SITENAME }}
-          </a>
-        {% endblock footer_float_title %}
-      </p>
-
-      <ul class="footer_float--social">
-        {% block footer_float_social %}
-            {% for name, link in SOCIAL %}
-              <li class="footer_float--social-item">
-                <a class="footer_float--social-item-link logo-{{ name }}" href="{{ link }}" target="_blank">
-                  <i class="footer_float--social-item-text">{{ name }}</i>
-                </a>
-              </li>
-            {% endfor %}
-        {% endblock footer_float_social %}
-      </ul>
-
-    {% endblock footer_float %}
-  </div>
-</div> #}
+{% extends './_footer.html' %}
 
 </body>
-
-{% block css_bottom %}{% endblock css_bottom %}
-
-{% block js_bottom %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  {#<script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/menu.js"></script>
-  <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/float-footer.js"></script>#}
-
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-77202031-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-{% endblock %}
 </html>
