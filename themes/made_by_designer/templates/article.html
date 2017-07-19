@@ -1,0 +1,53 @@
+{% extends '_base.html' %}
+
+{% block title %}
+{{ article.title|striptags|e }} - {{ super() }}
+
+{% endblock title %}
+
+{% block css_top %}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL}}{{ THEME_STATIC_URL }}/css/article.css"/>
+{% endblock css_top %}
+
+{% block content %}
+    <section class="article_content" container>
+        <article class="article_content-body">
+            <h1 class="article_content-title">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %}</h1>
+
+            <div class="article_content-content">
+                {{ article.content }}
+            </div>
+
+            {% if article.series %}
+                <div class="article_content-series">
+                        <p>Este post é a parte {{ article.series.index }} da serie "{{ article.series.name }}"</p>
+                        <ol class="parts">
+                            {% for part_article in article.series.all %}
+                            <p>
+
+                                <span>PARTE {{ part_article.series.index }}: </span>
+                                {% if part_article == article %}
+                                    <b>{{ part_article.title }}</b>
+                                {% else %}
+                                    <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+                                </li>
+                                {% endif %}
+                            </p>
+                            {% endfor %}
+                        </ol>
+                </div>
+            {% endif %}
+
+            {% if article.related_posts %}
+                <div class="related_post">
+                    Posts Relacionados:
+                        <ul>
+                        {% for related_post in article.related_posts %}
+                            <li><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></li>
+                        {% endfor %}
+                        </ul>
+                </div>
+            {% endif %}
+        </article>
+    </section>
+{% endblock %}
