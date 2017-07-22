@@ -39,4 +39,12 @@
             }
         }
     }
+
+    &-related_post {
+        &--title {
+            text-transform: uppercase;
+            margin-top: 1em;
+            color: getColor(text, related)
+        }
+    }
 }
