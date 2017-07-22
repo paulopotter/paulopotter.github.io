@@ -1,4 +1,5 @@
 {% extends '_base.html' %}
+{% from './includes/_disqus.html' import disqus_misc_scripts as disqus_comments_script, disqus_comments_script with context %}
 
 {% block title %}
 {{ article.title|striptags|e }} - {{ super() }}
@@ -50,4 +51,13 @@
             {% endif %}
         </article>
     </section>
+
+    <section class="article_comments" container>
+        {{ disqus_comments_script(article.title|striptags|e) }}
+    </section>
+{% endblock %}
+
+{% block js_bottom %}
+    {{ super() }}
+    {{ disqus_misc_scripts }}
 {% endblock %}
