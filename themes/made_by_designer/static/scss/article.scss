@@ -3,14 +3,40 @@
 .article_content {
     background-color: #ffffff;
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.05);
-    margin-top: 1rem;
-    min-width: 400px;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 1rem 2rem;
+    margin: 1rem 0.5rem;
+    padding: 1rem 0;
+
+    &-body {
+        min-width: 90vw;
+        min-height: 85vh;
+        padding: 0 2rem;
+    }
 
     &-series,
     &-related_post{
         margin-top: .5em;
+    }
+
+    &-series {
+        border: 1px dashed;
+        display: inline-block;
+        padding: 8px;
+        margin-left: 1em;
+
+        &--title {
+            font-style: italic;
+        }
+
+        &--name {
+            font-weight: 700;
+        }
+
+        &--parts {
+            margin-left: 1rem;
+
+            li {
+                line-height: 2;
+            }
+        }
     }
 }

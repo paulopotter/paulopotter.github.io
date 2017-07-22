@@ -18,12 +18,12 @@
                 {{ article.content }}
             </div>
 
-            {% if article.series %}
+            {% if article.series and article.series.all|length > 1 %}
                 <div class="article_content-series">
-                        <p>Este post é a parte {{ article.series.index }} da serie "{{ article.series.name }}"</p>
-                        <ol class="parts">
+                        <p class='article_content-series--title'>Este post é a parte <b>{{ article.series.index }}</b> da serie "<span class="article_content-series--name">{{ article.series.name }}</span>"</p>
+                        <ul class="article_content-series--parts">
                             {% for part_article in article.series.all %}
-                            <p>
+                            <li>
 
                                 <span>PARTE {{ part_article.series.index }}: </span>
                                 {% if part_article == article %}
@@ -32,7 +32,7 @@
                                     <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
                                 </li>
                                 {% endif %}
-                            </p>
+                            </li>
                             {% endfor %}
                         </ol>
                 </div>
