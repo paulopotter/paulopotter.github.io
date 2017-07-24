@@ -1,0 +1,35 @@
+@import "./base";
+
+.author_content {
+    background-color: #ffffff;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.05);
+    margin: 1rem 0.5rem;
+    padding: 1rem 0;
+
+    &-body {
+        min-width: 90vw;
+        min-height: 85vh;
+        padding: 0 2rem;
+    }
+
+}
+
+.about-me--image {
+     border-radius: 50%;
+     display: block;
+     margin: auto;
+ }
+ h2 {
+     display: block;
+     text-align: center;
+     margin-top: 5px;
+ }
+ h3 {
+     display: block;
+     text-align: center;
+     font-style: italic;
+     font-size: 14px;
+ }
+ .about-me__section--block {
+     padding-top: 10px;
+ }

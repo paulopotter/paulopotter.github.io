@@ -1,0 +1,78 @@
+{% extends "./_base.html" %}
+
+{% block css_top %}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL}}{{ THEME_STATIC_URL }}/css/author.css"/>
+{% endblock css_top %}
+
+
+{% block js_top %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+    <section class="author_content" container >
+
+        <div class="author_content-body">
+
+
+            <header>
+                    <img src="#" width="150" height="150" class='author--image about-me--image' id="authorImage">
+
+                    <h2>Paulo Oliveira</h2>
+                    <h3>Trabalhando há 3 anos na <a href="http://globo.com">globo.com</a>.</h3>
+                </header>
+
+                <section>
+                    <h4>Sobre mim:</h4>
+                    <div class="about-me__section--block">
+                        <div class="about-me__section--title">Experiência</div>
+                        <ul class="about-me__section--list">
+                            <li class="about-me__list--item">Desenvolvedor Full-stack: Globo.com</li>
+                            <li class="about-me__list--item">Estagiário de Desenvolvimento web: Globo.com [2013 - 2015]</li>
+                            <li class="about-me__list--item">Estagiário de Desenvolvimento web: MSA RH Consultoria [2012 - 2013]</li>
+                        </ul>
+                    </div>
+                    <div class="about-me__section--block">
+                        <div class="about-me__section--title">Skills</div>
+                        <ul class="about-me__section--list">
+                            <li class="about-me__list--item">Python</li>
+                            <li class="about-me__list--item">Javascript</li>
+                            <li class="about-me__list--item">HTML (5)</li>
+                            <li class="about-me__list--item">CSS (3)</li>
+                            <li class="about-me__list--item">PHP</li>
+                        </ul>
+                    </div>
+                    <div class="about-me__section--block">
+                        <div class="about-me__section--title">Educação</div>
+                        <ul class="about-me__section--list">
+                            <li class="about-me__list--item">Sistema da Informação: Universidade Estácio de Sá - [2016 - Atual]</li>
+                            <li class="about-me__list--item">Ciência da Computação: UEZO - Centro Universitário Estadual da Zona Oeste - [2010 - 2016]</li>
+                        </ul>
+                    </div>
+                    <div class="about-me__section--block">
+                        <div class="about-me__section--title">Contatos</div>
+                        <ul class="about-me__section--list">
+                            <li class="about-me__list--item"><a href="https://br.linkedin.com/in/paulofrauches">LinkedIn</a></li>
+                            <li class="about-me__list--item"><a href="https://github.com/paulopotter">Github</a></li>
+                        </ul>
+                    </div>
+                </section>
+        </div>
+
+    </section>
+
+{% endblock %}
+
+{% block js_bottom %}
+    {{ super() }}
+
+    <script>
+        function changeImg( profile ) {
+            document.getElementById("authorImage").src = profile.entry[0].thumbnailUrl
+        }
+
+    </script>
+    <script src="http://pt.gravatar.com/{{ HASH_GRAVATAR }}.json?callback=changeImg" type="text/javascript">
+    </script>
+{% endblock %}
