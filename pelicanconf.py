@@ -6,8 +6,10 @@ AUTHOR = u'Paulo Oliveira'
 SITE_BAR_TITLE = u'Paulo Oliveira || Um dev qualquer'
 SITENAME = u'Paulo Oliveira'
 SITE_NAME_SUBTITLE = u'Full stack web Developer'
-SITEURL = ''
-# SITEURL = 'https://umdevqualquer.com.br'
+# SITEURL = 'http://local.umdevqualquer.com.br:8000'
+SITEURL = '//umdevqualquer.com.br'
+AUTHOR_SAVE_AS = 'author.html'
+HASH_GRAVATAR = 'cd58d60fac779175c0ab6ac1b912d4b5'
 
 PATH = 'content'
 LOCALE = ('bra', 'pt_BR')
@@ -24,15 +26,11 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = ()
-# LINKS = (('Pelican', 'http://getpelican.com/'),)
 
 # Social widget
 SOCIAL = ()
-# SOCIAL = (('github', '#'),
-#           ('linkedin', '#'),)
 
 # Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
 SLUGIFY_SOURCE = 'title'
 THEME = u'./themes/made_by_designer'
 DEFAULT_CATEGORY = 'Sem categoria'
@@ -50,6 +48,8 @@ PLUGINS = [
     'series',
     'related_posts'
 ]
+
+RELATED_POSTS_MAX = 5
 
 # Markdown Extensions
 MARKDOWN_EXTENSIONS = [
