@@ -83,6 +83,10 @@ github: publish
 .PHONY: html help clean regenerate serve serve-global devserver publish github
 
 
+import:
+	ghp-import -b master output
+
+
 install_sass:
 	gem install sass
 
