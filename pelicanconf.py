@@ -23,6 +23,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+FEED_USE_SUMMARY = True
 
 # Blogroll
 LINKS = ()
@@ -46,7 +47,8 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     'summary',
     'series',
-    'related_posts'
+    'related_posts',
+    'feed_summary'
 ]
 
 RELATED_POSTS_MAX = 5
