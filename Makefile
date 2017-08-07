@@ -86,6 +86,9 @@ github: publish
 import:
 	ghp-import -b master output
 
+push: import
+	git push origin master
+
 
 install_sass:
 	gem install sass
