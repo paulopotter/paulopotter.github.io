@@ -12,6 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% endblock %}
 
+  {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITE_BAR_TITLE }} - Atom Feed" />
+  {% endif %}
+
   {% block css_vendor_top%}
     <link href="./{{ THEME_STATIC_DIR }}/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
