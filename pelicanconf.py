@@ -19,17 +19,20 @@ DEFAULT_DATE_FORMAT = ('%d %b %Y')
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = "feeds/all.xml"
+FEED_DOMAIN = SITEURL
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-FEED_USE_SUMMARY = True
+SUMMARY_USE_FIRST_PARAGRAPH = True
 
 # Blogroll
 LINKS = ()
 
 # Social widget
 SOCIAL = ()
+
+STATIC_PATHS = ['images']
 
 # Uncomment following line if you want document-relative URLs when developing
 SLUGIFY_SOURCE = 'title'
@@ -47,8 +50,7 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     'summary',
     'series',
-    'related_posts',
-    'feed_summary'
+    'related_posts'
 ]
 
 RELATED_POSTS_MAX = 5
