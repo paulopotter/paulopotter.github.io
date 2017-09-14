@@ -62,3 +62,15 @@ pre {
 .highlight .vg { color: #f8f8f2 } /* Name.Variable.Global */
 .highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance */
 .highlight .il { color: #ae81ff } /* Literal.Number.Integer.Long */
+
+
+.linenos {
+    padding-left: 0;
+    padding-right: 0;
+    background: #484848;
+    text-align: right;
+    color: #fff;
+}
+.code {
+    padding-left: 0;
+}

@@ -17,6 +17,10 @@
         p, h2, h3 {
             margin: 1em auto;
         }
+        blockquote {
+            padding: 0 2em;
+            border-left: 7px ridge rgba(171, 171, 152, 0.34);
+        }
     }
 
     &-series,
@@ -54,4 +58,9 @@
             color: getColor(text, related)
         }
     }
+
+}
+
+.footnote ol li p{
+    display:inline;
 }
