@@ -12,7 +12,7 @@ AUTHOR_SAVE_AS = 'author.html'
 HASH_GRAVATAR = 'cd58d60fac779175c0ab6ac1b912d4b5'
 
 PATH = 'content'
-LOCALE = ('bra', 'pt_BR')
+LOCALE = ('bra', 'pt_BR', 'pt_BR.UTF-8')
 DEFAULT_LANG = u'pt_BR'
 TIMEZONE = u'America/Sao_Paulo'
 DEFAULT_DATE_FORMAT = ('%d %b %Y')
@@ -52,12 +52,18 @@ PLUGINS = [
     'series',
     'related_posts'
 ]
-
 RELATED_POSTS_MAX = 5
 
 # Markdown Extensions
-MARKDOWN_EXTENSIONS = [
-    'codehilite(css_class=highlight, linenums=True, use_pygments=True)',
-    'extra'
-]
 
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.extra': {},
+        'codehilite': {
+            'css_class': 'highlight',
+            'linenums': True,
+            'use_pygments': True
+        },
+    },
+    'output_format': 'html5',
+}
