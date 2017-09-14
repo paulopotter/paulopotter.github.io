@@ -73,6 +73,10 @@
             line-height: 1.63;
 
             overflow: hidden;
+
+            & img {
+                width: 100%;
+            }
         }
 
         &-footer {
