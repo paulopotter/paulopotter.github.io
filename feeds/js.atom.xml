@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira - Js</title><link href="//umdevqualquer.com.br/" rel="alternate"></link><link href="https://umdevqualquer.com.br/feeds/js.atom.xml" rel="self"></link><id>//umdevqualquer.com.br/</id><updated>2017-09-13T00:00:00-03:00</updated><entry><title>Screamer-js - Um plugin js de notificação para Browser</title><link href="//umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser.html" rel="alternate"></link><published>2017-09-13T00:00:00-03:00</published><updated>2017-09-13T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2017-09-13:/screamer-js-um-plugin-js-de-notificacao-para-browser.html</id><summary type="html">&lt;p&gt;&lt;center&gt;&lt;img alt="Screamer Logo" src="./images/Screamer.png"&gt;&lt;/center&gt;
+</summary><content type="html">&lt;p&gt;&lt;center&gt;&lt;img alt="Screamer Logo" src="./images/Screamer.png"&gt;&lt;/center&gt;
+&lt;/p&gt;
+&lt;p&gt;Fala pessoal, como é que cês tão?! (:P)&lt;/p&gt;
+&lt;p&gt;Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser.&lt;/p&gt;
+&lt;p&gt;Em um hack-day&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt; na globo.com eu e o &lt;a href="https://willianjusten.com.br/"&gt;Willian Justen&lt;/a&gt; fizemos um plugin javascript sanar esse problema. E esse foi quando o &lt;a href="https://github.com/willianjusten/screamer-js"&gt;Screamer-js&lt;/a&gt; nasceu.&lt;/p&gt;
+&lt;h2&gt;O que é?&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="screenshot" src="https://raw.githubusercontent.com/willianjusten/screamer-js/master/screenshot.png"&gt;&lt;/p&gt;
+&lt;p&gt;O screamer-js é um plugin javascript (puro =) ) de fácil configuração utilizando o &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/notification"&gt;Web Notification API&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Screamer.js is a Vanilla Javascript plugin to provide simple yet fully customisable web notifications using Web Notifications API.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Como usar?&lt;/h2&gt;
+&lt;p&gt;1 - Baixe o screamer-js &lt;a href="https://github.com/willianjusten/screamer-js/archive/master.zip"&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;2 - Adicione o js na sua pagina.&lt;/p&gt;
+&lt;p&gt;3 - Em um arquivo js separado ou numa tag script na própria pagina coloque:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Hello&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;body&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;World!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;icon&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;img.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;fade&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;scream&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Screamer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;options&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// Inicializa o screamer com as opções de notificação&lt;/span&gt;
+&lt;span class="nx"&gt;scream&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;notify&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// Executa a notificação&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;4 - Pronto! Agora você terá uma notificação na sua pagina.&lt;/p&gt;
+&lt;h2&gt;Opções&lt;/h2&gt;
+&lt;p&gt;As opções do screamer são as seguintes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;title (string) - Titulo da notificação. (Obrigatório)&lt;/li&gt;
+&lt;li&gt;body (string) - Mensagem da notificação.&lt;/li&gt;
+&lt;li&gt;icon (string) - Caminho com a imagem da notificação.&lt;/li&gt;
+&lt;li&gt;tag (string) - Identificador único para parar notificações duplicadas.&lt;/li&gt;
+&lt;li&gt;lang (string) - Linguagem da notificação. (Default: en).&lt;/li&gt;
+&lt;li&gt;timeout (integer) - Tempo em milissegundo para esconder a notificação.&lt;/li&gt;
+&lt;li&gt;before (function) - Função de callback chamada depois de exibir a notificação.&lt;/li&gt;
+&lt;li&gt;after (function) - Função de callback chamada antes de exibir a notificação.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Queremos ver na prática!&lt;/h2&gt;
+&lt;p&gt;Aqui você pode ver o &lt;a href="https://willianjusten.com.br/screamer-js/example/"&gt;Demo&lt;/a&gt; do screamer funcionando :)&lt;/p&gt;
+&lt;h2&gt;That's all folks!&lt;/h2&gt;
+&lt;p&gt;Espero que você tenha gostado.&lt;/p&gt;
+&lt;p&gt;Qualquer duvida, deixe nos comentários! :)&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-1"&gt;
+&lt;p&gt;Hack-day: é um hackaton que acontece para os funcionários na globo.com poderem criar o que quiserem!&amp;#160;&lt;a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Js"></category></entry></feed>
