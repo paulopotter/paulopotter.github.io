@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira - Smart TV</title><link href="https://umdevqualquer.com.br/" rel="alternate"></link><link href="http://local.umdevqualquer.com.br:8000/feeds/smart-tv.atom.xml" rel="self"></link><id>https://umdevqualquer.com.br/</id><updated>2019-10-09T00:00:00-03:00</updated><entry><title>Como é o desenvolvimento para Smart TVs</title><link href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html" rel="alternate"></link><published>2019-10-09T00:00:00-03:00</published><updated>2019-10-09T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2019-10-09:/como-e-o-desenvolvimento-para-smart-tvs.html</id><summary type="html">&lt;p&gt;&lt;center&gt;&lt;img alt="Icons made by https://www.flaticon.com/authors/freepik from www.flaticon.com" src="./images/smart-tv.png"/&gt; &lt;br/&gt;&lt;sup&gt;&lt;em&gt;Créditos:&lt;/em&gt; Icons made by &lt;a href="https://www.flaticon.com/authors/freepik" title="Freepik"&gt;Freepik&lt;/a&gt; from &lt;a href="https://www.flaticon.com/" title="Flaticon"&gt;www.flaticon.com&lt;/a&gt;&lt;/sup&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;Fala galera, blz?&lt;/p&gt;
-&lt;p&gt;Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.&lt;/p&gt;
-&lt;p&gt;Graças a isso, eu gostaria de compartilhar um pouco da minha experiência nessa nova área e com isso mostrar o quão simples é fazer uma app de Tv. Esse será um post conceito, logo não haverá linha de código...&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;&lt;center&gt;&lt;img alt="Icons made by https://www.flaticon.com/authors/freepik from www.flaticon.com" src="./images/smart-tv.png"&gt; &lt;br/&gt;&lt;sup&gt;&lt;em&gt;Créditos:&lt;/em&gt; Icons made by &lt;a href="https://www.flaticon.com/authors/freepik" title="Freepik"&gt;Freepik&lt;/a&gt; from &lt;a href="https://www.flaticon.com/" title="Flaticon"&gt;www.flaticon.com&lt;/a&gt;&lt;/sup&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.
+&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;center&gt;&lt;img alt="Icons made by https://www.flaticon.com/authors/freepik from www.flaticon.com" src="./images/smart-tv.png"&gt; &lt;br/&gt;&lt;sup&gt;&lt;em&gt;Créditos:&lt;/em&gt; Icons made by &lt;a href="https://www.flaticon.com/authors/freepik" title="Freepik"&gt;Freepik&lt;/a&gt; from &lt;a href="https://www.flaticon.com/" title="Flaticon"&gt;www.flaticon.com&lt;/a&gt;&lt;/sup&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;Fala galera, blz?&lt;/p&gt;
-&lt;p&gt;Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.&lt;/p&gt;
+&lt;p&gt;Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.
+&lt;/p&gt;
 &lt;p&gt;Graças a isso, eu gostaria de compartilhar um pouco da minha experiência nessa nova área e com isso mostrar o quão simples é fazer uma app de Tv. Esse será um post conceito, logo não haverá linha de código...&lt;/p&gt;
-
-
 &lt;h2&gt;Anota aí:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Saber javascript.&lt;/li&gt;

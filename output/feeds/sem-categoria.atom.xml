@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira - Sem Categoria</title><link href="https://umdevqualquer.com.br/" rel="alternate"></link><link href="http://local.umdevqualquer.com.br:8000/feeds/sem-categoria.atom.xml" rel="self"></link><id>https://umdevqualquer.com.br/</id><updated>2017-07-15T00:00:00-03:00</updated><entry><title>Inaugurando o blog</title><link href="https://umdevqualquer.com.br/inaugurando-o-blog.html" rel="alternate"></link><published>2017-07-15T00:00:00-03:00</published><updated>2017-07-15T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2017-07-15:/inaugurando-o-blog.html</id><summary type="html">Fala pessoal, como vocês estão?!</summary><content type="html">&lt;p&gt;Fala pessoal, como vocês estão?!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira - Sem Categoria</title><link href="https://umdevqualquer.com.br/" rel="alternate"></link><link href="http://local.umdevqualquer.com.br:8000/feeds/sem-categoria.atom.xml" rel="self"></link><id>https://umdevqualquer.com.br/</id><updated>2017-07-15T00:00:00-03:00</updated><entry><title>Inaugurando o blog</title><link href="https://umdevqualquer.com.br/inaugurando-o-blog.html" rel="alternate"></link><published>2017-07-15T00:00:00-03:00</published><updated>2017-07-15T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2017-07-15:/inaugurando-o-blog.html</id><summary type="html">&lt;p&gt;Fala pessoal, como vocês estão?!&lt;/p&gt;
 &lt;p&gt;Esse é primeiro post de vários (assim espero) desse querido e lindo blog! 😆
 Nesse blog eu espero passar um pouco do meu conhecimento, dores e aprendizados nesse lindo e maravilhoso mundo da programação!&lt;/p&gt;
-&lt;p&gt;Nele eu irei abordar problemas enfrentados, plugins interessantes, dicas de desenvolvimento / stack e postarei também alguns snippets.&lt;/p&gt;
+&lt;p&gt;Nele eu irei abordar problemas enfrentados, plugins interessantes, dicas de desenvolvimento / stack e postarei também alguns snippets.
+&lt;/p&gt;</summary><content type="html">&lt;p&gt;Fala pessoal, como vocês estão?!&lt;/p&gt;
+&lt;p&gt;Esse é primeiro post de vários (assim espero) desse querido e lindo blog! 😆
+Nesse blog eu espero passar um pouco do meu conhecimento, dores e aprendizados nesse lindo e maravilhoso mundo da programação!&lt;/p&gt;
+&lt;p&gt;Nele eu irei abordar problemas enfrentados, plugins interessantes, dicas de desenvolvimento / stack e postarei também alguns snippets.
+&lt;/p&gt;
 &lt;p&gt;Espero que vocês gostem, e toda critica (construtiva), sugestão ou outra solução/ponto de vista é bem vinda!!!!&lt;/p&gt;
 &lt;p&gt;E declaro aberto o meu novo blog &lt;strong&gt;Um Dev Qualquer&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2&gt;Sejam todos bem vindos!!!&lt;/h2&gt;

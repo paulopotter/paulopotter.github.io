@@ -5,14 +5,13 @@ Series: Google Assistant
 Date: 2018-05-30
 
 <center>![Google Assistant IOS App](https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&crop=1)</center>
-<!-- PELICAN_END_SUMMARY -->
 
 E ae, como vocês tão?
 
 E um hackday[^1] lá na [globo.com](https://globo.com) eu tive a idéia de criar um assistente para um dos produtos da [globo.com](https://globo.com).
 
+<!-- PELICAN_END_SUMMARY -->
 Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente, _e a partir do próximo post sobre o Assistant iremos criar um assistente nosso_ 😆 _com ou sem servidor próprio_.
-
 
 ## O que é?
 

@@ -9,6 +9,7 @@ Esse é primeiro post de vários (assim espero) desse querido e lindo blog! 😆
 Nesse blog eu espero passar um pouco do meu conhecimento, dores e aprendizados nesse lindo e maravilhoso mundo da programação!
 
 Nele eu irei abordar problemas enfrentados, plugins interessantes, dicas de desenvolvimento / stack e postarei também alguns snippets.
+<!-- PELICAN_END_SUMMARY -->
 
 Espero que vocês gostem, e toda critica (construtiva), sugestão ou outra solução/ponto de vista é bem vinda!!!!
 
