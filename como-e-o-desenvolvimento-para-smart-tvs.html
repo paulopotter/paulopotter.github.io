@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+  <meta charset="utf-8" />
+  <title>Como é o desenvolvimento para Smart TVs - Paulo Oliveira || Um dev qualquer
+
+ </title>
+
+    <meta name="keywords" content="1231">
+    <meta name="description" content="">
+    <meta name="author" content="Paulo Oliveira">
+    <meta name="robots" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="http://local.umdevqualquer.com.br:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Paulo Oliveira || Um dev qualquer - Atom Feed" />
+
+    <link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="//umdevqualquer.com.br/theme/css/article.css"/>
+
+</head>
+<body>
+  <header class='header_site' id="start-page" container>
+    <div class="header_site--wrapper">
+      <h1 class="header_site--title">
+          <a href="//umdevqualquer.com.br" class="header_site--title-link">
+            <span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
+            </a>
+      </h1>
+
+      <ul class="header_site-social">
+      </ul>
+
+    </div>
+  </header>
+
+
+
+<div class="wrapper_site" container>
+  <div class="wrapper_site--content column_wrapper" id="start-site">
+    <section class="article_content" container>
+        <article class="article_content-body">
+            <h1 class="article_content-title">Como é o desenvolvimento para Smart TVs </h1>
+
+            <div class="article_content-content">
+                <p><center><img alt="Icons made by https://www.flaticon.com/authors/freepik from www.flaticon.com" src="./images/smart-tv.png"> <br/><sup><em>Créditos:</em> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></sup></center></p>
+<p>Fala galera, blz?</p>
+<p>Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.</p>
+<p>Graças a isso, eu gostaria de compartilhar um pouco da minha experiência nessa nova área e com isso mostrar o quão simples é fazer uma app de Tv. Esse será um post conceito, logo não haverá linha de código...</p>
+
+
+<h2>Anota aí:</h2>
+<ul>
+<li>Saber javascript.</li>
+</ul>
+<p><center><img alt="meme He-man" src="https://i.pinimg.com/originals/6d/17/9b/6d179b75c54cc2bada2a1688ae3c6a04.jpg"> <br/><sup><em>Créditos:</em> na imagem</sup></center></p>
+<h2>Entendendo um pouco mais sobre as Smart TVs:</h2>
+<p>Hoje existem várias marcas de Smart TVs no mercado, as mais conhecidas são da <em>Samsung</em> e <em>LG</em>, mas ainda temos <em>Sony, Panasonic, TCL, Xiaomi, Motorola...</em>
+Dependendo da fabricante e do sistema operacional, você encontrará as seguintes stacks:</p>
+<ul>
+<li><strong>Android TV</strong>:<ul>
+<li>Kotlin/Java</li>
+</ul>
+</li>
+<li><strong>Apple TV</strong>:<ul>
+<li>Swift</li>
+</ul>
+</li>
+<li><strong>Samsung TV</strong>:<ul>
+<li><em>Tizen</em>:<ul>
+<li>Web hosted (HTML/CSS/JS)</li>
+<li>Xamarin</li>
+<li>.NET</li>
+</ul>
+</li>
+<li><em>Orsay <sup>(Descontinuadas)</sup></em>:<ul>
+<li>Pelo amor de Zico, não programe para essa tv!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>LG TV</strong>:<ul>
+<li><em>WebOs</em>:<ul>
+<li>Web hosted (HTML/CSS/JS)</li>
+</ul>
+</li>
+<li><em>NetCast <sup>(Descontinuadas)</sup></em>:<ul>
+<li>Assim como a Orsay, evite esse S.O, assim como o cascão evita a água.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>Nota: Ainda hoje a Orsay tem a maior fatia do mercado brasileiro.</em></p>
+<p><br/>
+Como desenvolvo mais para a <strong>LG</strong> e <strong>Samsung</strong>, irei me aprofundar mais sobre elas, caso tenham duvida sobre os outros S.Os / Fabricantes, deixem nos comentários.</p>
+<p>Assim como mostrei ali em cima, todas elas têm o seu desenvolvimento nativo (com uma linguagem de programação especifica para aquele S.O), mas também existem algumas que suportam Apps Web hosted, como Samsung e LG (que por sinal, elas são as que possuem o maior market share no mundo!)</p>
+<p>Assim como brinquei, é basicamente isso mesmo que você deverá saber: Javascript! Principalmente se você estiver programando para o mercado brasileiro, onde a maioria das Smart TVs dos brasileiros possui suporte.</p>
+<h2>As dificuldades:</h2>
+<p>Mas não é porque você sabe javascript que vai ser tudo lindo, ao contrário de boa parte do que fazemos hoje para o desenvolvimento web, é necessária muita preocupação com performance e compatibilidade de código. Tanto no JS quanto no CSS. Por exemplo, o meu amado <em>flexbox</em> não funciona em algumas tvs. Então você precisa testar bem nas tvs que você dará suporte e/ou qual será a sua "régua de corte" nas tvs. Somado a isso os hardwares das tvs são "fracos", alguns até sendo pior que um feature phone. Nota: <em>Seu tamagotchi pode ser melhor que o hardware da sua tv.</em></p>
+<p>Quando se desenvolve apps web hosted, a tv abre um "browser" para o usuário (sem a barra de endereço, assim como uma app PWA), porém esses browsers das tvs são antigos e dificilmente eles receberam atualizações.</p>
+<p>Outro problema recorrente, mesmo que você compre uma tv esse ano, não necessariamente ela é nova, você pode acabar comprando uma tv com 1, 2 até 3 anos de fabricação. Isso acontece porque as grandes redes de varejistas fazem um estoque de tvs e ao contrário dos celulares, nós não costumamos trocar de tv todos os anos, então o estoque "encalha" e dai que surgem aquelas promoções de <em>"Super Smart TV com <strike>netflix</strike> Globoplay e acesso a internet por apenas 12x R$120 no cartão..."</em>.</p>
+<p>Boa parte dos brasileiros não pesquisam para comprar suas tvs, apenas pesquisam o preço e se acessa a internet. Mas mesmo que pesquisem, existe uma certa dificuldade de encontrar o ano da sua TV.</p>
+<p>Também não poderia deixar de falar da dificuldade de encontrar documentação das tvs e o que suporta (ou não). Aos poucos isso está mudando, mas ainda assim é um pouco complicado encontrar certas dúvidas. Nem no <a href="http://stackoverflow.com">Stackoverflow</a> você encontra 😱. Porém eu encontrei <a href="https://developer.samsung.com/tv/develop/specifications/general-specifications">esse link</a> com as especificações gerais das tvs Samsung, o que já ajuda um pouco.</p>
+<h2>Como extrair informações da sua TV:</h2>
+<p>Os códigos das tvs dizem muito sobre elas, basicamente descreve ela por completo.</p>
+<ul>
+<li>Samsung:</li>
+</ul>
+<p>Usando o modelo <strong>UE55F8000AFXZ</strong> como exemplo, podemos ver o seguinte:</p>
+<ul>
+<li><strong>U</strong> = LED</li>
+<li><strong>E</strong> = Produzido na Europa</li>
+<li><strong>55</strong> = Tamanho da tela</li>
+<li><strong>F</strong> = Fabricado em 2013 (Ano de fabricação)</li>
+<li><strong>8000</strong> = Numero de série. Isso será diferente dependendo dos recursos de cada modelo. É possível descobrir as especificações dos modelos, digitando o código do modelo <a href="https://www.samsung.com/br/tvs/">aqui</a> (use a busca)</li>
+<li><strong>A</strong> = Features ou design</li>
+<li><strong>FXZ</strong> = Informações técnicas de produção</li>
+</ul>
+<p>Se você possui UE55F8000<strong>B</strong>FXZ no lugar da UE55F8000<strong>A</strong>FXZ usado no exemplo, você verá que a diferença entre eles são apenas de design como a cor, por exemplo, mas o resto das especificações serão as mesmas.</p>
+<p>Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse <a href="https://www.samsung.com/uk/support/tv-audio-video/what-do-samsung-tv-model-numbers-actually-mean-why-are-they-so-long/">esse link</a></p>
+<ul>
+<li>LG:</li>
+</ul>
+<p>Encontrei essa imagem que facilita a explicação no caso da LG:
+<center> <img alt="tab-tv image" src="./images/LG-TV-model-identification-2018-2019-new.jpg"> <br/><br/><sup><em>Créditos:</em> na imagem</sup></center></p>
+<p>Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse <a href="http://en.tab-tv.com/?page_id=7111">esse link</a> (não oficial).</p>
+<h2>That`s all folks:</h2>
+<p>Com isso em mente, você já pode começar a se preparar para desenvolver sua tv app ou saber escolher melhor a sua próxima tv.</p>
+<p>Dentro de alguns dias eu irei fazer uma série de posts mais técnicos, mostrando o desenvolvimento de uma tela simples para testar na sua TV em casa.</p>
+            </div>
+
+
+                <div class="article_content-related_post">
+                    <h4 class="article_content-related_post--title">Veja também:</h4>
+                        <ul>
+                            <li><a href="//umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser.html">Screamer-js - Um plugin js de notificação para Browser</a></li>
+                        </ul>
+                </div>
+        </article>
+    </section>
+
+    <section class="article_comments" container>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'umdevqualquer';
+        // var disqus_identifier = location.href;
+        var disqus_identifier = '//umdevqualquer.com.br/';
+    // var disqus_url = location.href;
+    var disqus_url = '//umdevqualquer.com.br/';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </section>
+  </div>
+</div>
+
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77202031-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    
+
+
+
