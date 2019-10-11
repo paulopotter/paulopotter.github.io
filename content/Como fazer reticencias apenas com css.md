@@ -3,7 +3,7 @@ Category: Css
 Tags: Css, Tips
 Date: 2017-09-11
 
-Fala pessoal, como é que cês tão?! (:P)
+Fala pessoal, como é que cês tão?! 😜
 
 
 Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e colocar reticências apenas com CSS!
@@ -11,7 +11,7 @@ Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e coloca
 
 Sabe quando voce precisa que um texto caiba num espaço e não pode ultrapassar-lo, você não quer colocar js para diminuir a fonte,
 seu media-query também não está funcionando, então você acaba apelando para dar um _ellipsis_ no seu texto, isso nada mais é que,
-quando o texto ultrapassar um determinado tamanho, ele fica com reticências! 
+quando o texto ultrapassar um determinado tamanho, ele fica com reticências!
 Um bom exemplo disso é o *veja mais...* colocado em alguns blogs.
 
 Mas vamos parar de papo e...

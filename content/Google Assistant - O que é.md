@@ -11,7 +11,7 @@ E ae, como vocês tão?
 
 E um hackday[^1] lá na [globo.com](https://globo.com) eu tive a idéia de criar um assistente para um dos produtos da [globo.com](https://globo.com).
 
-Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente, _e a partir do próximo post iremos criar um assistente nosso ( :) ) com ou sem servidor próprio_.
+Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente, _e a partir do próximo post sobre o Assistant iremos criar um assistente nosso_ 😆 _com ou sem servidor próprio_.
 
 
 ## O que é?
@@ -39,7 +39,7 @@ _No Android:_
 
 ## That's all folks!
 
-Espero que você tenha gostado. Este post foi mais um post de apresentação do Google Assistant, a partir do proximos nós iremos entrar em conceitos mais técnicos e criar o nosso próprio assistant.
+Espero que você tenha gostado. Este post foi mais um post de apresentação do Google Assistant, a partir do próximos posts sobre Assistant, nós iremos entrar em conceitos mais técnicos e criar o nosso próprio assistant.
 
 
 [^1]:Hackday: é um [hackaton](https://pt.wikipedia.org/wiki/Hackathon) que acontece para os funcionários na globo.com poderem criar o que quiserem!

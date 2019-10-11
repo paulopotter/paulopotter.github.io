@@ -6,7 +6,7 @@ Date: 2017-09-13
 <center>![Screamer Logo](./images/Screamer.png)</center>
 <!-- PELICAN_END_SUMMARY -->
 
-Fala pessoal, como é que cês tão?! (:P)
+Fala pessoal, como é que cês tão?! 😜
 
 Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser.
 
@@ -17,7 +17,7 @@ Em um hack-day[^1] na globo.com eu e o [Willian Justen](https://willianjusten.co
 
 ![screenshot](https://raw.githubusercontent.com/willianjusten/screamer-js/master/screenshot.png)
 
-O screamer-js é um plugin javascript (puro =) ) de fácil configuração utilizando o [Web Notification API](https://developer.mozilla.org/en-US/docs/Web/API/notification)
+O screamer-js é um plugin javascript (puro 😆 ) de fácil configuração utilizando o [Web Notification API](https://developer.mozilla.org/en-US/docs/Web/API/notification)
 
 > Screamer.js is a Vanilla Javascript plugin to provide simple yet fully customisable web notifications using Web Notifications API.
 
