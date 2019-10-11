@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira - Google Assistant</title><link href="//umdevqualquer.com.br/" rel="alternate"></link><link href="https://umdevqualquer.com.br/feeds/google-assistant.atom.xml" rel="self"></link><id>//umdevqualquer.com.br/</id><updated>2018-05-30T00:00:00-03:00</updated><entry><title>Google Assistant - o que é?</title><link href="//umdevqualquer.com.br/google-assistant-o-que-e.html" rel="alternate"></link><published>2018-05-30T00:00:00-03:00</published><updated>2018-05-30T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2018-05-30:/google-assistant-o-que-e.html</id><summary type="html">&lt;p&gt;&lt;center&gt;&lt;img alt="Google Assistant IOS App" src="https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&amp;amp;crop=1"&gt;&lt;/center&gt;
-</summary><content type="html">&lt;p&gt;&lt;center&gt;&lt;img alt="Google Assistant IOS App" src="https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&amp;amp;crop=1"&gt;&lt;/center&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira - Google Assistant</title><link href="https://umdevqualquer.com.br/" rel="alternate"></link><link href="http://local.umdevqualquer.com.br:8000/feeds/google-assistant.atom.xml" rel="self"></link><id>https://umdevqualquer.com.br/</id><updated>2018-05-30T00:00:00-03:00</updated><entry><title>Google Assistant - o que é?</title><link href="https://umdevqualquer.com.br/google-assistant-o-que-e.html" rel="alternate"></link><published>2018-05-30T00:00:00-03:00</published><updated>2018-05-30T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2018-05-30:/google-assistant-o-que-e.html</id><summary type="html">&lt;p&gt;&lt;center&gt;&lt;img alt="Google Assistant IOS App" src="https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&amp;amp;crop=1"&gt;&lt;/center&gt;
 &lt;/p&gt;
 &lt;p&gt;E ae, como vocês tão?&lt;/p&gt;
-&lt;p&gt;E um hackday&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt; lá na &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt; eu tive a idéia de criar um assistente para um dos produtos da &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente, &lt;em&gt;e a partir do próximo post iremos criar um assistente nosso ( :) ) com ou sem servidor próprio&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;E um hackday&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; lá na &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt; eu tive a idéia de criar um assistente para um dos produtos da &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente, &lt;em&gt;e a partir do próximo post sobre o Assistant iremos …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;center&gt;&lt;img alt="Google Assistant IOS App" src="https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&amp;amp;crop=1"&gt;&lt;/center&gt;
+&lt;/p&gt;
+&lt;p&gt;E ae, como vocês tão?&lt;/p&gt;
+&lt;p&gt;E um hackday&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; lá na &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt; eu tive a idéia de criar um assistente para um dos produtos da &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente, &lt;em&gt;e a partir do próximo post sobre o Assistant iremos criar um assistente nosso&lt;/em&gt; 😆 &lt;em&gt;com ou sem servidor próprio&lt;/em&gt;.&lt;/p&gt;
 &lt;h2&gt;O que é?&lt;/h2&gt;
 &lt;p&gt;&lt;center&gt;&lt;img alt="screenshot" src="https://o.aolcdn.com/images/dims3/GLOB/crop/600x300+0+40/resize/630x315!/format/jpg/quality/85/http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F83ae1071fcb16939aefc6345313200f8%2F205280619%2F18512316_1862455314020517_7322917835225694208_n.jpg"&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;O &lt;a href="https://assistant.google.com/intl/pt_br/"&gt;Google Assistant&lt;/a&gt; é um assistente pessoal criado pelo o google, para facilitar a vida das pessoas.
@@ -18,13 +21,13 @@ Para quem tem &lt;strong&gt;Iphone&lt;/strong&gt;, é necessário baixar o &lt;a
 &lt;p&gt;1 - Digo: "&lt;em&gt;Ok google&lt;/em&gt;" para ativar o assistente.&lt;/p&gt;
 &lt;p&gt;2 - Digo: "&lt;em&gt;Ouvir música&lt;/em&gt;" e com isso o assistente irá ligar o seu player padrão e irá dar play na ultima música ou playlist que você ouviu.&lt;/p&gt;
 &lt;h2&gt;That's all folks!&lt;/h2&gt;
-&lt;p&gt;Espero que você tenha gostado. Este post foi mais um post de apresentação do Google Assistant, a partir do proximos nós iremos entrar em conceitos mais técnicos e criar o nosso próprio assistant.&lt;/p&gt;
+&lt;p&gt;Espero que você tenha gostado. Este post foi mais um post de apresentação do Google Assistant, a partir do próximos posts sobre Assistant, nós iremos entrar em conceitos mais técnicos e criar o nosso próprio assistant.&lt;/p&gt;
 &lt;p&gt;Qualquer duvida, deixe nos comentários! :)&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id="fn-1"&gt;
-&lt;p&gt;Hackday: é um &lt;a href="https://pt.wikipedia.org/wiki/Hackathon"&gt;hackaton&lt;/a&gt; que acontece para os funcionários na globo.com poderem criar o que quiserem!&amp;#160;&lt;a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Hackday: é um &lt;a href="https://pt.wikipedia.org/wiki/Hackathon"&gt;hackaton&lt;/a&gt; que acontece para os funcionários na globo.com poderem criar o que quiserem!&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</content><category term="Google Assistant"></category></entry></feed>
