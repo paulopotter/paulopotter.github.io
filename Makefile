@@ -95,3 +95,6 @@ install_sass:
 
 watch:
 	sass  --style compressed --watch themes/made_by_designer/static/scss/:themes/made_by_designer/static/css/
+
+install:
+	pip install -r requirements.txt
