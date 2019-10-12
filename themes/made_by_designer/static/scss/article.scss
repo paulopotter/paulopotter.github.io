@@ -23,16 +23,11 @@
         }
     }
 
-    &-series,
-    &-related_post{
-        margin-top: .5em;
-    }
-
     &-series {
         border: 1px dashed;
         display: inline-block;
-        padding: 8px;
-        margin-left: 1em;
+        padding: 1em;
+        margin-top: 1.5em;
 
         &--title {
             font-style: italic;
@@ -52,10 +47,32 @@
     }
 
     &-related_post {
+        margin-top: 1.5em;
+
         &--title {
             text-transform: uppercase;
-            margin-top: 1em;
-            color: getColor(text, related)
+            margin: 0.7em 0;
+            color: getColor(text, related);
+            display: inline-block;
+            position: relative;
+
+            &:after {
+                content:"";
+                position:absolute;
+                bottom: -5px;
+                left:0;
+                display:inline-block;
+                width:20%;
+                border-bottom: getColor(base, border) solid 2px;
+            }
+        }
+
+        ul {
+            margin-left: 0.5em;
+
+            li {
+                list-style-type: square;
+            }
         }
     }
 
