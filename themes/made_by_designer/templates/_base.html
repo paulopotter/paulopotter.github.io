@@ -5,11 +5,14 @@
   <title>{% block title %}{{ SITE_BAR_TITLE }}{% endblock %} </title>
 
   {% block meta %}
-    <meta name="keywords" content="1231">
+    <meta name="keywords" content="">
     <meta name="description" content="{{ SITEDESCRIPTION }}">
     <meta name="author" content="{{ AUTHOR }}">
     <meta name="robots" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+
+
   {% endblock %}
 
   {% if FEED_ALL_ATOM %}
