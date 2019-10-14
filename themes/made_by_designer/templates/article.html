@@ -19,7 +19,7 @@
                 {% if article.cover_image_url != '2' %}
                     <figure class='article_cover'>
                         <img class='article_cover__img' src="{{ article.cover_image_url }}"
-                            alt="{{ article.cover_image_caption or ''}}">
+                            alt="{{ article.cover_image_alt or ''}}">
 
                         {% if article.cover_image_by %}
                         <figcaption class='article_cover__credit'>Créditos:

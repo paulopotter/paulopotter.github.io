@@ -5,7 +5,7 @@ Series: Desenvolvendo para Smart TV
 Date: 2019-10-09
 cover_image: smart-tv.png
 cover_image_by: Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-cover_image_caption: Smart Tv icon
+cover_image_alt: Smart Tv icon
 
 Fala galera, blz?
 

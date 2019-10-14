@@ -23,7 +23,7 @@
 
           <div class='home_content--article-body'>
             {% if article.cover_image_url != '2' %}
-              <img src="{{ article.cover_image_url }}" alt="foo">
+              <img src="{{ article.cover_image_url }}" alt="{{article.cover_image_alt}}">
             {% endif %}
               {{ article.summary }}
           </div>

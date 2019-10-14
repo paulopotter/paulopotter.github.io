@@ -5,7 +5,7 @@ Series: Google Assistant
 Date: 2018-05-30
 cover_image: https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&crop=1
 cover_image_by: techcrunch.com
-cover_image_caption: Google Assistant IOS App
+cover_image_alt: Google Assistant IOS App
 cover_image_link: https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&crop=1
 
 E ae, como vocês tão?

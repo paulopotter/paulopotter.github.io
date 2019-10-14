@@ -3,7 +3,7 @@ Category: Js
 Tags: Js
 Date: 2017-09-13
 cover_image: Screamer.png
-cover_image_caption: Screamer Logo
+cover_image_alt: Screamer Logo
 
 Fala pessoal, como é que cês tão?! 😜
 
