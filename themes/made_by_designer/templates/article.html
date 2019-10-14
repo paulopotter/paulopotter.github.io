@@ -13,7 +13,7 @@
 {% block content %}
     <section class="article_content" container>
         <article class="article_content-body">
-            <h1 class="article_content-title">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %}</h1>
+            <h1 class="article_content-title">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} {% if article.readtime_string %}</h1><small> Tempo médio de leitura: {{article.readtime_string}}.</small>{% endif %}
 
             <div class="article_content-content">
                 {% if article.cover_image_url != '2' %}

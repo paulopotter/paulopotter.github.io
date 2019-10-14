@@ -12,3 +12,4 @@ MarkupSafe
 python-dateutil
 ghp-import
 beautifulsoup4
+pelican-readtime

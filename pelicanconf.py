@@ -57,8 +57,19 @@ PLUGINS = [
     'series',
     'related_posts',
     'pelican-cover-image',
+    'readtime',
+
 ]
 RELATED_POSTS_MAX = 5
+READTIME_WPM = {
+    'default': {
+        'wpm': 150,
+        'min_singular': 'minuto',
+        'min_plural': 'minutos',
+        'sec_singular': 'segundo',
+        'sec_plural': 'segundos'
+    }
+}
 
 # Markdown Extensions
 
