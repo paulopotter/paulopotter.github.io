@@ -32,11 +32,11 @@ LINKS = ()
 SOCIAL = ()
 
 COVER_IMAGES_PATH = "images"
-STATIC_PATHS = ['images','extra/CNAME','extra/favicon.ico',]
+STATIC_PATHS = ['images','extra/CNAME','extra/favicon.png',]
 
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
-    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/favicon.png': {'path': 'favicon.png'},
 }
 
 # Uncomment following line if you want document-relative URLs when developing
