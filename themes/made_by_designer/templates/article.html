@@ -16,6 +16,22 @@
             <h1 class="article_content-title">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %}</h1>
 
             <div class="article_content-content">
+                {% if article.cover_image_url != '2' %}
+                    <figure class='article_cover'>
+                        <img class='article_cover__img' src="{{ article.cover_image_url }}"
+                            alt="{{ article.cover_image_caption or ''}}">
+
+                        {% if article.cover_image_by %}
+                        <figcaption class='article_cover__credit'>Créditos:
+                                {% if article.cover_image_link %}
+                                    <a href="{{ article.cover_image_link }}">{{ article.cover_image_by }}</a>
+                                {% else %}
+                                    {{ article.cover_image_by }}
+                                {% endif %}
+                            </figcaption>
+                        {% endif %}
+                    </figure>
+                {% endif %}
                 {{ article.content }}
             </div>
 

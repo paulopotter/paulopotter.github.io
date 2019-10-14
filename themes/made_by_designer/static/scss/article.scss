@@ -83,6 +83,16 @@
 
 }
 
+.article_cover {
+    text-align: center;
+    margin-top: 2em;
+
+    &__credit {
+        font-style: italic;
+        font-size: .7em;
+    }
+}
+
 .footnote ol li p{
     display:inline;
 }

@@ -31,6 +31,7 @@ LINKS = ()
 # Social widget
 SOCIAL = ()
 
+COVER_IMAGES_PATH = "images"
 STATIC_PATHS = ['images','extra/CNAME','extra/favicon.ico',]
 
 EXTRA_PATH_METADATA = {
@@ -54,7 +55,8 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     'summary',
     'series',
-    'related_posts'
+    'related_posts',
+    'pelican-cover-image',
 ]
 RELATED_POSTS_MAX = 5
 

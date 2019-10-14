@@ -17,11 +17,14 @@
             </p>
 
             <h2 class='home_content--article-header-title'>
-              <a href="{{ SITEURL }}/{{ article.url }}" class='home_content--article-header-title-link'>{{ article.title }}</a>
+              <a href="{{ SITEURL }}/{{ article.url }}" class='home_content--article-header-title-link'>{{ article.title|truncate(70, true, '...', 0) }}</a>
             </h2>
           </header>
 
           <div class='home_content--article-body'>
+            {% if article.cover_image_url != '2' %}
+              <img src="{{ article.cover_image_url }}" alt="foo">
+            {% endif %}
               {{ article.summary }}
           </div>
 

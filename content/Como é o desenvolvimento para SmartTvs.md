@@ -3,8 +3,9 @@ Category: Smart TV
 Tags: Smart TV, Js, React
 Series: Desenvolvendo para Smart TV
 Date: 2019-10-09
-
-<center>![Icons made by https://www.flaticon.com/authors/freepik from www.flaticon.com](./images/smart-tv.png) <br/><sup>*Créditos:* Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></sup></center>
+cover_image: smart-tv.png
+cover_image_by: Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+cover_image_caption: Smart Tv icon
 
 Fala galera, blz?
 

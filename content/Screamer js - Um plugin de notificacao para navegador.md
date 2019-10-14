@@ -2,8 +2,8 @@ Title: Screamer-js - Um plugin js de notificação para Browser
 Category: Js
 Tags: Js
 Date: 2017-09-13
-
-<center>![Screamer Logo](./images/Screamer.png)</center>
+cover_image: Screamer.png
+cover_image_caption: Screamer Logo
 
 Fala pessoal, como é que cês tão?! 😜
 
