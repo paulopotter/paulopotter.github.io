@@ -23,9 +23,10 @@
 
           <div class='home_content--article-body'>
             {% if article.cover_image_url != '2' %}
-              <img src="{{ article.cover_image_url }}" alt="{{article.cover_image_alt}}">
+              <div class='home_content--article-cover-image' style="background-image: url('{{ article.cover_image_url }}');" >
+              </div>
             {% endif %}
-              {{ article.summary }}
+            {{ article.summary }}
           </div>
 
           <footer class="home_content--article-footer">

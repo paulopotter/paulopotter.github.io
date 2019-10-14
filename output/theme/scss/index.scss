@@ -88,6 +88,10 @@
             font-size: 0.8125em;
         }
     }
-
+    &--article-cover-image {
+        height: 300px;
+        background-size: auto 300px;
+        margin-bottom: 1em;
+    }
 
 }
