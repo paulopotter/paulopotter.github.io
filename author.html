@@ -51,7 +51,7 @@
                     <img src="#" width="150" height="150" class='author--image about-me--image' id="authorImage">
 
                     <h2>Paulo Oliveira</h2>
-                    <h3>Trabalhando há 3 anos na <a href="http://globo.com">globo.com</a>.</h3>
+                    <h3>Trabalhando há <span class='js-work-life'></span> anos na <a href="http://globo.com">globo.com</a>.</h3>
                 </header>
 
                 <section>
@@ -118,7 +118,13 @@
         function changeImg( profile ) {
             document.getElementById("authorImage").src = profile.entry[0].thumbnailUrl
         }
-
+        function calculateAge(birthday) { // birthday is a date
+            var ageDifMs = Date.now() - birthday;
+            var ageDate = new Date(ageDifMs); // miliseconds from epoch
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }
+        var workLife = document.querySelector('.js-work-life');
+        workLife.innerText = calculateAge(new Date('2015-10-01'))
     </script>
     <script src="http://pt.gravatar.com/cd58d60fac779175c0ab6ac1b912d4b5.json?callback=changeImg" type="text/javascript">
     </script>
