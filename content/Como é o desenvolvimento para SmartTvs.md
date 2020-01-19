@@ -1,7 +1,6 @@
 Title: Como é o desenvolvimento para Smart TVs
 Category: Smart TV
 Tags: Smart TV, Js, React
-Series: Desenvolvendo para Smart TV
 Date: 2019-10-09
 cover_image: smart-tv.png
 cover_image_by: Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
