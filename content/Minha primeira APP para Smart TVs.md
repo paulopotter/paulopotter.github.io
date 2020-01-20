@@ -2,10 +2,10 @@ Title: Minha primeira APP para Smart TVs
 Category: Smart TV
 Tags: Smart TV, Js, React
 Series: Minha primeira APP para Smart TVs
-Date: 2019-11-30
-cover_image: smart-tv.png
-cover_image_by: Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-cover_image_alt: Smart Tv icon
+Date: 2020-01-19
+cover_image: smart-tv-pixabay.jpg
+cover_image_by: Imagem retirada de <a href="https://pixabay.com/pt/illustrations/remoto-controle-tela-tv-exploração-3653882/" title="Tv com controle remoto">PixaBay</a>
+cover_image_alt: Smart Tv from pixabay
 
 Fala ae, tranquilinho?
 
@@ -17,9 +17,10 @@ Tendo a ideia de tentar passar por boa partes dos problemas que temos quando des
 
 ## O Projeto:
 
-Com isso em mente, a escolha que mais se encaixou nesses requistos foi: **app que simula um catálogo de animes/mangá**. Após essa série de posts, se vocês quiserem, eu faço um mais "real", com request a APIs, player entre outras coisas (_Não se esqueça de comentar!!_). Será um app relativamente simples, porém o post ficará muito logo, é provável que eu quebre o post em mais de um. E lembrando: esse será um projeto web hosted focado para as Smart Tvs da Samung (Tizen) e LG (WebOs).
+Com isso em mente, a escolha que mais se encaixou nesses requistos foi: **app que simula um catálogo de animes/mangá**.
+Após essa série de posts, se vocês quiserem, eu faço um mais "real", com request a várias APIs, player para tocar algo, entre outras coisas (_Não se esqueça de comentar!!_). Será um app relativamente simples, porém como o post ficará muito logo eu irei criar uma série de posts. E lembrando: esse será um projeto web hosted focado para as Smart Tvs da Samung (Tizen) e LG (WebOs).
 
-Nesse projeto nós iremos desde a criação de uma app na sua máquina até você ver ela funcionando na sua TV 😆.
+Nesse projeto nós iremos desde a criação de uma app na sua máquina até você ver ela funcionando na sua TV 😆. Com isso ensinarei como fazer uma app e quais seriam os passos para publicar a sua app.
 
 ## Ferramentas:
 
@@ -31,7 +32,7 @@ Basicamente nós iremos utilizar essa stack para desenvolver:
 -   HTML/CSS
 -   <strike>Stackoverflow</strike>
 
-Porém, você é livre para escolher a sua, podendo utilizar qualquer framework para desenvolver. Vue.js, React, Flutter, JS Vanilla, são alguns exemplos. Você só não pode esquercer de duas premissas: **compatibilidade** e **performance**! Então vamos fazer essa bagaça funcionar!!!
+Porém, você é livre para escolher a sua, podendo utilizar qualquer framework para desenvolver. _Vue.js, React, Flutter, JS Vanilla_, são alguns exemplos. Você só não pode esquercer de duas premissas: **compatibilidade** e **performance**! Então vamos fazer essa bagaça funcionar!!!
 
 ### Configurando o projeto:
 
@@ -68,7 +69,7 @@ Antes que eu me esqueça, estarei postando essa [app no github](https://github.c
 Agora vamos começar a codar de verdade, para isso vamos fazer um request para a API que vai nos entregar os dados que a gente precisa, para isso vamos utilizar o [Jikan](https://jikan.moe/?ref=public-apis). O Jikan é uma API não oficial do [My Anime List](https://myanimelist.net), ela é bem completinha para o que iremos fazer 😆. E para ele existe um _wrapper_ em js ([jikanjs](https://github.com/zuritor/jikanjs)) para facilitar ainda mais a nossa vida, para instalar basta rodar.
 
 ```bash
-yarn add jikanjs
+$ yarn add jikanjs
 ```
 
 Com isso já temos acesso a api, você pode fazer um teste colocando no `App.js` o seguinte trecho de código:
@@ -150,7 +151,7 @@ Pronto, com isso já temos todos os itens sendo exibidos na página!
 
 ### Vamos passar a primeira maquiagem:
 
-A ideia aqui é só tornar a nossa visualização melhor, não tem muita regra e nem adicionei um pré-processador
+A ideia aqui é só tornar a nossa visualização melhor, não tem muita regra e ainda nem adicionei um pré-processador.
 
 
 ```css
@@ -176,8 +177,8 @@ body {
 Nós não podemos esquecer de fazer os testes da nossa app (_ou de qualquer código que façamos_), para isso vamos instalar o jest:
 
 ```bash
-yarn add -D jest babel-jest enzyme jest-environment-enzyme jest-enzyme enzyme-adapter-react-16 identity-obj-proxy
-yarn jest --init
+$ yarn add -D jest babel-jest enzyme jest-environment-enzyme jest-enzyme enzyme-adapter-react-16 identity-obj-proxy
+$ yarn jest --init
 ```
 
 na linha 2 a gente cria a configuração inicial do jest automaticamente, é só seguir a sequência `jsdom, y, y`, com isso ele cria um arquivo chamado `jest.config.js`. Nele faça a modificação nas linhas 82, 129, 135 e 144:
@@ -207,34 +208,31 @@ Com isso só falta alterar o nosso `package.json` para rodar os testes e coverag
 {
   ...
   scripts: {
-      ...
-      "test": "jest",
-      "test:coverage": "jest --coverage"
+    ...
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   }
 }
 ```
 
 Também adicionei o ESLint, para ver como ficou, olhe [esse commit](https://github.com/paulopotter/my-first-smart-tv-app/commit/853e5bf).
 
-Agora vamos fazer o nosso teste passar
-
-
 ## Navegação
 
 Para fazer a navegação, eu vou adicionar uma classe para indicar a seleção:
 
 ```jsx
- tmpl(anime, i) {
-    [...]
-      <div className={`poster-wrapper ${this.state.activeItem === i ? 'poster-wrapper--active': null}`} id={mal_id} key={mal_id}>
-    [...]
-  }
+tmpl(anime, i) {
+    ...
+        <div className={`poster-wrapper ${this.state.activeItem === i ? 'poster-wrapper--active': null}`} id={mal_id} key={mal_id}>
+    ...
+}
 
-  render() {
-    [...]
+render() {
+    ...
     return animes.map((anime, i) => (anime.type === 'TV' ? this.tmpl(anime, i) : null))
-    [...]
-  }
+    ...
+}
 ```
 
 e agora a gente ouve os eventos do teclado:
@@ -287,34 +285,32 @@ para essa função funcionar a gente ainda precisa adicionar as seguintes linhas
 
 ```js
 constructor(props) {
-  [...]
+  ...
   this.onKeyDown = this.onKeyDown.bind(this)
 }
 componentDidMount() {
-  [...]
+  ...
     this.enableKeyEvent()
-  }
+}
 
-  componentWillUnmount() {
+componentWillUnmount() {
     this.disableKeyEvent()
-  }
+}
 
-  enableKeyEvent() {
+enableKeyEvent() {
     document.addEventListener('keydown', this.onKeyDown, true)
-  }
+}
 
-  disableKeyEvent() {
+disableKeyEvent() {
     document.removeEventListener('keydown', this.onKeyDown, true)
-  }
+}
 ```
 
 ## that`s is it
 
-É isso, para a nossa primeira parte isso já é o suficiente para começar a brincar ( e porque se eu continuar o post vai demorar 3 horas para ser lido :P)
+É isso, para a nossa primeira parte isso já é o suficiente para começar a brincar ( e porque se eu continuar o post vai demorar 3 horas para ser lido 🤪)
 Para ver todos os commits desse post, acesse [essa tag no github](https://github.com/paulopotter/my-first-smart-tv-app/releases/tag/post-1)
 
 No próximo post, nós teremos a continuação dos testes, fix de alguns bugs e criação de algum evento para quando selecionar-mos um item.
 
 Qualquer dúvida, critica ou sugestão utilizem os comentários e até a próxima!!
-
-
