@@ -306,7 +306,7 @@ disableKeyEvent() {
 }
 ```
 
-## that`s is it
+## That`s it
 
 É isso, para a nossa primeira parte isso já é o suficiente para começar a brincar ( e porque se eu continuar o post vai demorar 3 horas para ser lido 🤪)
 Para ver todos os commits desse post, acesse [essa tag no github](https://github.com/paulopotter/my-first-smart-tv-app/releases/tag/post-1)

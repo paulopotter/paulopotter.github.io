@@ -410,7 +410,7 @@ $ yarn jest --init
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;h2&gt;that`s is it&lt;/h2&gt;
+&lt;h2&gt;That`s it&lt;/h2&gt;
 &lt;p&gt;É isso, para a nossa primeira parte isso já é o suficiente para começar a brincar ( e porque se eu continuar o post vai demorar 3 horas para ser lido 🤪)
 Para ver todos os commits desse post, acesse &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/releases/tag/post-1"&gt;essa tag no github&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;No próximo post, nós teremos a continuação dos testes, fix de alguns bugs e criação de algum evento para quando selecionar-mos um item.&lt;/p&gt;
