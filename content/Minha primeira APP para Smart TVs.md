@@ -1,7 +1,7 @@
-Title: Criando sua primeira APP para Smart TVs
+Title: Minha primeira APP para Smart TVs
 Category: Smart TV
 Tags: Smart TV, Js, React
-Series: Criando sua primeira APP para Smart TVs
+Series: Minha primeira APP para Smart TVs
 Date: 2020-01-19
 cover_image: smart-tv-pixabay.jpg
 cover_image_by: Imagem retirada de <a href="https://pixabay.com/pt/illustrations/remoto-controle-tela-tv-exploração-3653882/" title="Tv com controle remoto">PixaBay</a>
