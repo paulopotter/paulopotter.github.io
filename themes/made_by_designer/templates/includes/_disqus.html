@@ -45,11 +45,11 @@ $('#disqus_thread').on('shown', function () {
     {% if article.disqus_identifier %}
         var disqus_identifier = '{{ article.disqus_identifier }}';
     {% else %}
-        // var disqus_identifier = location.href;
-        var disqus_identifier = '{{ SITEURL }}/{{ article.url }}';
+        var disqus_identifier = window.location.href;
+        // var disqus_identifier = '{{ SITEURL }}/{{ article.url }}';
     {% endif %}
-    // var disqus_url = location.href;
-    var disqus_url = '{{ SITEURL }}/{{ article.url }}';
+    var disqus_url = window.location.href;
+    // var disqus_url = '{{ SITEURL }}/{{ article.url }}';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
