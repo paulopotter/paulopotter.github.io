@@ -10,10 +10,9 @@ cover_image_alt: Smart Tv from pixabay
 Fala ae, tranquilinho?
 
 Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido [neste post](./como-e-o-desenvolvimento-para-smart-tvs.html). Recomendo a leitura, é uma boa introdução.
-
-Tendo a ideia de tentar passar por boa partes dos problemas que temos quando desenvolvemos app para TVs, pensei em vários tipos diferentes de exemplo de apps: galeria de fotos, app de streaming de música, app de streaming de animes (<strike>para ter uma experiência melhor que a sua, Crunchyroll</strike>), ...Porém para ser algo mais rápido e simples, eu tive que me conter 🤪
-
 <!-- PELICAN_END_SUMMARY -->
+
+Tendo a ideia de tentar passar por boa partes dos problemas que temos quando desenvolvemos app para TVs, pensei em vários tipos diferentes de exemplo de apps: galeria de fotos, app de streaming de música, app de streaming de animes (<strike>para ter uma experiência melhor que a sua, Crunchyroll</strike>)... Porém para ser algo mais rápido e simples, eu tive que me conter 🤪
 
 ## O Projeto:
 
