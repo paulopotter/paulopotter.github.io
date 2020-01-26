@@ -1,6 +1,5 @@
 pre {
     background: transparent;
-    white-space: pre-wrap;
 }
 .highlight .hll { background-color: #49483e }
 .highlight  { background: #272822; color: #f8f8f2 }
@@ -70,7 +69,11 @@ pre {
     background: #484848;
     text-align: right;
     color: #fff;
+    width: 2em;
 }
 .code {
     padding-left: 0;
+}
+.highlight {
+  display: grid;
 }

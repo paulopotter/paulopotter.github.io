@@ -95,20 +95,20 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 11
 12
 13
-14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;tmpl&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;anime&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;{
-  &lt;span class="nv"&gt;const&lt;/span&gt; {&lt;span class="nv"&gt;image_url&lt;/span&gt;, &lt;span class="nv"&gt;title&lt;/span&gt;, &lt;span class="nv"&gt;mal_id&lt;/span&gt;, &lt;span class="nv"&gt;type&lt;/span&gt;} &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;anime&lt;/span&gt;
+14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+  &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;image_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;anime&lt;/span&gt;
 
-  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;
-    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;div&lt;/span&gt; &lt;span class="nv"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;poster-wrapper&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;{&lt;span class="nv"&gt;mal_id&lt;/span&gt;} &lt;span class="nv"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;{&lt;span class="nv"&gt;mal_id&lt;/span&gt;}&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;figure&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;span&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;{&lt;span class="nv"&gt;type&lt;/span&gt;}&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;span&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;img&lt;/span&gt; &lt;span class="nv"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;{&lt;span class="nv"&gt;image_url&lt;/span&gt;} &lt;span class="nv"&gt;alt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;{&lt;span class="nv"&gt;title&lt;/span&gt;} &lt;span class="o"&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;p&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;{&lt;span class="nv"&gt;title&lt;/span&gt;}&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;p&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;figure&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nv"&gt;div&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="ss"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="nx"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;poster-wrapper&amp;quot;&lt;/span&gt; &lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;figure&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;span&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/span&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;img&lt;/span&gt; &lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;image_url&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;alt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/p&amp;gt;&lt;/span&gt;
+      &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/figure&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;)&lt;/span&gt;
 
-}
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
@@ -132,26 +132,26 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 17
 18
 19
-20&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;constructor&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;props&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
-  &lt;span class="nv"&gt;super&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;props&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
-  &lt;span class="nv"&gt;this&lt;/span&gt;.&lt;span class="nv"&gt;state&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; {
-      &lt;span class="nv"&gt;animes&lt;/span&gt;: []
-  }
-}
+20&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kr"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="nv"&gt;componentDidMount&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt; {
-  &lt;span class="nv"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;animes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; []
-  &lt;span class="nv"&gt;jikanjs&lt;/span&gt;
-  .&lt;span class="nv"&gt;loadSeasonLater&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt;
-  .&lt;span class="k"&gt;then&lt;/span&gt;&lt;span class="ss"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;response&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; {
-      &lt;span class="nv"&gt;response&lt;/span&gt;.&lt;span class="nv"&gt;anime&lt;/span&gt;.&lt;span class="nv"&gt;forEach&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;element&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; {
-          &lt;span class="nv"&gt;animes&lt;/span&gt;.&lt;span class="nv"&gt;push&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;element&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
-      }&lt;span class="ss"&gt;)&lt;/span&gt;
-      &lt;span class="nv"&gt;this&lt;/span&gt;.&lt;span class="nv"&gt;setState&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;{ &lt;span class="nv"&gt;animes&lt;/span&gt; }&lt;span class="ss"&gt;)&lt;/span&gt;
-  }&lt;span class="ss"&gt;)&lt;/span&gt;.&lt;span class="nv"&gt;catch&lt;/span&gt;&lt;span class="ss"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;err&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; {
-      &lt;span class="nv"&gt;console&lt;/span&gt;.&lt;span class="nv"&gt;error&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;err&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;; // in case a error happens&lt;/span&gt;
-  }&lt;span class="ss"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
-}
+&lt;span class="nx"&gt;componentDidMount&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+  &lt;span class="nx"&gt;jikanjs&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;loadSeasonLater&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;then&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+          &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+      &lt;span class="p"&gt;})&lt;/span&gt;
+      &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setState&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt;
+  &lt;span class="p"&gt;}).&lt;/span&gt;&lt;span class="k"&gt;catch&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// in case a error happens&lt;/span&gt;
+  &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
@@ -159,10 +159,10 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3
-4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;render&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt; {
-    &lt;span class="nv"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;animes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;this&lt;/span&gt;.&lt;span class="nv"&gt;state&lt;/span&gt;.&lt;span class="nv"&gt;animes&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nv"&gt;animes&lt;/span&gt;.&lt;span class="nv"&gt;map&lt;/span&gt;&lt;span class="ss"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;anime&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;anime&lt;/span&gt;.&lt;span class="nv"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;TV&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; ? &lt;span class="nv"&gt;this&lt;/span&gt;.&lt;span class="nv"&gt;tmpl&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;anime&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; : &lt;span class="nv"&gt;null&lt;/span&gt;&lt;span class="ss"&gt;))&lt;/span&gt;
-}
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;render&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TV&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
@@ -267,17 +267,17 @@ $ yarn jest --init
  8
  9
 10
-11&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;tmpl&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;anime&lt;/span&gt;, &lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
-    ...
-        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;div&lt;/span&gt; &lt;span class="nv"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;{`&lt;span class="nv"&gt;poster&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;wrapper&lt;/span&gt; ${&lt;span class="nv"&gt;this&lt;/span&gt;.&lt;span class="nv"&gt;state&lt;/span&gt;.&lt;span class="nv"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="nv"&gt;i&lt;/span&gt; ? &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;poster-wrapper--active&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;: &lt;span class="nv"&gt;null&lt;/span&gt;}`} &lt;span class="nv"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;{&lt;span class="nv"&gt;mal_id&lt;/span&gt;} &lt;span class="nv"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;{&lt;span class="nv"&gt;mal_id&lt;/span&gt;}&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-    ...
-}
+11&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="nx"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="sb"&gt;`poster-wrapper &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;poster-wrapper--active&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="nv"&gt;render&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt; {
-    ...
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nv"&gt;animes&lt;/span&gt;.&lt;span class="nv"&gt;map&lt;/span&gt;&lt;span class="ss"&gt;((&lt;/span&gt;&lt;span class="nv"&gt;anime&lt;/span&gt;, &lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;anime&lt;/span&gt;.&lt;span class="nv"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;TV&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; ? &lt;span class="nv"&gt;this&lt;/span&gt;.&lt;span class="nv"&gt;tmpl&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;anime&lt;/span&gt;, &lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; : &lt;span class="nv"&gt;null&lt;/span&gt;&lt;span class="ss"&gt;))&lt;/span&gt;
-    ...
-}
+&lt;span class="nx"&gt;render&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TV&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
@@ -322,47 +322,47 @@ $ yarn jest --init
 38
 39
 40
-41&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;onKeyDown&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;e&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
-    &lt;span class="nv"&gt;const&lt;/span&gt; { &lt;span class="nv"&gt;activeItem&lt;/span&gt;, &lt;span class="nv"&gt;animes&lt;/span&gt; } &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;this&lt;/span&gt;.&lt;span class="nv"&gt;state&lt;/span&gt;
-    &lt;span class="nv"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;activeItem&lt;/span&gt;
-    &lt;span class="nv"&gt;switch&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;e&lt;/span&gt;.&lt;span class="nv"&gt;keyCode&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
-      &lt;span class="nv"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;37&lt;/span&gt;: &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;left&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;!==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
-          &lt;span class="nv"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-        }
+41&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;onKeyDown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;activeItem&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;
+    &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;activeItem&lt;/span&gt;
+    &lt;span class="k"&gt;switch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;37&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;// left&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;!==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+          &lt;span class="nx"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
         &lt;span class="k"&gt;break&lt;/span&gt;
 
-      &lt;span class="nv"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;39&lt;/span&gt;: &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;right&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nv"&gt;animes&lt;/span&gt;.&lt;span class="nv"&gt;length&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
-          &lt;span class="nv"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-        }
+      &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;39&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;// right&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+          &lt;span class="nx"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
         &lt;span class="k"&gt;break&lt;/span&gt;
 
-      &lt;span class="nv"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;40&lt;/span&gt;: &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;down&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nv"&gt;animes&lt;/span&gt;.&lt;span class="nv"&gt;length&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
-          &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;animes&lt;/span&gt;.&lt;span class="nv"&gt;length&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
-            &lt;span class="nv"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;animes&lt;/span&gt;.&lt;span class="nv"&gt;length&lt;/span&gt;
-          } &lt;span class="k"&gt;else&lt;/span&gt; {
-            &lt;span class="nv"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
-          }
-        }
+      &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;40&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;// down&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+          &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;
+          &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+          &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
         &lt;span class="k"&gt;break&lt;/span&gt;
-      &lt;span class="nv"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;38&lt;/span&gt;: &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nv"&gt;up&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nv"&gt;animes&lt;/span&gt;.&lt;span class="nv"&gt;length&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
-          &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
-            &lt;span class="nv"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-          } &lt;span class="k"&gt;else&lt;/span&gt; {
-            &lt;span class="nv"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
-          }
-        }
+      &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;38&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;// up&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+          &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+          &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+          &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
         &lt;span class="k"&gt;break&lt;/span&gt;
-      &lt;span class="nv"&gt;default&lt;/span&gt;:
+      &lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;break&lt;/span&gt;
-    }
-    &lt;span class="nv"&gt;this&lt;/span&gt;.&lt;span class="nv"&gt;setState&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;{
-      &lt;span class="nv"&gt;activeItem&lt;/span&gt;: &lt;span class="nv"&gt;newActiveItem&lt;/span&gt;
-    }&lt;span class="ss"&gt;)&lt;/span&gt;
-  }
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setState&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+      &lt;span class="nx"&gt;activeItem&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;newActiveItem&lt;/span&gt;
+    &lt;span class="p"&gt;})&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
