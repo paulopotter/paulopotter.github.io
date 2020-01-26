@@ -93,7 +93,7 @@ Abra o seu console e você verá a resposta do servidor.
 
 Vamos colocar esses dados na tela, e para isso vamos criar uma estrutura HTML:
 
-```jsx
+```javascript
 
 tmpl(anime){
   const {image_url, title, mal_id, type} = anime
@@ -114,7 +114,7 @@ tmpl(anime){
 
 e depois vamos fazer o request, para isso vamos adicionar o `state` e o `componentDidMount`:
 
-```jsx
+```javascript
 constructor(props) {
   super(props)
   this.state = {
@@ -139,7 +139,7 @@ componentDidMount() {
 
 E agora vamos adicionar no `render` o conteúdo.
 
-```jsx
+```javascript
 render() {
     let animes = this.state.animes;
     return animes.map((anime) => (anime.type === 'TV' ? this.tmpl(anime) : null))
@@ -220,7 +220,7 @@ Também adicionei o ESLint, para ver como ficou, olhe [esse commit](https://gith
 
 Para fazer a navegação, eu vou adicionar uma classe para indicar a seleção:
 
-```jsx
+```javascript
 tmpl(anime, i) {
     ...
         <div className={`poster-wrapper ${this.state.activeItem === i ? 'poster-wrapper--active': null}`} id={mal_id} key={mal_id}>
@@ -236,7 +236,7 @@ render() {
 
 e agora a gente ouve os eventos do teclado:
 
-```jsx
+```javascript
 onKeyDown(e) {
     const { activeItem, animes } = this.state
     let newActiveItem = activeItem

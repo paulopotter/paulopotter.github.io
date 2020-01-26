@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Paulo Oliveira'
-SITE_BAR_TITLE = u'Paulo Oliveira || Um dev qualquer'
+SITE_BAR_TITLE = u'[LOCAL] Um dev qualquer'
 SITENAME = u'Paulo Oliveira'
 SITE_NAME_SUBTITLE = u'Full stack web Developer'
 SITEURL = 'http://local.umdevqualquer.com.br:8000'
@@ -58,8 +58,8 @@ PLUGINS = [
     'related_posts',
     'pelican-cover-image',
     'readtime',
-
 ]
+
 RELATED_POSTS_MAX = 5
 READTIME_WPM = {
     'default': {
@@ -79,7 +79,8 @@ MARKDOWN = {
         'codehilite': {
             'css_class': 'highlight',
             'linenums': True,
-            'use_pygments': True
+            'use_pygments': True,
+            'pygments_style': 'native'
         },
     },
     'output_format': 'html5',

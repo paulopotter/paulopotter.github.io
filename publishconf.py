@@ -10,6 +10,8 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
+
+SITE_BAR_TITLE = u'Um dev qualquer || Paulo Oliveira'
 SITEURL = 'https://umdevqualquer.com.br'
 RELATIVE_URLS = False
 
