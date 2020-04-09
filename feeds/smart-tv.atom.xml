@@ -121,7 +121,7 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 &lt;p&gt;&lt;strong&gt;package&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Precisamos instalar o &lt;em&gt;nock&lt;/em&gt; (&lt;code&gt;yarn add -D nock&lt;/code&gt;), e atualizar o nosso &lt;code&gt;package.json&lt;/code&gt; (de uma olhada no &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/package.json"&gt;arquivo&lt;/a&gt;, pois houveram modificações nas versões dos pacotes).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Arquivo de mock&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Para poder testar sem ter que ficar batendo na api toda hora, eu criei umas pasta &lt;code&gt;__mock__&lt;/code&gt; e adicionei um &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/__mock__/Animes.js"&gt;arquivo de mock&lt;/a&gt; lá.&lt;/p&gt;
+&lt;p&gt;Para poder testar sem ter que ficar batendo na api toda hora, eu criei uma pasta &lt;code&gt;__mock__&lt;/code&gt; e adicionei um &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/__mock__/Animes.js"&gt;arquivo de mock&lt;/a&gt; lá.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;jest config&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Por causa do mock que precisamos fazer, temos que remover a pasta do &lt;code&gt;mock&lt;/code&gt; do coverage:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
