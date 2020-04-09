@@ -97,7 +97,7 @@ Precisamos instalar o *nock* (`yarn add -D nock`), e atualizar o nosso `package.
 
 **Arquivo de mock**
 
-Para poder testar sem ter que ficar batendo na api toda hora, eu criei umas pasta `__mock__` e adicionei um [arquivo de mock](https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/__mock__/Animes.js) lá.
+Para poder testar sem ter que ficar batendo na api toda hora, eu criei uma pasta `__mock__` e adicionei um [arquivo de mock](https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/__mock__/Animes.js) lá.
 
 
 **jest config**
