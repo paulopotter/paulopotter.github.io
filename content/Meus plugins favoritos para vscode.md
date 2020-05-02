@@ -10,7 +10,7 @@ cover_image_by: Photo by Blake Connally on <a href="https://unsplash.com/photos/
 
 Fala ae pessoal, tudo tranquilo?
 
-Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa queria internet procurando por plugins para facilitar a minha vida.
+Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa querida internet procurando por plugins para facilitar a minha vida.
 <!-- PELICAN_END_SUMMARY -->
 
 Hoje chegou a minha hora de fazer e eu resolvir começar com os plugins que eu uso no meu [VSCode](https://code.visualstudio.com/download). Esta é a seleção dos plugins que eu estou utilizando atualmente e alguns são aqueles que eu não consigo viver sem. Acredito que pelo menos um você vai se interessar (se é que você já não o usa).
@@ -165,4 +165,4 @@ Tema que eu estou utilizando no momento.
 
 Bom é isso! Espero que você tenha gostado e deixe ai nos comentários se você ja usa ou começou a usar algum plugin dessa lista!
 
-Abraçoes e até a próxima!
+Abraços e até a próxima!
