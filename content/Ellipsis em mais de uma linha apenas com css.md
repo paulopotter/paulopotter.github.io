@@ -32,7 +32,7 @@ O mixin é esse:
 
 Exemplo:
 
-<p data-height="265" data-theme-id="dark" data-slug-hash="ZEBKbqw" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="ZEBKbqw" class="codepen">See the Pen <a href="https://codepen.io/paulopotter/pen/ZEBKbqw/">ZEBKbqw</a> by Paulo Vitor (<a href="https://codepen.io/paulopotter">@paulopotter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="400" data-theme-id="dark" data-slug-hash="ZEBKbqw" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="ZEBKbqw" class="codepen">See the Pen <a href="https://codepen.io/paulopotter/pen/ZEBKbqw/">ZEBKbqw</a> by Paulo Vitor (<a href="https://codepen.io/paulopotter">@paulopotter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 
 Essa dica me foi passada pelo Carlos Estrela.
