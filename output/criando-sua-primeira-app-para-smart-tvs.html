@@ -2,7 +2,7 @@
 <html lang="pt_br">
 <head>
   <meta charset="utf-8" />
-  <title>Criando sua primeira APP para Smart TVs - Um dev qualquer || Paulo Oliveira
+  <title>Criando sua primeira APP para Smart TVs - [LOCAL] Um dev qualquer
 
  </title>
   <link rel="icon" href="./favicon.png" />
@@ -15,19 +15,19 @@
 
 
 
-    <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" />
+    <link href="http://local.umdevqualquer.com.br:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="[LOCAL] Um dev qualquer - Atom Feed" />
 
     <link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="https://umdevqualquer.com.br/theme/css/article.css"/>
+  <link rel="stylesheet" type="text/css" href="http://local.umdevqualquer.com.br:8000/theme/css/article.css"/>
 
 </head>
 <body>
   <header class='header_site' id="start-page" container>
     <div class="header_site--wrapper">
       <h1 class="header_site--title">
-          <a href="https://umdevqualquer.com.br" class="header_site--title-link">
+          <a href="http://local.umdevqualquer.com.br:8000" class="header_site--title-link">
             <span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
             </a>
       </h1>
@@ -47,7 +47,7 @@
             <h1 class="article_content-title">Criando sua primeira APP para Smart TVs  </h1><small> Tempo médio de leitura: 14 minutos.</small>
             <div class="article_content-content">
                     <figure class='article_cover'>
-                        <img class='article_cover__img' src="https://umdevqualquer.com.br/images/smart-tv-pixabay.jpg"
+                        <img class='article_cover__img' src="http://local.umdevqualquer.com.br:8000/images/smart-tv-pixabay.jpg"
                             alt="Smart Tv from pixabay">
 
                         <figcaption class='article_cover__credit'>Créditos:
@@ -55,8 +55,9 @@
                             </figcaption>
                     </figure>
                 <p>Fala ae, tranquilinho?</p>
-<p>Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido <a href="./como-e-o-desenvolvimento-para-smart-tvs.html">neste post</a>. Recomendo a leitura, é uma boa introdução.
-</p>
+<p>Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido <a href="./como-e-o-desenvolvimento-para-smart-tvs.html">neste post</a>. Recomendo a leitura, é uma boa introdução.</p>
+
+
 <p>Tendo a ideia de tentar passar por boa partes dos problemas que temos quando desenvolvemos app para TVs, pensei em vários tipos diferentes de exemplo de apps: galeria de fotos, app de streaming de música, app de streaming de animes (<strike>para ter uma experiência melhor que a sua, Crunchyroll</strike>)... Porém para ser algo mais rápido e simples, eu tive que me conter 🤪</p>
 <h2>O Projeto:</h2>
 <p>Com isso em mente, a escolha que mais se encaixou nesses requistos foi: <strong>app que simula um catálogo de animes/mangá</strong>.
@@ -75,10 +76,9 @@ Após essa série de posts, se vocês quiserem, eu faço um mais "real", com req
 <h3>Configurando o projeto:</h3>
 <p><center><img alt="E la vamos nós" src="https://media.tenor.com/images/0993a0560293a59c1bee27a37d91696d/tenor.png"><br/><sup>Creditos: google</sup></center></p>
 <p>Aqui é aquela configuração padrao: aquele nosso <code>create-react-app</code> básico (se você não tem o <em>create-react-app</em> é só usar o <code>npm install -g create-react-app</code>). Com isso, já começamos a ter a nossa estrutura inicial.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ create-react-app my-first-smart-tv-app
-</pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>$ create-react-app my-first-smart-tv-app
+</code></pre></div>
 </td></tr></table>
-
 <p>Nota: <em>Para fins práticos e educacionais, eu não irei otimizar a nossa app ao máximo, me atentarei para o funcionamento básico de uma app.</em></p>
 <p>Continuando, agora está na hora de adicionar o babel e o webpack, segue os comandos:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -86,24 +86,22 @@ Após essa série de posts, se vocês quiserem, eu faço um mais "real", com req
 3
 4
 5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Webpack</span>
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Webpack</span>
 $ yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin html-loadert
 <span class="c1"># babel</span>
 $ yarn add -D @babel/core babel-loader @babel/preset-env @babel/preset-react babel-preset-es2015
 <span class="c1"># Sass/css</span>
 $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>É necessário fazer algumas configurações para o funcionamento do webpack/babel após a instalação, como eu mexi em vários arquivos, <a href="https://github.com/paulopotter/my-first-smart-tv-app/commit/6a5b5f4">aqui está o commit com essas modificações</a>.</p>
 <p>Com isso nós já temos a estrutura da nossa APP.</p>
 <h3>Começando o desenvolvimento:</h3>
 <p>Antes que eu me esqueça, estarei postando essa <a href="https://github.com/paulopotter/my-first-smart-tv-app">app no github</a>, com isso se você quiser apenas o resultado final, estará tudo documentado lá.</p>
 <p>Agora vamos começar a codar de verdade, para isso vamos fazer um request para a API que vai nos entregar os dados que a gente precisa, para isso vamos utilizar o <a href="https://jikan.moe/?ref=public-apis">Jikan</a>. O Jikan é uma API não oficial do <a href="https://myanimelist.net">My Anime List</a>, ela é bem completinha para o que iremos fazer 😆. E para ele existe um <em>wrapper</em> em js (<a href="https://github.com/zuritor/jikanjs">jikanjs</a>) para facilitar ainda mais a nossa vida, para instalar basta rodar.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ yarn add jikanjs
-</pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>$ yarn add jikanjs
+</code></pre></div>
 </td></tr></table>
-
 <p>Com isso já temos acesso a api, você pode fazer um teste colocando no <code>App.js</code> o seguinte trecho de código:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -117,7 +115,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 10
 11
 12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">jikanjs</span>
   <span class="p">.</span><span class="nx">loadSeasonLater</span><span class="p">()</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -130,9 +128,8 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 
   <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span> <span class="nx">Hello</span> <span class="nx">World</span> <span class="o">:</span><span class="p">)</span> <span class="o">&lt;</span><span class="err">/h1&gt;;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>Abra o seu console e você verá a resposta do servidor.</p>
 <p>Vamos colocar esses dados na tela, e para isso vamos criar uma estrutura HTML:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -148,7 +145,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 11
 12
 13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">){</span>
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">){</span>
   <span class="kr">const</span> <span class="p">{</span><span class="nx">image_url</span><span class="p">,</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">mal_id</span><span class="p">,</span> <span class="nx">type</span><span class="p">}</span> <span class="o">=</span> <span class="nx">anime</span>
 
   <span class="k">return</span> <span class="p">(</span>
@@ -162,9 +159,8 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
   <span class="p">)</span>
 
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>e depois vamos fazer o request, para isso vamos adicionar o <code>state</code> e o <code>componentDidMount</code>:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -185,7 +181,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 17
 18
 19
-20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
   <span class="kr">super</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
       <span class="nx">animes</span><span class="o">:</span> <span class="p">[]</span>
@@ -205,20 +201,18 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
       <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="c1">// in case a error happens</span>
   <span class="p">});</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>E agora vamos adicionar no <code>render</code> o conteúdo.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nx">animes</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animes</span><span class="p">;</span>
     <span class="k">return</span> <span class="nx">animes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">anime</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">anime</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;TV&#39;</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">))</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>Pronto, com isso já temos todos os itens sendo exibidos na página!</p>
 <h3>Vamos passar a primeira maquiagem:</h3>
 <p>A ideia aqui é só tornar a nossa visualização melhor, não tem muita regra e ainda nem adicionei um pré-processador.</p>
@@ -235,7 +229,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 11
 12
 13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">body</span> <span class="p">{</span>
   <span class="k">background-color</span><span class="p">:</span> <span class="mh">#0f0f0f</span><span class="p">;</span>
   <span class="k">color</span><span class="p">:</span> <span class="mh">#f1f1f1</span><span class="p">;</span>
 <span class="p">}</span>
@@ -249,17 +243,15 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 <span class="p">.</span><span class="nc">poster-wrapper--active</span> <span class="p">{</span>
   <span class="k">outline</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#f1f1f1</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <h3>Test, Jest everywhere...</h3>
 <p>Nós não podemos esquecer de fazer os testes da nossa app (<em>ou de qualquer código que façamos</em>), para isso vamos instalar o jest:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ yarn add -D jest babel-jest enzyme jest-environment-enzyme jest-enzyme enzyme-adapter-react-16 identity-obj-proxy
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>$ yarn add -D jest babel-jest enzyme jest-environment-enzyme jest-enzyme enzyme-adapter-react-16 identity-obj-proxy
 $ yarn jest --init
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>na linha 2 a gente cria a configuração inicial do jest automaticamente, é só seguir a sequência <code>jsdom, y, y</code>, com isso ele cria um arquivo chamado <code>jest.config.js</code>. Nele faça a modificação nas linhas 82, 129, 135 e 144:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -268,7 +260,7 @@ $ yarn jest --init
 5
 6
 7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">moduleNameMapper</span><span class="o">:</span> <span class="p">{</span> <span class="c1">// 82</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">moduleNameMapper</span><span class="o">:</span> <span class="p">{</span> <span class="c1">// 82</span>
   <span class="s2">&quot;\\.(css|sass)$&quot;</span><span class="o">:</span> <span class="s2">&quot;identity-obj-proxy&quot;</span><span class="p">,</span>
 <span class="p">},</span>
 <span class="nx">setupFilesAfterEnv</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;&lt;rootDir&gt;/src/setupTests.js&quot;</span><span class="p">],</span> <span class="c1">// 129</span>
@@ -276,18 +268,16 @@ $ yarn jest --init
 <span class="nx">testMatch</span><span class="o">:</span> <span class="p">[</span> <span class="c1">// 144</span>
   <span class="s2">&quot;**/*.test.js&quot;</span><span class="p">,</span>
 <span class="p">],</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>Também precisamos criar o arquivo <code>src/setupTest.js</code> e dentro dele colocar:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">configure</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;enzyme&quot;</span><span class="p">;</span>
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">configure</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;enzyme&quot;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="nx">Adapter</span> <span class="nx">from</span> <span class="s2">&quot;enzyme-adapter-react-16&quot;</span><span class="p">;</span>
 <span class="nx">configure</span><span class="p">({</span> <span class="nx">adapter</span><span class="o">:</span> <span class="k">new</span> <span class="nx">Adapter</span><span class="p">()</span> <span class="p">});</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>Com isso só falta alterar o nosso <code>package.json</code> para rodar os testes e coverage:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -296,7 +286,7 @@ $ yarn jest --init
 5
 6
 7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="err">...</span>
   <span class="err">scripts:</span> <span class="err">{</span>
     <span class="err">...</span>
@@ -304,9 +294,8 @@ $ yarn jest --init
     <span class="nt">&quot;test:coverage&quot;</span><span class="p">:</span> <span class="s2">&quot;jest --coverage&quot;</span>
   <span class="p">}</span>
 <span class="err">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>Também adicionei o ESLint, para ver como ficou, olhe <a href="https://github.com/paulopotter/my-first-smart-tv-app/commit/853e5bf">esse commit</a>.</p>
 <h2>Navegação</h2>
 <p>Para fazer a navegação, eu vou adicionar uma classe para indicar a seleção:</p>
@@ -320,7 +309,7 @@ $ yarn jest --init
  8
  9
 10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
     <span class="p">...</span>
         <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="sb">`poster-wrapper </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">activeItem</span> <span class="o">===</span> <span class="nx">i</span> <span class="o">?</span> <span class="s1">&#39;poster-wrapper--active&#39;</span><span class="o">:</span> <span class="kc">null</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span> <span class="nx">id</span><span class="o">=</span><span class="p">{</span><span class="nx">mal_id</span><span class="p">}</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">mal_id</span><span class="p">}</span><span class="o">&gt;</span>
     <span class="p">...</span>
@@ -331,9 +320,8 @@ $ yarn jest --init
     <span class="k">return</span> <span class="nx">animes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">anime</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;TV&#39;</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">))</span>
     <span class="p">...</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>e agora a gente ouve os eventos do teclado:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -375,7 +363,7 @@ $ yarn jest --init
 38
 39
 40
-41</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">onKeyDown</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+41</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">onKeyDown</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
     <span class="kr">const</span> <span class="p">{</span> <span class="nx">activeItem</span><span class="p">,</span> <span class="nx">animes</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span>
     <span class="kd">let</span> <span class="nx">newActiveItem</span> <span class="o">=</span> <span class="nx">activeItem</span>
     <span class="k">switch</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">)</span> <span class="p">{</span>
@@ -416,9 +404,8 @@ $ yarn jest --init
       <span class="nx">activeItem</span><span class="o">:</span> <span class="nx">newActiveItem</span>
     <span class="p">})</span>
   <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>para essa função funcionar a gente ainda precisa adicionar as seguintes linhas:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -439,7 +426,7 @@ $ yarn jest --init
 17
 18
 19
-20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
   <span class="p">...</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">onKeyDown</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">onKeyDown</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
 <span class="p">}</span>
@@ -459,9 +446,8 @@ $ yarn jest --init
 <span class="nx">disableKeyEvent</span><span class="p">()</span> <span class="p">{</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onKeyDown</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <h2>That`s it</h2>
 <p>É isso, para a nossa primeira parte isso já é o suficiente para começar a brincar ( e porque se eu continuar o post vai demorar 3 horas para ser lido 🤪)
 Para ver todos os commits desse post, acesse <a href="https://github.com/paulopotter/my-first-smart-tv-app/releases/tag/post-1">essa tag no github</a></p>
@@ -480,7 +466,7 @@ Para ver todos os commits desse post, acesse <a href="https://github.com/paulopo
                             <li>
 
                                 <span>PARTE 2: </span>
-                                    <a href='https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html'>Criando sua primeira APP para Smart TVs (Parte 2)</a>
+                                    <a href='http://local.umdevqualquer.com.br:8000/criando-sua-primeira-app-para-smart-tvs-parte-2.html'>Criando sua primeira APP para Smart TVs (Parte 2)</a>
                                 </li>
                             </li>
                         </ol>
@@ -489,9 +475,9 @@ Para ver todos os commits desse post, acesse <a href="https://github.com/paulopo
                 <div class="article_content-related_post">
                     <h4 class="article_content-related_post--title">Veja também:</h4>
                         <ul>
-                            <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
-                            <li><a href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>
-                            <li><a href="https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser.html">Screamer-js - Um plugin js de notificação para Browser</a></li>
+                            <li><a href="http://local.umdevqualquer.com.br:8000/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
+                            <li><a href="http://local.umdevqualquer.com.br:8000/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>
+                            <li><a href="http://local.umdevqualquer.com.br:8000/screamer-js-um-plugin-js-de-notificacao-para-browser.html">Screamer-js - Um plugin js de notificação para Browser</a></li>
                         </ul>
                 </div>
         </article>
@@ -502,9 +488,9 @@ Para ver todos os commits desse post, acesse <a href="https://github.com/paulopo
 <script type="text/javascript">
     var disqus_shortname = 'umdevqualquer';
         var disqus_identifier = window.location.href;
-        // var disqus_identifier = 'https://umdevqualquer.com.br/';
+        // var disqus_identifier = 'http://local.umdevqualquer.com.br:8000/';
     var disqus_url = window.location.href;
-    // var disqus_url = 'https://umdevqualquer.com.br/';
+    // var disqus_url = 'http://local.umdevqualquer.com.br:8000/';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

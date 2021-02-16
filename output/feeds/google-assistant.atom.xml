@@ -4,7 +4,6 @@
 </summary><content type="html">&lt;p&gt;E ae, como vocês tão?&lt;/p&gt;
 &lt;p&gt;E um hackday&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; lá na &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt; eu tive a idéia de criar um assistente para um dos produtos da &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt;.&lt;/p&gt;
 
-
 &lt;p&gt;Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente, &lt;em&gt;e a partir do próximo post sobre o Assistant iremos criar um assistente nosso&lt;/em&gt; 😆 &lt;em&gt;com ou sem servidor próprio&lt;/em&gt;.&lt;/p&gt;
 &lt;h2&gt;O que é?&lt;/h2&gt;
 &lt;p&gt;&lt;center&gt;&lt;img alt="screenshot" src="https://o.aolcdn.com/images/dims3/GLOB/crop/600x300+0+40/resize/630x315!/format/jpg/quality/85/http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F83ae1071fcb16939aefc6345313200f8%2F205280619%2F18512316_1862455314020517_7322917835225694208_n.jpg"&gt;&lt;/center&gt;&lt;/p&gt;

@@ -71,8 +71,10 @@ pre {
     color: #fff;
     width: 2em;
 }
+code,
 .code {
     padding-left: 0;
+    background: transparent !important;
 }
 .highlight {
   display: grid;

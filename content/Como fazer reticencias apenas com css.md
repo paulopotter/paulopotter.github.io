@@ -20,13 +20,13 @@ Mas vamos parar de papo e...
 
 Digamos que você tenha uma `DIV` com um texto grande e a mesma tem que ter uns `100px`, porém você não controla/vai ficar controlando o texto que vai entrar.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="oGvYdg" data-default-tab="html,result" data-user="paulopotter" data-embed-version="2" data-pen-title="oGvYdg" class="codepen">See the Pen <a href="https://codepen.io/paulopotter/pen/oGvYdg/">oGvYdg</a> by Paulo Vitor (<a href="https://codepen.io/paulopotter">@paulopotter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="0" data-slug-hash="oGvYdg" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="oGvYdg" class="codepen">See the Pen <a href="https://codepen.io/paulopotter/pen/oGvYdg/">oGvYdg</a> by Paulo Vitor (<a href="https://codepen.io/paulopotter">@paulopotter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 _fonte: [http://slipsum.com/ipsum/](http://slipsum.com/ipsum/)_
 
 Ao colocar o seguinte trecho de código, a sua div vai ganhar reticências...
 
-```
+```css
 div {
    ...
    text-overflow: ellipsis;
@@ -37,7 +37,7 @@ div {
 
 e veja como fica:
 
-<p data-height="265" data-theme-id="dark" data-slug-hash="NaKbBX" data-default-tab="html,result" data-user="paulopotter" data-embed-version="2" data-pen-title="NaKbBX" class="codepen">See the Pen <a href="https://codepen.io/paulopotter/pen/NaKbBX/">NaKbBX</a> by Paulo Vitor (<a href="https://codepen.io/paulopotter">@paulopotter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="dark" data-slug-hash="NaKbBX" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="NaKbBX" class="codepen">See the Pen <a href="https://codepen.io/paulopotter/pen/NaKbBX/">NaKbBX</a> by Paulo Vitor (<a href="https://codepen.io/paulopotter">@paulopotter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 _Nota: isso só funciona para uma linha, para mais de uma eu ainda estou pesquisando como é a melhor forma de fazer em css!_
 

@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira</title><link href="https://umdevqualquer.com.br/" rel="alternate"></link><link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="self"></link><id>https://umdevqualquer.com.br/</id><updated>2020-05-02T00:00:00-03:00</updated><entry><title>Meus plugins favoritos para vscode</title><link href="https://umdevqualquer.com.br/meus-plugins-favoritos-para-vscode.html" rel="alternate"></link><published>2020-05-02T00:00:00-03:00</published><updated>2020-05-02T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2020-05-02:/meus-plugins-favoritos-para-vscode.html</id><summary type="html">&lt;p&gt;Fala ae pessoal, tudo tranquilo?&lt;/p&gt;
-&lt;p&gt;Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa querida internet procurando por plugins para facilitar a minha vida.
-&lt;/p&gt;</summary><content type="html">&lt;p&gt;Fala ae pessoal, tudo tranquilo?&lt;/p&gt;
-&lt;p&gt;Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa querida internet procurando por plugins para facilitar a minha vida.
-&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira</title><link href="http://local.umdevqualquer.com.br:8000/" rel="alternate"></link><link href="http://local.umdevqualquer.com.br:8000/feeds/all.atom.xml" rel="self"></link><id>http://local.umdevqualquer.com.br:8000/</id><updated>2021-02-16T00:00:00-03:00</updated><entry><title>Ellipsis em mais de uma linha apenas com css</title><link href="http://local.umdevqualquer.com.br:8000/ellipsis-em-mais-de-uma-linha-apenas-com-css.html" rel="alternate"></link><published>2021-02-16T00:00:00-03:00</published><updated>2021-02-16T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:local.umdevqualquer.com.br,2021-02-16:/ellipsis-em-mais-de-uma-linha-apenas-com-css.html</id><summary type="html">Fala minha galera, hoje a dica é rápida.</summary><content type="html">&lt;p&gt;Fala minha galera, hoje a dica é rápida.&lt;/p&gt;
+&lt;p&gt;Complementando o &lt;a href="./como-fazer-reticenciasellipsis-apenas-com-css.html"&gt;post feito antes&lt;/a&gt;, onde eu mostrava o ellipsis em uma linha, essa dica é para quem utiliza &lt;a href="https://sass-lang.com/guide"&gt;sass&lt;/a&gt;.
+Com ele, você conseguirá fazer ellipsis em mais de uma linha, facilitando muito quando a reticência tem que ficar numa caixa e não em uma linha.&lt;/p&gt;
+&lt;p&gt;O mixin é esse:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;@mixin&lt;/span&gt;&lt;span class="nf"&gt; multiline-ellipsis&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$font-size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$line-height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="mf"&gt;.5&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$lines-to-show&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$background&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="no"&gt;transparent&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="na"&gt;background&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nv"&gt;$background&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="no"&gt;block&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;display&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;webkit-box&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;max-height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nv"&gt;$font-size&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nv"&gt;$line-height&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nv"&gt;$lines-to-show&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;font-size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nv"&gt;$font-size&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;line-height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nv"&gt;$line-height&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;-webkit-line-clamp&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nv"&gt;$lines-to-show&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;-webkit-box-orient&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;vertical&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;overflow&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="no"&gt;hidden&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;text-overflow&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ellipsis&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;-o-text-overflow&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ellipsis&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+  &lt;span class="na"&gt;text-overflow&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o-ellipsis-lastline&lt;/span&gt;&lt;span class="err"&gt;;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p&gt;Exemplo:&lt;/p&gt;
+&lt;p data-height="265" data-theme-id="dark" data-slug-hash="ZEBKbqw" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="ZEBKbqw" class="codepen"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/ZEBKbqw/"&gt;ZEBKbqw&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Essa dica me foi passada pelo Carlos Estrela.&lt;/p&gt;
+&lt;script async src="https://production-assets.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;</content><category term="Css"></category><category term="Css"></category><category term="Tips"></category></entry><entry><title>Meus plugins favoritos para vscode</title><link href="http://local.umdevqualquer.com.br:8000/meus-plugins-favoritos-para-vscode.html" rel="alternate"></link><published>2020-05-02T00:00:00-03:00</published><updated>2020-05-02T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:local.umdevqualquer.com.br,2020-05-02:/meus-plugins-favoritos-para-vscode.html</id><summary type="html">&lt;p&gt;Fala ae pessoal, tudo tranquilo?&lt;/p&gt;
+&lt;p&gt;Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa querida internet procurando por plugins para facilitar a minha vida.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Fala ae pessoal, tudo tranquilo?&lt;/p&gt;
+&lt;p&gt;Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa querida internet procurando por plugins para facilitar a minha vida.&lt;/p&gt;
+
+
 &lt;p&gt;Hoje chegou a minha hora de fazer e eu resolvir começar com os plugins que eu uso no meu &lt;a href="https://code.visualstudio.com/download"&gt;VSCode&lt;/a&gt;. Esta é a seleção dos plugins que eu estou utilizando atualmente e alguns são aqueles que eu não consigo viver sem. Acredito que pelo menos um você vai se interessar (se é que você já não o usa).&lt;/p&gt;
 &lt;h2&gt;&lt;a id="menu"&gt;&lt;/a&gt;Menu&lt;/h2&gt;
 &lt;ul&gt;
@@ -96,7 +134,7 @@
 &lt;p&gt;&lt;center&gt;&lt;img alt="theme-panda" src="https://cdn.rawgit.com/tinkertrain/panda-syntax-vscode/master/assets/editor.jpg"&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;h1&gt;That`s all folks&lt;/h1&gt;
 &lt;p&gt;Bom é isso! Espero que você tenha gostado e deixe ai nos comentários se você ja usa ou começou a usar algum plugin dessa lista!&lt;/p&gt;
-&lt;p&gt;Abraços e até a próxima!&lt;/p&gt;</content><category term="Lista"></category><category term="Lista"></category><category term="vscode"></category></entry><entry><title>Criando sua primeira APP para Smart TVs (Parte 2)</title><link href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html" rel="alternate"></link><published>2020-04-09T00:00:00-03:00</published><updated>2020-04-09T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2020-04-09:/criando-sua-primeira-app-para-smart-tvs-parte-2.html</id><summary type="html">&lt;p&gt;Iai meu Polvo 🐙 como cês tão?&lt;/p&gt;
+&lt;p&gt;Abraços e até a próxima!&lt;/p&gt;</content><category term="Lista"></category><category term="Lista"></category><category term="vscode"></category></entry><entry><title>Criando sua primeira APP para Smart TVs (Parte 2)</title><link href="http://local.umdevqualquer.com.br:8000/criando-sua-primeira-app-para-smart-tvs-parte-2.html" rel="alternate"></link><published>2020-04-09T00:00:00-03:00</published><updated>2020-04-09T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:local.umdevqualquer.com.br,2020-04-09:/criando-sua-primeira-app-para-smart-tvs-parte-2.html</id><summary type="html">&lt;p&gt;Iai meu Polvo 🐙 como cês tão?&lt;/p&gt;
 &lt;p&gt;Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Iai meu Polvo 🐙 como cês tão?&lt;/p&gt;
 &lt;p&gt;Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.&lt;/p&gt;
@@ -140,7 +178,7 @@
 32
 33
 34
-35&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;componentDidMount&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+35&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;componentDidMount&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// [...]&lt;/span&gt;
     &lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TV&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -175,9 +213,8 @@
     &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;h2&gt;Hora dos testes:&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="fixing unit test" src="https://www.monkeyuser.com/assets/images/2018/86-fixing-unit-tests.png"&gt;
 &lt;center&gt;&lt;small&gt;Fonte: &lt;a href="https://www.monkeyuser.com/"&gt;MonkeyUser&lt;/a&gt;&lt;/small&gt;&lt;/center&gt;&lt;/p&gt;
@@ -199,7 +236,7 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 10
 11
 12
-13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="nt"&gt;&amp;quot;presets&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
       &lt;span class="p"&gt;[&lt;/span&gt;
         &lt;span class="s2"&gt;&amp;quot;@babel/preset-env&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -212,9 +249,8 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
       &lt;span class="s2"&gt;&amp;quot;@babel/preset-react&amp;quot;&lt;/span&gt;
     &lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;&lt;strong&gt;package&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Precisamos instalar o &lt;em&gt;nock&lt;/em&gt; (&lt;code&gt;yarn add -D nock&lt;/code&gt;), e atualizar o nosso &lt;code&gt;package.json&lt;/code&gt; (de uma olhada no &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/package.json"&gt;arquivo&lt;/a&gt;, pois houveram modificações nas versões dos pacotes).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Arquivo de mock&lt;/strong&gt;&lt;/p&gt;
@@ -225,14 +261,13 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 2
 3
 4
-5&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;linha&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;
- &lt;span class="n"&gt;coveragePathIgnorePatterns&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
-    &lt;span class="ss"&gt;&amp;quot;/node_modules/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="ss"&gt;&amp;quot;/__mock__/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-  &lt;span class="p"&gt;],&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+5&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;// linha: 30&lt;/span&gt;
+&lt;span class="err"&gt; coveragePathIgnorePatterns: [&lt;/span&gt;
+&lt;span class="err"&gt;    &amp;quot;/node_modules/&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;    &amp;quot;/__mock__/&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;  ],&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;h2&gt;Melhorando a experiência:&lt;/h2&gt;
 &lt;p&gt;Agora que nós possuímos uma tela funcionando, precisamos melhorar minimamente a experiência da mesma. E para isso, temos que corrigir a navegação vertical, visto que ao navegar para baixo, o scroll não segue o foco.&lt;/p&gt;
 &lt;p&gt;Vamos atualizar o css, adicionando altura para as imagens e depois dando um tapa no visual.&lt;/p&gt;
@@ -282,7 +317,7 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 44
 45
 46
-47&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+47&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="k"&gt;background-color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;#0f0f0f&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
   &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;#f1f1f1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
   &lt;span class="k"&gt;height&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;720&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -329,9 +364,8 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;poster-wrapper--active&lt;/span&gt; &lt;span class="nt"&gt;span&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="k"&gt;display&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;inline&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Agora vamos adicionar o efeito de scroll e para isso, precisamos de uma &lt;code&gt;div&lt;/code&gt; envolvendo todo o conteúdo além de adicionar margin à ela automaticamente utilizando o &lt;code&gt;state&lt;/code&gt;.&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -355,7 +389,7 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 20
 21
 22
-23&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+23&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="kr"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
       &lt;span class="c1"&gt;// [...]&lt;/span&gt;
@@ -378,9 +412,8 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
     &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/div&amp;gt;&lt;/span&gt;
   &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Agora, para criarmos a animação, vamos adicionar o valor da altura dos itens (&lt;code&gt;390px&lt;/code&gt;) ao &lt;code&gt;margin-top&lt;/code&gt; da div &lt;code&gt;wrapper&lt;/code&gt;. Então toda vez que apertarmos o botão para baixo vamos subtrair esse valor e para cima vamos adicionar esse valor.&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -398,7 +431,7 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 14
 15
 16
-17&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;animate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+17&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;animate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="mi"&gt;40&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
       &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setState&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;prevState&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;({&lt;/span&gt;
         &lt;span class="nx"&gt;wrapperStyle&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -415,20 +448,18 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
       &lt;span class="p"&gt;}))&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
   &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;e no &lt;code&gt;onkeyDown&lt;/code&gt; eu chamo o animate:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3
-4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// linha 57&lt;/span&gt;
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;// linha 57&lt;/span&gt;
 &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;animate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;40&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="c1"&gt;// linha 67&lt;/span&gt;
 &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;animate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;38&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;h2&gt;É isso aí!&lt;/h2&gt;
 &lt;p&gt;&lt;center&gt;
     &lt;img alt="Minha app" src="images/minha-primeira-smart-tv-app-pt2.gif"&gt;
@@ -442,11 +473,12 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 &lt;li&gt;&lt;a href="https://kcsmad.wordpress.com/2020/02/29/desmistificando-o-mundo-das-smart-tvs/"&gt;Desmitificando o mundo das Smart Tvs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://kcsmad.wordpress.com/2020/03/01/principios-basicos-para-aplicacoes-de-smart-tvs/"&gt;Princípios básicos para aplicações de Smart Tv&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;É isso, não se esqueçam de comentar e compartilhar e &lt;strong&gt;até o nosso próximo post!&lt;/strong&gt;&lt;/p&gt;</content><category term="Smart TV"></category><category term="Smart TV"></category><category term="Js"></category><category term="React"></category></entry><entry><title>Criando sua primeira APP para Smart TVs</title><link href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html" rel="alternate"></link><published>2020-01-19T00:00:00-03:00</published><updated>2020-01-19T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2020-01-19:/criando-sua-primeira-app-para-smart-tvs.html</id><summary type="html">&lt;p&gt;Fala ae, tranquilinho?&lt;/p&gt;
-&lt;p&gt;Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido &lt;a href="./como-e-o-desenvolvimento-para-smart-tvs.html"&gt;neste post&lt;/a&gt;. Recomendo a leitura, é uma boa introdução.
-&lt;/p&gt;</summary><content type="html">&lt;p&gt;Fala ae, tranquilinho?&lt;/p&gt;
-&lt;p&gt;Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido &lt;a href="./como-e-o-desenvolvimento-para-smart-tvs.html"&gt;neste post&lt;/a&gt;. Recomendo a leitura, é uma boa introdução.
-&lt;/p&gt;
+&lt;p&gt;É isso, não se esqueçam de comentar e compartilhar e &lt;strong&gt;até o nosso próximo post!&lt;/strong&gt;&lt;/p&gt;</content><category term="Smart TV"></category><category term="Smart TV"></category><category term="Js"></category><category term="React"></category></entry><entry><title>Criando sua primeira APP para Smart TVs</title><link href="http://local.umdevqualquer.com.br:8000/criando-sua-primeira-app-para-smart-tvs.html" rel="alternate"></link><published>2020-01-19T00:00:00-03:00</published><updated>2020-01-19T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:local.umdevqualquer.com.br,2020-01-19:/criando-sua-primeira-app-para-smart-tvs.html</id><summary type="html">&lt;p&gt;Fala ae, tranquilinho?&lt;/p&gt;
+&lt;p&gt;Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido &lt;a href="./como-e-o-desenvolvimento-para-smart-tvs.html"&gt;neste post&lt;/a&gt;. Recomendo a leitura, é uma boa introdução.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Fala ae, tranquilinho?&lt;/p&gt;
+&lt;p&gt;Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido &lt;a href="./como-e-o-desenvolvimento-para-smart-tvs.html"&gt;neste post&lt;/a&gt;. Recomendo a leitura, é uma boa introdução.&lt;/p&gt;
+
+
 &lt;p&gt;Tendo a ideia de tentar passar por boa partes dos problemas que temos quando desenvolvemos app para TVs, pensei em vários tipos diferentes de exemplo de apps: galeria de fotos, app de streaming de música, app de streaming de animes (&lt;strike&gt;para ter uma experiência melhor que a sua, Crunchyroll&lt;/strike&gt;)... Porém para ser algo mais rápido e simples, eu tive que me conter 🤪&lt;/p&gt;
 &lt;h2&gt;O Projeto:&lt;/h2&gt;
 &lt;p&gt;Com isso em mente, a escolha que mais se encaixou nesses requistos foi: &lt;strong&gt;app que simula um catálogo de animes/mangá&lt;/strong&gt;.
@@ -465,10 +497,9 @@ Após essa série de posts, se vocês quiserem, eu faço um mais "real", com req
 &lt;h3&gt;Configurando o projeto:&lt;/h3&gt;
 &lt;p&gt;&lt;center&gt;&lt;img alt="E la vamos nós" src="https://media.tenor.com/images/0993a0560293a59c1bee27a37d91696d/tenor.png"&gt;&lt;br/&gt;&lt;sup&gt;Creditos: google&lt;/sup&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;Aqui é aquela configuração padrao: aquele nosso &lt;code&gt;create-react-app&lt;/code&gt; básico (se você não tem o &lt;em&gt;create-react-app&lt;/em&gt; é só usar o &lt;code&gt;npm install -g create-react-app&lt;/code&gt;). Com isso, já começamos a ter a nossa estrutura inicial.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ create-react-app my-first-smart-tv-app
-&lt;/pre&gt;&lt;/div&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ create-react-app my-first-smart-tv-app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Nota: &lt;em&gt;Para fins práticos e educacionais, eu não irei otimizar a nossa app ao máximo, me atentarei para o funcionamento básico de uma app.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Continuando, agora está na hora de adicionar o babel e o webpack, segue os comandos:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -476,24 +507,22 @@ Após essa série de posts, se vocês quiserem, eu faço um mais "real", com req
 3
 4
 5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Webpack&lt;/span&gt;
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Webpack&lt;/span&gt;
 $ yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin html-loadert
 &lt;span class="c1"&gt;# babel&lt;/span&gt;
 $ yarn add -D @babel/core babel-loader @babel/preset-env @babel/preset-react babel-preset-es2015
 &lt;span class="c1"&gt;# Sass/css&lt;/span&gt;
 $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;É necessário fazer algumas configurações para o funcionamento do webpack/babel após a instalação, como eu mexi em vários arquivos, &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/commit/6a5b5f4"&gt;aqui está o commit com essas modificações&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Com isso nós já temos a estrutura da nossa APP.&lt;/p&gt;
 &lt;h3&gt;Começando o desenvolvimento:&lt;/h3&gt;
 &lt;p&gt;Antes que eu me esqueça, estarei postando essa &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app"&gt;app no github&lt;/a&gt;, com isso se você quiser apenas o resultado final, estará tudo documentado lá.&lt;/p&gt;
 &lt;p&gt;Agora vamos começar a codar de verdade, para isso vamos fazer um request para a API que vai nos entregar os dados que a gente precisa, para isso vamos utilizar o &lt;a href="https://jikan.moe/?ref=public-apis"&gt;Jikan&lt;/a&gt;. O Jikan é uma API não oficial do &lt;a href="https://myanimelist.net"&gt;My Anime List&lt;/a&gt;, ela é bem completinha para o que iremos fazer 😆. E para ele existe um &lt;em&gt;wrapper&lt;/em&gt; em js (&lt;a href="https://github.com/zuritor/jikanjs"&gt;jikanjs&lt;/a&gt;) para facilitar ainda mais a nossa vida, para instalar basta rodar.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ yarn add jikanjs
-&lt;/pre&gt;&lt;/div&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ yarn add jikanjs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Com isso já temos acesso a api, você pode fazer um teste colocando no &lt;code&gt;App.js&lt;/code&gt; o seguinte trecho de código:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -507,7 +536,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 10
 11
 12
-13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;render&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;render&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="nx"&gt;jikanjs&lt;/span&gt;
   &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;loadSeasonLater&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
   &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;then&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -520,9 +549,8 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 
   &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;Hello&lt;/span&gt; &lt;span class="nx"&gt;World&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/h1&amp;gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Abra o seu console e você verá a resposta do servidor.&lt;/p&gt;
 &lt;p&gt;Vamos colocar esses dados na tela, e para isso vamos criar uma estrutura HTML:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
@@ -538,7 +566,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 11
 12
 13
-14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
   &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;image_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;anime&lt;/span&gt;
 
   &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
@@ -552,9 +580,8 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
   &lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;e depois vamos fazer o request, para isso vamos adicionar o &lt;code&gt;state&lt;/code&gt; e o &lt;code&gt;componentDidMount&lt;/code&gt;:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -575,7 +602,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 17
 18
 19
-20&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+20&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="kr"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
       &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
@@ -595,20 +622,18 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
       &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// in case a error happens&lt;/span&gt;
   &lt;span class="p"&gt;});&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;E agora vamos adicionar no &lt;code&gt;render&lt;/code&gt; o conteúdo.&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3
-4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;render&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;render&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TV&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Pronto, com isso já temos todos os itens sendo exibidos na página!&lt;/p&gt;
 &lt;h3&gt;Vamos passar a primeira maquiagem:&lt;/h3&gt;
 &lt;p&gt;A ideia aqui é só tornar a nossa visualização melhor, não tem muita regra e ainda nem adicionei um pré-processador.&lt;/p&gt;
@@ -625,7 +650,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 11
 12
 13
-14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="k"&gt;background-color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;#0f0f0f&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
   &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;#f1f1f1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
@@ -639,17 +664,15 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;poster-wrapper--active&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="k"&gt;outline&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="kc"&gt;solid&lt;/span&gt; &lt;span class="mh"&gt;#f1f1f1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;h3&gt;Test, Jest everywhere...&lt;/h3&gt;
 &lt;p&gt;Nós não podemos esquecer de fazer os testes da nossa app (&lt;em&gt;ou de qualquer código que façamos&lt;/em&gt;), para isso vamos instalar o jest:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ yarn add -D jest babel-jest enzyme jest-environment-enzyme jest-enzyme enzyme-adapter-react-16 identity-obj-proxy
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ yarn add -D jest babel-jest enzyme jest-environment-enzyme jest-enzyme enzyme-adapter-react-16 identity-obj-proxy
 $ yarn jest --init
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;na linha 2 a gente cria a configuração inicial do jest automaticamente, é só seguir a sequência &lt;code&gt;jsdom, y, y&lt;/code&gt;, com isso ele cria um arquivo chamado &lt;code&gt;jest.config.js&lt;/code&gt;. Nele faça a modificação nas linhas 82, 129, 135 e 144:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
@@ -658,7 +681,7 @@ $ yarn jest --init
 5
 6
 7
-8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;moduleNameMapper&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="c1"&gt;// 82&lt;/span&gt;
+8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;moduleNameMapper&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="c1"&gt;// 82&lt;/span&gt;
   &lt;span class="s2"&gt;&amp;quot;\\.(css|sass)$&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;identity-obj-proxy&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="p"&gt;},&lt;/span&gt;
 &lt;span class="nx"&gt;setupFilesAfterEnv&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;rootDir&amp;gt;/src/setupTests.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="c1"&gt;// 129&lt;/span&gt;
@@ -666,18 +689,16 @@ $ yarn jest --init
 &lt;span class="nx"&gt;testMatch&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="c1"&gt;// 144&lt;/span&gt;
   &lt;span class="s2"&gt;&amp;quot;**/*.test.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="p"&gt;],&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Também precisamos criar o arquivo &lt;code&gt;src/setupTest.js&lt;/code&gt; e dentro dele colocar:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;configure&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;enzyme&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;configure&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;enzyme&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;Adapter&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;enzyme-adapter-react-16&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="nx"&gt;configure&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;adapter&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Adapter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Com isso só falta alterar o nosso &lt;code&gt;package.json&lt;/code&gt; para rodar os testes e coverage:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
@@ -686,7 +707,7 @@ $ yarn jest --init
 5
 6
 7
-8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="err"&gt;...&lt;/span&gt;
   &lt;span class="err"&gt;scripts:&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
     &lt;span class="err"&gt;...&lt;/span&gt;
@@ -694,9 +715,8 @@ $ yarn jest --init
     &lt;span class="nt"&gt;&amp;quot;test:coverage&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;jest --coverage&amp;quot;&lt;/span&gt;
   &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="err"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;Também adicionei o ESLint, para ver como ficou, olhe &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/commit/853e5bf"&gt;esse commit&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Navegação&lt;/h2&gt;
 &lt;p&gt;Para fazer a navegação, eu vou adicionar uma classe para indicar a seleção:&lt;/p&gt;
@@ -710,7 +730,7 @@ $ yarn jest --init
  8
  9
 10
-11&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+11&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="p"&gt;...&lt;/span&gt;
         &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="nx"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="sb"&gt;`poster-wrapper &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;poster-wrapper--active&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;...&lt;/span&gt;
@@ -721,9 +741,8 @@ $ yarn jest --init
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TV&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
     &lt;span class="p"&gt;...&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;e agora a gente ouve os eventos do teclado:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -765,7 +784,7 @@ $ yarn jest --init
 38
 39
 40
-41&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;onKeyDown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+41&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;onKeyDown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="kr"&gt;const&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;activeItem&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;
     &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;newActiveItem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;activeItem&lt;/span&gt;
     &lt;span class="k"&gt;switch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -806,9 +825,8 @@ $ yarn jest --init
       &lt;span class="nx"&gt;activeItem&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;newActiveItem&lt;/span&gt;
     &lt;span class="p"&gt;})&lt;/span&gt;
   &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;para essa função funcionar a gente ainda precisa adicionar as seguintes linhas:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -829,7 +847,7 @@ $ yarn jest --init
 17
 18
 19
-20&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+20&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;props&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="p"&gt;...&lt;/span&gt;
   &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onKeyDown&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onKeyDown&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;bind&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
@@ -849,18 +867,18 @@ $ yarn jest --init
 &lt;span class="nx"&gt;disableKeyEvent&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;removeEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;keydown&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onKeyDown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;h2&gt;That`s it&lt;/h2&gt;
 &lt;p&gt;É isso, para a nossa primeira parte isso já é o suficiente para começar a brincar ( e porque se eu continuar o post vai demorar 3 horas para ser lido 🤪)
 Para ver todos os commits desse post, acesse &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/releases/tag/post-1"&gt;essa tag no github&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;No próximo post, nós teremos a continuação dos testes, fix de alguns bugs e criação de algum evento para quando selecionar-mos um item.&lt;/p&gt;
-&lt;p&gt;Qualquer dúvida, critica ou sugestão utilizem os comentários e até a próxima!!&lt;/p&gt;</content><category term="Smart TV"></category><category term="Smart TV"></category><category term="Js"></category><category term="React"></category></entry><entry><title>Como é o desenvolvimento para Smart TVs</title><link href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html" rel="alternate"></link><published>2019-10-09T00:00:00-03:00</published><updated>2019-10-09T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2019-10-09:/como-e-o-desenvolvimento-para-smart-tvs.html</id><summary type="html">&lt;p&gt;Fala galera, blz?&lt;/p&gt;
-&lt;p&gt;Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.
-&lt;/p&gt;</summary><content type="html">&lt;p&gt;Fala galera, blz?&lt;/p&gt;
-&lt;p&gt;Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.
-&lt;/p&gt;
+&lt;p&gt;Qualquer dúvida, critica ou sugestão utilizem os comentários e até a próxima!!&lt;/p&gt;</content><category term="Smart TV"></category><category term="Smart TV"></category><category term="Js"></category><category term="React"></category></entry><entry><title>Como é o desenvolvimento para Smart TVs</title><link href="http://local.umdevqualquer.com.br:8000/como-e-o-desenvolvimento-para-smart-tvs.html" rel="alternate"></link><published>2019-10-09T00:00:00-03:00</published><updated>2019-10-09T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:local.umdevqualquer.com.br,2019-10-09:/como-e-o-desenvolvimento-para-smart-tvs.html</id><summary type="html">&lt;p&gt;Fala galera, blz?&lt;/p&gt;
+&lt;p&gt;Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Fala galera, blz?&lt;/p&gt;
+&lt;p&gt;Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.&lt;/p&gt;
+
+
 &lt;p&gt;Graças a isso, eu gostaria de compartilhar um pouco da minha experiência nessa nova área e com isso mostrar o quão simples é fazer uma app de Tv. Esse será um post conceito, logo não haverá linha de código...&lt;/p&gt;
 &lt;h2&gt;Anota aí:&lt;/h2&gt;
 &lt;ul&gt;
@@ -940,11 +958,10 @@ Como desenvolvo mais para a &lt;strong&gt;LG&lt;/strong&gt; e &lt;strong&gt;Sams
 &lt;p&gt;Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse &lt;a href="http://en.tab-tv.com/?page_id=7111"&gt;esse link&lt;/a&gt; (não oficial).&lt;/p&gt;
 &lt;h2&gt;That`s all folks:&lt;/h2&gt;
 &lt;p&gt;Com isso em mente, você já pode começar a se preparar para desenvolver sua tv app ou saber escolher melhor a sua próxima tv.&lt;/p&gt;
-&lt;p&gt;Dentro de alguns dias eu irei fazer uma série de posts mais técnicos, mostrando o desenvolvimento de uma tela simples para testar na sua TV em casa.&lt;/p&gt;</content><category term="Smart TV"></category><category term="Smart TV"></category><category term="Js"></category><category term="React"></category></entry><entry><title>Google Assistant - o que é?</title><link href="https://umdevqualquer.com.br/google-assistant-o-que-e.html" rel="alternate"></link><published>2018-05-30T00:00:00-03:00</published><updated>2018-05-30T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2018-05-30:/google-assistant-o-que-e.html</id><summary type="html">&lt;p&gt;E ae, como vocês tão?&lt;/p&gt;
+&lt;p&gt;Dentro de alguns dias eu irei fazer uma série de posts mais técnicos, mostrando o desenvolvimento de uma tela simples para testar na sua TV em casa.&lt;/p&gt;</content><category term="Smart TV"></category><category term="Smart TV"></category><category term="Js"></category><category term="React"></category></entry><entry><title>Google Assistant - o que é?</title><link href="http://local.umdevqualquer.com.br:8000/google-assistant-o-que-e.html" rel="alternate"></link><published>2018-05-30T00:00:00-03:00</published><updated>2018-05-30T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:local.umdevqualquer.com.br,2018-05-30:/google-assistant-o-que-e.html</id><summary type="html">&lt;p&gt;E ae, como vocês tão?&lt;/p&gt;
 &lt;p&gt;E um hackday&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; lá na &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt; eu tive a idéia de criar um assistente para um dos produtos da &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt;.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;E ae, como vocês tão?&lt;/p&gt;
 &lt;p&gt;E um hackday&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; lá na &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt; eu tive a idéia de criar um assistente para um dos produtos da &lt;a href="https://globo.com"&gt;globo.com&lt;/a&gt;.&lt;/p&gt;
-
 
 &lt;p&gt;Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente, &lt;em&gt;e a partir do próximo post sobre o Assistant iremos criar um assistente nosso&lt;/em&gt; 😆 &lt;em&gt;com ou sem servidor próprio&lt;/em&gt;.&lt;/p&gt;
 &lt;h2&gt;O que é?&lt;/h2&gt;
@@ -969,11 +986,10 @@ Para quem tem &lt;strong&gt;Iphone&lt;/strong&gt;, é necessário baixar o &lt;a
 &lt;p&gt;Hackday: é um &lt;a href="https://pt.wikipedia.org/wiki/Hackathon"&gt;hackaton&lt;/a&gt; que acontece para os funcionários na globo.com poderem criar o que quiserem!&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="Google Assistant"></category><category term="Google Assistant"></category></entry><entry><title>Screamer-js - Um plugin js de notificação para Browser</title><link href="https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser.html" rel="alternate"></link><published>2017-09-13T00:00:00-03:00</published><updated>2017-09-13T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2017-09-13:/screamer-js-um-plugin-js-de-notificacao-para-browser.html</id><summary type="html">&lt;p&gt;Fala pessoal, como é que cês tão?! 😜&lt;/p&gt;
+&lt;/div&gt;</content><category term="Google Assistant"></category><category term="Google Assistant"></category></entry><entry><title>Screamer-js - Um plugin js de notificação para Browser</title><link href="http://local.umdevqualquer.com.br:8000/screamer-js-um-plugin-js-de-notificacao-para-browser.html" rel="alternate"></link><published>2017-09-13T00:00:00-03:00</published><updated>2017-09-13T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:local.umdevqualquer.com.br,2017-09-13:/screamer-js-um-plugin-js-de-notificacao-para-browser.html</id><summary type="html">&lt;p&gt;Fala pessoal, como é que cês tão?! 😜&lt;/p&gt;
 &lt;p&gt;Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Fala pessoal, como é que cês tão?! 😜&lt;/p&gt;
 &lt;p&gt;Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser.&lt;/p&gt;
-
 
 &lt;p&gt;Em um hack-day&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; na globo.com eu e o &lt;a href="https://willianjusten.com.br/"&gt;Willian Justen&lt;/a&gt; fizemos um plugin javascript sanar esse problema. E esse foi quando o &lt;a href="https://github.com/willianjusten/screamer-js"&gt;Screamer-js&lt;/a&gt; nasceu.&lt;/p&gt;
 &lt;h2&gt;O que é?&lt;/h2&gt;
@@ -993,7 +1009,7 @@ Para quem tem &lt;strong&gt;Iphone&lt;/strong&gt;, é necessário baixar o &lt;a
 5
 6
 7
-8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="s1"&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Hello&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="s1"&gt;&amp;#39;body&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;World!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="s1"&gt;&amp;#39;icon&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;img.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1001,9 +1017,8 @@ Para quem tem &lt;strong&gt;Iphone&lt;/strong&gt;, é necessário baixar o &lt;a
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;scream&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Screamer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;options&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// Inicializa o screamer com as opções de notificação&lt;/span&gt;
 &lt;span class="nx"&gt;scream&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;notify&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// Executa a notificação&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;4 - Pronto! Agora você terá uma notificação na sua pagina.&lt;/p&gt;
 &lt;h2&gt;Opções&lt;/h2&gt;
 &lt;p&gt;As opções do screamer são as seguintes:&lt;/p&gt;
@@ -1029,11 +1044,12 @@ Para quem tem &lt;strong&gt;Iphone&lt;/strong&gt;, é necessário baixar o &lt;a
 &lt;p&gt;Hack-day: é um hackaton que acontece para os funcionários na globo.com poderem criar o que quiserem!&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="Js"></category><category term="Js"></category></entry><entry><title>Como fazer reticências(ellipsis) apenas com css</title><link href="https://umdevqualquer.com.br/como-fazer-reticenciasellipsis-apenas-com-css.html" rel="alternate"></link><published>2017-09-11T00:00:00-03:00</published><updated>2017-09-11T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2017-09-11:/como-fazer-reticenciasellipsis-apenas-com-css.html</id><summary type="html">&lt;p&gt;Fala pessoal, como é que cês tão?! 😜&lt;/p&gt;
-&lt;p&gt;Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e colocar reticências apenas com CSS!
-&lt;/p&gt;</summary><content type="html">&lt;p&gt;Fala pessoal, como é que cês tão?! 😜&lt;/p&gt;
-&lt;p&gt;Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e colocar reticências apenas com CSS!
-&lt;/p&gt;
+&lt;/div&gt;</content><category term="Js"></category><category term="Js"></category></entry><entry><title>Como fazer reticências(ellipsis) apenas com css</title><link href="http://local.umdevqualquer.com.br:8000/como-fazer-reticenciasellipsis-apenas-com-css.html" rel="alternate"></link><published>2017-09-11T00:00:00-03:00</published><updated>2017-09-11T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:local.umdevqualquer.com.br,2017-09-11:/como-fazer-reticenciasellipsis-apenas-com-css.html</id><summary type="html">&lt;p&gt;Fala pessoal, como é que cês tão?! 😜&lt;/p&gt;
+&lt;p&gt;Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e colocar reticências apenas com CSS!&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Fala pessoal, como é que cês tão?! 😜&lt;/p&gt;
+&lt;p&gt;Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e colocar reticências apenas com CSS!&lt;/p&gt;
+
+
 &lt;p&gt;Sabe quando voce precisa que um texto caiba num espaço e não pode ultrapassar-lo, você não quer colocar js para diminuir a fonte,
 seu media-query também não está funcionando, então você acaba apelando para dar um &lt;em&gt;ellipsis&lt;/em&gt; no seu texto, isso nada mais é que,
 quando o texto ultrapassar um determinado tamanho, ele fica com reticências!
@@ -1041,7 +1057,7 @@ Um bom exemplo disso é o &lt;em&gt;veja mais...&lt;/em&gt; colocado em alguns b
 &lt;p&gt;Mas vamos parar de papo e...&lt;/p&gt;
 &lt;h2&gt;... mãos a obra!&lt;/h2&gt;
 &lt;p&gt;Digamos que você tenha uma &lt;code&gt;DIV&lt;/code&gt; com um texto grande e a mesma tem que ter uns &lt;code&gt;100px&lt;/code&gt;, porém você não controla/vai ficar controlando o texto que vai entrar.&lt;/p&gt;
-&lt;p data-height="265" data-theme-id="0" data-slug-hash="oGvYdg" data-default-tab="html,result" data-user="paulopotter" data-embed-version="2" data-pen-title="oGvYdg" class="codepen"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/oGvYdg/"&gt;oGvYdg&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;p data-height="265" data-theme-id="0" data-slug-hash="oGvYdg" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="oGvYdg" class="codepen"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/oGvYdg/"&gt;oGvYdg&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;fonte: &lt;a href="http://slipsum.com/ipsum/"&gt;http://slipsum.com/ipsum/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Ao colocar o seguinte trecho de código, a sua div vai ganhar reticências...&lt;/p&gt;
@@ -1050,30 +1066,30 @@ Um bom exemplo disso é o &lt;em&gt;veja mais...&lt;/em&gt; colocado em alguns b
 3
 4
 5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
    &lt;span class="err"&gt;...&lt;/span&gt;
    &lt;span class="k"&gt;text-overflow&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;ellipsis&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
    &lt;span class="k"&gt;overflow&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;hidden&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
    &lt;span class="k"&gt;white-space&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;nowrap&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
 &lt;p&gt;e veja como fica:&lt;/p&gt;
-&lt;p data-height="265" data-theme-id="dark" data-slug-hash="NaKbBX" data-default-tab="html,result" data-user="paulopotter" data-embed-version="2" data-pen-title="NaKbBX" class="codepen"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/NaKbBX/"&gt;NaKbBX&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;p data-height="265" data-theme-id="dark" data-slug-hash="NaKbBX" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="NaKbBX" class="codepen"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/NaKbBX/"&gt;NaKbBX&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Nota: isso só funciona para uma linha, para mais de uma eu ainda estou pesquisando como é a melhor forma de fazer em css!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Vlw pessoal, até a proxima!&lt;/p&gt;
 &lt;p&gt;Duvidas, criticas, alternativas deixem nos comentários!&lt;/p&gt;
-&lt;script async src="https://production-assets.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;</content><category term="Css"></category><category term="Css"></category><category term="Tips"></category></entry><entry><title>Inaugurando o blog</title><link href="https://umdevqualquer.com.br/inaugurando-o-blog.html" rel="alternate"></link><published>2017-07-15T00:00:00-03:00</published><updated>2017-07-15T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2017-07-15:/inaugurando-o-blog.html</id><summary type="html">&lt;p&gt;Fala pessoal, como vocês estão?!&lt;/p&gt;
+&lt;script async src="https://production-assets.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;</content><category term="Css"></category><category term="Css"></category><category term="Tips"></category></entry><entry><title>Inaugurando o blog</title><link href="http://local.umdevqualquer.com.br:8000/inaugurando-o-blog.html" rel="alternate"></link><published>2017-07-15T00:00:00-03:00</published><updated>2017-07-15T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:local.umdevqualquer.com.br,2017-07-15:/inaugurando-o-blog.html</id><summary type="html">&lt;p&gt;Fala pessoal, como vocês estão?!&lt;/p&gt;
 &lt;p&gt;Esse é primeiro post de vários (assim espero) desse querido e lindo blog! 😆
 Nesse blog eu espero passar um pouco do meu conhecimento, dores e aprendizados nesse lindo e maravilhoso mundo da programação!&lt;/p&gt;
-&lt;p&gt;Nele eu irei abordar problemas enfrentados, plugins interessantes, dicas de desenvolvimento / stack e postarei também alguns snippets.
-&lt;/p&gt;</summary><content type="html">&lt;p&gt;Fala pessoal, como vocês estão?!&lt;/p&gt;
+&lt;p&gt;Nele eu irei abordar problemas enfrentados, plugins interessantes, dicas de desenvolvimento / stack e postarei também alguns snippets.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Fala pessoal, como vocês estão?!&lt;/p&gt;
 &lt;p&gt;Esse é primeiro post de vários (assim espero) desse querido e lindo blog! 😆
 Nesse blog eu espero passar um pouco do meu conhecimento, dores e aprendizados nesse lindo e maravilhoso mundo da programação!&lt;/p&gt;
-&lt;p&gt;Nele eu irei abordar problemas enfrentados, plugins interessantes, dicas de desenvolvimento / stack e postarei também alguns snippets.
-&lt;/p&gt;
+&lt;p&gt;Nele eu irei abordar problemas enfrentados, plugins interessantes, dicas de desenvolvimento / stack e postarei também alguns snippets.&lt;/p&gt;
+
+
 &lt;p&gt;Espero que vocês gostem, e toda critica (construtiva), sugestão ou outra solução/ponto de vista é bem vinda!!!!&lt;/p&gt;
 &lt;p&gt;E declaro aberto o meu novo blog &lt;strong&gt;Um Dev Qualquer&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2&gt;Sejam todos bem vindos!!!&lt;/h2&gt;
