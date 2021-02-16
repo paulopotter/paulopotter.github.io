@@ -54,7 +54,6 @@
                 <p>Fala pessoal, como é que cês tão?! 😜</p>
 <p>Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser.</p>
 
-
 <p>Em um hack-day<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> na globo.com eu e o <a href="https://willianjusten.com.br/">Willian Justen</a> fizemos um plugin javascript sanar esse problema. E esse foi quando o <a href="https://github.com/willianjusten/screamer-js">Screamer-js</a> nasceu.</p>
 <h2>O que é?</h2>
 <p><img alt="screenshot" src="https://raw.githubusercontent.com/willianjusten/screamer-js/master/screenshot.png"></p>
@@ -73,7 +72,7 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;title&#39;</span><span class="o">:</span> <span class="s1">&#39;Hello&#39;</span><span class="p">,</span>
     <span class="s1">&#39;body&#39;</span><span class="o">:</span> <span class="s1">&#39;World!&#39;</span><span class="p">,</span>
     <span class="s1">&#39;icon&#39;</span><span class="o">:</span> <span class="s1">&#39;img.png&#39;</span><span class="p">,</span>
@@ -81,9 +80,8 @@
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">scream</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Screamer</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span> <span class="c1">// Inicializa o screamer com as opções de notificação</span>
 <span class="nx">scream</span><span class="p">.</span><span class="nx">notify</span><span class="p">();</span> <span class="c1">// Executa a notificação</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
-
 <p>4 - Pronto! Agora você terá uma notificação na sua pagina.</p>
 <h2>Opções</h2>
 <p>As opções do screamer são as seguintes:</p>
