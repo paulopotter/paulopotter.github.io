@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-br">
 <head>
   <meta charset="utf-8" />
   <title>Ellipsis em mais de uma linha apenas com css - Um dev qualquer || Paulo Oliveira
@@ -58,20 +58,20 @@
 <p>Complementando o <a href="./como-fazer-reticenciasellipsis-apenas-com-css.html">post feito antes</a>, onde eu mostrava o ellipsis em uma linha, essa dica é para quem utiliza <a href="https://sass-lang.com/guide">sass</a>.
 Com ele, você conseguirá fazer ellipsis em mais de uma linha, facilitando muito quando a reticência tem que ficar numa caixa e não em uma linha.</p>
 <p>O mixin é esse:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> multiline-ellipsis</span><span class="p">(</span><span class="nv">$font-size</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="o">,</span> <span class="nv">$line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="o">,</span> <span class="nv">$lines-to-show</span><span class="o">:</span> <span class="mi">10</span><span class="o">,</span> <span class="nv">$background</span><span class="o">:</span> <span class="no">transparent</span><span class="p">)</span> <span class="err">{</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> multiline-ellipsis</span><span class="p">(</span><span class="nv">$font-size</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="o">,</span> <span class="nv">$line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="o">,</span> <span class="nv">$lines-to-show</span><span class="o">:</span> <span class="mi">10</span><span class="o">,</span> <span class="nv">$background</span><span class="o">:</span> <span class="no">transparent</span><span class="p">)</span> <span class="err">{</span>
   <span class="na">background</span><span class="o">:</span> <span class="nv">$background</span><span class="err">;</span>
   <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="err">;</span>
   <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="err">;</span>

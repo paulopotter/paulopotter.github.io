@@ -12,7 +12,7 @@ HASH_GRAVATAR = 'cd58d60fac779175c0ab6ac1b912d4b5'
 
 PATH = 'content'
 LOCALE = ('bra', 'pt_BR', 'pt_BR.UTF-8')
-DEFAULT_LANG = u'pt_BR'
+DEFAULT_LANG = u'pt-BR'
 TIMEZONE = u'America/Sao_Paulo'
 DEFAULT_DATE_FORMAT = ('%d %b %Y')
 

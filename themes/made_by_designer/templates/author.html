@@ -1,84 +1,136 @@
-{% extends "./_base.html" %}
+{% extends "./_base.html" %} {% block css_top %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ SITEURL}}{{ THEME_STATIC_URL }}/css/author.css"
+/>
+{% endblock css_top %} {% block js_top %} {{ super() }} {% endblock %} {% block
+content %}
 
-{% block css_top %}
-  <link rel="stylesheet" type="text/css" href="{{ SITEURL}}{{ THEME_STATIC_URL }}/css/author.css"/>
-{% endblock css_top %}
+<section class="author_content" container>
+  <div class="author_content-body">
+    <header>
+      <img
+        src="#"
+        alt="Foto do meu rosto."
+        width="150"
+        height="150"
+        class="author--image about-me--image"
+        id="authorImage"
+      />
 
+      <h2>Paulo Oliveira</h2>
+      <h3>
+        Trabalhando há <span class="js-work-life"></span> anos na
+        <a href="http://globo.com">Globo</a>.
+      </h3>
+    </header>
 
-{% block js_top %}
-    {{ super() }}
-{% endblock %}
+    <section>
+      <h4>Sobre mim:</h4>
+      <p class="about-me__section--block">
+        Apaixonado por tecnologia, hoje sou desenvolvedor focado no desenvolvimento de app para Smart TVs.
+      </p>
+      <div class="about-me__section--block">
+        <div class="about-me__section--title">Principais projetos que participei</div>
+        <ul class="about-me__section--list">
+          <li class="about-me__list--item">
+            Cartola
+          </li>
+          <li class="about-me__list--item">
+            Globoesporte(ge)
+          </li>
+          <li class="about-me__list--item">
+            G1
+          </li>
+          <li class="about-me__list--item">
+            Globoplay - Smart TV
+          </li>
+          <li class="about-me__list--item">
+            Canais Globo (globosat play) - Smart TV
+          </li>
+        </ul>
+      </div>
 
-{% block content %}
-
-    <section class="author_content" container >
-
-        <div class="author_content-body">
-
-
-            <header>
-                    <img src="#" width="150" height="150" class='author--image about-me--image' id="authorImage">
-
-                    <h2>Paulo Oliveira</h2>
-                    <h3>Trabalhando há <span class='js-work-life'></span> anos na <a href="http://globo.com">globo.com</a>.</h3>
-                </header>
-
-                <section>
-                    <h4>Sobre mim:</h4>
-                    <div class="about-me__section--block">
-                        <div class="about-me__section--title">Experiência</div>
-                        <ul class="about-me__section--list">
-                            <li class="about-me__list--item">Desenvolvedor Full-stack: Globo.com</li>
-                            <li class="about-me__list--item">Estagiário de Desenvolvimento web: Globo.com [2013 - 2015]</li>
-                            <li class="about-me__list--item">Estagiário de Desenvolvimento web: MSA RH Consultoria [2012 - 2013]</li>
-                        </ul>
-                    </div>
-                    <div class="about-me__section--block">
-                        <div class="about-me__section--title">Skills</div>
-                        <ul class="about-me__section--list">
-                            <li class="about-me__list--item">Python</li>
-                            <li class="about-me__list--item">Javascript</li>
-                            <li class="about-me__list--item">HTML (5)</li>
-                            <li class="about-me__list--item">CSS (3)</li>
-                            <li class="about-me__list--item">PHP</li>
-                        </ul>
-                    </div>
-                    <div class="about-me__section--block">
-                        <div class="about-me__section--title">Educação</div>
-                        <ul class="about-me__section--list">
-                            <li class="about-me__list--item">Sistema da Informação: Universidade Estácio de Sá - [2016 - Atual]</li>
-                            <li class="about-me__list--item">Ciência da Computação: UEZO - Centro Universitário Estadual da Zona Oeste - [2010 - 2016]</li>
-                        </ul>
-                    </div>
-                    <div class="about-me__section--block">
-                        <div class="about-me__section--title">Contatos</div>
-                        <ul class="about-me__section--list">
-                            <li class="about-me__list--item"><a href="https://br.linkedin.com/in/paulofrauches">LinkedIn</a></li>
-                            <li class="about-me__list--item"><a href="https://github.com/paulopotter">Github</a></li>
-                        </ul>
-                    </div>
-                </section>
-        </div>
-
+      <div class="about-me__section--block">
+        <div class="about-me__section--title">Experiência</div>
+        <ul class="about-me__section--list">
+          <li class="about-me__list--item">
+            Desenvolvedor Full-stack: Globo.com [2015 - atual]
+          </li>
+          <li class="about-me__list--item">
+            <span>Estágio</span>
+            <ul>
+              <li>Desenvolvimento web: Globo.com [2013 - 2015]</li>
+              <li>Desenvolvimento web: MSA RH Consultoria [2012 - 2013]</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="about-me__section--block">
+        <div class="about-me__section--title">Skills</div>
+        <ul class="about-me__section--list">
+          <li class="about-me__list--item"><span>Python</span>
+            <ul>
+              <li>Django</li>
+              <li>Flask</li>
+            </ul>
+          </li>
+          <li class="about-me__list--item"><span>Javascript</span>
+            <ul>
+              <li>React</li>
+            </ul>
+          </li>
+          <li class="about-me__list--item">HTML(5)</li>
+          <li class="about-me__list--item">CSS(3)</li>
+          <li class="about-me__list--item">PHP</li>
+        </ul>
+      </div>
+      <div class="about-me__section--block">
+        <div class="about-me__section--title">Educação</div>
+        <ul class="about-me__section--list">
+          <li class="about-me__list--item">
+            Sistema da Informação: Universidade Estácio de Sá - [2016 - Atual]
+          </li>
+          <li class="about-me__list--item">
+            Ciência da Computação: UEZO - Centro Universitário Estadual da Zona
+            Oeste - [2010 - 2016]
+          </li>
+        </ul>
+      </div>
+      <div class="about-me__section--block">
+        <div class="about-me__section--title">Contatos</div>
+        <ul class="about-me__section--list">
+          <li class="about-me__list--item">
+            <a href="https://br.linkedin.com/in/paulofrauches">LinkedIn</a>
+          </li>
+          <li class="about-me__list--item">
+            <a href="https://github.com/paulopotter">Github</a>
+          </li>
+        </ul>
+      </div>
     </section>
+  </div>
+</section>
 
-{% endblock %}
+{% endblock %} {% block js_bottom %} {{ super() }}
 
-{% block js_bottom %}
-    {{ super() }}
+<script>
+  function changeImg(profile) {
+    document.getElementById("authorImage").src = profile.entry[0].thumbnailUrl;
+  }
 
-    <script>
-        function changeImg( profile ) {
-            document.getElementById("authorImage").src = profile.entry[0].thumbnailUrl
-        }
-        function calculateAge(birthday) { // birthday is a date
-            var ageDifMs = Date.now() - birthday;
-            var ageDate = new Date(ageDifMs); // miliseconds from epoch
-            return Math.abs(ageDate.getUTCFullYear() - 1970);
-        }
-        var workLife = document.querySelector('.js-work-life');
-        workLife.innerText = calculateAge(new Date('2015-10-01'))
-    </script>
-    <script src="http://pt.gravatar.com/{{ HASH_GRAVATAR }}.json?callback=changeImg" type="text/javascript">
-    </script>
+  function calculateAge(birthday) {
+    // birthday is a date
+    var ageDifMs = Date.now() - birthday;
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+  var workLife = document.querySelector(".js-work-life");
+  workLife.innerText = calculateAge(new Date("2013-10-01"));
+</script>
+<script
+  src="http://pt.gravatar.com/{{ HASH_GRAVATAR }}.json?callback=changeImg"
+  type="text/javascript"
+></script>
 {% endblock %}
