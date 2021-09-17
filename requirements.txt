@@ -13,3 +13,4 @@ python-dateutil
 ghp-import
 beautifulsoup4
 pelican-readtime
+pelican-just-table

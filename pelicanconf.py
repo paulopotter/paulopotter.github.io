@@ -44,6 +44,7 @@ SLUGIFY_SOURCE = 'title'
 THEME = u'./themes/made_by_designer'
 DEFAULT_CATEGORY = 'Sem categoria'
 THEME_STATIC_URL = u'/theme'
+STATIC_IMAGES = u'./images'
 
 # Disqus
 DISQUS_SITENAME = u'umdevqualquer'
@@ -58,7 +59,10 @@ PLUGINS = [
     'related_posts',
     'pelican-cover-image',
     'readtime',
+    'pelican_just_table',
 ]
+
+JTABLE_SEPARATOR = '|'
 
 RELATED_POSTS_MAX = 5
 READTIME_WPM = {
