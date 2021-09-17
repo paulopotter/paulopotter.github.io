@@ -2,49 +2,56 @@
 @import "../vendor/concisecss/concise.scss";
 
 body {
-    background-color: getColor(background, body);
-    color: getColor(text, primary);
+  background-color: getColor(background, body);
+  color: getColor(text, primary);
 }
 
 a,
 a:hover,
 a:visited,
 a:active {
-    color: getColor(text, secondary);
+  color: getColor(text, secondary);
+
+  article:not(.home_content--article) & {
+    text-decoration: underline;
+  }
 }
 
+
 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 pre {
-    overflow: auto;
+  overflow: auto;
 }
 
 .header_site {
 
-    &--title {
-        font-size: 1.25em;
+  &--title {
+    font-size: 1.25em;
 
-        &-link{
-            font-family: $font-primary;
-            text-transform: uppercase;
-            font-size: 1em;
-            font-weight: 400;
+    &-link {
+      font-family: $font-primary;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 400;
+      text-decoration: none !important;
 
-            @at-root a#{&} {
-                color: getColor(text, primary);
-            }
-        }
-        &-name {
-            font-weight: 700;
-            color: getColor(text, heading);
-        }
+      @at-root a#{&} {
+        color: getColor(text, primary);
+      }
     }
+
+    &-name {
+      font-weight: 700;
+      color: getColor(text, heading);
+    }
+  }
 }
 
-@media (max-width: 768px){
-    .header_site {
-        font-size: 0.8rem;
-    }
+@media (max-width: 768px) {
+  .header_site {
+    font-size: 0.8rem;
+  }
 }
