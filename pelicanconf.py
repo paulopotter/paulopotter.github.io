@@ -6,6 +6,7 @@ AUTHOR = u'Paulo Oliveira'
 SITE_BAR_TITLE = u'[LOCAL] Um dev qualquer'
 SITENAME = u'Paulo Oliveira'
 SITE_NAME_SUBTITLE = u'Full stack web Developer'
+SITEDESCRIPTION = u'Blog pessoal onde mostro um pouco do meu aprendizado.'
 SITEURL = 'http://local.umdevqualquer.com.br:8000'
 AUTHOR_SAVE_AS = 'author.html'
 HASH_GRAVATAR = 'cd58d60fac779175c0ab6ac1b912d4b5'
@@ -60,6 +61,7 @@ PLUGINS = [
     'pelican-cover-image',
     'readtime',
     'pelican_just_table',
+    'css-html-js-minify'
     # 'image_process', # https://github.com/pelican-plugins/image-process
 ]
 
