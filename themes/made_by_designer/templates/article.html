@@ -6,6 +6,18 @@
 
 {% endblock title %}
 
+{% block meta %}
+  {{ super() }}
+  <meta property="og:title" content="{{ article.title}}">
+  <meta property="og:description" content="{{ article.summary|striptags}}">
+  <meta property="og:image" content="{{article.cover_image_url}}">
+  <meta property="og:url" content="{{ SITEURL}}/{{ article.slug }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@paulofrauches">
+  <meta name="twitter:creator" content="@paulofrauches">
+  <meta name="twitter:image:alt" content="{{article.cover_image_alt}}">
+{% endblock meta %}
+
 {% block css_top %}
   <link rel="stylesheet" type="text/css" href="{{ SITEURL}}{{ THEME_STATIC_URL }}/css/article.css"/>
 {% endblock css_top %}
