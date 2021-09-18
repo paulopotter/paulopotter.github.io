@@ -33,7 +33,7 @@ LINKS = ()
 SOCIAL = ()
 
 COVER_IMAGES_PATH = "images"
-STATIC_PATHS = ['images','extra/CNAME','extra/favicon.png',]
+STATIC_PATHS = ['images', 'extra/CNAME', 'extra/favicon.png', ]
 
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
@@ -61,11 +61,22 @@ PLUGINS = [
     'pelican-cover-image',
     'readtime',
     'pelican_just_table',
-    'css-html-js-minify'
+    'css-html-js-minify',
+    'linkclass',
     # 'image_process', # https://github.com/pelican-plugins/image-process
 ]
 
+# just Table
 JTABLE_SEPARATOR = '|'
+
+# link class
+
+LINKCLASS = (
+    ('EXTERNAL_CLASS', 'external-link', ''),
+    ('INTERNAL_CLASS', 'internal-link', '')
+)
+
+# ReadTime
 
 RELATED_POSTS_MAX = 5
 READTIME_WPM = {
