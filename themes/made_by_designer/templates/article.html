@@ -18,7 +18,7 @@
             <div class="article_content-content">
                 {% if article.cover_image_url != '2' %}
                     <figure class='article_cover'>
-                        <img class='article_cover__img' src="{{ article.cover_image_url }}"
+                        <img class='article_cover__img image-process-article_cover' src="{{ article.cover_image_url }}"
                             alt="{{ article.cover_image_alt or ''}}">
 
                         {% if article.cover_image_by %}

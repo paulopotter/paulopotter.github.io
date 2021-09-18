@@ -60,6 +60,7 @@ PLUGINS = [
     'pelican-cover-image',
     'readtime',
     'pelican_just_table',
+    # 'image_process', # https://github.com/pelican-plugins/image-process
 ]
 
 JTABLE_SEPARATOR = '|'

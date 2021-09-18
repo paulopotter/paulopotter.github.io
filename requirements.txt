@@ -14,3 +14,4 @@ ghp-import
 beautifulsoup4
 pelican-readtime
 pelican-just-table
+pelican-image-process
