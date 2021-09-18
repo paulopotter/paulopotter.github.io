@@ -61,8 +61,9 @@ PLUGINS = [
     'pelican-cover-image',
     'readtime',
     'pelican_just_table',
-    'css-html-js-minify',
+    # 'css-html-js-minify',
     'linkclass',
+    'neighbors',
     # 'image_process', # https://github.com/pelican-plugins/image-process
 ]
 

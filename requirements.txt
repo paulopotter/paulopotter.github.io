@@ -17,3 +17,4 @@ pelican-just-table
 pelican-image-process
 css-html-js-minify
 pelican-linkclass
+pelican-neighbors
