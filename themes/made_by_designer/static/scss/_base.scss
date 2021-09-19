@@ -2,24 +2,45 @@
 @import "../vendor/concisecss/concise.scss";
 
 body {
-  background-color: getColor(background, body);
-  color: getColor(text, primary);
+  @include themed() {
+    background-color: getColorByTheme("background");
+    color: getColorByTheme("text");
+  }
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 a,
 a:hover,
 a:visited,
 a:active {
-  color: getColor(text, secondary);
+  @include themed() {
+    color: getColorByTheme("link");
+  }
 
-  article:not(.home_content--article) & {
-    text-decoration: underline;
+  .home_content--article-header & {
+    text-decoration: none;
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @include themed() {
+    color: getColorByTheme("heading");
+  }
+}
 
-a:hover {
-  opacity: 0.7;
+h2 a:hover {
+  opacity: 0.5;
+  @include themed() {
+    color: getColorByTheme("link");
+  }
 }
 
 pre {
@@ -27,7 +48,6 @@ pre {
 }
 
 .header_site {
-
   &--title {
     font-size: 1.25em;
 
@@ -39,14 +59,25 @@ pre {
       text-decoration: none !important;
 
       @at-root a#{&} {
-        color: getColor(text, primary);
+        @include themed() {
+          color: getColorByTheme("text");
+        }
       }
     }
 
     &-name {
       font-weight: 700;
-      color: getColor(text, heading);
+      @include themed() {
+        color: getColorByTheme("heading");
+      }
     }
+  }
+}
+
+code {
+  @include themed() {
+    color: getColorByTheme("code");
+    background: getColorByTheme("codeBg") !important;
   }
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}">
+<html lang="{{ DEFAULT_LANG }}" class="theme--light">
 <head>
   <meta charset="utf-8" />
   <title>{% block title %}{{ SITE_BAR_TITLE }}{% endblock %} </title>
@@ -10,6 +10,8 @@
     <meta name="author" content="{{ AUTHOR }}">
     <meta name="robots" content="noimageindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#32373d">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f5f5">
   {% endblock %}
 
   {% if FEED_ALL_ATOM %}
@@ -26,6 +28,19 @@
 
   {% block js_top %}
     <script data-ad-client="ca-pub-2474646572295965" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <script type="text/javascript" id="js-theme">
+      if(window.location.hash === '#dark' || window.localStorage.getItem('isDarkMode')) {
+        const html = document.querySelector('html');
+        if(html.classList.contains('theme--dark')){
+          html.classList.remove('theme--dark');
+          html.classList.add('theme--light');
+        } else {
+          html.classList.remove('theme--light');
+          html.classList.add('theme--dark');
+        }
+      }
+    </script>
   {% endblock %}
 </head>
 <body>
