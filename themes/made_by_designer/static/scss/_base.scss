@@ -102,7 +102,12 @@ code {
     width: 3em;
     position: absolute;
     top: 0;
-    left: 85%;
+    right: 3%;
+
+    @media (min-width: 1300px) {
+      left: 83%;
+      right: inherit;
+    }
 
     @include themed() {
       background-color: getColorByTheme("changeThemeButtonBg");
@@ -133,12 +138,18 @@ code {
     position: fixed;
     display: flex;
     align-items: center;
-    left: 85%;
     bottom: -5em;
+    right: 3%;
     transition: bottom 0.5s ease-out;
 
+    @media (min-width: 1400px) {
+      left: 87%;
+      right: inherit;
+    }
+
     @include themed() {
-      background-color: getColorByTheme("changeThemeButtonBg");
+      background-color: getColorByTheme("card");
+      color: getColorByTheme("link");
     }
 
     &:hover &--text {
@@ -156,13 +167,13 @@ code {
 
     &:focus {
       @include themed() {
-        outline: 3px solid getColorByTheme("changeThemeButton");
+        outline: 3px solid getColorByTheme("link");
       }
     }
     &:active,
     &:hover {
       @include themed() {
-        background-color: getColorByTheme("changeThemeButtonBg");
+        background-color: getColorByTheme("card");
       }
     }
 
@@ -170,7 +181,7 @@ code {
       height: 3em;
       width: 3em;
       @include themed() {
-        fill: getColorByTheme("changeThemeButton");
+        fill: getColorByTheme("link");
       }
     }
   }
