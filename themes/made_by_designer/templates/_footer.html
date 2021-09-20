@@ -24,6 +24,34 @@
   ga('send', 'pageview');
 
 </script>
+
+<script id="js-theme-button">
+  function toggleTheme(){
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    const html = document.querySelector('html');
+    if(isDarkMode){
+      window.localStorage.removeItem('isDarkMode');
+      window.location.hash = '#light'
+      html.classList.remove('theme--dark');
+      html.classList.add('theme--light');
+    } else {
+      window.localStorage.setItem('isDarkMode', true);
+      window.location.hash = '#dark'
+      html.classList.remove('theme--light');
+      html.classList.add('theme--dark');
+    }
+  }
+  function updateThemeButton() {
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    themeButton.ariaLabel = `Trocar para o tema ${isDarkMode ? 'claro': 'escuro'}`
+  }
+
+  const themeButton = document.querySelector('.site__theme-button');
+  themeButton.addEventListener('click', () => {
+    toggleTheme()
+    updateThemeButton()
+  })
+</script>
 {% endblock %}
 
 

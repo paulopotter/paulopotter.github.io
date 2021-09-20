@@ -48,6 +48,7 @@ pre {
 }
 
 .header_site {
+  overflow: visible;
   &--title {
     font-size: 1.25em;
 
@@ -84,5 +85,33 @@ code {
 @media (max-width: 768px) {
   .header_site {
     font-size: 0.8rem;
+  }
+}
+
+.site {
+  &__theme-button {
+    padding: 0.5em;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    top: 0;
+    left: 85%;
+
+    @include themed() {
+      background-color: getColorByTheme("changeThemeButtonBg");
+    }
+
+    &:active,
+    &:hover {
+      @include themed() {
+        background-color: getColorByTheme("changeThemeButtonBg");
+      }
+    }
+
+    svg {
+      @include themed() {
+        fill: getColorByTheme("changeThemeButton");
+      }
+    }
   }
 }
