@@ -85,8 +85,12 @@ code {
   @include themed() {
     color: getColorByTheme("code");
     background: getColorByTheme("codeBg") !important;
+    // background: getColorByTheme("codeBg");
     padding: 0 0.5em;
   }
+}
+.highlighttable code {
+  background-color: transparent !important;
 }
 
 @media (max-width: 768px) {
