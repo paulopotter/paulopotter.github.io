@@ -128,6 +128,53 @@ code {
     }
   }
 
+  &__back-to-top-button {
+    padding: 0.5em;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    left: 85%;
+    bottom: -5em;
+    transition: bottom 0.5s ease-out;
+
+    @include themed() {
+      background-color: getColorByTheme("changeThemeButtonBg");
+    }
+
+    &:hover &--text {
+      display: block;
+    }
+    &--text {
+      float: left;
+      display: none;
+      padding: 0 0.5em;
+    }
+
+    &--show {
+      bottom: 0;
+    }
+
+    &:focus {
+      @include themed() {
+        outline: 3px solid getColorByTheme("changeThemeButton");
+      }
+    }
+    &:active,
+    &:hover {
+      @include themed() {
+        background-color: getColorByTheme("changeThemeButtonBg");
+      }
+    }
+
+    svg {
+      height: 3em;
+      width: 3em;
+      @include themed() {
+        fill: getColorByTheme("changeThemeButton");
+      }
+    }
+  }
+
   &__skip-content {
     font-size: 1em;
     height: 3em;
