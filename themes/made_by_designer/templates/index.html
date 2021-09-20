@@ -23,8 +23,10 @@
 
           <div class='home_content--article-body'>
             {% if article.cover_image_url != '2' %}
-              <div class='home_content--article-cover-image' style="background-image: url('{{ article.cover_image_url }}');" >
-              </div>
+              <img class='home_content--article-cover-image image-process-article_thumb'
+              src='{{ article.cover_image_url }}'
+              alt="{{ article.cover_image_alt or ''}}"
+              />
             {% endif %}
             {{ article.summary }}
           </div>

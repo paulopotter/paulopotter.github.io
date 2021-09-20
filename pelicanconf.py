@@ -63,8 +63,30 @@ PLUGINS = [
     'pelican_just_table',
     'linkclass',
     'neighbors',
-    # 'image_process', # https://github.com/pelican-plugins/image-process
+    'image_process',  # https://github.com/pelican-plugins/image-process
 ]
+
+# Image Process
+IMAGE_PROCESS_DIR = "resized"
+
+IMAGE_PROCESS = {
+    "article_cover": {
+        "type": "responsive-image",
+        "sizes": (
+            "(max-width: 768px) 30%, "
+            "(max-width: 1280) 50%, "
+            "(max-width: 1920px) 100%, "
+        ),
+        "srcset": [
+            ("768w", ["resize 30% 30%"]),
+            ("1280w", ["resize 80% 80%"]),
+            ("1920w", ["resize 100% 100%"]),
+        ],
+        "default": "1280w"
+    },
+    "article_thumb": ["scale_in 600 300 True", ],
+}
+
 
 # just Table
 JTABLE_SEPARATOR = '|'

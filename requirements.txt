@@ -17,3 +17,4 @@ pelican-just-table
 pelican-image-process
 pelican-linkclass
 pelican-neighbors
+minchin.pelican.plugins.optimize_images

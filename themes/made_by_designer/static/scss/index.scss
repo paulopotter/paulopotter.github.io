@@ -97,8 +97,7 @@
   }
   &--article-cover-image {
     height: 300px;
-    background-size: auto 300px;
+    object-fit: cover;
     margin-bottom: 1em;
-    background-position: center;
   }
 }
