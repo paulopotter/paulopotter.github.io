@@ -1,67 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+
+<html class="theme--light" lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <title>Criando sua primeira APP para Smart TVs (Parte 2) - Um dev qualquer || Paulo Oliveira
+<meta charset="utf-8"/>
+<title>Criando sua primeira APP para Smart TVs (Parte 2) - Um dev qualquer || Paulo Oliveira
 
  </title>
-  <link rel="icon" href="./favicon.png" />
-
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="Paulo Oliveira">
-    <meta name="robots" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" />
-
-    <link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
-
-  <link rel="stylesheet" type="text/css" href="https://umdevqualquer.com.br/theme/css/article.css"/>
-
-    <script data-ad-client="ca-pub-2474646572295965" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link href="./favicon.png" rel="icon"/>
+<meta content="Blog pessoal onde mostro um pouco do meu aprendizado." name="description"/>
+<meta content="Paulo Oliveira" name="author"/>
+<meta content="noimageindex" name="robots"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#32373d" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="#f5f5f5" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="Criando sua primeira APP para Smart TVs (Parte 2)" property="og:title"/>
+<meta content="Iai meu Polvo 🐙 como cês tão? Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post." property="og:description"/>
+<meta content="https://umdevqualquer.com.br/images/smart-tv-plex.jpg" property="og:image"/>
+<meta content="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@paulofrauches" name="twitter:site"/>
+<meta content="@paulofrauches" name="twitter:creator"/>
+<meta content="Smart Tv from google" name="twitter:image:alt"/>
+<link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml"/>
+<link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet"/>
+<link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
+<script async="" data-ad-client="ca-pub-2474646572295965" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script id="js-theme" type="text/javascript">
+      if(window.location.hash === '#dark' || window.localStorage.getItem('isDarkMode')) {
+        const html = document.querySelector('html');
+        if(html.classList.contains('theme--dark')){
+          html.classList.remove('theme--dark');
+          html.classList.add('theme--light');
+        } else {
+          html.classList.remove('theme--light');
+          html.classList.add('theme--dark');
+        }
+      }
+    </script>
 </head>
 <body>
-  <header class='header_site' id="start-page" container>
-    <div class="header_site--wrapper">
-      <div class="header_site--title">
-          <a href="https://umdevqualquer.com.br" class="header_site--title-link">
-            <span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
+<a class="site__skip-content" href="#start-site" tabindex="1">Pular para o conteúdo</a>
+<header class="header_site" container="" id="start-page">
+<div class="header_site--wrapper">
+<div class="header_site--title">
+<a aria-label="Paulo Oliveira. Full stack web Developer. Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
+<span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
             </a>
-      </div>
-
-      <ul class="header_site-social">
-      </ul>
-
-    </div>
-  </header>
-
-
-
-<div class="wrapper_site" container>
-  <div class="wrapper_site--content column_wrapper" id="start-site">
-    <section class="article_content" container>
-        <article class="article_content-body">
-            <h1 class="article_content-title">Criando sua primeira APP para Smart TVs (Parte 2)  </h1><small> Tempo médio de leitura: 11 minutos.</small>
-            <div class="article_content-content">
-                    <figure class='article_cover'>
-                        <img class='article_cover__img' src="https://umdevqualquer.com.br/images/smart-tv-plex.jpg"
-                            alt="Smart Tv from google">
-
-                        <figcaption class='article_cover__credit'>Créditos:
+</div>
+<ul class="header_site-social">
+</ul>
+</div>
+<button aria-label="Trocar tema" class="site__theme-button" tabindex="2" type="button">
+<svg viewbox="0 0 24 24">
+<path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></path>
+</svg>
+</button>
+</header>
+<div class="wrapper_site" container="">
+<div class="wrapper_site--content column_wrapper" id="start-site">
+<section class="article_content" container="">
+<article class="article_content-body">
+<h1 class="article_content-title">Criando sua primeira APP para Smart TVs (Parte 2)  </h1><small> Tempo médio de leitura: 11 minutos.</small>
+<div class="article_content-content">
+<figure class="article_cover">
+<img alt="Smart Tv from google" class="article_cover__img image-process-article_cover" sizes="(max-width: 768px) 30%, (max-width: 1280) 50%, (max-width: 1920px) 100%, " src="https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv-plex.jpg" srcset="https://umdevqualquer.com.br/images/resized/article_cover/768w/smart-tv-plex.jpg 768w, https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv-plex.jpg 1280w, https://umdevqualquer.com.br/images/resized/article_cover/1920w/smart-tv-plex.jpg 1920w"/>
+<figcaption class="article_cover__credit">Créditos:
                                     Imagem retirada do <a href="https://www.popsci.com/resizer/lU2v75pLrtqZZV7TOZsVmhM7YbI=/1782x1336/filters:focal(600x450:601x451)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/7SFVUBKE3F5G4N74QM7QJSGU4E.jpg" title="Tv com Plex">Google</a>
-                            </figcaption>
-                    </figure>
-                <p>Iai meu Polvo 🐙 como cês tão?</p>
+</figcaption>
+</figure>
+<p>Iai meu Polvo 🐙 como cês tão?</p>
 <p>Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.</p>
-
-
 <h2>Bug hunter:</h2>
-<p><img alt="Bug free" src="https://www.monkeyuser.com/assets/images/2019/131-bug-free.png">
-<center><small>Fonte: <a href="https://www.monkeyuser.com/">MonkeyUser</a></small></center></p>
+<p><img alt="Bug free" src="./images/criando-sua-primeira-app-para-smart-tvs-parte-2/131-bug-free.png"/>
+<center><small>Fonte: <a class="external-link" href="https://www.monkeyuser.com/">MonkeyUser</a></small></center></p>
 <p>Enquanto eu navegava pela app, notei uma falha na parte da navegação, nós estamos <strong>exibindo apenas</strong> items relacionados a "TV" mas não estamos filtrando-os. Então ao chegar no final da lista, a navegação "continua" mesmo sem ter item para navegar. E para corrigir vamos modificar o código com:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -100,7 +112,7 @@
 <span class="normal">35</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// [...]</span>
     <span class="nx">response</span><span class="p">.</span><span class="nx">anime</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;TV&#39;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">'TV'</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">animes</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">})</span>
@@ -135,10 +147,10 @@
 </code></pre></div>
 </td></tr></table>
 <h2>Hora dos testes:</h2>
-<p><img alt="fixing unit test" src="https://www.monkeyuser.com/assets/images/2018/86-fixing-unit-tests.png">
-<center><small>Fonte: <a href="https://www.monkeyuser.com/">MonkeyUser</a></small></center></p>
+<p><img alt="fixing unit test" src="./images/criando-sua-primeira-app-para-smart-tvs-parte-2/86-fixing-unit-tests.png"/>
+<center><small>Fonte: <a class="external-link" href="https://www.monkeyuser.com/">MonkeyUser</a></small></center></p>
 <p>Como eu apenas adicionei a suite de test, e não realizei nenhum teste, está na hora de aumentar o nosso coverage! 😄
-Para simplificar o post, eu vou deixar o <a href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/App.test.js">link do arquivo completo do teste</a> para vocês verem. Mas vou destacar o seguintes pontos:</p>
+Para simplificar o post, eu vou deixar o <a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/App.test.js">link do arquivo completo do teste</a> para vocês verem. Mas vou destacar o seguintes pontos:</p>
 <p><strong>Coverage</strong></p>
 <p>Agora já estamos com <strong>95%</strong> do componente testado 🤩</p>
 <p><strong>babel</strong></p>
@@ -156,24 +168,24 @@ Para simplificar o post, eu vou deixar o <a href="https://github.com/paulopotter
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;presets&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nt">"presets"</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">[</span>
-        <span class="s2">&quot;@babel/preset-env&quot;</span><span class="p">,</span>
+        <span class="s2">"@babel/preset-env"</span><span class="p">,</span>
         <span class="p">{</span>
-          <span class="nt">&quot;targets&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;esmodules&quot;</span><span class="p">:</span> <span class="kc">true</span>
+          <span class="nt">"targets"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">"esmodules"</span><span class="p">:</span> <span class="kc">true</span>
           <span class="p">}</span>
         <span class="p">}</span>
       <span class="p">],</span>
-      <span class="s2">&quot;@babel/preset-react&quot;</span>
+      <span class="s2">"@babel/preset-react"</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 <p><strong>package</strong></p>
-<p>Precisamos instalar o <em>nock</em> (<code>yarn add -D nock</code>), e atualizar o nosso <code>package.json</code> (de uma olhada no <a href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/package.json">arquivo</a>, pois houveram modificações nas versões dos pacotes).</p>
+<p>Precisamos instalar o <em>nock</em> (<code>yarn add -D nock</code>), e atualizar o nosso <code>package.json</code> (de uma olhada no <a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/package.json">arquivo</a>, pois houveram modificações nas versões dos pacotes).</p>
 <p><strong>Arquivo de mock</strong></p>
-<p>Para poder testar sem ter que ficar batendo na api toda hora, eu criei uma pasta <code>__mock__</code> e adicionei um <a href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/__mock__/Animes.js">arquivo de mock</a> lá.</p>
+<p>Para poder testar sem ter que ficar batendo na api toda hora, eu criei uma pasta <code>__mock__</code> e adicionei um <a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/__mock__/Animes.js">arquivo de mock</a> lá.</p>
 <p><strong>jest config</strong></p>
 <p>Por causa do mock que precisamos fazer, temos que remover a pasta do <code>mock</code> do coverage:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
@@ -182,8 +194,8 @@ Para simplificar o post, eu vou deixar o <a href="https://github.com/paulopotter
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>// linha: 30
  coveragePathIgnorePatterns: [
-    &quot;/node_modules/&quot;,
-    &quot;/__mock__/&quot;,
+    "/node_modules/",
+    "/__mock__/",
   ],
 </code></pre></div>
 </td></tr></table>
@@ -324,7 +336,7 @@ Para simplificar o post, eu vou deixar o <a href="https://github.com/paulopotter
     <span class="nx">wrapperStyle</span><span class="p">,</span>
   <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span>
   <span class="k">return</span> <span class="p">(</span>
-    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;wrapper&quot;</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">wrapperStyle</span><span class="p">}</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"wrapper"</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">wrapperStyle</span><span class="p">}</span><span class="o">&gt;</span>
       <span class="p">{</span>
         <span class="nx">animes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">))</span>
       <span class="p">}</span>
@@ -381,51 +393,46 @@ Para simplificar o post, eu vou deixar o <a href="https://github.com/paulopotter
 </td></tr></table>
 <h2>É isso aí!</h2>
 <p><center>
-    <img alt="Minha app" src="images/minha-primeira-smart-tv-app-pt2.gif">
-    <br/><small>Nossa app funcionando</small>
+<img alt="Minha app" src="./images/como-e-o-desenvolvimento-para-smart-tvs-parte-2/minha-primeira-smart-tv-app-pt2.gif"/>
+<br/><small>Nossa app funcionando</small>
 </center></p>
 <p>Ainda temos muita coisa para fazer porém, já temos o suficiente para testar na TV. No nosso próximo post, desta série, eu ire mostrar como testar essa app numa Smart TV da LG.</p>
 <p>Lembrando que eu estou fazendo o mais básico de uma aplicação, para poder demonstrar como é funcionamento de uma app (web hosted) de smart tv. Coisas como organização do projeto, layout e player não estão sendo desenvolvidos, talvez em post futuros eu melhore a nossa app, mas você é livre para modificar a app da melhor forma que você achar 😉.</p>
 <h2>Links uteis:</h2>
-<p>Antes de finalizar eu gostaria de recomendar que vocês deem uma olhada nos links do blog do meu amigo <a href="https://kcsmad.wordpress.com/">Kevin Maduro (kcsmad)</a> que, alem de mostrar outro(s) (bons) ponto(s) de vista, complementam bem os posts sobre smart tv que eu estou fazendo.</p>
+<p>Antes de finalizar eu gostaria de recomendar que vocês deem uma olhada nos links do blog do meu amigo <a class="external-link" href="https://kcsmad.wordpress.com/">Kevin Maduro (kcsmad)</a> que, alem de mostrar outro(s) (bons) ponto(s) de vista, complementam bem os posts sobre smart tv que eu estou fazendo.</p>
 <ul>
-<li><a href="https://kcsmad.wordpress.com/2020/02/29/desmistificando-o-mundo-das-smart-tvs/">Desmitificando o mundo das Smart Tvs</a></li>
-<li><a href="https://kcsmad.wordpress.com/2020/03/01/principios-basicos-para-aplicacoes-de-smart-tvs/">Princípios básicos para aplicações de Smart Tv</a></li>
+<li><a class="external-link" href="https://kcsmad.wordpress.com/2020/02/29/desmistificando-o-mundo-das-smart-tvs/">Desmitificando o mundo das Smart Tvs</a></li>
+<li><a class="external-link" href="https://kcsmad.wordpress.com/2020/03/01/principios-basicos-para-aplicacoes-de-smart-tvs/">Princípios básicos para aplicações de Smart Tv</a></li>
 </ul>
 <p>É isso, não se esqueçam de comentar e compartilhar e <strong>até o nosso próximo post!</strong></p>
-            </div>
+</div>
+<div class="article_content-series">
+<p class="article_content-series--title">Este post é a parte <b>2</b> da serie "<span class="article_content-series--name">Criando sua primeira APP para Smart TVs</span>"</p>
+<ul class="article_content-series--parts">
+<li>
+<span>PARTE 1: </span>
+<a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">Criando sua primeira APP para Smart TVs</a>
+</li>
 
-                <div class="article_content-series">
-                        <p class='article_content-series--title'>Este post é a parte <b>2</b> da serie "<span class="article_content-series--name">Criando sua primeira APP para Smart TVs</span>"</p>
-                        <ul class="article_content-series--parts">
-                            <li>
+<li>
+<span>PARTE 2: </span>
+<b>Criando sua primeira APP para Smart TVs (Parte 2)</b>
+</li>
 
-                                <span>PARTE 1: </span>
-                                    <a href='https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html'>Criando sua primeira APP para Smart TVs</a>
-                                </li>
-                            </li>
-                            <li>
-
-                                <span>PARTE 2: </span>
-                                    <b>Criando sua primeira APP para Smart TVs (Parte 2)</b>
-                            </li>
-                        </ol>
-                </div>
-
-                <div class="article_content-related_post">
-                    <h4 class="article_content-related_post--title">Veja também:</h4>
-                        <ul>
-                            <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">Criando sua primeira APP para Smart TVs</a></li>
-                            <li><a href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>
-                            <li><a href="https://umdevqualquer.com.br/voce-ja-pensou-sobre-acessibilidade-a11y.html">Você já pensou sobre Acessibilidade (a11y)?</a></li>
-                            <li><a href="https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser.html">Screamer-js - Um plugin js de notificação para Browser</a></li>
-                        </ul>
-                </div>
-        </article>
-    </section>
-
-    <section class="article_comments" container>
-        <div id="disqus_thread"></div>
+</ul></div>
+<div class="article_content-related_post">
+<h4 class="article_content-related_post--title">Veja também:</h4>
+<ul>
+<li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">Criando sua primeira APP para Smart TVs</a></li>
+<li><a href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>
+<li><a href="https://umdevqualquer.com.br/voce-ja-pensou-sobre-acessibilidade-a11y.html">Você já pensou sobre Acessibilidade (a11y)?</a></li>
+<li><a href="https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser.html">Screamer-js - Um plugin js de notificação para Browser</a></li>
+</ul>
+</div>
+</article>
+</section>
+<section class="article_comments" container="">
+<div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'umdevqualquer';
         var disqus_identifier = window.location.href;
@@ -440,18 +447,18 @@ Para simplificar o post, eu vou deixar o <a href="https://github.com/paulopotter
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </section>
-  </div>
+<a class="dsq-brlink" href="http://disqus.com">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 </div>
-
-
-
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-
-  <script>
+</div>
+<button class="site__back-to-top-button">
+<svg viewbox="0 0 24 24">
+<path d="M19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21M12,7L7,12H10V16H14V12H17L12,7Z"></path>
+</svg>
+<span class="site__back-to-top-button--text">Voltar para o topo</span>
+</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -461,8 +468,44 @@ Para simplificar o post, eu vou deixar o <a href="https://github.com/paulopotter
   ga('send', 'pageview');
 
 </script>
+<script id="js-theme-button">
+  function toggleTheme(){
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    const html = document.querySelector('html');
+    if(isDarkMode){
+      window.localStorage.removeItem('isDarkMode');
+      html.classList.remove('theme--dark');
+      html.classList.add('theme--light');
+    } else {
+      window.localStorage.setItem('isDarkMode', true);
+      html.classList.remove('theme--light');
+      html.classList.add('theme--dark');
+    }
+  }
+  function updateThemeButton() {
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    themeButton.ariaLabel = `Trocar para o tema ${isDarkMode ? 'claro': 'escuro'}`
+  }
 
-    
-
-
-
+  const themeButton = document.querySelector('.site__theme-button');
+  themeButton.addEventListener('click', () => {
+    toggleTheme()
+    updateThemeButton()
+  })
+</script>
+<script id="js-scroll-top">
+  const scrollTopButton = document.querySelector('.site__back-to-top-button')
+  scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
+  document.addEventListener('scroll', () => {
+    if(window.scrollY > 100) {
+      scrollTopButton.classList.add('site__back-to-top-button--show')
+    } else {
+      if(scrollTopButton.classList.contains('site__back-to-top-button--show')){
+        scrollTopButton.classList.remove('site__back-to-top-button--show')
+      }
+    }
+  })
+</script>
+</body></html>

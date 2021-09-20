@@ -1,97 +1,105 @@
 @import "./base";
 
-
 @media (max-width: 1157px) {
-    .home_content {
-        margin: auto auto 1rem;
-        justify-content: center;
-    }
+  .home_content {
+    margin: auto auto 1rem;
+    justify-content: center;
+  }
 }
 .home_content {
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 
-    &--article {
-        background-color: #ffffff;
-        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.05);
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        min-width: 370px;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-        padding: 1rem 2rem;
-
-        @media (max-width: 425px){
-            min-width: 300px;
-        }
-
-        &-header {
-            margin: 1rem 0;
-
-            &-title {
-
-                &-link {
-                    height: 75px;
-                    font-family: $font-primary;
-                    font-size: 1.1em;
-                    font-weight: bold;
-                    line-height: 0.95;
-                    letter-spacing: -1.5px;
-                    display: flex;
-                    align-items: center;
-                    @at-root a#{&}{
-                        color: getColor(base, primary);
-                    }
-                }
-            }
-
-            &-category {
-              margin-bottom: 1rem;
-
-                &-tooltip {
-                  font-family: $font-primary;
-                  font-size: 13px;
-                  font-weight: bold;
-                  letter-spacing: 1px;
-                  color: getColor(text, secondary);
-
-                  &::after {
-                    content: "";
-                    display: block;
-                    width: 23px;
-                    background-color: getColor(base, border);
-                    height: 2px;
-                    margin-top: 0.2rem;
-                  }
-                }
-            }
-        }
-
-        &-body {
-            flex-grow: 2;
-            font-family: $font-secondary;
-            line-height: 1.63;
-
-            overflow: hidden;
-
-            & img {
-                width: 100%;
-            }
-        }
-
-        &-footer {
-            margin: 2em 0 1em;
-            color: getColor(text, dated);
-            font-weight: 700;
-            font-size: 0.8125em;
-        }
-    }
-    &--article-cover-image {
-        height: 300px;
-        background-size: auto 300px;
-        margin-bottom: 1em;
-        background-position: center;
+  &--article {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 370px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 1rem 2rem;
+    @include themed() {
+      background-color: getColorByTheme("card");
+      box-shadow: 2px 2px 4px 0 getColorByTheme("boxShadow");
     }
 
+    @media (max-width: 425px) {
+      min-width: 300px;
+    }
+
+    &-header {
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+
+      &-title {
+        &-link {
+          height: 75px;
+          font-family: $font-primary;
+          font-size: 1.1em;
+          font-weight: bold;
+          line-height: 0.95;
+          letter-spacing: -1.5px;
+          display: flex;
+          align-items: center;
+          @at-root a#{&} {
+            @include themed() {
+              color: getColorByTheme("text");
+            }
+          }
+        }
+      }
+
+      &-category {
+        margin-bottom: 1rem;
+
+        &-tooltip {
+          font-family: $font-primary;
+          font-size: 13px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          @include themed() {
+            color: getColorByTheme("link");
+          }
+
+          &::after {
+            content: "";
+            display: block;
+            width: 23px;
+            height: 2px;
+            margin-top: 0.2rem;
+            @include themed() {
+              background-color: getColorByTheme("border");
+            }
+          }
+        }
+      }
+    }
+
+    &-body {
+      flex-grow: 2;
+      font-family: $font-secondary;
+      line-height: 1.63;
+
+      overflow: hidden;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    &-footer {
+      margin: 2em 0 1em;
+      font-weight: 700;
+      font-size: 0.8125em;
+      @include themed() {
+        color: getColorByTheme("dated");
+      }
+    }
+  }
+  &--article-cover-image {
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 1em;
+  }
 }

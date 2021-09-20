@@ -47,7 +47,6 @@
   <a class="site__skip-content" tabindex="1" href="#start-site">Pular para o conteúdo</a>
   <header class='header_site' id="start-page" container>
     <div class="header_site--wrapper">
-      {# <p class="header_site--menu"><span class="menu-anchor">Menu</span></p> #}
       <div class="header_site--title">
         {% block header_site %}
           <a href="{{ SITEURL }}" class="header_site--title-link" aria-label="{{ SITENAME}}. {{ SITE_NAME_SUBTITLE}}. Ir para página inicial.">
@@ -72,23 +71,6 @@
       </svg>
     </button>
   </header>
-
-  {#
-  <menu class="site_menu">
-    <form action=""><input type="text"></form>
-    <ul class="site_menu--list">
-        <li class='site_menu--list-item'>
-          <a href="{{ SITEURL }}/">/home</a>
-        </li>
-        {% for page in pages|sort(attribute='title') %}
-          <li class='site_menu--list-item'>
-            <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-  </menu>
-   #}
-
 
 <div class="wrapper_site" container>
   <div class="wrapper_site--content column_wrapper" id="start-site">

@@ -1,72 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+
+<html class="theme--light" lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <title>Google Assistant - o que é? - Um dev qualquer || Paulo Oliveira
+<meta charset="utf-8"/>
+<title>Google Assistant - o que é? - Um dev qualquer || Paulo Oliveira
 
  </title>
-  <link rel="icon" href="./favicon.png" />
-
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="Paulo Oliveira">
-    <meta name="robots" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" />
-
-    <link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
-
-  <link rel="stylesheet" type="text/css" href="https://umdevqualquer.com.br/theme/css/article.css"/>
-
-    <script data-ad-client="ca-pub-2474646572295965" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link href="./favicon.png" rel="icon"/>
+<meta content="Blog pessoal onde mostro um pouco do meu aprendizado." name="description"/>
+<meta content="Paulo Oliveira" name="author"/>
+<meta content="noimageindex" name="robots"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#32373d" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="#f5f5f5" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="Google Assistant - o que é?" property="og:title"/>
+<meta content="E ae, como vocês tão? E um hackday1 lá na globo.com eu tive a idéia de criar um assistente para um dos produtos da globo.com." property="og:description"/>
+<meta content="https://umdevqualquer.com.br/images/google-assistant-ios1.webp" property="og:image"/>
+<meta content="https://umdevqualquer.com.br/google-assistant-o-que-e" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@paulofrauches" name="twitter:site"/>
+<meta content="@paulofrauches" name="twitter:creator"/>
+<meta content="Google Assistant IOS App" name="twitter:image:alt"/>
+<link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml"/>
+<link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet"/>
+<link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
+<script async="" data-ad-client="ca-pub-2474646572295965" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script id="js-theme" type="text/javascript">
+      if(window.location.hash === '#dark' || window.localStorage.getItem('isDarkMode')) {
+        const html = document.querySelector('html');
+        if(html.classList.contains('theme--dark')){
+          html.classList.remove('theme--dark');
+          html.classList.add('theme--light');
+        } else {
+          html.classList.remove('theme--light');
+          html.classList.add('theme--dark');
+        }
+      }
+    </script>
 </head>
 <body>
-  <header class='header_site' id="start-page" container>
-    <div class="header_site--wrapper">
-      <div class="header_site--title">
-          <a href="https://umdevqualquer.com.br" class="header_site--title-link">
-            <span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
+<a class="site__skip-content" href="#start-site" tabindex="1">Pular para o conteúdo</a>
+<header class="header_site" container="" id="start-page">
+<div class="header_site--wrapper">
+<div class="header_site--title">
+<a aria-label="Paulo Oliveira. Full stack web Developer. Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
+<span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
             </a>
-      </div>
-
-      <ul class="header_site-social">
-      </ul>
-
-    </div>
-  </header>
-
-
-
-<div class="wrapper_site" container>
-  <div class="wrapper_site--content column_wrapper" id="start-site">
-    <section class="article_content" container>
-        <article class="article_content-body">
-            <h1 class="article_content-title">Google Assistant - o que é?  </h1><small> Tempo médio de leitura: 1 minuto.</small>
-            <div class="article_content-content">
-                    <figure class='article_cover'>
-                        <img class='article_cover__img' src="https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&crop=1"
-                            alt="Google Assistant IOS App">
-
-                        <figcaption class='article_cover__credit'>Créditos:
-                                    <a href="https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&crop=1">techcrunch.com</a>
-                            </figcaption>
-                    </figure>
-                <p>E ae, como vocês tão?</p>
-<p>E um hackday<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> lá na <a href="https://globo.com">globo.com</a> eu tive a idéia de criar um assistente para um dos produtos da <a href="https://globo.com">globo.com</a>.</p>
-
+</div>
+<ul class="header_site-social">
+</ul>
+</div>
+<button aria-label="Trocar tema" class="site__theme-button" tabindex="2" type="button">
+<svg viewbox="0 0 24 24">
+<path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></path>
+</svg>
+</button>
+</header>
+<div class="wrapper_site" container="">
+<div class="wrapper_site--content column_wrapper" id="start-site">
+<section class="article_content" container="">
+<article class="article_content-body">
+<h1 class="article_content-title">Google Assistant - o que é?  </h1><small> Tempo médio de leitura: 1 minuto.</small>
+<div class="article_content-content">
+<figure class="article_cover">
+<img alt="Google Assistant IOS App" class="article_cover__img image-process-article_cover" sizes="(max-width: 768px) 30%, (max-width: 1280) 50%, (max-width: 1920px) 100%, " src="https://umdevqualquer.com.br/images/resized/article_cover/1280w/google-assistant-ios1.webp" srcset="https://umdevqualquer.com.br/images/resized/article_cover/768w/google-assistant-ios1.webp 768w, https://umdevqualquer.com.br/images/resized/article_cover/1280w/google-assistant-ios1.webp 1280w, https://umdevqualquer.com.br/images/resized/article_cover/1920w/google-assistant-ios1.webp 1920w"/>
+<figcaption class="article_cover__credit">Créditos:
+                                    <a href="https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&amp;crop=1">techcrunch.com</a>
+</figcaption>
+</figure>
+<p>E ae, como vocês tão?</p>
+<p>E um hackday<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> lá na <a class="external-link" href="https://globo.com">globo.com</a> eu tive a idéia de criar um assistente para um dos produtos da <a class="external-link" href="https://globo.com">globo.com</a>.</p>
 <p>Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente, <em>e a partir do próximo post sobre o Assistant iremos criar um assistente nosso</em> 😆 <em>com ou sem servidor próprio</em>.</p>
 <h2>O que é?</h2>
-<p><center><img alt="screenshot" src="https://o.aolcdn.com/images/dims3/GLOB/crop/600x300+0+40/resize/630x315!/format/jpg/quality/85/http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F83ae1071fcb16939aefc6345313200f8%2F205280619%2F18512316_1862455314020517_7322917835225694208_n.jpg"></center></p>
-<p>O <a href="https://assistant.google.com/intl/pt_br/">Google Assistant</a> é um assistente pessoal criado pelo o google, para facilitar a vida das pessoas.
+<p><center><img alt="screenshot" src="./images/google-assistant-o-que-e/http___o.aolcdn.com_hss_storage_midas_83ae1071fcb16939aefc6345313200f8_205280619_18512316_1862455314020517_7322917835225694208_n.jpg"/></center></p>
+<p>O <a class="external-link" href="https://assistant.google.com/intl/pt_br/">Google Assistant</a> é um assistente pessoal criado pelo o google, para facilitar a vida das pessoas.
 Nele é possível criar lembretes, saber o numéro do seu voo, ativar programas de músicas, entre outras coisas.</p>
 <p>O assistant pode ser utilizado em todos os tipos de device (Smartphones, Wearables, Laptops...), porém no Brasil só está liberado nos smartphones.</p>
 <h2>Como usar?</h2>
-<p>O Assistant possui uma <a href="https://assistant.google.com/explore?hl=pt_br">página muito legal</a> para saber que tipos de coisas você consegue fazer com ele.
-Para quem tem <strong>Iphone</strong>, é necessário baixar o <a href="https://itunes.apple.com/br/app/google-assistente/id1220976145">app Assistant na app Store</a>.</p>
+<p>O Assistant possui uma <a class="external-link" href="https://assistant.google.com/explore?hl=pt_br">página muito legal</a> para saber que tipos de coisas você consegue fazer com ele.
+Para quem tem <strong>Iphone</strong>, é necessário baixar o <a class="external-link" href="https://itunes.apple.com/br/app/google-assistente/id1220976145">app Assistant na app Store</a>.</p>
 <p>Digamos que eu quero tocar música:</p>
 <p><em>No Android:</em></p>
 <p>1 - Digo: "<em>Ok google</em>" para ativar o assistente.</p>
@@ -75,21 +88,18 @@ Para quem tem <strong>Iphone</strong>, é necessário baixar o <a href="https://
 <p>Espero que você tenha gostado. Este post foi mais um post de apresentação do Google Assistant, a partir do próximos posts sobre Assistant, nós iremos entrar em conceitos mais técnicos e criar o nosso próprio assistant.</p>
 <p>Qualquer duvida, deixe nos comentários! :)</p>
 <div class="footnote">
-<hr>
+<hr/>
 <ol>
 <li id="fn:1">
-<p>Hackday: é um <a href="https://pt.wikipedia.org/wiki/Hackathon">hackaton</a> que acontece para os funcionários na globo.com poderem criar o que quiserem!&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Hackday: é um <a class="external-link" href="https://pt.wikipedia.org/wiki/Hackathon">hackaton</a> que acontece para os funcionários na globo.com poderem criar o que quiserem! <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>
-            </div>
-
-
-        </article>
-    </section>
-
-    <section class="article_comments" container>
-        <div id="disqus_thread"></div>
+</div>
+</article>
+</section>
+<section class="article_comments" container="">
+<div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'umdevqualquer';
         var disqus_identifier = window.location.href;
@@ -104,18 +114,18 @@ Para quem tem <strong>Iphone</strong>, é necessário baixar o <a href="https://
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </section>
-  </div>
+<a class="dsq-brlink" href="http://disqus.com">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 </div>
-
-
-
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-
-  <script>
+</div>
+<button class="site__back-to-top-button">
+<svg viewbox="0 0 24 24">
+<path d="M19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21M12,7L7,12H10V16H14V12H17L12,7Z"></path>
+</svg>
+<span class="site__back-to-top-button--text">Voltar para o topo</span>
+</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -125,8 +135,44 @@ Para quem tem <strong>Iphone</strong>, é necessário baixar o <a href="https://
   ga('send', 'pageview');
 
 </script>
+<script id="js-theme-button">
+  function toggleTheme(){
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    const html = document.querySelector('html');
+    if(isDarkMode){
+      window.localStorage.removeItem('isDarkMode');
+      html.classList.remove('theme--dark');
+      html.classList.add('theme--light');
+    } else {
+      window.localStorage.setItem('isDarkMode', true);
+      html.classList.remove('theme--light');
+      html.classList.add('theme--dark');
+    }
+  }
+  function updateThemeButton() {
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    themeButton.ariaLabel = `Trocar para o tema ${isDarkMode ? 'claro': 'escuro'}`
+  }
 
-    
-
-
-
+  const themeButton = document.querySelector('.site__theme-button');
+  themeButton.addEventListener('click', () => {
+    toggleTheme()
+    updateThemeButton()
+  })
+</script>
+<script id="js-scroll-top">
+  const scrollTopButton = document.querySelector('.site__back-to-top-button')
+  scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
+  document.addEventListener('scroll', () => {
+    if(window.scrollY > 100) {
+      scrollTopButton.classList.add('site__back-to-top-button--show')
+    } else {
+      if(scrollTopButton.classList.contains('site__back-to-top-button--show')){
+        scrollTopButton.classList.remove('site__back-to-top-button--show')
+      }
+    }
+  })
+</script>
+</body></html>

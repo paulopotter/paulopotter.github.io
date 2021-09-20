@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira - Css</title><link href="https://umdevqualquer.com.br/" rel="alternate"></link><link href="https://umdevqualquer.com.br/feeds/css.atom.xml" rel="self"></link><id>https://umdevqualquer.com.br/</id><updated>2021-02-16T00:00:00-03:00</updated><entry><title>Ellipsis em mais de uma linha apenas com css</title><link href="https://umdevqualquer.com.br/ellipsis-em-mais-de-uma-linha-apenas-com-css.html" rel="alternate"></link><published>2021-02-16T00:00:00-03:00</published><updated>2021-02-16T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2021-02-16:/ellipsis-em-mais-de-uma-linha-apenas-com-css.html</id><summary type="html">Fala minha galera, hoje a dica é rápida.</summary><content type="html">&lt;p&gt;Fala minha galera, hoje a dica é rápida.&lt;/p&gt;
-&lt;p&gt;Complementando o &lt;a href="./como-fazer-reticenciasellipsis-apenas-com-css.html"&gt;post feito antes&lt;/a&gt;, onde eu mostrava o ellipsis em uma linha, essa dica é para quem utiliza &lt;a href="https://sass-lang.com/guide"&gt;sass&lt;/a&gt;.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira - Css</title><link href="https://umdevqualquer.com.br/" rel="alternate"/><link href="https://umdevqualquer.com.br/feeds/css.atom.xml" rel="self"/><id>https://umdevqualquer.com.br/</id><updated>2021-02-16T00:00:00-03:00</updated><entry><title>Ellipsis em mais de uma linha apenas com css</title><link href="https://umdevqualquer.com.br/ellipsis-em-mais-de-uma-linha-apenas-com-css.html" rel="alternate"/><published>2021-02-16T00:00:00-03:00</published><updated>2021-02-16T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2021-02-16:/ellipsis-em-mais-de-uma-linha-apenas-com-css.html</id><summary type="html">Fala minha galera, hoje a dica é rápida.</summary><content type="html">&lt;p&gt;Fala minha galera, hoje a dica é rápida.&lt;/p&gt;
+&lt;p&gt;Complementando o &lt;a class="internal-link" href="./como-fazer-reticenciasellipsis-apenas-com-css.html"&gt;post feito antes&lt;/a&gt;, onde eu mostrava o ellipsis em uma linha, essa dica é para quem utiliza &lt;a class="external-link" href="https://sass-lang.com/guide"&gt;sass&lt;/a&gt;.
 Com ele, você conseguirá fazer ellipsis em mais de uma linha, facilitando muito quando a reticência tem que ficar numa caixa e não em uma linha.&lt;/p&gt;
 &lt;p&gt;O mixin é esse:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
@@ -33,15 +33,12 @@ Com ele, você conseguirá fazer ellipsis em mais de uma linha, facilitando muit
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
-&lt;p data-height="400" data-theme-id="dark" data-slug-hash="ZEBKbqw" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="ZEBKbqw" class="codepen"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/ZEBKbqw/"&gt;ZEBKbqw&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p class="codepen" data-default-tab="css,result" data-embed-version="2" data-height="400" data-pen-title="ZEBKbqw" data-slug-hash="ZEBKbqw" data-theme-id="dark" data-user="paulopotter"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/ZEBKbqw/"&gt;ZEBKbqw&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Essa dica me foi passada pelo Carlos Estrela.&lt;/p&gt;
-&lt;script async src="https://production-assets.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;</content><category term="Css"></category><category term="Css"></category><category term="Tips"></category></entry><entry><title>Como fazer reticências(ellipsis) apenas com css</title><link href="https://umdevqualquer.com.br/como-fazer-reticenciasellipsis-apenas-com-css.html" rel="alternate"></link><published>2017-09-11T00:00:00-03:00</published><updated>2017-09-11T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2017-09-11:/como-fazer-reticenciasellipsis-apenas-com-css.html</id><summary type="html">&lt;p&gt;Fala pessoal, como é que cês tão?! 😜&lt;/p&gt;
+&lt;script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;</content><category term="Css"/><category term="Css"/><category term="Tips"/></entry><entry><title>Como fazer reticências(ellipsis) apenas com css</title><link href="https://umdevqualquer.com.br/como-fazer-reticenciasellipsis-apenas-com-css.html" rel="alternate"/><published>2017-09-11T00:00:00-03:00</published><updated>2017-09-11T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2017-09-11:/como-fazer-reticenciasellipsis-apenas-com-css.html</id><summary type="html">&lt;p&gt;Fala pessoal, como é que cês tão?! 😜&lt;/p&gt;
 &lt;p&gt;Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e colocar reticências apenas com CSS!&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Fala pessoal, como é que cês tão?! 😜&lt;/p&gt;
 &lt;p&gt;Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e colocar reticências apenas com CSS!&lt;/p&gt;
-
-
 &lt;p&gt;Sabe quando voce precisa que um texto caiba num espaço e não pode ultrapassar-lo, você não quer colocar js para diminuir a fonte,
 seu media-query também não está funcionando, então você acaba apelando para dar um &lt;em&gt;ellipsis&lt;/em&gt; no seu texto, isso nada mais é que,
 quando o texto ultrapassar um determinado tamanho, ele fica com reticências!
@@ -49,9 +46,8 @@ Um bom exemplo disso é o &lt;em&gt;veja mais...&lt;/em&gt; colocado em alguns b
 &lt;p&gt;Mas vamos parar de papo e...&lt;/p&gt;
 &lt;h2&gt;... mãos a obra!&lt;/h2&gt;
 &lt;p&gt;Digamos que você tenha uma &lt;code&gt;DIV&lt;/code&gt; com um texto grande e a mesma tem que ter uns &lt;code&gt;100px&lt;/code&gt;, porém você não controla/vai ficar controlando o texto que vai entrar.&lt;/p&gt;
-&lt;p data-height="265" data-theme-id="0" data-slug-hash="oGvYdg" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="oGvYdg" class="codepen"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/oGvYdg/"&gt;oGvYdg&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;fonte: &lt;a href="http://slipsum.com/ipsum/"&gt;http://slipsum.com/ipsum/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p class="codepen" data-default-tab="css,result" data-embed-version="2" data-height="265" data-pen-title="oGvYdg" data-slug-hash="oGvYdg" data-theme-id="0" data-user="paulopotter"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/oGvYdg/"&gt;oGvYdg&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;fonte: &lt;a class="external-link" href="http://slipsum.com/ipsum/"&gt;http://slipsum.com/ipsum/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Ao colocar o seguinte trecho de código, a sua div vai ganhar reticências...&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
@@ -67,9 +63,8 @@ Um bom exemplo disso é o &lt;em&gt;veja mais...&lt;/em&gt; colocado em alguns b
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;e veja como fica:&lt;/p&gt;
-&lt;p data-height="265" data-theme-id="dark" data-slug-hash="NaKbBX" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="NaKbBX" class="codepen"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/NaKbBX/"&gt;NaKbBX&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p class="codepen" data-default-tab="css,result" data-embed-version="2" data-height="265" data-pen-title="NaKbBX" data-slug-hash="NaKbBX" data-theme-id="dark" data-user="paulopotter"&gt;See the Pen &lt;a href="https://codepen.io/paulopotter/pen/NaKbBX/"&gt;NaKbBX&lt;/a&gt; by Paulo Vitor (&lt;a href="https://codepen.io/paulopotter"&gt;@paulopotter&lt;/a&gt;) on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Nota: isso só funciona para uma linha, para mais de uma eu ainda estou pesquisando como é a melhor forma de fazer em css!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Vlw pessoal, até a proxima!&lt;/p&gt;
 &lt;p&gt;Duvidas, criticas, alternativas deixem nos comentários!&lt;/p&gt;
-&lt;script async src="https://production-assets.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;</content><category term="Css"></category><category term="Css"></category><category term="Tips"></category></entry></feed>
+&lt;script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;</content><category term="Css"/><category term="Css"/><category term="Tips"/></entry></feed>

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira - Smart TV</title><link href="https://umdevqualquer.com.br/" rel="alternate"></link><link href="https://umdevqualquer.com.br/feeds/smart-tv.atom.xml" rel="self"></link><id>https://umdevqualquer.com.br/</id><updated>2020-04-09T00:00:00-03:00</updated><entry><title>Criando sua primeira APP para Smart TVs (Parte 2)</title><link href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html" rel="alternate"></link><published>2020-04-09T00:00:00-03:00</published><updated>2020-04-09T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2020-04-09:/criando-sua-primeira-app-para-smart-tvs-parte-2.html</id><summary type="html">&lt;p&gt;Iai meu Polvo 🐙 como cês tão?&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Paulo Oliveira - Smart TV</title><link href="https://umdevqualquer.com.br/" rel="alternate"/><link href="https://umdevqualquer.com.br/feeds/smart-tv.atom.xml" rel="self"/><id>https://umdevqualquer.com.br/</id><updated>2020-04-09T00:00:00-03:00</updated><entry><title>Criando sua primeira APP para Smart TVs (Parte 2)</title><link href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html" rel="alternate"/><published>2020-04-09T00:00:00-03:00</published><updated>2020-04-09T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2020-04-09:/criando-sua-primeira-app-para-smart-tvs-parte-2.html</id><summary type="html">&lt;p&gt;Iai meu Polvo 🐙 como cês tão?&lt;/p&gt;
 &lt;p&gt;Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Iai meu Polvo 🐙 como cês tão?&lt;/p&gt;
 &lt;p&gt;Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.&lt;/p&gt;
-
-
 &lt;h2&gt;Bug hunter:&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="Bug free" src="https://www.monkeyuser.com/assets/images/2019/131-bug-free.png"&gt;
-&lt;center&gt;&lt;small&gt;Fonte: &lt;a href="https://www.monkeyuser.com/"&gt;MonkeyUser&lt;/a&gt;&lt;/small&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bug free" src="./images/criando-sua-primeira-app-para-smart-tvs-parte-2/131-bug-free.png"/&gt;
+&lt;center&gt;&lt;small&gt;Fonte: &lt;a class="external-link" href="https://www.monkeyuser.com/"&gt;MonkeyUser&lt;/a&gt;&lt;/small&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;Enquanto eu navegava pela app, notei uma falha na parte da navegação, nós estamos &lt;strong&gt;exibindo apenas&lt;/strong&gt; items relacionados a "TV" mas não estamos filtrando-os. Então ao chegar no final da lista, a navegação "continua" mesmo sem ter item para navegar. E para corrigir vamos modificar o código com:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
 &lt;span class="normal"&gt; 2&lt;/span&gt;
@@ -46,7 +44,7 @@
 &lt;span class="normal"&gt;35&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;componentDidMount&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// [...]&lt;/span&gt;
     &lt;span class="nx"&gt;response&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TV&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;'TV'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
         &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
     &lt;span class="p"&gt;})&lt;/span&gt;
@@ -81,10 +79,10 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;h2&gt;Hora dos testes:&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="fixing unit test" src="https://www.monkeyuser.com/assets/images/2018/86-fixing-unit-tests.png"&gt;
-&lt;center&gt;&lt;small&gt;Fonte: &lt;a href="https://www.monkeyuser.com/"&gt;MonkeyUser&lt;/a&gt;&lt;/small&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="fixing unit test" src="./images/criando-sua-primeira-app-para-smart-tvs-parte-2/86-fixing-unit-tests.png"/&gt;
+&lt;center&gt;&lt;small&gt;Fonte: &lt;a class="external-link" href="https://www.monkeyuser.com/"&gt;MonkeyUser&lt;/a&gt;&lt;/small&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;Como eu apenas adicionei a suite de test, e não realizei nenhum teste, está na hora de aumentar o nosso coverage! 😄
-Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/App.test.js"&gt;link do arquivo completo do teste&lt;/a&gt; para vocês verem. Mas vou destacar o seguintes pontos:&lt;/p&gt;
+Para simplificar o post, eu vou deixar o &lt;a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/App.test.js"&gt;link do arquivo completo do teste&lt;/a&gt; para vocês verem. Mas vou destacar o seguintes pontos:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Coverage&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Agora já estamos com &lt;strong&gt;95%&lt;/strong&gt; do componente testado 🤩&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;babel&lt;/strong&gt;&lt;/p&gt;
@@ -102,24 +100,24 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 &lt;span class="normal"&gt;11&lt;/span&gt;
 &lt;span class="normal"&gt;12&lt;/span&gt;
 &lt;span class="normal"&gt;13&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;quot;presets&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="nt"&gt;"presets"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
       &lt;span class="p"&gt;[&lt;/span&gt;
-        &lt;span class="s2"&gt;&amp;quot;@babel/preset-env&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;"@babel/preset-env"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
         &lt;span class="p"&gt;{&lt;/span&gt;
-          &lt;span class="nt"&gt;&amp;quot;targets&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;quot;esmodules&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+          &lt;span class="nt"&gt;"targets"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nt"&gt;"esmodules"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
           &lt;span class="p"&gt;}&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
       &lt;span class="p"&gt;],&lt;/span&gt;
-      &lt;span class="s2"&gt;&amp;quot;@babel/preset-react&amp;quot;&lt;/span&gt;
+      &lt;span class="s2"&gt;"@babel/preset-react"&lt;/span&gt;
     &lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;package&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Precisamos instalar o &lt;em&gt;nock&lt;/em&gt; (&lt;code&gt;yarn add -D nock&lt;/code&gt;), e atualizar o nosso &lt;code&gt;package.json&lt;/code&gt; (de uma olhada no &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/package.json"&gt;arquivo&lt;/a&gt;, pois houveram modificações nas versões dos pacotes).&lt;/p&gt;
+&lt;p&gt;Precisamos instalar o &lt;em&gt;nock&lt;/em&gt; (&lt;code&gt;yarn add -D nock&lt;/code&gt;), e atualizar o nosso &lt;code&gt;package.json&lt;/code&gt; (de uma olhada no &lt;a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/package.json"&gt;arquivo&lt;/a&gt;, pois houveram modificações nas versões dos pacotes).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Arquivo de mock&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Para poder testar sem ter que ficar batendo na api toda hora, eu criei uma pasta &lt;code&gt;__mock__&lt;/code&gt; e adicionei um &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/__mock__/Animes.js"&gt;arquivo de mock&lt;/a&gt; lá.&lt;/p&gt;
+&lt;p&gt;Para poder testar sem ter que ficar batendo na api toda hora, eu criei uma pasta &lt;code&gt;__mock__&lt;/code&gt; e adicionei um &lt;a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/__mock__/Animes.js"&gt;arquivo de mock&lt;/a&gt; lá.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;jest config&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Por causa do mock que precisamos fazer, temos que remover a pasta do &lt;code&gt;mock&lt;/code&gt; do coverage:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
@@ -128,8 +126,8 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 &lt;span class="normal"&gt;4&lt;/span&gt;
 &lt;span class="normal"&gt;5&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;// linha: 30
  coveragePathIgnorePatterns: [
-    &amp;quot;/node_modules/&amp;quot;,
-    &amp;quot;/__mock__/&amp;quot;,
+    "/node_modules/",
+    "/__mock__/",
   ],
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -270,7 +268,7 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
     &lt;span class="nx"&gt;wrapperStyle&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
   &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;
   &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="nx"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;wrapper&amp;quot;&lt;/span&gt; &lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;wrapperStyle&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="nx"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"wrapper"&lt;/span&gt; &lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;wrapperStyle&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
       &lt;span class="p"&gt;{&lt;/span&gt;
         &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
       &lt;span class="p"&gt;}&lt;/span&gt;
@@ -327,23 +325,21 @@ Para simplificar o post, eu vou deixar o &lt;a href="https://github.com/paulopot
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;h2&gt;É isso aí!&lt;/h2&gt;
 &lt;p&gt;&lt;center&gt;
-    &lt;img alt="Minha app" src="images/minha-primeira-smart-tv-app-pt2.gif"&gt;
-    &lt;br/&gt;&lt;small&gt;Nossa app funcionando&lt;/small&gt;
+&lt;img alt="Minha app" src="./images/como-e-o-desenvolvimento-para-smart-tvs-parte-2/minha-primeira-smart-tv-app-pt2.gif"/&gt;
+&lt;br/&gt;&lt;small&gt;Nossa app funcionando&lt;/small&gt;
 &lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;Ainda temos muita coisa para fazer porém, já temos o suficiente para testar na TV. No nosso próximo post, desta série, eu ire mostrar como testar essa app numa Smart TV da LG.&lt;/p&gt;
 &lt;p&gt;Lembrando que eu estou fazendo o mais básico de uma aplicação, para poder demonstrar como é funcionamento de uma app (web hosted) de smart tv. Coisas como organização do projeto, layout e player não estão sendo desenvolvidos, talvez em post futuros eu melhore a nossa app, mas você é livre para modificar a app da melhor forma que você achar 😉.&lt;/p&gt;
 &lt;h2&gt;Links uteis:&lt;/h2&gt;
-&lt;p&gt;Antes de finalizar eu gostaria de recomendar que vocês deem uma olhada nos links do blog do meu amigo &lt;a href="https://kcsmad.wordpress.com/"&gt;Kevin Maduro (kcsmad)&lt;/a&gt; que, alem de mostrar outro(s) (bons) ponto(s) de vista, complementam bem os posts sobre smart tv que eu estou fazendo.&lt;/p&gt;
+&lt;p&gt;Antes de finalizar eu gostaria de recomendar que vocês deem uma olhada nos links do blog do meu amigo &lt;a class="external-link" href="https://kcsmad.wordpress.com/"&gt;Kevin Maduro (kcsmad)&lt;/a&gt; que, alem de mostrar outro(s) (bons) ponto(s) de vista, complementam bem os posts sobre smart tv que eu estou fazendo.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://kcsmad.wordpress.com/2020/02/29/desmistificando-o-mundo-das-smart-tvs/"&gt;Desmitificando o mundo das Smart Tvs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://kcsmad.wordpress.com/2020/03/01/principios-basicos-para-aplicacoes-de-smart-tvs/"&gt;Princípios básicos para aplicações de Smart Tv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="external-link" href="https://kcsmad.wordpress.com/2020/02/29/desmistificando-o-mundo-das-smart-tvs/"&gt;Desmitificando o mundo das Smart Tvs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="external-link" href="https://kcsmad.wordpress.com/2020/03/01/principios-basicos-para-aplicacoes-de-smart-tvs/"&gt;Princípios básicos para aplicações de Smart Tv&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;É isso, não se esqueçam de comentar e compartilhar e &lt;strong&gt;até o nosso próximo post!&lt;/strong&gt;&lt;/p&gt;</content><category term="Smart TV"></category><category term="Smart TV"></category><category term="Js"></category><category term="React"></category></entry><entry><title>Criando sua primeira APP para Smart TVs</title><link href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html" rel="alternate"></link><published>2020-01-19T00:00:00-03:00</published><updated>2020-01-19T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2020-01-19:/criando-sua-primeira-app-para-smart-tvs.html</id><summary type="html">&lt;p&gt;Fala ae, tranquilinho?&lt;/p&gt;
-&lt;p&gt;Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido &lt;a href="./como-e-o-desenvolvimento-para-smart-tvs.html"&gt;neste post&lt;/a&gt;. Recomendo a leitura, é uma boa introdução.&lt;/p&gt;
+&lt;p&gt;É isso, não se esqueçam de comentar e compartilhar e &lt;strong&gt;até o nosso próximo post!&lt;/strong&gt;&lt;/p&gt;</content><category term="Smart TV"/><category term="Smart TV"/><category term="Js"/><category term="React"/></entry><entry><title>Criando sua primeira APP para Smart TVs</title><link href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html" rel="alternate"/><published>2020-01-19T00:00:00-03:00</published><updated>2020-01-19T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2020-01-19:/criando-sua-primeira-app-para-smart-tvs.html</id><summary type="html">&lt;p&gt;Fala ae, tranquilinho?&lt;/p&gt;
+&lt;p&gt;Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido &lt;a class="internal-link" href="./como-e-o-desenvolvimento-para-smart-tvs.html"&gt;neste post&lt;/a&gt;. Recomendo a leitura, é uma boa introdução.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Fala ae, tranquilinho?&lt;/p&gt;
-&lt;p&gt;Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido &lt;a href="./como-e-o-desenvolvimento-para-smart-tvs.html"&gt;neste post&lt;/a&gt;. Recomendo a leitura, é uma boa introdução.&lt;/p&gt;
-
-
+&lt;p&gt;Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido &lt;a class="internal-link" href="./como-e-o-desenvolvimento-para-smart-tvs.html"&gt;neste post&lt;/a&gt;. Recomendo a leitura, é uma boa introdução.&lt;/p&gt;
 &lt;p&gt;Tendo a ideia de tentar passar por boa partes dos problemas que temos quando desenvolvemos app para TVs, pensei em vários tipos diferentes de exemplo de apps: galeria de fotos, app de streaming de música, app de streaming de animes (&lt;strike&gt;para ter uma experiência melhor que a sua, Crunchyroll&lt;/strike&gt;)... Porém para ser algo mais rápido e simples, eu tive que me conter 🤪&lt;/p&gt;
 &lt;h2&gt;O Projeto:&lt;/h2&gt;
 &lt;p&gt;Com isso em mente, a escolha que mais se encaixou nesses requistos foi: &lt;strong&gt;app que simula um catálogo de animes/mangá&lt;/strong&gt;.
@@ -360,7 +356,7 @@ Após essa série de posts, se vocês quiserem, eu faço um mais "real", com req
 &lt;/ul&gt;
 &lt;p&gt;Porém, você é livre para escolher a sua, podendo utilizar qualquer framework para desenvolver. &lt;em&gt;Vue.js, React, Flutter, JS Vanilla&lt;/em&gt;, são alguns exemplos. Você só não pode esquercer de duas premissas: &lt;strong&gt;compatibilidade&lt;/strong&gt; e &lt;strong&gt;performance&lt;/strong&gt;! Então vamos fazer essa bagaça funcionar!!!&lt;/p&gt;
 &lt;h3&gt;Configurando o projeto:&lt;/h3&gt;
-&lt;p&gt;&lt;center&gt;&lt;img alt="E la vamos nós" src="https://media.tenor.com/images/0993a0560293a59c1bee27a37d91696d/tenor.png"&gt;&lt;br/&gt;&lt;sup&gt;Creditos: google&lt;/sup&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img alt="E la vamos nós" src="./images/criando-sua-primeira-app-para-smart-tvs/tenor.png"/&gt;&lt;br/&gt;&lt;sup&gt;Creditos: google&lt;/sup&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;Aqui é aquela configuração padrao: aquele nosso &lt;code&gt;create-react-app&lt;/code&gt; básico (se você não tem o &lt;em&gt;create-react-app&lt;/em&gt; é só usar o &lt;code&gt;npm install -g create-react-app&lt;/code&gt;). Com isso, já começamos a ter a nossa estrutura inicial.&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ create-react-app my-first-smart-tv-app
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -380,11 +376,11 @@ $ yarn add -D @babel/core babel-loader @babel/preset-env @babel/preset-react bab
 $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;p&gt;É necessário fazer algumas configurações para o funcionamento do webpack/babel após a instalação, como eu mexi em vários arquivos, &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/commit/6a5b5f4"&gt;aqui está o commit com essas modificações&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;É necessário fazer algumas configurações para o funcionamento do webpack/babel após a instalação, como eu mexi em vários arquivos, &lt;a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/commit/6a5b5f4"&gt;aqui está o commit com essas modificações&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Com isso nós já temos a estrutura da nossa APP.&lt;/p&gt;
 &lt;h3&gt;Começando o desenvolvimento:&lt;/h3&gt;
-&lt;p&gt;Antes que eu me esqueça, estarei postando essa &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app"&gt;app no github&lt;/a&gt;, com isso se você quiser apenas o resultado final, estará tudo documentado lá.&lt;/p&gt;
-&lt;p&gt;Agora vamos começar a codar de verdade, para isso vamos fazer um request para a API que vai nos entregar os dados que a gente precisa, para isso vamos utilizar o &lt;a href="https://jikan.moe/?ref=public-apis"&gt;Jikan&lt;/a&gt;. O Jikan é uma API não oficial do &lt;a href="https://myanimelist.net"&gt;My Anime List&lt;/a&gt;, ela é bem completinha para o que iremos fazer 😆. E para ele existe um &lt;em&gt;wrapper&lt;/em&gt; em js (&lt;a href="https://github.com/zuritor/jikanjs"&gt;jikanjs&lt;/a&gt;) para facilitar ainda mais a nossa vida, para instalar basta rodar.&lt;/p&gt;
+&lt;p&gt;Antes que eu me esqueça, estarei postando essa &lt;a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app"&gt;app no github&lt;/a&gt;, com isso se você quiser apenas o resultado final, estará tudo documentado lá.&lt;/p&gt;
+&lt;p&gt;Agora vamos começar a codar de verdade, para isso vamos fazer um request para a API que vai nos entregar os dados que a gente precisa, para isso vamos utilizar o &lt;a class="external-link" href="https://jikan.moe/?ref=public-apis"&gt;Jikan&lt;/a&gt;. O Jikan é uma API não oficial do &lt;a class="external-link" href="https://myanimelist.net"&gt;My Anime List&lt;/a&gt;, ela é bem completinha para o que iremos fazer 😆. E para ele existe um &lt;em&gt;wrapper&lt;/em&gt; em js (&lt;a class="external-link" href="https://github.com/zuritor/jikanjs"&gt;jikanjs&lt;/a&gt;) para facilitar ainda mais a nossa vida, para instalar basta rodar.&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ yarn add jikanjs
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -435,7 +431,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
   &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;image_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;anime&lt;/span&gt;
 
   &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="nx"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;poster-wrapper&amp;quot;&lt;/span&gt; &lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="nx"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"poster-wrapper"&lt;/span&gt; &lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
       &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;figure&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
         &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;span&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/span&amp;gt;&lt;/span&gt;
         &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;img&lt;/span&gt; &lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;image_url&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;alt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;/&amp;gt;&lt;/span&gt;
@@ -495,7 +491,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 &lt;span class="normal"&gt;3&lt;/span&gt;
 &lt;span class="normal"&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;render&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TV&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;'TV'&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -547,20 +543,20 @@ $ yarn jest --init
 &lt;span class="normal"&gt;6&lt;/span&gt;
 &lt;span class="normal"&gt;7&lt;/span&gt;
 &lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;moduleNameMapper&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="c1"&gt;// 82&lt;/span&gt;
-  &lt;span class="s2"&gt;&amp;quot;\\.(css|sass)$&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;identity-obj-proxy&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"\\.(css|sass)$"&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"identity-obj-proxy"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="p"&gt;},&lt;/span&gt;
-&lt;span class="nx"&gt;setupFilesAfterEnv&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;rootDir&amp;gt;/src/setupTests.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="c1"&gt;// 129&lt;/span&gt;
-&lt;span class="nx"&gt;testEnvironment&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;enzyme&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 135&lt;/span&gt;
+&lt;span class="nx"&gt;setupFilesAfterEnv&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"&lt;rootdir&gt;/src/setupTests.js"&lt;/rootdir&gt;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="c1"&gt;// 129&lt;/span&gt;
+&lt;span class="nx"&gt;testEnvironment&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"enzyme"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 135&lt;/span&gt;
 &lt;span class="nx"&gt;testMatch&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="c1"&gt;// 144&lt;/span&gt;
-  &lt;span class="s2"&gt;&amp;quot;**/*.test.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;"**/*.test.js"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="p"&gt;],&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p&gt;Também precisamos criar o arquivo &lt;code&gt;src/setupTest.js&lt;/code&gt; e dentro dele colocar:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
 &lt;span class="normal"&gt;2&lt;/span&gt;
-&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;configure&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;enzyme&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;Adapter&lt;/span&gt; &lt;span class="k"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;enzyme-adapter-react-16&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="normal"&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;configure&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;"enzyme"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;Adapter&lt;/span&gt; &lt;span class="k"&gt;from&lt;/span&gt; &lt;span class="s2"&gt;"enzyme-adapter-react-16"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="nx"&gt;configure&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;adapter&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Adapter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -576,13 +572,13 @@ $ yarn jest --init
   &lt;span class="err"&gt;...&lt;/span&gt;
   &lt;span class="err"&gt;scrip&lt;/span&gt;&lt;span class="kc"&gt;ts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="err"&gt;...&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;jest&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;quot;test:coverage&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;jest --coverage&amp;quot;&lt;/span&gt;
+    &lt;span class="nt"&gt;"test"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"jest"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="nt"&gt;"test:coverage"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"jest --coverage"&lt;/span&gt;
   &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;p&gt;Também adicionei o ESLint, para ver como ficou, olhe &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/commit/853e5bf"&gt;esse commit&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Também adicionei o ESLint, para ver como ficou, olhe &lt;a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/commit/853e5bf"&gt;esse commit&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Navegação&lt;/h2&gt;
 &lt;p&gt;Para fazer a navegação, eu vou adicionar uma classe para indicar a seleção:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
@@ -597,13 +593,13 @@ $ yarn jest --init
 &lt;span class="normal"&gt;10&lt;/span&gt;
 &lt;span class="normal"&gt;11&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="p"&gt;...&lt;/span&gt;
-        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="nx"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="sb"&gt;`poster-wrapper &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;poster-wrapper--active&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="nx"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="sb"&gt;`poster-wrapper &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;activeItem&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;'poster-wrapper--active'&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;mal_id&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;...&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
 &lt;span class="nx"&gt;render&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="p"&gt;...&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TV&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;animes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="s1"&gt;'TV'&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;tmpl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;anime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
     &lt;span class="p"&gt;...&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -726,30 +722,28 @@ $ yarn jest --init
 &lt;span class="p"&gt;}&lt;/span&gt;
 
 &lt;span class="nx"&gt;enableKeyEvent&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;keydown&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onKeyDown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'keydown'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onKeyDown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
 &lt;span class="nx"&gt;disableKeyEvent&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;removeEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;keydown&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onKeyDown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;removeEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'keydown'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onKeyDown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;h2&gt;That`s it&lt;/h2&gt;
 &lt;p&gt;É isso, para a nossa primeira parte isso já é o suficiente para começar a brincar ( e porque se eu continuar o post vai demorar 3 horas para ser lido 🤪)
-Para ver todos os commits desse post, acesse &lt;a href="https://github.com/paulopotter/my-first-smart-tv-app/releases/tag/post-1"&gt;essa tag no github&lt;/a&gt;&lt;/p&gt;
+Para ver todos os commits desse post, acesse &lt;a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/releases/tag/post-1"&gt;essa tag no github&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;No próximo post, nós teremos a continuação dos testes, fix de alguns bugs e criação de algum evento para quando selecionar-mos um item.&lt;/p&gt;
-&lt;p&gt;Qualquer dúvida, critica ou sugestão utilizem os comentários e até a próxima!!&lt;/p&gt;</content><category term="Smart TV"></category><category term="Smart TV"></category><category term="Js"></category><category term="React"></category></entry><entry><title>Como é o desenvolvimento para Smart TVs</title><link href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html" rel="alternate"></link><published>2019-10-09T00:00:00-03:00</published><updated>2019-10-09T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2019-10-09:/como-e-o-desenvolvimento-para-smart-tvs.html</id><summary type="html">&lt;p&gt;Fala galera, blz?&lt;/p&gt;
+&lt;p&gt;Qualquer dúvida, critica ou sugestão utilizem os comentários e até a próxima!!&lt;/p&gt;</content><category term="Smart TV"/><category term="Smart TV"/><category term="Js"/><category term="React"/></entry><entry><title>Como é o desenvolvimento para Smart TVs</title><link href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html" rel="alternate"/><published>2019-10-09T00:00:00-03:00</published><updated>2019-10-09T00:00:00-03:00</updated><author><name>Paulo Oliveira</name></author><id>tag:umdevqualquer.com.br,2019-10-09:/como-e-o-desenvolvimento-para-smart-tvs.html</id><summary type="html">&lt;p&gt;Fala galera, blz?&lt;/p&gt;
 &lt;p&gt;Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Fala galera, blz?&lt;/p&gt;
 &lt;p&gt;Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.&lt;/p&gt;
-
-
 &lt;p&gt;Graças a isso, eu gostaria de compartilhar um pouco da minha experiência nessa nova área e com isso mostrar o quão simples é fazer uma app de Tv. Esse será um post conceito, logo não haverá linha de código...&lt;/p&gt;
 &lt;h2&gt;Anota aí:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Saber javascript.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;center&gt;&lt;img alt="meme He-man" src="https://i.pinimg.com/originals/6d/17/9b/6d179b75c54cc2bada2a1688ae3c6a04.jpg"&gt; &lt;br/&gt;&lt;sup&gt;&lt;em&gt;Créditos:&lt;/em&gt; na imagem&lt;/sup&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img alt="meme He-man" src="./images/como-e-o-desenvolvimento-para-smart-tvs/6d179b75c54cc2bada2a1688ae3c6a04.jpg"/&gt; &lt;br/&gt;&lt;sup&gt;&lt;em&gt;Créditos:&lt;/em&gt; na imagem&lt;/sup&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;h2&gt;Entendendo um pouco mais sobre as Smart TVs:&lt;/h2&gt;
 &lt;p&gt;Hoje existem várias marcas de Smart TVs no mercado, as mais conhecidas são da &lt;em&gt;Samsung&lt;/em&gt; e &lt;em&gt;LG&lt;/em&gt;, mas ainda temos &lt;em&gt;Sony, Panasonic, TCL, Xiaomi, Motorola...&lt;/em&gt;
 Dependendo da fabricante e do sistema operacional, você encontrará as seguintes stacks:&lt;/p&gt;
@@ -797,7 +791,7 @@ Como desenvolvo mais para a &lt;strong&gt;LG&lt;/strong&gt; e &lt;strong&gt;Sams
 &lt;p&gt;Quando se desenvolve apps web hosted, a tv abre um "browser" para o usuário (sem a barra de endereço, assim como uma app PWA), porém esses browsers das tvs são antigos e dificilmente eles receberam atualizações.&lt;/p&gt;
 &lt;p&gt;Outro problema recorrente, mesmo que você compre uma tv esse ano, não necessariamente ela é nova, você pode acabar comprando uma tv com 1, 2 até 3 anos de fabricação. Isso acontece porque as grandes redes de varejistas fazem um estoque de tvs e ao contrário dos celulares, nós não costumamos trocar de tv todos os anos, então o estoque "encalha" e dai que surgem aquelas promoções de &lt;em&gt;"Super Smart TV com &lt;strike&gt;netflix&lt;/strike&gt; Globoplay e acesso a internet por apenas 12x R$120 no cartão..."&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Boa parte dos brasileiros não pesquisam para comprar suas tvs, apenas pesquisam o preço e se acessa a internet. Mas mesmo que pesquisem, existe uma certa dificuldade de encontrar o ano da sua TV.&lt;/p&gt;
-&lt;p&gt;Também não poderia deixar de falar da dificuldade de encontrar documentação das tvs e o que suporta (ou não). Aos poucos isso está mudando, mas ainda assim é um pouco complicado encontrar certas dúvidas. Nem no &lt;a href="http://stackoverflow.com"&gt;Stackoverflow&lt;/a&gt; você encontra 😱. Porém eu encontrei &lt;a href="https://developer.samsung.com/tv/develop/specifications/general-specifications"&gt;esse link&lt;/a&gt; com as especificações gerais das tvs Samsung, o que já ajuda um pouco.&lt;/p&gt;
+&lt;p&gt;Também não poderia deixar de falar da dificuldade de encontrar documentação das tvs e o que suporta (ou não). Aos poucos isso está mudando, mas ainda assim é um pouco complicado encontrar certas dúvidas. Nem no &lt;a class="external-link" href="http://stackoverflow.com"&gt;Stackoverflow&lt;/a&gt; você encontra 😱. Porém eu encontrei &lt;a class="external-link" href="https://developer.samsung.com/tv/develop/specifications/general-specifications"&gt;esse link&lt;/a&gt; com as especificações gerais das tvs Samsung, o que já ajuda um pouco.&lt;/p&gt;
 &lt;h2&gt;Como extrair informações da sua TV:&lt;/h2&gt;
 &lt;p&gt;Os códigos das tvs dizem muito sobre elas, basicamente descreve ela por completo.&lt;/p&gt;
 &lt;ul&gt;
@@ -809,18 +803,18 @@ Como desenvolvo mais para a &lt;strong&gt;LG&lt;/strong&gt; e &lt;strong&gt;Sams
 &lt;li&gt;&lt;strong&gt;E&lt;/strong&gt; = Produzido na Europa&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;55&lt;/strong&gt; = Tamanho da tela&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;F&lt;/strong&gt; = Fabricado em 2013 (Ano de fabricação)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;8000&lt;/strong&gt; = Numero de série. Isso será diferente dependendo dos recursos de cada modelo. É possível descobrir as especificações dos modelos, digitando o código do modelo &lt;a href="https://www.samsung.com/br/tvs/"&gt;aqui&lt;/a&gt; (use a busca)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;8000&lt;/strong&gt; = Numero de série. Isso será diferente dependendo dos recursos de cada modelo. É possível descobrir as especificações dos modelos, digitando o código do modelo &lt;a class="external-link" href="https://www.samsung.com/br/tvs/"&gt;aqui&lt;/a&gt; (use a busca)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;A&lt;/strong&gt; = Features ou design&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;FXZ&lt;/strong&gt; = Informações técnicas de produção&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Se você possui UE55F8000&lt;strong&gt;B&lt;/strong&gt;FXZ no lugar da UE55F8000&lt;strong&gt;A&lt;/strong&gt;FXZ usado no exemplo, você verá que a diferença entre eles são apenas de design como a cor, por exemplo, mas o resto das especificações serão as mesmas.&lt;/p&gt;
-&lt;p&gt;Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse &lt;a href="https://www.samsung.com/uk/support/tv-audio-video/what-do-samsung-tv-model-numbers-actually-mean-why-are-they-so-long/"&gt;esse link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse &lt;a class="external-link" href="https://www.samsung.com/uk/support/tv-audio-video/what-do-samsung-tv-model-numbers-actually-mean-why-are-they-so-long/"&gt;esse link&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;LG:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Encontrei essa imagem que facilita a explicação no caso da LG:
-&lt;center&gt; &lt;img alt="tab-tv image" src="./images/LG-TV-model-identification-2018-2019-new.jpg"&gt; &lt;br/&gt;&lt;br/&gt;&lt;sup&gt;&lt;em&gt;Créditos:&lt;/em&gt; na imagem&lt;/sup&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse &lt;a href="http://en.tab-tv.com/?page_id=7111"&gt;esse link&lt;/a&gt; (não oficial).&lt;/p&gt;
+&lt;center&gt; &lt;img alt="tab-tv image" src="./images/como-e-o-desenvolvimento-para-smart-tvs/LG-TV-model-identification-2018-2019-new.jpg"/&gt; &lt;br/&gt;&lt;br/&gt;&lt;sup&gt;&lt;em&gt;Créditos:&lt;/em&gt; na imagem&lt;/sup&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse &lt;a class="external-link" href="http://en.tab-tv.com/?page_id=7111"&gt;esse link&lt;/a&gt; (não oficial).&lt;/p&gt;
 &lt;h2&gt;That`s all folks:&lt;/h2&gt;
 &lt;p&gt;Com isso em mente, você já pode começar a se preparar para desenvolver sua tv app ou saber escolher melhor a sua próxima tv.&lt;/p&gt;
-&lt;p&gt;Dentro de alguns dias eu irei fazer uma série de posts mais técnicos, mostrando o desenvolvimento de uma tela simples para testar na sua TV em casa.&lt;/p&gt;</content><category term="Smart TV"></category><category term="Smart TV"></category><category term="Js"></category><category term="React"></category></entry></feed>
+&lt;p&gt;Dentro de alguns dias eu irei fazer uma série de posts mais técnicos, mostrando o desenvolvimento de uma tela simples para testar na sua TV em casa.&lt;/p&gt;</content><category term="Smart TV"/><category term="Smart TV"/><category term="Js"/><category term="React"/></entry></feed>

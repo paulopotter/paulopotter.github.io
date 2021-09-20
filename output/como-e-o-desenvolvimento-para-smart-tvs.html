@@ -1,70 +1,82 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+
+<html class="theme--light" lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <title>Como é o desenvolvimento para Smart TVs - Um dev qualquer || Paulo Oliveira
+<meta charset="utf-8"/>
+<title>Como é o desenvolvimento para Smart TVs - Um dev qualquer || Paulo Oliveira
 
  </title>
-  <link rel="icon" href="./favicon.png" />
-
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="Paulo Oliveira">
-    <meta name="robots" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" />
-
-    <link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
-
-  <link rel="stylesheet" type="text/css" href="https://umdevqualquer.com.br/theme/css/article.css"/>
-
-    <script data-ad-client="ca-pub-2474646572295965" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link href="./favicon.png" rel="icon"/>
+<meta content="Blog pessoal onde mostro um pouco do meu aprendizado." name="description"/>
+<meta content="Paulo Oliveira" name="author"/>
+<meta content="noimageindex" name="robots"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#32373d" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="#f5f5f5" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="Como é o desenvolvimento para Smart TVs" property="og:title"/>
+<meta content="Fala galera, blz? Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv." property="og:description"/>
+<meta content="https://umdevqualquer.com.br/images/smart-tv.png" property="og:image"/>
+<meta content="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@paulofrauches" name="twitter:site"/>
+<meta content="@paulofrauches" name="twitter:creator"/>
+<meta content="Smart Tv icon" name="twitter:image:alt"/>
+<link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml"/>
+<link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet"/>
+<link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
+<script async="" data-ad-client="ca-pub-2474646572295965" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script id="js-theme" type="text/javascript">
+      if(window.location.hash === '#dark' || window.localStorage.getItem('isDarkMode')) {
+        const html = document.querySelector('html');
+        if(html.classList.contains('theme--dark')){
+          html.classList.remove('theme--dark');
+          html.classList.add('theme--light');
+        } else {
+          html.classList.remove('theme--light');
+          html.classList.add('theme--dark');
+        }
+      }
+    </script>
 </head>
 <body>
-  <header class='header_site' id="start-page" container>
-    <div class="header_site--wrapper">
-      <div class="header_site--title">
-          <a href="https://umdevqualquer.com.br" class="header_site--title-link">
-            <span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
+<a class="site__skip-content" href="#start-site" tabindex="1">Pular para o conteúdo</a>
+<header class="header_site" container="" id="start-page">
+<div class="header_site--wrapper">
+<div class="header_site--title">
+<a aria-label="Paulo Oliveira. Full stack web Developer. Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
+<span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
             </a>
-      </div>
-
-      <ul class="header_site-social">
-      </ul>
-
-    </div>
-  </header>
-
-
-
-<div class="wrapper_site" container>
-  <div class="wrapper_site--content column_wrapper" id="start-site">
-    <section class="article_content" container>
-        <article class="article_content-body">
-            <h1 class="article_content-title">Como é o desenvolvimento para Smart TVs  </h1><small> Tempo médio de leitura: 5 minutos.</small>
-            <div class="article_content-content">
-                    <figure class='article_cover'>
-                        <img class='article_cover__img' src="https://umdevqualquer.com.br/images/smart-tv.png"
-                            alt="Smart Tv icon">
-
-                        <figcaption class='article_cover__credit'>Créditos:
+</div>
+<ul class="header_site-social">
+</ul>
+</div>
+<button aria-label="Trocar tema" class="site__theme-button" tabindex="2" type="button">
+<svg viewbox="0 0 24 24">
+<path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></path>
+</svg>
+</button>
+</header>
+<div class="wrapper_site" container="">
+<div class="wrapper_site--content column_wrapper" id="start-site">
+<section class="article_content" container="">
+<article class="article_content-body">
+<h1 class="article_content-title">Como é o desenvolvimento para Smart TVs  </h1><small> Tempo médio de leitura: 5 minutos.</small>
+<div class="article_content-content">
+<figure class="article_cover">
+<img alt="Smart Tv icon" class="article_cover__img image-process-article_cover" sizes="(max-width: 768px) 30%, (max-width: 1280) 50%, (max-width: 1920px) 100%, " src="https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv.png" srcset="https://umdevqualquer.com.br/images/resized/article_cover/768w/smart-tv.png 768w, https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv.png 1280w, https://umdevqualquer.com.br/images/resized/article_cover/1920w/smart-tv.png 1920w"/>
+<figcaption class="article_cover__credit">Créditos:
                                     Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-                            </figcaption>
-                    </figure>
-                <p>Fala galera, blz?</p>
+</figcaption>
+</figure>
+<p>Fala galera, blz?</p>
 <p>Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.</p>
-
-
 <p>Graças a isso, eu gostaria de compartilhar um pouco da minha experiência nessa nova área e com isso mostrar o quão simples é fazer uma app de Tv. Esse será um post conceito, logo não haverá linha de código...</p>
 <h2>Anota aí:</h2>
 <ul>
 <li>Saber javascript.</li>
 </ul>
-<p><center><img alt="meme He-man" src="https://i.pinimg.com/originals/6d/17/9b/6d179b75c54cc2bada2a1688ae3c6a04.jpg"> <br/><sup><em>Créditos:</em> na imagem</sup></center></p>
+<p><center><img alt="meme He-man" src="./images/como-e-o-desenvolvimento-para-smart-tvs/6d179b75c54cc2bada2a1688ae3c6a04.jpg"/> <br/><sup><em>Créditos:</em> na imagem</sup></center></p>
 <h2>Entendendo um pouco mais sobre as Smart TVs:</h2>
 <p>Hoje existem várias marcas de Smart TVs no mercado, as mais conhecidas são da <em>Samsung</em> e <em>LG</em>, mas ainda temos <em>Sony, Panasonic, TCL, Xiaomi, Motorola...</em>
 Dependendo da fabricante e do sistema operacional, você encontrará as seguintes stacks:</p>
@@ -112,7 +124,7 @@ Como desenvolvo mais para a <strong>LG</strong> e <strong>Samsung</strong>, irei
 <p>Quando se desenvolve apps web hosted, a tv abre um "browser" para o usuário (sem a barra de endereço, assim como uma app PWA), porém esses browsers das tvs são antigos e dificilmente eles receberam atualizações.</p>
 <p>Outro problema recorrente, mesmo que você compre uma tv esse ano, não necessariamente ela é nova, você pode acabar comprando uma tv com 1, 2 até 3 anos de fabricação. Isso acontece porque as grandes redes de varejistas fazem um estoque de tvs e ao contrário dos celulares, nós não costumamos trocar de tv todos os anos, então o estoque "encalha" e dai que surgem aquelas promoções de <em>"Super Smart TV com <strike>netflix</strike> Globoplay e acesso a internet por apenas 12x R$120 no cartão..."</em>.</p>
 <p>Boa parte dos brasileiros não pesquisam para comprar suas tvs, apenas pesquisam o preço e se acessa a internet. Mas mesmo que pesquisem, existe uma certa dificuldade de encontrar o ano da sua TV.</p>
-<p>Também não poderia deixar de falar da dificuldade de encontrar documentação das tvs e o que suporta (ou não). Aos poucos isso está mudando, mas ainda assim é um pouco complicado encontrar certas dúvidas. Nem no <a href="http://stackoverflow.com">Stackoverflow</a> você encontra 😱. Porém eu encontrei <a href="https://developer.samsung.com/tv/develop/specifications/general-specifications">esse link</a> com as especificações gerais das tvs Samsung, o que já ajuda um pouco.</p>
+<p>Também não poderia deixar de falar da dificuldade de encontrar documentação das tvs e o que suporta (ou não). Aos poucos isso está mudando, mas ainda assim é um pouco complicado encontrar certas dúvidas. Nem no <a class="external-link" href="http://stackoverflow.com">Stackoverflow</a> você encontra 😱. Porém eu encontrei <a class="external-link" href="https://developer.samsung.com/tv/develop/specifications/general-specifications">esse link</a> com as especificações gerais das tvs Samsung, o que já ajuda um pouco.</p>
 <h2>Como extrair informações da sua TV:</h2>
 <p>Os códigos das tvs dizem muito sobre elas, basicamente descreve ela por completo.</p>
 <ul>
@@ -124,38 +136,35 @@ Como desenvolvo mais para a <strong>LG</strong> e <strong>Samsung</strong>, irei
 <li><strong>E</strong> = Produzido na Europa</li>
 <li><strong>55</strong> = Tamanho da tela</li>
 <li><strong>F</strong> = Fabricado em 2013 (Ano de fabricação)</li>
-<li><strong>8000</strong> = Numero de série. Isso será diferente dependendo dos recursos de cada modelo. É possível descobrir as especificações dos modelos, digitando o código do modelo <a href="https://www.samsung.com/br/tvs/">aqui</a> (use a busca)</li>
+<li><strong>8000</strong> = Numero de série. Isso será diferente dependendo dos recursos de cada modelo. É possível descobrir as especificações dos modelos, digitando o código do modelo <a class="external-link" href="https://www.samsung.com/br/tvs/">aqui</a> (use a busca)</li>
 <li><strong>A</strong> = Features ou design</li>
 <li><strong>FXZ</strong> = Informações técnicas de produção</li>
 </ul>
 <p>Se você possui UE55F8000<strong>B</strong>FXZ no lugar da UE55F8000<strong>A</strong>FXZ usado no exemplo, você verá que a diferença entre eles são apenas de design como a cor, por exemplo, mas o resto das especificações serão as mesmas.</p>
-<p>Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse <a href="https://www.samsung.com/uk/support/tv-audio-video/what-do-samsung-tv-model-numbers-actually-mean-why-are-they-so-long/">esse link</a></p>
+<p>Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse <a class="external-link" href="https://www.samsung.com/uk/support/tv-audio-video/what-do-samsung-tv-model-numbers-actually-mean-why-are-they-so-long/">esse link</a></p>
 <ul>
 <li>LG:</li>
 </ul>
 <p>Encontrei essa imagem que facilita a explicação no caso da LG:
-<center> <img alt="tab-tv image" src="./images/LG-TV-model-identification-2018-2019-new.jpg"> <br/><br/><sup><em>Créditos:</em> na imagem</sup></center></p>
-<p>Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse <a href="http://en.tab-tv.com/?page_id=7111">esse link</a> (não oficial).</p>
+<center> <img alt="tab-tv image" src="./images/como-e-o-desenvolvimento-para-smart-tvs/LG-TV-model-identification-2018-2019-new.jpg"/> <br/><br/><sup><em>Créditos:</em> na imagem</sup></center></p>
+<p>Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse <a class="external-link" href="http://en.tab-tv.com/?page_id=7111">esse link</a> (não oficial).</p>
 <h2>That`s all folks:</h2>
 <p>Com isso em mente, você já pode começar a se preparar para desenvolver sua tv app ou saber escolher melhor a sua próxima tv.</p>
 <p>Dentro de alguns dias eu irei fazer uma série de posts mais técnicos, mostrando o desenvolvimento de uma tela simples para testar na sua TV em casa.</p>
-            </div>
-
-
-                <div class="article_content-related_post">
-                    <h4 class="article_content-related_post--title">Veja também:</h4>
-                        <ul>
-                            <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
-                            <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">Criando sua primeira APP para Smart TVs</a></li>
-                            <li><a href="https://umdevqualquer.com.br/voce-ja-pensou-sobre-acessibilidade-a11y.html">Você já pensou sobre Acessibilidade (a11y)?</a></li>
-                            <li><a href="https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser.html">Screamer-js - Um plugin js de notificação para Browser</a></li>
-                        </ul>
-                </div>
-        </article>
-    </section>
-
-    <section class="article_comments" container>
-        <div id="disqus_thread"></div>
+</div>
+<div class="article_content-related_post">
+<h4 class="article_content-related_post--title">Veja também:</h4>
+<ul>
+<li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
+<li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">Criando sua primeira APP para Smart TVs</a></li>
+<li><a href="https://umdevqualquer.com.br/voce-ja-pensou-sobre-acessibilidade-a11y.html">Você já pensou sobre Acessibilidade (a11y)?</a></li>
+<li><a href="https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser.html">Screamer-js - Um plugin js de notificação para Browser</a></li>
+</ul>
+</div>
+</article>
+</section>
+<section class="article_comments" container="">
+<div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'umdevqualquer';
         var disqus_identifier = window.location.href;
@@ -170,18 +179,18 @@ Como desenvolvo mais para a <strong>LG</strong> e <strong>Samsung</strong>, irei
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </section>
-  </div>
+<a class="dsq-brlink" href="http://disqus.com">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 </div>
-
-
-
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-
-  <script>
+</div>
+<button class="site__back-to-top-button">
+<svg viewbox="0 0 24 24">
+<path d="M19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21M12,7L7,12H10V16H14V12H17L12,7Z"></path>
+</svg>
+<span class="site__back-to-top-button--text">Voltar para o topo</span>
+</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -191,8 +200,44 @@ Como desenvolvo mais para a <strong>LG</strong> e <strong>Samsung</strong>, irei
   ga('send', 'pageview');
 
 </script>
+<script id="js-theme-button">
+  function toggleTheme(){
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    const html = document.querySelector('html');
+    if(isDarkMode){
+      window.localStorage.removeItem('isDarkMode');
+      html.classList.remove('theme--dark');
+      html.classList.add('theme--light');
+    } else {
+      window.localStorage.setItem('isDarkMode', true);
+      html.classList.remove('theme--light');
+      html.classList.add('theme--dark');
+    }
+  }
+  function updateThemeButton() {
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    themeButton.ariaLabel = `Trocar para o tema ${isDarkMode ? 'claro': 'escuro'}`
+  }
 
-    
-
-
-
+  const themeButton = document.querySelector('.site__theme-button');
+  themeButton.addEventListener('click', () => {
+    toggleTheme()
+    updateThemeButton()
+  })
+</script>
+<script id="js-scroll-top">
+  const scrollTopButton = document.querySelector('.site__back-to-top-button')
+  scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
+  document.addEventListener('scroll', () => {
+    if(window.scrollY > 100) {
+      scrollTopButton.classList.add('site__back-to-top-button--show')
+    } else {
+      if(scrollTopButton.classList.contains('site__back-to-top-button--show')){
+        scrollTopButton.classList.remove('site__back-to-top-button--show')
+      }
+    }
+  })
+</script>
+</body></html>

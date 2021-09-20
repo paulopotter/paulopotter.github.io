@@ -1,17 +1,19 @@
 @import "./base";
 
 .author_content {
-  background-color: #ffffff;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.05);
   margin: 1rem 0.5rem;
   padding: 1rem 0;
+
+  @include themed() {
+    box-shadow: 2px 2px 4px 0 getColorByTheme("boxShadow");
+    background-color: getColorByTheme("card");
+  }
 
   &-body {
     max-width: 90vw;
     min-height: 85vh;
     padding: 0 2rem;
   }
-
 }
 
 .about-me--image {

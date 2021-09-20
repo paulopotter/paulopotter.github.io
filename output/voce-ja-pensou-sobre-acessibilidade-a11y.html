@@ -1,64 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+
+<html class="theme--light" lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <title>Você já pensou sobre Acessibilidade (a11y)? - Um dev qualquer || Paulo Oliveira
+<meta charset="utf-8"/>
+<title>Você já pensou sobre Acessibilidade (a11y)? - Um dev qualquer || Paulo Oliveira
 
  </title>
-  <link rel="icon" href="./favicon.png" />
-
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="Paulo Oliveira">
-    <meta name="robots" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" />
-
-    <link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
-
-  <link rel="stylesheet" type="text/css" href="https://umdevqualquer.com.br/theme/css/article.css"/>
-
-    <script data-ad-client="ca-pub-2474646572295965" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link href="./favicon.png" rel="icon"/>
+<meta content="Blog pessoal onde mostro um pouco do meu aprendizado." name="description"/>
+<meta content="Paulo Oliveira" name="author"/>
+<meta content="noimageindex" name="robots"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#32373d" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="#f5f5f5" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="Você já pensou sobre Acessibilidade (a11y)?" property="og:title"/>
+<meta content="Hoje eu vou falar um pouco do pouco conhecimento que tenho sobre acessibilidade na web, e o porquê você deveria conhecer também. Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso incentive a você procurar saber mais também." property="og:description"/>
+<meta content="https://umdevqualquer.com.br/images/acessibility-uxplanet.jpeg" property="og:image"/>
+<meta content="https://umdevqualquer.com.br/voce-ja-pensou-sobre-acessibilidade-a11y" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@paulofrauches" name="twitter:site"/>
+<meta content="@paulofrauches" name="twitter:creator"/>
+<meta content="Simbolo da acessibilidade para todos." name="twitter:image:alt"/>
+<link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml"/>
+<link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet"/>
+<link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
+<script async="" data-ad-client="ca-pub-2474646572295965" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script id="js-theme" type="text/javascript">
+      if(window.location.hash === '#dark' || window.localStorage.getItem('isDarkMode')) {
+        const html = document.querySelector('html');
+        if(html.classList.contains('theme--dark')){
+          html.classList.remove('theme--dark');
+          html.classList.add('theme--light');
+        } else {
+          html.classList.remove('theme--light');
+          html.classList.add('theme--dark');
+        }
+      }
+    </script>
 </head>
 <body>
-  <header class='header_site' id="start-page" container>
-    <div class="header_site--wrapper">
-      <div class="header_site--title">
-          <a href="https://umdevqualquer.com.br" class="header_site--title-link">
-            <span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
+<a class="site__skip-content" href="#start-site" tabindex="1">Pular para o conteúdo</a>
+<header class="header_site" container="" id="start-page">
+<div class="header_site--wrapper">
+<div class="header_site--title">
+<a aria-label="Paulo Oliveira. Full stack web Developer. Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
+<span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
             </a>
-      </div>
-
-      <ul class="header_site-social">
-      </ul>
-
-    </div>
-  </header>
-
-
-
-<div class="wrapper_site" container>
-  <div class="wrapper_site--content column_wrapper" id="start-site">
-    <section class="article_content" container>
-        <article class="article_content-body">
-            <h1 class="article_content-title">Você já pensou sobre Acessibilidade (a11y)?  </h1><small> Tempo médio de leitura: 9 minutos.</small>
-            <div class="article_content-content">
-                    <figure class='article_cover'>
-                        <img class='article_cover__img' src="https://umdevqualquer.com.br/images/acessibility-uxplanet.jpeg"
-                            alt="Simbolo da acessibilidade para todos.">
-
-                        <figcaption class='article_cover__credit'>Créditos:
-                                    Imagem retirada do <a href="https://uxplanet.org/web-accessibility-explained-c2408636eee0" alt="Simbolo da acessibilidade para todos.">UX Planet</a>
-                            </figcaption>
-                    </figure>
-                <p>Hoje eu vou falar um pouco do <strike>pouco</strike> conhecimento que tenho sobre acessibilidade na web, e o porquê você deveria conhecer também.<br/>
+</div>
+<ul class="header_site-social">
+</ul>
+</div>
+<button aria-label="Trocar tema" class="site__theme-button" tabindex="2" type="button">
+<svg viewbox="0 0 24 24">
+<path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></path>
+</svg>
+</button>
+</header>
+<div class="wrapper_site" container="">
+<div class="wrapper_site--content column_wrapper" id="start-site">
+<section class="article_content" container="">
+<article class="article_content-body">
+<h1 class="article_content-title">Você já pensou sobre Acessibilidade (a11y)?  </h1><small> Tempo médio de leitura: 9 minutos.</small>
+<div class="article_content-content">
+<figure class="article_cover">
+<img alt="Simbolo da acessibilidade para todos." class="article_cover__img image-process-article_cover" sizes="(max-width: 768px) 30%, (max-width: 1280) 50%, (max-width: 1920px) 100%, " src="https://umdevqualquer.com.br/images/resized/article_cover/1280w/acessibility-uxplanet.jpeg" srcset="https://umdevqualquer.com.br/images/resized/article_cover/768w/acessibility-uxplanet.jpeg 768w, https://umdevqualquer.com.br/images/resized/article_cover/1280w/acessibility-uxplanet.jpeg 1280w, https://umdevqualquer.com.br/images/resized/article_cover/1920w/acessibility-uxplanet.jpeg 1920w"/>
+<figcaption class="article_cover__credit">Créditos:
+                                    Imagem retirada do <a alt="Simbolo da acessibilidade para todos." href="https://uxplanet.org/web-accessibility-explained-c2408636eee0">UX Planet</a>
+</figcaption>
+</figure>
+<p>Hoje eu vou falar um pouco do <strike>pouco</strike> conhecimento que tenho sobre acessibilidade na web, e o porquê você deveria conhecer também.<br/>
 Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso incentive a você procurar saber mais também.</p>
-
-
 <p>E já começo me desculpando, pois ainda não arrumei a acessibilidade do meu blog, mas sei que ele não está tão ruim quanto a maioria dos sites que encontramos por ai, mas pretendo subir algumas atualizações para melhorar a usabilidade dele para incluir a todos.</p>
 <p><em>Nota: Quando eu comecei a procurar mais sobre o assunto acabei encontrando também com o nome <strong>a11y</strong></em>.</p>
 <h2>De onde surgiu esse assunto?</h2>
@@ -69,8 +81,8 @@ Quando usamos um aplicativo que fazia leitura de tela e o mesmo <strong>entrava 
 <p>Com isso começamos a pensar mais como podemos tornar o nosso app mais acessível. Ainda estamos engatinhando nesse assunto, porém estamos tentando. Resolvemos incluir cada um dos aspectos de acessibilidade(contraste, voz, tamanho de fonte...) aos poucos, começando com a leitura da tela, por ser o mais simples de se começar a implementar (no nosso caso) e em paralelo, tentar estudar outras formas e o que podemos aplicar na app para incluir os outros pontos do aspecto da acessibilidade.</p>
 <p><center style="font-size: 40px">. . .</center><br/></p>
 <figure>
-    <img src="https://cdn.lynda.com/course/606090/606090-637491159569845272-16x9.jpg" alt="Imagem com três simbolos representando: deficiência cognitiva, deficiência visual e deficiência auditiva. No fundo uma tela com o símbolo da acessibilidade na web.">
-    <center><figurecaption>Créditos: google</figurecaption></center>
+<img alt="Imagem com três simbolos representando: deficiência cognitiva, deficiência visual e deficiência auditiva. No fundo uma tela com o símbolo da acessibilidade na web." src="./images/voce-ja-pensou-sobre-acessibilidade-a11y/606090-637491159569845272-16x9.jpg"/>
+<center><figurecaption>Créditos: google</figurecaption></center>
 </figure>
 <blockquote>
 <p>Cerca de 15% da população mundial vive com algum tipo de deficiência e em torno de 2.2 bilhões de pessoas têm deficiência visual ou cegueira. - <em>World Health Organization report from 2019</em></p>
@@ -78,7 +90,7 @@ Quando usamos um aplicativo que fazia leitura de tela e o mesmo <strong>entrava 
 <p>Isso já nos mostra que a parcela da população que precisa de alguma adaptação para poder estar no ciclo das interações sociais da grande massa, não é pequena.</p>
 <p>Quando falamos sobre acessibilidade web, a primeira (e às vezes, única) adaptação que a nós pensamos, é apenas para pessoas cegas. Sinto-lhe informar, mas não existe apenas pessoas com problemas  de visão que necessitam de uma web melhor.</p>
 <h3>Tipos de deficiências:</h3>
-<p><em>(Nota: toda essa seção foi copiada do <a href="https://zeroheight.com/5719ee47f/p/914194-tipos-de-deficincias">manual de comunicação inclusiva e acessível</a> do Banco Carrefour.)</em></p>
+<p><em>(Nota: toda essa seção foi copiada do <a class="external-link" href="https://zeroheight.com/5719ee47f/p/914194-tipos-de-deficincias">manual de comunicação inclusiva e acessível</a> do Banco Carrefour.)</em></p>
 <ul>
 <li><strong>Física</strong> : Engloba limitações motoras tais como tetraplegia, paraplegia, paralisia cerebral, amputação de membros, entre outras.</li>
 <li><strong>Intelectual</strong>: Refere-se a limitações em habilidades mentais que envolvem raciocínio, resolução de problemas, entre outras.</li>
@@ -91,53 +103,52 @@ Quando usamos um aplicativo que fazia leitura de tela e o mesmo <strong>entrava 
 <h2>Como mudar isso?</h2>
 <p>Tá! Agora que você arranhou esse assunto (sim, ele é mais denso e tem mais coisas além do que foi dito até então), como eu posso começar a fazer alguma diferença?</p>
 <p>Com pequenos passos, nós já podemos fazer uma grande diferença. Se fizermos nosso site com a semântica certa, além de melhorar como os sites de busca entende o nosso site, também facilitará os leitores de tela a entender um pouco melhor o seu site.</p>
-<p>Na web existe o <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications)</a>( veja também o <a href="https://www.w3.org/WAI/standards-guidelines/aria/">WAI guidelines</a>) que define uma maneira de tornar o conteúdo da Web e os aplicativos da Web mais acessíveis para pessoas com algum tipo deficiência.</p>
-<p>Além de utilizar as tags certas para o que elas foram criadas, como <strong><code>nav</code></strong> para um menu/navegação, <strong><code>main</code></strong> para o conteúdo principal ou <strong><code>footer</code></strong> para o rodapé, por exemplo (então pare de usar <strong><code>div</code></strong> para tudo #ficadica), você pode (e deve) utilizar as propriedades <strong><code>aria</code></strong> que definem semânticas adicionais que não são suportadas no HTML padrão. Deixo <a href="https://desenvolvimentoparaweb.com/miscelanea/aria-acessibilidade-web-a11y/">esse artigo no desenvolvimento para web</a> falando um pouco mais sobre <strong><code>aria</code></strong>, para um melhor entendimento.</p>
+<p>Na web existe o <a class="external-link" href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications)</a>( veja também o <a class="external-link" href="https://www.w3.org/WAI/standards-guidelines/aria/">WAI guidelines</a>) que define uma maneira de tornar o conteúdo da Web e os aplicativos da Web mais acessíveis para pessoas com algum tipo deficiência.</p>
+<p>Além de utilizar as tags certas para o que elas foram criadas, como <strong><code>nav</code></strong> para um menu/navegação, <strong><code>main</code></strong> para o conteúdo principal ou <strong><code>footer</code></strong> para o rodapé, por exemplo (então pare de usar <strong><code>div</code></strong> para tudo #ficadica), você pode (e deve) utilizar as propriedades <strong><code>aria</code></strong> que definem semânticas adicionais que não são suportadas no HTML padrão. Deixo <a class="external-link" href="https://desenvolvimentoparaweb.com/miscelanea/aria-acessibilidade-web-a11y/">esse artigo no desenvolvimento para web</a> falando um pouco mais sobre <strong><code>aria</code></strong>, para um melhor entendimento.</p>
 <h2>E nas Smart TVs?</h2>
 <figure>
-    <center>
-        <img src="https://images.samsung.com/is/image/samsung/assets/br/p6_gro2/p6_initial_info/accessibility/mobile/tv_voice_guide-v1.png" alt="Tv com um balão representando a tv falando o nome do canal na tela."><br/>
-        <figurecaption>Créditos: <a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a></figurecaption>
-    </center>
+<center>
+<img alt="Tv com um balão representando a tv falando o nome do canal na tela." src="./images/voce-ja-pensou-sobre-acessibilidade-a11y/tv_voice_guide-v1.png"/><br/>
+<figurecaption>Créditos: <a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a></figurecaption>
+</center>
 </figure>
-
 <p>Como o meu foco é Smart TVs, não posso deixar de falar como podemos também melhorar o uso das pessoas com deficiencia nesse device.</p>
-<p>Existem algumas TVs no mercado que possuem a função "Text-to-Speech" (TTS)(texto para áudio) que lê tudo o que está na tela para o usuário. Mas infelizmente não são todas as fabricantes que colocam essa funcionalidade nas suas Smart TVs &#x1F615;.</p>
-<p>A Samsung acaba saindo na frente, pois boa parte das TVs dela que eu tive contato eu acabei encontrando esse recurso. A queridinha da vez <a href="https://www.samsung.com/br/tvs/uhd-4k-tv/tu8000-50-inch-crystal-uhd-smart-tv-un50tu8000gxzd/">TU8000</a>, por exemplo, possui esse recurso que a Samsung chama de <strong>Guia de Voz</strong>. E para você, que vai desenvolver para ela, pode acompanhar o que eles suportam ou não no guia de <a href="https://developer.samsung.com/smarttv/develop/guides/fundamentals/text-to-speech.html">acessibilidade para Tizen</a>.</p>
+<p>Existem algumas TVs no mercado que possuem a função "Text-to-Speech" (TTS)(texto para áudio) que lê tudo o que está na tela para o usuário. Mas infelizmente não são todas as fabricantes que colocam essa funcionalidade nas suas Smart TVs 😕.</p>
+<p>A Samsung acaba saindo na frente, pois boa parte das TVs dela que eu tive contato eu acabei encontrando esse recurso. A queridinha da vez <a class="external-link" href="https://www.samsung.com/br/tvs/uhd-4k-tv/tu8000-50-inch-crystal-uhd-smart-tv-un50tu8000gxzd/">TU8000</a>, por exemplo, possui esse recurso que a Samsung chama de <strong>Guia de Voz</strong>. E para você, que vai desenvolver para ela, pode acompanhar o que eles suportam ou não no guia de <a class="external-link" href="https://developer.samsung.com/smarttv/develop/guides/fundamentals/text-to-speech.html">acessibilidade para Tizen</a>.</p>
 <p>Assim como na web, as mudanças na sua app para começar a dar suporte a leitores de tela, são mínimos.<br/>
 Começando, fazendo tudo o que foi dito no tópico anterior, mas agora com um adicional, utilize o <strong><code>focus()</code></strong>no elemento que estiver focado enquanto o usuário navega, pois, é através dele que a TV entende o que está focado e, consequentemente, fala o que está na tela.</p>
 <p>Recomendo, para quem possui uma TV com a função TTS, acessar as Apps do Youtube e da Amazon Prime (Não consegui utilizar a Netflix e o Disney+ quando eu fiz os testes numa Samsung). Elas mostram como entregar o que estamos vendo na tela, apenas com o áudio.</p>
 <h2>Apps e extensões:</h2>
-<p>Essas extensões são para te ajudar a desenvolver, se quiser para usar no dia a dia olhe a seção de <a href="#links-uteis">links uteis</a></p>
+<p>Essas extensões são para te ajudar a desenvolver, se quiser para usar no dia a dia olhe a seção de <a class="internal-link" href="#links-uteis">links uteis</a></p>
 <ul>
 <li>
 <p><strong>Apps para TTS</strong>:</p>
 <ul>
 <li>VoiceOver (MacOs): Nativo</li>
-<li><a href="https://www.nvaccess.org/">NVDA</a> (Windows): Leitor de tela que interage com o sistema operacional e transforma conteúdo textual em fala.</li>
-<li><a href="https://help.gnome.org/users/orca/stable/introduction.html.pt_BR">Orca</a> (Linux): Leitor de tela livre e gratuito.</li>
+<li><a class="external-link" href="https://www.nvaccess.org/">NVDA</a> (Windows): Leitor de tela que interage com o sistema operacional e transforma conteúdo textual em fala.</li>
+<li><a class="external-link" href="https://help.gnome.org/users/orca/stable/introduction.html.pt_BR">Orca</a> (Linux): Leitor de tela livre e gratuito.</li>
 </ul>
 </li>
 <li>
 <p><strong>Extensões para chrome</strong>:</p>
 <ul>
-<li><a href="https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni">Accessibility insights</a>.</li>
-<li><a href="https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn/related">Screen reader</a>.</li>
+<li><a class="external-link" href="https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni">Accessibility insights</a>.</li>
+<li><a class="external-link" href="https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn/related">Screen reader</a>.</li>
 </ul>
 </li>
 <li>
 <p><strong>Extensões para vscode</strong>:</p>
 <ul>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter">axe Accessibility Linter</a>.</li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web-accessibility">Web Accessibility</a>.</li>
+<li><a class="external-link" href="https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter">axe Accessibility Linter</a>.</li>
+<li><a class="external-link" href="https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web-accessibility">Web Accessibility</a>.</li>
 </ul>
 </li>
 <li>
 <p><strong>Para seu projeto</strong>:</p>
 <ul>
-<li><a href="https://github.com/dequelabs/axe-core-npm/blob/develop/packages/react/README.md">axe core react</a>.</li>
-<li><a href="https://github.com/reakit/reakit">Reakit github</a> | <a href="https://reakit.io/">Reakit site</a>.</li>
-<li><a href="https://storybook.js.org/addons/@storybook/addon-a11y/">Storybook A11y addon</a>.</li>
+<li><a class="external-link" href="https://github.com/dequelabs/axe-core-npm/blob/develop/packages/react/README.md">axe core react</a>.</li>
+<li><a class="external-link" href="https://github.com/reakit/reakit">Reakit github</a> | <a class="external-link" href="https://reakit.io/">Reakit site</a>.</li>
+<li><a class="external-link" href="https://storybook.js.org/addons/@storybook/addon-a11y/">Storybook A11y addon</a>.</li>
 </ul>
 </li>
 </ul>
@@ -146,38 +157,35 @@ Começando, fazendo tudo o que foi dito no tópico anterior, mas agora com um ad
 <p><strong>Fontes e inspirações</strong>:</p>
 <ul>
 <li>Como eu já comentei algumas vezes, parte das informações foram pegas da apresentação (interna) sobre o <strong>Estudo de acessibilidade em Smart TVs</strong> que a UX do time, Giovanna, mostrou para nós (sem link externo). Obrigado Gi! ❤</li>
-<li><a href="https://zeroheight.com/5719ee47f/p/914194-tipos-de-deficincias">Manual de comunicação inclusiva e acessível</a> do Banco Carrefour.</li>
+<li><a class="external-link" href="https://zeroheight.com/5719ee47f/p/914194-tipos-de-deficincias">Manual de comunicação inclusiva e acessível</a> do Banco Carrefour.</li>
 <li>Estudos e pesquisas, na internet, sobre o assunto.</li>
 </ul>
 <h2><a id="links-uteis"></a>Links uteis</h2>
 <ul>
-<li><a href="https://www.nngroup.com/articles/smart-tv-usability/">Artigo sobre usabilidade em Smart TVs (🇺🇸)</a>.</li>
-<li><a href="https://www.cnet.com/news/samsung-makes-its-2021-tvs-more-accessible-for-people-with-vision-or-hearing-disabilities/">Matéria sobre novas features de acessibilidade em Smart TVs da Samsung (🇺🇸)</a> e <a href="https://www.samsung.com/br/accessibility/tv/">algumas dessas features explicada pela a própria Samsung</a>.</li>
-<li><a href="https://blog.br.playstation.com/2020/06/09/the-last-of-us-part-ii-opcoes-de-acessibilidade-detalhadas/">As 60+ configurações que fazem deste o jogo mais acessível da Naughty Dog até então</a>.</li>
-<li>Artigo bem completo sobre <a href="https://mwpt.com.br/acessibilidade-digital/boas-praticas/">Boas práticas de acessibilidade digital</a> da <a href="https://mwpt.com.br/">Web para todos</a></li>
-<li><a href="https://mwpt.com.br/codigos-acessiveis/">Exemplos de códigos acessíveis</a></li>
-<li><a href="https://cta.ifrs.edu.br/tecnologia-assistiva/ferramentas-gratuitas-de-ta/">Ferramentas gratuitas de tecnologia assistiva</a>) do <a href="https://cta.ifrs.edu.br/">Centro Tecnológico de Acessibilidade do IFRS </a></li>
-<li><a href="https://support.apple.com/pt-br/HT204434">Atalhos de acessibilidade do Mac</a></li>
-<li><a href="https://support.microsoft.com/pt-br/windows/atalhos-de-teclado-de-acessibilidade-do-windows-021bcb62-45c8-e4ef-1e4f-41b8c1fc87fd">Atalhos de teclado de acessibilidade do Windows</a></li>
-<li><a href="https://www.devmedia.com.br/html-semantico-conheca-os-elementos-semanticos-da-html5/38065">Conheça os elementos semânticos da HTML5</a></li>
+<li><a class="external-link" href="https://www.nngroup.com/articles/smart-tv-usability/">Artigo sobre usabilidade em Smart TVs (🇺🇸)</a>.</li>
+<li><a class="external-link" href="https://www.cnet.com/news/samsung-makes-its-2021-tvs-more-accessible-for-people-with-vision-or-hearing-disabilities/">Matéria sobre novas features de acessibilidade em Smart TVs da Samsung (🇺🇸)</a> e <a class="external-link" href="https://www.samsung.com/br/accessibility/tv/">algumas dessas features explicada pela a própria Samsung</a>.</li>
+<li><a class="external-link" href="https://blog.br.playstation.com/2020/06/09/the-last-of-us-part-ii-opcoes-de-acessibilidade-detalhadas/">As 60+ configurações que fazem deste o jogo mais acessível da Naughty Dog até então</a>.</li>
+<li>Artigo bem completo sobre <a class="external-link" href="https://mwpt.com.br/acessibilidade-digital/boas-praticas/">Boas práticas de acessibilidade digital</a> da <a class="external-link" href="https://mwpt.com.br/">Web para todos</a></li>
+<li><a class="external-link" href="https://mwpt.com.br/codigos-acessiveis/">Exemplos de códigos acessíveis</a></li>
+<li><a class="external-link" href="https://cta.ifrs.edu.br/tecnologia-assistiva/ferramentas-gratuitas-de-ta/">Ferramentas gratuitas de tecnologia assistiva</a>) do <a class="external-link" href="https://cta.ifrs.edu.br/">Centro Tecnológico de Acessibilidade do IFRS </a></li>
+<li><a class="external-link" href="https://support.apple.com/pt-br/HT204434">Atalhos de acessibilidade do Mac</a></li>
+<li><a class="external-link" href="https://support.microsoft.com/pt-br/windows/atalhos-de-teclado-de-acessibilidade-do-windows-021bcb62-45c8-e4ef-1e4f-41b8c1fc87fd">Atalhos de teclado de acessibilidade do Windows</a></li>
+<li><a class="external-link" href="https://www.devmedia.com.br/html-semantico-conheca-os-elementos-semanticos-da-html5/38065">Conheça os elementos semânticos da HTML5</a></li>
 </ul>
-            </div>
-
-
-                <div class="article_content-related_post">
-                    <h4 class="article_content-related_post--title">Veja também:</h4>
-                        <ul>
-                            <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
-                            <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">Criando sua primeira APP para Smart TVs</a></li>
-                            <li><a href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>
-                            <li><a href="https://umdevqualquer.com.br/utilizando-aria-no-seu-projeto-menu.html">Utilizando ARIA no seu projeto: Menu</a></li>
-                        </ul>
-                </div>
-        </article>
-    </section>
-
-    <section class="article_comments" container>
-        <div id="disqus_thread"></div>
+</div>
+<div class="article_content-related_post">
+<h4 class="article_content-related_post--title">Veja também:</h4>
+<ul>
+<li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
+<li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">Criando sua primeira APP para Smart TVs</a></li>
+<li><a href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>
+<li><a href="https://umdevqualquer.com.br/utilizando-aria-no-seu-projeto-menu.html">Utilizando ARIA no seu projeto: Menu</a></li>
+</ul>
+</div>
+</article>
+</section>
+<section class="article_comments" container="">
+<div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'umdevqualquer';
         var disqus_identifier = window.location.href;
@@ -192,18 +200,18 @@ Começando, fazendo tudo o que foi dito no tópico anterior, mas agora com um ad
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </section>
-  </div>
+<a class="dsq-brlink" href="http://disqus.com">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 </div>
-
-
-
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-
-  <script>
+</div>
+<button class="site__back-to-top-button">
+<svg viewbox="0 0 24 24">
+<path d="M19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21M12,7L7,12H10V16H14V12H17L12,7Z"></path>
+</svg>
+<span class="site__back-to-top-button--text">Voltar para o topo</span>
+</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -213,8 +221,44 @@ Começando, fazendo tudo o que foi dito no tópico anterior, mas agora com um ad
   ga('send', 'pageview');
 
 </script>
+<script id="js-theme-button">
+  function toggleTheme(){
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    const html = document.querySelector('html');
+    if(isDarkMode){
+      window.localStorage.removeItem('isDarkMode');
+      html.classList.remove('theme--dark');
+      html.classList.add('theme--light');
+    } else {
+      window.localStorage.setItem('isDarkMode', true);
+      html.classList.remove('theme--light');
+      html.classList.add('theme--dark');
+    }
+  }
+  function updateThemeButton() {
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    themeButton.ariaLabel = `Trocar para o tema ${isDarkMode ? 'claro': 'escuro'}`
+  }
 
-    
-
-
-
+  const themeButton = document.querySelector('.site__theme-button');
+  themeButton.addEventListener('click', () => {
+    toggleTheme()
+    updateThemeButton()
+  })
+</script>
+<script id="js-scroll-top">
+  const scrollTopButton = document.querySelector('.site__back-to-top-button')
+  scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
+  document.addEventListener('scroll', () => {
+    if(window.scrollY > 100) {
+      scrollTopButton.classList.add('site__back-to-top-button--show')
+    } else {
+      if(scrollTopButton.classList.contains('site__back-to-top-button--show')){
+        scrollTopButton.classList.remove('site__back-to-top-button--show')
+      }
+    }
+  })
+</script>
+</body></html>

@@ -58,7 +58,6 @@ Todas as roles possuem estados (state) e propriedades (properties) onde estados 
 
 [jtable]
 | Nome| Descrição| Valor padrão |
-
 | `aria-activedescendant` | Fornece um método alternativo de gerenciamento de foco para elementos interativos que podem conter vários descendentes focalizáveis | -  |
 | `aria-atomic`           | Indica se as tecnologias assistivas apresentarão toda ou apenas partes da região alterada com base nas notificações de alteração definidas pelo atributo `aria-relevant`. | `false`|
 | `aria-controls`         | Identifica o elemento (ou elementos) cujo conteúdo ou presença são controlados pelo elemento atual. | - |

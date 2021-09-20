@@ -1,64 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+
+<html class="theme--light" lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <title>Criando sua primeira APP para Smart TVs - Um dev qualquer || Paulo Oliveira
+<meta charset="utf-8"/>
+<title>Criando sua primeira APP para Smart TVs - Um dev qualquer || Paulo Oliveira
 
  </title>
-  <link rel="icon" href="./favicon.png" />
-
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="Paulo Oliveira">
-    <meta name="robots" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" />
-
-    <link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
-
-  <link rel="stylesheet" type="text/css" href="https://umdevqualquer.com.br/theme/css/article.css"/>
-
-    <script data-ad-client="ca-pub-2474646572295965" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link href="./favicon.png" rel="icon"/>
+<meta content="Blog pessoal onde mostro um pouco do meu aprendizado." name="description"/>
+<meta content="Paulo Oliveira" name="author"/>
+<meta content="noimageindex" name="robots"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#32373d" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="#f5f5f5" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="Criando sua primeira APP para Smart TVs" property="og:title"/>
+<meta content="Fala ae, tranquilinho? Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido neste post. Recomendo a leitura, é uma boa introdução." property="og:description"/>
+<meta content="https://umdevqualquer.com.br/images/smart-tv-pixabay.jpg" property="og:image"/>
+<meta content="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@paulofrauches" name="twitter:site"/>
+<meta content="@paulofrauches" name="twitter:creator"/>
+<meta content="Smart Tv from pixabay" name="twitter:image:alt"/>
+<link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml"/>
+<link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet"/>
+<link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
+<script async="" data-ad-client="ca-pub-2474646572295965" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script id="js-theme" type="text/javascript">
+      if(window.location.hash === '#dark' || window.localStorage.getItem('isDarkMode')) {
+        const html = document.querySelector('html');
+        if(html.classList.contains('theme--dark')){
+          html.classList.remove('theme--dark');
+          html.classList.add('theme--light');
+        } else {
+          html.classList.remove('theme--light');
+          html.classList.add('theme--dark');
+        }
+      }
+    </script>
 </head>
 <body>
-  <header class='header_site' id="start-page" container>
-    <div class="header_site--wrapper">
-      <div class="header_site--title">
-          <a href="https://umdevqualquer.com.br" class="header_site--title-link">
-            <span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
+<a class="site__skip-content" href="#start-site" tabindex="1">Pular para o conteúdo</a>
+<header class="header_site" container="" id="start-page">
+<div class="header_site--wrapper">
+<div class="header_site--title">
+<a aria-label="Paulo Oliveira. Full stack web Developer. Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
+<span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
             </a>
-      </div>
-
-      <ul class="header_site-social">
-      </ul>
-
-    </div>
-  </header>
-
-
-
-<div class="wrapper_site" container>
-  <div class="wrapper_site--content column_wrapper" id="start-site">
-    <section class="article_content" container>
-        <article class="article_content-body">
-            <h1 class="article_content-title">Criando sua primeira APP para Smart TVs  </h1><small> Tempo médio de leitura: 15 minutos.</small>
-            <div class="article_content-content">
-                    <figure class='article_cover'>
-                        <img class='article_cover__img' src="https://umdevqualquer.com.br/images/smart-tv-pixabay.jpg"
-                            alt="Smart Tv from pixabay">
-
-                        <figcaption class='article_cover__credit'>Créditos:
+</div>
+<ul class="header_site-social">
+</ul>
+</div>
+<button aria-label="Trocar tema" class="site__theme-button" tabindex="2" type="button">
+<svg viewbox="0 0 24 24">
+<path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></path>
+</svg>
+</button>
+</header>
+<div class="wrapper_site" container="">
+<div class="wrapper_site--content column_wrapper" id="start-site">
+<section class="article_content" container="">
+<article class="article_content-body">
+<h1 class="article_content-title">Criando sua primeira APP para Smart TVs  </h1><small> Tempo médio de leitura: 15 minutos.</small>
+<div class="article_content-content">
+<figure class="article_cover">
+<img alt="Smart Tv from pixabay" class="article_cover__img image-process-article_cover" sizes="(max-width: 768px) 30%, (max-width: 1280) 50%, (max-width: 1920px) 100%, " src="https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv-pixabay.jpg" srcset="https://umdevqualquer.com.br/images/resized/article_cover/768w/smart-tv-pixabay.jpg 768w, https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv-pixabay.jpg 1280w, https://umdevqualquer.com.br/images/resized/article_cover/1920w/smart-tv-pixabay.jpg 1920w"/>
+<figcaption class="article_cover__credit">Créditos:
                                     Imagem retirada de <a href="https://pixabay.com/pt/illustrations/remoto-controle-tela-tv-exploração-3653882/" title="Tv com controle remoto">PixaBay</a>
-                            </figcaption>
-                    </figure>
-                <p>Fala ae, tranquilinho?</p>
-<p>Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido <a href="./como-e-o-desenvolvimento-para-smart-tvs.html">neste post</a>. Recomendo a leitura, é uma boa introdução.</p>
-
-
+</figcaption>
+</figure>
+<p>Fala ae, tranquilinho?</p>
+<p>Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido <a class="internal-link" href="./como-e-o-desenvolvimento-para-smart-tvs.html">neste post</a>. Recomendo a leitura, é uma boa introdução.</p>
 <p>Tendo a ideia de tentar passar por boa partes dos problemas que temos quando desenvolvemos app para TVs, pensei em vários tipos diferentes de exemplo de apps: galeria de fotos, app de streaming de música, app de streaming de animes (<strike>para ter uma experiência melhor que a sua, Crunchyroll</strike>)... Porém para ser algo mais rápido e simples, eu tive que me conter 🤪</p>
 <h2>O Projeto:</h2>
 <p>Com isso em mente, a escolha que mais se encaixou nesses requistos foi: <strong>app que simula um catálogo de animes/mangá</strong>.
@@ -75,7 +87,7 @@ Após essa série de posts, se vocês quiserem, eu faço um mais "real", com req
 </ul>
 <p>Porém, você é livre para escolher a sua, podendo utilizar qualquer framework para desenvolver. <em>Vue.js, React, Flutter, JS Vanilla</em>, são alguns exemplos. Você só não pode esquercer de duas premissas: <strong>compatibilidade</strong> e <strong>performance</strong>! Então vamos fazer essa bagaça funcionar!!!</p>
 <h3>Configurando o projeto:</h3>
-<p><center><img alt="E la vamos nós" src="https://media.tenor.com/images/0993a0560293a59c1bee27a37d91696d/tenor.png"><br/><sup>Creditos: google</sup></center></p>
+<p><center><img alt="E la vamos nós" src="./images/criando-sua-primeira-app-para-smart-tvs/tenor.png"/><br/><sup>Creditos: google</sup></center></p>
 <p>Aqui é aquela configuração padrao: aquele nosso <code>create-react-app</code> básico (se você não tem o <em>create-react-app</em> é só usar o <code>npm install -g create-react-app</code>). Com isso, já começamos a ter a nossa estrutura inicial.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>$ create-react-app my-first-smart-tv-app
 </code></pre></div>
@@ -95,11 +107,11 @@ $ yarn add -D @babel/core babel-loader @babel/preset-env @babel/preset-react bab
 $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 </code></pre></div>
 </td></tr></table>
-<p>É necessário fazer algumas configurações para o funcionamento do webpack/babel após a instalação, como eu mexi em vários arquivos, <a href="https://github.com/paulopotter/my-first-smart-tv-app/commit/6a5b5f4">aqui está o commit com essas modificações</a>.</p>
+<p>É necessário fazer algumas configurações para o funcionamento do webpack/babel após a instalação, como eu mexi em vários arquivos, <a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/commit/6a5b5f4">aqui está o commit com essas modificações</a>.</p>
 <p>Com isso nós já temos a estrutura da nossa APP.</p>
 <h3>Começando o desenvolvimento:</h3>
-<p>Antes que eu me esqueça, estarei postando essa <a href="https://github.com/paulopotter/my-first-smart-tv-app">app no github</a>, com isso se você quiser apenas o resultado final, estará tudo documentado lá.</p>
-<p>Agora vamos começar a codar de verdade, para isso vamos fazer um request para a API que vai nos entregar os dados que a gente precisa, para isso vamos utilizar o <a href="https://jikan.moe/?ref=public-apis">Jikan</a>. O Jikan é uma API não oficial do <a href="https://myanimelist.net">My Anime List</a>, ela é bem completinha para o que iremos fazer 😆. E para ele existe um <em>wrapper</em> em js (<a href="https://github.com/zuritor/jikanjs">jikanjs</a>) para facilitar ainda mais a nossa vida, para instalar basta rodar.</p>
+<p>Antes que eu me esqueça, estarei postando essa <a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app">app no github</a>, com isso se você quiser apenas o resultado final, estará tudo documentado lá.</p>
+<p>Agora vamos começar a codar de verdade, para isso vamos fazer um request para a API que vai nos entregar os dados que a gente precisa, para isso vamos utilizar o <a class="external-link" href="https://jikan.moe/?ref=public-apis">Jikan</a>. O Jikan é uma API não oficial do <a class="external-link" href="https://myanimelist.net">My Anime List</a>, ela é bem completinha para o que iremos fazer 😆. E para ele existe um <em>wrapper</em> em js (<a class="external-link" href="https://github.com/zuritor/jikanjs">jikanjs</a>) para facilitar ainda mais a nossa vida, para instalar basta rodar.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>$ yarn add jikanjs
 </code></pre></div>
 </td></tr></table>
@@ -150,7 +162,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
   <span class="kd">const</span> <span class="p">{</span><span class="nx">image_url</span><span class="p">,</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">mal_id</span><span class="p">,</span> <span class="nx">type</span><span class="p">}</span> <span class="o">=</span> <span class="nx">anime</span>
 
   <span class="k">return</span> <span class="p">(</span>
-    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;poster-wrapper&quot;</span> <span class="nx">id</span><span class="o">=</span><span class="p">{</span><span class="nx">mal_id</span><span class="p">}</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">mal_id</span><span class="p">}</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"poster-wrapper"</span> <span class="nx">id</span><span class="o">=</span><span class="p">{</span><span class="nx">mal_id</span><span class="p">}</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">mal_id</span><span class="p">}</span><span class="o">&gt;</span>
       <span class="o">&lt;</span><span class="nx">figure</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">type</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/span&gt;</span>
         <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">image_url</span><span class="p">}</span> <span class="nx">alt</span><span class="o">=</span><span class="p">{</span><span class="nx">title</span><span class="p">}</span> <span class="o">/&gt;</span>
@@ -210,7 +222,7 @@ $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nx">animes</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animes</span><span class="p">;</span>
-    <span class="k">return</span> <span class="nx">animes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">anime</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">anime</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;TV&#39;</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nx">animes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">anime</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">anime</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">'TV'</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">))</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
@@ -262,20 +274,20 @@ $ yarn jest --init
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">moduleNameMapper</span><span class="o">:</span> <span class="p">{</span> <span class="c1">// 82</span>
-  <span class="s2">&quot;\\.(css|sass)$&quot;</span><span class="o">:</span> <span class="s2">&quot;identity-obj-proxy&quot;</span><span class="p">,</span>
+  <span class="s2">"\\.(css|sass)$"</span><span class="o">:</span> <span class="s2">"identity-obj-proxy"</span><span class="p">,</span>
 <span class="p">},</span>
-<span class="nx">setupFilesAfterEnv</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;&lt;rootDir&gt;/src/setupTests.js&quot;</span><span class="p">],</span> <span class="c1">// 129</span>
-<span class="nx">testEnvironment</span><span class="o">:</span> <span class="s2">&quot;enzyme&quot;</span><span class="p">,</span> <span class="c1">// 135</span>
+<span class="nx">setupFilesAfterEnv</span><span class="o">:</span> <span class="p">[</span><span class="s2">"&lt;rootDir&gt;/src/setupTests.js"</span><span class="p">],</span> <span class="c1">// 129</span>
+<span class="nx">testEnvironment</span><span class="o">:</span> <span class="s2">"enzyme"</span><span class="p">,</span> <span class="c1">// 135</span>
 <span class="nx">testMatch</span><span class="o">:</span> <span class="p">[</span> <span class="c1">// 144</span>
-  <span class="s2">&quot;**/*.test.js&quot;</span><span class="p">,</span>
+  <span class="s2">"**/*.test.js"</span><span class="p">,</span>
 <span class="p">],</span>
 </code></pre></div>
 </td></tr></table>
 <p>Também precisamos criar o arquivo <code>src/setupTest.js</code> e dentro dele colocar:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">configure</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">&quot;enzyme&quot;</span><span class="p">;</span>
-<span class="k">import</span> <span class="nx">Adapter</span> <span class="k">from</span> <span class="s2">&quot;enzyme-adapter-react-16&quot;</span><span class="p">;</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span> <span class="nx">configure</span> <span class="p">}</span> <span class="k">from</span> <span class="s2">"enzyme"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Adapter</span> <span class="k">from</span> <span class="s2">"enzyme-adapter-react-16"</span><span class="p">;</span>
 <span class="nx">configure</span><span class="p">({</span> <span class="nx">adapter</span><span class="o">:</span> <span class="k">new</span> <span class="nx">Adapter</span><span class="p">()</span> <span class="p">});</span>
 </code></pre></div>
 </td></tr></table>
@@ -291,13 +303,13 @@ $ yarn jest --init
   <span class="err">...</span>
   <span class="err">scrip</span><span class="kc">ts</span><span class="p">:</span> <span class="p">{</span>
     <span class="err">...</span>
-    <span class="nt">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;jest&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;test:coverage&quot;</span><span class="p">:</span> <span class="s2">&quot;jest --coverage&quot;</span>
+    <span class="nt">"test"</span><span class="p">:</span> <span class="s2">"jest"</span><span class="p">,</span>
+    <span class="nt">"test:coverage"</span><span class="p">:</span> <span class="s2">"jest --coverage"</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p>Também adicionei o ESLint, para ver como ficou, olhe <a href="https://github.com/paulopotter/my-first-smart-tv-app/commit/853e5bf">esse commit</a>.</p>
+<p>Também adicionei o ESLint, para ver como ficou, olhe <a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/commit/853e5bf">esse commit</a>.</p>
 <h2>Navegação</h2>
 <p>Para fazer a navegação, eu vou adicionar uma classe para indicar a seleção:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -312,13 +324,13 @@ $ yarn jest --init
 <span class="normal">10</span>
 <span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
     <span class="p">...</span>
-        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="sb">`poster-wrapper </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">activeItem</span> <span class="o">===</span> <span class="nx">i</span> <span class="o">?</span> <span class="s1">&#39;poster-wrapper--active&#39;</span><span class="o">:</span> <span class="kc">null</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span> <span class="nx">id</span><span class="o">=</span><span class="p">{</span><span class="nx">mal_id</span><span class="p">}</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">mal_id</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="sb">`poster-wrapper </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">activeItem</span> <span class="o">===</span> <span class="nx">i</span> <span class="o">?</span> <span class="s1">'poster-wrapper--active'</span><span class="o">:</span> <span class="kc">null</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span> <span class="nx">id</span><span class="o">=</span><span class="p">{</span><span class="nx">mal_id</span><span class="p">}</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">mal_id</span><span class="p">}</span><span class="o">&gt;</span>
     <span class="p">...</span>
 <span class="p">}</span>
 
 <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
     <span class="p">...</span>
-    <span class="k">return</span> <span class="nx">animes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">anime</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;TV&#39;</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nx">animes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">anime</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">'TV'</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">tmpl</span><span class="p">(</span><span class="nx">anime</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">))</span>
     <span class="p">...</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -441,52 +453,47 @@ $ yarn jest --init
 <span class="p">}</span>
 
 <span class="nx">enableKeyEvent</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onKeyDown</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'keydown'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onKeyDown</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="nx">disableKeyEvent</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onKeyDown</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s1">'keydown'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onKeyDown</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 <h2>That`s it</h2>
 <p>É isso, para a nossa primeira parte isso já é o suficiente para começar a brincar ( e porque se eu continuar o post vai demorar 3 horas para ser lido 🤪)
-Para ver todos os commits desse post, acesse <a href="https://github.com/paulopotter/my-first-smart-tv-app/releases/tag/post-1">essa tag no github</a></p>
+Para ver todos os commits desse post, acesse <a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/releases/tag/post-1">essa tag no github</a></p>
 <p>No próximo post, nós teremos a continuação dos testes, fix de alguns bugs e criação de algum evento para quando selecionar-mos um item.</p>
 <p>Qualquer dúvida, critica ou sugestão utilizem os comentários e até a próxima!!</p>
-            </div>
+</div>
+<div class="article_content-series">
+<p class="article_content-series--title">Este post é a parte <b>1</b> da serie "<span class="article_content-series--name">Criando sua primeira APP para Smart TVs</span>"</p>
+<ul class="article_content-series--parts">
+<li>
+<span>PARTE 1: </span>
+<b>Criando sua primeira APP para Smart TVs</b>
+</li>
+<li>
+<span>PARTE 2: </span>
+<a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a>
+</li>
 
-                <div class="article_content-series">
-                        <p class='article_content-series--title'>Este post é a parte <b>1</b> da serie "<span class="article_content-series--name">Criando sua primeira APP para Smart TVs</span>"</p>
-                        <ul class="article_content-series--parts">
-                            <li>
 
-                                <span>PARTE 1: </span>
-                                    <b>Criando sua primeira APP para Smart TVs</b>
-                            </li>
-                            <li>
-
-                                <span>PARTE 2: </span>
-                                    <a href='https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html'>Criando sua primeira APP para Smart TVs (Parte 2)</a>
-                                </li>
-                            </li>
-                        </ol>
-                </div>
-
-                <div class="article_content-related_post">
-                    <h4 class="article_content-related_post--title">Veja também:</h4>
-                        <ul>
-                            <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
-                            <li><a href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>
-                            <li><a href="https://umdevqualquer.com.br/voce-ja-pensou-sobre-acessibilidade-a11y.html">Você já pensou sobre Acessibilidade (a11y)?</a></li>
-                            <li><a href="https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser.html">Screamer-js - Um plugin js de notificação para Browser</a></li>
-                        </ul>
-                </div>
-        </article>
-    </section>
-
-    <section class="article_comments" container>
-        <div id="disqus_thread"></div>
+</ul></div>
+<div class="article_content-related_post">
+<h4 class="article_content-related_post--title">Veja também:</h4>
+<ul>
+<li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
+<li><a href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>
+<li><a href="https://umdevqualquer.com.br/voce-ja-pensou-sobre-acessibilidade-a11y.html">Você já pensou sobre Acessibilidade (a11y)?</a></li>
+<li><a href="https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser.html">Screamer-js - Um plugin js de notificação para Browser</a></li>
+</ul>
+</div>
+</article>
+</section>
+<section class="article_comments" container="">
+<div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'umdevqualquer';
         var disqus_identifier = window.location.href;
@@ -501,18 +508,18 @@ Para ver todos os commits desse post, acesse <a href="https://github.com/paulopo
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </section>
-  </div>
+<a class="dsq-brlink" href="http://disqus.com">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 </div>
-
-
-
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-
-  <script>
+</div>
+<button class="site__back-to-top-button">
+<svg viewbox="0 0 24 24">
+<path d="M19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21M12,7L7,12H10V16H14V12H17L12,7Z"></path>
+</svg>
+<span class="site__back-to-top-button--text">Voltar para o topo</span>
+</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -522,8 +529,44 @@ Para ver todos os commits desse post, acesse <a href="https://github.com/paulopo
   ga('send', 'pageview');
 
 </script>
+<script id="js-theme-button">
+  function toggleTheme(){
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    const html = document.querySelector('html');
+    if(isDarkMode){
+      window.localStorage.removeItem('isDarkMode');
+      html.classList.remove('theme--dark');
+      html.classList.add('theme--light');
+    } else {
+      window.localStorage.setItem('isDarkMode', true);
+      html.classList.remove('theme--light');
+      html.classList.add('theme--dark');
+    }
+  }
+  function updateThemeButton() {
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    themeButton.ariaLabel = `Trocar para o tema ${isDarkMode ? 'claro': 'escuro'}`
+  }
 
-    
-
-
-
+  const themeButton = document.querySelector('.site__theme-button');
+  themeButton.addEventListener('click', () => {
+    toggleTheme()
+    updateThemeButton()
+  })
+</script>
+<script id="js-scroll-top">
+  const scrollTopButton = document.querySelector('.site__back-to-top-button')
+  scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
+  document.addEventListener('scroll', () => {
+    if(window.scrollY > 100) {
+      scrollTopButton.classList.add('site__back-to-top-button--show')
+    } else {
+      if(scrollTopButton.classList.contains('site__back-to-top-button--show')){
+        scrollTopButton.classList.remove('site__back-to-top-button--show')
+      }
+    }
+  })
+</script>
+</body></html>

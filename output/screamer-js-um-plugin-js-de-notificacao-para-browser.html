@@ -1,69 +1,82 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+
+<html class="theme--light" lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <title>Screamer-js - Um plugin js de notificação para Browser - Um dev qualquer || Paulo Oliveira
+<meta charset="utf-8"/>
+<title>Screamer-js - Um plugin js de notificação para Browser - Um dev qualquer || Paulo Oliveira
 
  </title>
-  <link rel="icon" href="./favicon.png" />
-
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="Paulo Oliveira">
-    <meta name="robots" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" />
-
-    <link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
-
-  <link rel="stylesheet" type="text/css" href="https://umdevqualquer.com.br/theme/css/article.css"/>
-
-    <script data-ad-client="ca-pub-2474646572295965" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link href="./favicon.png" rel="icon"/>
+<meta content="Blog pessoal onde mostro um pouco do meu aprendizado." name="description"/>
+<meta content="Paulo Oliveira" name="author"/>
+<meta content="noimageindex" name="robots"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#32373d" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="#f5f5f5" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="Screamer-js - Um plugin js de notificação para Browser" property="og:title"/>
+<meta content="Fala pessoal, como é que cês tão?! 😜 Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser." property="og:description"/>
+<meta content="https://umdevqualquer.com.br/images/Screamer.png" property="og:image"/>
+<meta content="https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@paulofrauches" name="twitter:site"/>
+<meta content="@paulofrauches" name="twitter:creator"/>
+<meta content="Screamer Logo" name="twitter:image:alt"/>
+<link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml"/>
+<link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet"/>
+<link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
+<script async="" data-ad-client="ca-pub-2474646572295965" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script id="js-theme" type="text/javascript">
+      if(window.location.hash === '#dark' || window.localStorage.getItem('isDarkMode')) {
+        const html = document.querySelector('html');
+        if(html.classList.contains('theme--dark')){
+          html.classList.remove('theme--dark');
+          html.classList.add('theme--light');
+        } else {
+          html.classList.remove('theme--light');
+          html.classList.add('theme--dark');
+        }
+      }
+    </script>
 </head>
 <body>
-  <header class='header_site' id="start-page" container>
-    <div class="header_site--wrapper">
-      <div class="header_site--title">
-          <a href="https://umdevqualquer.com.br" class="header_site--title-link">
-            <span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
+<a class="site__skip-content" href="#start-site" tabindex="1">Pular para o conteúdo</a>
+<header class="header_site" container="" id="start-page">
+<div class="header_site--wrapper">
+<div class="header_site--title">
+<a aria-label="Paulo Oliveira. Full stack web Developer. Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
+<span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
             </a>
-      </div>
-
-      <ul class="header_site-social">
-      </ul>
-
-    </div>
-  </header>
-
-
-
-<div class="wrapper_site" container>
-  <div class="wrapper_site--content column_wrapper" id="start-site">
-    <section class="article_content" container>
-        <article class="article_content-body">
-            <h1 class="article_content-title">Screamer-js - Um plugin js de notificação para Browser  </h1><small> Tempo médio de leitura: 2 minutos.</small>
-            <div class="article_content-content">
-                    <figure class='article_cover'>
-                        <img class='article_cover__img' src="https://umdevqualquer.com.br/images/Screamer.png"
-                            alt="Screamer Logo">
-
-                    </figure>
-                <p>Fala pessoal, como é que cês tão?! 😜</p>
+</div>
+<ul class="header_site-social">
+</ul>
+</div>
+<button aria-label="Trocar tema" class="site__theme-button" tabindex="2" type="button">
+<svg viewbox="0 0 24 24">
+<path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></path>
+</svg>
+</button>
+</header>
+<div class="wrapper_site" container="">
+<div class="wrapper_site--content column_wrapper" id="start-site">
+<section class="article_content" container="">
+<article class="article_content-body">
+<h1 class="article_content-title">Screamer-js - Um plugin js de notificação para Browser  </h1><small> Tempo médio de leitura: 2 minutos.</small>
+<div class="article_content-content">
+<figure class="article_cover">
+<img alt="Screamer Logo" class="article_cover__img image-process-article_cover" sizes="(max-width: 768px) 30%, (max-width: 1280) 50%, (max-width: 1920px) 100%, " src="https://umdevqualquer.com.br/images/resized/article_cover/1280w/Screamer.png" srcset="https://umdevqualquer.com.br/images/resized/article_cover/768w/Screamer.png 768w, https://umdevqualquer.com.br/images/resized/article_cover/1280w/Screamer.png 1280w, https://umdevqualquer.com.br/images/resized/article_cover/1920w/Screamer.png 1920w"/>
+</figure>
+<p>Fala pessoal, como é que cês tão?! 😜</p>
 <p>Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser.</p>
-
-<p>Em um hack-day<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> na globo.com eu e o <a href="https://willianjusten.com.br/">Willian Justen</a> fizemos um plugin javascript sanar esse problema. E esse foi quando o <a href="https://github.com/willianjusten/screamer-js">Screamer-js</a> nasceu.</p>
+<p>Em um hack-day<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> na globo.com eu e o <a class="external-link" href="https://willianjusten.com.br/">Willian Justen</a> fizemos um plugin javascript sanar esse problema. E esse foi quando o <a class="external-link" href="https://github.com/willianjusten/screamer-js">Screamer-js</a> nasceu.</p>
 <h2>O que é?</h2>
-<p><img alt="screenshot" src="https://raw.githubusercontent.com/willianjusten/screamer-js/master/screenshot.png"></p>
-<p>O screamer-js é um plugin javascript (puro 😆 ) de fácil configuração utilizando o <a href="https://developer.mozilla.org/en-US/docs/Web/API/notification">Web Notification API</a></p>
+<p><img alt="screenshot" src="https://raw.githubusercontent.com/willianjusten/screamer-js/master/screenshot.png"/></p>
+<p>O screamer-js é um plugin javascript (puro 😆 ) de fácil configuração utilizando o <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/API/notification">Web Notification API</a></p>
 <blockquote>
 <p>Screamer.js is a Vanilla Javascript plugin to provide simple yet fully customisable web notifications using Web Notifications API.</p>
 </blockquote>
 <h2>Como usar?</h2>
-<p>1 - Baixe o screamer-js <a href="https://github.com/willianjusten/screamer-js/archive/master.zip">aqui</a>.
+<p>1 - Baixe o screamer-js <a class="external-link" href="https://github.com/willianjusten/screamer-js/archive/master.zip">aqui</a>.
 2 - Adicione o js na sua pagina.
 3 - Em um arquivo js separado ou numa tag script na própria pagina coloque:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
@@ -74,10 +87,10 @@
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;title&#39;</span><span class="o">:</span> <span class="s1">&#39;Hello&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;body&#39;</span><span class="o">:</span> <span class="s1">&#39;World!&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;icon&#39;</span><span class="o">:</span> <span class="s1">&#39;img.png&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;fade&#39;</span><span class="o">:</span> <span class="mf">1000</span>
+    <span class="s1">'title'</span><span class="o">:</span> <span class="s1">'Hello'</span><span class="p">,</span>
+    <span class="s1">'body'</span><span class="o">:</span> <span class="s1">'World!'</span><span class="p">,</span>
+    <span class="s1">'icon'</span><span class="o">:</span> <span class="s1">'img.png'</span><span class="p">,</span>
+    <span class="s1">'fade'</span><span class="o">:</span> <span class="mf">1000</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">scream</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Screamer</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span> <span class="c1">// Inicializa o screamer com as opções de notificação</span>
 <span class="nx">scream</span><span class="p">.</span><span class="nx">notify</span><span class="p">();</span> <span class="c1">// Executa a notificação</span>
@@ -97,34 +110,31 @@
 <li>after (function) - Função de callback chamada antes de exibir a notificação.</li>
 </ul>
 <h2>Queremos ver na prática!</h2>
-<p>Aqui você pode ver o <a href="https://willianjusten.com.br/screamer-js/example/">Demo</a> do screamer funcionando :)</p>
+<p>Aqui você pode ver o <a class="external-link" href="https://willianjusten.com.br/screamer-js/example/">Demo</a> do screamer funcionando :)</p>
 <h2>That's all folks!</h2>
 <p>Espero que você tenha gostado.</p>
 <p>Qualquer duvida, deixe nos comentários! :)</p>
 <div class="footnote">
-<hr>
+<hr/>
 <ol>
 <li id="fn:1">
-<p>Hack-day: é um hackaton que acontece para os funcionários na globo.com poderem criar o que quiserem!&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Hack-day: é um hackaton que acontece para os funcionários na globo.com poderem criar o que quiserem! <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>
-            </div>
-
-
-                <div class="article_content-related_post">
-                    <h4 class="article_content-related_post--title">Veja também:</h4>
-                        <ul>
-                            <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
-                            <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">Criando sua primeira APP para Smart TVs</a></li>
-                            <li><a href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>
-                        </ul>
-                </div>
-        </article>
-    </section>
-
-    <section class="article_comments" container>
-        <div id="disqus_thread"></div>
+</div>
+<div class="article_content-related_post">
+<h4 class="article_content-related_post--title">Veja também:</h4>
+<ul>
+<li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
+<li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">Criando sua primeira APP para Smart TVs</a></li>
+<li><a href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>
+</ul>
+</div>
+</article>
+</section>
+<section class="article_comments" container="">
+<div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'umdevqualquer';
         var disqus_identifier = window.location.href;
@@ -139,18 +149,18 @@
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </section>
-  </div>
+<a class="dsq-brlink" href="http://disqus.com">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 </div>
-
-
-
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-
-  <script>
+</div>
+<button class="site__back-to-top-button">
+<svg viewbox="0 0 24 24">
+<path d="M19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21M12,7L7,12H10V16H14V12H17L12,7Z"></path>
+</svg>
+<span class="site__back-to-top-button--text">Voltar para o topo</span>
+</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -160,8 +170,44 @@
   ga('send', 'pageview');
 
 </script>
+<script id="js-theme-button">
+  function toggleTheme(){
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    const html = document.querySelector('html');
+    if(isDarkMode){
+      window.localStorage.removeItem('isDarkMode');
+      html.classList.remove('theme--dark');
+      html.classList.add('theme--light');
+    } else {
+      window.localStorage.setItem('isDarkMode', true);
+      html.classList.remove('theme--light');
+      html.classList.add('theme--dark');
+    }
+  }
+  function updateThemeButton() {
+    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    themeButton.ariaLabel = `Trocar para o tema ${isDarkMode ? 'claro': 'escuro'}`
+  }
 
-    
-
-
-
+  const themeButton = document.querySelector('.site__theme-button');
+  themeButton.addEventListener('click', () => {
+    toggleTheme()
+    updateThemeButton()
+  })
+</script>
+<script id="js-scroll-top">
+  const scrollTopButton = document.querySelector('.site__back-to-top-button')
+  scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
+  document.addEventListener('scroll', () => {
+    if(window.scrollY > 100) {
+      scrollTopButton.classList.add('site__back-to-top-button--show')
+    } else {
+      if(scrollTopButton.classList.contains('site__back-to-top-button--show')){
+        scrollTopButton.classList.remove('site__back-to-top-button--show')
+      }
+    }
+  })
+</script>
+</body></html>

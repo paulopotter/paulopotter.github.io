@@ -22,11 +22,6 @@ FEED_DOMAIN = SITEURL
 
 
 DELETE_OUTPUT_DIRECTORY = True
-PLUGIN_PATHS = ['plugins']
-PLUGINS = [
-    'minchin.pelican.plugins.optimize_images',
-    # https://github.com/MinchinWeb/minchin.pelican.plugins.optimize_images
-]
 
 # Following items are often useful when publishing
 

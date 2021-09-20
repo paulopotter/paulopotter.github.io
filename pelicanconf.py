@@ -63,6 +63,8 @@ PLUGINS = [
     'pelican_just_table',
     'linkclass',
     'neighbors',
+    'minchin.pelican.plugins.optimize_images',
+    # https://github.com/MinchinWeb/minchin.pelican.plugins.optimize_images
     'image_process',  # https://github.com/pelican-plugins/image-process
 ]
 
