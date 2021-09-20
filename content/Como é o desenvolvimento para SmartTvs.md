@@ -17,7 +17,7 @@ Graças a isso, eu gostaria de compartilhar um pouco da minha experiência nessa
 
 - Saber javascript.
 
-<center>![meme He-man](https://i.pinimg.com/originals/6d/17/9b/6d179b75c54cc2bada2a1688ae3c6a04.jpg) <br/><sup>*Créditos:* na imagem</sup></center>
+<center>![meme He-man](./images/como-e-o-desenvolvimento-para-smart-tvs/6d179b75c54cc2bada2a1688ae3c6a04.jpg) <br/><sup>*Créditos:* na imagem</sup></center>
 
 ## Entendendo um pouco mais sobre as Smart TVs:
 
@@ -86,7 +86,7 @@ Para ver a tradução de cada letra (como, por exemplo, saber qual letra represe
 - LG:
 
 Encontrei essa imagem que facilita a explicação no caso da LG:
-<center> ![tab-tv image](./images/LG-TV-model-identification-2018-2019-new.jpg) <br/><br/><sup>*Créditos:* na imagem</sup></center>
+<center> ![tab-tv image](./images/como-e-o-desenvolvimento-para-smart-tvs/LG-TV-model-identification-2018-2019-new.jpg) <br/><br/><sup>*Créditos:* na imagem</sup></center>
 
 Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse [esse link](http://en.tab-tv.com/?page_id=7111) (não oficial).
 

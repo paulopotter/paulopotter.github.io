@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from pelicanconf import *
 from __future__ import unicode_literals
 
 # This file is only used if you use `make publish` or
@@ -9,6 +8,8 @@ from __future__ import unicode_literals
 import os
 import sys
 sys.path.append(os.curdir)
+
+from pelicanconf import *  # noqa
 
 
 SITE_BAR_TITLE = u'Um dev qualquer || Paulo Oliveira'
@@ -21,7 +22,7 @@ FEED_DOMAIN = SITEURL
 
 
 DELETE_OUTPUT_DIRECTORY = True
-
+PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     'minchin.pelican.plugins.optimize_images',
     # https://github.com/MinchinWeb/minchin.pelican.plugins.optimize_images

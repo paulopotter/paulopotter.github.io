@@ -28,7 +28,7 @@ Com isso começamos a pensar mais como podemos tornar o nosso app mais acessíve
 <center style="font-size: 40px">. . .</center><br/>
 
 <figure>
-    <img src="https://cdn.lynda.com/course/606090/606090-637491159569845272-16x9.jpg" alt="Imagem com três simbolos representando: deficiência cognitiva, deficiência visual e deficiência auditiva. No fundo uma tela com o símbolo da acessibilidade na web.">
+    <img src="./images/voce-ja-pensou-sobre-acessibilidade-a11y/606090-637491159569845272-16x9.jpg" alt="Imagem com três simbolos representando: deficiência cognitiva, deficiência visual e deficiência auditiva. No fundo uma tela com o símbolo da acessibilidade na web.">
     <center><figurecaption>Créditos: google</figurecaption></center>
 </figure>
 > Cerca de 15% da população mundial vive com algum tipo de deficiência e em torno de 2.2 bilhões de pessoas têm deficiência visual ou cegueira. - *World Health Organization report from 2019*
@@ -64,7 +64,7 @@ Além de utilizar as tags certas para o que elas foram criadas, como **`nav`** p
 
 <figure>
     <center>
-        <img src="https://images.samsung.com/is/image/samsung/assets/br/p6_gro2/p6_initial_info/accessibility/mobile/tv_voice_guide-v1.png" alt="Tv com um balão representando a tv falando o nome do canal na tela."><br/>
+        <img src="./images/voce-ja-pensou-sobre-acessibilidade-a11y/tv_voice_guide-v1.png" alt="Tv com um balão representando a tv falando o nome do canal na tela."><br/>
         <figurecaption>Créditos: <a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a></figurecaption>
     </center>
 </figure>

@@ -35,7 +35,7 @@ Porém, você é livre para escolher a sua, podendo utilizar qualquer framework 
 
 ### Configurando o projeto:
 
-<center>![E la vamos nós](https://media.tenor.com/images/0993a0560293a59c1bee27a37d91696d/tenor.png)<br/><sup>Creditos: google</sup></center>
+<center>![E la vamos nós](./images/criando-sua-primeira-app-para-smart-tvs/tenor.png)<br/><sup>Creditos: google</sup></center>
 
 Aqui é aquela configuração padrao: aquele nosso `create-react-app` básico (se você não tem o _create-react-app_ é só usar o `npm install -g create-react-app`). Com isso, já começamos a ter a nossa estrutura inicial.
 

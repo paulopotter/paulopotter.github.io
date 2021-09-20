@@ -44,7 +44,7 @@ Hoje chegou a minha hora de fazer e eu resolvir começar com os plugins que eu u
 
 Fecha sua tag HTML automaticamente.
 
-<center>![Auto close tag](https://github.com/formulahendry/vscode-auto-close-tag/raw/master/images/usage.gif)</center>
+<center>![Auto close tag](./images/meus-plugins-favoritos-para-vscode/usage.gif)</center>
 
 [Voltar para o menu](#menu)
 
@@ -52,7 +52,7 @@ Fecha sua tag HTML automaticamente.
 
 Uma forma mais simples de renomear suas tags!
 
-<center>![Auto rename tag](https://github.com/formulahendry/vscode-auto-rename-tag/raw/master/images/usage.gif)</center>
+<center>![Auto rename tag](./images/meus-plugins-favoritos-para-vscode/usage-1.gif)</center>
 
 [Voltar para o menu](#menu)
 
@@ -60,7 +60,7 @@ Uma forma mais simples de renomear suas tags!
 
 Mostra trechos do seu código que não estão cobertos por testes. (Lê o arquivo `coverage/lcov*.info` para buscar essa informação)
 
-<center>![code-coverage](https://github.com/markis/vscode-code-coverage/raw/master/images/demo.png)</center>
+<center>![code-coverage](./images/meus-plugins-favoritos-para-vscode/demo.png)</center>
 
 [Voltar para o menu](#menu)
 
@@ -68,7 +68,7 @@ Mostra trechos do seu código que não estão cobertos por testes. (Lê o arquiv
 
 *Antigo Visual Studio Code Settings Sync*. Salva e sincroniza suas configurações e extensões do vscode, via gist, para você poder usar as suas configurações do vscode em qualquer lugar!
 
-<center>![code-settings-sync](https://shanalikhan.github.io/img/login-with-github.png)</center>
+<center>![code-settings-sync](./images/meus-plugins-favoritos-para-vscode/login-with-github.png)</center>
 
 [Voltar para o menu](#menu)
 
@@ -81,28 +81,28 @@ Aquela extensão que deveria vir como padrão do vscode! Para quem não sabe o q
 ## <a id="gitlens"></a>[Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 Essa é aquela extensão <strike>dedo duro</strike> que faz um `git blame` na linha ativa. Ela tem outras funcionalidades, porém essa é a mais utilizada.
 
-<center>![gitlens](https://raw.githubusercontent.com/eamodio/vscode-gitlens/master/images/docs/gitlens-preview.gif)</center>
+<center>![gitlens](./images/meus-plugins-favoritos-para-vscode/gitlens-preview.gif)</center>
 
 [Voltar para o menu](#menu)
 
 ## <a id="markdown-all-in-one"></a>[Markdown all in one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 Essa extensão adiciona vários atalhos para a edição do Markdown. Para mim, que escrevo muito utilizando markdown, é uma mão na roda!
 
-<center>![markdown-all-in-one](https://github.com/yzhang-gh/vscode-markdown/raw/master/images/gifs/toggle-bold.gif)</center>
+<center>![markdown-all-in-one](./images/meus-plugins-favoritos-para-vscode/toggle-bold.gif)</center>
 
 [Voltar para o menu](#menu)
 
 ## <a id="node-tdd"></a>[Node-tdd](https://marketplace.visualstudio.com/items?itemName=prashaantt.node-tdd)
 Adiciona na barra de status do vscode informações sobre os seus testes javascript. Quando ativado, roda seus testes e mostra se eles estão passando ou não.
 
-<center>![node-tdd](https://github.com/prashaantt/node-tdd/raw/master/images/node-tdd.gif)</center>
+<center>![node-tdd](./images/meus-plugins-favoritos-para-vscode/node-tdd.gif)</center>
 
 [Voltar para o menu](#menu)
 
 ## <a id="npm-intellisense"></a>[npm intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 Ajuda na hora de fazer os `import`s do seus arquivos JS.
 
-<center>![npm-intellisense](https://github.com/ChristianKohler/NpmIntellisense/raw/master/images/auto_complete.gif)</center>
+<center>![npm-intellisense](./images/meus-plugins-favoritos-para-vscode/auto_complete.gif)</center>
 
 [Voltar para o menu](#menu)
 
@@ -114,7 +114,7 @@ Extensão para formatar o seu código.
 ## <a id="vscode-colorize"></a>[Colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize)
 Mostra na hora qual é a cor que você está utilizando.
 
-<center>![vscode-colorize](https://raw.githubusercontent.com/kamikillerto/vscode-colorize/master/assets/demo_variables.gif)</center>
+<center>![vscode-colorize](./images/meus-plugins-favoritos-para-vscode/demo_variables.gif)</center>
 
 [Voltar para o menu](#menu)
 
@@ -126,7 +126,6 @@ Mostra e corrige os erros de lint (JavaScript e JSX).
 ## <a id="vscode-import-cost"></a>[Import cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
 Mostra o quão pesado é o pacote importado.
 
-<center>![vscode-import-cost](https://file-wkbcnlcvbn.now.sh/import-cost.gif)</center>
 
 [Voltar para o menu](#menu)
 
@@ -139,7 +138,7 @@ Essa extensão ajuda na hora para saber quais testes estão passando, na sidebar
 
 Essa extensão ajuda com o auto-complete na hora de importar suas funções.
 
-<center>![vscodeintellicode](https://go.microsoft.com/fwlink/?linkid=2006041)</center>
+<center>![vscodeintellicode](./images/meus-plugins-favoritos-para-vscode/go.microsoft.gif)</center>
 
 [Voltar para o menu](#menu)
 
@@ -150,7 +149,7 @@ Essa extensão ajuda com o auto-complete na hora de importar suas funções.
 
 Pacote de icones. =)
 
-<center>![material-icon-theme](https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/master/images/fileIcons.png)</center>
+<center>![material-icon-theme](./images/meus-plugins-favoritos-para-vscode/fileIcons.png)</center>
 
 [Voltar para o menu](#menu)
 
@@ -158,7 +157,7 @@ Pacote de icones. =)
 
 Tema que eu estou utilizando no momento.
 
-<center>![theme-panda](https://cdn.rawgit.com/tinkertrain/panda-syntax-vscode/master/assets/editor.jpg)</center>
+<center>![theme-panda](./images/meus-plugins-favoritos-para-vscode/editor.jpg)</center>
 
 
 # That`s all folks

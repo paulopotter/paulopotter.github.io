@@ -15,7 +15,7 @@ Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje n
 
 ## Bug hunter:
 
-![Bug free](https://www.monkeyuser.com/assets/images/2019/131-bug-free.png)
+![Bug free](./images/criando-sua-primeira-app-para-smart-tvs-parte-2/131-bug-free.png)
 <center><small>Fonte: [MonkeyUser](https://www.monkeyuser.com/)</small></center>
 
 Enquanto eu navegava pela app, notei uma falha na parte da navegação, nós estamos **exibindo apenas** items relacionados a "TV" mas não estamos filtrando-os. Então ao chegar no final da lista, a navegação "continua" mesmo sem ter item para navegar. E para corrigir vamos modificar o código com:
@@ -60,7 +60,7 @@ render() {
 
 ## Hora dos testes:
 
-![fixing unit test](https://www.monkeyuser.com/assets/images/2018/86-fixing-unit-tests.png)
+![fixing unit test](./images/criando-sua-primeira-app-para-smart-tvs-parte-2/86-fixing-unit-tests.png)
 <center><small>Fonte: [MonkeyUser](https://www.monkeyuser.com/)</small></center>
 
 Como eu apenas adicionei a suite de test, e não realizei nenhum teste, está na hora de aumentar o nosso coverage! 😄
@@ -232,7 +232,7 @@ this.animate(38)
 ## É isso aí!
 
 <center>
-    ![Minha app](images/minha-primeira-smart-tv-app-pt2.gif)
+    ![Minha app](./images/como-e-o-desenvolvimento-para-smart-tvs-parte-2/minha-primeira-smart-tv-app-pt2.gif)
     <br/><small>Nossa app funcionando</small>
 </center>
 

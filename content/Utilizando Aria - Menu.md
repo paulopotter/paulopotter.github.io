@@ -164,7 +164,7 @@ Seus estados e propriedades são os mesmos do `menu` (logo não irei repeti-los)
 
 <figure>
     <center>
-        <img src="https://images.samsung.com/is/image/samsung/assets/br/p6_gro2/p6_initial_info/accessibility/mobile/tv_voice_guide-v1.png" alt="Tv com um balão representando a tv falando o nome do canal na tela."><br/>
+        <img src="./images/voce-ja-pensou-sobre-acessibilidade-a11y/tv_voice_guide-v1.png" alt="Tv com um balão representando a tv falando o nome do canal na tela."><br/>
         <figurecaption>Créditos: <a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a></figurecaption>
     </center>
 </figure>
