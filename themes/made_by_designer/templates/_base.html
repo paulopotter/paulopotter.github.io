@@ -44,17 +44,13 @@
   {% endblock %}
 </head>
 <body>
+  <a class="site__skip-content" tabindex="1" href="#start-site">Pular para o conteúdo</a>
   <header class='header_site' id="start-page" container>
-    <button class="site__theme-button" type="button" aria-label="Trocar tema">
-      <svg viewBox="0 0 24 24">
-          <path d="M8,9H11V4H13V9H16L20,17H4L8,9M14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18H14Z" />
-      </svg>
-    </button>
     <div class="header_site--wrapper">
       {# <p class="header_site--menu"><span class="menu-anchor">Menu</span></p> #}
       <div class="header_site--title">
         {% block header_site %}
-          <a href="{{ SITEURL }}" class="header_site--title-link">
+          <a href="{{ SITEURL }}" class="header_site--title-link" aria-label="{{ SITENAME}}. {{ SITE_NAME_SUBTITLE}}. Ir para página inicial.">
             <span class="header_site--title-name">{{ SITENAME }}</span> {{ SITE_NAME_SUBTITLE }}
             </a>
         {% endblock header_site %}
@@ -69,8 +65,12 @@
           </li>
         {% endfor %}
       </ul>
-
     </div>
+    <button class="site__theme-button" type="button" aria-label="Trocar tema" tabindex="2">
+      <svg viewBox="0 0 24 24">
+          <path  d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z" />
+      </svg>
+    </button>
   </header>
 
   {#

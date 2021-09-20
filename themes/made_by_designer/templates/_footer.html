@@ -31,12 +31,10 @@
     const html = document.querySelector('html');
     if(isDarkMode){
       window.localStorage.removeItem('isDarkMode');
-      window.location.hash = '#light'
       html.classList.remove('theme--dark');
       html.classList.add('theme--light');
     } else {
       window.localStorage.setItem('isDarkMode', true);
-      window.location.hash = '#dark'
       html.classList.remove('theme--light');
       html.classList.add('theme--dark');
     }
@@ -52,6 +50,7 @@
     updateThemeButton()
   })
 </script>
+
 {% endblock %}
 
 
