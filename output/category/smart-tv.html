@@ -5,19 +5,21 @@
 <meta charset="utf-8"/>
 <title>Um dev qualquer || Paulo Oliveira </title>
 <link href="./favicon.png" rel="icon"/>
+<link href="https://www.google-analytics.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/" rel="preconnect"/>
 <meta content="Blog pessoal onde mostro um pouco do meu aprendizado." name="description"/>
 <meta content="Paulo Oliveira" name="author"/>
 <meta content="noimageindex" name="robots"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="#32373d" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="#f5f5f5" media="(prefers-color-scheme: light)" name="theme-color"/>
-<link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml"/>
-<link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet"/>
-<link href="https://umdevqualquer.com.br/theme/css/index.css" rel="stylesheet" type="text/css"/>
-<script async="" data-ad-client="ca-pub-2474646572295965" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml">
+<link async="" href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet">
+<link async="" href="https://umdevqualquer.com.br/theme/css/index.css" rel="stylesheet" type="text/css"/>
 <script id="js-theme" type="text/javascript">
-      if(window.location.hash === '#dark' || window.localStorage.getItem('isDarkMode')) {
+      const isDarkMode = window.localStorage.getItem('isDarkMode') !== 'false'
+      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isDarkMode
+      if(window.localStorage.getItem('isDarkMode') == 'true' || isSODarkMode) {
         const html = document.querySelector('html');
         if(html.classList.contains('theme--dark')){
           html.classList.remove('theme--dark');
@@ -28,9 +30,9 @@
         }
       }
     </script>
-</head>
+</link></link></head>
 <body>
-<a class="site__skip-content" href="#start-site" tabindex="1">Pular para o conteúdo</a>
+<a class="site__skip-content" href="#start-site" tabindex="0">Pular para o conteúdo</a>
 <header class="header_site" container="" id="start-page">
 <div class="header_site--wrapper">
 <div class="header_site--title">
@@ -41,7 +43,7 @@
 <ul class="header_site-social">
 </ul>
 </div>
-<button aria-label="Trocar tema" class="site__theme-button" tabindex="2" type="button">
+<button aria-label="Trocar tema" class="site__theme-button" type="button">
 <svg viewbox="0 0 24 24">
 <path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></path>
 </svg>
@@ -62,7 +64,7 @@
 </h2>
 </header>
 <div class="home_content--article-body">
-<img alt="Smart Tv from google" class="home_content--article-cover-image image-process-article_thumb" src="https://umdevqualquer.com.br/images/resized/article_thumb/smart-tv-plex.jpg"/>
+<img loading="lazy" alt="Smart Tv from google" class="home_content--article-cover-image image-process-article_thumb" src="https://umdevqualquer.com.br/images/resized/article_thumb/smart-tv-plex.jpg"/>
 <p>Iai meu Polvo 🐙 como cês tão?</p>
 <p>Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.</p>
 </div>
@@ -82,7 +84,7 @@
 </h2>
 </header>
 <div class="home_content--article-body">
-<img alt="Smart Tv from pixabay" class="home_content--article-cover-image image-process-article_thumb" src="https://umdevqualquer.com.br/images/resized/article_thumb/smart-tv-pixabay.jpg"/>
+<img loading="lazy" alt="Smart Tv from pixabay" class="home_content--article-cover-image image-process-article_thumb" src="https://umdevqualquer.com.br/images/resized/article_thumb/smart-tv-pixabay.jpg"/>
 <p>Fala ae, tranquilinho?</p>
 <p>Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido <a class="internal-link" href="./como-e-o-desenvolvimento-para-smart-tvs.html">neste post</a>. Recomendo a leitura, é uma boa introdução.</p>
 </div>
@@ -102,7 +104,7 @@
 </h2>
 </header>
 <div class="home_content--article-body">
-<img alt="Smart Tv icon" class="home_content--article-cover-image image-process-article_thumb" src="https://umdevqualquer.com.br/images/resized/article_thumb/smart-tv.png"/>
+<img loading="lazy" alt="Smart Tv icon" class="home_content--article-cover-image image-process-article_thumb" src="https://umdevqualquer.com.br/images/resized/article_thumb/smart-tv.png"/>
 <p>Fala galera, blz?</p>
 <p>Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.</p>
 </div>
@@ -113,13 +115,13 @@
 </section>
 </div>
 </div>
-<button class="site__back-to-top-button">
+<button aria-labelledby="button-back-to-top" class="site__back-to-top-button">
 <svg viewbox="0 0 24 24">
 <path d="M19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21M12,7L7,12H10V16H14V12H17L12,7Z"></path>
 </svg>
-<span class="site__back-to-top-button--text">Voltar para o topo</span>
+<span class="site__back-to-top-button--text" id="button-back-to-top">Voltar para o topo</span>
 </button>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link async="" href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet"/>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -132,24 +134,25 @@
 </script>
 <script id="js-theme-button">
   function toggleTheme(){
-    const isDarkMode = window.localStorage.getItem('isDarkMode')
     const html = document.querySelector('html');
+    const isDarkMode = html.classList.contains('theme--dark') || window.localStorage.getItem('isDarkMode') === 'true'
     if(isDarkMode){
-      window.localStorage.removeItem('isDarkMode');
+      window.localStorage.setItem('isDarkMode', "false");
       html.classList.remove('theme--dark');
       html.classList.add('theme--light');
     } else {
-      window.localStorage.setItem('isDarkMode', true);
+      window.localStorage.setItem('isDarkMode', "true");
       html.classList.remove('theme--light');
       html.classList.add('theme--dark');
     }
   }
   function updateThemeButton() {
-    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    const isDarkMode = window.localStorage.getItem('isDarkMode') === 'true'
     themeButton.ariaLabel = `Trocar para o tema ${isDarkMode ? 'claro': 'escuro'}`
   }
 
   const themeButton = document.querySelector('.site__theme-button');
+  themeButton.classList.add('site__theme-button--has-js')
   themeButton.addEventListener('click', () => {
     toggleTheme()
     updateThemeButton()

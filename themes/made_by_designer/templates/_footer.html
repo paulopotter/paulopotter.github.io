@@ -1,24 +1,18 @@
 {% block footer %}
- <button class="site__back-to-top-button">
+ <button class="site__back-to-top-button" aria-labelledby="button-back-to-top">
      <svg viewBox="0 0 24 24">
       <path d="M19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21M12,7L7,12H10V16H14V12H17L12,7Z" />
    </svg>
-   <span class="site__back-to-top-button--text">Voltar para o topo</span>
+   <span id="button-back-to-top" class="site__back-to-top-button--text">Voltar para o topo</span>
  </button>
-   {# <footer class='footer_site' container>
-
-        <p>Feito com :fa-heart: e pelican. Initial design Henrique Brito.</p>
-
-    </footer>#}
 {% endblock footer %}
 
 
 {% block css_bottom %}
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" async />
 {% endblock css_bottom %}
 
 {% block js_bottom %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
 
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -33,24 +27,25 @@
 
 <script id="js-theme-button">
   function toggleTheme(){
-    const isDarkMode = window.localStorage.getItem('isDarkMode')
     const html = document.querySelector('html');
+    const isDarkMode = html.classList.contains('theme--dark') || window.localStorage.getItem('isDarkMode') === 'true'
     if(isDarkMode){
-      window.localStorage.removeItem('isDarkMode');
+      window.localStorage.setItem('isDarkMode', "false");
       html.classList.remove('theme--dark');
       html.classList.add('theme--light');
     } else {
-      window.localStorage.setItem('isDarkMode', true);
+      window.localStorage.setItem('isDarkMode', "true");
       html.classList.remove('theme--light');
       html.classList.add('theme--dark');
     }
   }
   function updateThemeButton() {
-    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    const isDarkMode = window.localStorage.getItem('isDarkMode') === 'true'
     themeButton.ariaLabel = `Trocar para o tema ${isDarkMode ? 'claro': 'escuro'}`
   }
 
   const themeButton = document.querySelector('.site__theme-button');
+  themeButton.classList.add('site__theme-button--has-js')
   themeButton.addEventListener('click', () => {
     toggleTheme()
     updateThemeButton()

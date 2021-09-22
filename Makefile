@@ -76,6 +76,7 @@ stopserver:
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	find ./output -name \*.html -exec sed -i '' -e 's/<img/<img loading="lazy"/g' {} \; -print
 
 github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)

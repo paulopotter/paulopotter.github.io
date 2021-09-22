@@ -7,6 +7,8 @@
 
  </title>
 <link href="./favicon.png" rel="icon"/>
+<link href="https://www.google-analytics.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/" rel="preconnect"/>
 <meta content="Blog pessoal onde mostro um pouco do meu aprendizado." name="description"/>
 <meta content="Paulo Oliveira" name="author"/>
 <meta content="noimageindex" name="robots"/>
@@ -21,13 +23,13 @@
 <meta content="@paulofrauches" name="twitter:site"/>
 <meta content="@paulofrauches" name="twitter:creator"/>
 <meta content="Smart Tv from google" name="twitter:image:alt"/>
-<link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml"/>
-<link href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet"/>
+<link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml">
+<link async="" href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet">
 <link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
-<script async="" data-ad-client="ca-pub-2474646572295965" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script id="js-theme" type="text/javascript">
-      if(window.location.hash === '#dark' || window.localStorage.getItem('isDarkMode')) {
+      const isDarkMode = window.localStorage.getItem('isDarkMode') !== 'false'
+      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isDarkMode
+      if(window.localStorage.getItem('isDarkMode') == 'true' || isSODarkMode) {
         const html = document.querySelector('html');
         if(html.classList.contains('theme--dark')){
           html.classList.remove('theme--dark');
@@ -38,9 +40,9 @@
         }
       }
     </script>
-</head>
+</link></link></head>
 <body>
-<a class="site__skip-content" href="#start-site" tabindex="1">Pular para o conteúdo</a>
+<a class="site__skip-content" href="#start-site" tabindex="0">Pular para o conteúdo</a>
 <header class="header_site" container="" id="start-page">
 <div class="header_site--wrapper">
 <div class="header_site--title">
@@ -51,7 +53,7 @@
 <ul class="header_site-social">
 </ul>
 </div>
-<button aria-label="Trocar tema" class="site__theme-button" tabindex="2" type="button">
+<button aria-label="Trocar tema" class="site__theme-button" type="button">
 <svg viewbox="0 0 24 24">
 <path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></path>
 </svg>
@@ -64,7 +66,7 @@
 <h1 class="article_content-title">Criando sua primeira APP para Smart TVs (Parte 2)  </h1><small> Tempo médio de leitura: 11 minutos.</small>
 <div class="article_content-content">
 <figure class="article_cover">
-<img alt="Smart Tv from google" class="article_cover__img image-process-article_cover" sizes="(max-width: 768px) 30%, (max-width: 1280) 50%, (max-width: 1920px) 100%, " src="https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv-plex.jpg" srcset="https://umdevqualquer.com.br/images/resized/article_cover/768w/smart-tv-plex.jpg 768w, https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv-plex.jpg 1280w, https://umdevqualquer.com.br/images/resized/article_cover/1920w/smart-tv-plex.jpg 1920w"/>
+<img loading="lazy" alt="Smart Tv from google" class="article_cover__img image-process-article_cover" sizes="(max-width: 768px) 30%, (max-width: 1280) 50%, (max-width: 1920px) 100%, " src="https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv-plex.jpg" srcset="https://umdevqualquer.com.br/images/resized/article_cover/768w/smart-tv-plex.jpg 768w, https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv-plex.jpg 1280w, https://umdevqualquer.com.br/images/resized/article_cover/1920w/smart-tv-plex.jpg 1920w"/>
 <figcaption class="article_cover__credit">Créditos:
                                     Imagem retirada do <a href="https://www.popsci.com/resizer/lU2v75pLrtqZZV7TOZsVmhM7YbI=/1782x1336/filters:focal(600x450:601x451)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/7SFVUBKE3F5G4N74QM7QJSGU4E.jpg" title="Tv com Plex">Google</a>
 </figcaption>
@@ -72,7 +74,7 @@
 <p>Iai meu Polvo 🐙 como cês tão?</p>
 <p>Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.</p>
 <h2>Bug hunter:</h2>
-<p><img alt="Bug free" src="./images/criando-sua-primeira-app-para-smart-tvs-parte-2/131-bug-free.png"/>
+<p><img loading="lazy" alt="Bug free" src="./images/criando-sua-primeira-app-para-smart-tvs-parte-2/131-bug-free.png"/>
 <center><small>Fonte: <a class="external-link" href="https://www.monkeyuser.com/">MonkeyUser</a></small></center></p>
 <p>Enquanto eu navegava pela app, notei uma falha na parte da navegação, nós estamos <strong>exibindo apenas</strong> items relacionados a "TV" mas não estamos filtrando-os. Então ao chegar no final da lista, a navegação "continua" mesmo sem ter item para navegar. E para corrigir vamos modificar o código com:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -147,7 +149,7 @@
 </code></pre></div>
 </td></tr></table>
 <h2>Hora dos testes:</h2>
-<p><img alt="fixing unit test" src="./images/criando-sua-primeira-app-para-smart-tvs-parte-2/86-fixing-unit-tests.png"/>
+<p><img loading="lazy" alt="fixing unit test" src="./images/criando-sua-primeira-app-para-smart-tvs-parte-2/86-fixing-unit-tests.png"/>
 <center><small>Fonte: <a class="external-link" href="https://www.monkeyuser.com/">MonkeyUser</a></small></center></p>
 <p>Como eu apenas adicionei a suite de test, e não realizei nenhum teste, está na hora de aumentar o nosso coverage! 😄
 Para simplificar o post, eu vou deixar o <a class="external-link" href="https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/App.test.js">link do arquivo completo do teste</a> para vocês verem. Mas vou destacar o seguintes pontos:</p>
@@ -393,7 +395,7 @@ Para simplificar o post, eu vou deixar o <a class="external-link" href="https://
 </td></tr></table>
 <h2>É isso aí!</h2>
 <p><center>
-<img alt="Minha app" src="./images/como-e-o-desenvolvimento-para-smart-tvs-parte-2/minha-primeira-smart-tv-app-pt2.gif"/>
+<img loading="lazy" alt="Minha app" src="./images/como-e-o-desenvolvimento-para-smart-tvs-parte-2/minha-primeira-smart-tv-app-pt2.gif"/>
 <br/><small>Nossa app funcionando</small>
 </center></p>
 <p>Ainda temos muita coisa para fazer porém, já temos o suficiente para testar na TV. No nosso próximo post, desta série, eu ire mostrar como testar essa app numa Smart TV da LG.</p>
@@ -451,13 +453,13 @@ Para simplificar o post, eu vou deixar o <a class="external-link" href="https://
 </section>
 </div>
 </div>
-<button class="site__back-to-top-button">
+<button aria-labelledby="button-back-to-top" class="site__back-to-top-button">
 <svg viewbox="0 0 24 24">
 <path d="M19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21M12,7L7,12H10V16H14V12H17L12,7Z"></path>
 </svg>
-<span class="site__back-to-top-button--text">Voltar para o topo</span>
+<span class="site__back-to-top-button--text" id="button-back-to-top">Voltar para o topo</span>
 </button>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link async="" href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet"/>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -470,24 +472,25 @@ Para simplificar o post, eu vou deixar o <a class="external-link" href="https://
 </script>
 <script id="js-theme-button">
   function toggleTheme(){
-    const isDarkMode = window.localStorage.getItem('isDarkMode')
     const html = document.querySelector('html');
+    const isDarkMode = html.classList.contains('theme--dark') || window.localStorage.getItem('isDarkMode') === 'true'
     if(isDarkMode){
-      window.localStorage.removeItem('isDarkMode');
+      window.localStorage.setItem('isDarkMode', "false");
       html.classList.remove('theme--dark');
       html.classList.add('theme--light');
     } else {
-      window.localStorage.setItem('isDarkMode', true);
+      window.localStorage.setItem('isDarkMode', "true");
       html.classList.remove('theme--light');
       html.classList.add('theme--dark');
     }
   }
   function updateThemeButton() {
-    const isDarkMode = window.localStorage.getItem('isDarkMode')
+    const isDarkMode = window.localStorage.getItem('isDarkMode') === 'true'
     themeButton.ariaLabel = `Trocar para o tema ${isDarkMode ? 'claro': 'escuro'}`
   }
 
   const themeButton = document.querySelector('.site__theme-button');
+  themeButton.classList.add('site__theme-button--has-js')
   themeButton.addEventListener('click', () => {
     toggleTheme()
     updateThemeButton()

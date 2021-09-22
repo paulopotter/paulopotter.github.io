@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <title>{% block title %}{{ SITE_BAR_TITLE }}{% endblock %} </title>
   <link rel="icon" href="./favicon.png" />
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
 
   {% block meta %}
     <meta name="description" content="{{ SITEDESCRIPTION }}">
@@ -19,18 +21,18 @@
   {% endif %}
 
   {% block css_vendor_top%}
-    <link href="./{{ THEME_STATIC_DIR }}/vendor/concisecss/dist/concise.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700" rel="stylesheet" />
+    <link href="./{{ THEME_STATIC_DIR }}/vendor/concisecss/dist/concise.min.css" rel="stylesheet" async />
   {% endblock %}
 
   {% block css_top %}
   {% endblock css_top %}
 
   {% block js_top %}
-    <script data-ad-client="ca-pub-2474646572295965" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <script type="text/javascript" id="js-theme">
-      if(window.location.hash === '#dark' || window.localStorage.getItem('isDarkMode')) {
+      const isDarkMode = window.localStorage.getItem('isDarkMode') !== 'false'
+      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isDarkMode
+      if(window.localStorage.getItem('isDarkMode') == 'true' || isSODarkMode) {
         const html = document.querySelector('html');
         if(html.classList.contains('theme--dark')){
           html.classList.remove('theme--dark');
@@ -44,7 +46,7 @@
   {% endblock %}
 </head>
 <body>
-  <a class="site__skip-content" tabindex="1" href="#start-site">Pular para o conteúdo</a>
+  <a class="site__skip-content" tabindex="0" href="#start-site">Pular para o conteúdo</a>
   <header class='header_site' id="start-page" container>
     <div class="header_site--wrapper">
       <div class="header_site--title">
@@ -65,7 +67,7 @@
         {% endfor %}
       </ul>
     </div>
-    <button class="site__theme-button" type="button" aria-label="Trocar tema" tabindex="2">
+    <button class="site__theme-button" type="button" aria-label="Trocar tema">
       <svg viewBox="0 0 24 24">
           <path  d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z" />
       </svg>

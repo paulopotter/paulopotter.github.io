@@ -66,7 +66,9 @@ PLUGINS = [
     'minchin.pelican.plugins.optimize_images',
     # https://github.com/MinchinWeb/minchin.pelican.plugins.optimize_images
     'image_process',  # https://github.com/pelican-plugins/image-process
+    # 'gzip_cache',
 ]
+
 
 # Image Process
 IMAGE_PROCESS_DIR = "resized"
