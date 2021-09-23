@@ -67,7 +67,14 @@ PLUGINS = [
     # https://github.com/MinchinWeb/minchin.pelican.plugins.optimize_images
     'image_process',  # https://github.com/pelican-plugins/image-process
     # 'gzip_cache',
+    'replacer',
 ]
+
+# Replacer
+REPLACES = (
+    (u'<img',
+     u'<img loading="lazy"'),
+)
 
 
 # Image Process
