@@ -31,8 +31,8 @@
 
     <script type="text/javascript" id="js-theme">
       const isDarkMode = window.localStorage.getItem('isDarkMode') !== 'false'
-      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isDarkMode
-      if(window.localStorage.getItem('isDarkMode') == 'true' || isSODarkMode) {
+      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      if(window.localStorage.getItem('isDarkMode') === 'true'|| (window.localStorage.getItem('isDarkMode') === null && isSODarkMode)) {
         const html = document.querySelector('html');
         if(html.classList.contains('theme--dark')){
           html.classList.remove('theme--dark');
