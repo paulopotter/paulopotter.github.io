@@ -16,6 +16,8 @@ LOCALE = ('bra', 'pt_BR', 'pt_BR.UTF-8')
 DEFAULT_LANG = u'pt-BR'
 TIMEZONE = u'America/Sao_Paulo'
 DEFAULT_DATE_FORMAT = ('%d %b %Y')
+GZIP_CACHE = True
+GA_CODE = u'G-JWYBRTREFC'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = 'feeds/all.atom.xml'

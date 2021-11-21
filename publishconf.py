@@ -19,7 +19,7 @@ RELATIVE_URLS = False
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 FEED_DOMAIN = SITEURL
-
+GA_CODE = u'UA-77202031-1'
 
 DELETE_OUTPUT_DIRECTORY = True
 
