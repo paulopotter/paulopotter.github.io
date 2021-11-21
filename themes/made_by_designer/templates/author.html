@@ -11,7 +11,7 @@ content %}
   <div class="author_content-body">
     <header>
       <img
-        src="#"
+        src="https://www.gravatar.com/avatar/{{ HASH_GRAVATAR }}?s=200"
         alt="Foto do meu rosto."
         width="150"
         height="150"
@@ -117,10 +117,6 @@ content %}
 {% endblock %} {% block js_bottom %} {{ super() }}
 
 <script>
-  function changeImg(profile) {
-    document.getElementById("authorImage").src = profile.entry[0].thumbnailUrl;
-  }
-
   function calculateAge(birthday) {
     // birthday is a date
     var ageDifMs = Date.now() - birthday;
@@ -130,8 +126,4 @@ content %}
   var workLife = document.querySelector(".js-work-life");
   workLife.innerText = calculateAge(new Date("2013-10-01"));
 </script>
-<script
-  src="http://pt.gravatar.com/{{ HASH_GRAVATAR }}.json?callback=changeImg"
-  type="text/javascript"
-></script>
 {% endblock %}

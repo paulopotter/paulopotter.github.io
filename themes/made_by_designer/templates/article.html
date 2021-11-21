@@ -8,14 +8,14 @@
 
 {% block meta %}
   {{ super() }}
-  <meta property="og:title" content="{{ article.title}}">
-  <meta property="og:description" content="{{ article.summary|striptags}}">
-  <meta property="og:image" content="{{article.cover_image_url}}">
+  <meta property="og:title" content="{{ article.title|default(SITE_BAR_TITLE)}}">
+  <meta property="og:description" content="{{ article.summary|striptags|default(SITEDESCRIPTION)}}">
+  <meta property="og:image" content='{{"https://www.gravatar.com/avatar/"+ HASH_GRAVATAR +"?s=720" if article.cover_image_url|int > 0 else article.cover_image_url}}'>
   <meta property="og:url" content="{{ SITEURL}}/{{ article.slug }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@paulofrauches">
   <meta name="twitter:creator" content="@paulofrauches">
-  <meta name="twitter:image:alt" content="{{article.cover_image_alt}}">
+  <meta name="twitter:image:alt" content="{{article.cover_image_alt|default(SITE_BAR_TITLE)}}">
 {% endblock meta %}
 
 {% block css_top %}

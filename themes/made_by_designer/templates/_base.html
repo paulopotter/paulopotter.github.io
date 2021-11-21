@@ -14,6 +14,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#32373d">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f5f5">
+
+    {% if not article %}
+      <meta property="og:title" content="{{ SITE_BAR_TITLE }}">
+      <meta property="og:description" content="{{ SITEDESCRIPTION }}">
+      <meta property="og:image" content="https://www.gravatar.com/avatar/{{ HASH_GRAVATAR }}?s=720">
+      <meta property="og:url" content="{{ SITEURL}}/">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@paulofrauches">
+      <meta name="twitter:creator" content="@paulofrauches">
+      <meta name="twitter:image:alt" content="https://www.gravatar.com/avatar/{{ HASH_GRAVATAR }}?s=720">
+    {% endif %}
   {% endblock %}
 
   {% if FEED_ALL_ATOM %}
