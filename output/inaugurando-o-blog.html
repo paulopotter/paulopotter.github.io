@@ -17,19 +17,19 @@
 <meta content="#f5f5f5" media="(prefers-color-scheme: light)" name="theme-color"/>
 <meta content="Inaugurando o blog" property="og:title"/>
 <meta content="Fala pessoal, como vocês estão?! Esse é primeiro post de vários (assim espero) desse querido e lindo blog! 😆 Nesse blog eu espero passar um pouco do meu conhecimento, dores e aprendizados nesse lindo e maravilhoso mundo da programação! Nele eu irei abordar problemas enfrentados, plugins interessantes, dicas de desenvolvimento / stack e postarei também alguns snippets." property="og:description"/>
-<meta content="2" property="og:image"/>
+<meta content="https://www.gravatar.com/avatar/cd58d60fac779175c0ab6ac1b912d4b5?s=720" property="og:image"/>
 <meta content="https://umdevqualquer.com.br/inaugurando-o-blog" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@paulofrauches" name="twitter:site"/>
 <meta content="@paulofrauches" name="twitter:creator"/>
-<meta content="" name="twitter:image:alt"/>
+<meta content="Um dev qualquer || Paulo Oliveira" name="twitter:image:alt"/>
 <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml">
 <link async="" href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet">
 <link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
 <script id="js-theme" type="text/javascript">
       const isDarkMode = window.localStorage.getItem('isDarkMode') !== 'false'
-      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isDarkMode
-      if(window.localStorage.getItem('isDarkMode') == 'true' || isSODarkMode) {
+      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      if(window.localStorage.getItem('isDarkMode') === 'true'|| (window.localStorage.getItem('isDarkMode') === null && isSODarkMode)) {
         const html = document.querySelector('html');
         if(html.classList.contains('theme--dark')){
           html.classList.remove('theme--dark');
@@ -82,6 +82,12 @@ Primeiro, não consegui com o meu nome 😢.</p>
 <p>Terceiro, queria algo diferente! 😆</p>
 <h3>That`s all folks</h3>
 <p>Obrigado se você chegou até aqui! E até o próximo post!</p>
+</div>
+<div class="article_content-related_post">
+<h4 class="article_content-related_post--title">Veja também:</h4>
+<ul>
+<li><a href="https://umdevqualquer.com.br/braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo.html">BrazilJS Conf - Minha história com a maior conferência JS do mundo!</a></li>
+</ul>
 </div>
 </article>
 </section>

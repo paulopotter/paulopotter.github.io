@@ -28,8 +28,8 @@
 <link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
 <script id="js-theme" type="text/javascript">
       const isDarkMode = window.localStorage.getItem('isDarkMode') !== 'false'
-      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isDarkMode
-      if(window.localStorage.getItem('isDarkMode') == 'true' || isSODarkMode) {
+      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      if(window.localStorage.getItem('isDarkMode') === 'true'|| (window.localStorage.getItem('isDarkMode') === null && isSODarkMode)) {
         const html = document.querySelector('html');
         if(html.classList.contains('theme--dark')){
           html.classList.remove('theme--dark');

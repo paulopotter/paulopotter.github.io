@@ -28,8 +28,8 @@
 <link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
 <script id="js-theme" type="text/javascript">
       const isDarkMode = window.localStorage.getItem('isDarkMode') !== 'false'
-      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isDarkMode
-      if(window.localStorage.getItem('isDarkMode') == 'true' || isSODarkMode) {
+      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      if(window.localStorage.getItem('isDarkMode') === 'true'|| (window.localStorage.getItem('isDarkMode') === null && isSODarkMode)) {
         const html = document.querySelector('html');
         if(html.classList.contains('theme--dark')){
           html.classList.remove('theme--dark');
@@ -128,6 +128,7 @@
 <div class="article_content-related_post">
 <h4 class="article_content-related_post--title">Veja também:</h4>
 <ul>
+<li><a href="https://umdevqualquer.com.br/braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo.html">BrazilJS Conf - Minha história com a maior conferência JS do mundo!</a></li>
 <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">Criando sua primeira APP para Smart TVs (Parte 2)</a></li>
 <li><a href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">Criando sua primeira APP para Smart TVs</a></li>
 <li><a href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">Como é o desenvolvimento para Smart TVs</a></li>

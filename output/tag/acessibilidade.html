@@ -13,13 +13,21 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="#32373d" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="#f5f5f5" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="Um dev qualquer || Paulo Oliveira" property="og:title"/>
+<meta content="Blog pessoal onde mostro um pouco do meu aprendizado." property="og:description"/>
+<meta content="https://www.gravatar.com/avatar/cd58d60fac779175c0ab6ac1b912d4b5?s=720" property="og:image"/>
+<meta content="https://umdevqualquer.com.br/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@paulofrauches" name="twitter:site"/>
+<meta content="@paulofrauches" name="twitter:creator"/>
+<meta content="https://www.gravatar.com/avatar/cd58d60fac779175c0ab6ac1b912d4b5?s=720" name="twitter:image:alt"/>
 <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml">
 <link async="" href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet">
 <link async="" href="https://umdevqualquer.com.br/theme/css/index.css" rel="stylesheet" type="text/css"/>
 <script id="js-theme" type="text/javascript">
       const isDarkMode = window.localStorage.getItem('isDarkMode') !== 'false'
-      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !isDarkMode
-      if(window.localStorage.getItem('isDarkMode') == 'true' || isSODarkMode) {
+      const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      if(window.localStorage.getItem('isDarkMode') === 'true'|| (window.localStorage.getItem('isDarkMode') === null && isSODarkMode)) {
         const html = document.querySelector('html');
         if(html.classList.contains('theme--dark')){
           html.classList.remove('theme--dark');
