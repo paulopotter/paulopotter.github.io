@@ -5,7 +5,6 @@
 		}
 	],
 	"settings": {
-		"cSpell.enabled": true,
-		"cSpell.language": "en,pt-BR,en-US"
+		"cSpell.language": "en,pt-BR,en-US,pt"
 	}
 }
