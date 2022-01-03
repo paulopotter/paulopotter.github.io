@@ -1,0 +1,224 @@
+@import "./_settings.scss";
+@import "../vendor/concisecss/concise.scss";
+
+body {
+  @include themed() {
+    background-color: getColorByTheme("background");
+    color: getColorByTheme("text");
+  }
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+*:focus {
+  @include themed() {
+    outline: 3px solid getColorByTheme("link");
+  }
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  @include themed() {
+    color: getColorByTheme("link");
+  }
+
+  .home_content--article-header & {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @include themed() {
+    color: getColorByTheme("heading");
+  }
+}
+
+h2 a:hover {
+  opacity: 0.5;
+  @include themed() {
+    color: getColorByTheme("link");
+  }
+}
+
+pre {
+  overflow: auto;
+}
+
+.header_site {
+  overflow: visible;
+  &--title {
+    font-size: 1.25em;
+
+    &-link {
+      font-family: $font-primary;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 400;
+      text-decoration: none !important;
+
+      @at-root a#{&} {
+        @include themed() {
+          color: getColorByTheme("text");
+        }
+      }
+    }
+
+    &-name {
+      font-weight: 700;
+      @include themed() {
+        color: getColorByTheme("heading");
+      }
+    }
+  }
+}
+
+code {
+  @include themed() {
+    color: getColorByTheme("code");
+    background: getColorByTheme("codeBg") !important;
+    // background: getColorByTheme("codeBg");
+    padding: 0 0.5em;
+  }
+}
+.highlighttable code {
+  background-color: transparent !important;
+}
+
+@media (max-width: 768px) {
+  .header_site {
+    font-size: 0.8rem;
+  }
+}
+
+.site {
+  &__theme-button {
+    padding: 0.5em;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    top: 0;
+    right: 3%;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+    &--has-js {
+      transform: translateY(0);
+    }
+
+    @media (min-width: 1300px) {
+      left: 83%;
+      right: inherit;
+    }
+
+    @include themed() {
+      background-color: getColorByTheme("changeThemeButtonBg");
+    }
+
+    &:focus {
+      @include themed() {
+        outline: 3px solid getColorByTheme("changeThemeButton");
+      }
+    }
+    &:active,
+    &:hover {
+      @include themed() {
+        background-color: getColorByTheme("changeThemeButtonBg");
+      }
+    }
+
+    svg {
+      @include themed() {
+        transform: rotate(180deg);
+        fill: getColorByTheme("changeThemeButton");
+      }
+    }
+  }
+
+  &__back-to-top-button {
+    padding: 0.5em;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: -5em;
+    right: 3%;
+    transition: bottom 0.5s ease-out;
+
+    @media (min-width: 1400px) {
+      left: 87%;
+      right: inherit;
+    }
+
+    @include themed() {
+      background-color: getColorByTheme("card");
+      color: getColorByTheme("link");
+    }
+
+    &:hover &--text {
+      display: block;
+    }
+    &--text {
+      float: left;
+      display: none;
+      padding: 0 0.5em;
+    }
+
+    &--show {
+      bottom: 0;
+    }
+
+    &:focus {
+      @include themed() {
+        outline: 3px solid getColorByTheme("link");
+      }
+    }
+    &:active,
+    &:hover {
+      @include themed() {
+        background-color: getColorByTheme("card");
+      }
+    }
+
+    svg {
+      height: 3em;
+      width: 3em;
+      @include themed() {
+        fill: getColorByTheme("link");
+      }
+    }
+  }
+
+  &__skip-content {
+    font-size: 1em;
+    height: 3em;
+    padding: 0.5em 1em;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+    @include themed() {
+      background-color: getColorByTheme("changeThemeButtonBg");
+      color: getColorByTheme("changeThemeButton");
+    }
+    &:visited {
+      @include themed() {
+        color: getColorByTheme("changeThemeButton");
+      }
+    }
+
+    &:focus {
+      transform: translateY(0%);
+      @include themed() {
+        outline: 3px solid getColorByTheme("changeThemeButton");
+      }
+    }
+  }
+}

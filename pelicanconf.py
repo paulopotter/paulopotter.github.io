@@ -44,7 +44,8 @@ EXTRA_PATH_METADATA = {
 
 # Uncomment following line if you want document-relative URLs when developing
 SLUGIFY_SOURCE = 'title'
-THEME = u'./themes/made_by_designer'
+THEME = u'./themes/2022_by_me'
+# THEME = u'./themes/made_by_designer'
 DEFAULT_CATEGORY = 'Sem categoria'
 THEME_STATIC_URL = u'/theme'
 STATIC_IMAGES = u'./images'
