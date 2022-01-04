@@ -46,9 +46,9 @@
 <header class="header_site" container="" id="start-page">
 <div class="header_site--wrapper">
 <div class="header_site--title">
-<a aria-label="Paulo Oliveira. Full stack web Developer. Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
-<span class="header_site--title-name">Paulo Oliveira</span> Full stack web Developer
-            </a>
+<a aria-label="Um dev qualquer. . Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
+<span class="header_site--title-name">Um dev qualquer</span>
+</a>
 </div>
 <ul class="header_site-social">
 </ul>
@@ -63,7 +63,7 @@
 <div class="wrapper_site--content column_wrapper" id="start-site">
 <section class="article_content" container="">
 <article class="article_content-body">
-<h1 class="article_content-title">Ellipsis em mais de uma linha apenas com css  </h1><small> Tempo médio de leitura: 1 minuto.</small>
+<h1 class="article_content-title">Ellipsis em mais de uma linha apenas com css  </h1><small> Tempo médio de leitura: 2 minutos.</small>
 <div class="article_content-content">
 <figure class="article_cover">
 <img loading="lazy" alt="Reticências" class="article_cover__img image-process-article_cover" sizes="(max-width: 768px) 30%, (max-width: 1280) 50%, (max-width: 1920px) 100%, " src="https://umdevqualquer.com.br/images/resized/article_cover/1280w/reticências.jpg" srcset="https://umdevqualquer.com.br/images/resized/article_cover/768w/reticências.jpg 768w, https://umdevqualquer.com.br/images/resized/article_cover/1280w/reticências.jpg 1280w, https://umdevqualquer.com.br/images/resized/article_cover/1920w/reticências.jpg 1920w"/>
@@ -88,20 +88,20 @@ Com ele, você conseguirá fazer ellipsis em mais de uma linha, facilitando muit
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> multiline-ellipsis</span><span class="p">(</span><span class="nv">$font-size</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="o">,</span> <span class="nv">$line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="o">,</span> <span class="nv">$lines-to-show</span><span class="o">:</span> <span class="mi">10</span><span class="o">,</span> <span class="nv">$background</span><span class="o">:</span> <span class="no">transparent</span><span class="p">)</span> <span class="err">{</span>
-  <span class="na">background</span><span class="o">:</span> <span class="nv">$background</span><span class="err">;</span>
-  <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="err">;</span>
-  <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="err">;</span>
-  <span class="na">max-height</span><span class="o">:</span> <span class="nv">$font-size</span><span class="o">*</span><span class="nv">$line-height</span><span class="o">*</span><span class="nv">$lines-to-show</span><span class="err">;</span>
-  <span class="na">font-size</span><span class="o">:</span> <span class="nv">$font-size</span><span class="err">;</span>
-  <span class="na">line-height</span><span class="o">:</span> <span class="nv">$line-height</span><span class="err">;</span>
-  <span class="na">-webkit-line-clamp</span><span class="o">:</span> <span class="nv">$lines-to-show</span><span class="err">;</span>
-  <span class="na">-webkit-box-orient</span><span class="o">:</span> <span class="n">vertical</span><span class="err">;</span>
-  <span class="na">overflow</span><span class="o">:</span> <span class="no">hidden</span><span class="err">;</span>
-  <span class="na">text-overflow</span><span class="o">:</span> <span class="n">ellipsis</span><span class="err">;</span>
-  <span class="na">-o-text-overflow</span><span class="o">:</span> <span class="n">ellipsis</span><span class="err">;</span>
-  <span class="na">text-overflow</span><span class="o">:</span> <span class="o">-</span><span class="n">o-ellipsis-lastline</span><span class="err">;</span>
-<span class="err">}</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="w"> </span><span class="nf">multiline-ellipsis</span><span class="p">(</span><span class="nv">$font-size</span><span class="o">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="o">,</span><span class="w"> </span><span class="nv">$line-height</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="mf">.5</span><span class="o">,</span><span class="w"> </span><span class="nv">$lines-to-show</span><span class="o">:</span><span class="w"> </span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="nv">$background</span><span class="o">:</span><span class="w"> </span><span class="no">transparent</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">  </span><span class="na">background</span><span class="o">:</span><span class="w"> </span><span class="nv">$background</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">display</span><span class="o">:</span><span class="w"> </span><span class="no">block</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">display</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="n">webkit-box</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">max-height</span><span class="o">:</span><span class="w"> </span><span class="nv">$font-size</span><span class="o">*</span><span class="nv">$line-height</span><span class="o">*</span><span class="nv">$lines-to-show</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">font-size</span><span class="o">:</span><span class="w"> </span><span class="nv">$font-size</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">line-height</span><span class="o">:</span><span class="w"> </span><span class="nv">$line-height</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">-webkit-line-clamp</span><span class="o">:</span><span class="w"> </span><span class="nv">$lines-to-show</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">-webkit-box-orient</span><span class="o">:</span><span class="w"> </span><span class="n">vertical</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">overflow</span><span class="o">:</span><span class="w"> </span><span class="no">hidden</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">text-overflow</span><span class="o">:</span><span class="w"> </span><span class="n">ellipsis</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">-o-text-overflow</span><span class="o">:</span><span class="w"> </span><span class="n">ellipsis</span><span class="err">;</span><span class="w"></span>
+<span class="w">  </span><span class="na">text-overflow</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="n">o-ellipsis-lastline</span><span class="err">;</span><span class="w"></span>
+<span class="err">}</span><span class="w"></span>
 </code></pre></div>
 </td></tr></table>
 <p>Exemplo:</p>

@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Paulo Oliveira'
 SITE_BAR_TITLE = u'[LOCAL] Um dev qualquer'
-SITENAME = u'Paulo Oliveira'
-SITE_NAME_SUBTITLE = u'Full stack web Developer'
+SITENAME = u'Um dev qualquer'
+SITE_NAME_SUBTITLE = u''
 SITEDESCRIPTION = u'Blog pessoal onde mostro um pouco do meu aprendizado.'
 SITEURL = 'http://local.umdevqualquer.com.br:8000'
 AUTHOR_SAVE_AS = 'author.html'
