@@ -2,6 +2,7 @@
 @import "../vendor/concisecss/concise.scss";
 
 body {
+  text-rendering: auto;
   @include themed() {
     background-color: getColorByTheme("background");
     color: getColorByTheme("text");
@@ -109,14 +110,22 @@ code {
     right: 3%;
     transform: translateY(-100%);
     transition: transform 0.3s;
+    z-index: 1;
 
-    &--has-js {
-      transform: translateY(0);
+    &#{&}--has-js {
+        transform: translate(0, 0);
+
     }
 
     @media (min-width: 1300px) {
       left: 83%;
       right: inherit;
+    }
+    @media (max-width: 1299px) {
+      left: inherit;
+      top: 3%;
+      right: 0;
+      transform: translateX(100%);
     }
 
     @include themed() {

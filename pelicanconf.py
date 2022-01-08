@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Paulo Oliveira'
 SITE_BAR_TITLE = u'[LOCAL] Um dev qualquer'
 SITENAME = u'Um dev qualquer'
-SITE_NAME_SUBTITLE = u''
+SITE_NAME_SUBTITLE = u'Paulo Oliveira'
 SITEDESCRIPTION = u'Blog pessoal onde mostro um pouco do meu aprendizado.'
 SITEURL = 'http://local.umdevqualquer.com.br:8000'
 AUTHOR_SAVE_AS = 'author.html'
@@ -66,8 +66,6 @@ PLUGINS = [
     'pelican_just_table',
     'linkclass',
     'neighbors',
-    'minchin.pelican.plugins.optimize_images',
-    # https://github.com/MinchinWeb/minchin.pelican.plugins.optimize_images
     'image_process',  # https://github.com/pelican-plugins/image-process
     # 'gzip_cache',
     'replacer',
