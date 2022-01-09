@@ -26,6 +26,7 @@ DELETE_OUTPUT_DIRECTORY = True
 PLUGINS.append(
     # https://github.com/MinchinWeb/minchin.pelican.plugins.optimize_images
     'minchin.pelican.plugins.optimize_images',
+    'gzip_cache',
 )
 
 # Following items are often useful when publishing

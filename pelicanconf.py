@@ -30,6 +30,12 @@ SUMMARY_USE_FIRST_PARAGRAPH = True
 
 # Blogroll
 LINKS = ()
+MENU_LINKS = ({
+    'Home': './',
+    'Labs': './labs',
+    'Sobre Mim': './author',
+    'Talks / Palestras': './talks'
+})
 
 # Social widget
 SOCIAL = ()
@@ -67,7 +73,6 @@ PLUGINS = [
     'linkclass',
     'neighbors',
     'image_process',  # https://github.com/pelican-plugins/image-process
-    # 'gzip_cache',
     'replacer',
 ]
 
