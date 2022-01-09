@@ -7,14 +7,18 @@
 {% block content %}
     <section class="home_content">
       {% for article in articles_page.object_list %}
-        <article class="home_content__article {{'home_content__article--first' if loop.index == 1 }}">
+        <article class="home_content__article {{'home_content__article--first' if loop.first }}">
           <div class="home_content__article-content">
             <header>
               <a href="{{ SITEURL }}/{{ article.url }}" class='home_content__article-title-link'>
-              {{ article.title|truncate(70, true, '...', 0) }}
+              {% if loop.first %}
+                {{ article.title }}
+              {% else %}
+                {{ article.title|truncate(70, true, '...', 0) }}
+              {% endif %}
               </a>
             </header>
-            {% if loop.index == 1 %}
+            {% if loop.first %}
               <div class='home_content__article-body-summary'>
                 {{ article.summary }}
               </div>
@@ -43,38 +47,5 @@
           {% endif %}
         </article>
       {% endfor %}
-
-      {#% for article in articles_page.object_list %}
-        <article class='home_content__article'>
-
-          <section class='home_content__article-body'>
-            <p class="home_content__article-body-category">
-              <a href="{{ SITEURL }}/{{ article.category.url }}" class='home_content__article-header-category-link logo-{{article.category|lower}}'>
-                <span class="home_content__article-header-category-tooltip">{{ article.category|upper }}</span>
-              </a>
-            </p>
-            <p class="home_content__article-date">
-              {{ article.locale_date }}
-            </p>
-
-            <h2 class='home_content__article-body-title'>
-              <a href="{{ SITEURL }}/{{ article.url }}" class='home_content__article-header-title-link'>{{ article.title|truncate(70, true, '...', 0) }}</a>
-            </h2>
-
-          <div class='home_content__article-body-summary'>
-            {{ article.summary }}
-          </div>
-
-          </section>
-          <div class="home_content__article-header">
-            {% if article.cover_image_url != '2' %}
-              <img class='home_content__article-cover-image image-process-article_thumb'
-              src='{{ article.cover_image_url }}'
-              alt="{{ article.cover_image_alt or ''}}"
-              />
-            {% endif %}
-          </div>
-        </article>
-      {% endfor % #}
     </section>
 {% endblock %}
