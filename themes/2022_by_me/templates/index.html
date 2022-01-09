@@ -20,7 +20,14 @@
               </div>
             {% endif %}
             <footer class="home_content__article-category">
-              <a href="{{ SITEURL }}/{{ article.category.url }}" class='home_content__article-header-category-link logo-{{article.category|lower}}'>{{ article.category|upper }}</a> - {{ article.locale_date }}
+            {{ article.locale_date }} -
+              <a href="{{ SITEURL }}/{{ article.category.url }}" class='home_content__article-header-category-link logo-{{article.category|lower}}'>{{ article.category|upper }}</a>
+            {% for tag in article.tags %}
+              {% if tag|lower != article.category|lower and article.category|lower != 'sem categoria' %}
+               -
+              <a href="{{ SITEURL }}/{{ tag.url }}" class='home_content__article-header-category-link logo-{{tag|lower}}'>{{ tag|upper }}</a>
+              {%endif%}
+            {% endfor %}
             </footer>
           </div>
 
