@@ -34,7 +34,7 @@
     {% endif %}
 
     {% block css_vendor_top%}
-    <link href="./{{ THEME_STATIC_DIR }}/vendor/concisecss/dist/concise.min.css" rel="stylesheet" async />
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/vendor/concisecss/dist/concise.min.css" rel="stylesheet" async />
     {% endblock %}
 
     {% block css_top %}
@@ -60,11 +60,11 @@
     <script type="text/javascript" id="js-menu">
       function toggleMenu() {
         const menu = document.querySelector('.menu');
-        const menuWrapper = document.querySelector('.menu__wrapper');
         const menuList = document.querySelector('.menu__list');
+        const menuOverlay = document.querySelector('.menu__overlay');
 
         const menuOpenedClass = 'menu--opened';
-        const menuWrapperOpenedClass = 'menu__wrapper--opened';
+        const menuOverlayActiveClass = 'menu__overlay--active';
         const menuListActiveClass = 'menu__list--active'
 
         if (menuList.classList.contains(menuListActiveClass)) {
@@ -73,57 +73,28 @@
           menuList.classList.add(menuListActiveClass)
         }
 
-        if (menuWrapper.classList.contains(menuWrapperOpenedClass)) {
-          menuWrapper.classList.remove(menuWrapperOpenedClass)
-        } else {
-          menuWrapper.classList.add(menuWrapperOpenedClass)
-        }
-
         if (menu.classList.contains(menuOpenedClass)) {
           menu.classList.remove(menuOpenedClass)
+          menuOverlay.classList.remove(menuOverlayActiveClass)
         } else {
           menu.classList.add(menuOpenedClass)
+          menuOverlay.classList.add(menuOverlayActiveClass)
         }
-      }
-    </script>
 
-    <script type="text/javascript" id="js-a11y-focus">
-      // document.addEventListener('fo')
+      }
+      document.addEventListener('click', event => {
+        if(event.target.classList.contains('menu__overlay')){
+          toggleMenu()
+        }
+      })
     </script>
     {% endblock %}
   </head>
 
   <body>
-    <a class="site__skip-content" tabindex="0" href="#start-site">Pular para o conteúdo</a>
-    <header class='header_site' id="start-page" container>
-      <div class="header_site--wrapper">
-        <div class="header_site--title">
-          {% block header_site %}
-          <a href="{{ SITEURL }}" class="header_site--title-link"
-            aria-label="{{ SITENAME}}. {{ SITE_NAME_SUBTITLE}}. Ir para página inicial.">
-            <span class="header_site--title-name">{{ SITENAME }}</span> {{ SITE_NAME_SUBTITLE }}
-          </a>
-          {% endblock header_site %}
-        </div>
-
-        <ul class="header_site-social">
-          {% for name, link in SOCIAL %}
-          <li class="header_site-social--item">
-            <a class="header_site-social--item-link logo-{{ name }}" href="{{ link }}" target="_blank">
-              <i class="header_site-social--item-text">{{ name }}</i>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </header>
-    <aside class="menu__wrapper">
-      <button class="site__theme-button" type="button" aria-label="Trocar tema">
-        <svg viewBox="0 0 24 24">
-          <path
-            d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z" />
-        </svg>
-      </button>
+  <a class="site__skip-content" tabindex="0" href="#start-site">Pular para o conteúdo</a>
+  <header class='header_site' id="start-page">
+  <div class="header_site--wrapper">
       <menu class="menu">
         <button class="menu--icon" aria-label="Menu" onclick="toggleMenu()">
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" class="menu--icon-svg"
@@ -137,15 +108,32 @@
             <li class="menu__list--item"><a href="{{links}}">{{ text }}</a></li>
           {% endfor %}
         </ul>
+        <div class="menu__overlay"></div>
       </menu>
-    </aside>
 
-    <div class="wrapper_site" container>
-      <div class="wrapper_site--content column_wrapper" id="start-site">
-        {% block content %}
-        {% endblock content %}
-      </div>
+
+      <span class="header_site--title">
+        <a href="{{ SITEURL }}" class="header_site--title-link"
+          aria-label="{{ SITENAME}}. {{ SITE_NAME_SUBTITLE}}. Ir para página inicial.">
+          <span class="header_site--title-name">{{ SITENAME }}</span> {{ SITE_NAME_SUBTITLE }}
+        </a>
+      </span>
+
+      <button class="site__theme-button" type="button" aria-label="Trocar tema">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z" />
+        </svg>
+      </button>
     </div>
+  </header>
+
+  <div class="wrapper_site" container>
+    <div class="wrapper_site--content column_wrapper" id="start-site">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </div>
 
     {% extends './_footer.html' %}
 
