@@ -232,7 +232,7 @@ this.animate(38)
 ## É isso aí!
 
 <center>
-    ![Minha app](./images/como-e-o-desenvolvimento-para-smart-tvs-parte-2/minha-primeira-smart-tv-app-pt2.gif)
+    ![Minha app](./images/criando-sua-primeira-app-para-smart-tvs-parte-2/minha-primeira-smart-tv-app-pt2.gif)
     <br/><small>Nossa app funcionando</small>
 </center>
 
