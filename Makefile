@@ -95,7 +95,7 @@ install_sass:
 	gem install sass
 
 watch:
-	sass  --style compressed --watch themes/made_by_designer/static/scss/:themes/made_by_designer/static/css/
+	sass  --style compressed --watch themes/:themes/
 
 install:
 	pip install -r requirements.txt
