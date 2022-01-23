@@ -3,7 +3,7 @@
 <html class="theme--light" lang="pt-br">
 <head>
 <meta charset="utf-8"/>
-<title>Um dev qualquer - React tag </title>
+<title>Um dev qualquer || Paulo Oliveira </title>
 <link href="./favicon.png" rel="icon"/>
 <link href="https://www.google-analytics.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/" rel="preconnect"/>
@@ -22,14 +22,14 @@
 <meta content="@paulofrauches" name="twitter:creator"/>
 <meta content="Um dev qualquer || Paulo Oliveira" name="twitter:image:alt"/>
 <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml">
-<link async="" href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet">
-<link async="" href=".//theme/css/index.css" rel="stylesheet" type="text/css"/>
+<link async="" href="https://umdevqualquer.com.br/theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet">
+<link async="" href="https://umdevqualquer.com.br//theme/css/index.css" rel="stylesheet" type="text/css"/>
 <script id="js-theme" type="text/javascript">
       const isDarkMode = window.localStorage.getItem('isDarkMode') !== 'false'
       const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      if(window.localStorage.getItem('isDarkMode') === 'true'|| (window.localStorage.getItem('isDarkMode') === null && isSODarkMode)) {
+      if (window.localStorage.getItem('isDarkMode') === 'true' || (window.localStorage.getItem('isDarkMode') === null && isSODarkMode)) {
         const html = document.querySelector('html');
-        if(html.classList.contains('theme--dark')){
+        if (html.classList.contains('theme--dark')) {
           html.classList.remove('theme--dark');
           html.classList.add('theme--light');
         } else {
@@ -38,24 +38,65 @@
         }
       }
     </script>
+<script id="js-menu" type="text/javascript">
+      function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        const menuList = document.querySelector('.menu__list');
+        const menuOverlay = document.querySelector('.menu__overlay');
+
+        const menuOpenedClass = 'menu--opened';
+        const menuOverlayActiveClass = 'menu__overlay--active';
+        const menuListActiveClass = 'menu__list--active'
+
+        if (menuList.classList.contains(menuListActiveClass)) {
+          menuList.classList.remove(menuListActiveClass)
+        } else {
+          menuList.classList.add(menuListActiveClass)
+        }
+
+        if (menu.classList.contains(menuOpenedClass)) {
+          menu.classList.remove(menuOpenedClass)
+          menuOverlay.classList.remove(menuOverlayActiveClass)
+        } else {
+          menu.classList.add(menuOpenedClass)
+          menuOverlay.classList.add(menuOverlayActiveClass)
+        }
+
+      }
+      document.addEventListener('click', event => {
+        if(event.target.classList.contains('menu__overlay')){
+          toggleMenu()
+        }
+      })
+    </script>
 </link></link></head>
 <body>
 <a class="site__skip-content" href="#start-site" tabindex="0">Pular para o conteúdo</a>
-<header class="header_site" container="" id="start-page">
+<header class="header_site" id="start-page">
 <div class="header_site--wrapper">
-<div class="header_site--title">
-<a aria-label="Um dev qualquer. . Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
-<span class="header_site--title-name">Um dev qualquer</span>
-</a>
-</div>
-<ul class="header_site-social">
+<menu class="menu">
+<button aria-label="Menu" class="menu--icon" onclick="toggleMenu()">
+<svg aria-hidden="true" class="menu--icon-svg" viewbox="0 0 612 612" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<path d="M604.267 194.727c4.257 0 7.733-3.644 7.733-7.733v-40.169c0-4.256-3.283-7.733-7.733-7.733H7.733c-4.256 0-7.733 3.644-7.733 7.733v40.169c0 4.256 3.283 7.733 7.733 7.733h596.534zM0 326.084c0 4.256 3.283 7.733 7.733 7.733h596.533c4.256 0 7.733-3.645 7.733-7.733v-40.169c0-4.284-3.283-7.733-7.733-7.733H7.733c-4.256 0-7.733 3.645-7.733 7.733v40.169zm0 139.091c0 4.256 3.283 7.733 7.733 7.733h596.533c4.256 0 7.733-3.645 7.733-7.733v-40.169c0-4.256-3.283-7.732-7.733-7.732H7.733c-4.256 0-7.733 3.644-7.733 7.732v40.169z"></path>
+</svg>
+</button>
+<ul class="menu__list">
+<li class="menu__list--item"><a href="https://umdevqualquer.com.br/">Home</a></li>
+<li class="menu__list--item"><a href="https://umdevqualquer.com.br/author">Sobre Mim</a></li>
 </ul>
-</div>
+<div class="menu__overlay"></div>
+</menu>
+<span class="header_site--title">
+<a aria-label="Um dev qualquer. Paulo Oliveira. Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
+<span class="header_site--title-name">Um dev qualquer</span> Paulo Oliveira
+        </a>
+</span>
 <button aria-label="Trocar tema" class="site__theme-button" type="button">
 <svg viewbox="0 0 24 24">
 <path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></path>
 </svg>
 </button>
+</div>
 </header>
 <div class="wrapper_site" container="">
 <div class="wrapper_site--content column_wrapper" id="start-site">
@@ -64,7 +105,7 @@
 <div class="home_content__article-content">
 <header>
 <a class="home_content__article-title-link" href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">
-              Criando sua primeira APP para Smart TVs (Parte 2)
+                Criando sua primeira APP para Smart TVs (Parte 2)
               </a>
 </header>
 <div class="home_content__article-body-summary">
@@ -72,8 +113,13 @@
 <p>Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.</p>
 </div>
 <footer class="home_content__article-category">
-<a class="home_content__article-header-category-link logo-smart tv" href="https://umdevqualquer.com.br/category/smart-tv.html">SMART TV</a> - 09 Abr 2020
-            </footer>
+            09 Abr 2020 -
+              <a class="home_content__article-header-category-link logo-smart tv" href="https://umdevqualquer.com.br/category/smart-tv.html">SMART TV</a>
+               -
+              <a class="home_content__article-header-category-link logo-js" href="https://umdevqualquer.com.br/tag/js.html">JS</a>
+               -
+              <a class="home_content__article-header-category-link logo-react" href="https://umdevqualquer.com.br/tag/react.html">REACT</a>
+</footer>
 </div>
 <a class="home_content__article-image-link" href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2.html">
 <img loading="lazy" alt="Smart Tv from google" class="home_content__article-cover-image image-process-article_thumb" height="500" src="https://umdevqualquer.com.br/images/resized/article_thumb/smart-tv-plex.jpg" width="500"/>
@@ -83,12 +129,17 @@
 <div class="home_content__article-content">
 <header>
 <a class="home_content__article-title-link" href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">
-              Criando sua primeira APP para Smart TVs
+                Criando sua primeira APP para Smart TVs
               </a>
 </header>
 <footer class="home_content__article-category">
-<a class="home_content__article-header-category-link logo-smart tv" href="https://umdevqualquer.com.br/category/smart-tv.html">SMART TV</a> - 19 Jan 2020
-            </footer>
+            19 Jan 2020 -
+              <a class="home_content__article-header-category-link logo-smart tv" href="https://umdevqualquer.com.br/category/smart-tv.html">SMART TV</a>
+               -
+              <a class="home_content__article-header-category-link logo-js" href="https://umdevqualquer.com.br/tag/js.html">JS</a>
+               -
+              <a class="home_content__article-header-category-link logo-react" href="https://umdevqualquer.com.br/tag/react.html">REACT</a>
+</footer>
 </div>
 <a class="home_content__article-image-link" href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html">
 <img loading="lazy" alt="Smart Tv from pixabay" class="home_content__article-cover-image image-process-article_thumb" height="144" src="https://umdevqualquer.com.br/images/resized/article_thumb/smart-tv-pixabay.jpg" width="144"/>
@@ -98,12 +149,17 @@
 <div class="home_content__article-content">
 <header>
 <a class="home_content__article-title-link" href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">
-              Como é o desenvolvimento para Smart TVs
+                Como é o desenvolvimento para Smart TVs
               </a>
 </header>
 <footer class="home_content__article-category">
-<a class="home_content__article-header-category-link logo-smart tv" href="https://umdevqualquer.com.br/category/smart-tv.html">SMART TV</a> - 09 Out 2019
-            </footer>
+            09 Out 2019 -
+              <a class="home_content__article-header-category-link logo-smart tv" href="https://umdevqualquer.com.br/category/smart-tv.html">SMART TV</a>
+               -
+              <a class="home_content__article-header-category-link logo-js" href="https://umdevqualquer.com.br/tag/js.html">JS</a>
+               -
+              <a class="home_content__article-header-category-link logo-react" href="https://umdevqualquer.com.br/tag/react.html">REACT</a>
+</footer>
 </div>
 <a class="home_content__article-image-link" href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs.html">
 <img loading="lazy" alt="Smart Tv icon" class="home_content__article-cover-image image-process-article_thumb" height="144" src="https://umdevqualquer.com.br/images/resized/article_thumb/smart-tv.png" width="144"/>

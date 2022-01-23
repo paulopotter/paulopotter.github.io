@@ -105,7 +105,7 @@
         </button>
         <ul class="menu__list">
           {% for text, links in MENU_LINKS.items() %}
-            <li class="menu__list--item"><a href="{{links}}">{{ text }}</a></li>
+            <li class="menu__list--item"><a href="{{SITEURL}}/{{links}}">{{ text }}</a></li>
           {% endfor %}
         </ul>
         <div class="menu__overlay"></div>

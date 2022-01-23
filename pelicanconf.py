@@ -31,10 +31,10 @@ SUMMARY_USE_FIRST_PARAGRAPH = True
 # Blogroll
 LINKS = ()
 MENU_LINKS = ({
-    'Home': SITEURL,
-    # 'Labs': './labs',
-    'Sobre Mim': './author',
-    # 'Talks / Palestras': './talks'
+    'Home': '',
+    # 'Labs': 'labs',
+    'Sobre Mim': 'author',
+    # 'Talks / Palestras': 'talks'
 })
 
 # Social widget

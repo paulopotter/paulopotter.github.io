@@ -24,14 +24,14 @@
 <meta content="@paulofrauches" name="twitter:creator"/>
 <meta content="Smart Tv from google" name="twitter:image:alt"/>
 <link href="https://umdevqualquer.com.br/feeds/all.atom.xml" rel="alternate" title="Um dev qualquer || Paulo Oliveira - Atom Feed" type="application/atom+xml">
-<link async="" href="./theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet">
+<link async="" href="https://umdevqualquer.com.br/theme/vendor/concisecss/dist/concise.min.css" rel="stylesheet">
 <link href="https://umdevqualquer.com.br/theme/css/article.css" rel="stylesheet" type="text/css"/>
 <script id="js-theme" type="text/javascript">
       const isDarkMode = window.localStorage.getItem('isDarkMode') !== 'false'
       const isSODarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      if(window.localStorage.getItem('isDarkMode') === 'true'|| (window.localStorage.getItem('isDarkMode') === null && isSODarkMode)) {
+      if (window.localStorage.getItem('isDarkMode') === 'true' || (window.localStorage.getItem('isDarkMode') === null && isSODarkMode)) {
         const html = document.querySelector('html');
-        if(html.classList.contains('theme--dark')){
+        if (html.classList.contains('theme--dark')) {
           html.classList.remove('theme--dark');
           html.classList.add('theme--light');
         } else {
@@ -40,30 +40,71 @@
         }
       }
     </script>
+<script id="js-menu" type="text/javascript">
+      function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        const menuList = document.querySelector('.menu__list');
+        const menuOverlay = document.querySelector('.menu__overlay');
+
+        const menuOpenedClass = 'menu--opened';
+        const menuOverlayActiveClass = 'menu__overlay--active';
+        const menuListActiveClass = 'menu__list--active'
+
+        if (menuList.classList.contains(menuListActiveClass)) {
+          menuList.classList.remove(menuListActiveClass)
+        } else {
+          menuList.classList.add(menuListActiveClass)
+        }
+
+        if (menu.classList.contains(menuOpenedClass)) {
+          menu.classList.remove(menuOpenedClass)
+          menuOverlay.classList.remove(menuOverlayActiveClass)
+        } else {
+          menu.classList.add(menuOpenedClass)
+          menuOverlay.classList.add(menuOverlayActiveClass)
+        }
+
+      }
+      document.addEventListener('click', event => {
+        if(event.target.classList.contains('menu__overlay')){
+          toggleMenu()
+        }
+      })
+    </script>
 </link></link></head>
 <body>
 <a class="site__skip-content" href="#start-site" tabindex="0">Pular para o conteúdo</a>
-<header class="header_site" container="" id="start-page">
+<header class="header_site" id="start-page">
 <div class="header_site--wrapper">
-<div class="header_site--title">
-<a aria-label="Um dev qualquer. . Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
-<span class="header_site--title-name">Um dev qualquer</span>
-</a>
-</div>
-<ul class="header_site-social">
+<menu class="menu">
+<button aria-label="Menu" class="menu--icon" onclick="toggleMenu()">
+<svg aria-hidden="true" class="menu--icon-svg" viewbox="0 0 612 612" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<path d="M604.267 194.727c4.257 0 7.733-3.644 7.733-7.733v-40.169c0-4.256-3.283-7.733-7.733-7.733H7.733c-4.256 0-7.733 3.644-7.733 7.733v40.169c0 4.256 3.283 7.733 7.733 7.733h596.534zM0 326.084c0 4.256 3.283 7.733 7.733 7.733h596.533c4.256 0 7.733-3.645 7.733-7.733v-40.169c0-4.284-3.283-7.733-7.733-7.733H7.733c-4.256 0-7.733 3.645-7.733 7.733v40.169zm0 139.091c0 4.256 3.283 7.733 7.733 7.733h596.533c4.256 0 7.733-3.645 7.733-7.733v-40.169c0-4.256-3.283-7.732-7.733-7.732H7.733c-4.256 0-7.733 3.644-7.733 7.732v40.169z"></path>
+</svg>
+</button>
+<ul class="menu__list">
+<li class="menu__list--item"><a href="https://umdevqualquer.com.br/">Home</a></li>
+<li class="menu__list--item"><a href="https://umdevqualquer.com.br/author">Sobre Mim</a></li>
 </ul>
-</div>
+<div class="menu__overlay"></div>
+</menu>
+<span class="header_site--title">
+<a aria-label="Um dev qualquer. Paulo Oliveira. Ir para página inicial." class="header_site--title-link" href="https://umdevqualquer.com.br">
+<span class="header_site--title-name">Um dev qualquer</span> Paulo Oliveira
+        </a>
+</span>
 <button aria-label="Trocar tema" class="site__theme-button" type="button">
 <svg viewbox="0 0 24 24">
 <path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></path>
 </svg>
 </button>
+</div>
 </header>
 <div class="wrapper_site" container="">
 <div class="wrapper_site--content column_wrapper" id="start-site">
 <section class="article_content" container="">
 <article class="article_content-body">
-<h1 class="article_content-title">Criando sua primeira APP para Smart TVs (Parte 2)  </h1><small> Tempo médio de leitura: 12 minutos.</small>
+<h1 class="article_content-title">Criando sua primeira APP para Smart TVs (Parte 2)  </h1><small> Tempo médio de leitura: 11 minutos.</small>
 <div class="article_content-content">
 <figure class="article_cover">
 <img loading="lazy" alt="Smart Tv from google" class="article_cover__img image-process-article_cover" sizes="(max-width: 768px) 30%, (max-width: 1280) 50%, (max-width: 1920px) 100%, " src="https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv-plex.jpg" srcset="https://umdevqualquer.com.br/images/resized/article_cover/768w/smart-tv-plex.jpg 768w, https://umdevqualquer.com.br/images/resized/article_cover/1280w/smart-tv-plex.jpg 1280w, https://umdevqualquer.com.br/images/resized/article_cover/1920w/smart-tv-plex.jpg 1920w"/>
@@ -169,19 +210,19 @@ Para simplificar o post, eu vou deixar o <a class="external-link" href="https://
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"presets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">      </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="s2">"@babel/preset-env"</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">          </span><span class="nt">"targets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">"esmodules"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">          </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">      </span><span class="p">],</span><span class="w"></span>
-<span class="w">      </span><span class="s2">"@babel/preset-react"</span><span class="w"></span>
-<span class="w">    </span><span class="p">]</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">"presets"</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">[</span>
+        <span class="s2">"@babel/preset-env"</span><span class="p">,</span>
+        <span class="p">{</span>
+          <span class="nt">"targets"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">"esmodules"</span><span class="p">:</span> <span class="kc">true</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="s2">"@babel/preset-react"</span>
+    <span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 <p><strong>package</strong></p>
@@ -250,53 +291,53 @@ Para simplificar o post, eu vou deixar o <a class="external-link" href="https://
 <span class="normal">44</span>
 <span class="normal">45</span>
 <span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#0f0f0f</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f1f1f1</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">720</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="p">.</span><span class="nc">wrapper</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">padding-top</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="normal">47</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#0f0f0f</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#f1f1f1</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">720</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">wrapper</span> <span class="p">{</span>
+  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="p">.</span><span class="nc">poster-wrapper</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">390</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">vertical-align</span><span class="p">:</span><span class="w"> </span><span class="kc">bottom</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">310</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">.</span><span class="nc">poster-wrapper</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">390</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+  <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">bottom</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">310</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="p">.</span><span class="nc">poster-wrapper</span><span class="w"> </span><span class="nt">figure</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">.</span><span class="nc">poster-wrapper</span> <span class="nt">figure</span> <span class="p">{</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="p">.</span><span class="nc">poster-wrapper</span><span class="w"> </span><span class="nt">img</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">321</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">225</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">.</span><span class="nc">poster-wrapper</span> <span class="nt">img</span> <span class="p">{</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">321</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">225</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="p">.</span><span class="nc">poster-wrapper--active</span><span class="w"> </span><span class="nt">img</span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">381</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">285</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">.</span><span class="nc">poster-wrapper--active</span> <span class="nt">img</span><span class="p">{</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">381</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">285</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="p">.</span><span class="nc">poster-wrapper</span><span class="w"> </span><span class="nt">span</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.7</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">min-height</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">.</span><span class="nc">poster-wrapper</span> <span class="nt">span</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.7</span><span class="p">);</span>
+  <span class="k">bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">min-height</span><span class="p">:</span> <span class="mi">15</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+  <span class="k">right</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="p">.</span><span class="nc">poster-wrapper--active</span><span class="w"> </span><span class="nt">span</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">.</span><span class="nc">poster-wrapper--active</span> <span class="nt">span</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">inline</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 <p>Agora vamos adicionar o efeito de scroll e para isso, precisamos de uma <code>div</code> envolvendo todo o conteúdo além de adicionar margin à ela automaticamente utilizando o <code>state</code>.</p>
@@ -322,7 +363,7 @@ Para simplificar o post, eu vou deixar o <a class="external-link" href="https://
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kr">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
       <span class="c1">// [...]</span>
