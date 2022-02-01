@@ -71,9 +71,11 @@ PLUGINS = [
     'readtime',
     'pelican_just_table',
     'linkclass',
+    'more_categories',
     'neighbors',
     'image_process',  # https://github.com/pelican-plugins/image-process
     'replacer',
+    # 'w3c_validate',
 ]
 
 # Replacer
