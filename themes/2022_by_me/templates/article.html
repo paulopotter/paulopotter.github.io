@@ -78,6 +78,22 @@
                 </div>
             {% endif %}
         </article>
+      <ul class="article_neighbors" container>
+          {% if article.prev_article %}
+              <li class="article_neighbors__item article_neighbors__item--prev_article {% if not article.next_article %}article_neighbors__item--only{% endif %}">
+                  <a href="{{ SITEURL }}/{{ article.prev_article.url}}">
+                      < {{ article.prev_article.title }}
+                  </a>
+              </li>
+          {% endif %}
+          {% if article.next_article %}
+              <li class="article_neighbors__item article_neighbors__item--next_article {% if not article.prev_article %}article_neighbors__item--only{% endif %}">
+                  <a href="{{ SITEURL }}/{{ article.next_article.url}}">
+                      {{ article.next_article.title }} >
+                  </a>
+              </li>
+          {% endif %}
+      </ul>
     </section>
 
     <section class="article_comments" container>

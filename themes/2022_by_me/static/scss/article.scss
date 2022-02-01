@@ -133,3 +133,49 @@
     background: transparent !important;
   }
 }
+
+.article_neighbors {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
+  &__item {
+    margin: 2em 0 1em;
+    list-style: none;
+    padding: 2em 1em ;
+    width: 50%;
+    @media (max-width: 500px) {
+       width: 100%;
+    }
+
+    @include themed() {
+      border-top: 1px solid getColorByTheme("border");
+    }
+
+    &--prev_article{
+      @media (min-width: 501px) {
+      @include themed() {
+        border-right: 1px solid getColorByTheme("border");
+      }
+      }
+
+    }
+    &--next_article{
+      @media (min-width: 501px) {
+      @include themed() {
+        border-left: 1px solid getColorByTheme("border");
+      }
+      }
+      text-align: right;
+    }
+
+    &--only {
+      width: 100%;
+      text-align: center;
+      border-right: inherit !important;
+      border-left: inherit !important;
+    }
+  }
+}
