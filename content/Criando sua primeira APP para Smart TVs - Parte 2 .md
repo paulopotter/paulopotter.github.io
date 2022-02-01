@@ -1,6 +1,5 @@
 Title: Criando sua primeira APP para Smart TVs (Parte 2)
-Category: Smart TV
-Tags: Smart TV, Js, React
+Category: Smart TV, Js, React
 Date: 2020-04-09
 Series: Criando sua primeira APP para Smart TVs
 cover_image: smart-tv-plex.jpg

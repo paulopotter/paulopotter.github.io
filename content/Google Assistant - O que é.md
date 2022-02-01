@@ -1,6 +1,5 @@
 Title: Google Assistant - o que é?
 Category: Google Assistant
-Tags: Google Assistant
 Series: Google Assistant
 Date: 2018-05-30
 cover_image: google-assistant-ios1.webp

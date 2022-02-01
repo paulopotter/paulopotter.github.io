@@ -1,6 +1,5 @@
 Title: BrazilJS Conf - Minha história com a maior conferência JS do mundo!
-Category: Sem Categoria
-Tags: Sem Categoria, Js, Smart TVs
+Category: Smart TV, JS
 Date: 2021-11-21
 cover_image: minha-historia-com-braziljs/braziljs-conf-2021-banner.png
 cover_image_alt: Banner da BrazilJS conf 2021

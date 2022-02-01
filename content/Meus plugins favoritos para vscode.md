@@ -1,6 +1,5 @@
 Title: Meus plugins favoritos para vscode
-Category: Lista
-Tags: Lista, vscode
+Category: Lista, vscode
 Date: 2020-05-02
 Series: Meus plugins favoritos
 cover_image: blake-connally-unsplash.jpg

@@ -1,6 +1,5 @@
 Title: Você já pensou sobre Acessibilidade (a11y)?
-Category: Acessibilidade
-Tags: Smart TV, Acessibilidade
+Category: Acessibilidade, Smart TV
 Date: 2021-05-23
 cover_image: acessibility-uxplanet.jpeg
 cover_image_by: Imagem retirada do <a href="https://uxplanet.org/web-accessibility-explained-c2408636eee0" alt="Simbolo da acessibilidade para todos.">UX Planet</a>

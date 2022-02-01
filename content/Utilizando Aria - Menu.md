@@ -1,6 +1,5 @@
 Title: Utilizando ARIA no seu projeto: Menu
-Category: Acessibilidade
-Tags: HTML, Acessibilidade
+Category: Acessibilidade, HTML
 Date: 2021-09-17
 Series: Utilizando ARIA no seu projeto
 cover_image: teclado-botao-cadeirante.jpg
