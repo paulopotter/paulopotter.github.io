@@ -6,7 +6,7 @@ const CONFIGS = {
   SITENAME : 'Um dev qualquer',
   SITE_NAME_SUBTITLE : 'Paulo Oliveira',
   SITEDESCRIPTION : 'Blog pessoal onde mostro um pouco do meu aprendizado.',
-  SITEURL : 'https://umdevqualquer.com.br',
+  SITEURL : './',
   AUTHOR_SAVE_AS : 'author.html',
   HASH_GRAVATAR : 'cd58d60fac779175c0ab6ac1b912d4b5',
   PATH : 'content',

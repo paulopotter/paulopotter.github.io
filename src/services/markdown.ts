@@ -4,7 +4,9 @@ import remarkHtml from 'remark-html'; // Serializador de markdown para string
 export async function toHTML(markdown) {
   // Processamos nosso conteúdo Markdown
   const result = await remark()
-    .use(remarkHtml)
+    .use(remarkHtml, {
+      sanitize: true,
+    })
     .process(markdown);
 
   return result.toString();

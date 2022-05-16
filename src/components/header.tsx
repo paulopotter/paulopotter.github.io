@@ -12,7 +12,7 @@ const {
   HASH_GRAVATAR,
 } = CONFIGS;
 
-const Header = ({ title = "", description = "", children = null }) => (
+export const Header = ({ title = "", children = null, meta = {} }) => (
   <NextHead>
     <meta charSet="UTF-8" />
     <title>
@@ -20,7 +20,7 @@ const Header = ({ title = "", description = "", children = null }) => (
       {SITE_BAR_TITLE}
     </title>
     {/* META */}
-    <meta name="description" content={description || ""} />
+    <meta name="description" content={meta?.description || ""} />
     <meta name="author" content={AUTHOR} />
     <meta name="robots" content="noimageindex" />
     <meta
@@ -39,17 +39,26 @@ const Header = ({ title = "", description = "", children = null }) => (
       content="#f5f5f5"
     />{" "}
     /
-    <meta property="og:title" content={`${SITE_BAR_TITLE}`} />
-    <meta property="og:description" content={`${SITEDESCRIPTION}`} />
+    <meta property="og:title" content={`${meta?.ogTitle ?? SITE_BAR_TITLE}`} />
+    <meta
+      property="og:description"
+      content={`${meta?.ogDescription ?? SITEDESCRIPTION}`}
+    />
     <meta
       property="og:image"
-      content={`https://www.gravatar.com/avatar/${HASH_GRAVATAR}?s=720`}
+      content={
+        meta?.ogImage ??
+        `https://www.gravatar.com/avatar/${HASH_GRAVATAR}?s=720`
+      }
     />
-    <meta property="og:url" content={`${SITEURL}/`} />
+    <meta property="og:url" content={`${meta?.ogUrl ?? SITEURL}/`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@paulofrauches" />
     <meta name="twitter:creator" content="@paulofrauches" />
-    <meta name="twitter:image:alt" content={`${SITE_BAR_TITLE}`} />
+    <meta
+      name="twitter:image:alt"
+      content={`${meta?.twitterAlt ?? SITE_BAR_TITLE}`}
+    />
     {/* link */}
     <link rel="icon" href="./static/images/favicon.png" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
@@ -64,5 +73,3 @@ const Header = ({ title = "", description = "", children = null }) => (
     {/* Scripts */}
   </NextHead>
 );
-
-export default Header;

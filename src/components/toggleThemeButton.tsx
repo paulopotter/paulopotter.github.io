@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { isDarkTheme, toggleTheme } from "../helpers";
 
-export default function ToggleThemeButton() {
+export function ToggleThemeButton() {
   const [isDarkMode, setIsDarkMode] = useState(isDarkTheme);
 
   useEffect(() => {
