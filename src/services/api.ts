@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import slugify from 'slugify';
 
 const postsDirectory = join(process.cwd(), 'src/posts');
 
@@ -23,88 +24,44 @@ export function getPost(slugOrFilename, fields = []) {
 
   const post = {};
 
-  fields.forEach(field => {
-    // Se houver o campo conteúdo, o adicionamos
+  fields
+  .map(field => {
+    if(!data[getParameterCaseInsensitive(data, 'title')]){
+      return
+    } else {
+      post['title'] = data[getParameterCaseInsensitive(data, 'title')]
+    }
+    if (field === 'category') post[field] = data?.category?.split(',');
     if (field === 'content') post[field] = content;
-    // Se houver o campo slug, o adicionamos
-    if (field === 'slug') post[field] = slug;
-    /**
-     * Se houver o campo dentro do cabeçalho do
-     * markdown, o adicionamos no post
-     */
-    if (data[field]) post[field] = data[field];
+    if (field === 'slug') post[field] = slug
+    // if (field === 'slug') post[field] = slugify(post.title, {
+    //    lower: true,
+    //    remove: /[*+~.()'"!:@]/g,
+    // });
+
+    if (data[getParameterCaseInsensitive(data, field)]) post[field] = data[getParameterCaseInsensitive(data, field)];
   })
-  /**
-   * Retornamos todo o conteúdo do markdown
-   * junto com o slug.
-   */
-  // return { content, slug, ...data };
   return post;
 }
 
 /**
- * Criamos uma função para buscar todos os posts.
- * Exportamos também para consegir buscar de dentro da página
- * de listagem de posts
+ * Busca todos os posts.
  */
 export function getAllPosts(fields) {
   const slugs = getMarkdownsFiles();
   const posts = slugs
     .map(slug => getPost(slug, fields))
+    .sort((a, b) => {
     // @ts-ignore
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
-  return posts;
+      return new Date(b.date) - new Date(a.date)});
+
+  return posts.filter(post => Object.keys(post).length !== 0);
 }
 
-
-
-// import fs from 'fs'
-// import { join } from 'path'
-// import matter from 'gray-matter'
-
-// const postsDirectory = join(process.cwd(), 'content/')
-
-// export function getPostSlugs() {
-//   const dirents = fs.readdirSync(postsDirectory, { withFileTypes: true, encoding: 'utf-8' });
-//   return dirents
-//       .filter(dirent => dirent.isFile())
-//       .map(dirent => dirent.name);
-// }
-
-// export function getPostBySlug(slug, fields = []) {
-//   const realSlug = slug.replace(/\.md$/, '')
-//   const fullPath = join(postsDirectory, `${realSlug}.md`)
-//   const fileContents = fs.readFileSync(fullPath, 'utf8')
-//   const { data, content } = matter(fileContents)
-
-//   const items = {}
-
-//   // Ensure only the minimal needed data is exposed
-//   fields.forEach((field) => {
-//     if (field === 'title') {
-//       items[field] = data?.title
-//     }
-//     if (field === 'slug') {
-//       items[field] = realSlug
-//     }
-//     if (field === 'content') {
-//       items[field] = content
-//     }
-
-//     if (typeof data[field] !== 'undefined') {
-//       items[field] = data[field]
-//     }
-//   })
-
-//   return items
-// }
-
-// export function getAllPosts(fields = []) {
-//   const slugs = getPostSlugs()
-//   const posts = slugs
-//     .map((slug) => getPostBySlug(slug, fields))
-//     .filter(post => !!post?.title )
-//     // sort posts by date in descending order
-//     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-//   return posts
-// }
+/**
+ * Procura pela a key de um objeto Insensitivamente.
+ */
+function getParameterCaseInsensitive(object, key) {
+  const asLowercase = key.toLowerCase();
+  return  Object.keys(object).find(key => key.toLowerCase() === asLowercase)
+}

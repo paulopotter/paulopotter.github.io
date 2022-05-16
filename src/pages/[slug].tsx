@@ -1,25 +1,16 @@
-// Importamos a nossa função getAllPosts()
 import markdown from '../services/markdown';
 import { getPost, getAllPosts } from '../services/api';
+import PostContent from '../components/postContent';
 
-export default function Page({ post }) {
- return (
-   <div style={{
-     margin: 'auto',
-     maxWidth: '600px',
-     fontFamily: 'sans-serif'
-   }}>
-     <h1>{ post.title }</h1>
-     <p>{ post.author } · { post.date }</p>
-     { /*
-     Inserimos nosso na String HTML com
-     dangerouslySetInnerHTML, para o React.js
-     a interpretar como HTML.
-     */ }
-     <div dangerouslySetInnerHTML={{ __html: post.content }} />
-   </div>
- );
-}
+const Page = ({ post }) => {
+    return (
+        <>
+            <PostContent post={post} />
+        </>
+    );
+};
+
+export default Page
 
 export async function getStaticProps({ params }) {
   const post = getPost(params.slug, [
@@ -27,7 +18,11 @@ export async function getStaticProps({ params }) {
     'date',
     'author',
     'slug',
-    'content'
+    'content',
+    'cover_image',
+    'cover_image_alt',
+    'category',
+    'series'
   ]);
 
   /**

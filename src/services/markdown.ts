@@ -1,39 +1,38 @@
-/**
- * Importamos os módulos que instalamos
- * pelo NPM.
- */
-// Processador para parsear markdown
-import {remark} from 'remark';
-// Serializador de markdown para string
-import html from 'remark-html';
+import {remark} from 'remark'; // Processador para parsear markdown
+import remarkHtml from 'remark-html'; // Serializador de markdown para string
 
-/**
- * Criamos nossa função de transformar
- * string em HTML.
- * Ela é uma função assincrona, o que
- * ela sempre responderá uma Promise e
- * nos dará a possibilidade de esperar uma
- * Promise dentro dela terminar para
- * continuar de uma forma simples.
- */
 export async function toHTML(markdown) {
   // Processamos nosso conteúdo Markdown
-  // @ts-ignore
   const result = await remark()
-    .use(html)
+    .use(remarkHtml)
     .process(markdown);
 
-  /**
-   * Retornamos ele de volta em formato
-   * de String.
-   */
   return result.toString();
 }
 
-/**
- * Exportamos o padrão como um objeto
- * com a função para ficar mais bonito
- * utilizá-lo, utilizaremos ela assim:
- * markdown.toHTML(content)
- */
 export default { toHTML };
+
+/*
+  * remark-a11y-emoji - https://github.com/florianeckerstorfer/remark-a11y-emoji
+  * remark-lint - https://github.com/remarkjs/remark-lint
+  * remark-remove-comments - https://github.com/alvinometric/remark-remove-comments
+  * rehype-meta - https://github.com/rehypejs/rehype-meta
+  * rehype-minify - https://github.com/rehypejs/rehype-minify
+
+  ? remark-code-frontmatter - https://github.com/s0/remark-code-frontmatter
+  ? remark-directive - https://github.com/remarkjs/remark-directive
+  ? remark-directive-rehype - https://github.com/IGassmann/remark-directive-rehype
+  ? remark-frontmatter - https://github.com/remarkjs/remark-frontmatter
+  ? remark-mdx - https://github.com/mdx-js/mdx/tree/main/packages/remark-mdx
+  ? remark-images - https://github.com/remarkjs/remark-images
+  ? remark-img-links - https://github.com/Pondorasti/remark-img-links
+  ? remark-macro - https://github.com/dimerapp/remark-macro
+  ? remark-oembed - https://github.com/agentofuser/remark-oembed
+  ? remark-prettier - https://github.com/remcohaszing/remark-prettier
+  ? remark-sectionize - https://github.com/jake-low/remark-sectionize
+  ? remark-title - https://github.com/RichardLitt/remark-title
+  ? remark-typescript - https://github.com/trevorblades/remark-typescript
+  ?
+
+
+*/

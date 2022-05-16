@@ -11,6 +11,7 @@ const withMDX = require('@next/mdx')({
 module.exports = withMDX({
   // Append the default value with md extensions
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  // target: 'serverless',
 })
 
 module.exports = {
@@ -21,4 +22,8 @@ module.exports = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  // i18n: {
+  //   defaultLocale: 'en',
+  // },
 }
+
