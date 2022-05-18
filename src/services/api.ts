@@ -51,11 +51,32 @@ export function getAllPosts(fields) {
   const slugs = getMarkdownsFiles();
   const posts = slugs
     .map(slug => getPost(slug, fields))
-    .sort((a, b) => {
     // @ts-ignore
-      return new Date(b.date) - new Date(a.date)});
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .filter(post => Object.keys(post).length !== 0);
 
-  return posts.filter(post => Object.keys(post).length !== 0);
+  return posts
+}
+
+export function getRelatedSeries(serie, postTitle = '') {
+  const posts = getAllPosts([
+    'series',
+    'title',
+    'slug'
+  ])
+
+  const series = posts?.filter((post) => !!post.series);
+  const seriesRelated = Array.from(groupBy(series, (ser) => ser.series))
+    .filter(
+    series => {
+      Object.keys(series) === series
+    }
+  )
+  console.log(seriesRelated)
+
+
+  return seriesRelated
+
 }
 
 /**
@@ -64,4 +85,19 @@ export function getAllPosts(fields) {
 function getParameterCaseInsensitive(object, key) {
   const asLowercase = key.toLowerCase();
   return  Object.keys(object).find(key => key.toLowerCase() === asLowercase)
+}
+
+
+function groupBy(list, keyGetter) {
+  const map = new Map();
+  list.forEach((item) => {
+    const key = keyGetter(item);
+    const collection = map.get(key);
+    if (!collection) {
+      map.set(key, [item]);
+    } else {
+      collection.push(item);
+    }
+  });
+  return map;
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { isDarkTheme, toggleTheme } from "../helpers";
+import { isDarkTheme } from "../helpers";
 
-export function ToggleThemeButton() {
+export function ToggleThemeButton({ onClicked = () => {} }) {
   const [isDarkMode, setIsDarkMode] = useState(isDarkTheme);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ export function ToggleThemeButton() {
   }, []);
 
   const toggleButtonOnClick = (event) => {
-    toggleTheme();
+    onClicked?.();
     event.currentTarget.ariaLabel = `Trocar para o tema ${
       isDarkMode ? "claro" : "escuro"
     }`;

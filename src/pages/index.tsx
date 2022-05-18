@@ -15,9 +15,7 @@ export default function Page({ posts }) {
 
   return (
     <>
-      <Header>
-        <link href={`./static/styles/index.css`} rel="stylesheet" />
-      </Header>
+      <Header />
       <section className="home_content">
         {posts?.map((post, index) => (
           <article

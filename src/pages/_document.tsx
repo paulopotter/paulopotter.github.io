@@ -1,37 +1,34 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from "next/document";
+import { Html, Head, Main, NextScript } from "next/document";
+import { useState } from "react";
+
 import CONFIGS from "../services/configs";
+import { isDarkTheme } from "../helpers";
 
 const { GA_CODE } = CONFIGS;
-class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
 
-    return initialProps;
-  }
-  render() {
-    return (
-      <Html lang="pt-BR" className="theme--light">
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
-        </body>
+const Document = () => {
+  const [isDark, setIsDark] = useState(isDarkTheme ?? false);
+  return (
+    <Html lang="pt-BR" className={`theme--${isDark ? "dark" : "light"}`}>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          href="https://fonts.googleapis.com/css?family=Bitter|Montserrat:400,700"
-          rel="stylesheet"
-          // @ts-ignore
-          async={true}
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
         />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;1,700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -40,11 +37,10 @@ class MyDocument extends Document {
             ga('create', "${GA_CODE}", 'auto');
             ga('send', 'pageview');
         `,
-          }}
-        />
-      </Html>
-    );
-  }
-}
+        }}
+      />
+    </Html>
+  );
+};
 
-export default MyDocument;
+export default Document;

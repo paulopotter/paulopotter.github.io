@@ -2,13 +2,7 @@ import markdown from "../services/markdown";
 import { getPost, getAllPosts } from "../services/api";
 import { PostContent } from "../components";
 
-const Page = ({ post }) => {
-  return (
-    <>
-      <PostContent post={post} />
-    </>
-  );
-};
+const Page = ({ post }) => <PostContent post={post} />;
 
 export default Page;
 
@@ -25,15 +19,14 @@ export async function getStaticProps({ params }) {
     "cover_image_by",
     "category",
     "series",
+    "seriesRelated",
   ]);
 
-  /**
-   * Como a função toHTML é async, ela
-   * retorna uma Promise, então devemos
-   * aguardar ela ser finalizada com o await.
-   */
-  // post.content = await markdown.toHTML(post.content);
+  // console.log(post);
 
+  post.content = await markdown
+    .toHTML(post.content)
+    .then((value) => value.value);
   return {
     props: { post },
   };
@@ -42,7 +35,7 @@ export async function getStaticProps({ params }) {
 // Usamos a função do Next.js, getStaticPaths()
 export function getStaticPaths() {
   // Buscamos todos os slugs e date de todos os posts
-  const posts = getAllPosts(["slug"]);
+  const posts = getAllPosts(["slug", "series"]);
 
   return {
     /**

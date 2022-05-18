@@ -1,8 +1,5 @@
 import React from "react";
-import Image from "next/image";
 import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import rehypeRaw from "rehype-raw";
 import { Header } from ".";
 import CONFIGS from "../services/configs";
@@ -53,24 +50,12 @@ export const PostContent = ({ post }: Props) => {
 
             <ReactMarkdown
               rehypePlugins={[rehypeRaw]}
-              components={{
-                code({ className, children }) {
-                  const language = className?.replace("language-", "");
-
-                  return (
-                    <SyntaxHighlighter
-                      style={materialDark}
-                      language={language}
-                      // @ts-ignore
-                      children={children[0]}
-                    />
-                  );
-                },
-              }}
             >
               {post.content}
             </ReactMarkdown>
           </div>
+
+          <SeriesPosts post={post} />
 
         </article>
       </section>
@@ -109,3 +94,11 @@ const FigureCaption = ({ post }) => (
     </figcaption>
   )
 )
+
+// const SeriesPosts = ({ post }) => {
+
+//   if(post.series){
+//     console.log(Object.keys(post))
+//   }
+//   return
+// }
