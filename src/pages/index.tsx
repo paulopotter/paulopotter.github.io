@@ -1,7 +1,10 @@
+import classNames from "classnames";
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Head } from "../components";
 import { getAllPosts } from "../services/api";
+import { HomeStyle } from "./styles/home.style";
+import { ThemeContext } from "./_app";
 
 export default function Page({ posts }) {
   const summary = (index, post) => {
@@ -14,38 +17,38 @@ export default function Page({ posts }) {
     }
     return;
   };
+  const { isDarkTheme } = useContext(ThemeContext);
+  const homeStyle = HomeStyle({ isDarkTheme });
 
   return (
     <>
       <Head />
-      <section className="home_content">
+      <section className={homeStyle.content}>
         {posts?.map((post, index) => (
           <article
             key={index}
-            className={`home_content__article ${
-              index === 0 ? "home_content__article--first" : ""
-            }`.trim()}
+            className={classNames(homeStyle.article, {
+              [homeStyle.articleFirst]: index === 0,
+            })}
           >
-            <div className="home_content__article-content">
+            <div className={homeStyle.articleContent}>
               <header>
-                <Link
-                  href={`/${post.slug}`}
-                  className={"home_content__article-title-link"}
-                >
-                  {index === 0 ? post.title : post.title.slice(0, 70) + "..."}
+                <Link href={`${post.slug}`}>
+                  <a className={homeStyle.titleLink}>
+                    {index === 0
+                      ? post.title
+                      : post.title.lenght > 70
+                      ? post.title.slice(0, 70) + "..."
+                      : post.title}
+                  </a>
                 </Link>
               </header>
               {summary(index, post)}
-              <footer className="home_content__article-category">
+              <footer className={homeStyle.category}>
                 {post.date} -{" "}
                 {post?.category?.split(",")?.map((cat, categoryIndex) => (
                   <Fragment key={`${index}-category-${categoryIndex}`}>
-                    <Link
-                      href={`/${cat.trim()}`}
-                      className={`home_content__article-header-category-link logo-${post.category.toLowerCase()}`}
-                    >
-                      {cat.toUpperCase()}
-                    </Link>
+                    <Link href={`/${cat.trim()}`}>{cat.toUpperCase()}</Link>
                     {categoryIndex < post.category.split(",").length - 1
                       ? " - "
                       : null}
@@ -55,12 +58,9 @@ export default function Page({ posts }) {
             </div>
 
             {post?.cover_image && (
-              <a
-                href={`${post.url}`}
-                className="home_content__article-image-link"
-              >
+              <a href={`${post.slug}`} className={homeStyle.imageLink}>
                 <img
-                  className="home_content__article-cover-image image-process-article_thumb"
+                  className={homeStyle.imageCover}
                   src={`./images/${post?.cover_image}`}
                   alt={`${post?.cover_image_alt || ""}`}
                   height={index > 1 ? "144" : "500"}
@@ -82,6 +82,7 @@ export function getStaticProps() {
     "date",
     "category",
     "cover_image",
+    "sumary",
   ]);
 
   return {

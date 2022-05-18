@@ -8,7 +8,6 @@ export const FONT = {
   mono: 'Consolas, monospace'
 }
 
-
 export const COLOR = {
   dark: {
     background: '#32373d',
@@ -48,4 +47,9 @@ export const COLOR = {
     tableHeaderBgInverted:' #f5f5f5',
     tableHeaderColor:' white',
   }
+}
+
+export const MEDIA_QUERIES = {
+  small: '767px',
+  medium: '1023px',
 }

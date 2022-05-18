@@ -25,6 +25,7 @@ export const ThemeButtonStyle = createUseStyles({
   hasJs: {
     '&$button':{
         transform: 'translate(0, 100%)',
+
         '@media (min-width: 1300px)': {
           left: '83%',
           right: 'inherit',

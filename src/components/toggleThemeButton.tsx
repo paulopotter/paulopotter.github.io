@@ -10,7 +10,7 @@ export function ToggleThemeButton({ onClicked = () => {} }) {
   const style = ThemeButtonStyle({ isDarkTheme });
 
   useEffect(() => {
-    setTimeout(() => setCanAnimate(true), 3000);
+    setTimeout(() => setCanAnimate(true), 1000);
   }, [canAnimate]);
 
   const toggleButtonOnClick = (event) => {
