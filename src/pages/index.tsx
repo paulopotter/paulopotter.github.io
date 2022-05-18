@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { Fragment } from "react";
-import { Header } from "../components";
+import { Head } from "../components";
 import { getAllPosts } from "../services/api";
 
 export default function Page({ posts }) {
   const summary = (index, post) => {
     if (index === 0) {
       return (
-        <div className="home_content__article-body-summary">{post.summary}</div>
+        <div className="home_content__article-body-summary">
+          {post.summary ?? post?.content?.slice(0, 140)}
+        </div>
       );
     }
     return;
@@ -15,7 +17,7 @@ export default function Page({ posts }) {
 
   return (
     <>
-      <Header />
+      <Head />
       <section className="home_content">
         {posts?.map((post, index) => (
           <article

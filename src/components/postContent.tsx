@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import { Header } from ".";
+import { Head } from ".";
 import CONFIGS from "../services/configs";
 
 type PostType = {
@@ -20,7 +20,7 @@ const { SITEURL } = CONFIGS;
 export const PostContent = ({ post }: Props) => {
   return (
     <>
-      <Header
+      <Head
         title={post.title}
         meta={{
           ogTitle: post.title,
@@ -33,7 +33,7 @@ export const PostContent = ({ post }: Props) => {
         <>
           <link href={`./static/styles/article.css`} rel="stylesheet" />
         </>
-      </Header>
+      </Head>
       <section className="article_content" container={"true"}>
         <article className="article_content-body">
           <h1 className="article_content-title">{post.title} {

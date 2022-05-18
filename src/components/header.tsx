@@ -1,75 +1,39 @@
-import React from "react";
-import NextHead from "next/head";
+import { useContext } from "react";
+import Link from "next/link";
 import CONFIGS from "../services/configs";
 
-const {
-  AUTHOR,
-  FEED_DOMAIN,
-  FEED_ALL_ATOM,
-  SITE_BAR_TITLE,
-  SITEURL,
-  SITEDESCRIPTION,
-  HASH_GRAVATAR,
-} = CONFIGS;
+import { ToggleThemeButton, Menu } from "./";
+import { HeaderStyle } from "./styles/header.style";
 
-export const Header = ({ title = "", children = null, meta = {} }) => (
-  <NextHead>
-    <meta charSet="UTF-8" />
-    <title>
-      {title ? title + " - " : null}
-      {SITE_BAR_TITLE}
-    </title>
-    {/* META */}
-    <meta name="description" content={meta?.description || ""} />
-    <meta name="author" content={AUTHOR} />
-    <meta name="robots" content="noimageindex" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-      key="viewport"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#32373d"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="#f5f5f5"
-    />{" "}
-    /
-    <meta property="og:title" content={`${meta?.ogTitle ?? SITE_BAR_TITLE}`} />
-    <meta
-      property="og:description"
-      content={`${meta?.ogDescription ?? SITEDESCRIPTION}`}
-    />
-    <meta
-      property="og:image"
-      content={
-        meta?.ogImage ??
-        `https://www.gravatar.com/avatar/${HASH_GRAVATAR}?s=720`
-      }
-    />
-    <meta property="og:url" content={`${meta?.ogUrl ?? SITEURL}/`} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@paulofrauches" />
-    <meta name="twitter:creator" content="@paulofrauches" />
-    <meta
-      name="twitter:image:alt"
-      content={`${meta?.twitterAlt ?? SITE_BAR_TITLE}`}
-    />
-    {/* link */}
-    <link rel="icon" href="./static/images/favicon.png" />
-    <link rel="preconnect" href="https://www.google-analytics.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link
-      href={`${FEED_DOMAIN}/${FEED_ALL_ATOM}`}
-      type="application/atom+xml"
-      rel="alternate"
-      title={`${SITE_BAR_TITLE} - Atom Feed`}
-    />
-    {children}
-    {/* Scripts */}
-  </NextHead>
-);
+const { SITEURL, SITENAME, SITE_NAME_SUBTITLE } = CONFIGS;
+
+export const Header = ({ toggleTheme, ThemeContext }) => {
+  const { isDarkTheme = false } = useContext(ThemeContext);
+  const headerStyle = HeaderStyle({ isDarkTheme });
+
+  return (
+    <>
+      <a className="site__skip-content" tab-index="0" href="#start-site">
+        Pular para o conteúdo
+      </a>
+      <header className="header_site" id="start-page">
+        <div className="header_site--wrapper">
+          <Menu />
+          <span className="header_site--title">
+            <Link
+              href={`${SITEURL}`}
+              className="header_site--title-link"
+              aria-label={`${SITENAME}. ${SITE_NAME_SUBTITLE}. Ir para página inicial.`}
+            >
+              <a>
+                <span className="header_site--title-name">{SITENAME}</span>{" "}
+                {SITE_NAME_SUBTITLE}
+              </a>
+            </Link>
+          </span>
+          <ToggleThemeButton onClicked={toggleTheme} />
+        </div>
+      </header>
+    </>
+  );
+};

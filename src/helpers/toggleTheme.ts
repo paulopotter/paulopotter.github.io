@@ -1,20 +1,4 @@
-import { useEffect, useState } from "react";
-
-
-// const getDarkTheme = () => {
-//   const [isDarkTheme, setIsDarkTheme] = useState(false)
-
-//   useEffect(() => {
-//     setIsDarkTheme( window.localStorage.getItem('isDarkMode') === 'true')
-//   }, [isDarkTheme]);
-
-//   return isDarkTheme
-// }
-
-// const isDarkTheme = getDarkTheme()
-const isDarkTheme = false
-
-const toggleTheme = () => {
+export const toggleThemeStorage = (isDarkTheme = false) => {
   const html = document.querySelector('html');
   const isDarkMode = html.classList.contains('theme--dark') || isDarkTheme
 
@@ -27,9 +11,4 @@ const toggleTheme = () => {
     html.classList.remove('theme--light');
     html.classList.add('theme--dark');
   }
-}
-
-export {
-  toggleTheme,
-  isDarkTheme,
 }
