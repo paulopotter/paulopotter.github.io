@@ -8,25 +8,24 @@ import { HeaderStyle } from "./styles/header.style";
 const { SITEURL, SITENAME, SITE_NAME_SUBTITLE } = CONFIGS;
 
 export const Header = ({ toggleTheme, ThemeContext }) => {
-  const { isDarkTheme = false } = useContext(ThemeContext);
+  const { isDarkTheme } = useContext(ThemeContext);
   const headerStyle = HeaderStyle({ isDarkTheme });
 
   return (
     <>
-      <a className="site__skip-content" tab-index="0" href="#start-site">
+      <a className={headerStyle.skipContent} tab-index="0" href="#start-site">
         Pular para o conteúdo
       </a>
-      <header className="header_site" id="start-page">
-        <div className="header_site--wrapper">
+      <header className={headerStyle.header} id="start-page">
+        <div className={headerStyle.wrapper}>
           <Menu />
-          <span className="header_site--title">
-            <Link
-              href={`${SITEURL}`}
-              className="header_site--title-link"
-              aria-label={`${SITENAME}. ${SITE_NAME_SUBTITLE}. Ir para página inicial.`}
-            >
-              <a>
-                <span className="header_site--title-name">{SITENAME}</span>{" "}
+          <span className={headerStyle.title}>
+            <Link href={`${SITEURL}`}>
+              <a
+                className={headerStyle.titleLink}
+                aria-label={`${SITENAME}. ${SITE_NAME_SUBTITLE}. Ir para página inicial.`}
+              >
+                <span className={headerStyle.titleName}>{SITENAME}</span>{" "}
                 {SITE_NAME_SUBTITLE}
               </a>
             </Link>

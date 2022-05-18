@@ -26,11 +26,9 @@ export default function MyApp({ Component, pageProps }) {
 
     if (
       isDark ||
-      // isSODarkMode
       (window.localStorage.getItem("isDarkMode") !== "false" && isSODarkMode)
     ) {
       toggleTheme();
-      setIsDark(true);
     }
     setCanRender(true);
   }, []);

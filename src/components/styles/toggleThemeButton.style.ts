@@ -20,22 +20,21 @@ export const ThemeButtonStyle = createUseStyles({
     '&:active, &:hover, &:focus' : {
       'background-color': THEME_VALUE(isDarkTheme, "changeThemeButtonBg"),
     },
-
-    '@media (min-width: 1300px)': {
-      left: '83%',
-      right: 'inherit',
-    },
-    '@media (max-width: 1299px)': {
-      left: 'inherit',
-      top: '3%',
-      right: 0,
-      transform: 'translateX(100%)',
-    },
   }),
 
   hasJs: {
     '&$button':{
         transform: 'translate(0, 100%)',
+        '@media (min-width: 1300px)': {
+          left: '83%',
+          right: 'inherit',
+        },
+        '@media (max-width: 1299px)': {
+          left: 'inherit',
+          top: '3%',
+          right: 0,
+          transform: 'translateX(100%)',
+        },
     },
   },
 
