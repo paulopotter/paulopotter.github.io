@@ -8,6 +8,7 @@ import CONFIGS from "../services/configs";
 import { PostStyle } from "./styles/postContent.style";
 import rehypeSlug from "rehype-slug";
 import rehypeFigure from "rehype-figure";
+import rehypeRewrite from "rehype-rewrite";
 
 type PostType = {
   content: string;
@@ -54,6 +55,22 @@ export const PostContent = ({ post }: Props) => {
                 rehypeRaw,
                 rehypeSlug,
                 [rehypeFigure, { className: postStyle.contentFigure }],
+                [
+                  rehypeRewrite,
+                  {
+                    rewrite: (node, index, parent) => {
+                      if (
+                        node.tagName == "img" &&
+                        !(
+                          node.properties.src.indexOf("http://") == 0 ||
+                          node.properties.src.indexOf("https://") == 0
+                        )
+                      ) {
+                        node.properties.src = fixImgSRC(node.properties.src);
+                      }
+                    },
+                  },
+                ],
               ]}
               components={{
                 h2({ node, className, children, ...props }) {
@@ -97,7 +114,7 @@ const CoverImage = ({ post, postStyle }) => {
         <figure className={postStyle.articleCover}>
           <img
             className={postStyle.articleCoverImg}
-            src={post.cover_image}
+            src={fixImgSRC(post.cover_image)}
             alt={`"${post?.cover_image_alt}"`}
           />
           <FigureCaption post={post} postStyle={postStyle} />
@@ -118,3 +135,10 @@ const FigureCaption = ({ post, postStyle }) =>
       )}
     </figcaption>
   );
+
+const fixImgSRC = (src: string): string => {
+  if (src.indexOf("http://") == 0 || src.indexOf("https://") == 0) {
+    return src;
+  }
+  return src.replace("./", "../");
+};

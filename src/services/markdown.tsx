@@ -30,27 +30,3 @@ const CodeBlock = ({ language, value }) => {
 };
 
 export default { toHTML };
-
-/*
-  * remark-a11y-emoji - https://github.com/florianeckerstorfer/remark-a11y-emoji
-  * remark-lint - https://github.com/remarkjs/remark-lint
-  * remark-remove-comments - https://github.com/alvinometric/remark-remove-comments
-  * rehype-meta - https://github.com/rehypejs/rehype-meta
-  * rehype-minify - https://github.com/rehypejs/rehype-minify
-
-  ? remark-code-frontmatter - https://github.com/s0/remark-code-frontmatter
-  ? remark-directive - https://github.com/remarkjs/remark-directive
-  ? remark-directive-rehype - https://github.com/IGassmann/remark-directive-rehype
-  ? remark-frontmatter - https://github.com/remarkjs/remark-frontmatter
-  ? remark-mdx - https://github.com/mdx-js/mdx/tree/main/packages/remark-mdx
-  ? remark-img-links - https://github.com/Pondorasti/remark-img-links
-  ? remark-macro - https://github.com/dimerapp/remark-macro
-  ? remark-oembed - https://github.com/agentofuser/remark-oembed
-  ? remark-prettier - https://github.com/remcohaszing/remark-prettier
-  ? remark-sectionize - https://github.com/jake-low/remark-sectionize
-  ? remark-title - https://github.com/RichardLitt/remark-title
-  ? remark-typescript - https://github.com/trevorblades/remark-typescript
-  ?
-
-
-*/

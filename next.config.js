@@ -27,3 +27,6 @@ module.exports = {
   // },
 }
 
+module.exports = {
+  trailingSlash: true,
+}

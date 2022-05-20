@@ -29,6 +29,7 @@
     "rehype-document": "^6.0.1",
     "rehype-figure": "^1.0.1",
     "rehype-raw": "^6.1.1",
+    "rehype-rewrite": "^3.0.6",
     "rehype-slug": "^5.0.1",
     "remark": "^14.0.2",
     "remark-frontmatter": "^4.0.1",
