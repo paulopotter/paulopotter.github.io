@@ -26,6 +26,8 @@ Migração do pelican para nextjs feita baseado nos posts
 
 ### Plugins utilizados:
 
+- [Disqus react](https://github.com/disqus/disqus-react)
+
 - rehype:
   -
 - remark:

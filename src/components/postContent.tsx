@@ -10,6 +10,8 @@ import rehypeSlug from "rehype-slug";
 import rehypeFigure from "rehype-figure";
 import rehypeRewrite from "rehype-rewrite";
 
+import { DiscussionEmbed } from "disqus-react";
+
 type PostType = {
   content: string;
   date: string;
@@ -102,6 +104,18 @@ export const PostContent = ({ post }: Props) => {
 
           {/* <SeriesPosts post={post} /> */}
         </article>
+      </section>
+      {/* // url: "https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html", */}
+      <section>
+        <DiscussionEmbed
+          shortname="umdevqualquer"
+          config={{
+            url: `${window.location.href}`,
+            identifier: post.slug,
+            title: post.title,
+            language: "pt_BR",
+          }}
+        />
       </section>
     </>
   );

@@ -18,6 +18,9 @@ export function ToggleThemeButton({ onClicked = () => {} }) {
     event.currentTarget.ariaLabel = `Trocar para o tema ${
       isDarkTheme ? "claro" : "escuro"
     }`;
+    if (window.DISQUS) {
+      window.DISQUS.host._loadEmbed(); // to update disqus theme
+    }
   };
 
   return (

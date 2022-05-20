@@ -39,6 +39,6 @@ export const PostStyle = createUseStyles({
     'text-align': 'center',
 
     'max-width': '100%'
-  }
+  },
 
 })
