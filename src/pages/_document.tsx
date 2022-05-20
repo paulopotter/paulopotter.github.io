@@ -1,15 +1,12 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { useState } from "react";
 
 import CONFIGS from "../services/configs";
-import { isDarkTheme } from "../helpers";
 
 const { GA_CODE } = CONFIGS;
 
 const Document = () => {
-  const [isDark, setIsDark] = useState(isDarkTheme ?? false);
   return (
-    <Html lang="pt-BR" className={`theme--${isDark ? "dark" : "light"}`}>
+    <Html lang="pt-BR">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

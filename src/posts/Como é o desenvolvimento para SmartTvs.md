@@ -2,7 +2,7 @@
 Title: Como é o desenvolvimento para Smart TVs
 Category: Smart TV, Js, React
 Date: "2019-10-09"
-cover_image: smart-tv.png
+cover_image: ./images/smart-tv.png
 cover_image_by: Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 ---
 
@@ -17,7 +17,7 @@ Graças a isso, eu gostaria de compartilhar um pouco da minha experiência nessa
 
 - Saber javascript.
 
-<center>![meme He-man](./images/como-e-o-desenvolvimento-para-smart-tvs/6d179b75c54cc2bada2a1688ae3c6a04.jpg) <br/><sup>*Créditos:* na imagem</sup></center>
+![meme He-man. *Créditos:* na imagem](./images/como-e-o-desenvolvimento-para-smart-tvs/6d179b75c54cc2bada2a1688ae3c6a04.jpg)
 
 ## Entendendo um pouco mais sobre as Smart TVs:
 
@@ -86,7 +86,7 @@ Para ver a tradução de cada letra (como, por exemplo, saber qual letra represe
 - LG:
 
 Encontrei essa imagem que facilita a explicação no caso da LG:
-<center> ![tab-tv image](./images/como-e-o-desenvolvimento-para-smart-tvs/LG-TV-model-identification-2018-2019-new.jpg) <br/><br/><sup>*Créditos:* na imagem</sup></center>
+![tab-tv image. <sup>*Créditos:* na imagem</sup>](./images/como-e-o-desenvolvimento-para-smart-tvs/LG-TV-model-identification-2018-2019-new.jpg)
 
 Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse [esse link](http://en.tab-tv.com/?page_id=7111) (não oficial).
 

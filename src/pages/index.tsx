@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment, useContext } from "react";
 import { Head } from "../components";
 import { getAllPosts } from "../services/api";
-import { HomeStyle } from "./styles/home.style";
+import { HomeStyle } from "../styles/";
 import { ThemeContext } from "./_app";
 
 export default function Page({ posts }) {
@@ -61,7 +61,7 @@ export default function Page({ posts }) {
               <a href={`${post.slug}`} className={homeStyle.imageLink}>
                 <img
                   className={homeStyle.imageCover}
-                  src={`./images/${post?.cover_image}`}
+                  src={`${post?.cover_image}`}
                   alt={`${post?.cover_image_alt || ""}`}
                   height={index > 1 ? "144" : "500"}
                   width={index > 1 ? "144" : "500"}

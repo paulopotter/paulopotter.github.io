@@ -23,10 +23,9 @@ export async function getStaticProps({ params }) {
   ]);
 
   // console.log(post);
-
-  post.content = await markdown
-    .toHTML(post.content)
-    .then((value) => value.value);
+  const md = await markdown.toHTML(post.content);
+  post.content = md.value;
+  post.readingTime = md.data.readingTime?.text.replace(" read", ""); //.replace(/[^\d\.]*/g, "");
   return {
     props: { post },
   };

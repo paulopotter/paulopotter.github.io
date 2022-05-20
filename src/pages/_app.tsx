@@ -1,11 +1,12 @@
 import "../components/styles/vendor/concisecss/concise.css";
 
 import { createContext, useEffect, useState } from "react";
+import { JssProvider } from "react-jss";
+
 import { toggleThemeStorage } from "../helpers/toggleTheme";
 import { Footer, Header } from "../components";
-import { GlobalStyle } from "./styles/reset.style";
-
-import { JssProvider } from "react-jss";
+import { GlobalStyle } from "../styles/reset.style";
+import { ResetStyle } from "../styles/html.style";
 
 export const ThemeContext = createContext({ isDarkTheme: false });
 
@@ -13,10 +14,13 @@ export const ThemeContext = createContext({ isDarkTheme: false });
 export default function MyApp({ Component, pageProps }) {
   const [isDark, setIsDark] = useState(false);
   const [canRender, setCanRender] = useState(false);
+  const darkTheme = ResetStyle({ isDarkTheme: true });
+  const lightTheme = ResetStyle({ isDarkTheme: false });
+  const themes = { light: lightTheme, dark: darkTheme };
 
   const toggleTheme = () => {
     setIsDark(!isDark);
-    toggleThemeStorage(isDark);
+    toggleThemeStorage(isDark, themes);
   };
 
   useEffect(() => {
@@ -33,6 +37,8 @@ export default function MyApp({ Component, pageProps }) {
     setCanRender(true);
   }, []);
 
+  GlobalStyle();
+
   return (
     canRender && (
       <ThemeContext.Provider value={{ isDarkTheme: isDark }}>
@@ -48,7 +54,6 @@ export default function MyApp({ Component, pageProps }) {
             </div>
           </div>
           <Footer />
-          <GlobalStyle isDarkTheme={isDark} />
         </JssProvider>
       </ThemeContext.Provider>
     )

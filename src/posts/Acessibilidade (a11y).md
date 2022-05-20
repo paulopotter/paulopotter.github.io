@@ -2,7 +2,7 @@
 title: Você já pensou sobre Acessibilidade (a11y)?
 Category: Acessibilidade, Smart TV
 Date: "2021-05-23"
-cover_image: acessibility-uxplanet.jpeg
+cover_image: ./images/acessibility-uxplanet.jpeg
 cover_image_by: Imagem retirada do <a href="https://uxplanet.org/web-accessibility-explained-c2408636eee0" alt="Simbolo da acessibilidade para todos.">UX Planet</a>
 cover_image_alt: Simbolo da acessibilidade para todos.
 ---
@@ -30,7 +30,7 @@ Com isso começamos a pensar mais como podemos tornar o nosso app mais acessíve
 
 <figure>
     <img src="./images/voce-ja-pensou-sobre-acessibilidade-a11y/606090-637491159569845272-16x9.jpg" alt="Imagem com três simbolos representando: deficiência cognitiva, deficiência visual e deficiência auditiva. No fundo uma tela com o símbolo da acessibilidade na web.">
-    <center><figurecaption>Créditos: google</figurecaption></center>
+    <center><figcaption>Créditos: google</figcaption></center>
 </figure>
 > Cerca de 15% da população mundial vive com algum tipo de deficiência e em torno de 2.2 bilhões de pessoas têm deficiência visual ou cegueira. - *World Health Organization report from 2019*
 
@@ -63,12 +63,14 @@ Além de utilizar as tags certas para o que elas foram criadas, como **`nav`** p
 
 ## E nas Smart TVs?
 
-<figure>
+!["Tv com um balão representando a tv falando o nome do canal na tela."](./images/voce-ja-pensou-sobre-acessibilidade-a11y/tv_voice_guide-v1.png '<a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a>')
+
+<!-- figure>
     <center>
         <img src="./images/voce-ja-pensou-sobre-acessibilidade-a11y/tv_voice_guide-v1.png" alt="Tv com um balão representando a tv falando o nome do canal na tela."><br/>
-        <figurecaption>Créditos: <a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a></figurecaption>
+        <figcaption>Créditos: <a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a> </figcaption>
     </center>
-</figure>
+</figure-->
 
 Como o meu foco é Smart TVs, não posso deixar de falar como podemos também melhorar o uso das pessoas com deficiencia nesse device.
 

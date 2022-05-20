@@ -2,7 +2,7 @@
 Title: Como fazer reticências(ellipsis) apenas com css
 Category: Css, Tips
 Date: "2017-09-11"
-cover_image: reticências.jpg
+cover_image: ./images/reticências.jpg
 cover_image_by: Imagem retirada do <a href="https://www.google.com/search?q=reticencias&tbm=isch&ved=2ahUKEwjsqbSd_u7uAhVVMrkGHf-GCdUQ2-cCegQIABAA&oq=reticencias&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgQIABAeMgQIABAeUJoLWJoLYOkNaABwAHgAgAFqiAFqkgEDMC4xmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=bggsYOy6MtXk5OUP_42mqA0&bih=981&biw=2520#imgrc=msXkVi-Jn8jP0M" title="google">google</a>
 cover_image_alt: Reticências
 ---

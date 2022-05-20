@@ -1,5 +1,5 @@
 import {createUseStyles} from 'react-jss'
-import { FONT, THEME_VALUE, MEDIA_QUERIES } from '../../config/config.style'
+import { FONT, THEME_VALUE, MEDIA_QUERIES } from '../config'
 
 export const HomeStyle = createUseStyles({
   content: {

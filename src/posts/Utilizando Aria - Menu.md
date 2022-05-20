@@ -3,7 +3,7 @@ Title: Utilizando ARIA no seu projeto - Menu
 Category: Acessibilidade, HTML
 Date: '2021-09-17'
 Series: Utilizando ARIA no seu projeto
-cover_image: teclado-botao-cadeirante.jpg
+cover_image: ./images/teclado-botao-cadeirante.jpg
 cover_image_by: Imagem retirada do <a href="https://www.sabrehospitality.com/blog/wcag-is-your-hotel-fully-accessible-to-all-online-visitors/" alt="Botão no teclado com o simbolo de um cadeirante.">Google imagens</a>
 cover_image_alt: Botão no teclado com o simbolo de um cadeirante.
 ---
@@ -164,7 +164,7 @@ Seus estados e propriedades são os mesmos do `menu` (logo não irei repeti-los)
 <figure>
     <center>
         <img src="./images/voce-ja-pensou-sobre-acessibilidade-a11y/tv_voice_guide-v1.png" alt="Tv com um balão representando a tv falando o nome do canal na tela."><br/>
-        <figurecaption>Créditos: <a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a></figurecaption>
+        <figcaption>Créditos: <a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a></figcaption>
     </center>
 </figure>
 
@@ -176,7 +176,7 @@ A tabela a seguir, mostra o suporte dela para as propriedades mostradas nesse po
 <figure>
     <center>
         <img src='./images/Utilizando Aria - Menu/Tabela samsung menu.png' alt="Tabela de especificações da Samsung sobre a utilização da tag aria do menu, menuitem e menubar"><br/>
-        <figurecaption>Créditos: <a href="https://developer.samsung.com/smarttv/develop/guides/fundamentals/text-to-speech.html">Samsung</a></figurecaption>
+        <figcaption>Créditos: <a href="https://developer.samsung.com/smarttv/develop/guides/fundamentals/text-to-speech.html">Samsung</a></figcaption>
     </center>
 </figure>
 

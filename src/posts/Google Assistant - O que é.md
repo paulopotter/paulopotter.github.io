@@ -3,7 +3,7 @@ Title: Google Assistant - o que é?
 Category: Google Assistant
 Series: Google Assistant
 Date: '2018-05-30'
-cover_image: google-assistant-ios1.webp
+cover_image: './images/google-assistant-ios1.webp'
 cover_image_by: techcrunch.com
 cover_image_alt: Google Assistant IOS App
 cover_image_link: https://techcrunch.com/wp-content/uploads/2018/05/google-assistant-ios1.jpg?w=990&crop=1
@@ -18,7 +18,8 @@ Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente,
 
 ## O que é?
 
-<center>![screenshot](./images/google-assistant-o-que-e/http___o.aolcdn.com_hss_storage_midas_83ae1071fcb16939aefc6345313200f8_205280619_18512316_1862455314020517_7322917835225694208_n.jpg)</center>
+![screenshot](./images/google-assistant-o-que-e/http___o.aolcdn.com_hss_storage_midas_83ae1071fcb16939aefc6345313200f8_205280619_18512316_1862455314020517_7322917835225694208_n.jpg)
+
 
 O [Google Assistant](https://assistant.google.com/intl/pt_br/) é um assistente pessoal criado pelo o google, para facilitar a vida das pessoas.
 Nele é possível criar lembretes, saber o numéro do seu voo, ativar programas de músicas, entre outras coisas.

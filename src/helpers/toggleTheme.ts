@@ -1,14 +1,13 @@
-export const toggleThemeStorage = (isDarkTheme = false) => {
-  const html = document.querySelector('html');
-  const isDarkMode = html.classList.contains('theme--dark') || isDarkTheme
+export const toggleThemeStorage = (isDarkTheme, themes) => {
+  const body = document.getElementsByTagName('body')[0]
+  const isDarkMode = body.classList.contains(themes.dark.body) || isDarkTheme
+
 
   if(isDarkMode){
     window.localStorage.setItem('isDarkMode', "false");
-    html.classList.remove('theme--dark');
-    html.classList.add('theme--light');
+    body.className = themes.light.body
   } else {
     window.localStorage.setItem('isDarkMode', "true");
-    html.classList.remove('theme--light');
-    html.classList.add('theme--dark');
+    body.className = themes.dark.body
   }
 }

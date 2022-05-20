@@ -3,7 +3,7 @@ Title: Criando sua primeira APP para Smart TVs
 Category: Smart TV, Js, React
 Date: '2020-01-19'
 Series: Criando sua primeira APP para Smart TVs
-cover_image: smart-tv-pixabay.jpg
+cover_image: ./images/smart-tv-pixabay.jpg
 cover_image_by: Imagem retirada de <a href="https://pixabay.com/pt/illustrations/remoto-controle-tela-tv-exploração-3653882/" title="Tv com controle remoto">PixaBay</a>
 cover_image_alt: Smart Tv from pixabay
 ---
@@ -36,7 +36,8 @@ Porém, você é livre para escolher a sua, podendo utilizar qualquer framework 
 
 ### Configurando o projeto:
 
-<center>![E la vamos nós](./images/criando-sua-primeira-app-para-smart-tvs/tenor.png)<br/><sup>Creditos: google</sup></center>
+![E la vamos nós](./images/criando-sua-primeira-app-para-smart-tvs/tenor.png)
+<center><br/><sup>Creditos: google</sup></center>
 
 Aqui é aquela configuração padrao: aquele nosso `create-react-app` básico (se você não tem o _create-react-app_ é só usar o `npm install -g create-react-app`). Com isso, já começamos a ter a nossa estrutura inicial.
 

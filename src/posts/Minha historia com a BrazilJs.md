@@ -2,7 +2,7 @@
 Title: BrazilJS Conf - Minha história com a maior conferência JS do mundo!
 Category: Smart TV, JS
 Date: '2021-11-21'
-cover_image: minha-historia-com-braziljs/braziljs-conf-2021-banner.png
+cover_image: ./images/minha-historia-com-braziljs/braziljs-conf-2021-banner.png
 cover_image_alt: Banner da BrazilJS conf 2021
 cover_image_link: "http://conf.braziljs.org"
 cover_image_by: Brazil JS conf 2021
@@ -16,11 +16,11 @@ Contarei desde quando eu fui pela primeira vez até como eu virei palestrante da
 Em 2018 eu fui na minha primeira Brazil JS, me apaixonei pela estrutura do local, e curti muito!
 <figure>
     <img src="./images/minha-historia-com-braziljs/2018/DSC_1272.JPG" alt="Ayrton - Programador a bordo, João - doodle cast, Denis e eu." />
-    <center><figurecaption><a href="https://www.youtube.com/channel/UC5fWvbBnaFAi2hJlHRmg5kw">Ayrton do Programador a bordo</a>, <a href="https://open.spotify.com/show/3rPhC7UrxyrIMxsSU3AdrS">João do Doodcast</a>, <a href="https://github.com/dnsaoki2">Denis</a> e eu</figurecaption></center><br/>
+    <center><figcaption><a href="https://www.youtube.com/channel/UC5fWvbBnaFAi2hJlHRmg5kw">Ayrton do Programador a bordo</a>, <a href="https://open.spotify.com/show/3rPhC7UrxyrIMxsSU3AdrS">João do Doodcast</a>, <a href="https://github.com/dnsaoki2">Denis</a> e eu</figcaption></center><br/>
 </figure>
 <figure>
     <img src="./images/minha-historia-com-braziljs/2018/DSC_1242.JPG" alt="Palco da BrazilJS conf 2018" />
-    <center><figurecaption>Palco da BrazilJS conf 2018</figurecaption></center><br/>
+    <center><figcaption>Palco da BrazilJS conf 2018</figcaption></center><br/>
 </figure>
 
 Tiveram várias palestras legais:
@@ -37,11 +37,11 @@ Infelizmente não encontrei todos os vídeos 😞.
 Em 2019, eles conseguiram melhorar ainda mais a experiência.
 <figure>
     <img src="./images/minha-historia-com-braziljs/2019/IMG-20190824-WA0004.jpg" alt="Stand da globo.com na BrazilJS Conf 2019" />
-    <center><figurecaption><span lang="en-US">Stand</span> da globo.com na BrazilJS Conf 2019</figurecaption></center><br/>
+    <center><figcaption><span lang="en-US">Stand</span> da globo.com na BrazilJS Conf 2019</figcaption></center><br/>
 </figure>
 <figure>
     <img src="./images/minha-historia-com-braziljs/2019/DSC_0015.JPG" alt="Palco da Brazil JS Conf 2019" />
-    <center><figurecaption>Palco da Brazil JS Conf 2019</figurecaption></center><br/>
+    <center><figcaption>Palco da Brazil JS Conf 2019</figcaption></center><br/>
 </figure>
 
 <p>E para não perder o padrão, tiveram várias palestras legais:</p>
@@ -59,17 +59,17 @@ Finalmente chegamos no ano de 2021, infelizmente devido à pandemia não houve e
 Eles fizeram uma estrutura para apresentação
 <figure>
     <img src="./images/minha-historia-com-braziljs/2021/BrazilJS-Dia1-1.jpg" alt="Palco da Brazil JS Conf 2021" />
-    <center><figurecaption>Palco da Brazil JS Conf 2021</figurecaption></center><br/>
+    <center><figcaption>Palco da Brazil JS Conf 2021</figcaption></center><br/>
 </figure>
 
 <figure>
     <img src="./images/minha-historia-com-braziljs/2021/BrazilJS-Dia1-2.jpg" alt="Backstage da Brazil JS Conf 2021" />
-    <center><figurecaption>Backstage da Brazil JS Conf 2021</figurecaption></center><br/>
+    <center><figcaption>Backstage da Brazil JS Conf 2021</figcaption></center><br/>
 </figure>
 
 <figure>
     <img src="./images/minha-historia-com-braziljs/2021/screen_shot_2021-10-21_at_10.53.42.png" alt="No Palco da Brazil JS Conf 2021: Jaydson Gomes, Andreza Rocha e Felipe Nascimento" />
-    <center><figurecaption>No Palco da Brazil JS Conf 2021: Jaydson Gomes, Andreza Rocha e Felipe Nascimento</figurecaption></center><br/>
+    <center><figcaption>No Palco da Brazil JS Conf 2021: Jaydson Gomes, Andreza Rocha e Felipe Nascimento</figcaption></center><br/>
 </figure>
 
 Todas as palestras foram ótimas, mas vou destacar as que mais me marcaram:
@@ -93,7 +93,7 @@ Como vocês já devem ter reparado, eu fui convocado para fazer uma palestra! E 
 
 <figure>
     <img src="./images/minha-historia-com-braziljs/2021/BrazilJS-Dia1-193.jpg" alt="Jaydson, eu e Felipe" />
-    <center><figurecaption>Jaydson, eu e Felipe</figurecaption></center><br/>
+    <center><figcaption>Jaydson, eu e Felipe</figcaption></center><br/>
 </figure>
 
 ## E como foi palestrar?

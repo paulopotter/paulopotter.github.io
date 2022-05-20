@@ -14,15 +14,6 @@ export function Menu() {
     setMenuOpened(!isMenuOpened);
   };
 
-  useEffect(() => {
-    window.addEventListener("click", (event) => {
-      // @ts-ignore
-      if (event.target.classList.contains("menu__overlay")) {
-        toggleMenu();
-      }
-    });
-  }, []);
-
   const { isDarkTheme } = useContext(ThemeContext);
 
   const menuStyle = MenuStyle({ isDarkTheme });

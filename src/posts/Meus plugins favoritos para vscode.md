@@ -3,7 +3,7 @@ Title: Meus plugins favoritos para vscode
 Category: Lista, vscode
 Date: "2020-05-02"
 Series: Meus plugins favoritos
-cover_image: blake-connally-unsplash.jpg
+cover_image: ./images/blake-connally-unsplash.jpg
 cover_image_alt: Settings image
 cover_image_by: Photo by Blake Connally on <a href="https://unsplash.com/photos/B3l0g6HLxr8" title="Unsplash">Unsplash</a>
 ---
@@ -44,7 +44,7 @@ Hoje chegou a minha hora de fazer e eu resolvir começar com os plugins que eu u
 
 Fecha sua tag HTML automaticamente.
 
-<center>![Auto close tag](./images/meus-plugins-favoritos-para-vscode/usage.gif)</center>
+![Auto close tag](./images/meus-plugins-favoritos-para-vscode/usage.gif)
 
 [Voltar para o menu](#menu)
 
@@ -52,7 +52,7 @@ Fecha sua tag HTML automaticamente.
 
 Uma forma mais simples de renomear suas tags!
 
-<center>![Auto rename tag](./images/meus-plugins-favoritos-para-vscode/usage-1.gif)</center>
+![Auto rename tag](./images/meus-plugins-favoritos-para-vscode/usage-1.gif)
 
 [Voltar para o menu](#menu)
 
@@ -60,7 +60,7 @@ Uma forma mais simples de renomear suas tags!
 
 Mostra trechos do seu código que não estão cobertos por testes. (Lê o arquivo `coverage/lcov*.info` para buscar essa informação)
 
-<center>![code-coverage](./images/meus-plugins-favoritos-para-vscode/demo.png)</center>
+![code-coverage](./images/meus-plugins-favoritos-para-vscode/demo.png)
 
 [Voltar para o menu](#menu)
 
@@ -68,7 +68,7 @@ Mostra trechos do seu código que não estão cobertos por testes. (Lê o arquiv
 
 *Antigo Visual Studio Code Settings Sync*. Salva e sincroniza suas configurações e extensões do vscode, via gist, para você poder usar as suas configurações do vscode em qualquer lugar!
 
-<center>![code-settings-sync](./images/meus-plugins-favoritos-para-vscode/login-with-github.png)</center>
+![code-settings-sync](./images/meus-plugins-favoritos-para-vscode/login-with-github.png)
 
 [Voltar para o menu](#menu)
 
@@ -81,28 +81,28 @@ Aquela extensão que deveria vir como padrão do vscode! Para quem não sabe o q
 ## <a id="gitlens"></a>[Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 Essa é aquela extensão <strike>dedo duro</strike> que faz um `git blame` na linha ativa. Ela tem outras funcionalidades, porém essa é a mais utilizada.
 
-<center>![gitlens](./images/meus-plugins-favoritos-para-vscode/gitlens-preview.gif)</center>
+![gitlens](./images/meus-plugins-favoritos-para-vscode/gitlens-preview.gif)
 
 [Voltar para o menu](#menu)
 
 ## <a id="markdown-all-in-one"></a>[Markdown all in one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 Essa extensão adiciona vários atalhos para a edição do Markdown. Para mim, que escrevo muito utilizando markdown, é uma mão na roda!
 
-<center>![markdown-all-in-one](./images/meus-plugins-favoritos-para-vscode/toggle-bold.gif)</center>
+![markdown-all-in-one](./images/meus-plugins-favoritos-para-vscode/toggle-bold.gif)
 
 [Voltar para o menu](#menu)
 
 ## <a id="node-tdd"></a>[Node-tdd](https://marketplace.visualstudio.com/items?itemName=prashaantt.node-tdd)
 Adiciona na barra de status do vscode informações sobre os seus testes javascript. Quando ativado, roda seus testes e mostra se eles estão passando ou não.
 
-<center>![node-tdd](./images/meus-plugins-favoritos-para-vscode/node-tdd.gif)</center>
+![node-tdd](./images/meus-plugins-favoritos-para-vscode/node-tdd.gif)
 
 [Voltar para o menu](#menu)
 
 ## <a id="npm-intellisense"></a>[npm intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
 Ajuda na hora de fazer os `import`s do seus arquivos JS.
 
-<center>![npm-intellisense](./images/meus-plugins-favoritos-para-vscode/auto_complete.gif)</center>
+![npm-intellisense](./images/meus-plugins-favoritos-para-vscode/auto_complete.gif)
 
 [Voltar para o menu](#menu)
 
@@ -114,7 +114,7 @@ Extensão para formatar o seu código.
 ## <a id="vscode-colorize"></a>[Colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize)
 Mostra na hora qual é a cor que você está utilizando.
 
-<center>![vscode-colorize](./images/meus-plugins-favoritos-para-vscode/demo_variables.gif)</center>
+![vscode-colorize](./images/meus-plugins-favoritos-para-vscode/demo_variables.gif)
 
 [Voltar para o menu](#menu)
 
@@ -138,7 +138,7 @@ Essa extensão ajuda na hora para saber quais testes estão passando, na sidebar
 
 Essa extensão ajuda com o auto-complete na hora de importar suas funções.
 
-<center>![vscodeintellicode](./images/meus-plugins-favoritos-para-vscode/go.microsoft.gif)</center>
+![vscodeintellicode](./images/meus-plugins-favoritos-para-vscode/go.microsoft.gif)
 
 [Voltar para o menu](#menu)
 
@@ -149,7 +149,7 @@ Essa extensão ajuda com o auto-complete na hora de importar suas funções.
 
 Pacote de icones. =)
 
-<center>![material-icon-theme](./images/meus-plugins-favoritos-para-vscode/fileIcons.png)</center>
+![material-icon-theme](./images/meus-plugins-favoritos-para-vscode/fileIcons.png)
 
 [Voltar para o menu](#menu)
 
@@ -157,7 +157,7 @@ Pacote de icones. =)
 
 Tema que eu estou utilizando no momento.
 
-<center>![theme-panda](./images/meus-plugins-favoritos-para-vscode/editor.jpg)</center>
+![theme-panda](./images/meus-plugins-favoritos-para-vscode/editor.jpg)
 
 
 # That`s all folks

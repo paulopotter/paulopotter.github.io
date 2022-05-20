@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+
 import { Head } from ".";
+import { ThemeContext } from "../pages/_app";
 import CONFIGS from "../services/configs";
+import { PostStyle } from "./styles/postContent.style";
+import rehypeSlug from "rehype-slug";
+import rehypeFigure from "rehype-figure";
 
 type PostType = {
   content: string;
@@ -18,6 +23,9 @@ interface Props {
 const { SITEURL } = CONFIGS;
 
 export const PostContent = ({ post }: Props) => {
+  const { isDarkTheme } = useContext(ThemeContext);
+  const postStyle = PostStyle({ isDarkTheme });
+
   return (
     <>
       <Head
@@ -27,78 +35,86 @@ export const PostContent = ({ post }: Props) => {
           ogDescription: post?.summary,
           ogImage: post?.cover_image_url,
           ogUrl: `${SITEURL}/${post.slug}`,
-          twitterAlt: post.cover_image_alt,
+          twitterAlt: post?.cover_image_alt,
         }}
-      >
-        <>
-          <link href={`./static/styles/article.css`} rel="stylesheet" />
-        </>
-      </Head>
-      <section className="article_content" container={"true"}>
-        <article className="article_content-body">
-          <h1 className="article_content-title">{post.title} {
-            post?.subtitle && (
-              <small> {post.subtitle} </small>)
-          }
+      ></Head>
+      <section className={postStyle.articleSection}>
+        <article className={postStyle.articleBody}>
+          <h1 className={postStyle.articleTitle}>
+            {post.title} {post?.subtitle && <small> {post.subtitle} </small>}
           </h1>
-          {
-            post?.readtime_string && (
-              <small> Tempo médio de leitura: {post.readtime_string}}.</small>)
-          }
-          <div className="article_content-content">
-            <CoverImage post={post} />
+          {post?.readingTime && (
+            <small> Tempo médio de leitura: {post.readingTime}.</small>
+          )}
+          <div className={postStyle.articleContent}>
+            <CoverImage post={post} postStyle={postStyle} />
 
             <ReactMarkdown
-              rehypePlugins={[rehypeRaw]}
+              rehypePlugins={[
+                rehypeRaw,
+                rehypeSlug,
+                [rehypeFigure, { className: postStyle.contentFigure }],
+              ]}
+              components={{
+                h2({ node, className, children, ...props }) {
+                  return !props.id.includes("footnote") ? (
+                    <h2 id={props.id} className={className}>
+                      {children}
+                    </h2>
+                  ) : (
+                    <hr />
+                  );
+                },
+                img({ node, className, children, ...props }) {
+                  // TODO: corrigir imagens e descrições
+                  return (
+                    <figure className={postStyle.articleCover}>
+                      <img
+                        className={postStyle.articleCoverImg}
+                        src={props.src}
+                        alt={props.alt}
+                      />
+                    </figure>
+                  );
+                },
+              }}
             >
               {post.content}
             </ReactMarkdown>
           </div>
 
-          <SeriesPosts post={post} />
-
+          {/* <SeriesPosts post={post} /> */}
         </article>
       </section>
     </>
   );
 };
 
-
-const CoverImage = ({ post }) => {
+const CoverImage = ({ post, postStyle }) => {
   return (
     <>
-      {
-        post?.cover_image && (
-          <figure className='article_cover'>
-            <img
-              className='article_cover__img image-process-article_cover'
-              src={`./static/images/${post.cover_image}`}
-              alt={`"${post?.cover_image_alt}"`}
-            />
-            <FigureCaption post={post} />
-          </figure>
-        )
-      }
+      {post?.cover_image && (
+        <figure className={postStyle.articleCover}>
+          <img
+            className={postStyle.articleCoverImg}
+            src={post.cover_image}
+            alt={`"${post?.cover_image_alt}"`}
+          />
+          <FigureCaption post={post} postStyle={postStyle} />
+        </figure>
+      )}
     </>
-  )
-}
+  );
+};
 
-const FigureCaption = ({ post }) => (
+const FigureCaption = ({ post, postStyle }) =>
   post?.cover_image_by && (
-    <figcaption className='article_cover__credit'>Créditos: {" "}
+    <figcaption className={postStyle.articleCoverCredit}>
+      Créditos:{" "}
       {post?.cover_image_link ? (
-        <a href={`${post.cover_image_link}`}>{post.cover_image_by || ''}</a>)
-        :
-        post?.cover_image_by || ''
-      }
+        <a href={`${post.cover_image_link}`}>{post.cover_image_by || ""}</a>
+      ) : (
+        post?.cover_image_by || ""
+      )}
     </figcaption>
-  )
-)
-
-// const SeriesPosts = ({ post }) => {
-
-//   if(post.series){
-//     console.log(Object.keys(post))
-//   }
-//   return
-// }
+  );
