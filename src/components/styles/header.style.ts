@@ -5,21 +5,21 @@ import { THEME_VALUE, FONT } from '../../config/config.style'
 export const HeaderStyle = createUseStyles({
   skipContent: ({isDarkTheme}) => ({
     'font-size': '1em',
-    'background-color': THEME_VALUE(isDarkTheme, "changeThemeButtonBg"),
+    'background-color': [THEME_VALUE(isDarkTheme, "changeThemeButtonBg"), '!important'],
     height: '3em',
     padding: '0.5em 1em',
     position: 'absolute',
     transform: 'translateY(-100%)',
     transition: 'transform 0.3s',
-    color: THEME_VALUE(isDarkTheme, "changeThemeButton"),
+    color:[ THEME_VALUE(isDarkTheme, "changeThemeButton"), '!important'],
 
     '&:visited': {
-        color: THEME_VALUE(isDarkTheme, "changeThemeButton"),
+        color:[ THEME_VALUE(isDarkTheme, "changeThemeButton"), '!important'],
     },
 
     '&:focus': {
       transform: 'translateY(0%)',
-      outline:` 3px solid ${THEME_VALUE(isDarkTheme, "changeThemeButton")}`,
+      outline:` 3px solid ${THEME_VALUE(isDarkTheme, "changeThemeButton")} !important`,
     }
   }),
 

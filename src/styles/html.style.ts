@@ -8,10 +8,8 @@ export const ResetStyle = createUseStyles({
       "background-color": THEME_VALUE(isDarkTheme, "background"),
       color: THEME_VALUE(isDarkTheme, "text"),
 
-      '& *': {
-        '&:focus': {
-            outline: `3px solid ${THEME_VALUE(isDarkTheme, 'link')}`,
-        }
+      '& *:focus': {
+          outline: `3px solid ${THEME_VALUE(isDarkTheme, 'link')}`,
       },
 
       '& a': {

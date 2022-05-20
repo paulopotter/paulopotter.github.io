@@ -60,7 +60,7 @@ export const Head = ({ title = "", children = null, meta = {} }) => (
       content={`${meta?.twitterAlt ?? SITE_BAR_TITLE}`}
     />
     {/* link */}
-    <link rel="icon" href="./static/images/favicon.png" />
+    <link rel="icon" href="./images/favicon.png" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link

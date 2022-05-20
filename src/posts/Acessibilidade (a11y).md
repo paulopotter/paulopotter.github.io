@@ -117,7 +117,7 @@ Espero que após ler esse post, você tenha se interessado nesse assunto e comec
 - Estudos e pesquisas, na internet, sobre o assunto.
 
 
-## <a id="links-uteis"></a>Links uteis
+## Links uteis
 
 - [Artigo sobre usabilidade em Smart TVs (🇺🇸)](https://www.nngroup.com/articles/smart-tv-usability/).
 - [Matéria sobre novas features de acessibilidade em Smart TVs da Samsung (🇺🇸)](https://www.cnet.com/news/samsung-makes-its-2021-tvs-more-accessible-for-people-with-vision-or-hearing-disabilities/) e [algumas dessas features explicada pela a própria Samsung](https://www.samsung.com/br/accessibility/tv/).

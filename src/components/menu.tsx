@@ -43,6 +43,8 @@ export function Menu() {
         className={classNames(menuStyle.menuList, {
           [menuStyle.menuListActive]: isMenuOpened,
         })}
+        aria-hidden={!isMenuOpened}
+        tab-index={!isMenuOpened ? -1 : null}
       >
         {Object.keys(MENU_LINKS)?.map((menuItem, index) => (
           <li className={menuStyle.menuListItem} key={`menu-${index}`}>
