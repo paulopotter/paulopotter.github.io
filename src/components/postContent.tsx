@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
@@ -11,6 +11,22 @@ import rehypeFigure from "rehype-figure";
 import rehypeRewrite from "rehype-rewrite";
 
 import { DiscussionEmbed } from "disqus-react";
+
+import {
+  dracula,
+  xonokai,
+  materialOceanic,
+  materialLight,
+} from "react-syntax-highlighter/dist/cjs/styles/prism";
+
+import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
+import typescript from "react-syntax-highlighter/dist/cjs/languages/prism/typescript";
+import scss from "react-syntax-highlighter/dist/cjs/languages/prism/scss";
+import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
+import markdown from "react-syntax-highlighter/dist/cjs/languages/prism/markdown";
+import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
+
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 
 type PostType = {
   content: string;
@@ -25,9 +41,24 @@ interface Props {
 }
 const { SITEURL } = CONFIGS;
 
+SyntaxHighlighter.registerLanguage("typescript", typescript);
+SyntaxHighlighter.registerLanguage("tsx", tsx);
+SyntaxHighlighter.registerLanguage("scss", scss);
+SyntaxHighlighter.registerLanguage("bash", bash);
+SyntaxHighlighter.registerLanguage("markdown", markdown);
+SyntaxHighlighter.registerLanguage("json", json);
+
 export const PostContent = ({ post }: Props) => {
   const { isDarkTheme } = useContext(ThemeContext);
   const postStyle = PostStyle({ isDarkTheme });
+
+  const [codeTheme, setCodeTheme] = useState(
+    isDarkTheme ? materialOceanic : dracula
+  );
+
+  useEffect(() => {
+    setCodeTheme(isDarkTheme ? materialOceanic : dracula);
+  }, [isDarkTheme]);
 
   return (
     <>
@@ -53,6 +84,7 @@ export const PostContent = ({ post }: Props) => {
             <CoverImage post={post} postStyle={postStyle} />
 
             <ReactMarkdown
+              skipHtml
               rehypePlugins={[
                 rehypeRaw,
                 rehypeSlug,
@@ -94,6 +126,25 @@ export const PostContent = ({ post }: Props) => {
                         alt={props.alt}
                       />
                     </figure>
+                  );
+                },
+                code({ node, inline, className, children, ...props }) {
+                  const match = /language-(\w+)/.exec(className || "");
+                  return !inline && match ? (
+                    <SyntaxHighlighter
+                      showLineNumbers
+                      style={codeTheme}
+                      language={match[1]}
+                      // PreTag="div"
+
+                      {...props}
+                    >
+                      {String(children).replace(/\n$/, "")}
+                    </SyntaxHighlighter>
+                  ) : (
+                    <code className={className} {...props}>
+                      {children}
+                    </code>
                   );
                 },
               }}
@@ -155,4 +206,14 @@ const fixImgSRC = (src: string): string => {
     return src;
   }
   return src.replace("./", "../");
+};
+
+const CodeBlock = ({ language, value }) => {
+  const lang = language?.replace("language-", "") ?? "text";
+  console.log(language, value);
+  return (
+    <SyntaxHighlighter language={lang} style={dark}>
+      {value}
+    </SyntaxHighlighter>
+  );
 };

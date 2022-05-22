@@ -56,7 +56,6 @@ $ yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin html-lo
 $ yarn add -D @babel/core babel-loader @babel/preset-env @babel/preset-react babel-preset-es2015
 # Sass/css
 $ yarn add -D sass-loader node-sass css-loader mini-css-extract-plugin
-
 ```
 
 É necessário fazer algumas configurações para o funcionamento do webpack/babel após a instalação, como eu mexi em vários arquivos, [aqui está o commit com essas modificações](https://github.com/paulopotter/my-first-smart-tv-app/commit/6a5b5f4).
@@ -75,7 +74,7 @@ $ yarn add jikanjs
 
 Com isso já temos acesso a api, você pode fazer um teste colocando no `App.js` o seguinte trecho de código:
 
-```js
+```javascript
 render() {
   jikanjs
   .loadSeasonLater()
@@ -86,7 +85,6 @@ render() {
   }).catch((err) => {
       console.error(err); // in case a error happens
   });
-
   return <h1> Hello World :) </h1>;
 }
 ```
@@ -95,8 +93,7 @@ Abra o seu console e você verá a resposta do servidor.
 
 Vamos colocar esses dados na tela, e para isso vamos criar uma estrutura HTML:
 
-```javascript
-
+```js
 tmpl(anime){
   const {image_url, title, mal_id, type} = anime
 
@@ -111,7 +108,6 @@ tmpl(anime){
   )
 
 }
-
 ```
 
 e depois vamos fazer o request, para isso vamos adicionar o `state` e o `componentDidMount`:

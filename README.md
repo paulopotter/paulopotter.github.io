@@ -18,7 +18,7 @@ Migração do pelican para nextjs feita baseado nos posts
 - [Client-Side Routing In Next.js](https://www.smashingmagazine.com/2021/06/client-side-routing-next-js/)
 - [Migrei meu blog do Gatsby para o NextJS](https://willianjusten.com.br/migrei-meu-blog-do-gatsby-para-o-nextjs)
 - [How To Make A Next JS Blog With Markdown And TypeScript](https://medium.com/geekculture/how-to-make-a-next-js-blog-with-markdown-and-typescript-1624a54f1b9e)
-
+- [Adding code snippets to static markdown in Next.js using react-syntax-highlighter](https://thetombomb.com/posts/adding-code-snippets-to-static-markdown-in-Next%20js)
 
 - [JSS](https://cssinjs.org/jss-plugin-default-unit/?v=v10.9.1-alpha.2)
 - [rehype plugins](https://github.com/rehypejs/rehype/blob/main/doc/plugins.md#list-of-plugins)
@@ -27,6 +27,8 @@ Migração do pelican para nextjs feita baseado nos posts
 ### Plugins utilizados:
 
 - [Disqus react](https://github.com/disqus/disqus-react)
+- [React syntax highlighter prism theme](https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html)
+- [Syntax Highlight Code in Markdown](https://amirardalan.com/blog/syntax-highlight-code-in-markdown)
 
 - rehype:
   -
