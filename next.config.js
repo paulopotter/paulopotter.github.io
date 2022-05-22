@@ -22,11 +22,5 @@ module.exports = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
-  // i18n: {
-  //   defaultLocale: 'en',
-  // },
-}
-
-module.exports = {
   trailingSlash: true,
 }
