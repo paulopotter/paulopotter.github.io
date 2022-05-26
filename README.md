@@ -19,10 +19,12 @@ Migração do pelican para nextjs feita baseado nos posts
 - [Migrei meu blog do Gatsby para o NextJS](https://willianjusten.com.br/migrei-meu-blog-do-gatsby-para-o-nextjs)
 - [How To Make A Next JS Blog With Markdown And TypeScript](https://medium.com/geekculture/how-to-make-a-next-js-blog-with-markdown-and-typescript-1624a54f1b9e)
 - [Adding code snippets to static markdown in Next.js using react-syntax-highlighter](https://thetombomb.com/posts/adding-code-snippets-to-static-markdown-in-Next%20js)
+- [Start a clean Next.js project with TypeScript, ESLint and Prettier](https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js)
 
 - [JSS](https://cssinjs.org/jss-plugin-default-unit/?v=v10.9.1-alpha.2)
 - [rehype plugins](https://github.com/rehypejs/rehype/blob/main/doc/plugins.md#list-of-plugins)
 - [remark plugins](https://github.com/remarkjs/remark/blob/main/doc/plugins.md#list-of-plugins)
+- [Tailwind css with next](https://tailwindcss.com/docs/guides/nextjs)
 
 ### Plugins utilizados:
 

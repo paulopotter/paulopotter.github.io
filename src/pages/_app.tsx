@@ -1,4 +1,4 @@
-import "../components/styles/vendor/concisecss/concise.css";
+import '../styles/globals.css'
 
 import { createContext, useEffect, useState } from "react";
 import { JssProvider } from "react-jss";
