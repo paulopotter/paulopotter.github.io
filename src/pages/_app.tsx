@@ -45,7 +45,7 @@ export default function MyApp({ Component, pageProps }) {
         <JssProvider>
           <Header toggleTheme={toggleTheme} ThemeContext={ThemeContext} />
 
-          <div className="wrapper_site">
+          <div className="wrapper_site container max-w-7xl">
             <div
               className="wrapper_site--content column_wrapper"
               id="start-site"

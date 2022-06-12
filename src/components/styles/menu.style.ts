@@ -55,24 +55,30 @@ export const MenuStyle = createUseStyles({
       padding: '1em 2em',
       top: 0,
       right: 0,
-      left: '4rem',
+      left: '4.5em',
       transform: 'translateY(-100%)',
       transition: 'transform 0.3s, opacity 0.3s',
       opacity: 0,
       'max-width': '1380px',
-      margin: '0 auto'
+      margin: '0 auto',
+
+      '@media (min-width: 1025px) and (max-width: 1440px)': {
+        left: '9.5em',
+      },
     }),
-    menuListActive: {
+    menuListActive: ({isDarkTheme = false}) => ({
       '&$menuList':{
       transform: 'translateY(0)',
       opacity: 1,
+
       '@media (max-width: 425px)': {
         transition: 'transform 0.3s, opacity 0.5s',
         display: 'block',
-        top: 88,
+        top: 87,
         left: 0,
+        borderTop: [2, 'dotted', THEME_VALUE(isDarkTheme, 'border')],
       },
-    }},
+    }}),
 
     menuListItem: {
       'font-size': '1rem',

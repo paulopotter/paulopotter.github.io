@@ -43,6 +43,10 @@ export const HeaderStyle = createUseStyles({
     'font-weight': 400,
     'text-decoration': 'none !important',
      color: [THEME_VALUE(isDarkTheme, "text"), '!important'],
+
+     '@media (max-width: 425px)': {
+       display: 'inline-grid',
+     },
   }),
   titleName: ({isDarkTheme}) => ({
     'font-weight': 700,

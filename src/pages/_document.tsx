@@ -15,7 +15,7 @@ const Document = () => {
           crossOrigin="anonymous"
         />
       </Head>
-      <body>
+      <body className="container 2xl">
         <Main />
         <NextScript />
       </body>
