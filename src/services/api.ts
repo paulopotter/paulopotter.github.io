@@ -33,6 +33,7 @@ export function getPost(slugOrFilename, fields = []) {
     }
     if (field === 'category') post[field] = data?.category?.split(',');
     if (field === 'content') post[field] = content;
+    if (field === 'summary') post[field] = getSummary(content)
     if (field === 'slug') post[field] = slug
     // if (field === 'slug') post[field] = slugify(post.title, {
     //    lower: true,
@@ -42,6 +43,15 @@ export function getPost(slugOrFilename, fields = []) {
     if (data[getParameterCaseInsensitive(data, field)]) post[field] = data[getParameterCaseInsensitive(data, field)];
   })
   return post;
+}
+
+function getSummary(content) {
+  const summaryKey = '<!-- PELICAN_END_SUMMARY -->'
+  const summaryKeyIndex = content.indexOf(summaryKey);
+  const substrLength = summaryKeyIndex > -1 ? summaryKeyIndex : 140
+
+  return content.substr(0, substrLength)
+
 }
 
 /**

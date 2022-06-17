@@ -9,6 +9,7 @@ import { ThemeContext } from "./_app";
 export default function Page({ posts }) {
   const summary = (index, post) => {
     if (index === 0) {
+      console.log(post)
       return (
         <div className="home_content__article-body-summary">
           {post.summary ?? post?.content?.slice(0, 140)}
@@ -82,7 +83,7 @@ export function getStaticProps() {
     "date",
     "category",
     "cover_image",
-    "sumary",
+    "summary",
   ]);
 
   return {

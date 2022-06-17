@@ -10,6 +10,7 @@ cover_image_by: Brazil JS conf 2021
 
 Hoje eu não vou falar de código. Vou falar de um sonho!
 Contarei desde quando eu fui pela primeira vez até como eu virei palestrante da BrazilJS 2021 😆
+<!-- PELICAN_END_SUMMARY -->
 
 ## 2018
 
