@@ -1,15 +1,19 @@
+import { Fragment, useContext } from "react";
 import classNames from "classnames";
 import Link from "next/link";
-import { Fragment, useContext } from "react";
+import  dayjs from "dayjs";
+import 'dayjs/locale/pt-br';
+
 import { Head } from "../components";
 import { getAllPosts } from "../services/api";
 import { HomeStyle } from "../styles/";
 import { ThemeContext } from "./_app";
 
+dayjs.locale('pt-br')
+
 export default function Page({ posts }) {
   const summary = (index, post) => {
     if (index === 0) {
-      console.log(post)
       return (
         <div className="home_content__article-body-summary">
           {post.summary ?? post?.content?.slice(0, 140)}
@@ -46,7 +50,7 @@ export default function Page({ posts }) {
               </header>
               {summary(index, post)}
               <footer className={homeStyle.category}>
-                {post.date} -{" "}
+                { dayjs(post.date, "YYYY-MM-DD", 'pt', true).format('DD MMM YYYY').toString() } -{" "}
                 {post?.category?.split(",")?.map((cat, categoryIndex) => (
                   <Fragment key={`${index}-category-${categoryIndex}`}>
                     <Link href={`/${cat.trim()}`}>{cat.toUpperCase()}</Link>

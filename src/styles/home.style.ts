@@ -70,6 +70,7 @@ export const HomeStyle = createUseStyles({
     'margin-top': '2em',
     'font-weight': 700,
     'font-size': '0.8125em',
+    'text-transform': 'capitalize',
     color: THEME_VALUE( isDarkTheme,"dated"),
   }),
 
