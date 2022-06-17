@@ -3,8 +3,12 @@ Title: Como é o desenvolvimento para Smart TVs
 Category: Smart TV, Js, React
 Date: "2019-10-09"
 cover_image: ./images/smart-tv.png
-cover_image_by: Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+cover_image_by: Icons made by Freepik from flaticon.com
+cover_image_alt: Icons made by Freepik
+cover_image_link: "https://www.flaticon.com/authors/freepik"
+
 ---
+
 
 Fala galera, blz?
 
@@ -17,7 +21,7 @@ Graças a isso, eu gostaria de compartilhar um pouco da minha experiência nessa
 
 - Saber javascript.
 
-![meme He-man. *Créditos:* na imagem](./images/como-e-o-desenvolvimento-para-smart-tvs/6d179b75c54cc2bada2a1688ae3c6a04.jpg)
+![*Créditos:* na imagem](./images/como-e-o-desenvolvimento-para-smart-tvs/6d179b75c54cc2bada2a1688ae3c6a04.jpg)
 
 ## Entendendo um pouco mais sobre as Smart TVs:
 
@@ -43,7 +47,6 @@ Dependendo da fabricante e do sistema operacional, você encontrará as seguinte
 
 *Nota: Ainda hoje a Orsay tem a maior fatia do mercado brasileiro.*
 
-<br/>
 Como desenvolvo mais para a **LG** e **Samsung**, irei me aprofundar mais sobre elas, caso tenham duvida sobre os outros S.Os / Fabricantes, deixem nos comentários.
 
 Assim como mostrei ali em cima, todas elas têm o seu desenvolvimento nativo (com uma linguagem de programação especifica para aquele S.O), mas também existem algumas que suportam Apps Web hosted, como Samsung e LG (que por sinal, elas são as que possuem o maior market share no mundo!)
@@ -60,7 +63,7 @@ Outro problema recorrente, mesmo que você compre uma tv esse ano, não necessar
 
 Boa parte dos brasileiros não pesquisam para comprar suas tvs, apenas pesquisam o preço e se acessa a internet. Mas mesmo que pesquisem, existe uma certa dificuldade de encontrar o ano da sua TV.
 
-Também não poderia deixar de falar da dificuldade de encontrar documentação das tvs e o que suporta (ou não). Aos poucos isso está mudando, mas ainda assim é um pouco complicado encontrar certas dúvidas. Nem no [Stackoverflow](http://stackoverflow.com) você encontra 😱. Porém eu encontrei [esse link](https://developer.samsung.com/tv/develop/specifications/general-specifications) com as especificações gerais das tvs Samsung, o que já ajuda um pouco.
+Também não poderia deixar de falar da dificuldade de encontrar documentação das tvs e o que suporta (ou não). Aos poucos isso está mudando, mas ainda assim é um pouco complicado encontrar certas dúvidas. Nem no [Stackoverflow](http://stackoverflow.com) você encontra 😱. Porém eu encontrei esse [link com as especificações gerais das tvs Samsung](https://developer.samsung.com/tv/develop/specifications/general-specifications) , o que já ajuda um pouco.
 
 ## Como extrair informações da sua TV:
 
@@ -80,13 +83,13 @@ Usando o modelo **UE55F8000AFXZ** como exemplo, podemos ver o seguinte:
 
 Se você possui UE55F8000**B**FXZ no lugar da UE55F8000**A**FXZ usado no exemplo, você verá que a diferença entre eles são apenas de design como a cor, por exemplo, mas o resto das especificações serão as mesmas.
 
-Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse [esse link](https://www.samsung.com/uk/support/tv-audio-video/what-do-samsung-tv-model-numbers-actually-mean-why-are-they-so-long/)
+Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse [esse link](https://www.samsung.com/us/support/answer/ANS00087664/)
 
 
 - LG:
 
 Encontrei essa imagem que facilita a explicação no caso da LG:
-![tab-tv image. <sup>*Créditos:* na imagem</sup>](./images/como-e-o-desenvolvimento-para-smart-tvs/LG-TV-model-identification-2018-2019-new.jpg)
+![*Créditos:* na imagem](./images/como-e-o-desenvolvimento-para-smart-tvs/LG-TV-model-identification-2018-2019-new.jpg)
 
 Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse [esse link](http://en.tab-tv.com/?page_id=7111) (não oficial).
 

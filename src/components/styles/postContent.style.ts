@@ -38,10 +38,19 @@ export const PostStyle = createUseStyles({
       margin: '1em auto',
     },
 
-    '& h2': {
-      fontSize: '1.7em',
+    '& h1, & h2, & h3': {
       fontFamily: FONT.secondary,
     },
+
+    '& h2': {
+      fontSize: '1.7em',
+    },
+
+    '& h3': {
+      fontSize: '1.5em',
+    },
+
+    '& table': {...table(isDarkTheme)},
 
     '& blockquote': {
       padding: '0 2em',
@@ -53,12 +62,46 @@ export const PostStyle = createUseStyles({
       'margin': 'inherit',
       'padding': 'revert',
     },
+
+    '& code': {
+      color: THEME_VALUE(isDarkTheme, 'code'),
+      backgroundColor: THEME_VALUE(isDarkTheme, 'codeBg'),
+      padding: '.3em'
+    },
   }),
 
   contentFigure: {
     'text-align': 'center',
-
     'max-width': '100%'
   },
 
+})
+
+const table = (isDarkTheme) => ({
+  '& thead tr': {
+    backgroundColor: THEME_VALUE(isDarkTheme, 'tableHeaderBg'),
+    color: THEME_VALUE(isDarkTheme, 'tableHeaderColor'),
+
+    '& th': {
+      padding: '.3em 1.5em',
+
+      '&:first-of-type': {
+        paddingLeft: '1.5em'
+      },
+    }
+  },
+  '& tbody tr': {
+    '&:nth-child(even)': {
+      backgroundColor: THEME_VALUE(isDarkTheme, 'tableHeaderBgInverted'),
+    },
+
+    '&:hover': {
+      color: THEME_VALUE(isDarkTheme, 'tableTrHoverText'),
+      backgroundColor: THEME_VALUE(isDarkTheme, 'tableTrHover'),
+    },
+
+    '& td': {
+      padding: '1em 1.5em',
+    }
+  }
 })

@@ -4,7 +4,8 @@ Category: Acessibilidade, HTML
 Date: '2021-09-17'
 Series: Utilizando ARIA no seu projeto
 cover_image: ./images/teclado-botao-cadeirante.jpg
-cover_image_by: Imagem retirada do <a href="https://www.sabrehospitality.com/blog/wcag-is-your-hotel-fully-accessible-to-all-online-visitors/" alt="Botão no teclado com o simbolo de um cadeirante.">Google imagens</a>
+cover_image_by: Imagem retirada do Google imagens
+cover_image_link: https://www.sabrehospitality.com/blog/wcag-is-your-hotel-fully-accessible-to-all-online-visitors/
 cover_image_alt: Botão no teclado com o simbolo de um cadeirante.
 ---
 
@@ -26,16 +27,15 @@ Para ser acessível pelo teclado, nós **devemos** gerenciar o foco dos itens do
 
 Com a criação do HTML5, não se faz mais necessário a utilização da `role='menu'` desde que você utilize a tag `<nav></nav>`
 
-### **Propriedades dos elementos filhos necessários:**
+### Propriedades dos elementos filhos necessários:
 
 Obrigatoriamente, o `menu` deverá possuir um ou mais elementos filhos e esses elementos deveram possuir uma das roles abaixo:
 
-[jtable]
-|   Role   | Descrição |
-| `menuitem` |  Role que indica que o elemento é um item do menu. |
-| `menuitemcheckbox` | Role que indica que o elemento é um item do menu e possui estado(state), comumente utilizado em itens de menu que contém subnivel. |
-| `menuitemradio` | Role que indica que o elemento é um item do menu e possui um conjunto de elementos com a mesma função, dos quais apenas um pode ser verificado por vez.|
-[/jtable]
+| Role               | Descrição                                                                                                                                               |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `menuitem`         | Role que indica que o elemento é um item do menu.                                                                                                       |
+| `menuitemcheckbox` | Role que indica que o elemento é um item do menu e possui estado(state), comumente utilizado em itens de menu que contém subnivel.                      |
+| `menuitemradio`    | Role que indica que o elemento é um item do menu e possui um conjunto de elementos com a mesma função, dos quais apenas um pode ser verificado por vez. |
 
 ### Estados e Propriedades:
 
@@ -43,39 +43,41 @@ Todas as roles possuem estados (state) e propriedades (properties) onde estados 
 
 ### States
 
-[jtable]
-| Nome | Descrição| Valor padrão |
-| `aria-busy` | Indica que um elemento está sendo modificado e que as tecnologias assistivas **podem** <br/>querer esperar até que as modificações sejam concluídas antes de expô-las ao usuário.| `false`|
-| `aria-current` | Indica o elemento que representa o item atual em um contêiner ou conjunto de elementos relacionados. | `false` |
-| `aria-disabled` | Indica que o elemento é perceptível, mas desativado, portanto, não é editável ou operável de outra forma . | `false` |
-| `aria-expanded` | Indica se o elemento, ou outro elemento de agrupamento que ele controla, está atualmente expandido ou reduzido. | `undefined` |
-| `aria-hidden` |Indica que o elemento não é perceptível. |`undefined` |
-[/jtable]
 
-*Nota: alguns estados foram ocultados nessa tabela, ou por não serem mais suportados ou por (na minha visão) não fazerem sentido para essa `role` (resumindo, não entendi como funcionada* 🤪*).*
+| Nome            | Descrição                                                                                                                                                                         | Valor padrão |
+| :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- |
+| `aria-busy`     | Indica que um elemento está sendo modificado e que as tecnologias assistivas **podem** <br/>querer esperar até que as modificações sejam concluídas antes de expô-las ao usuário. | `false`      |
+| `aria-current`  | Indica o elemento que representa o item atual em um contêiner ou conjunto de elementos relacionados.                                                                              | `false`      |
+| `aria-disabled` | Indica que o elemento é perceptível, mas desativado, portanto, não é editável ou operável de outra forma .                                                                        | `false`      |
+| `aria-expanded` | Indica se o elemento, ou outro elemento de agrupamento que ele controla, está atualmente expandido ou reduzido.                                                                   | `undefined`  |
+| `aria-hidden`   | Indica que o elemento não é perceptível.                                                                                                                                          | `undefined`  |
+
+
+*Nota: alguns estados foram ocultados nessa tabela, ou por não serem mais suportados ou por (na minha visão) não fazerem sentido para essa `role` (resumindo, não entendi como funcionada* 🤪 *).*
 
 ### Properties
 
-[jtable]
-| Nome| Descrição| Valor padrão |
-| `aria-activedescendant` | Fornece um método alternativo de gerenciamento de foco para elementos interativos que podem conter vários descendentes focalizáveis | -  |
-| `aria-atomic`           | Indica se as tecnologias assistivas apresentarão toda ou apenas partes da região alterada com base nas notificações de alteração definidas pelo atributo `aria-relevant`. | `false`|
-| `aria-controls`         | Identifica o elemento (ou elementos) cujo conteúdo ou presença são controlados pelo elemento atual. | - |
-| `aria-describedby`      | Identifica o elemento (ou elementos) que descreve o objeto. | -  |
-| `aria-details`          | Identifica o elemento que fornece uma descrição detalhada e estendida para o objeto.  Este atributo faz referência a um único elemento que fornece informações mais detalhadas do que normalmente seriam fornecidas por `aria-describedby`.| - |
-| `aria-errormessage`     | Identifica o elemento que fornece uma mensagem de erro para o objeto. Este atributo faz referência a outro elemento que contém o texto da mensagem de erro personalizada. |  - |
-| `aria-flowto`           | Identifica o próximo elemento (ou elementos) em uma ordem de leitura alternativa de conteúdo que, a critério do usuário, permite que a tecnologia de assistência substitua o padrão geral de leitura na ordem de origem do documento. |  - |
-| `aria-haspopup`         | Indica a disponibilidade e o tipo de elemento pop-up interativo, como menu ou caixa de diálogo, que pode ser acionado por um elemento. |  - |
-| `aria-keyshortcuts`     | Indica atalhos de teclado que foi implementado para ativar ou dar foco a um elemento. |  - |
-| `aria-label`            | Define um valor de string que rotula o elemento atual.| *Geralmente o texto do elemento.* |
-| `aria-labelledby`       | É uma mistura entre o `aria-label` e o `aria-describedby`. <br/>Ele fornece ao usuário um nome reconhecível do objeto utilizando outro elemento para descreve-lo. | - |
-| `aria-live`             | Indica que um elemento será atualizado e descreve os tipos de atualizações que os agentes do usuário , as tecnologias assistivas e o usuário podem esperar da região ativa. | `off` |
-| `aria-orientation`      |  Indica se a orientação do elemento é horizontal, vertical ou desconhecida (?!) | `undefined` |
-| `aria-roledescription`  | Define uma descrição legível por humanos e localizada pelo autor para a role de um elemento. | - |
-[/jtable]
+
+| Nome                    | Descrição                                                                                                                                                                                                                                   | Valor padrão                      |
+| :---------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------- |
+| `aria-activedescendant` | Fornece um método alternativo de gerenciamento de foco para elementos interativos que podem conter vários descendentes focalizáveis                                                                                                         | -                                 |
+| `aria-atomic`           | Indica se as tecnologias assistivas apresentarão toda ou apenas partes da região alterada com base nas notificações de alteração definidas pelo atributo `aria-relevant`.                                                                   | `false`                           |
+| `aria-controls`         | Identifica o elemento (ou elementos) cujo conteúdo ou presença são controlados pelo elemento atual.                                                                                                                                         | -                                 |
+| `aria-describedby`      | Identifica o elemento (ou elementos) que descreve o objeto.                                                                                                                                                                                 | -                                 |
+| `aria-details`          | Identifica o elemento que fornece uma descrição detalhada e estendida para o objeto.  Este atributo faz referência a um único elemento que fornece informações mais detalhadas do que normalmente seriam fornecidas por `aria-describedby`. | -                                 |
+| `aria-errormessage`     | Identifica o elemento que fornece uma mensagem de erro para o objeto. Este atributo faz referência a outro elemento que contém o texto da mensagem de erro personalizada.                                                                   | -                                 |
+| `aria-flowto`           | Identifica o próximo elemento (ou elementos) em uma ordem de leitura alternativa de conteúdo que, a critério do usuário, permite que a tecnologia de assistência substitua o padrão geral de leitura na ordem de origem do documento.       | -                                 |
+| `aria-haspopup`         | Indica a disponibilidade e o tipo de elemento pop-up interativo, como menu ou caixa de diálogo, que pode ser acionado por um elemento.                                                                                                      | -                                 |
+| `aria-keyshortcuts`     | Indica atalhos de teclado que foi implementado para ativar ou dar foco a um elemento.                                                                                                                                                       | -                                 |
+| `aria-label`            | Define um valor de string que rotula o elemento atual.                                                                                                                                                                                      | *Geralmente o texto do elemento.* |
+| `aria-labelledby`       | É uma mistura entre o `aria-label` e o `aria-describedby`. <br/>Ele fornece ao usuário um nome reconhecível do objeto utilizando outro elemento para descreve-lo.                                                                           | -                                 |
+| `aria-live`             | Indica que um elemento será atualizado e descreve os tipos de atualizações que os agentes do usuário , as tecnologias assistivas e o usuário podem esperar da região ativa.                                                                 | `off`                             |
+| `aria-orientation`      | Indica se a orientação do elemento é horizontal, vertical ou desconhecida (?!)                                                                                                                                                              | `undefined`                       |
+| `aria-roledescription`  | Define uma descrição legível por humanos e localizada pelo autor para a role de um elemento.                                                                                                                                                | -                                 |
+
 O padrão para `aria-orientation` é **vertical.**
 
-*Nota: algumas propriedades foram ocultadas nessa tabela, ou por não serem mais suportados ou por (na minha visão) não fazerem sentido para essa `role`(resumindo, não entendi como funcionada* 🤪*).*
+*Nota: algumas propriedades foram ocultadas nessa tabela, ou por não serem mais suportados ou por (na minha visão) não fazerem sentido para essa `role`(resumindo, não entendi como funcionada* 🤪 *).*
 
 *Nota<sup>2</sup> : Enquanto eu desenvolvia os exemplos, notei que nem todos as propriedades/estados funcionam (pelo menos no VoiceOver).*
 
@@ -132,13 +134,14 @@ E no terceiro exemplo, a diferença é que o leitor de tela irá ler o "nome" do
 
 Em todos os exemplos eu utilizei o `tabIndex="0"` para gerenciar o focos do elemento. Essa propriedade diz ao navegador que esse elemento pode receber foco (ao pressionar `tab` o navegador procurará o próximo elemento que possui essa propriedade e que seja diferente de `-1`.)
 
-[jtable]
-| valor| descrição|
-| -1 | o elemento não deverá receber foco |
-| 0|  o elemento poderá receber foco |
-| 1|  o elemento poderá receber foco e será o primeiro a recebê-lo|
-| 2..n|  o elemento poderá receber foco e será o próximo a recebê-lo seguindo a ordem numérica.|
-[/jtable]
+
+| valor | descrição                                                                              |
+| :---- | :------------------------------------------------------------------------------------- |
+| -1    | o elemento não deverá receber foco                                                     |
+| 0     | o elemento poderá receber foco                                                         |
+| 1     | o elemento poderá receber foco e será o primeiro a recebê-lo                           |
+| 2..n  | o elemento poderá receber foco e será o próximo a recebê-lo seguindo a ordem numérica. |
+
 
 
 ## Menubar

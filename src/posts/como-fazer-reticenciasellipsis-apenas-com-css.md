@@ -3,8 +3,10 @@ Title: Como fazer reticências(ellipsis) apenas com css
 Category: Css, Tips
 Date: "2017-09-11"
 cover_image: ./images/reticências.jpg
-cover_image_by: Imagem retirada do <a href="https://www.google.com/search?q=reticencias&tbm=isch&ved=2ahUKEwjsqbSd_u7uAhVVMrkGHf-GCdUQ2-cCegQIABAA&oq=reticencias&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgQIABAeMgQIABAeUJoLWJoLYOkNaABwAHgAgAFqiAFqkgEDMC4xmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=bggsYOy6MtXk5OUP_42mqA0&bih=981&biw=2520#imgrc=msXkVi-Jn8jP0M" title="google">google</a>
+cover_image_by: Imagem retirada do google
+cover_image_link: https://www.google.com/search?q=reticencias&tbm=isch&ved=2ahUKEwjsqbSd_u7uAhVVMrkGHf-GCdUQ2-cCegQIABAA&oq=reticencias&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgQIABAeMgQIABAeUJoLWJoLYOkNaABwAHgAgAFqiAFqkgEDMC4xmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=bggsYOy6MtXk5OUP_42mqA0&bih=981&biw=2520#imgrc=msXkVi-Jn8jP0M
 cover_image_alt: Reticências
+
 ---
 
 Fala pessoal, como é que cês tão?! 😜
@@ -24,7 +26,11 @@ Mas vamos parar de papo e...
 
 Digamos que você tenha uma `DIV` com um texto grande e a mesma tem que ter uns `100px`, porém você não controla/vai ficar controlando o texto que vai entrar.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="oGvYdg" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="oGvYdg" class="codepen">See the Pen <a href="https://codepen.io/paulopotter/pen/oGvYdg/">oGvYdg</a> by Paulo Oliveira (<a href="https://codepen.io/paulopotter">@paulopotter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/paulopotter/embed/oGvYdg?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/paulopotter/pen/oGvYdg">
+  Untitled</a> by Paulo Vitor (<a href="https://codepen.io/paulopotter">@paulopotter</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 _fonte: [http://slipsum.com/ipsum/](http://slipsum.com/ipsum/)_
 
@@ -41,7 +47,11 @@ div {
 
 e veja como fica:
 
-<p data-height="265" data-theme-id="dark" data-slug-hash="NaKbBX" data-default-tab="css,result" data-user="paulopotter" data-embed-version="2" data-pen-title="NaKbBX" class="codepen">See the Pen <a href="https://codepen.io/paulopotter/pen/NaKbBX/">NaKbBX</a> by Paulo Vitor (<a href="https://codepen.io/paulopotter">@paulopotter</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/paulopotter/embed/NaKbBX?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/paulopotter/pen/NaKbBX">
+  Untitled</a> by Paulo Vitor (<a href="https://codepen.io/paulopotter">@paulopotter</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 _Nota: isso só funciona para uma linha, para mais de uma eu ainda estou pesquisando como é a melhor forma de fazer em css!_
 
@@ -49,5 +59,3 @@ _Nota: isso só funciona para uma linha, para mais de uma eu ainda estou pesquis
 Vlw pessoal, até a proxima!
 
 Duvidas, criticas, alternativas deixem nos comentários!
-
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

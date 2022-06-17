@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
 import rehypeFigure from "rehype-figure";
+import remarkGfm from 'remark-gfm';
 import rehypeRewrite from "rehype-rewrite";
 import { DiscussionEmbed } from "disqus-react";
 import {
@@ -80,6 +81,7 @@ export const PostContent = ({ post }: Props) => {
 
             <ReactMarkdown
               skipHtml
+              remarkPlugins={[remarkGfm]}
               rehypePlugins={[
                 rehypeRaw,
                 rehypeSlug,

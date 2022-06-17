@@ -25,6 +25,8 @@ export const COLOR = {
     tableHeaderBg:' #68757e',
     tableHeaderBgInverted:' #212121',
     tableHeaderColor:' white',
+    tableTrHover:' #858e94',
+    tableTrHoverText:' #f5f5f5',
     text:' #dadada',
     related:' #9700a1',
   },
@@ -46,6 +48,8 @@ export const COLOR = {
     tableHeaderBg:' #68757e',
     tableHeaderBgInverted:' #f5f5f5',
     tableHeaderColor:' white',
+    tableTrHover:' #717679',
+    tableTrHoverText:' #f5f5f5',
   }
 }
 
