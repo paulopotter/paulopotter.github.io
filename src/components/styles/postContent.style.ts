@@ -1,5 +1,5 @@
 import {createUseStyles} from 'react-jss'
-import { THEME_VALUE } from '../../config/config.style'
+import { THEME_VALUE, FONT } from '../../config/config.style'
 
 export const PostStyle = createUseStyles({
   articleSection: ({isDarkTheme}) => ({
@@ -13,25 +13,45 @@ export const PostStyle = createUseStyles({
     padding: '0 2rem',
     'overflow-x': 'auto',
   },
+  articleTitle: {
+    fontFamily: FONT.secondary,
+    fontSize: '2em',
+    fontWeight: 'bold',
+  },
   articleCover: {
     'text-align': 'center',
     'margin-top': '2em',
   },
   articleCoverImg: {
     'max-width': '100%',
+    'textAlign': 'center',
+    margin: ['0', 'auto'],
   },
   articleCoverCredit: {
     'font-style': 'italic',
     'font-size': '0.7em',
   },
   articleContent: ({isDarkTheme}) => ({
+    fontSize: '1em',
+
     '& p, & h2, & h3': {
       margin: '1em auto',
+    },
+
+    '& h2': {
+      fontSize: '1.7em',
+      fontFamily: FONT.secondary,
     },
 
     '& blockquote': {
       padding: '0 2em',
       'border-left': `8px double ${THEME_VALUE( isDarkTheme,"blockquoteBorder")}`,
+    },
+
+    '& ul': {
+      'list-style': 'inherit',
+      'margin': 'inherit',
+      'padding': 'revert',
     },
   }),
 

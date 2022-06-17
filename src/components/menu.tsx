@@ -22,7 +22,9 @@ export function Menu() {
     <menu
       className={classNames(menuStyle.menu, {
         [menuStyle.menuOpened]: isMenuOpened,
-      })}
+      },
+      // 'max-w-7xl'
+      )}
     >
       <button
         className={menuStyle.menuIcon}

@@ -1,32 +1,27 @@
 import React, { useContext, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-
-import { Head } from ".";
-import { ThemeContext } from "../pages/_app";
-import CONFIGS from "../services/configs";
-import { PostStyle } from "./styles/postContent.style";
 import rehypeSlug from "rehype-slug";
 import rehypeFigure from "rehype-figure";
 import rehypeRewrite from "rehype-rewrite";
-
 import { DiscussionEmbed } from "disqus-react";
-
 import {
   dracula,
-  xonokai,
   materialOceanic,
-  materialLight,
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
-
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
 import typescript from "react-syntax-highlighter/dist/cjs/languages/prism/typescript";
 import scss from "react-syntax-highlighter/dist/cjs/languages/prism/scss";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
 import markdown from "react-syntax-highlighter/dist/cjs/languages/prism/markdown";
 import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
-
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+
+import { Head } from ".";
+import { ThemeContext } from "../pages/_app";
+import CONFIGS from "../services/configs";
+import { PostStyle } from "./styles/postContent.style";
+
 
 type PostType = {
   content: string;
@@ -210,7 +205,6 @@ const fixImgSRC = (src: string): string => {
 
 const CodeBlock = ({ language, value }) => {
   const lang = language?.replace("language-", "") ?? "text";
-  console.log(language, value);
   return (
     <SyntaxHighlighter language={lang} style={dark}>
       {value}

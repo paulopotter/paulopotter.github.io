@@ -29,6 +29,7 @@
     "react-jss": "^10.9.0",
     "react-markdown": "^8.0.3",
     "react-syntax-highlighter": "^15.5.0",
+    "react-youtube": "^9.0.2",
     "rehype-document": "^6.0.1",
     "rehype-figure": "^1.0.1",
     "rehype-raw": "^6.1.1",

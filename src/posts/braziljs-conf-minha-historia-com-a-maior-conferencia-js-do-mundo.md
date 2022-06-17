@@ -18,15 +18,14 @@ Em 2018 eu fui na minha primeira Brazil JS, me apaixonei pela estrutura do local
     <img src="./images/minha-historia-com-braziljs/2018/DSC_1272.JPG" alt="Ayrton - Programador a bordo, João - doodle cast, Denis e eu." />
     <center><figcaption><a href="https://www.youtube.com/channel/UC5fWvbBnaFAi2hJlHRmg5kw">Ayrton do Programador a bordo</a>, <a href="https://open.spotify.com/show/3rPhC7UrxyrIMxsSU3AdrS">João do Doodcast</a>, <a href="https://github.com/dnsaoki2">Denis</a> e eu</figcaption></center><br/>
 </figure>
-<figure>
-    <img src="./images/minha-historia-com-braziljs/2018/DSC_1242.JPG" alt="Palco da BrazilJS conf 2018" />
-    <center><figcaption>Palco da BrazilJS conf 2018</figcaption></center><br/>
-</figure>
+
+![Palco da BrazilJS conf 2018](./images/minha-historia-com-braziljs/2018/DSC_1242.JPG)
 
 Tiveram várias palestras legais:
 
 - [Mario Solto, o Dev Soutinho](https://www.youtube.com/c/DevSoutinho) - "*Extendendo o CSS com JavaScript e magia - feat. Houdini*"
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qFYHOkuy35A" title="Extendendo o CSS com JavaScript e magia - feat. Houdini" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin: 1em auto; position: relative; width: 90%; height: 50vw;height: 70vh; display: inherit;"></iframe>
+
 - Natália Medina & Guilherme Rodrigues - "*Designing for developers, developing for designers*"
 - Evangelina Ferreira - "*Ceci n'est pas un bouton*"
 
@@ -39,38 +38,31 @@ Em 2019, eles conseguiram melhorar ainda mais a experiência.
     <img src="./images/minha-historia-com-braziljs/2019/IMG-20190824-WA0004.jpg" alt="Stand da globo.com na BrazilJS Conf 2019" />
     <center><figcaption><span lang="en-US">Stand</span> da globo.com na BrazilJS Conf 2019</figcaption></center><br/>
 </figure>
-<figure>
-    <img src="./images/minha-historia-com-braziljs/2019/DSC_0015.JPG" alt="Palco da Brazil JS Conf 2019" />
-    <center><figcaption>Palco da Brazil JS Conf 2019</figcaption></center><br/>
-</figure>
 
-<p>E para não perder o padrão, tiveram várias palestras legais:</p>
+![Palco da BrazilJS conf 2019](./images/minha-historia-com-braziljs/2019/DSC_0015.JPG)
 
-- Léo Balter - "Internacionalização na WEB"
+E para não perder o padrão, tiveram várias palestras legais:
+
+- Léo Balter - "*Internacionalização na WEB*"
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k5iPbQUxquU" title="Internacionalização na WEB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin: 1em auto; position: relative; width: 90%; height: 50vw;height: 70vh; display: inherit;"></iframe>
-- Mina Markham - "Full-Featured Art Direction for the Web"
+
+- Mina Markham - "*Full-Featured Art Direction for the Web*"
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5bhlNHEJSdw" title="Full-Featured Art Direction for the Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin: 1em auto; position: relative; width: 90%; height: 50vw;height: 70vh; display: inherit;"></iframe>
-- Rajat Kumar - "Conditional Modules & Dynamic Bundling, A Netflix Original"
+
+- Rajat Kumar - "*Conditional Modules & Dynamic Bundling, A Netflix Original*"
 <iframe width="560" height="315" src="https://www.youtube.com/embed/efhdGUmFElY" title="Conditional Modules & Dynamic Bundling, A Netflix Original" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin: 1em auto; position: relative; width: 90%; height: 50vw;height: 70vh; display: inherit;"></iframe>
 
 ## 2021
 
 Finalmente chegamos no ano de 2021, infelizmente devido à pandemia não houve em 2020 e a 2021 foi 100% remota, mas isso não impediu de ter uma qualidade tao alta como nos anos anteriores...
 Eles fizeram uma estrutura para apresentação
-<figure>
-    <img src="./images/minha-historia-com-braziljs/2021/BrazilJS-Dia1-1.jpg" alt="Palco da Brazil JS Conf 2021" />
-    <center><figcaption>Palco da Brazil JS Conf 2021</figcaption></center><br/>
-</figure>
 
-<figure>
-    <img src="./images/minha-historia-com-braziljs/2021/BrazilJS-Dia1-2.jpg" alt="Backstage da Brazil JS Conf 2021" />
-    <center><figcaption>Backstage da Brazil JS Conf 2021</figcaption></center><br/>
-</figure>
+![Palco da BrazilJS conf 2021](./images/minha-historia-com-braziljs/2021/BrazilJS-Dia1-1.jpg)
 
-<figure>
-    <img src="./images/minha-historia-com-braziljs/2021/screen_shot_2021-10-21_at_10.53.42.png" alt="No Palco da Brazil JS Conf 2021: Jaydson Gomes, Andreza Rocha e Felipe Nascimento" />
-    <center><figcaption>No Palco da Brazil JS Conf 2021: Jaydson Gomes, Andreza Rocha e Felipe Nascimento</figcaption></center><br/>
-</figure>
+![Backstage da BrazilJS conf 2021](./images/minha-historia-com-braziljs/2021/BrazilJS-Dia1-2.jpg)
+
+![No Palco da Brazil JS Conf 2021: Jaydson Gomes, Andreza Rocha e Felipe Nascimento](./images/minha-historia-com-braziljs/2021/screen_shot_2021-10-21_at_10.53.42.png)
+
 
 Todas as palestras foram ótimas, mas vou destacar as que mais me marcaram:
 
@@ -91,10 +83,7 @@ Lembrando, todas foram ótimas (em todas as edições), eu só destaquei algumas
 
 Como vocês já devem ter reparado, eu fui convocado para fazer uma palestra! E já que eu ia palestrar, aproveitei para falar do que eu amo, Smart TV ❤️.
 
-<figure>
-    <img src="./images/minha-historia-com-braziljs/2021/BrazilJS-Dia1-193.jpg" alt="Jaydson, eu e Felipe" />
-    <center><figcaption>Jaydson, eu e Felipe</figcaption></center><br/>
-</figure>
+![Jaydson, eu e Felipe](./images/minha-historia-com-braziljs/2021/BrazilJS-Dia1-193.jpg)
 
 ## E como foi palestrar?
 Desde que eu fui na minha primeira conf grande (python brasil) eu fiquei, mesmo tendo muita vergonha, com vontade de palestrar! Quando eu fui na BrazilJS em 2018, coloquei como meta um dia palestrar nela.
