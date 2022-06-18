@@ -3,11 +3,12 @@ title: Você já pensou sobre Acessibilidade (a11y)?
 Category: Acessibilidade, Smart TV
 Date: "2021-05-23"
 cover_image: ./images/acessibility-uxplanet.jpeg
-cover_image_by: Imagem retirada do <a href="https://uxplanet.org/web-accessibility-explained-c2408636eee0" alt="Simbolo da acessibilidade para todos.">UX Planet</a>
+cover_image_by: Imagem retirada do UX Planet
+cover_image_link: https://uxplanet.org/web-accessibility-explained-c2408636eee0
 cover_image_alt: Simbolo da acessibilidade para todos.
 ---
 
-Hoje eu vou falar um pouco do <strike>pouco</strike> conhecimento que tenho sobre acessibilidade na web, e o porquê você deveria conhecer também.<br/>
+Hoje eu vou falar um pouco do ~pouco~ conhecimento que tenho sobre acessibilidade na web, e o porquê você deveria conhecer também.<br/>
 Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso incentive a você procurar saber mais também.
 <!-- PELICAN_END_SUMMARY -->
 
@@ -28,10 +29,9 @@ Com isso começamos a pensar mais como podemos tornar o nosso app mais acessíve
 
 <center style="font-size: 40px">. . .</center><br/>
 
-<figure>
-    <img src="./images/voce-ja-pensou-sobre-acessibilidade-a11y/606090-637491159569845272-16x9.jpg" alt="Imagem com três simbolos representando: deficiência cognitiva, deficiência visual e deficiência auditiva. No fundo uma tela com o símbolo da acessibilidade na web.">
-    <center><figcaption>Créditos: google</figcaption></center>
-</figure>
+![Créditos: google](./images/voce-ja-pensou-sobre-acessibilidade-a11y/606090-637491159569845272-16x9.jpg "Imagem com três simbolos representando: deficiência cognitiva, deficiência visual e deficiência auditiva. No fundo uma tela com o símbolo da acessibilidade na web.")
+
+
 > Cerca de 15% da população mundial vive com algum tipo de deficiência e em torno de 2.2 bilhões de pessoas têm deficiência visual ou cegueira. - *World Health Organization report from 2019*
 
 Isso já nos mostra que a parcela da população que precisa de alguma adaptação para poder estar no ciclo das interações sociais da grande massa, não é pequena.
@@ -63,14 +63,12 @@ Além de utilizar as tags certas para o que elas foram criadas, como **`nav`** p
 
 ## E nas Smart TVs?
 
-!["Tv com um balão representando a tv falando o nome do canal na tela."](./images/voce-ja-pensou-sobre-acessibilidade-a11y/tv_voice_guide-v1.png '<a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a>')
-
-<!-- figure>
+<figure>
     <center>
         <img src="./images/voce-ja-pensou-sobre-acessibilidade-a11y/tv_voice_guide-v1.png" alt="Tv com um balão representando a tv falando o nome do canal na tela."><br/>
         <figcaption>Créditos: <a href="https://www.samsung.com/br/accessibility/tv/">Samsung</a> </figcaption>
     </center>
-</figure-->
+</figure>
 
 Como o meu foco é Smart TVs, não posso deixar de falar como podemos também melhorar o uso das pessoas com deficiencia nesse device.
 
@@ -79,7 +77,7 @@ Existem algumas TVs no mercado que possuem a função "Text-to-Speech" (TTS)(tex
 A Samsung acaba saindo na frente, pois boa parte das TVs dela que eu tive contato eu acabei encontrando esse recurso. A queridinha da vez [TU8000](https://www.samsung.com/br/tvs/uhd-4k-tv/tu8000-50-inch-crystal-uhd-smart-tv-un50tu8000gxzd/), por exemplo, possui esse recurso que a Samsung chama de **Guia de Voz**. E para você, que vai desenvolver para ela, pode acompanhar o que eles suportam ou não no guia de [acessibilidade para Tizen](https://developer.samsung.com/smarttv/develop/guides/fundamentals/text-to-speech.html).
 
 Assim como na web, as mudanças na sua app para começar a dar suporte a leitores de tela, são mínimos.<br/>
-Começando, fazendo tudo o que foi dito no tópico anterior, mas agora com um adicional, utilize o **`focus()`**no elemento que estiver focado enquanto o usuário navega, pois, é através dele que a TV entende o que está focado e, consequentemente, fala o que está na tela.
+Começando, fazendo tudo o que foi dito no tópico anterior, mas agora com um adicional, utilize o **`focus()`** no elemento que estiver focado enquanto o usuário navega, pois, é através dele que a TV entende o que está focado e, consequentemente, fala o que está na tela.
 
 Recomendo, para quem possui uma TV com a função TTS, acessar as Apps do Youtube e da Amazon Prime (Não consegui utilizar a Netflix e o Disney+ quando eu fiz os testes numa Samsung). Elas mostram como entregar o que estamos vendo na tela, apenas com o áudio.
 

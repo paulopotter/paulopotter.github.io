@@ -4,8 +4,9 @@ Category: Smart TV, Js, React
 Date: '2020-01-19'
 Series: Criando sua primeira APP para Smart TVs
 cover_image: ./images/smart-tv-pixabay.jpg
-cover_image_by: Imagem retirada de <a href="https://pixabay.com/pt/illustrations/remoto-controle-tela-tv-exploração-3653882/" title="Tv com controle remoto">PixaBay</a>
+cover_image_by: Imagem retirada de PixaBay
 cover_image_alt: Smart Tv from pixabay
+cover_image_link: https://pixabay.com/pt/illustrations/remoto-controle-tela-tv-exploração-3653882/
 ---
 
 Fala ae, tranquilinho?
@@ -13,7 +14,7 @@ Fala ae, tranquilinho?
 Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido [neste post](./como-e-o-desenvolvimento-para-smart-tvs.html). Recomendo a leitura, é uma boa introdução.
 <!-- PELICAN_END_SUMMARY -->
 
-Tendo a ideia de tentar passar por boa partes dos problemas que temos quando desenvolvemos app para TVs, pensei em vários tipos diferentes de exemplo de apps: galeria de fotos, app de streaming de música, app de streaming de animes (<strike>para ter uma experiência melhor que a sua, Crunchyroll</strike>)... Porém para ser algo mais rápido e simples, eu tive que me conter 🤪
+Tendo a ideia de tentar passar por boa partes dos problemas que temos quando desenvolvemos app para TVs, pensei em vários tipos diferentes de exemplo de apps: galeria de fotos, app de streaming de música, app de streaming de animes (~para ter uma experiência melhor que a sua, Crunchyroll~)... Porém para ser algo mais rápido e simples, eu tive que me conter 🤪
 
 ## O Projeto:
 
@@ -74,7 +75,7 @@ $ yarn add jikanjs
 
 Com isso já temos acesso a api, você pode fazer um teste colocando no `App.js` o seguinte trecho de código:
 
-```javascript
+```jsx
 render() {
   jikanjs
   .loadSeasonLater()
@@ -93,7 +94,7 @@ Abra o seu console e você verá a resposta do servidor.
 
 Vamos colocar esses dados na tela, e para isso vamos criar uma estrutura HTML:
 
-```js
+```jsx
 tmpl(anime){
   const {image_url, title, mal_id, type} = anime
 
@@ -112,7 +113,7 @@ tmpl(anime){
 
 e depois vamos fazer o request, para isso vamos adicionar o `state` e o `componentDidMount`:
 
-```javascript
+```jsx
 constructor(props) {
   super(props)
   this.state = {
@@ -137,7 +138,7 @@ componentDidMount() {
 
 E agora vamos adicionar no `render` o conteúdo.
 
-```javascript
+```jsx
 render() {
     let animes = this.state.animes;
     return animes.map((anime) => (anime.type === 'TV' ? this.tmpl(anime) : null))
@@ -193,7 +194,7 @@ testMatch: [ // 144
 
 Também precisamos criar o arquivo `src/setupTest.js` e dentro dele colocar:
 
-```js
+```jsx
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 configure({ adapter: new Adapter() });
@@ -203,9 +204,9 @@ Com isso só falta alterar o nosso `package.json` para rodar os testes e coverag
 
 ```json
 {
-  ...
+  // ...
   scripts: {
-    ...
+    // ...
     "test": "jest",
     "test:coverage": "jest --coverage"
   }
@@ -218,23 +219,23 @@ Também adicionei o ESLint, para ver como ficou, olhe [esse commit](https://gith
 
 Para fazer a navegação, eu vou adicionar uma classe para indicar a seleção:
 
-```javascript
+```jsx
 tmpl(anime, i) {
-    ...
+    // ...
         <div className={`poster-wrapper ${this.state.activeItem === i ? 'poster-wrapper--active': null}`} id={mal_id} key={mal_id}>
-    ...
+    // ...
 }
 
 render() {
-    ...
+    // ...
     return animes.map((anime, i) => (anime.type === 'TV' ? this.tmpl(anime, i) : null))
-    ...
+    // ...
 }
 ```
 
 e agora a gente ouve os eventos do teclado:
 
-```javascript
+```jsx
 onKeyDown(e) {
     const { activeItem, animes } = this.state
     let newActiveItem = activeItem
@@ -280,13 +281,13 @@ onKeyDown(e) {
 
 para essa função funcionar a gente ainda precisa adicionar as seguintes linhas:
 
-```js
+```jsx
 constructor(props) {
-  ...
+  // ...
   this.onKeyDown = this.onKeyDown.bind(this)
 }
 componentDidMount() {
-  ...
+  // ...
     this.enableKeyEvent()
 }
 

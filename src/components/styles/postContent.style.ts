@@ -57,10 +57,16 @@ export const PostStyle = createUseStyles({
       'border-left': `8px double ${THEME_VALUE( isDarkTheme,"blockquoteBorder")}`,
     },
 
-    '& ul': {
-      'list-style': 'inherit',
+    '& ul, & ol': {
       'margin': 'inherit',
       'padding': 'revert',
+    },
+
+    '& ul': {
+      'list-style': 'inherit',
+    },
+    '& ol': {
+      'list-style': 'decimal',
     },
 
     '& code': {

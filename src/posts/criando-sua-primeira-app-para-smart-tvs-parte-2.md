@@ -4,7 +4,8 @@ Category: Smart TV, Js, React
 Date: "2020-04-09"
 Series: Criando sua primeira APP para Smart TVs
 cover_image: ./images/smart-tv-plex.jpg
-cover_image_by: Imagem retirada do <a href="https://www.popsci.com/resizer/lU2v75pLrtqZZV7TOZsVmhM7YbI=/1782x1336/filters:focal(600x450:601x451)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/7SFVUBKE3F5G4N74QM7QJSGU4E.jpg" title="Tv com Plex">Google</a>
+cover_image_by: Imagem retirada do Google
+cover_image_link: https://www.popsci.com/resizer/lU2v75pLrtqZZV7TOZsVmhM7YbI=/1782x1336/filters:focal(600x450:601x451)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/7SFVUBKE3F5G4N74QM7QJSGU4E.jpg
 cover_image_alt: Smart Tv from google
 ---
 
@@ -16,12 +17,14 @@ Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje n
 
 ## Bug hunter:
 
-![Bug free](./images/criando-sua-primeira-app-para-smart-tvs-parte-2/131-bug-free.png)
-<center><small>Fonte: [MonkeyUser](https://www.monkeyuser.com/)</small></center>
+<figure>
+    <img src="./images/criando-sua-primeira-app-para-smart-tvs-parte-2/131-bug-free.png" alt="Mokeyuser - Bug free" />
+    <center><figcaption>Fonte: <a href="https://www.monkeyuser.com/">MonkeyUser</a></figcaption></center><br/>
+</figure>
 
 Enquanto eu navegava pela app, notei uma falha na parte da navegação, nós estamos **exibindo apenas** items relacionados a "TV" mas não estamos filtrando-os. Então ao chegar no final da lista, a navegação "continua" mesmo sem ter item para navegar. E para corrigir vamos modificar o código com:
 
-```js
+```jsx
 componentDidMount() {
     // [...]
     response.anime.forEach(element => {
@@ -61,8 +64,10 @@ render() {
 
 ## Hora dos testes:
 
-![fixing unit test](./images/criando-sua-primeira-app-para-smart-tvs-parte-2/86-fixing-unit-tests.png)
-<center><small>Fonte: [MonkeyUser](https://www.monkeyuser.com/)</small></center>
+<figure>
+    <img src="./images/criando-sua-primeira-app-para-smart-tvs-parte-2/86-fixing-unit-tests.png" alt="Mokeyuser - unit test" />
+    <center><figcaption>Fonte: <a href="https://www.monkeyuser.com/">MonkeyUser</a></figcaption></center><br/>
+</figure>
 
 Como eu apenas adicionei a suite de test, e não realizei nenhum teste, está na hora de aumentar o nosso coverage! 😄
 Para simplificar o post, eu vou deixar o [link do arquivo completo do teste](https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/src/App.test.js) para vocês verem. Mas vou destacar o seguintes pontos:
@@ -93,7 +98,7 @@ Foi necessário adicionar `@babel/plugin-transform-runtime` e com isso alterar o
 
 **package**
 
-Precisamos instalar o *nock* (`yarn add -D nock`), e atualizar o nosso `package.json` (de uma olhada no [arquivo](https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/package.json), pois houveram modificações nas versões dos pacotes).
+Precisamos instalar o *nock* (`yarn add -D nock`), e atualizar o nosso `package.json` ([de uma olhada no arquivo](https://github.com/paulopotter/my-first-smart-tv-app/blob/post-2/package.json), pois houveram modificações nas versões dos pacotes).
 
 
 **Arquivo de mock**
@@ -105,7 +110,7 @@ Para poder testar sem ter que ficar batendo na api toda hora, eu criei uma pasta
 
 Por causa do mock que precisamos fazer, temos que remover a pasta do `mock` do coverage:
 
-```
+```js
 // linha: 30
  coveragePathIgnorePatterns: [
     "/node_modules/",
@@ -121,58 +126,58 @@ Vamos atualizar o css, adicionando altura para as imagens e depois dando um tapa
 
 ```css
 body {
-  background-color: #0f0f0f;
-  color: #f1f1f1;
-  height: 720px;
-  overflow: hidden;
+    background-color: #0f0f0f;
+    color: #f1f1f1;
+    height: 720px;
+    overflow: hidden;
 }
 .wrapper {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 .poster-wrapper {
-  display: inline-block;
-  height: 390px;
-  text-align: center;
-  vertical-align: bottom;
-  width: 310px;
+    display: inline-block;
+    height: 390px;
+    text-align: center;
+    vertical-align: bottom;
+    width: 310px;
 }
 
 .poster-wrapper figure {
-  position: relative;
+     position: relative;
 }
 
 .poster-wrapper img {
-  height: 321px;
-  width: 225px;
+    height: 321px;
+    width: 225px;
 }
 
 .poster-wrapper--active img{
-  height: 381px;
-  width: 285px;
+    height: 381px;
+    width: 285px;
 }
 
 .poster-wrapper span {
-  background-color: rgba(0,0,0,0.7);
-  bottom: 0;
-  display: none;
-  font-size: 20px;
-  left: 0;
-  min-height: 15%;
-  padding: 15px 10px;
-  position: absolute;
-  right: 0;
+    background-color: rgba(0,0,0,0.7);
+    bottom: 0;
+    display: none;
+    font-size: 20px;
+    left: 0;
+    min-height: 15%;
+    padding: 15px 10px;
+    position: absolute;
+    right: 0;
 }
 
 .poster-wrapper--active span {
-  display: inline;
+    display: inline;
 }
 
 ```
 
 Agora vamos adicionar o efeito de scroll e para isso, precisamos de uma `div` envolvendo todo o conteúdo além de adicionar margin à ela automaticamente utilizando o `state`.
 
-```js
+```jsx
 constructor(props) {
     super(props)
     this.state = {
@@ -200,7 +205,7 @@ render() {
 Agora, para criarmos a animação, vamos adicionar o valor da altura dos itens (`390px`) ao `margin-top` da div `wrapper`. Então toda vez que apertarmos o botão para baixo vamos subtrair esse valor e para cima vamos adicionar esse valor.
 
 
-```js
+```jsx
 animate(keyCode) {
     if (keyCode === 40) {
       this.setState(prevState => ({
@@ -232,10 +237,7 @@ this.animate(38)
 
 ## É isso aí!
 
-![Minha app](./images/criando-sua-primeira-app-para-smart-tvs-parte-2/minha-primeira-smart-tv-app-pt2.gif)
-<center>
-    <br/><small>Nossa app funcionando</small>
-</center>
+![Nossa App funcionando](./images/criando-sua-primeira-app-para-smart-tvs-parte-2/minha-primeira-smart-tv-app-pt2.gif)
 
 Ainda temos muita coisa para fazer porém, já temos o suficiente para testar na TV. No nosso próximo post, desta série, eu ire mostrar como testar essa app numa Smart TV da LG.
 

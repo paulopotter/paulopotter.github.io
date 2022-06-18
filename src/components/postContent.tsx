@@ -120,7 +120,7 @@ export const PostContent = ({ post }: Props) => {
                       <img
                         className={postStyle.articleCoverImg}
                         src={props.src}
-                        alt={props.alt}
+                        alt={props.title ?? props.alt}
                       />
                     </figure>
                   );
@@ -132,8 +132,6 @@ export const PostContent = ({ post }: Props) => {
                       showLineNumbers
                       style={codeTheme}
                       language={match[1]}
-                      // PreTag="div"
-
                       {...props}
                     >
                       {String(children).replace(/\n$/, "")}
