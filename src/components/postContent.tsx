@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
+// @ts-ignore
 import rehypeFigure from "rehype-figure";
 import remarkGfm from 'remark-gfm';
 import rehypeRewrite from "rehype-rewrite";
@@ -31,6 +32,14 @@ type PostType = {
   imagePath: string;
   slug: string;
   title: string;
+  cover_image?: string
+  cover_image_alt?: string
+  cover_image_by?: string
+  cover_image_link?: string
+  cover_image_url?: string
+  readingTime?: string
+  subtitle?: string
+  summary?: string
 };
 interface Props {
   post: PostType;
@@ -46,6 +55,7 @@ SyntaxHighlighter.registerLanguage("json", json);
 
 export const PostContent = ({ post }: Props) => {
   const { isDarkTheme } = useContext(ThemeContext);
+  // @ts-ignore
   const postStyle = PostStyle({ isDarkTheme });
 
   const [codeTheme, setCodeTheme] = useState(
@@ -89,7 +99,8 @@ export const PostContent = ({ post }: Props) => {
                 [
                   rehypeRewrite,
                   {
-                    rewrite: (node, index, parent) => {
+                    // rewrite: (node: any, index: any, parent: any) => {
+                    rewrite: (node: any) => {
                       if (
                         node.tagName == "img" &&
                         !(
@@ -105,7 +116,7 @@ export const PostContent = ({ post }: Props) => {
               ]}
               components={{
                 h2({ node, className, children, ...props }) {
-                  return !props.id.includes("footnote") ? (
+                  return !props?.id?.includes("footnote") ? (
                     <h2 id={props.id} className={className}>
                       {children}
                     </h2>
@@ -130,6 +141,7 @@ export const PostContent = ({ post }: Props) => {
                   return !inline && match ? (
                     <SyntaxHighlighter
                       showLineNumbers
+                      // @ts-ignore
                       style={codeTheme}
                       language={match[1]}
                       {...props}
@@ -151,7 +163,6 @@ export const PostContent = ({ post }: Props) => {
           {/* <SeriesPosts post={post} /> */}
         </article>
       </section>
-      {/* // url: "https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs.html", */}
       <section>
         <DiscussionEmbed
           shortname="umdevqualquer"
@@ -167,7 +178,12 @@ export const PostContent = ({ post }: Props) => {
   );
 };
 
-const CoverImage = ({ post, postStyle }) => {
+interface CoverImageProps {
+  post: PostType,
+  postStyle: any,
+}
+
+const CoverImage = ({ post, postStyle }: CoverImageProps) => {
   return (
     <>
       {post?.cover_image && (
@@ -184,7 +200,7 @@ const CoverImage = ({ post, postStyle }) => {
   );
 };
 
-const FigureCaption = ({ post, postStyle }) =>
+const FigureCaption = ({ post, postStyle }: CoverImageProps): any =>
   post?.cover_image_by && (
     <figcaption className={postStyle.articleCoverCredit}>
       Créditos:{" "}
@@ -201,13 +217,4 @@ const fixImgSRC = (src: string): string => {
     return src;
   }
   return src.replace("./", "../");
-};
-
-const CodeBlock = ({ language, value }) => {
-  const lang = language?.replace("language-", "") ?? "text";
-  return (
-    <SyntaxHighlighter language={lang} style={dark}>
-      {value}
-    </SyntaxHighlighter>
-  );
 };

@@ -1,3 +1,4 @@
+// @ts-ignore
 export const THEME_VALUE = (isDark: boolean, prop: string): string => (isDark ? COLOR.dark[prop] : COLOR.light[prop])
 
 export const FONT = {

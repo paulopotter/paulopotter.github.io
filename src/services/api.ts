@@ -1,7 +1,7 @@
+// @ts-nocheck
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import slugify from 'slugify';
 
 const postsDirectory = join(process.cwd(), 'src/posts');
 
@@ -9,7 +9,7 @@ function getMarkdownsFiles() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPost(slugOrFilename, fields = []) {
+export function getPost(slugOrFilename: string, fields = []) {
   // Remover o .md do fim do arquivo
   const slug = slugOrFilename.replace(/\.md$/, '');
   // Buscando pelo nome do arquivo markdown, com o .md

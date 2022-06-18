@@ -11,10 +11,13 @@ import { ResetStyle } from "../styles/html.style";
 export const ThemeContext = createContext({ isDarkTheme: false });
 
 // This default export is required in a new `pages/_app.js` file.
+// @ts-ignore
 export default function MyApp({ Component, pageProps }) {
   const [isDark, setIsDark] = useState(false);
   const [canRender, setCanRender] = useState(false);
+  // @ts-ignore
   const darkTheme = ResetStyle({ isDarkTheme: true });
+  // @ts-ignore
   const lightTheme = ResetStyle({ isDarkTheme: false });
   const themes = { light: lightTheme, dark: darkTheme };
 

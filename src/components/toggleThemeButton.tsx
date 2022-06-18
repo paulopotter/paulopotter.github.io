@@ -7,20 +7,20 @@ export function ToggleThemeButton({ onClicked = () => {} }) {
   const { isDarkTheme } = useContext(ThemeContext);
   const [canAnimate, setCanAnimate] = useState(false);
 
+  // @ts-ignore
   const style = ThemeButtonStyle({ isDarkTheme });
 
   useEffect(() => {
     setTimeout(() => setCanAnimate(true), 1000);
   }, [canAnimate]);
 
-  const toggleButtonOnClick = (event) => {
+  const toggleButtonOnClick = (event: any) => {
     onClicked?.();
     event.currentTarget.ariaLabel = `Trocar para o tema ${
       isDarkTheme ? "claro" : "escuro"
     }`;
-    if (window.DISQUS) {
-      window.DISQUS.host._loadEmbed(); // to update disqus theme
-    }
+    // @ts-ignore
+    window?.DISQUS?.host?._loadEmbed(); // to update disqus theme
   };
 
   return (

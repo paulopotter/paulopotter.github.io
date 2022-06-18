@@ -1,4 +1,5 @@
-import { useContext, useEffect, useState } from "react";
+// @ts-nocheck
+import { useContext, useState } from "react";
 import Link from "next/link";
 import CONFIGS from "../services/configs";
 import { MenuStyle } from "./styles/menu.style";
@@ -15,7 +16,6 @@ export function Menu() {
   };
 
   const { isDarkTheme } = useContext(ThemeContext);
-
   const menuStyle = MenuStyle({ isDarkTheme });
 
   return (
@@ -45,16 +45,17 @@ export function Menu() {
         className={classNames(menuStyle.menuList, {
           [menuStyle.menuListActive]: isMenuOpened,
         },
-        // 'container mx-l'
         )}
         aria-hidden={!isMenuOpened}
         tab-index={!isMenuOpened ? -1 : null}
       >
-        {Object.keys(MENU_LINKS)?.map((menuItem: string, index: number) => (
+        {
+          Object.keys(MENU_LINKS)?.map((menuItem: string, index: number) => (
           <li className={menuStyle.menuListItem} key={`menu-${index}`}>
             <Link href={MENU_LINKS[menuItem]}>{menuItem}</Link>
           </li>
-        ))}
+          ))
+        }
       </ul>
       <div
         className={classNames(menuStyle.menuOverlay, {

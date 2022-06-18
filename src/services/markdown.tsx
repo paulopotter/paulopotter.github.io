@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { remark } from "remark"; // Processador para parsear markdown
 import { rehypeHighlightCodeBlock } from "@mapbox/rehype-highlight-code-block";
 

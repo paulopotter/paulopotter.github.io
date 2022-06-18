@@ -1,3 +1,4 @@
+// @ts-nocheck
 import markdown from "../services/markdown";
 import { getPost, getAllPosts } from "../services/api";
 import { PostContent } from "../components";

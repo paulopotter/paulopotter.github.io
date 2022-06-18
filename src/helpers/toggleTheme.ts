@@ -1,4 +1,4 @@
-export const toggleThemeStorage = (isDarkTheme, themes) => {
+export const toggleThemeStorage = (isDarkTheme: boolean, themes: any) => {
   const body = document.getElementsByTagName('body')[0]
   const isDarkMode = body.classList.contains(themes.dark.body) || isDarkTheme
 

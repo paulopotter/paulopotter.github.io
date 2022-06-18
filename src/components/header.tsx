@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { Context, useContext } from "react";
 import Link from "next/link";
 import CONFIGS from "../services/configs";
 
@@ -7,8 +7,15 @@ import { HeaderStyle } from "./styles/header.style";
 
 const { SITEURL, SITENAME, SITE_NAME_SUBTITLE } = CONFIGS;
 
-export const Header = ({ toggleTheme, ThemeContext }) => {
+interface HeaderProps {
+  toggleTheme: () => void;
+  ThemeContext: Context<{ isDarkTheme: boolean }>
+}
+
+
+export const Header = ({ toggleTheme, ThemeContext }: HeaderProps) => {
   const { isDarkTheme } = useContext(ThemeContext);
+  // @ts-ignore
   const headerStyle = HeaderStyle({ isDarkTheme });
 
   return (

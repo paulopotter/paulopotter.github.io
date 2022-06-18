@@ -1,3 +1,4 @@
+
 import classNames from "classnames";
 import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../pages/_app";
@@ -7,6 +8,7 @@ export const Footer = () => {
   const { isDarkTheme } = useContext(ThemeContext);
   const [showButton, setShowButton] = useState(false);
 
+// @ts-ignore
   const footerStyle = FooterStyle({ isDarkTheme });
 
   const backToTop = () => {

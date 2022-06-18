@@ -1,3 +1,4 @@
+// @ts-nocheck
 
 import {createUseStyles} from 'react-jss'
 import { THEME_VALUE, FONT } from '../../config/config.style'

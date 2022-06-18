@@ -12,7 +12,20 @@ const {
   HASH_GRAVATAR,
 } = CONFIGS;
 
-export const Head = ({ title = "", children = null, meta = {} }) => (
+interface HeadProps {
+  title?: string
+  children?: any
+  meta?: {
+    description?: string
+    ogTitle?: string
+    ogDescription?: string
+    ogImage?: string
+    ogUrl?: string
+    twitterAlt?: string
+  }
+}
+
+export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
   <NextHead>
     <meta charSet="UTF-8" />
     <title>
