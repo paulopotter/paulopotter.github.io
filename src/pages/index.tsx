@@ -50,15 +50,16 @@ export default function Page({ posts }) {
               </header>
               {summary(index, post)}
               <footer className={homeStyle.category}>
-                { dayjs(post.date, "YYYY-MM-DD", 'pt', true).format('DD MMM YYYY').toString() } -{" "}
-                {post?.category?.split(",")?.map((cat, categoryIndex) => (
+                { dayjs(post.date, "YYYY-MM-DD", 'pt', true).format('DD MMM YYYY').toString() }
+                {/* -{" "} */}
+                {/* {post?.category?.split(",")?.map((cat, categoryIndex) => (
                   <Fragment key={`${index}-category-${categoryIndex}`}>
                     <Link href={`/${cat.trim()}`}>{cat.toUpperCase()}</Link>
                     {categoryIndex < post.category.split(",").length - 1
                       ? " - "
                       : null}
                   </Fragment>
-                ))}
+                ))} */}
               </footer>
             </div>
 
