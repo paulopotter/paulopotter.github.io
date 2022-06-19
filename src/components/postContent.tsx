@@ -167,8 +167,8 @@ export const PostContent = ({ post }: Props) => {
         <DiscussionEmbed
           shortname="umdevqualquer"
           config={{
-            url: `${window.location.href}.html`,
-            identifier: `${window.location.href}.html`,
+            url: `${window.location.href.indexOf('.html') > -1 ? window.location.href : window.location.href + '.html'}`,
+            identifier: `${window.location.href.indexOf('.html') > -1 ? window.location.href : window.location.href + '.html'}`,
             title: post.title,
             language: "pt_BR",
           }}

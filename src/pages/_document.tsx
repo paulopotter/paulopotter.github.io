@@ -10,7 +10,7 @@ dayjs.locale('pt-br')
 
 const Document = () => {
   return (
-    <Html lang="pt-BR" data-info={ `${dayjs().format('YYYY-MM-DD hh:mm:ss').toString()} ` }>
+    <Html lang="pt-BR" data-info={ `${dayjs().format('YYYY-MM-DD hh:mm:ss').toString()}` }>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -34,7 +34,6 @@ const Document = () => {
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
             ga('create', "${GA_CODE}", 'auto');
             ga('send', 'pageview');
         `,
