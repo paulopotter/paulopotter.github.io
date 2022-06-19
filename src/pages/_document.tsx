@@ -1,12 +1,16 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import  dayjs from "dayjs";
+import 'dayjs/locale/pt-br';
 
 import CONFIGS from "../services/configs";
 
 const { GA_CODE } = CONFIGS;
 
+dayjs.locale('pt-br')
+
 const Document = () => {
   return (
-    <Html lang="pt-BR">
+    <Html lang="pt-BR" data-info={ `${dayjs().format('YYYY-MM-DD hh:mm:ss').toString()} ` }>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
