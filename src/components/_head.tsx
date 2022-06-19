@@ -29,6 +29,7 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
   <NextHead>
     <meta charSet="UTF-8" />
     <title>
+      {process.env.NODE_ENV === 'development' ? '[LOCAL] ' : null}
       {title ? title + " - " : null}
       {SITE_BAR_TITLE}
     </title>
@@ -50,8 +51,7 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
       name="theme-color"
       media="(prefers-color-scheme: light)"
       content="#f5f5f5"
-    />{" "}
-    /
+    />
     <meta property="og:title" content={`${meta?.ogTitle ?? SITE_BAR_TITLE}`} />
     <meta
       property="og:description"
