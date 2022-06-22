@@ -19,14 +19,11 @@ export const Footer = () => {
     document.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
         setShowButton(true);
-        // scrollTopButton.classList.add("site__back-to-top-button--show");
       } else {
         if (
           showButton
-          // scrollTopButton.classList.contains("site__back-to-top-button--show")
         ) {
           setShowButton(false);
-          // scrollTopButton.classList.remove("site__back-to-top-button--show");
         }
       }
     });

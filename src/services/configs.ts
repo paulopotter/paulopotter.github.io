@@ -29,7 +29,24 @@ const CONFIGS = {
       'Sobre Mim': '/author',
     //  'Talks / Palestras': '/talks',
   },
-  SOCIAL : [],
+  SOCIAL : [
+    {
+      name: 'Instagram',
+      url: 'https://instagram.com/umdevqualquer/',
+    },
+    {
+      name: 'Linkedin',
+      url: 'https://linkedin.com/in/paulofrauches/',
+    },
+    {
+      name: 'Github',
+      url: 'https://github.com/paulopotter',
+    },
+    {
+      name: 'Twitter',
+      url: 'https://twitter.com/paulofrauches',
+    },
+  ],
   COVER_IMAGES_PATH : "images",
   STATIC_PATHS : ['images', 'extra/CNAME', 'extra/favicon.png', ],
   EXTRA_PATH_METADATA : {

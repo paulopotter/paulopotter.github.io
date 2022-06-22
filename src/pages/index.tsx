@@ -51,7 +51,9 @@ export default function Page({ posts }) {
               </header>
               {summary(index, post)}
               <footer className={homeStyle.category}>
-                { dayjs(post.date, "YYYY-MM-DD", 'pt', true).format('DD MMM YYYY').toString() }
+                <span aria-label="Data de pulicação:" >
+                  { dayjs(post.date, "YYYY-MM-DD", 'pt', true).format('DD MMM YYYY').toString() }
+                </span>
                 {/* -{" "} */}
                 {/* {post?.category?.split(",")?.map((cat, categoryIndex) => (
                   <Fragment key={`${index}-category-${categoryIndex}`}>
@@ -69,7 +71,7 @@ export default function Page({ posts }) {
                 <img
                   className={homeStyle.imageCover}
                   src={`${post?.cover_image}`}
-                  alt={`${post?.cover_image_alt || ""}`}
+                  alt={`${post?.cover_image_alt || post?.title ||""}`}
                   height={index > 1 ? "144" : "500"}
                   width={index > 1 ? "144" : "500"}
                 />
