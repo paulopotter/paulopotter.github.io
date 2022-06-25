@@ -12,12 +12,15 @@ const Document = () => {
   return (
     <Html lang="pt-BR" data-info={ `${dayjs().format('YYYY-MM-DD hh:mm:ss').toString()}` }>
       <Head>
+        <script async={true} src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2474646572295965"
+        crossOrigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+
       </Head>
       <body className="container 2xl">
         <Main />
