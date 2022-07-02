@@ -75,6 +75,7 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
     {/* link */}
     <link rel="icon" href="./images/favicon.png" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link
       href={`${FEED_DOMAIN}/${FEED_ALL_ATOM}`}
