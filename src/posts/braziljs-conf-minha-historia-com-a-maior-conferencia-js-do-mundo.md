@@ -121,3 +121,5 @@ Espero poder palestrar novamente lá (agora presencial)! Já estou escrevendo a 
 
 Valeu e até próxima!
 
+---
+Edit: Como prometido, aqui está o [link do post com o vídeo](./palestra-apps-para-smarttv-braziljs-conf)
