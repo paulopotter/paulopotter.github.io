@@ -10,9 +10,9 @@ cover_image_by: Brazil JS conf 2021
 
 E aê, belezinha?
 
-Ta aqui, como prometido no meu último post, o vídeo da minha palestra na Braziljs falando sobre TV.
+Ta aqui, como prometido no [meu último post](./braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo), o vídeo da minha palestra na Braziljs falando sobre TV.
 <!-- PELICAN_END_SUMMARY -->
-<!-- [meu último post](./braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo) -->
+
 
 Esta semana a equipe da braziljs liberou todos os vídeos dessa última edição no YouTube deles, depois dê um pulo lá para conferir!
 

@@ -2,22 +2,25 @@
 import { useContext } from "react";
 import classNames from "classnames";
 import Link from "next/link";
-import  dayjs from "dayjs";
-import 'dayjs/locale/pt-br';
+import dayjs from "dayjs";
+import "dayjs/locale/pt-br";
 
 import { Head } from "../components";
 import { getAllPosts } from "../services/api";
 import { HomeStyle } from "../styles/";
 import { ThemeContext } from "./_app";
+import ReactMarkdown from "react-markdown";
 
-dayjs.locale('pt-br')
+dayjs.locale("pt-br");
 
 export default function Page({ posts }) {
   const summary = (index, post) => {
     if (index === 0) {
       return (
-        <div className="home_content__article-body-summary">
-          {post.summary ?? post?.content?.slice(0, 140)}
+        <div className="home_content__article-body-summary"><br/>
+          <ReactMarkdown skipHtml>
+            {post.summary ?? post?.content?.slice(0, 140)}
+          </ReactMarkdown>
         </div>
       );
     }
@@ -51,8 +54,10 @@ export default function Page({ posts }) {
               </header>
               {summary(index, post)}
               <footer className={homeStyle.category}>
-                <span aria-label="Data de pulicação:" >
-                  { dayjs(post.date, "YYYY-MM-DD", 'pt', true).format('DD MMM YYYY').toString() }
+                <span aria-label="Data de pulicação:">
+                  {dayjs(post.date, "YYYY-MM-DD", "pt", true)
+                    .format("DD MMM YYYY")
+                    .toString()}
                 </span>
                 {/* -{" "} */}
                 {/* {post?.category?.split(",")?.map((cat, categoryIndex) => (
@@ -71,7 +76,7 @@ export default function Page({ posts }) {
                 <img
                   className={homeStyle.imageCover}
                   src={`${post?.cover_image}`}
-                  alt={`${post?.cover_image_alt || post?.title ||""}`}
+                  alt={`${post?.cover_image_alt || post?.title || ""}`}
                   height={index > 1 ? "144" : "500"}
                   width={index > 1 ? "144" : "500"}
                 />

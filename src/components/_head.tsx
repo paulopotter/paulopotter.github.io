@@ -34,7 +34,7 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
       {SITE_BAR_TITLE}
     </title>
     {/* META */}
-    <meta name="description" content={meta?.description || ""} />
+    <meta name="description" content={meta?.description || SITEDESCRIPTION} />
     <meta name="author" content={AUTHOR} />
     <meta name="robots" content="noimageindex" />
     <meta
@@ -53,6 +53,8 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
       content="#f5f5f5"
     />
     <meta property="og:title" content={`${meta?.ogTitle ?? SITE_BAR_TITLE}`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
     <meta
       property="og:description"
       content={`${meta?.ogDescription ?? SITEDESCRIPTION}`}
@@ -61,10 +63,10 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
       property="og:image"
       content={
         meta?.ogImage ??
-        `https://www.gravatar.com/avatar/${HASH_GRAVATAR}?s=720`
+        `https://www.gravatar.com/avatar/${HASH_GRAVATAR}?s=1200`
       }
     />
-    <meta property="og:url" content={`${meta?.ogUrl ?? SITEURL}/`} />
+    <meta property="og:url" content={`${meta?.ogUrl ?? window.location.href}`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@paulofrauches" />
     <meta name="twitter:creator" content="@paulofrauches" />

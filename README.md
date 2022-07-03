@@ -25,6 +25,9 @@ Migração do pelican para nextjs feita baseado nos posts
 - [rehype plugins](https://github.com/rehypejs/rehype/blob/main/doc/plugins.md#list-of-plugins)
 - [remark plugins](https://github.com/remarkjs/remark/blob/main/doc/plugins.md#list-of-plugins)
 - [Tailwind css with next](https://tailwindcss.com/docs/guides/nextjs)
+- [Configurando meta tags](https://stackoverflow.com/a/43154489/3498055)
+- [Como configurar o Google Analytics no NextJS em 2021](https://willianjusten.com.br/como-configurar-o-google-analytics-no-nextjs-em-2021)
+- [React Google Analytics 4](https://github.com/PriceRunner/react-ga4)
 
 ### Plugins utilizados:
 
