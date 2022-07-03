@@ -8,7 +8,7 @@ const CONFIGS = {
   SITEDESCRIPTION : 'Blog pessoal onde mostro um pouco do meu aprendizado.',
   SITEURL : '/',
   AUTHOR_SAVE_AS : 'author.html',
-  HASH_GRAVATAR : 'cd58d60fac779175c0ab6ac1b912d4b5',
+  HASH_GRAVATAR : 'ac7d3bd9cc7064b78ad1a2472cc4d22e',
   PATH : 'content',
   DEFAULT_LANG : 'pt-BR',
   TIMEZONE : 'America/Sao_Paulo',

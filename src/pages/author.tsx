@@ -7,10 +7,9 @@ import "dayjs/locale/pt-br";
 dayjs.locale("pt-br");
 
 import * as DevIcons from "react-devicons";
+import * as BSIcons from 'react-bootstrap-icons'
 
 import { Head } from "../components";
-import { AuthorCardStyle } from "../components/styles/authorCard.style";
-import { getAllPosts } from "../services/api";
 import CONFIGS from "../services/configs";
 import { AuthorStyle } from "../styles/";
 import { ThemeContext } from "./_app";
@@ -31,13 +30,7 @@ const languages = [
 
 export default function Author() {
   const { isDarkTheme } = useContext(ThemeContext);
-  const authorStyle = AuthorStyle({ isDarkTheme });
-
-  const style = {
-    socialList: "",
-    socialItem: "",
-    socialIcon: "",
-  };
+  const style = AuthorStyle({ isDarkTheme });
 
   const entryDate = "2013-10-01";
   const workLife = dayjs().diff(entryDate, "year", false);
@@ -45,137 +38,106 @@ export default function Author() {
   return (
     <>
       <Head />
-      <section className={authorStyle.content}>
-        {/* <img
-
-            src={`https://www.gravatar.com/avatar/${ HASH_GRAVATAR }?s=200`}
+      <section className={style.content}>
+        <img
+            src={`https://www.gravatar.com/avatar/${ HASH_GRAVATAR }?s=250`}
             alt="Foto do meu rosto."
-            width="150"
-            height="150"
-            className={classNames(authorCardStyle.img)}
+            width="250"
+            height="250"
+            className={classNames(style.img)}
             id="authorImage"
-          /> */}
+          />
+        <p className={classNames(style.section)}>
+          Olá, me chamo <span className={style?.name}>Paulo Oliveira</span> e sou <span className={style.highlight}>desenvolvedor no <Link href={'https://vemparaglobo.g.globo'}>Grupo Globo</Link> há {workLife} anos</span>. <br /> <br />
+          Criei o <Link href={'/'} >um dev qualquer</Link> com o intuito de compartilhar os meus conhecimentos e guardar o meu aprendizado de uma forma estruturada. Sou apaixonado por tecnologia e entusiasta das novidades. <br />
+          Hoje estou focado no desenvolvimento de APPs para <span className={style.highlight}>Smart TV, Acessibilidade</span> e <abbr title="Developer eXperience" className={style.highlight}>DX</abbr>.
+        </p>
 
-        <h2 className={authorStyle?.name}>Paulo Oliveira</h2>
-        {/* <h3>
-          Trabalhando há {workLife} anos na <a href="http://globo.com">Globo</a>.
-        </h3> */}
+        <section className={classNames(style.section)}>
+          <span>Entre em contato comigo!</span>
+          <ul className={style.socialList}>
+           {
+             SOCIAL?.map((social, index) => {
+               const SocialIcon = BSIcons[social.name]
+               return (
+                 <li className={style.socialItem} key={`${social.name}-${index}`}>
+                   <a href={social.url} title={social.name}>
+                     <SocialIcon className={style.socialIcon} tab-index="-1" alt={`${social.name} ícone`} title={`${social.name}`}/>
+                   </a>
+                 </li>
+               )
+             })
+           }
+          </ul>
+        </section>
 
-        {/* <div>
-          <h4>Sobre mim:</h4>
-          <p className="about-me__section--block">
-            Apaixonado por tecnologia, hoje sou desenvolvedor focado no
-            desenvolvimento de app para Smart TVs.
-          </p>
-          <div className="about-me__section--block">
-            <div className="about-me__section--title">Contatos</div>
-            <ul className={style.socialList}>
-              {SOCIAL?.map((social, index) => (
-                <li
-                  className={style.socialItem}
-                  key={`${social.name}-${index}`}
-                >
-                  <a href={social.url} title={social.name}>
-                    {social.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="about-me__section--block">
-            <div className="about-me__section--title">Skills</div>
-            <LanguageIKnow />
-          </div>
+        <section className={classNames(style.section, style.sectionDivision)}>
+          <ul className={style.timeline}>
+            <li className={style.timelineMark}>
+              <span className={style.timelineDate} >2012</span>
+              <p className={style.timelineContent}>
+                <span className={style.timelineJobTitle} >Estágio em Desenvolvimento</span> {' - '}
+                <span className={style.timelineCompany}>MSA RH Consultoria</span>
+              </p>
+              <p className={style.timelineContent}>
+                Participei no desenvolvimento e manutenção do sistema de gerenciamento de estágiários da Vale.
+              </p>
+            </li>
 
-          <div className="about-me__section--block">
-            <div className="about-me__section--title">
-              Principais projetos que participei
-            </div>
-            <ul className="about-me__section--list">
-              <li className="about-me__list--item">Cartola</li>
-              <li className="about-me__list--item">Globoesporte(ge)</li>
-              <li className="about-me__list--item">G1</li>
-              <li className="about-me__list--item">
-                Smart TV
-                <ul>
-                  <li>Globoplay</li>
-                  <li>Canais Globo (antigo Globosat play)</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+            <li className={style.timelineMark}>
+              <span className={style.timelineDate} >2013</span>
+              <p className={style.timelineContent}>
+                <span className={style.timelineJobTitle} >Estágio em Desenvolvimento</span> {' - '}
+                <span className={style.timelineCompany}>Globo.com</span>
+              </p>
+              <p className={style.timelineContent}>
+                Participei na manutenção e desenvolvimento de features dos sites: G1, Cartola e GE(Globoesporte).
+              </p>
+            </li>
 
-          <div className="about-me__section--block">
-            <div className="about-me__section--title">Experiência</div>
-            <ul className="about-me__section--list">
-              <li className="about-me__list--item">
-                Desenvolvedor:
-                <ul>
-                  <li>Globo (antiga globo.com) [2015 - atual]</li>
-                </ul>
-              </li>
-              <li className="about-me__list--item">
-                <span>Estágio em Desenvolvimento</span>
-                <ul>
-                  <li>Globo.com [2013 - 2015]</li>
-                  <li>MSA RH Consultoria [2012 - 2013]</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+            <li className={style.timelineMark}>
+              <span className={style.timelineDate} >2015 - Atual</span>
+              <p className={style.timelineContent}>
+                <span className={style.timelineJobTitle} >Desenvolvedor</span> {' - '}
+                <span className={style.timelineCompany}>Grupo Globo (HUB digital / antiga globo.com)</span>
+              </p>
+              <p className={style.timelineContent}>
+                Participei na manutenção e desenvolvimento de features do site: GE(Globoesporte).
+              </p>
+              <p className={style.timelineContent}>
+                Participei na manutenção e desenvolvimento de features do APP para Smart TVs: Canais globo (Antigo globosatplay) e Globoplay.
+              </p>
+              <p className={style.timelineContent}>
+                Hoje atuo no time de pesquisa e desenvolvimento para a melhoria das APP de tv do Globoplay, tanto para o usuário final quanto para os desenvolvedores.
+              </p>
+            </li>
+          </ul>
 
-          <div className="about-me__section--block">
-            <div className="about-me__section--title">Educação</div>
-            <ul className="about-me__section--list">
-              <li className="about-me__list--item">
-                Sistema da Informação: Universidade Estácio de Sá - [2016 -
-                Atual]
-              </li>
-              <li className="about-me__list--item">
-                Ciência da Computação: UEZO - Centro Universitário Estadual da
-                Zona Oeste - [2010 - 2016] <i> - Incompleto</i>
-              </li>
-            </ul>
-          </div>
-        </div> */}
+        </section>
+
+        {/* <section className={classNames(style.section)}>
+          <span className="about-me__section--title">Skills:</span>
+          <LanguageIKnow styleName={style} />
+        </section> */}
       </section>
     </>
   );
 }
 
-const LanguageIKnow = () => {
+const LanguageIKnow = ({styleName}) => {
   const tHead = [];
   const tBody = [];
-
-  const LangList = languages.map((language) => {
+  languages.map((language) => {
     const LanguageIcon = DevIcons[`${language}OriginalIcon`];
     tHead.push(
       <th key={`th-${language}`}>
         {LanguageIcon && (
-          <LanguageIcon size="4em" alt={language} title={language} />
+          <LanguageIcon className={styleName.languageIcon} alt={language} title={language} />
         )}
       </th>
     );
     tBody.push(<td key={`td-${language}`}>{language}</td>);
   });
-
-  {/* <ul className="about-me__section--list">
-    <li className="about-me__list--item"><span>Python</span>
-      <ul>
-        <li>Django</li>
-        <li>Flask</li>
-      </ul>
-    </li>
-    <li className="about-me__list--item"><span>Javascript</span>
-      <ul>
-        <li>React</li>
-        <li>Canvas</li>
-      </ul>
-    </li>
-    <li className="about-me__list--item">HTML(5)</li>
-    <li className="about-me__list--item">CSS(3)</li>
-    <li className="about-me__list--item">PHP</li>
-  </ul> */}
 
   return (
     <table>

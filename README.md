@@ -28,12 +28,14 @@ Migração do pelican para nextjs feita baseado nos posts
 - [Configurando meta tags](https://stackoverflow.com/a/43154489/3498055)
 - [Como configurar o Google Analytics no NextJS em 2021](https://willianjusten.com.br/como-configurar-o-google-analytics-no-nextjs-em-2021)
 - [React Google Analytics 4](https://github.com/PriceRunner/react-ga4)
+- [Dev Icon](https://github.com/devicons/devicon/)
 
 ### Plugins utilizados:
 
 - [Disqus react](https://github.com/disqus/disqus-react)
 - [React syntax highlighter prism theme](https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html)
 - [Syntax Highlight Code in Markdown](https://amirardalan.com/blog/syntax-highlight-code-in-markdown)
+- [react devicon](https://github.com/devicons/react-devicons)
 
 - rehype:
   -
