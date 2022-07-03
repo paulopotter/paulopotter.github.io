@@ -42,7 +42,7 @@ const Document = () => {
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', ${GA_CODE});
+            gtag('config', "${GA_CODE}");
         `,
         }}
       />
