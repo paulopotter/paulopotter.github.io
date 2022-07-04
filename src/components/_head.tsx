@@ -5,6 +5,7 @@ import CONFIGS from "../services/configs";
 const {
   AUTHOR,
   FEED_DOMAIN,
+  FEED_ALL_RSS,
   FEED_ALL_ATOM,
   SITE_BAR_TITLE,
   // SITEURL,
@@ -79,6 +80,12 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
     <link rel="preconnect" href="https://www.google-analytics.com" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link
+      href={`${FEED_DOMAIN}/${FEED_ALL_RSS}`}
+      type="application/rss+xml"
+      rel="alternate"
+      title={`${SITE_BAR_TITLE} - RSS Feed`}
+    />
     <link
       href={`${FEED_DOMAIN}/${FEED_ALL_ATOM}`}
       type="application/atom+xml"

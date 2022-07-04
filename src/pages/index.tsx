@@ -4,12 +4,13 @@ import classNames from "classnames";
 import Link from "next/link";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
+import ReactMarkdown from "react-markdown";
 
 import { Head } from "../components";
 import { getAllPosts } from "../services/api";
 import { HomeStyle } from "../styles/";
 import { ThemeContext } from "./_app";
-import ReactMarkdown from "react-markdown";
+import generateRSS from "../services/generateRssFeed";
 
 dayjs.locale("pt-br");
 
@@ -89,7 +90,8 @@ export default function Page({ posts }) {
   );
 }
 
-export function getStaticProps() {
+export async function getStaticProps() {
+  await generateRSS();
   const posts = getAllPosts([
     "title",
     "slug",

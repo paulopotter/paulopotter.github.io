@@ -7,7 +7,6 @@ const CONFIGS = {
   SITE_NAME_SUBTITLE : 'Paulo Oliveira',
   SITEDESCRIPTION : 'Blog pessoal onde mostro um pouco do meu aprendizado.',
   SITEURL : '/',
-  AUTHOR_SAVE_AS : 'author.html',
   HASH_GRAVATAR : 'ac7d3bd9cc7064b78ad1a2472cc4d22e',
   PATH : 'content',
   DEFAULT_LANG : 'pt-BR',
@@ -15,12 +14,10 @@ const CONFIGS = {
   DEFAULT_DATE_FORMAT : ('%d %b %Y'),
   GZIP_CACHE: true,
   GA_CODE : process.env.NODE_ENV !== 'development' ? 'G-JJ3BCWYTFE' : 'G-JWYBRTREFC',
-  FEED_ALL_ATOM : 'feeds/all.atom.xml',
+  FEED_ALL_RSS : 'rss/all.xml',
+  FEED_ALL_ATOM : 'rss/all.atom.xml',
   FEED_DOMAIN : 'https://umdevqualquer.com.br',
-  CATEGORY_FEED_ATOM : null,
-  TRANSLATION_FEED_ATOM : null,
-  AUTHOR_FEED_ATOM : null,
-  AUTHOR_FEED_RSS : null,
+
   SUMMARY_USE_FIRST_PARAGRAPH : true,
   LINKS : [],
   MENU_LINKS : {
@@ -54,7 +51,6 @@ const CONFIGS = {
       'extra/favicon.png': {'path': 'favicon.png'},
   },
   SLUGIFY_SOURCE : 'title',
-  THEME : './themes/2022_by_me',
   DEFAULT_CATEGORY : 'Sem categoria',
   THEME_STATIC_URL : '/theme',
   STATIC_IMAGES : './images',
@@ -62,9 +58,5 @@ const CONFIGS = {
   DISQUS_SECRET_KEY : 'XdODToOxeAJ9o3hRoTPjx78PZZm0WcTtowolBCStey0men2ufj9UIXHxuXmhWf74',
   DISQUS_PUBLIC_KEY : 'KQs0QcpVN6AoH9AqAPSGj7qmPQDB7RmGSdvEizPYkEM6452phejHRUSfKkprC5Qi',
 }
-
-
-
-
 
 export default CONFIGS
