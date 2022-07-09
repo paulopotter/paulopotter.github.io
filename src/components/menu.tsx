@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import Link from "next/link";
 import CONFIGS from "../services/configs";
 import { MenuStyle } from "./styles/menu.style";
@@ -14,6 +14,20 @@ export function Menu() {
   const toggleMenu = () => {
     setMenuOpened(!isMenuOpened);
   };
+
+  useEffect(() => {
+    if(!isMenuOpened) { return }
+
+    const handleKey = (event) => {
+      if(
+        'Escape' === event.key
+        ){
+        toggleMenu();
+      }
+    }
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [isMenuOpened])
 
   const { isDarkTheme } = useContext(ThemeContext);
   const menuStyle = MenuStyle({ isDarkTheme });
@@ -47,12 +61,11 @@ export function Menu() {
         },
         )}
         aria-hidden={!isMenuOpened}
-        tab-index={!isMenuOpened ? -1 : null}
       >
         {
           Object.keys(MENU_LINKS)?.map((menuItem: string, index: number) => (
           <li className={menuStyle.menuListItem} key={`menu-${index}`}>
-            <Link href={MENU_LINKS[menuItem]}>{menuItem}</Link>
+            <a href={MENU_LINKS[menuItem]} tabIndex={!isMenuOpened ? -1 : 0}>{menuItem}</a>
           </li>
           ))
         }

@@ -13,6 +13,7 @@ export const HeaderStyle = createUseStyles({
     transform: 'translateY(-100%)',
     transition: 'transform 0.3s',
     color:[ THEME_VALUE(isDarkTheme, "changeThemeButton"), '!important'],
+    zIndex: 999,
 
     '&:visited': {
         color:[ THEME_VALUE(isDarkTheme, "changeThemeButton"), '!important'],

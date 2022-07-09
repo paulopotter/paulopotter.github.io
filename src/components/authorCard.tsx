@@ -36,7 +36,7 @@ export function AuthorCard({isDarkTheme = false}) {
             return (
               <li className={style.socialItem} key={`${social.name}-${index}`}>
                 <a href={social.url} title={social.name}>
-                  <SocialIcon className={style.socialIcon} tab-index="-1" alt={`${social.name} ícone`} title={`${social.name} ícone`}/>
+                  <SocialIcon className={style.socialIcon} tabIndex={-1} alt={`${social.name} ícone`} title={`${social.name} ícone`}/>
                 </a>
               </li>
             )

@@ -40,6 +40,7 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
       {TITLE}
     </title>
     {/* META */}
+    <link rel="canonical" href={`${meta?.ogUrl ?? SITE_URL}`} />
     <meta name="description" content={meta?.description || SITE_DESCRIPTION} />
     <meta name="author" content={AUTHOR} />
     <meta name="robots" content="noimageindex" />

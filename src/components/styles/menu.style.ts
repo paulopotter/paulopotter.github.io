@@ -5,7 +5,7 @@ import { THEME_VALUE } from '../../config/config.style'
 export const MenuStyle = createUseStyles({
   menu: {
       'display': 'inline',
-      'zIndex': 9,
+      'zIndex': 2,
       'paddingInlineStart': 0,
   },
   menuOpened: {
@@ -30,6 +30,9 @@ export const MenuStyle = createUseStyles({
       top: '5.5rem',
       width: '100vw',
       'z-index': 1,
+      '@media (max-width: 424px)': {
+        top: '9.5rem',
+      },
     }
   },
   menuIcon: {
@@ -60,7 +63,7 @@ export const MenuStyle = createUseStyles({
       transform: 'translateY(-100%)',
       transition: 'transform 0.3s, opacity 0.3s',
       opacity: 0,
-      'max-width': '1380px',
+      'max-width': '1365px',
       margin: '0 auto',
 
       '@media (min-width: 1025px) and (max-width: 1440px)': {
@@ -75,9 +78,12 @@ export const MenuStyle = createUseStyles({
       '@media (max-width: 425px)': {
         transition: 'transform 0.3s, opacity 0.5s',
         display: 'block',
-        top: 87,
+        top: '16vh',
         left: 0,
         borderTop: [2, 'dotted', THEME_VALUE(isDarkTheme, 'border')],
+      },
+      '@media (max-width: 767px)': {
+        top: '9.8vh',
       },
     }}),
 

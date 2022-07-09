@@ -24,7 +24,7 @@ export const Header = ({ toggleTheme, ThemeContext }: HeaderProps) => {
 
   return (
     <>
-      <a className={headerStyle.skipContent} tab-index="0" href="#start-site">
+      <a className={headerStyle.skipContent} tabIndex={0} href="#start-site">
         Pular para o conteúdo
       </a>
       <header className={headerStyle.header} id="start-page">
