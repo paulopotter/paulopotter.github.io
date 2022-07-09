@@ -73,7 +73,8 @@ export const PostContent = ({ post }: Props) => {
         meta={{
           ogTitle: post.title,
           ogDescription: post?.summary,
-          ogImage: post?.cover_image_url,
+          description: post?.summary,
+          ogImage: post?.cover_image,
           ogUrl: `${SITEURL}/${post.slug}`,
           twitterAlt: post?.cover_image_alt,
         }}

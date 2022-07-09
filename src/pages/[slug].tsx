@@ -19,6 +19,7 @@ export async function getStaticProps({ params }) {
     "cover_image_link",
     "cover_image_by",
     "category",
+    "summary",
     "series",
     "seriesRelated",
   ]);
