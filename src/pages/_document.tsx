@@ -1,16 +1,20 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import  dayjs from "dayjs";
+import dayjs from "dayjs";
 import 'dayjs/locale/pt-br';
 
 import CONFIGS from "../services/configs";
 
-const { GA_CODE } = CONFIGS;
+const {
+  GA_CODE,
+  FULL_DATE_DEFAULT_FORMAT,
+  DEFAULT_LANG,
+} = CONFIGS;
 
-dayjs.locale('pt-br')
+dayjs.locale(DEFAULT_LANG)
 
 const Document = () => {
   return (
-    <Html lang="pt-BR" data-info={ `${dayjs().format('YYYY-MM-DD hh:mm:ss').toString()}` }>
+    <Html lang={DEFAULT_LANG} data-info={ `${dayjs().format(FULL_DATE_DEFAULT_FORMAT).toString()}` }>
       <Head>
         <script async={true} src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2474646572295965"
         crossOrigin="anonymous"></script>

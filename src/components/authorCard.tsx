@@ -6,7 +6,7 @@ import CONFIGS from "../services/configs";
 import classNames from "classnames";
 import Link from 'next/link';
 
-const { HASH_GRAVATAR, SOCIAL } = CONFIGS
+const { AUTHOR_IMG, SOCIAL } = CONFIGS
 
 export function AuthorCard({isDarkTheme = false}) {
 
@@ -16,7 +16,7 @@ export function AuthorCard({isDarkTheme = false}) {
   return (
     <header className={style.header}>
       <img
-        src={`https://www.gravatar.com/avatar/${ HASH_GRAVATAR }?s=200`}
+        src={`${ AUTHOR_IMG }?s=150`}
         alt="Foto do meu rosto."
         width="150"
         height="150"

@@ -14,7 +14,7 @@ import CONFIGS from "../services/configs";
 import { AuthorStyle } from "../styles/";
 import { ThemeContext } from "./_app";
 
-const { HASH_GRAVATAR, SOCIAL } = CONFIGS;
+const { AUTHOR_IMG, SOCIAL } = CONFIGS;
 
 const languages = [
   "Python",
@@ -40,7 +40,7 @@ export default function Author() {
       <Head />
       <section className={style.content}>
         <img
-            src={`https://www.gravatar.com/avatar/${ HASH_GRAVATAR }?s=250`}
+            src={`${ AUTHOR_IMG }?s=250`}
             alt="Foto do meu rosto."
             width="250"
             height="250"

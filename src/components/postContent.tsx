@@ -24,6 +24,11 @@ import { ThemeContext } from "../pages/_app";
 import CONFIGS from "../services/configs";
 import { PostStyle } from "./styles/postContent.style";
 
+const {
+  SITE_URL,
+  DISQUS_SITENAME,
+} = CONFIGS;
+
 
 type PostType = {
   content: string;
@@ -44,7 +49,6 @@ type PostType = {
 interface Props {
   post: PostType;
 }
-const { SITEURL } = CONFIGS;
 
 SyntaxHighlighter.registerLanguage("typescript", typescript);
 SyntaxHighlighter.registerLanguage("tsx", tsx);
@@ -75,7 +79,7 @@ export const PostContent = ({ post }: Props) => {
           ogDescription: post?.summary,
           description: post?.summary,
           ogImage: post?.cover_image,
-          ogUrl: `${SITEURL}/${post.slug}`,
+          ogUrl: `${SITE_URL}/${post.slug}`,
           twitterAlt: post?.cover_image_alt,
         }}
       ></Head>
@@ -168,7 +172,7 @@ export const PostContent = ({ post }: Props) => {
       </section>
       <section>
         <DiscussionEmbed
-          shortname="umdevqualquer"
+          shortname={DISQUS_SITENAME}
           config={{
             url: `${window.location.href.indexOf('.html') > -1 ? window.location.href : window.location.href + '.html'}`,
             identifier: `${window.location.href.indexOf('.html') > -1 ? window.location.href : window.location.href + '.html'}`,

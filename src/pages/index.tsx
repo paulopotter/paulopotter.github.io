@@ -6,13 +6,21 @@ import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 import ReactMarkdown from "react-markdown";
 
+import CONFIGS from '../services/configs'
 import { Head } from "../components";
 import { getAllPosts } from "../services/api";
 import { HomeStyle } from "../styles/";
 import { ThemeContext } from "./_app";
 import generateRSS from "../services/generateRssFeed";
 
-dayjs.locale("pt-br");
+const {
+  DATE_DEFAULT_FORMAT,
+  DEFAULT_LANG,
+  POST_DATE_FORMAT,
+} = CONFIGS
+
+dayjs.locale(DEFAULT_LANG.toLowerCase());
+
 
 export default function Page({ posts }) {
   const summary = (index, post) => {
@@ -56,8 +64,8 @@ export default function Page({ posts }) {
               {summary(index, post)}
               <footer className={homeStyle.category}>
                 <span aria-label="Data de pulicação:">
-                  {dayjs(post.date, "YYYY-MM-DD", "pt", true)
-                    .format("DD MMM YYYY")
+                  {dayjs(post.date, DATE_DEFAULT_FORMAT, "pt", true)
+                    .format(POST_DATE_FORMAT)
                     .toString()}
                 </span>
                 {/* -{" "} */}
