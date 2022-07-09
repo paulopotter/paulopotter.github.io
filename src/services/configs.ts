@@ -5,7 +5,7 @@ const basic = {
   SITE_NAME : 'Um dev qualquer',
   SITE_NAME_SUBTITLE : 'Paulo Oliveira',
   SITE_DESCRIPTION : 'Blog pessoal onde mostro um pouco do meu aprendizado.',
-  SITE_URL : `${IS_DEV_MODE ? 'http://local.' : 'https://'}umdevqualquer.com.br${IS_DEV_MODE && ':3000'}`,
+  SITE_URL : `${IS_DEV_MODE ? 'http://local.' : 'https://'}umdevqualquer.com.br${IS_DEV_MODE ? ':3000' : ''}`,
   DEFAULT_LANG : 'pt-BR',
 }
 
