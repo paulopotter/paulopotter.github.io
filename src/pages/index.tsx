@@ -26,7 +26,7 @@ export default function Page({ posts }) {
   const summary = (index, post) => {
     if (index === 0) {
       return (
-        <div className="home_content__article-body-summary"><br/>
+        <div className="home_content__article-body-summary">
           <ReactMarkdown skipHtml>
             {post.summary ?? post?.content?.slice(0, 140)}
           </ReactMarkdown>

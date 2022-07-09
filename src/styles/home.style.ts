@@ -82,7 +82,7 @@ export const HomeStyle = createUseStyles({
       width: '100%',
       height: '15em',
       padding: 0,
-      margin: '0 0 2em',
+      margin: '0 0 1em',
       display: 'block',
     },
     [`@media (max-width: ${MEDIA_QUERIES.small})`]: {
