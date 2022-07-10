@@ -40,6 +40,10 @@ export const AuthorCardStyle = createUseStyles({
 
     '&:hover': {
       fill: THEME_VALUE(isDarkTheme, 'link'),
+    },
+
+    'a:focus &': {
+      fill: THEME_VALUE(isDarkTheme, 'link'),
     }
   }),
 
