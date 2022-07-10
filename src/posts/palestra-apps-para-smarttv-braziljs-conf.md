@@ -18,10 +18,9 @@ Esta semana a equipe da braziljs liberou todos os vídeos dessa última edição
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9WpuPhAVA6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin: 1em auto; position: relative; width: 90%; height: 50vw;height: 70vh; display: inherit;"></iframe>
 
+- [Arquivo da apresentação](./presentations/Smart%20TVs%20101%20-%20Brazil%20JS%202021.pdf).
+
 _**Nota**: Quando eu tiver coragem de me ouvir, prometo que edito este post com a transcrição do video._
-
-_**Nota 2**: já já vou disponibilizar a apresentação (pdf), segura ai_ 🤪
-
 
 Valeu, divirta-se e até próxima!
 
