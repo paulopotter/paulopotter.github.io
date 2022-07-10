@@ -1,6 +1,7 @@
 import React from "react";
 import NextHead from "next/head";
 import CONFIGS from "../services/configs";
+import { COLOR } from "config";
 
 const {
   IS_DEV_MODE,
@@ -52,12 +53,12 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
     <meta
       name="theme-color"
       media="(prefers-color-scheme: dark)"
-      content="#32373d"
+      content={COLOR.dark.background}
     />
     <meta
       name="theme-color"
       media="(prefers-color-scheme: light)"
-      content="#f5f5f5"
+      content={COLOR.light.background}
     />
     <meta property="og:title" content={`${meta?.ogTitle ?? TITLE}`} />
     <meta property="og:type" content="website" />
@@ -68,8 +69,17 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
     />
     <meta
       property="og:image"
+      itemProp="image"
       content={ meta?.ogImage ?? `${AUTHOR_IMG}?s=1200`}
     />
+    <meta
+      name="msapplication-TileImage"
+      content={ meta?.ogImage ?? `${AUTHOR_IMG}?s=1200`}
+    />
+    <meta property="og:image:type" content="image/jpeg"></meta>
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:site_name" content={TITLE} />
     <meta property="og:url" content={`${meta?.ogUrl ?? SITE_URL}`} />
     <meta name="twitter:card" content={TWITTER_CARD} />
     <meta name="twitter:site" content={TWITTER_SITE} />
