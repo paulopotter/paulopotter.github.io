@@ -23,6 +23,7 @@ import { AuthorCard, Head } from ".";
 import { ThemeContext } from "../pages/_app";
 import CONFIGS from "../services/configs";
 import { PostStyle } from "./styles/postContent.style";
+import RelatedPosts from "./relatedPosts";
 
 const {
   SITE_URL,
@@ -45,6 +46,18 @@ type PostType = {
   readingTime?: string
   subtitle?: string
   summary?: string
+  related?: {
+    prevPost?: {
+      date: string;
+      slug: string;
+      title: string;
+    },
+    nextPost?: {
+      date: string;
+        slug: string;
+        title: string;
+    }
+  }
 };
 interface Props {
   post: PostType;
@@ -168,6 +181,9 @@ export const PostContent = ({ post }: Props) => {
           <AuthorCard isDarkTheme={isDarkTheme} />
 
           {/* <SeriesPosts post={post} /> */}
+
+          <RelatedPosts {...post.related} isDarkTheme />
+
         </article>
       </section>
       <section>

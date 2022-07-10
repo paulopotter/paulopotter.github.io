@@ -1,6 +1,6 @@
 // @ts-nocheck
 import markdown from "../services/markdown";
-import { getPost, getAllPosts } from "../services/api";
+import { getPost, getAllPosts, getRelatedPosts } from "../services/api";
 import { PostContent } from "../components";
 
 const Page = ({ post }) => <PostContent post={post} />;
@@ -24,10 +24,10 @@ export async function getStaticProps({ params }) {
     "seriesRelated",
   ]);
 
-  // console.log(post);
   const md = await markdown.toHTML(post.content);
   post.content = md.value;
-  post.readingTime = md.data.readingTime?.text.replace(" read", ""); //.replace(/[^\d\.]*/g, "");
+  post.readingTime = md.data.readingTime?.text.replace(" read", "");
+  post.related = getRelatedPosts(post.date)
   return {
     props: { post },
   };

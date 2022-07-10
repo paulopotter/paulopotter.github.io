@@ -68,6 +68,49 @@ export function getAllPosts(fields) {
   return posts
 }
 
+
+/**
+ * Busca por posts proximos (anterior e proximo)
+ */
+
+export function getRelatedPosts(date) {
+  const allPosts = getAllPosts([
+    'title',
+    'slug',
+    'date'
+  ]);
+
+  return filterRelatedPosts(date, allPosts)
+}
+
+/**
+ *
+ * base on https://stackoverflow.com/a/11795472/3498055
+*/
+function filterRelatedPosts(postDate, listOfPosts) {
+    const result = {}
+    const date = new Date(postDate);
+
+    const maxDateValue = Math.abs((new Date(0,0,0)).valueOf());
+    let bestPrevDiff = maxDateValue;
+    let bestNextDiff = -maxDateValue;
+
+    let currDiff = 0;
+
+    for(let i = 0; i < listOfPosts.length; i++) {
+        currDiff = date - new Date(listOfPosts[i].date);
+        if(currDiff < 0 && currDiff > bestNextDiff){
+            result['nextPost'] = listOfPosts[i]
+            bestNextDiff = currDiff;
+        }
+        if(currDiff > 0 && currDiff < bestPrevDiff){
+            result['prevPost'] = listOfPosts[i]
+            bestPrevDiff = currDiff;
+        }
+    }
+    return result
+}
+
 export function getRelatedSeries(serie, postTitle = '') {
   const posts = getAllPosts([
     'series',
