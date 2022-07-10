@@ -81,7 +81,7 @@ export default function Page({ posts }) {
             </div>
 
             {post?.cover_image && (
-              <a href={`${post.slug}`} className={homeStyle.imageLink}>
+              <a href={`${post.slug}`} className={homeStyle.imageLink} tabIndex={-1}>
                 <img
                   className={homeStyle.imageCover}
                   src={`${post?.cover_image}`}

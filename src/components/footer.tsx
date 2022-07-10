@@ -13,6 +13,8 @@ export const Footer = () => {
 
   const backToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    // @ts-expect-error: o botão possui foco.
+    document.querySelector('#start-page menu button').focus()
   };
 
   useEffect(() => {
