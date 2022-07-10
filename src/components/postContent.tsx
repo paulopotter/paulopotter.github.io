@@ -24,6 +24,8 @@ import { ThemeContext } from "../pages/_app";
 import CONFIGS from "../services/configs";
 import { PostStyle } from "./styles/postContent.style";
 import RelatedPosts from "./relatedPosts";
+import { PostData } from "types/posts.type";
+import SeriesPosts from "./seriesPost";
 
 const {
   SITE_URL,
@@ -31,36 +33,8 @@ const {
 } = CONFIGS;
 
 
-type PostType = {
-  content: string;
-  date: string;
-  excerpt: string;
-  imagePath: string;
-  slug: string;
-  title: string;
-  cover_image?: string
-  cover_image_alt?: string
-  cover_image_by?: string
-  cover_image_link?: string
-  cover_image_url?: string
-  readingTime?: string
-  subtitle?: string
-  summary?: string
-  related?: {
-    prevPost?: {
-      date: string;
-      slug: string;
-      title: string;
-    },
-    nextPost?: {
-      date: string;
-        slug: string;
-        title: string;
-    }
-  }
-};
 interface Props {
-  post: PostType;
+  post: PostData;
 }
 
 SyntaxHighlighter.registerLanguage("typescript", typescript);
@@ -180,7 +154,7 @@ export const PostContent = ({ post }: Props) => {
 
           <AuthorCard isDarkTheme={isDarkTheme} />
 
-          {/* <SeriesPosts post={post} /> */}
+          <SeriesPosts posts={post?.series} isDarkTheme />
 
           <RelatedPosts {...post.related} isDarkTheme />
 
@@ -202,7 +176,7 @@ export const PostContent = ({ post }: Props) => {
 };
 
 interface CoverImageProps {
-  post: PostType,
+  post: PostData,
   postStyle: any,
 }
 
