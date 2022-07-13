@@ -29,7 +29,6 @@ export async function getStaticProps({ params }) {
   post.readingTime = md.data.readingTime?.text.replace(" read", "");
   post.related = getRelatedPosts(post.date)
   post.series = getRelatedSeries(post.series, post.title)
-  console.info(post.series)
   return {
     props: { post },
   };

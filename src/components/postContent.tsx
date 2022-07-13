@@ -148,12 +148,12 @@ export const PostContent = ({ post }: Props) => {
                 },
               }}
             >
-              {post.content}
+              {post.content!}
             </ReactMarkdown>
           </div>
 
           <AuthorCard isDarkTheme={isDarkTheme} />
-
+            {/* @ts-ignore */}
           <SeriesPosts posts={post?.series} isDarkTheme />
 
           <RelatedPosts {...post.related} isDarkTheme />
