@@ -3,7 +3,6 @@ import dayjs from "dayjs";
 import 'dayjs/locale/pt-br';
 
 import CONFIGS from "../services/configs";
-import NewRelic from "components/new-relic";
 
 const {
   GA_CODE,
@@ -17,9 +16,9 @@ const Document = () => {
   return (
     <Html lang={DEFAULT_LANG} data-info={ `${dayjs().format(FULL_DATE_DEFAULT_FORMAT).toString()}` }>
       <Head>
-        <NewRelic />
         <script async={true} src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2474646572295965"
         crossOrigin="anonymous"></script>
+        <script async={true} src="./static/new-relic.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
