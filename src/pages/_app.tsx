@@ -38,7 +38,8 @@ export default function MyApp({ Component, pageProps }) {
       toggleTheme();
     }
     setCanRender(true);
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isDark]);
 
   GlobalStyle();
 

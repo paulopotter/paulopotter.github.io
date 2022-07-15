@@ -5,7 +5,7 @@ import { THEME_VALUE } from '../../config/config.style'
 export const SeriesPostsStyle = createUseStyles({
   wrapper: {
     border: '1px dashed',
-    display: 'inline-block',
+    display: 'block',
     padding: '1em',
     marginTop: '1.5em',
   },

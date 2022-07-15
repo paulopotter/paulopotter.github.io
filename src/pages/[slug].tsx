@@ -47,7 +47,7 @@ export function getStaticPaths() {
      */
     paths: posts?.map((post) => ({
       params: {
-        slug: post!.slug,
+        slug: post?.slug,
       },
     })),
     /**

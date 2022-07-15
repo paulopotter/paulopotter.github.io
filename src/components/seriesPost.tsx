@@ -11,17 +11,17 @@ type posts = {
   series: string;
 }
 
-const SeriesPosts = ({ posts, isDarkTheme }: RelatedProps): any => {
+const SeriesPosts = ({ posts, isDarkTheme }: RelatedProps): unknown => {
   if(posts === undefined || posts?.length === 0) return
 
   // @ts-expect-error: isdark nao aceito
   const style = SeriesPostsStyle({ isDarkTheme });
 
-  const items = (post: posts): any => post?.slug ? (<a href={post.slug} >{post.title}</a>) : post.title
+  const items = (post: posts): unknown => post?.slug ? (<a href={post.slug} >{post.title}</a>) : post.title
 
   return(
     <div className={style.wrapper} >
-      <p className={style.title}>Este post faz parte da serie "<span className={style.titleHighlight}>{posts[0].series}</span>"</p>
+      <p className={style.title}>Este post faz parte da serie &quot;<span className={style.titleHighlight}>{posts[0].series}</span>&quot;</p>
 
       <ul className={style.list}>
         {

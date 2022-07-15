@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 dayjs.locale("pt-br");
 
-import * as DevIcons from "react-devicons";
+// import * as DevIcons from "react-devicons";
 import * as BSIcons from 'react-bootstrap-icons'
 
 import { Head } from "../components";
@@ -16,17 +16,17 @@ import { ThemeContext } from "./_app";
 
 const { AUTHOR_IMG, SOCIAL } = CONFIGS;
 
-const languages = [
-  "Python",
-  "Django",
-  "Flask",
-  "Javascript",
-  "React",
-  "Canvas",
-  "Html5",
-  "Css3",
-  "Php",
-];
+// const languages = [
+//   "Python",
+//   "Django",
+//   "Flask",
+//   "Javascript",
+//   "React",
+//   "Canvas",
+//   "Html5",
+//   "Css3",
+//   "Php",
+// ];
 
 export default function Author() {
   const { isDarkTheme } = useContext(ThemeContext);
@@ -124,29 +124,29 @@ export default function Author() {
   );
 }
 
-const LanguageIKnow = ({styleName}) => {
-  const tHead = [];
-  const tBody = [];
-  languages.map((language) => {
-    const LanguageIcon = DevIcons[`${language}OriginalIcon`];
-    tHead.push(
-      <th key={`th-${language}`}>
-        {LanguageIcon && (
-          <LanguageIcon className={styleName.languageIcon} alt={language} title={language} />
-        )}
-      </th>
-    );
-    tBody.push(<td key={`td-${language}`}>{language}</td>);
-  });
+// const LanguageIKnow = ({styleName}): Element => {
+//   const tHead = [];
+//   const tBody = [];
+//   languages.map((language) => {
+//     const LanguageIcon = DevIcons[`${language}OriginalIcon`];
+//     tHead.push(
+//       <th key={`th-${language}`}>
+//         {LanguageIcon && (
+//           <LanguageIcon className={styleName.languageIcon} alt={language} title={language} />
+//         )}
+//       </th>
+//     );
+//     tBody.push(<td key={`td-${language}`}>{language}</td>);
+//   });
 
-  return (
-    <table>
-      <thead>
-        <tr>{tHead}</tr>
-      </thead>
-      <tbody>
-        <tr>{tBody}</tr>
-      </tbody>
-    </table>
-  );
-};
+//   return (
+//     <table>
+//       <thead>
+//         <tr>{tHead}</tr>
+//       </thead>
+//       <tbody>
+//         <tr>{tBody}</tr>
+//       </tbody>
+//     </table>
+//   );
+// };

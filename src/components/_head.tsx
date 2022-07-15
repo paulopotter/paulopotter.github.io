@@ -21,7 +21,7 @@ const {
 
 interface HeadProps {
   title?: string
-  children?: any
+  children?: unknown
   meta?: {
     description?: string
     ogTitle?: string

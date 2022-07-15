@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
-// @ts-ignore
 import rehypeFigure from "rehype-figure";
 import remarkGfm from 'remark-gfm';
 import rehypeRewrite from "rehype-rewrite";
@@ -24,7 +23,7 @@ import { ThemeContext } from "../pages/_app";
 import CONFIGS from "../services/configs";
 import { PostStyle } from "./styles/postContent.style";
 import RelatedPosts from "./relatedPosts";
-import { PostData } from "types/posts.type";
+import { PostData } from "@types/posts.type";
 import SeriesPosts from "./seriesPost";
 
 const {
@@ -92,7 +91,7 @@ export const PostContent = ({ post }: Props) => {
                   rehypeRewrite,
                   {
                     // rewrite: (node: any, index: any, parent: any) => {
-                    rewrite: (node: any) => {
+                    rewrite: (node: unknown) => {
                       if (
                         node.tagName == "img" &&
                         !(
@@ -107,7 +106,7 @@ export const PostContent = ({ post }: Props) => {
                 ],
               ]}
               components={{
-                h2({ node, className, children, ...props }) {
+                h2({ className, children, ...props }) {
                   return !props?.id?.includes("footnote") ? (
                     <h2 id={props.id} className={className}>
                       {children}
@@ -116,7 +115,7 @@ export const PostContent = ({ post }: Props) => {
                     <hr />
                   );
                 },
-                img({ node, className, children, ...props }) {
+                img({ ...props }) {
                   // TODO: corrigir imagens e descrições
                   return (
                     <figure className={postStyle.articleCover}>
@@ -128,7 +127,7 @@ export const PostContent = ({ post }: Props) => {
                     </figure>
                   );
                 },
-                code({ node, inline, className, children, ...props }) {
+                code({ inline, className, children, ...props }) {
                   const match = /language-(\w+)/.exec(className || "");
                   return !inline && match ? (
                     <SyntaxHighlighter
@@ -148,7 +147,7 @@ export const PostContent = ({ post }: Props) => {
                 },
               }}
             >
-              {post.content!}
+              {post!.content}
             </ReactMarkdown>
           </div>
 
@@ -177,7 +176,7 @@ export const PostContent = ({ post }: Props) => {
 
 interface CoverImageProps {
   post: PostData,
-  postStyle: any,
+  postStyle: unknown,
 }
 
 const CoverImage = ({ post, postStyle }: CoverImageProps) => {
@@ -197,7 +196,7 @@ const CoverImage = ({ post, postStyle }: CoverImageProps) => {
   );
 };
 
-const FigureCaption = ({ post, postStyle }: CoverImageProps): any =>
+const FigureCaption = ({ post, postStyle }: CoverImageProps): Element =>
   post?.cover_image_by && (
     <figcaption className={postStyle.articleCoverCredit}>
       Créditos:{" "}

@@ -2,7 +2,7 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 
-import type { PostData } from '../types/posts.type'
+import type { PostData } from '../types/posts.type';
 
 const postsDirectory = join(process.cwd(), 'src/posts');
 const getMarkdownsFiles = (): string[] => fs.readdirSync(postsDirectory);
@@ -13,12 +13,12 @@ type RelatedPost = {
 }
 
 /**
- * Busca um post baseado no nome/slug
- * @param slugOrFilename Slug ou nome do arquivo com extensão
- * @param fields Campos do post que será retornado
+ * Busca um post baseado no nome do arquivo.
+ * @param filename Slug ou nome do arquivo com extensão.
+ * @param fields Campos do post que será retornado.
 */
-export function getPost(slugOrFilename: string, fields: string[] = []): PostData | {} {
-  const slug = slugOrFilename.replace(/\.md$/, ''); // Remover o .md do fim do arquivo
+export function getPost(filename: string, fields: string[] = []): PostData | {} {
+  const slug = filename.replace(/\.md$/, ''); // Remover o .md do fim do arquivo
   const directory = join(postsDirectory, `${ slug }.md`); // Buscando pelo nome do arquivo markdown, com o .md
   const fileContents = fs.readFileSync(directory, 'utf8'); // Ler o conteúdo do arquivo markdown
 

@@ -3,7 +3,7 @@ import { useEffect, useState, useContext } from "react";
 import { ThemeContext } from "../pages/_app";
 import { ThemeButtonStyle } from "./styles/toggleThemeButton.style";
 
-export function ToggleThemeButton({ onClicked = () => {} }) {
+export function ToggleThemeButton({ onClicked }) {
   const { isDarkTheme } = useContext(ThemeContext);
   const [canAnimate, setCanAnimate] = useState(false);
 
@@ -14,7 +14,7 @@ export function ToggleThemeButton({ onClicked = () => {} }) {
     setTimeout(() => setCanAnimate(true), 1000);
   }, [canAnimate]);
 
-  const toggleButtonOnClick = (event: any) => {
+  const toggleButtonOnClick = (event: unknown) => {
     onClicked?.();
     event.currentTarget.ariaLabel = `Trocar para o tema ${
       isDarkTheme ? "claro" : "escuro"

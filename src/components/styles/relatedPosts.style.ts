@@ -20,12 +20,12 @@ export const RelatedPostsStyle = createUseStyles({
     }
   }),
 
-  prevPost: ({isDarkTheme}) => ({
-  }),
+  prevPost: {
+  },
 
-  nextPost: ({isDarkTheme}) => ({
+  nextPost: {
     textAlign: 'right',
-  }),
+  },
 
   onlyOne: {
     width: '100% !important',

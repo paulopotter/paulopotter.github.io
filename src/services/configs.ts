@@ -43,7 +43,9 @@ const comments = {
   DISQUS_SITENAME : 'umdevqualquer',
 }
 
-const menu = {
+const menu: {
+  MENU_LINKS: Record<string, string>
+} = {
     MENU_LINKS : {
         'Home': '/',
       //  'Labs': '/labs',

@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 import { RelatedPostsStyle } from "./styles/relatedPosts.style";
 
@@ -13,8 +14,8 @@ type posts = {
   title: string;
 }
 
-const RelatedPosts = ({ nextPost, prevPost, isDarkTheme }: RelatedProps): any => {
-  // @ts-ignore
+const RelatedPosts = ({ nextPost, prevPost, isDarkTheme }: RelatedProps) => {
+  // @ts-expect-error: erro de tema
   const style = RelatedPostsStyle({ isDarkTheme });
 
   return(

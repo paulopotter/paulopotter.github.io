@@ -1,6 +1,4 @@
-// @ts-nocheck
-import { useContext, useState, useEffect } from "react";
-import Link from "next/link";
+import React, { useContext, useState, useEffect } from "react";
 import CONFIGS from "../services/configs";
 import { MenuStyle } from "./styles/menu.style";
 import classNames from "classnames";
@@ -18,7 +16,7 @@ export function Menu() {
   useEffect(() => {
     if(!isMenuOpened) { return }
 
-    const handleKey = (event) => {
+    const handleKey = (event: unknown) => {
       if(
         'Escape' === event.key
         ){
@@ -27,9 +25,11 @@ export function Menu() {
     }
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMenuOpened])
 
   const { isDarkTheme } = useContext(ThemeContext);
+  // @ts-expect-error: tema
   const menuStyle = MenuStyle({ isDarkTheme });
 
   return (
