@@ -16,9 +16,9 @@ export function Menu() {
   useEffect(() => {
     if(!isMenuOpened) { return }
 
-    const handleKey = (event: unknown) => {
+    const handleKey = (event: KeyboardEvent) => {
       if(
-        'Escape' === event.key
+        'Escape' === event!.key
         ){
         toggleMenu();
       }

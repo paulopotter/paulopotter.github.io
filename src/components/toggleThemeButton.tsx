@@ -1,13 +1,14 @@
+import React from "react";
 import classNames from "classnames";
 import { useEffect, useState, useContext } from "react";
 import { ThemeContext } from "../pages/_app";
 import { ThemeButtonStyle } from "./styles/toggleThemeButton.style";
 
-export function ToggleThemeButton({ onClicked }) {
-  const { isDarkTheme } = useContext(ThemeContext);
-  const [canAnimate, setCanAnimate] = useState(false);
+export function ToggleThemeButton({ onClicked }: {onClicked?: () => void}) {
+const { isDarkTheme } = useContext(ThemeContext);
+const [canAnimate, setCanAnimate] = useState(false);
 
-  // @ts-ignore
+// @ts-expect-error: is dark not compatible() => void
   const style = ThemeButtonStyle({ isDarkTheme });
 
   useEffect(() => {
@@ -16,6 +17,7 @@ export function ToggleThemeButton({ onClicked }) {
 
   const toggleButtonOnClick = (event: unknown) => {
     onClicked?.();
+    // @ts-expect-error: aria label realmente nao existe.
     event.currentTarget.ariaLabel = `Trocar para o tema ${
       isDarkTheme ? "claro" : "escuro"
     }`;

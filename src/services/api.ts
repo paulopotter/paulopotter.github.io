@@ -2,14 +2,14 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 
-import type { PostData } from '../types/posts.type';
+import type { PostData } from '../components/types/posts.type';
 
 const postsDirectory = join(process.cwd(), 'src/posts');
 const getMarkdownsFiles = (): string[] => fs.readdirSync(postsDirectory);
 
 type RelatedPost = {
-  nextPost?: {},
-  prevPost?: {},
+  nextPost?: Record<string, unknown>,
+  prevPost?: Record<string, unknown>,
 }
 
 /**
@@ -47,7 +47,7 @@ export function getPost(filename: string, fields: string[] = []): PostData | {} 
     if (field === 'summary') post[field] = getSummary(content)
     if (field === 'slug') post[field] = slug
 
-    // @ts-expect-error: ??
+    // @ts-expect-error: one day I will see this error
     if (data[getParameterCaseInsensitive(data, field)]) post[field] = data[getParameterCaseInsensitive(data, field)];
   })
   return post;
@@ -70,7 +70,7 @@ function getSummary(content: string): string {
  * Busca todos os posts e retorna posts com os campos selecionados.
  * @param fields Lista de campos a serem retonados dos posts.
  */
-export function getAllPosts(fields?: string[]): {} | PostData[] {
+export function getAllPosts(fields?: string[]): PostData[] {
   const slugs = getMarkdownsFiles();
   return slugs
     .map((slug: string): PostData => getPost(slug, fields) as PostData)
@@ -125,7 +125,7 @@ function filterRelatedPosts(postDate: string, listOfPosts: PostData[]): RelatedP
 * @param serie Titulo da serie
 * @param postTitle ?
 */
-export function getRelatedSeries(serie: string, postTitle: string = ''): any {
+export function getRelatedSeries(serie: string, postTitle = ''): unknown {
   const posts = getAllPosts([
     'series',
     'title',
@@ -134,7 +134,8 @@ export function getRelatedSeries(serie: string, postTitle: string = ''): any {
   ])
 
   const relatedPosts = posts
-    .filter(post => serie !== undefined && post.series === serie)
+    // @ts-expect-error: i will grow up post type
+    .filter((post: PostData) => serie !== undefined && post.series === serie)
 
   relatedPosts
   .map((post, index) => post.title === postTitle && delete relatedPosts[index].slug
@@ -153,7 +154,7 @@ export function getRelatedSeries(serie: string, postTitle: string = ''): any {
  * @param object
  * @param key
  */
-function getParameterCaseInsensitive(object: Object, key: string): string {
+function getParameterCaseInsensitive(object: Record<string, unknown>, key: string): string {
   const asLowercase = key.toLowerCase();
   return Object.keys(object).find(key => key.toLowerCase() === asLowercase) || key
 }

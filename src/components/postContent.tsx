@@ -23,7 +23,7 @@ import { ThemeContext } from "../pages/_app";
 import CONFIGS from "../services/configs";
 import { PostStyle } from "./styles/postContent.style";
 import RelatedPosts from "./relatedPosts";
-import { PostData } from "@types/posts.type";
+import type { PostData } from "./types/posts.type";
 import SeriesPosts from "./seriesPost";
 
 const {
@@ -90,8 +90,7 @@ export const PostContent = ({ post }: Props) => {
                 [
                   rehypeRewrite,
                   {
-                    // rewrite: (node: any, index: any, parent: any) => {
-                    rewrite: (node: unknown) => {
+                    rewrite: (node: {tagName: string, properties: {src: string}}): void => {
                       if (
                         node.tagName == "img" &&
                         !(
@@ -147,7 +146,7 @@ export const PostContent = ({ post }: Props) => {
                 },
               }}
             >
-              {post!.content}
+              {post.content!}
             </ReactMarkdown>
           </div>
 
@@ -176,7 +175,7 @@ export const PostContent = ({ post }: Props) => {
 
 interface CoverImageProps {
   post: PostData,
-  postStyle: unknown,
+  postStyle: Record<string, string>,
 }
 
 const CoverImage = ({ post, postStyle }: CoverImageProps) => {
@@ -196,8 +195,8 @@ const CoverImage = ({ post, postStyle }: CoverImageProps) => {
   );
 };
 
-const FigureCaption = ({ post, postStyle }: CoverImageProps): Element =>
-  post?.cover_image_by && (
+const FigureCaption = ({ post, postStyle }: CoverImageProps): JSX.Element | null =>
+  post?.cover_image_by ? (
     <figcaption className={postStyle.articleCoverCredit}>
       Créditos:{" "}
       {post?.cover_image_link ? (
@@ -206,7 +205,7 @@ const FigureCaption = ({ post, postStyle }: CoverImageProps): Element =>
         post?.cover_image_by || ""
       )}
     </figcaption>
-  );
+  ) : null;
 
 const fixImgSRC = (src: string): string => {
   if (src.indexOf("http://") == 0 || src.indexOf("https://") == 0) {

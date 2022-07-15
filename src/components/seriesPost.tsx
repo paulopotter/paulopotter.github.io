@@ -1,3 +1,4 @@
+import React from "react";
 import { SeriesPostsStyle } from "./styles/seriesPosts.style";
 
 type RelatedProps = {
@@ -11,7 +12,7 @@ type posts = {
   series: string;
 }
 
-const SeriesPosts = ({ posts, isDarkTheme }: RelatedProps): unknown => {
+const SeriesPosts = ({ posts, isDarkTheme }: RelatedProps): JSX.Element | undefined => {
   if(posts === undefined || posts?.length === 0) return
 
   // @ts-expect-error: isdark nao aceito
@@ -26,6 +27,7 @@ const SeriesPosts = ({ posts, isDarkTheme }: RelatedProps): unknown => {
       <ul className={style.list}>
         {
           posts?.map((post, index) => (
+            // @ts-expect-error:  I dont know this error TS2746
             <li key={post.title} className={style.listItem} >
               <span className={style.textHighlight}>PARTE { index + 1}: &nbsp;</span>
               {items(post)}

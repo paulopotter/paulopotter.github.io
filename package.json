@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:ts": "tsc --noEmit --incremental",
     "export": "next export",
     "deploy": "yarn build && yarn export && yarn gh-pages -d out/ -t true -b main"
   },
