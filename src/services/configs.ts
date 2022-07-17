@@ -62,6 +62,7 @@ const rss = {
 
 const metrics = {
   GA_CODE : IS_DEV_MODE ? 'G-JJ3BCWYTFE' : 'G-JWYBRTREFC',
+  NEWRELIC_AGENT_ID: IS_DEV_MODE ? 601336993 : 601335062,
 }
 
 const date_config = {

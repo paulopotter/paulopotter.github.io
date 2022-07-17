@@ -6,6 +6,7 @@ import CONFIGS from "../services/configs";
 import Script from "next/script";
 
 const {
+  IS_DEV_MODE,
   GA_CODE,
   FULL_DATE_DEFAULT_FORMAT,
   DEFAULT_LANG,
@@ -19,7 +20,7 @@ const Document = () => {
       <Head>
         <script async={true} src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2474646572295965"
         crossOrigin="anonymous"></script>
-        <script async={true} src="./static/new-relic.js"></script>
+        <script async={true} src={IS_DEV_MODE ? "./static/new-relic-dev.js" : "./static/new-relic.js"}></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
