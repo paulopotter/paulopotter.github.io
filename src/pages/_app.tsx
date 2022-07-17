@@ -36,7 +36,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     }
     setCanRender(true);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isDark]);
+  }, []);
 
   GlobalStyle();
 
