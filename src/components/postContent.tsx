@@ -45,7 +45,6 @@ SyntaxHighlighter.registerLanguage("json", json);
 
 export const PostContent = ({ post }: Props) => {
   const { isDarkTheme } = useContext(ThemeContext);
-  // @ts-ignore
   const postStyle = PostStyle({ isDarkTheme });
 
   const [codeTheme, setCodeTheme] = useState(
@@ -131,7 +130,7 @@ export const PostContent = ({ post }: Props) => {
                   return !inline && match ? (
                     <SyntaxHighlighter
                       showLineNumbers
-                      // @ts-ignore
+                      // @ts-expect-error: I dont know
                       style={codeTheme}
                       language={match[1]}
                       {...props}
@@ -151,7 +150,6 @@ export const PostContent = ({ post }: Props) => {
           </div>
 
           <AuthorCard isDarkTheme={isDarkTheme} />
-            {/* @ts-ignore */}
           <SeriesPosts posts={post?.series} isDarkTheme />
 
           <RelatedPosts {...post.related} isDarkTheme />

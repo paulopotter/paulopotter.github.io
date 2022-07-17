@@ -1,7 +1,6 @@
-// @ts-ignore
 export const THEME_VALUE = (isDark: boolean, prop: string): string => (isDark ? COLOR.dark[prop] : COLOR.light[prop])
 
-export const FONT = {
+export const FONT: Record<string, string | number> = {
   size: 16,
   letterSpacing: 0.05,
   primary: 'Montserrat, sans-serif',
@@ -9,7 +8,7 @@ export const FONT = {
   mono: 'Consolas, monospace'
 }
 
-export const COLOR = {
+export const COLOR: Record<string, Record<string, string>> = {
   dark: {
     background: '#32373d',
     blockquoteBorder:' rgba(255, 255, 255, 0.6)',

@@ -1,9 +1,10 @@
-// @ts-nocheck
 import { createUseStyles } from 'react-jss'
 import { THEME_VALUE } from '../../config/config.style'
 
+type StyleProps = { isDarkTheme: boolean}
+
 export const AuthorCardStyle = createUseStyles({
-  header: ({isDarkTheme}) => ({
+  header: ({isDarkTheme}: StyleProps) => ({
     'border-radius': 20,
     'backgroundColor': THEME_VALUE(isDarkTheme, 'card'),
     'padding': 40,
@@ -16,7 +17,7 @@ export const AuthorCardStyle = createUseStyles({
     display: 'block',
     margin: 'auto',
   },
-  name: ({isDarkTheme}) => ({
+  name: ({isDarkTheme}: StyleProps) => ({
     color: THEME_VALUE(isDarkTheme, 'heading'),
     'font-size': '2em',
 
@@ -25,17 +26,17 @@ export const AuthorCardStyle = createUseStyles({
 
     }
   }),
-  socialList: ({isDarkTheme}) => ({
+  socialList: ({isDarkTheme}: StyleProps) => ({
     color: THEME_VALUE(isDarkTheme, 'heading'),
     'font-size': '2em',
   }),
-  socialItem: ({isDarkTheme}) => ({
+  socialItem: ({isDarkTheme}: StyleProps) => ({
     color: THEME_VALUE(isDarkTheme, 'link'),
     'font-size': '1em',
     display: 'inline-block',
     margin: '0.2em'
   }),
-  socialIcon: ({isDarkTheme}) => ({
+  socialIcon: ({isDarkTheme}: StyleProps) => ({
     fill: THEME_VALUE(isDarkTheme, 'text'),
 
     '&:hover': {
@@ -48,16 +49,3 @@ export const AuthorCardStyle = createUseStyles({
   }),
 
 })
-
-
-/*
-
-'&:active, &:hover': {
-  'background-color': THEME_VALUE( isDarkTheme, "card"),
-},
-
-['@media (min-width: 1400px)']: {
-  left: '87%',
-  right: 'inherit',
-},
-*/

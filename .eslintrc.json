@@ -1,5 +1,6 @@
 {
   "extends": [
+    "next",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended"
   ],
@@ -15,7 +16,14 @@
   "rules": {
     "import/no-anonymous-default-export": "off",
     "@next/next/no-img-element": "off",
-    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "ts-ignore": true,
+        "ts-nocheck": false,
+        "ts-expect-error": "allow-with-description"
+      }
+    ],
     "@typescript-eslint/no-non-null-assertion": "off"
   }
 }

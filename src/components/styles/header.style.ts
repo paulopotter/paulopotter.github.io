@@ -1,10 +1,10 @@
-// @ts-nocheck
-
 import {createUseStyles} from 'react-jss'
 import { THEME_VALUE, FONT } from '../../config/config.style'
 
+type StyleProps = {isDarkTheme: boolean}
+
 export const HeaderStyle = createUseStyles({
-  skipContent: ({isDarkTheme}) => ({
+  skipContent: ({isDarkTheme}: StyleProps) => ({
     'font-size': '1em',
     'background-color': [THEME_VALUE(isDarkTheme, "changeThemeButtonBg"), '!important'],
     height: '3em',
@@ -38,7 +38,7 @@ export const HeaderStyle = createUseStyles({
   'margin-left': '0.5em',
   'vertical-align': 'middle',
   },
-  titleLink: ({isDarkTheme}) => ({
+  titleLink: ({isDarkTheme}: StyleProps) => ({
     'font-family': FONT.primary,
     'text-transform': 'uppercase',
     'font-size': '1em',
@@ -50,7 +50,7 @@ export const HeaderStyle = createUseStyles({
        display: 'inline-grid',
      },
   }),
-  titleName: ({isDarkTheme}) => ({
+  titleName: ({isDarkTheme}: StyleProps) => ({
     'font-weight': 700,
     color: THEME_VALUE(isDarkTheme, "heading"),
 

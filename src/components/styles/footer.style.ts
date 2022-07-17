@@ -2,8 +2,7 @@ import {createUseStyles} from 'react-jss'
 import { THEME_VALUE } from '../../config/config.style'
 
 export const FooterStyle = createUseStyles({
-  // @ts-ignore
-  backToTop: ({isDarkTheme}) => ({
+  backToTop: ({isDarkTheme}: {isDarkTheme: boolean}) => ({
     padding: '0.5em',
     position: 'fixed',
     display: 'flex',

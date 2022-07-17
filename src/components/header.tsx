@@ -19,7 +19,6 @@ interface HeaderProps {
 
 export const Header = ({ toggleTheme, ThemeContext }: HeaderProps) => {
   const { isDarkTheme } = useContext(ThemeContext);
-  // @ts-ignore
   const headerStyle = HeaderStyle({ isDarkTheme });
 
   return (

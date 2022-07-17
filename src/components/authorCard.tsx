@@ -10,7 +10,6 @@ const { AUTHOR_IMG, SOCIAL } = CONFIGS
 
 export function AuthorCard({isDarkTheme = false}) {
 
-  // @ts-ignore
   const style = AuthorCardStyle({isDarkTheme})
 
   return (
@@ -31,7 +30,7 @@ export function AuthorCard({isDarkTheme = false}) {
       <ul className={style.socialList}>
         {
           SOCIAL?.map((social, index) => {
-            // @ts-ignore
+            // @ts-expect-error: I need tiping social
             const SocialIcon = BSIcons[social.name]
             return (
               <li className={style.socialItem} key={`${social.name}-${index}`}>

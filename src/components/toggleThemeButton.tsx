@@ -8,7 +8,6 @@ export function ToggleThemeButton({ onClicked }: {onClicked?: () => void}) {
 const { isDarkTheme } = useContext(ThemeContext);
 const [canAnimate, setCanAnimate] = useState(false);
 
-// @ts-expect-error: is dark not compatible() => void
   const style = ThemeButtonStyle({ isDarkTheme });
 
   useEffect(() => {
@@ -17,11 +16,11 @@ const [canAnimate, setCanAnimate] = useState(false);
 
   const toggleButtonOnClick = (event: unknown) => {
     onClicked?.();
-    // @ts-expect-error: aria label realmente nao existe.
+    // @ts-expect-error: ariaLabel realmente nao existe.
     event.currentTarget.ariaLabel = `Trocar para o tema ${
       isDarkTheme ? "claro" : "escuro"
     }`;
-    // @ts-ignore
+    // @ts-expect-error: window type dont have DISQUS
     window?.DISQUS?.host?._loadEmbed(); // to update disqus theme
   };
 

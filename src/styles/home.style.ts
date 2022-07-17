@@ -1,6 +1,7 @@
-// @ts-nocheck
 import {createUseStyles} from 'react-jss'
 import { FONT, THEME_VALUE, MEDIA_QUERIES } from '../config'
+
+type StyleProp = {isDarkTheme: boolean}
 
 export const HomeStyle = createUseStyles({
   content: {
@@ -10,7 +11,7 @@ export const HomeStyle = createUseStyles({
     'justify-content': 'center',
   },
 
-  article: ({isDarkTheme}) => ({
+  article: ({isDarkTheme}: StyleProp) => ({
     display: 'flex',
     'justify-content': 'space-between',
     margin: '2em 1em',
@@ -54,7 +55,7 @@ export const HomeStyle = createUseStyles({
     }
   },
 
-  titleLink: ({isDarkTheme}) => ({
+  titleLink: ({isDarkTheme}: StyleProp) => ({
     'font-family': FONT.primary,
     'font-size': '1.1em',
     'font-weight': 'bold',
@@ -67,7 +68,7 @@ export const HomeStyle = createUseStyles({
     }
   }),
 
-  category: ({isDarkTheme}) => ({
+  category: ({isDarkTheme}: StyleProp) => ({
     'margin-top': '2em',
     'font-weight': 700,
     'font-size': '0.8125em',
@@ -90,7 +91,7 @@ export const HomeStyle = createUseStyles({
     }
   },
 
-  imageCover: ({isDarkTheme}) => ({
+  imageCover: ({isDarkTheme}: StyleProp) => ({
     height: '11em',
     'object-fit': 'cover',
     padding: '1em',

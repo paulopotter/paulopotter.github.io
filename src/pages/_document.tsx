@@ -1,9 +1,9 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 import dayjs from "dayjs";
 import 'dayjs/locale/pt-br';
 
 import CONFIGS from "../services/configs";
-import Script from "next/script";
 
 const {
   IS_DEV_MODE,

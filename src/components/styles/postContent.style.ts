@@ -1,9 +1,10 @@
-// @ts-nocheck
 import {createUseStyles} from 'react-jss'
 import { THEME_VALUE, FONT } from '../../config/config.style'
 
+type StyleProps = { isDarkTheme: boolean }
+
 export const PostStyle = createUseStyles({
-  articleSection: ({isDarkTheme}) => ({
+  articleSection: ({isDarkTheme}: StyleProps) => ({
     'background-color': THEME_VALUE( isDarkTheme,"card"),
     'box-shadow': `2px 2px 4px 0 ${THEME_VALUE( isDarkTheme,"boxShadow")}`,
     margin: '1rem 0.5rem',
@@ -32,7 +33,7 @@ export const PostStyle = createUseStyles({
     'font-style': 'italic',
     'font-size': '0.7em',
   },
-  articleContent: ({isDarkTheme}) => ({
+  articleContent: ({isDarkTheme}: StyleProps) => ({
     fontSize: '1em',
 
     '& p, & h2, & h3': {
@@ -84,7 +85,7 @@ export const PostStyle = createUseStyles({
 
 })
 
-const table = (isDarkTheme) => ({
+const table = (isDarkTheme: boolean) => ({
   '& thead tr': {
     backgroundColor: THEME_VALUE(isDarkTheme, 'tableHeaderBg'),
     color: THEME_VALUE(isDarkTheme, 'tableHeaderColor'),

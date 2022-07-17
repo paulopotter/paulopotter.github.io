@@ -8,12 +8,13 @@ export const Footer = () => {
   const { isDarkTheme } = useContext(ThemeContext);
   const [showButton, setShowButton] = useState(false);
 
-// @ts-ignore
   const footerStyle = FooterStyle({ isDarkTheme });
 
   const backToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    // @ts-expect-error: o botão possui foco.
+
+    // @ts-expect-error: Existe carai
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     document.querySelector('#start-page menu button').focus()
   };
 

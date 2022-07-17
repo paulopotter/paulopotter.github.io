@@ -3,8 +3,9 @@ import type { GetStaticProps, GetStaticPaths } from 'next';
 import markdown from "../services/markdown";
 import { getPost, getAllPosts, getRelatedPosts, getRelatedSeries } from "../services/api";
 import { PostContent } from "../components";
+import type { PostData } from "../components/types/posts.type";
 
-const Page = ({ post }) => <PostContent post={post} />;
+const Page = ({ post }: {post: PostData}) => <PostContent post={post} />;
 
 export default Page;
 

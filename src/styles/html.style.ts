@@ -2,8 +2,7 @@ import {createUseStyles} from 'react-jss'
 import { FONT, THEME_VALUE } from '../config'
 
 export const ResetStyle = createUseStyles({
-  // @ts-ignore
-  body: ({isDarkTheme}) => ({
+  body: ({isDarkTheme}: {isDarkTheme: boolean}) => ({
       "text-rendering": "auto",
       "min-width": 320,
       "background-color": THEME_VALUE(isDarkTheme, "background"),

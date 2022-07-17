@@ -1,9 +1,10 @@
-// @ts-nocheck
 import {createUseStyles} from 'react-jss'
-import { FONT, THEME_VALUE } from '../config'
+import { THEME_VALUE } from '../config'
+
+type StyleProp = {isDarkTheme: boolean}
 
 export const AuthorStyle = createUseStyles({
-    content: ({isDarkTheme}) => ({
+    content: ({isDarkTheme}: StyleProp) => ({
       margin: '1rem .5rem',
       padding: '1rem',
       backgroundColor: THEME_VALUE(isDarkTheme, 'card'),
@@ -12,22 +13,21 @@ export const AuthorStyle = createUseStyles({
 
     img: {
       borderRadius: '15%',
-      display: 'block',
       margin: '0 1em 1em',
       display: 'inline-block',
       float: 'right',
       verticalAlign: 'top'
     },
 
-    name: ({isDarkTheme}) => ({
+    name: {
       fontSize: '1.2em',
       fontWeight: 'bold',
-    }),
+    },
 
-    highlight: ({isDarkTheme}) => ({
+    highlight: {
       fontSize: '1.1em',
       fontWeight: 'bold',
-    }),
+    },
 
     section: {
       marginTop: '1em',
@@ -39,17 +39,17 @@ export const AuthorStyle = createUseStyles({
       clear: 'both',
     },
 
-    socialList: ({isDarkTheme}) => ({
+    socialList: ({isDarkTheme}: StyleProp) => ({
       color: THEME_VALUE(isDarkTheme, 'heading'),
       'font-size': '2em',
     }),
-    socialItem: ({isDarkTheme}) => ({
+    socialItem: ({isDarkTheme}: StyleProp) => ({
       color: THEME_VALUE(isDarkTheme, 'link'),
       'font-size': '1em',
       display: 'inline-block',
       margin: '0.2em'
     }),
-    socialIcon: ({isDarkTheme}) => ({
+    socialIcon: ({isDarkTheme}: StyleProp) => ({
       fill: THEME_VALUE(isDarkTheme, 'text'),
 
       '&:hover': {
