@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import type { AppProps } from 'next/app';
 
 import { createContext, useEffect, useState } from "react";
 import { JssProvider } from "react-jss";
@@ -12,7 +13,7 @@ export const ThemeContext = createContext({ isDarkTheme: false });
 
 // This default export is required in a new `pages/_app.js` file.
 // @ts-ignore
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const [isDark, setIsDark] = useState(false);
   const [canRender, setCanRender] = useState(false);
   // @ts-ignore

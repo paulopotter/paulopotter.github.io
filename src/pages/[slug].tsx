@@ -1,4 +1,5 @@
 // @ts-nocheck
+import type { GetStaticProps, GetStaticPaths } from 'next';
 import markdown from "../services/markdown";
 import { getPost, getAllPosts, getRelatedPosts, getRelatedSeries } from "../services/api";
 import { PostContent } from "../components";
@@ -7,7 +8,7 @@ const Page = ({ post }) => <PostContent post={post} />;
 
 export default Page;
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }): GetStaticProps {
   const post = getPost(params.slug, [
     "title",
     "date",
@@ -35,7 +36,7 @@ export async function getStaticProps({ params }) {
 }
 
 // Usamos a função do Next.js, getStaticPaths()
-export function getStaticPaths() {
+export function getStaticPaths(): GetStaticPaths {
   // Buscamos todos os slugs e date de todos os posts
   const posts = getAllPosts(["slug", "series"]);
 

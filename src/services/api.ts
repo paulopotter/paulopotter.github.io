@@ -17,6 +17,7 @@ type RelatedPost = {
  * @param filename Slug ou nome do arquivo com extensão.
  * @param fields Campos do post que será retornado.
 */
+// eslint-disable-next-line @typescript-eslint/ban-types
 export function getPost(filename: string, fields: string[] = []): PostData | {} {
   const slug = filename.replace(/\.md$/, ''); // Remover o .md do fim do arquivo
   const directory = join(postsDirectory, `${ slug }.md`); // Buscando pelo nome do arquivo markdown, com o .md
@@ -150,9 +151,11 @@ export function getRelatedSeries(serie: string, postTitle = ''): unknown {
 }
 
 /**
- * Procura pela a key de um objeto Insensitivamente.
- * @param object
- * @param key
+ * Procura pela a key de um objeto Insensitive.
+ *
+ * @param {Record<string, unknown>} object objeto para buscar o item.
+ * @param {string} key key para ser buscada no objeto.
+ * @returns {string} parameter.
  */
 function getParameterCaseInsensitive(object: Record<string, unknown>, key: string): string {
   const asLowercase = key.toLowerCase();
