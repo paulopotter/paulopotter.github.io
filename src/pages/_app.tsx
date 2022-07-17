@@ -22,6 +22,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     setIsDark(!isDark);
     toggleThemeStorage(isDark, themes);
   };
+  GlobalStyle();
 
   useEffect(() => {
     const isSODarkMode =
@@ -34,11 +35,14 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     ) {
       toggleTheme();
     }
+
+    if(document.body.classList.length === 0) {
+      setIsDark(false);
+      toggleThemeStorage(true, themes);
+    }
     setCanRender(true);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  GlobalStyle();
 
   return (
     canRender && (

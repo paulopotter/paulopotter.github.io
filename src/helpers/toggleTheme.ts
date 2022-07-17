@@ -1,7 +1,6 @@
-export const toggleThemeStorage = (isDarkTheme: boolean, themes: any) => {
+export const toggleThemeStorage = (isDarkTheme: boolean, themes: Record<string, Record<string, string>>) => {
   const body = document.getElementsByTagName('body')[0]
   const isDarkMode = body.classList.contains(themes.dark.body) || isDarkTheme
-
 
   if(isDarkMode){
     window.localStorage.setItem('isDarkMode', "false");

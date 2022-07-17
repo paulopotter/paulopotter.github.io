@@ -27,9 +27,8 @@ const Document = () => {
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-
       </Head>
-      <body className="container 2xl">
+      <body>
         <Main />
         <NextScript />
       </body>
