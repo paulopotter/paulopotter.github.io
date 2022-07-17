@@ -4,7 +4,7 @@
         <title>undefined</title>
         <link>https://umdevqualquer.com.br</link>
         <description>undefined</description>
-        <lastBuildDate>Fri, 15 Jul 2022 18:18:16 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 17 Jul 2022 14:09:36 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>pt-BR</language>
@@ -14,6 +14,17 @@
             <link>https://umdevqualquer.com.br</link>
         </image>
         <copyright>All rights reserved 2022, Paulo Oliveira</copyright>
+        <item>
+            <title><![CDATA[Utilizando ARIA no seu projeto - Tooltip]]></title>
+            <link>https://umdevqualquer.com.br/utilizando-aria-no-seu-projeto-tooltip?resource=rss</link>
+            <guid>https://umdevqualquer.com.br/utilizando-aria-no-seu-projeto-tooltip?resource=rss</guid>
+            <pubDate>Sun, 17 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Fala aê, como cê ta?!</p>
+<p>Continuando com a série de posts que estou fazendo sobre as propriedades ARIA, hoje é o dia da role <code>tooltip</code>.
+Essa é uma role bem simples e rápida, veja só...</p>
+]]></description>
+            <enclosure url="https://umdevqualquer.com.br/./images/Utilizando Aria - Tooltip/tooltip-cover.webp" length="0" type="image/webp"/>
+        </item>
         <item>
             <title><![CDATA[Palestra: Apps para SmartTv - BrazilJS Conf]]></title>
             <link>https://umdevqualquer.com.br/palestra-apps-para-smarttv-braziljs-conf?resource=rss</link>
