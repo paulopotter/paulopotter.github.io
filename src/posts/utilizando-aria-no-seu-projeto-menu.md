@@ -85,9 +85,9 @@ O padrão para `aria-orientation` é **vertical.**
 Exemplo 1:
 ```html
 <div
-role="menu"
-aria-label="menu de teste"
-tabIndex=0
+    role="menu"
+    aria-label="menu de teste"
+    tabIndex=0
 >
   <!— ...conteúdo do menu —>
 </div>
@@ -97,10 +97,9 @@ tabIndex=0
 Exemplo 2:
 
 ```html
-
 <nav
-aria-label="menu de teste"
-tabIndex=0
+    aria-label="menu de teste"
+    tabIndex=0
 >
   <!— ...conteúdo do menu —>
 </nav>
@@ -112,17 +111,15 @@ Exemplo 3:
 ```html
 
 <ul
-role="menu"
-aria-labelledby="desc3"
-tabIndex="0"
-id="menu2"
+    role="menu"
+    aria-labelledby="desc3"
+    tabIndex="0"
+    id="menu2"
 >
   <!— ...conteúdo do menu —>
 </ul>
 
-<span id="desc3">
-Descrição do segundo Menu
-</span>
+<span id="desc3"> Descrição do segundo Menu. </span>
 
 ```
 
