@@ -61,7 +61,7 @@ export default async function generateRssFeed() {
     .processSync(post.summary)
 
     feed.addItem({
-      title: post.title!,
+      title: post.title,
       link: url,
       description: String(description),
       image: `${FEED_DOMAIN}/${post.cover_image}`,

@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { useContext } from "react";
 import classNames from "classnames";
 import Link from "next/link";
@@ -12,6 +11,7 @@ import { getAllPosts } from "../services/api";
 import { HomeStyle } from "../styles/";
 import { ThemeContext } from "./_app";
 import generateRSS from "../services/generateRssFeed";
+import { PostData } from "components/types/posts.type";
 
 const {
   DATE_DEFAULT_FORMAT,
@@ -22,13 +22,13 @@ const {
 dayjs.locale(DEFAULT_LANG.toLowerCase());
 
 
-export default function Page({ posts }) {
-  const summary = (index, post) => {
+export default function Page({ posts }: { posts: PostData[] } ) {
+  const summary = (index: number, post: PostData) => {
     if (index === 0) {
       return (
         <div className="home_content__article-body-summary">
           <ReactMarkdown skipHtml>
-            {post.summary ?? post?.content?.slice(0, 140)}
+            {post?.summary as string ?? post?.content?.slice?.(0, 140)}
           </ReactMarkdown>
         </div>
       );
@@ -54,10 +54,10 @@ export default function Page({ posts }) {
                 <Link href={`${post.slug}`}>
                   <a className={homeStyle.titleLink}>
                     {index === 0
-                      ? post.title
-                      : post.title.lenght > 70
+                      ? post?.title
+                      : post?.title.length > 70
                       ? post.title.slice(0, 70) + "..."
-                      : post.title}
+                      : post.title }
                   </a>
                 </Link>
               </header>

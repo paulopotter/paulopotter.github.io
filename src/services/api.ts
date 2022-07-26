@@ -32,9 +32,8 @@ export function getPost(filename: string, fields: string[] = []): PostData | {} 
     return {}
   }
 
-  const post: PostData = {
-    title: undefined,
-  };
+  // @ts-expect-error: title was required but i dont have yet
+  const post: PostData = {}
 
   fields
   .map((field: string) => {
@@ -97,7 +96,7 @@ export function getRelatedPosts(date: string): RelatedPost {
  * Filtra posts e retorna os posts próximos.
  * based on https://stackoverflow.com/a/11795472/3498055
 */
-function filterRelatedPosts(postDate: string, listOfPosts: PostData[]): RelatedPost | {} {
+function filterRelatedPosts(postDate: string, listOfPosts: PostData[]): RelatedPost | Record<string, never> {
     const result: RelatedPost = {}
     const date = new Date(postDate).getTime();
 

@@ -1,5 +1,5 @@
 export type PostData = {
-  title: string | undefined
+  title: string
   category?: string[]
   content?: string
   summary?: string
