@@ -1,19 +1,21 @@
-// @ts-nocheck
 import fs from "fs";
 import { Feed } from "feed";
 import {remark} from 'remark'
 import remarkHTML from "remark-html";
 
-
 import { getAllPosts } from "./api";
 import CONFIGS from "./configs";
 
 const {
-  SITE_BAR_TITLE,
-  FEED_DOMAIN,
-  SITEDESCRIPTION,
+  AUTHOR_EMAIL,
+  AUTHOR,
+  DEFAULT_LANG,
   FEED_ALL_ATOM,
   FEED_ALL_RSS,
+  FEED_DOMAIN,
+  TITLE,
+  SITE_URL,
+  SITE_DESCRIPTION,
 } = CONFIGS
 
 export default async function generateRssFeed() {
@@ -25,28 +27,27 @@ export default async function generateRssFeed() {
     "summary",
     "category",
   ]);
-  const siteURL = FEED_DOMAIN;
+
   const date = new Date();
   const author = {
-    name: "Paulo Oliveira",
-    email: "paulo@umdevqualquer.com",
-    link: "https://umdevqualquer.com.br",
+    name: AUTHOR,
+    email: AUTHOR_EMAIL,
+    link: SITE_URL,
   };
 
   const feed = new Feed({
-    title: SITE_BAR_TITLE,
-    description: SITEDESCRIPTION,
-    id: siteURL,
-    link: siteURL,
-    language: 'pt-BR',
-    image: `${siteURL}/images/favicon.ico`,
-    favicon: `${siteURL}/images/favicon.ico`,
-    copyright: `All rights reserved ${date.getFullYear()}, Paulo Oliveira`,
+    title: TITLE,
+    description: SITE_DESCRIPTION,
+    id: FEED_DOMAIN,
+    link: FEED_DOMAIN,
+    language: DEFAULT_LANG,
+    image: `${FEED_DOMAIN}/images/favicon.ico`,
+    favicon: `${FEED_DOMAIN}/images/favicon.ico`,
+    copyright: `All rights reserved ${date.getFullYear()}, ${AUTHOR}`,
     updated: date, // today's date
-    generator: "Feed for Node.js",
     feedLinks: {
-      atom1: `${siteURL}/${FEED_ALL_ATOM}`,  // xml format
-      rss2: `${siteURL}/${FEED_ALL_RSS}`,  // xml format
+      atom1: `${FEED_DOMAIN}/${FEED_ALL_ATOM}`,  // xml format
+      rss2: `${FEED_DOMAIN}/${FEED_ALL_RSS}`,  // xml format
       // json: `${siteURL}/rss/all.json`,// json fromat
     },
     author,
@@ -54,18 +55,19 @@ export default async function generateRssFeed() {
 
 
   posts.forEach((post) => {
-    const url = `${siteURL}/${post.slug}?resource=rss`;
+    const url = `${FEED_DOMAIN}/${post.slug}?resource=rss`;
     const description = remark()
     .use(remarkHTML)
     .processSync(post.summary)
 
     feed.addItem({
-      title: post.title,
+      title: post.title!,
       link: url,
       description: String(description),
-      image: `${siteURL}/${post.cover_image}`,
+      image: `${FEED_DOMAIN}/${post.cover_image}`,
       date: new Date(),
-      published: new Date(post.date),
+      published: new Date(post.date || new Date()),
+      // @ts-expect-error: My category was different
       category: post.category,
     });
   });

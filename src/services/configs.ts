@@ -12,6 +12,7 @@ const basic = {
 const HASH_GRAVATAR = 'ac7d3bd9cc7064b78ad1a2472cc4d22e';
 const author = {
   AUTHOR: 'Paulo Oliveira',
+  AUTHOR_EMAIL: 'paulo@umdevqualquer.com',
   AUTHOR_IMG: `https://www.gravatar.com/avatar/${HASH_GRAVATAR}`,
   SOCIAL : [
       {
