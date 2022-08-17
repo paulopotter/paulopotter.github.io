@@ -42,6 +42,8 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
         {TITLE}
       </title>
       {/* META */}
+      <meta name="title" content={ (title ? title + " - " : null) + TITLE} />
+
       <link rel="canonical" href={`${meta?.ogUrl ?? SITE_URL}`} />
       <meta name="description" content={meta?.description || SITE_DESCRIPTION} />
       <meta name="author" content={AUTHOR} />
@@ -71,11 +73,11 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
       <meta
         property="og:image"
         itemProp="image"
-        content={ meta?.ogImage ?? `${AUTHOR_IMG}?s=1200`}
+        content={ meta?.ogImage ? `${SITE_URL}/${meta?.ogImage.replace('./', '')}`: `${AUTHOR_IMG}?s=1200`}
       />
       <meta
         name="msapplication-TileImage"
-        content={ meta?.ogImage ?? `${AUTHOR_IMG}?s=1200`}
+        content={ meta?.ogImage ? `${SITE_URL}/${meta?.ogImage.replace('./', '')}`: `${AUTHOR_IMG}?s=1200`}
       />
       <meta property="og:image:type" content="image/jpeg"></meta>
       <meta property="og:image:width" content="300" />
@@ -85,6 +87,20 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => (
       <meta name="twitter:card" content={TWITTER_CARD} />
       <meta name="twitter:site" content={TWITTER_SITE} />
       <meta name="twitter:creator" content={TWITTER_CREATOR} />
+      <meta property="twitter:url" content={`${meta?.ogUrl ?? SITE_URL}`} />
+      <meta property="twitter:title" content={`${meta?.ogTitle ?? TITLE}`} />
+      <meta
+        property="twitter:image"
+        content={ meta?.ogImage ? `${SITE_URL}/${meta?.ogImage.replace('./', '')}`: `${AUTHOR_IMG}?s=1200`}
+      />
+      <meta
+        itemProp="thumbnailUrl"
+        content={ meta?.ogImage ? `${SITE_URL}/${meta?.ogImage.replace('./', '')}`: `${AUTHOR_IMG}?s=1200`}
+      />
+      <meta
+        property="twitter:description"
+        content={`${meta?.ogDescription ?? SITE_DESCRIPTION}`}
+      />
       <meta
         name="twitter:image:alt"
         content={`${meta?.twitterAlt ?? TITLE}`}
