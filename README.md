@@ -1,12 +1,36 @@
 # [Um dev qualquer](https://umdevqualquer.com.br) | ~paulopotter.github.io~
----
 
 Meu blog pessoal onde eu guardo dicas, tutoriais e um pouco de opinião.
 
 Blog focado no desenvolvimento full-stack, com um pé mais puxado ao front-end.
 
+---
+|  Versão | Stack            |
+| ------: | ---------------- |
+| **V1:** | Python + Pelican |
+| **V2:** | JS + NextJs      |
 
-Migração do pelican para nextjs feita baseado nos posts
+## Histórico de migração:
+Devido a baixa manutenção que eu dava ao blog e com as atualizações frequentes dos plugins (descontinuados, versões incompatíveis, etc...), fui obrigado a migrar a tecnologia do blog.
+Com isso aproveitei para trocar a stack para uma que me desse uma liberdade maior para os desafios que pretendo executar.
+
+Como fiz a migração as pressas, eu não tive tempo de estudar por completo o NextJS e com isso posso não estar utilizando as melhores práticas ou melhores plugins/libs.
+
+Aqui está a listagem de links que me ajudaram com essa migração e os links de alguns plugins que eu estou utilizando que ajudou a facilitar essa migração.
+
+### Plugins utilizados:
+
+- [Disqus react](https://github.com/disqus/disqus-react)
+- [React syntax highlighter prism theme](https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html)
+- [Syntax Highlight Code in Markdown](https://amirardalan.com/blog/syntax-highlight-code-in-markdown)
+- [react devicon](https://github.com/devicons/react-devicons)
+- [feed - node rss](https://github.com/jpmonette/feed)
+- [next seo](https://github.com/garmeeh/next-seo)
+- rehype
+- remark:
+  - [remark-figure](https://github.com/josestg/rehype-figure)
+
+### Migração feita baseado nos posts:
 - [criando um blog com nextjs e markdown](https://dio.dev/criando-um-blog-com-nextjs-e-markdown)
 - [dio.dev github](https://github.com/imaginamundo/dio.dev)
 - [Rendering markdown made easy with react-markdown in ReactJS and NextJS web APPs](https://dev.to/shareef/rendering-markdown-made-easy-with-react-markdown-in-reactjs-and-nextjs-web-apps-259d)
@@ -20,7 +44,6 @@ Migração do pelican para nextjs feita baseado nos posts
 - [How To Make A Next JS Blog With Markdown And TypeScript](https://medium.com/geekculture/how-to-make-a-next-js-blog-with-markdown-and-typescript-1624a54f1b9e)
 - [Adding code snippets to static markdown in Next.js using react-syntax-highlighter](https://thetombomb.com/posts/adding-code-snippets-to-static-markdown-in-Next%20js)
 - [Start a clean Next.js project with TypeScript, ESLint and Prettier](https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js)
-
 - [JSS](https://cssinjs.org/jss-plugin-default-unit/?v=v10.9.1-alpha.2)
 - [rehype plugins](https://github.com/rehypejs/rehype/blob/main/doc/plugins.md#list-of-plugins)
 - [remark plugins](https://github.com/remarkjs/remark/blob/main/doc/plugins.md#list-of-plugins)
@@ -30,42 +53,3 @@ Migração do pelican para nextjs feita baseado nos posts
 - [React Google Analytics 4](https://github.com/PriceRunner/react-ga4)
 - [Dev Icon](https://github.com/devicons/devicon/)
 - [How to add RSS feed in Next.js Blog](https://dev.to/j471n/how-to-add-rss-feed-in-nextjs-blog-34j1)
-
-### Plugins utilizados:
-
-- [Disqus react](https://github.com/disqus/disqus-react)
-- [React syntax highlighter prism theme](https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html)
-- [Syntax Highlight Code in Markdown](https://amirardalan.com/blog/syntax-highlight-code-in-markdown)
-- [react devicon](https://github.com/devicons/react-devicons)
-- [feed - node rss](https://github.com/jpmonette/feed)
-
-- rehype:
-  -
-- remark:
-  - [remark-figure](https://github.com/josestg/rehype-figure)
-
-
-### Quem sabe?
-
-- [Next.js Blog using Typescript and Notion API](https://www.section.io/engineering-education/create-a-nextjs-blog-using-typescript-and-notion-api/)
-
-
-  - [* remark-a11y-emoji](https://github.com/florianeckerstorfer/remark-a11y-emoji)
-  - [* remark-lint](https://github.com/remarkjs/remark-lint)
-  - [* remark-remove-comments](https://github.com/alvinometric/remark-remove-comments)
-  - [* rehype-meta](https://github.com/rehypejs/rehype-meta)
-  - [* rehype-minify](https://github.com/rehypejs/rehype-minify)
-
-  - [? remark-code-frontmatter](https://github.com/s0/remark-code-frontmatter)
-  - [? remark-directive](https://github.com/remarkjs/remark-directive)
-  - [? remark-directive-rehype](https://github.com/IGassmann/remark-directive-rehype)
-  - [? remark-frontmatter](https://github.com/remarkjs/remark-frontmatter)
-  - [? remark-mdx](https://github.com/mdx-js/mdx/tree/main/packages/remark-mdx)
-  - [? remark-img-links](https://github.com/Pondorasti/remark-img-links)
-  - [? remark-macro](https://github.com/dimerapp/remark-macro)
-  - [? remark-oembed](https://github.com/agentofuser/remark-oembed)
-  - [? remark-prettier](https://github.com/remcohaszing/remark-prettier)
-  - [? remark-sectionize](https://github.com/jake-low/remark-sectionize)
-  - [? remark-title](https://github.com/RichardLitt/remark-title)
-  - [? remark-typescript](https://github.com/trevorblades/remark-typescript)
-  - [? rehype-infer-reading-time-meta](https://github.com/rehypejs/rehype-infer-reading-time-meta)
