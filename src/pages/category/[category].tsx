@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useContext } from "react";
 import classNames from "classnames";
 import Link from "next/link";
@@ -5,18 +6,19 @@ import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 import ReactMarkdown from "react-markdown";
 
-import CONFIGS from '../services/configs'
-import { Head } from "../components";
-import { getFiltredPosts } from "../services/api";
-import { HomeStyle } from "../styles/";
-import { ThemeContext } from "./_app";
-import generateRSS from "../services/generateRssFeed";
+import CONFIGS from '../../services/configs'
+import { Head } from "../../components";
+import { getFiltredPosts } from "../../services/api";
+import { HomeStyle } from "../../styles";
+import { ThemeContext } from "../_app";
 import { PostData } from "components/types/posts.type";
+import type { GetStaticProps, GetStaticPaths } from "next";
 
 const {
   DATE_DEFAULT_FORMAT,
   DEFAULT_LANG,
   POST_DATE_FORMAT,
+  SITE_URL,
 } = CONFIGS
 
 dayjs.locale(DEFAULT_LANG.toLowerCase());
@@ -52,7 +54,7 @@ export default function Page({ posts }: { posts: PostData[] } ) {
           >
             <div className={homeStyle.articleContent}>
               <header>
-                <Link href={`${post.slug}`}>
+                <Link href={`${SITE_URL}/${post.slug}`}>
                   <a className={homeStyle.titleLink}>
                     {index === 0
                       ? post?.title
@@ -99,8 +101,9 @@ export default function Page({ posts }: { posts: PostData[] } ) {
   );
 }
 
-export async function getStaticProps() {
-  await generateRSS();
+export async function getStaticProps({ params }): GetStaticProps {
+  const { category } = params
+  console.log('-', category)
   const posts = getFiltredPosts([
     "title",
     "slug",
@@ -108,9 +111,31 @@ export async function getStaticProps() {
     "category",
     "cover_image",
     "summary",
-  ]);
+  ], [['category', category.toLowerCase()]]);
 
   return {
     props: { posts },
+  };
+}
+
+export function getStaticPaths(): GetStaticPaths {
+  const posts = getFiltredPosts(["category"]);
+
+  return {
+    /**
+     * Retornamos para cada rota o parâmetro slug,
+     * para conseguirmos usá-lo na função getStaticProps acima.
+     */
+    paths: posts?.map(post => ({
+      params: {
+        category: post?.category?.join(),
+      },
+    })),
+    /**
+     * A opção fallback: false fala para o Next.js
+     * não tentar executar essa rota se o arquivo
+     * markdown para ela não existir
+     */
+    fallback: true,
   };
 }

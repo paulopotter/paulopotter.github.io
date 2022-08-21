@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import CONFIGS from './configs'
 
 import type { PostData } from '../components/types/posts.type';
 
@@ -35,20 +36,40 @@ export function getPost(filename: string, fields: string[] = []): PostData | {} 
   // @ts-expect-error: title was required but i dont have yet
   const post: PostData = {}
 
+  if(fields.length === 0) fields = Object.keys(data)
+
   fields
   .map((field: string) => {
+    const lowerField = field.toLowerCase()
+
     if(!data?.[getParameterCaseInsensitive(data, 'title')]){
       return
     } else {
       post['title'] = data[getParameterCaseInsensitive(data, 'title')]
     }
-    if (field === 'category') post[field] = data?.category?.split(',');
-    if (field === 'content') post[field] = content;
-    if (field === 'summary') post[field] = getSummary(content)
-    if (field === 'slug') post[field] = slug
+    switch (lowerField) {
+      case 'category':
+        post[lowerField] = data?.[getParameterCaseInsensitive(data, 'category')]?.split(',')?.map((item: string) => item.trim());
+      break
+      case 'content':
+        post[lowerField] = content;
+      break
+      case 'summary':
+        post[lowerField] = getSummary(content)
+      break
+      case 'slug':
+        post[lowerField] = slug
+      break
+      case 'cover_image':
+        post[lowerField] = CONFIGS.SITE_URL + data[getParameterCaseInsensitive(data, field)].replace('./', '/')
+      break
+      default:
+        // @ts-expect-error: one day I will see this error
+        if (data[getParameterCaseInsensitive(data, field)]) post[lowerField] = data[getParameterCaseInsensitive(data, field)];
+      break
 
-    // @ts-expect-error: one day I will see this error
-    if (data[getParameterCaseInsensitive(data, field)]) post[field] = data[getParameterCaseInsensitive(data, field)];
+    }
+
   })
   return post;
 }
@@ -76,6 +97,37 @@ export function getAllPosts(fields?: string[]): PostData[] {
     .map((slug: string): PostData => getPost(slug, fields) as PostData)
     .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
     .filter(post => Object.keys(post).length !== 0);
+}
+
+/**
+ * Busca posts filtrado.
+ * @param fields Lista de campos a serem retornardos
+ * @param filter Array de array para filtrar
+ * @return PostData[]
+*/
+export function getFiltredPosts(fields?: string[], filter?: string[][]): PostData[] {
+
+const allPosts = getAllPosts(fields)
+
+if(filter === undefined || filter?.length === 0) return allPosts
+
+const filtered = filter?.map(filters => {
+  return allPosts.filter(post => {
+    const [key, values] = filters
+    // @ts-expect-error: preguiça
+    const item = post?.[key]
+
+    if(typeof item === 'string') {
+      return values.includes(item)
+    }
+
+    if(Array.isArray(item)){
+      return item.some(r => values.includes(r.toLowerCase()))
+    }
+  })
+}).flat()
+
+return [...new Set(filtered)];
 }
 
 /**
