@@ -73,7 +73,7 @@ export default function Page({ posts }: { posts: PostData[] } ) {
                 {" "}-{" "}
                 {post?.category?.map((cat, categoryIndex, arr) => (
                   <span key={`${index}-category-${categoryIndex}`}>
-                    <Link href={`/category/${cat}`}>{cat.toUpperCase()}</Link>
+                    <Link href={`/category/${cat.toLowerCase()}`}>{cat.toUpperCase()}</Link>
                     {categoryIndex < arr.length - 1
                       ? " - "
                       : null}
@@ -124,15 +124,18 @@ export async function getStaticProps({ params }): GetStaticProps {
 
 export function getStaticPaths(): GetStaticPaths {
   const posts = getFiltredPosts(["category"]);
+  let categories = []
+  posts?.forEach(post => { categories.push(post.category)})
+  categories = [...new Set(categories.flat())]
 
   return {
     /**
      * Retornamos para cada rota o parâmetro slug,
      * para conseguirmos usá-lo na função getStaticProps acima.
      */
-    paths: posts?.map(post => ({
+    paths: categories?.map(category => ({
       params: {
-        category: post?.category?.join(),
+        category: category.toLowerCase()
       },
     })),
     /**

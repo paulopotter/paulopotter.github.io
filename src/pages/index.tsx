@@ -72,7 +72,7 @@ export default function Page({ posts }: { posts: PostData[] } ) {
                 {" "}-{" "}
                 {post?.category?.map((cat, categoryIndex, arr) => (
                   <span key={`${index}-category-${categoryIndex}`}>
-                    <Link href={`/category/${cat}`}>{cat.toUpperCase()}</Link>
+                    <Link href={`/category/${cat.toLowerCase()}`}>{cat.toUpperCase()}</Link>
                     {categoryIndex < arr.length - 1
                       ? " - "
                       : null}
