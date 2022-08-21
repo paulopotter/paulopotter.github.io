@@ -66,6 +66,16 @@ export const PostContent = ({ post }: Props) => {
           ogImage: post?.cover_image,
           ogUrl: `${SITE_URL}/${post.slug}`,
           twitterAlt: post?.cover_image_alt,
+          ogType: 'article',
+          ogArticle: {
+            publishedTime: new Date(post!.date as string).toISOString(),
+            modifiedTime: new Date(post!.date as string).toISOString(),
+            section: 'Technology',
+            authors: [
+              `${SITE_URL}/author`,
+            ],
+            tags: post?.category,
+          }
         }}
       ></Head>
       <section className={postStyle.articleSection}>

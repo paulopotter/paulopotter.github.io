@@ -21,8 +21,6 @@ const Document = () => {
         <Script async={true} src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2474646572295965"
         crossOrigin="anonymous" />
         <Script async={true} src={IS_DEV_MODE ? "./static/new-relic-dev.js" : "./static/new-relic.js"} />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
       <body>
         <Main />
