@@ -4,7 +4,7 @@
         <title>Um dev qualquer || Paulo Oliveira</title>
         <link>https://umdevqualquer.com.br</link>
         <description>Blog pessoal onde mostro um pouco do meu aprendizado.</description>
-        <lastBuildDate>Sat, 20 Aug 2022 17:12:15 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 21 Aug 2022 03:19:02 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
@@ -23,7 +23,9 @@
 <p>Continuando com a série de posts que estou fazendo sobre as propriedades ARIA, hoje é o dia da role <code>tooltip</code>.
 Essa é uma role bem simples e rápida, veja só...</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/Utilizando Aria - Tooltip/tooltip-cover.webp" length="0" type="image/webp"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/Utilizando Aria - Tooltip/tooltip-cover.webp" length="0" type="image/webp"/>
         </item>
         <item>
             <title><![CDATA[Palestra: Apps para SmartTv - BrazilJS Conf]]></title>
@@ -33,7 +35,10 @@ Essa é uma role bem simples e rápida, veja só...</p>
             <description><![CDATA[<p>E aê, belezinha?</p>
 <p>Ta aqui, como prometido no <a href="./braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo">meu último post</a>, o vídeo da minha palestra na Braziljs falando sobre TV.</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/palestra-apps-para-smarttv-brazil-js/confBrazilJS_tela-estudio_palestrante_paulo-oliveira.png" length="0" type="image/png"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/palestra-apps-para-smarttv-brazil-js/confBrazilJS_tela-estudio_palestrante_paulo-oliveira.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[BrazilJS Conf - Minha história com a maior conferência JS do mundo!]]></title>
@@ -43,7 +48,9 @@ Essa é uma role bem simples e rápida, veja só...</p>
             <description><![CDATA[<p>Hoje eu não vou falar de código. Vou falar de um sonho!
 Contarei desde quando eu fui pela primeira vez até como eu virei palestrante da BrazilJS 2021 😆</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/minha-historia-com-braziljs/braziljs-conf-2021-banner.png" length="0" type="image/png"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/minha-historia-com-braziljs/braziljs-conf-2021-banner.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Utilizando ARIA no seu projeto - Menu]]></title>
@@ -53,7 +60,9 @@ Contarei desde quando eu fui pela primeira vez até como eu virei palestrante da
             <description><![CDATA[<p>Esse é o primeiro post da série que estarei fazendo sobre as propriedades ARIA para você saber como colocar no seu projeto.
 Para começar eu resolvi começar com a navegação, então estarei falando sobre as roles: <code>menu</code>, <code>menuitem</code> ou <code>menubar</code>.</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/teclado-botao-cadeirante.jpg" length="0" type="image/jpg"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/teclado-botao-cadeirante.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Você já pensou sobre Acessibilidade (a11y)?]]></title>
@@ -63,7 +72,9 @@ Para começar eu resolvi começar com a navegação, então estarei falando sobr
             <description><![CDATA[<p>Hoje eu vou falar um pouco do ~pouco~ conhecimento que tenho sobre acessibilidade na web, e o porquê você deveria conhecer também.
 Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso incentive a você procurar saber mais também.</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/acessibility-uxplanet.jpeg" length="0" type="image/jpeg"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/acessibility-uxplanet.jpeg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[Ellipsis em mais de uma linha apenas com css]]></title>
@@ -73,7 +84,9 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <description><![CDATA[<p>Fala minha galera, hoje a dica é rápida.</p>
 <p>Complementando o <a href="./como-fazer-reticenciasellipsis-apenas-com-css.html">post feito antes</a>, onde e</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/reticências.jpg" length="0" type="image/jpg"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/reticências.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Meus plugins favoritos para vscode]]></title>
@@ -83,7 +96,9 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <description><![CDATA[<p>Fala ae pessoal, tudo tranquilo?</p>
 <p>Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa querida internet procurando por plugins para facilitar a minha vida.</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/blake-connally-unsplash.jpg" length="0" type="image/jpg"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/blake-connally-unsplash.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Criando sua primeira APP para Smart TVs (Parte 2)]]></title>
@@ -93,7 +108,10 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <description><![CDATA[<p>Iai meu Polvo 🐙 como cês tão?</p>
 <p>Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/smart-tv-plex.jpg" length="0" type="image/jpg"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/smart-tv-plex.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Criando sua primeira APP para Smart TVs]]></title>
@@ -103,7 +121,10 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <description><![CDATA[<p>Fala ae, tranquilinho?</p>
 <p>Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido <a href="./como-e-o-desenvolvimento-para-smart-tvs.html">neste post</a>. Recomendo a leitura, é uma boa introdução.</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/smart-tv-pixabay.jpg" length="0" type="image/jpg"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/smart-tv-pixabay.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Como é o desenvolvimento para Smart TVs]]></title>
@@ -113,7 +134,10 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <description><![CDATA[<p>Fala galera, blz?</p>
 <p>Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/smart-tv.png" length="0" type="image/png"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/smart-tv.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Google Assistant - o que é?]]></title>
@@ -123,7 +147,8 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <description><![CDATA[<p>E ae, como vocês tão?</p>
 <p>E um hackday[^1] lá na <a href="https://globo.com">globo.com</a> eu tive a idéia de criar um assistente para um dos produtos da <a href="https://globo.com">globo.com</a>.</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/google-assistant-ios1.webp" length="0" type="image/webp"/>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/google-assistant-ios1.webp" length="0" type="image/webp"/>
         </item>
         <item>
             <title><![CDATA[Screamer-js - Um plugin js de notificação para Browser]]></title>
@@ -133,7 +158,8 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <description><![CDATA[<p>Fala pessoal, como é que cês tão?! 😜</p>
 <p>Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser.</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/Screamer.png" length="0" type="image/png"/>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/Screamer.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Como fazer reticências(ellipsis) apenas com css]]></title>
@@ -143,7 +169,9 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <description><![CDATA[<p>Fala pessoal, como é que cês tão?! 😜</p>
 <p>Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e colocar reticências apenas com CSS!</p>
 ]]></description>
-            <enclosure url="https://umdevqualquer.com.br/./images/reticências.jpg" length="0" type="image/jpg"/>
+            <category>undefined</category>
+            <category>undefined</category>
+            <enclosure url="https://umdevqualquer.com.br/https://umdevqualquer.com.br/images/reticências.jpg" length="0" type="image/jpg"/>
         </item>
     </channel>
 </rss>
