@@ -40,7 +40,6 @@ export default function Page({ posts }: { posts: PostData[] } ) {
   const { isDarkTheme } = useContext(ThemeContext);
   const homeStyle = HomeStyle({ isDarkTheme });
 
-
   return (
     <>
       <Head />
@@ -103,7 +102,6 @@ export default function Page({ posts }: { posts: PostData[] } ) {
 
 export async function getStaticProps({ params }): GetStaticProps {
   const { category } = params
-  console.log('-', category)
   const posts = getFiltredPosts([
     "title",
     "slug",
@@ -112,6 +110,12 @@ export async function getStaticProps({ params }): GetStaticProps {
     "cover_image",
     "summary",
   ], [['category', category.toLowerCase()]]);
+
+  if (posts.length === 0) {
+    return {
+      notFound: true,
+    }
+  }
 
   return {
     props: { posts },
