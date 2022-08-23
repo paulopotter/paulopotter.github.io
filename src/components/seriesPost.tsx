@@ -26,10 +26,11 @@ const SeriesPosts = ({ posts, isDarkTheme }: RelatedProps): JSX.Element | null =
       <ul className={style.list}>
         {
           posts?.map((post, index) => (
-            // @ts-expect-error: I dont know this error TS2746
             <li key={post.title} className={style.listItem} >
-              <span className={style.textHighlight}>PARTE { index + 1}: &nbsp;</span>
-              {items(post)}
+              <>
+                <span className={style.textHighlight}>PARTE { index + 1}: &nbsp;</span>
+                {items(post)}
+              </>
             </li>
           ))
         }

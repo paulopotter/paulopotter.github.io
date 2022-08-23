@@ -4,7 +4,6 @@ import CONFIGS from "../services/configs";
 import { COLOR } from "config";
 import { NextSeo } from 'next-seo';
 
-
 const {
   IS_DEV_MODE,
   AUTHOR_IMG,
@@ -30,7 +29,7 @@ interface HeadProps {
     ogImage?: string
     ogUrl?: string
     ogType?: 'website' | 'article'
-    ogArticle?: Record<string, any>
+    ogArticle?: Record<string, unknown>
     twitterAlt?: string
   }
 }
