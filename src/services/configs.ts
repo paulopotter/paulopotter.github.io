@@ -31,6 +31,10 @@ const author = {
         name: 'Twitter',
         url: 'https://twitter.com/paulofrauches',
       },
+      {
+        name: 'Calendly',
+        url: 'https://calendly.com/umdevqualquer',
+      },
     ],
 }
 

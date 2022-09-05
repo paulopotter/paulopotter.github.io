@@ -34,7 +34,10 @@ export const AuthorCardStyle = createUseStyles({
     color: THEME_VALUE(isDarkTheme, 'link'),
     'font-size': '1em',
     display: 'inline-block',
-    margin: '0.2em'
+    margin: '0.2em',
+    width: '35px',
+    height: '35px',
+    verticalAlign: 'bottom',
   }),
   socialIcon: ({isDarkTheme}: StyleProps) => ({
     fill: THEME_VALUE(isDarkTheme, 'text'),
