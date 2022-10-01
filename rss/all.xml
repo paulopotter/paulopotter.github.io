@@ -4,7 +4,7 @@
         <title>Um dev qualquer || Paulo Oliveira</title>
         <link>https://umdevqualquer.com.br</link>
         <description>Blog pessoal onde mostro um pouco do meu aprendizado.</description>
-        <lastBuildDate>Sun, 21 Aug 2022 15:44:10 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 Oct 2022 20:57:23 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
@@ -132,7 +132,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <guid>https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs?resource=rss</guid>
             <pubDate>Wed, 09 Oct 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>Fala galera, blz?</p>
-<p>Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.</p>
+<p>Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na <a href="https://globo.com">globo.com</a>, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.</p>
 ]]></description>
             <category>undefined</category>
             <category>undefined</category>
