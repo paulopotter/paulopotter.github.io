@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import ReactMarkdown from "react-markdown";
 import classNames from "classnames";
 import Link from "next/link";

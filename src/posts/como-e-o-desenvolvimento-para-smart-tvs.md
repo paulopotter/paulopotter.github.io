@@ -12,7 +12,7 @@ cover_image_link: "https://www.flaticon.com/authors/freepik"
 
 Fala galera, blz?
 
-Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na globo.com, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.
+Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na [globo.com](https://globo.com), estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.
 <!-- PELICAN_END_SUMMARY -->
 
 Graças a isso, eu gostaria de compartilhar um pouco da minha experiência nessa nova área e com isso mostrar o quão simples é fazer uma app de Tv. Esse será um post conceito, logo não haverá linha de código...
@@ -77,13 +77,13 @@ Usando o modelo **UE55F8000AFXZ** como exemplo, podemos ver o seguinte:
 - **E** = Produzido na Europa
 - **55** = Tamanho da tela
 - **F** = Fabricado em 2013 (Ano de fabricação)
-- **8000** = Numero de série. Isso será diferente dependendo dos recursos de cada modelo. É possível descobrir as especificações dos modelos, digitando o código do modelo [aqui](https://www.samsung.com/br/tvs/) (use a busca)
+- **8000** = Numero de série. Isso será diferente dependendo dos recursos de cada modelo. É possível descobrir as especificações dos modelos, [digitando o código do modelo aqui](https://www.samsung.com/br/tvs/) (use a busca)
 - **A** = Features ou design
 - **FXZ** = Informações técnicas de produção
 
 Se você possui UE55F8000**B**FXZ no lugar da UE55F8000**A**FXZ usado no exemplo, você verá que a diferença entre eles são apenas de design como a cor, por exemplo, mas o resto das especificações serão as mesmas.
 
-Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse [esse link](https://www.samsung.com/us/support/answer/ANS00087664/)
+[Acesse esse link, para ver a tradução de cada letra](https://www.samsung.com/us/support/answer/ANS00087664/) (como, por exemplo, saber qual letra representa qual ano).
 
 
 - LG:
@@ -91,7 +91,7 @@ Para ver a tradução de cada letra (como, por exemplo, saber qual letra represe
 Encontrei essa imagem que facilita a explicação no caso da LG:
 ![*Créditos:* na imagem](./images/como-e-o-desenvolvimento-para-smart-tvs/LG-TV-model-identification-2018-2019-new.jpg)
 
-Para ver a tradução de cada letra (como, por exemplo, saber qual letra representa qual ano), acesse [esse link](http://en.tab-tv.com/?page_id=7111) (não oficial).
+[Acesse esse link, para ver a tradução de cada letra](http://en.tab-tv.com/?page_id=7111) (como, por exemplo, saber qual letra representa qual ano. Link não oficial).
 
 
 ## That`s all folks:
@@ -99,4 +99,3 @@ Para ver a tradução de cada letra (como, por exemplo, saber qual letra represe
 Com isso em mente, você já pode começar a se preparar para desenvolver sua tv app ou saber escolher melhor a sua próxima tv.
 
 Dentro de alguns dias eu irei fazer uma série de posts mais técnicos, mostrando o desenvolvimento de uma tela simples para testar na sua TV em casa.
-

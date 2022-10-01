@@ -26,6 +26,7 @@ Aqui está a listagem de links que me ajudaram com essa migração e os links de
 - [react devicon](https://github.com/devicons/react-devicons)
 - [feed - node rss](https://github.com/jpmonette/feed)
 - [next seo](https://github.com/garmeeh/next-seo)
+- [Yet Another React Lightbox](https://yet-another-react-lightbox.com/)
 - rehype
 - remark:
   - [remark-figure](https://github.com/josestg/rehype-figure)

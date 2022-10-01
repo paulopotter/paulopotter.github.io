@@ -5213,6 +5213,11 @@ yargs@^16.1.0:
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
 
+yet-another-react-lightbox@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/yet-another-react-lightbox/-/yet-another-react-lightbox-2.1.1.tgz#8458ddd4d8f07c9aac0bdae4dccf10fcac39512d"
+  integrity sha512-rFpScZExQ024mqVkNCasgquMvxRSp+HPuxa2MtXxSIeI0t1fewidPm3mE9RHlh2EiEiNpct+5PwO9GKkUwi9HA==
+
 youtube-player@5.5.2:
   version "5.5.2"
   resolved "https://registry.yarnpkg.com/youtube-player/-/youtube-player-5.5.2.tgz#052b86b1eabe21ff331095ffffeae285fa7f7cb5"

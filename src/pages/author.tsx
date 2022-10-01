@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
+// import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 dayjs.locale("pt-br");
 
 import * as BSIcons from 'react-bootstrap-icons'
@@ -17,6 +19,12 @@ import calendlyImage from '../images/calendly-logo.png'
 const { AUTHOR_IMG, SOCIAL } = CONFIGS;
 
 export default function Author() {
+  // const [isLightboxOpen, setLightboxOpen] = useState(false)
+  // const portifolio = [
+  //   {
+  //     src: ''
+  //   }
+  // ]
   const { isDarkTheme } = useContext(ThemeContext);
   const style = AuthorStyle({ isDarkTheme });
 
@@ -36,7 +44,7 @@ export default function Author() {
             id="authorImage"
           />
         <p className={classNames(style.section)}>
-          Olá, me chamo <span className={style?.name}>Paulo Oliveira</span> e sou <span className={style.highlight}>desenvolvedor no <Link href={'https://vemparaglobo.g.globo'}>Grupo Globo</Link> há {workLife} anos</span>. <br /> <br />
+          Olá, me chamo <span className={style?.name}>Paulo Oliveira</span> e sou <span className={style.highlight}>desenvolvedor no <Link href={'https://vemparaglobo.g.globo'}><a target="_blank">Grupo Globo</a></Link> há {workLife} anos</span>. <br /> <br />
           Criei o <Link href={'/'} >um dev qualquer</Link> com o intuito de compartilhar os meus conhecimentos e guardar o meu aprendizado de uma forma estruturada. Sou apaixonado por tecnologia e entusiasta das novidades. <br />
           Hoje estou focado no desenvolvimento de APPs para <span className={style.highlight}>Smart TV, Acessibilidade</span> e <abbr title="Developer eXperience" className={style.highlight}>DX</abbr>.
         </p>
@@ -50,7 +58,8 @@ export default function Author() {
                const SocialIcon = BSIcons[social.name]
                return (
                  <li className={style.socialItem} key={`${social.name}-${index}`}>
-                   <a href={social.url} title={social.name}>
+                  <Link href={social.url}>
+                   <a title={social.name}>
                      {
                        social.name.toLowerCase() === 'calendly' ? (
                          <Image src={calendlyImage} layout='responsive' className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`} />
@@ -59,6 +68,7 @@ export default function Author() {
                        )
                      }
                    </a>
+                  </Link>
                  </li>
                )
              })
@@ -86,7 +96,7 @@ export default function Author() {
                 <span className={style.timelineCompany}>Globo.com</span>
               </p>
               <p className={style.timelineContent}>
-                Participei na manutenção e desenvolvimento de features dos sites: G1, Cartola e GE(Globoesporte).
+                Participei na manutenção e desenvolvimento de features dos sites: <Link href="https://g1.globo.com"><a target="_blank" rel="noreferrer">G1</a></Link>, <Link href="https://ge.globo.com/cartola/"><a target="_blank" rel="noreferrer">Cartola</a></Link> e <Link href="https://ge.globo"><a target="_blank" rel="noreferrer">GE(Globoesporte)</a></Link>.
               </p>
             </li>
 
@@ -97,7 +107,7 @@ export default function Author() {
                 <span className={style.timelineCompany}>Grupo Globo (HUB digital / antiga globo.com)</span>
               </p>
               <p className={style.timelineContent}>
-                Participei na manutenção e desenvolvimento de features do site: GE(Globoesporte).
+                Participei na manutenção e desenvolvimento de features do site: <Link href="https://ge.globo"><a target="_blank" rel="noreferrer">GE(Globoesporte)</a></Link>.
               </p>
               <p className={style.timelineContent}>
                 Participei na manutenção e desenvolvimento de features do APP para Smart TVs: Canais globo (Antigo globosatplay) e Globoplay.
@@ -108,7 +118,13 @@ export default function Author() {
             </li>
           </ul>
         </section>
+
       </section>
+      {/* <Lightbox
+        open={isLightboxOpen}
+        close={() => setLightboxOpen(false)}
+        slides={portifolio}
+      /> */}
     </>
   );
 }

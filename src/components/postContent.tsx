@@ -25,6 +25,7 @@ import { PostStyle } from "./styles/postContent.style";
 import RelatedPosts from "./relatedPosts";
 import type { PostData } from "./types/posts.type";
 import SeriesPosts from "./seriesPost";
+import Link from "next/link";
 
 const {
   SITE_URL,
@@ -123,6 +124,13 @@ export const PostContent = ({ post }: Props) => {
                     <hr />
                   );
                 },
+                a({ className, children, ...props }) {
+                  return (
+                    <Link href={props!.href!}>
+                      <a target={isExternalLink(props.href!) ? '_blank': '_self'} rel="noreferrer" className={className}>{children}</a>
+                    </Link>
+                  )
+                },
                 img({ ...props }) {
                   // TODO: corrigir imagens e descrições
                   return (
@@ -208,16 +216,15 @@ const FigureCaption = ({ post, postStyle }: CoverImageProps): JSX.Element | null
     <figcaption className={postStyle.articleCoverCredit}>
       Créditos:{" "}
       {post?.cover_image_link ? (
-        <a href={`${post.cover_image_link}`}>{post.cover_image_by || ""}</a>
+        <Link href={`${post.cover_image_link}`}>
+          <a target={isExternalLink(post.cover_image_link) ? '_blank': '_self'} rel="noreferrer">{post.cover_image_by || ""}</a>
+        </Link>
       ) : (
         post?.cover_image_by || ""
       )}
     </figcaption>
   ) : null;
 
-const fixImgSRC = (src: string): string => {
-  if (src.indexOf("http://") == 0 || src.indexOf("https://") == 0) {
-    return src;
-  }
-  return src.replace("./", "../");
-};
+const fixImgSRC = (src: string): string => (isExternalLink(src) ? src : src.replace("./", "../"))
+
+const isExternalLink = (url: string): boolean => (url.indexOf("http://") == 0 || url.indexOf("https://") == 0)
