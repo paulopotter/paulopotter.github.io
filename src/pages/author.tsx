@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import classNames from "classnames";
 import Link from "next/link";
-import Image from "next/image";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 // import Lightbox from "yet-another-react-lightbox";
@@ -14,9 +13,8 @@ import { Head } from "../components";
 import CONFIGS from "../services/configs";
 import { AuthorStyle } from "../styles/";
 import { ThemeContext } from "./_app";
-import calendlyImage from '../images/calendly-logo.png'
 
-const { AUTHOR_IMG, SOCIAL } = CONFIGS;
+const { AUTHOR_IMG, SOCIAL, SITE_URL } = CONFIGS;
 
 export default function Author() {
   // const [isLightboxOpen, setLightboxOpen] = useState(false)
@@ -62,7 +60,8 @@ export default function Author() {
                    <a title={social.name}>
                      {
                        social.name.toLowerCase() === 'calendly' ? (
-                         <Image src={calendlyImage} layout='responsive' className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`} />
+                        <img src={`${SITE_URL}/images/icons/calendly-logo.png `} className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`} />
+
                        ) : (
                          <SocialIcon className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`}/>
                        )

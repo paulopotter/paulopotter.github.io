@@ -5,11 +5,8 @@ import { AuthorCardStyle } from "./styles/authorCard.style";
 import CONFIGS from "../services/configs";
 import classNames from "classnames";
 import Link from 'next/link';
-import Image from 'next/image';
-import calendlyImage from '../images/calendly-logo.png'
 
-
-const { AUTHOR_IMG, SOCIAL } = CONFIGS
+const { AUTHOR_IMG, SOCIAL, SITE_URL } = CONFIGS
 
 export function AuthorCard({isDarkTheme = false}) {
 
@@ -40,7 +37,7 @@ export function AuthorCard({isDarkTheme = false}) {
                 <a href={social.url} title={social.name}>
                   {
                     social.name.toLowerCase() === 'calendly' ? (
-                      <Image src={calendlyImage} layout='responsive' className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`} />
+                      <img src={`${SITE_URL}/images/icons/calendly-logo.png `} className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`} />
                     ) : (
                       <SocialIcon className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`}/>
                     )
