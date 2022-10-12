@@ -64,11 +64,10 @@ export default async function generateRssFeed() {
       title: post.title,
       link: url,
       description: String(description),
-      image: `${FEED_DOMAIN}/${post.cover_image}`,
+      image: post.cover_image,
       date: new Date(),
       published: new Date(post.date || new Date()),
-      // @ts-expect-error: My category was different
-      category: post.category,
+      category: post.category?.map(categoryName => ({name: categoryName})),
     });
   });
 
