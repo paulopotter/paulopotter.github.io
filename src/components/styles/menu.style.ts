@@ -1,5 +1,5 @@
 // @ts-nocheck
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { THEME_VALUE } from '../../config/config.style'
 
 export const MenuStyle = createUseStyles({
@@ -44,7 +44,7 @@ export const MenuStyle = createUseStyles({
       'background-color': 'transparent',
     },
   },
-  menuIconSVG: ({isDarkTheme}) => ({
+  menuIconSVG: ({ isDarkTheme }) => ({
       fill: THEME_VALUE( isDarkTheme,"link"),
       height: '100%',
       display: 'inline-block',
@@ -52,7 +52,7 @@ export const MenuStyle = createUseStyles({
           fill: `${THEME_VALUE( isDarkTheme,"link")}aa`,
       },
     }),
-    menuList: ({isDarkTheme = false}) => ({
+    menuList: ({ isDarkTheme = false }) => ({
       position: 'absolute',
       'z-index': 9,
       'background-color': THEME_VALUE(isDarkTheme, "background"),
@@ -70,7 +70,7 @@ export const MenuStyle = createUseStyles({
         left: '9.5em',
       },
     }),
-    menuListActive: ({isDarkTheme = false}) => ({
+    menuListActive: ({ isDarkTheme = false }) => ({
       '&$menuList':{
       transform: 'translateY(0)',
       opacity: 1,
@@ -80,12 +80,12 @@ export const MenuStyle = createUseStyles({
         display: 'block',
         top: '16vh',
         left: 0,
-        borderTop: [2, 'dotted', THEME_VALUE(isDarkTheme, 'border')],
+        borderTop: [ 2, 'dotted', THEME_VALUE(isDarkTheme, 'border') ],
       },
       '@media (max-width: 767px)': {
         top: '9.8vh',
       },
-    }}),
+    } }),
 
     menuListItem: {
       'font-size': '1rem',

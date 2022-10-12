@@ -6,13 +6,13 @@ import { ThemeButtonStyle } from "./styles/toggleThemeButton.style";
 
 export function ToggleThemeButton({ onClicked }: {onClicked?: () => void}) {
 const { isDarkTheme } = useContext(ThemeContext);
-const [canAnimate, setCanAnimate] = useState(false);
+const [ canAnimate, setCanAnimate ] = useState(false);
 
   const style = ThemeButtonStyle({ isDarkTheme });
 
   useEffect(() => {
     setTimeout(() => setCanAnimate(true), 1000);
-  }, [canAnimate]);
+  }, [ canAnimate ]);
 
   const toggleButtonOnClick = (event: unknown) => {
     onClicked?.();
@@ -26,7 +26,7 @@ const [canAnimate, setCanAnimate] = useState(false);
 
   return (
     <button
-      className={classNames(style.button, { [style.hasJs]: canAnimate })}
+      className={classNames(style.button, { [ style.hasJs ]: canAnimate })}
       type="button"
       aria-label={`Trocar para o tema ${isDarkTheme ? "claro" : "escuro"}`}
       onClick={toggleButtonOnClick}

@@ -1,8 +1,8 @@
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { THEME_VALUE } from '../../config/config.style'
 
 export const FooterStyle = createUseStyles({
-  backToTop: ({isDarkTheme}: {isDarkTheme: boolean}) => ({
+  backToTop: ({ isDarkTheme }: {isDarkTheme: boolean}) => ({
     padding: '0.5em',
     position: 'fixed',
     display: 'flex',
@@ -23,7 +23,7 @@ export const FooterStyle = createUseStyles({
       'background-color': THEME_VALUE( isDarkTheme, "card"),
     },
 
-    ['@media (min-width: 1400px)']: {
+    [ '@media (min-width: 1400px)' ]: {
       left: '87%',
       right: 'inherit',
     },
@@ -42,7 +42,7 @@ export const FooterStyle = createUseStyles({
   backToTopShow: {
     '&$backToTop': {
      bottom: 0,
-  }},
+  } },
   backToTopText: {
     float: 'left',
     display: 'none',

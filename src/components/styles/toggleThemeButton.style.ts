@@ -1,10 +1,10 @@
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { THEME_VALUE } from '../../config/config.style'
 
 type StyleProp = {isDarkTheme: boolean}
 
 export const ThemeButtonStyle = createUseStyles({
-  button: ({isDarkTheme}: StyleProp) => ({
+  button: ({ isDarkTheme }: StyleProp) => ({
     padding: '0.5em',
     height: '3em',
     width: '3em',
@@ -41,7 +41,7 @@ export const ThemeButtonStyle = createUseStyles({
     },
   },
 
-  svg: ({isDarkTheme}: StyleProp) => ({
+  svg: ({ isDarkTheme }: StyleProp) => ({
     transform: 'rotate(180deg)',
     fill: THEME_VALUE(isDarkTheme,"changeThemeButton"),
   })

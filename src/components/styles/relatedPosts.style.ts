@@ -1,5 +1,5 @@
 // @ts-nocheck
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { THEME_VALUE } from '../../config/config.style'
 
 export const RelatedPostsStyle = createUseStyles({
@@ -10,7 +10,7 @@ export const RelatedPostsStyle = createUseStyles({
        flexDirection: 'column-reverse',
     }
   },
-  navLink: ({isDarkTheme}) => ({
+  navLink: ({ isDarkTheme }) => ({
     borderTop: `1px dashed ${THEME_VALUE(isDarkTheme, "border")}`,
     margin: '2em 0 1em',
     padding: '2em 1em',

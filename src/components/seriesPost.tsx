@@ -21,7 +21,7 @@ const SeriesPosts = ({ posts, isDarkTheme }: RelatedProps): JSX.Element | null =
 
   return(
     <div className={style.wrapper} >
-      <p className={style.title}>Este post faz parte da serie &quot;<span className={style.titleHighlight}>{posts[0].series}</span>&quot;</p>
+      <p className={style.title}>Este post faz parte da serie &quot;<span className={style.titleHighlight}>{posts[ 0 ].series}</span>&quot;</p>
 
       <ul className={style.list}>
         {

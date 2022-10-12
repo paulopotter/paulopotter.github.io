@@ -1,4 +1,4 @@
-export const THEME_VALUE = (isDark: boolean, prop: string): string => (isDark ? COLOR.dark[prop] : COLOR.light[prop])
+export const THEME_VALUE = (isDark: boolean, prop: string): string => (isDark ? COLOR.dark[ prop ] : COLOR.light[ prop ])
 
 export const FONT: Record<string, string | number> = {
   size: 16,

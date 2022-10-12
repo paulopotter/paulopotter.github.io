@@ -1,10 +1,10 @@
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { THEME_VALUE } from '../../config'
 
 type StyleProp = {isDarkTheme: boolean}
 
 export const AuthorStyle = createUseStyles({
-    content: ({isDarkTheme}: StyleProp) => ({
+    content: ({ isDarkTheme }: StyleProp) => ({
       margin: '1rem .5rem',
       padding: '1rem',
       backgroundColor: THEME_VALUE(isDarkTheme, 'card'),
@@ -39,11 +39,11 @@ export const AuthorStyle = createUseStyles({
       clear: 'both',
     },
 
-    socialList: ({isDarkTheme}: StyleProp) => ({
+    socialList: ({ isDarkTheme }: StyleProp) => ({
       color: THEME_VALUE(isDarkTheme, 'heading'),
       'font-size': '2em',
     }),
-    socialItem: ({isDarkTheme}: StyleProp) => ({
+    socialItem: ({ isDarkTheme }: StyleProp) => ({
       color: THEME_VALUE(isDarkTheme, 'link'),
       'font-size': '1em',
       display: 'inline-block',
@@ -52,7 +52,7 @@ export const AuthorStyle = createUseStyles({
       height: '35px',
       verticalAlign: 'bottom',
     }),
-    socialIcon: ({isDarkTheme}: StyleProp) => ({
+    socialIcon: ({ isDarkTheme }: StyleProp) => ({
       fill: THEME_VALUE(isDarkTheme, 'text'),
 
       '&:hover': {

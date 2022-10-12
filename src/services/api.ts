@@ -42,30 +42,30 @@ export function getPost(filename: string, fields: string[] = []): PostData | {} 
   .map((field: string) => {
     const lowerField = field.toLowerCase()
 
-    if(!data?.[getParameterCaseInsensitive(data, 'title')]){
+    if(!data?.[ getParameterCaseInsensitive(data, 'title') ]){
       return
     } else {
-      post['title'] = data[getParameterCaseInsensitive(data, 'title')]
+      post[ 'title' ] = data[ getParameterCaseInsensitive(data, 'title') ]
     }
     switch (lowerField) {
       case 'category':
-        post[lowerField] = data?.[getParameterCaseInsensitive(data, 'category')]?.split(',')?.map((item: string) => item.trim());
+        post[ lowerField ] = data?.[ getParameterCaseInsensitive(data, 'category') ]?.split(',')?.map((item: string) => item.trim());
       break
       case 'content':
-        post[lowerField] = content;
+        post[ lowerField ] = content;
       break
       case 'summary':
-        post[lowerField] = getSummary(content)
+        post[ lowerField ] = getSummary(content)
       break
       case 'slug':
-        post[lowerField] = slug
+        post[ lowerField ] = slug
       break
       case 'cover_image':
-        post[lowerField] = CONFIGS.SITE_URL + data[getParameterCaseInsensitive(data, field)].replace('./', '/')
+        post[ lowerField ] = CONFIGS.SITE_URL + data[ getParameterCaseInsensitive(data, field) ].replace('./', '/')
       break
       default:
         // @ts-expect-error: one day I will see this error
-        if (data[getParameterCaseInsensitive(data, field)]) post[lowerField] = data[getParameterCaseInsensitive(data, field)];
+        if (data[ getParameterCaseInsensitive(data, field) ]) post[ lowerField ] = data[ getParameterCaseInsensitive(data, field) ];
       break
 
     }
@@ -113,9 +113,9 @@ if(filter === undefined || filter?.length === 0) return allPosts
 
 const filtered = filter?.map(filters => {
   return allPosts.filter(post => {
-    const [key, values] = filters
+    const [ key, values ] = filters
     // @ts-expect-error: preguiça
-    const item = post?.[key]
+    const item = post?.[ key ]
 
     if(typeof item === 'string') {
       return values.includes(item)
@@ -127,7 +127,7 @@ const filtered = filter?.map(filters => {
   })
 }).flat()
 
-return [...new Set(filtered)];
+return [ ...new Set(filtered) ];
 }
 
 /**
@@ -159,13 +159,13 @@ function filterRelatedPosts(postDate: string, listOfPosts: PostData[]): RelatedP
     let currDiff = 0;
 
     for(let i = 0; i < listOfPosts.length; i++) {
-        currDiff = date - new Date(listOfPosts[i].date!).getTime();
+        currDiff = date - new Date(listOfPosts[ i ].date!).getTime();
         if(currDiff < 0 && currDiff > bestNextDiff){
-            result['nextPost'] = listOfPosts[i]
+            result[ 'nextPost' ] = listOfPosts[ i ]
             bestNextDiff = currDiff;
         }
         if(currDiff > 0 && currDiff < bestPrevDiff){
-            result['prevPost'] = listOfPosts[i]
+            result[ 'prevPost' ] = listOfPosts[ i ]
             bestPrevDiff = currDiff;
         }
     }
@@ -190,7 +190,7 @@ export function getRelatedSeries(serie: string, postTitle = ''): unknown {
     .filter((post: PostData) => serie !== undefined && post.series === serie)
 
   relatedPosts
-  .map((post, index) => post.title === postTitle && delete relatedPosts[index].slug
+  .map((post, index) => post.title === postTitle && delete relatedPosts[ index ].slug
   )
 
   if(relatedPosts.length <= 1){

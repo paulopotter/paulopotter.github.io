@@ -1,4 +1,4 @@
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { FONT } from '../config'
 
 export const ErrorStyle = createUseStyles({

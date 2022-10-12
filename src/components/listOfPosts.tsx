@@ -29,7 +29,7 @@ export const ListOfPost = ({ post, index }: ListProps) => {
     <article
       key={index}
       className={classNames(style.article, {
-        [style.articleFirst]: index === 0,
+        [ style.articleFirst ]: index === 0,
       })}
     >
       <div className={style.articleContent}>

@@ -12,8 +12,8 @@ export const ThemeContext = createContext({ isDarkTheme: false });
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const [isDark, setIsDark] = useState(false);
-  const [canRender, setCanRender] = useState(false);
+  const [ isDark, setIsDark ] = useState(false);
+  const [ canRender, setCanRender ] = useState(false);
   const darkTheme = ResetStyle({ isDarkTheme: true });
   const lightTheme = ResetStyle({ isDarkTheme: false });
   const themes = { light: lightTheme, dark: darkTheme };

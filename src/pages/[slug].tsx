@@ -39,7 +39,7 @@ export async function getStaticProps({ params }): GetStaticProps {
 // Usamos a função do Next.js, getStaticPaths()
 export function getStaticPaths(): GetStaticPaths {
   // Buscamos todos os slugs e date de todos os posts
-  const posts = getAllPosts(["slug", "series"]);
+  const posts = getAllPosts([ "slug", "series" ]);
 
   return {
     /**

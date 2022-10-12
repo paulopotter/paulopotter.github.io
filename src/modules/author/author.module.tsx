@@ -46,7 +46,7 @@ export function AuthorView() {
            {
              SOCIAL?.map((social, index) => {
               // @ts-expect-error: I try to resolve after
-               const SocialIcon = BSIcons[social.name]
+               const SocialIcon = BSIcons[ social.name ]
                return (
                  <li className={style.socialItem} key={`${social.name}-${index}`}>
                   <Link href={social.url}>
@@ -56,7 +56,7 @@ export function AuthorView() {
                         <img src={`${SITE_URL}/images/icons/calendly-logo.png `} className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`} />
 
                        ) : (
-                         <SocialIcon className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`}/>
+                         <SocialIcon className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`} />
                        )
                      }
                    </a>

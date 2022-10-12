@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useContext, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -48,13 +49,13 @@ export const PostContent = ({ post }: Props) => {
   const { isDarkTheme } = useContext(ThemeContext);
   const postStyle = PostStyle({ isDarkTheme });
 
-  const [codeTheme, setCodeTheme] = useState(
+  const [ codeTheme, setCodeTheme ] = useState(
     isDarkTheme ? materialOceanic : dracula
   );
 
   useEffect(() => {
     setCodeTheme(isDarkTheme ? materialOceanic : dracula);
-  }, [isDarkTheme]);
+  }, [ isDarkTheme ]);
 
   return (
     <>
@@ -92,11 +93,11 @@ export const PostContent = ({ post }: Props) => {
 
             <ReactMarkdown
               skipHtml
-              remarkPlugins={[remarkGfm]}
+              remarkPlugins={[ remarkGfm ]}
               rehypePlugins={[
                 rehypeRaw,
                 rehypeSlug,
-                [rehypeFigure, { className: postStyle.contentFigure }],
+                [ rehypeFigure, { className: postStyle.contentFigure } ],
                 [
                   rehypeRewrite,
                   {
@@ -150,7 +151,7 @@ export const PostContent = ({ post }: Props) => {
                       showLineNumbers
                       // @ts-expect-error: I dont know
                       style={codeTheme}
-                      language={match[1]}
+                      language={match[ 1 ]}
                       {...props}
                     >
                       {String(children).replace(/\n$/, "")}

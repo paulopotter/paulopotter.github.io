@@ -24,9 +24,9 @@ const RelatedPosts = ({ nextPost, prevPost, isDarkTheme }: RelatedProps) => {
         <a href={`./${prevPost.slug}`}
         className={classNames(
           {
-            [style.navLink]: true,
-            [style.prevPost]: true,
-            [style.onlyOne]: !nextPost
+            [ style.navLink ]: true,
+            [ style.prevPost ]: true,
+            [ style.onlyOne ]: !nextPost
           },
         )}
         >&lt; {prevPost.title}</a>
@@ -36,9 +36,9 @@ const RelatedPosts = ({ nextPost, prevPost, isDarkTheme }: RelatedProps) => {
         <a href={`./${nextPost.slug}`}
         className={classNames(
           {
-            [style.navLink]: true,
-            [style.nextPost]: true,
-            [style.onlyOne]: !prevPost
+            [ style.navLink ]: true,
+            [ style.nextPost ]: true,
+            [ style.onlyOne ]: !prevPost
           },
         )}
         >{nextPost.title} &gt;</a>

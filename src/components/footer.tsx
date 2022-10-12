@@ -6,7 +6,7 @@ import { FooterStyle } from "./styles/footer.style";
 
 export const Footer = () => {
   const { isDarkTheme } = useContext(ThemeContext);
-  const [showButton, setShowButton] = useState(false);
+  const [ showButton, setShowButton ] = useState(false);
 
   const footerStyle = FooterStyle({ isDarkTheme });
 
@@ -35,7 +35,7 @@ export const Footer = () => {
   return (
     <button
       className={classNames(footerStyle.backToTop, {
-        [footerStyle.backToTopShow]: showButton,
+        [ footerStyle.backToTopShow ]: showButton,
       })}
       aria-labelledby="button-back-to-top"
       onClick={backToTop}

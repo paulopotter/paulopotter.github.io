@@ -18,8 +18,8 @@ export default function HomePage({ posts }: { posts: PostData[] }) {
 export async function getStaticProps({ params }): GetStaticProps {
   const { category } = params;
   const posts = getFiltredPosts(
-    ["title", "slug", "date", "category", "cover_image", "summary"],
-    [["category", category.toLowerCase()]]
+    [ "title", "slug", "date", "category", "cover_image", "summary" ],
+    [ [ "category", category.toLowerCase() ] ]
   );
 
   return posts.length === 0
@@ -30,12 +30,12 @@ export async function getStaticProps({ params }): GetStaticProps {
 }
 
 export function getStaticPaths(): GetStaticPaths {
-  const posts = getFiltredPosts(["category"]);
+  const posts = getFiltredPosts([ "category" ]);
   let categories = [];
   posts?.forEach((post) => {
     categories.push(post.category);
   });
-  categories = [...new Set(categories.flat())];
+  categories = [ ...new Set(categories.flat()) ];
 
   return {
     /**

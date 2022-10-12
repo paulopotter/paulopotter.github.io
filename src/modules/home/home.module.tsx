@@ -1,10 +1,10 @@
-import { Head } from "../../components";
-import { HomeStyle } from "./home.style";
-import { PostData } from "../../components/types/posts.type";
-import { ListOfPost } from "../../components/listOfPosts";
+import { Head } from '../../components';
+import { HomeStyle } from './home.style';
+import { PostData } from '../../components/types/posts.type';
+import { ListOfPost } from '../../components/listOfPosts';
 
 interface HomeView {
-  posts: PostData[]
+  posts: PostData[];
 }
 
 export function HomeView({ posts }: HomeView): JSX.Element {

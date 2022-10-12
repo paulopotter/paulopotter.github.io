@@ -1,4 +1,4 @@
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { THEME_VALUE } from '../../config/config.style'
 
 export const SeriesPostsStyle = createUseStyles({
@@ -18,7 +18,7 @@ export const SeriesPostsStyle = createUseStyles({
   list: {
     marginLeft: '1rem',
   },
-  textHighlight: ({isDarkTheme}: {isDarkTheme: boolean}) => ({
+  textHighlight: ({ isDarkTheme }: {isDarkTheme: boolean}) => ({
     textTransform: 'uppercase',
     margin: '0.7em 0',
     color: THEME_VALUE(isDarkTheme, "related"),

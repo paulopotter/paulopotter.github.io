@@ -1,10 +1,10 @@
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { FONT, THEME_VALUE, MEDIA_QUERIES } from '../../config'
 
 type StyleProp = {isDarkTheme: boolean}
 
 export const ListOfPostStyle = createUseStyles({
-  article: ({isDarkTheme}: StyleProp) => ({
+  article: ({ isDarkTheme }: StyleProp) => ({
     display: 'flex',
     'justify-content': 'space-between',
     margin: '2em 1em',
@@ -16,13 +16,13 @@ export const ListOfPostStyle = createUseStyles({
     'background-color': THEME_VALUE( isDarkTheme, "card"),
     'box-shadow': `2px 2px 4px 0 ${THEME_VALUE( isDarkTheme, "boxShadow")}`,
 
-    [`@media (max-width: ${MEDIA_QUERIES.small})`]: {
+    [ `@media (max-width: ${MEDIA_QUERIES.small})` ]: {
       margin: '.5em 0',
       'max-width': '100%',
       width: '100%',
     },
 
-    [`@media (max-width: ${MEDIA_QUERIES.medium})`]: {
+    [ `@media (max-width: ${MEDIA_QUERIES.medium})` ]: {
       'max-width': '100%',
       width: '100%',
     },
@@ -40,7 +40,7 @@ export const ListOfPostStyle = createUseStyles({
     'justify-content': 'space-between',
     width: 'calc(100% - 13em)',
 
-    [`@media (max-width: ${MEDIA_QUERIES.small})`]: {
+    [ `@media (max-width: ${MEDIA_QUERIES.small})` ]: {
       width: '100%',
     },
 
@@ -49,7 +49,7 @@ export const ListOfPostStyle = createUseStyles({
     }
   },
 
-  titleLink: ({isDarkTheme}: StyleProp) => ({
+  titleLink: ({ isDarkTheme }: StyleProp) => ({
     'font-family': FONT.primary,
     'font-size': '1.1em',
     'font-weight': 'bold',
@@ -62,7 +62,7 @@ export const ListOfPostStyle = createUseStyles({
     }
   }),
 
-  category: ({isDarkTheme}: StyleProp) => ({
+  category: ({ isDarkTheme }: StyleProp) => ({
     'margin-top': '2em',
     'font-weight': 700,
     'font-size': '0.8125em',
@@ -80,12 +80,12 @@ export const ListOfPostStyle = createUseStyles({
       margin: '0 0 1em',
       display: 'block',
     },
-    [`@media (max-width: ${MEDIA_QUERIES.small})`]: {
+    [ `@media (max-width: ${MEDIA_QUERIES.small})` ]: {
         display: 'none',
     }
   },
 
-  imageCover: ({isDarkTheme}: StyleProp) => ({
+  imageCover: ({ isDarkTheme }: StyleProp) => ({
     height: '11em',
     'object-fit': 'cover',
     padding: '1em',

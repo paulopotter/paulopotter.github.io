@@ -1,10 +1,10 @@
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { THEME_VALUE, FONT } from '../../config/config.style'
 
 type StyleProps = { isDarkTheme: boolean }
 
 export const PostStyle = createUseStyles({
-  articleSection: ({isDarkTheme}: StyleProps) => ({
+  articleSection: ({ isDarkTheme }: StyleProps) => ({
     'background-color': THEME_VALUE( isDarkTheme,"card"),
     'box-shadow': `2px 2px 4px 0 ${THEME_VALUE( isDarkTheme,"boxShadow")}`,
     margin: '1rem 0.5rem',
@@ -27,13 +27,13 @@ export const PostStyle = createUseStyles({
   articleCoverImg: {
     'max-width': '100%',
     'textAlign': 'center',
-    margin: ['0', 'auto'],
+    margin: [ '0', 'auto' ],
   },
   articleCoverCredit: {
     'font-style': 'italic',
     'font-size': '0.7em',
   },
-  articleContent: ({isDarkTheme}: StyleProps) => ({
+  articleContent: ({ isDarkTheme }: StyleProps) => ({
     fontSize: '1em',
 
     '& p, & h2, & h3': {
@@ -52,7 +52,7 @@ export const PostStyle = createUseStyles({
       fontSize: '1.5em',
     },
 
-    '& table': {...table(isDarkTheme)},
+    '& table': { ...table(isDarkTheme) },
 
     '& blockquote': {
       padding: '0 2em',

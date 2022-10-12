@@ -4,7 +4,7 @@ import { THEME_VALUE } from '../../config/config.style'
 type StyleProps = { isDarkTheme: boolean}
 
 export const AuthorCardStyle = createUseStyles({
-  header: ({isDarkTheme}: StyleProps) => ({
+  header: ({ isDarkTheme }: StyleProps) => ({
     'border-radius': 20,
     'backgroundColor': THEME_VALUE(isDarkTheme, 'card'),
     'padding': 40,
@@ -17,7 +17,7 @@ export const AuthorCardStyle = createUseStyles({
     display: 'block',
     margin: 'auto',
   },
-  name: ({isDarkTheme}: StyleProps) => ({
+  name: ({ isDarkTheme }: StyleProps) => ({
     color: THEME_VALUE(isDarkTheme, 'heading'),
     'font-size': '2em',
 
@@ -26,11 +26,11 @@ export const AuthorCardStyle = createUseStyles({
 
     }
   }),
-  socialList: ({isDarkTheme}: StyleProps) => ({
+  socialList: ({ isDarkTheme }: StyleProps) => ({
     color: THEME_VALUE(isDarkTheme, 'heading'),
     'font-size': '2em',
   }),
-  socialItem: ({isDarkTheme}: StyleProps) => ({
+  socialItem: ({ isDarkTheme }: StyleProps) => ({
     color: THEME_VALUE(isDarkTheme, 'link'),
     'font-size': '1em',
     display: 'inline-block',
@@ -39,7 +39,7 @@ export const AuthorCardStyle = createUseStyles({
     height: '35px',
     verticalAlign: 'bottom',
   }),
-  socialIcon: ({isDarkTheme}: StyleProps) => ({
+  socialIcon: ({ isDarkTheme }: StyleProps) => ({
     fill: THEME_VALUE(isDarkTheme, 'text'),
 
     '&:hover': {

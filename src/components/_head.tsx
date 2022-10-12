@@ -48,7 +48,7 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => {
   const siteName = TITLE
   const getImageExtension: string = meta?.ogImage?.split('.').at(-1) ?? 'jpeg'
   // @ts-expect-error: I dont know whyyy
-  const imageExtension: string = ImageExtensionWhitelist[ImageExtensionWhitelist[getImageExtension]] ?? 'jpeg'
+  const imageExtension: string = ImageExtensionWhitelist[ ImageExtensionWhitelist[ getImageExtension ] ] ?? 'jpeg'
   const image = {
     url: meta?.ogImage
           ? meta.ogImage.startsWith(SITE_URL)
@@ -106,7 +106,7 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => {
           title: customTitle,
           site_name: siteName,
           locale: DEFAULT_LANG,
-          images: [{ ...image }],
+          images: [ { ...image } ],
           type: meta?.ogType ?? 'website',
           description,
           article

@@ -1,8 +1,8 @@
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import { FONT, THEME_VALUE } from '../config'
 
 export const ResetStyle = createUseStyles({
-  body: ({isDarkTheme}: {isDarkTheme: boolean}) => ({
+  body: ({ isDarkTheme }: {isDarkTheme: boolean}) => ({
       "text-rendering": "auto",
       "min-width": 320,
       "background-color": THEME_VALUE(isDarkTheme, "background"),

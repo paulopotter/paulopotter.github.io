@@ -1,6 +1,6 @@
 import fs from "fs";
 import { Feed } from "feed";
-import {remark} from 'remark'
+import { remark } from 'remark'
 import remarkHTML from "remark-html";
 
 import { getAllPosts } from "./api";
@@ -67,7 +67,7 @@ export default async function generateRssFeed() {
       image: post.cover_image,
       date: new Date(),
       published: new Date(post.date || new Date()),
-      category: post.category?.map(categoryName => ({name: categoryName})),
+      category: post.category?.map(categoryName => ({ name: categoryName })),
     });
   });
 

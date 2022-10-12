@@ -7,7 +7,7 @@ import { ThemeContext } from "../pages/_app";
 const { MENU_LINKS } = CONFIGS;
 
 export function Menu() {
-  const [isMenuOpened, setMenuOpened] = useState(false);
+  const [ isMenuOpened, setMenuOpened ] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpened(!isMenuOpened);
@@ -26,7 +26,7 @@ export function Menu() {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isMenuOpened])
+  }, [ isMenuOpened ])
 
   const { isDarkTheme } = useContext(ThemeContext);
   // @ts-expect-error: tema
@@ -35,7 +35,7 @@ export function Menu() {
   return (
     <menu
       className={classNames(menuStyle.menu, {
-        [menuStyle.menuOpened]: isMenuOpened,
+        [ menuStyle.menuOpened ]: isMenuOpened,
       },
       // 'max-w-7xl'
       )}
@@ -57,7 +57,7 @@ export function Menu() {
       </button>
       <ul
         className={classNames(menuStyle.menuList, {
-          [menuStyle.menuListActive]: isMenuOpened,
+          [ menuStyle.menuListActive ]: isMenuOpened,
         },
         )}
         aria-hidden={!isMenuOpened}
@@ -65,14 +65,14 @@ export function Menu() {
         {
           Object.keys(MENU_LINKS)?.map((menuItem: string, index: number) => (
           <li className={menuStyle.menuListItem} key={`menu-${index}`}>
-            <a href={MENU_LINKS[menuItem]} tabIndex={!isMenuOpened ? -1 : 0}>{menuItem}</a>
+            <a href={MENU_LINKS[ menuItem ]} tabIndex={!isMenuOpened ? -1 : 0}>{menuItem}</a>
           </li>
           ))
         }
       </ul>
       <div
         className={classNames(menuStyle.menuOverlay, {
-          [menuStyle.menuOverlayActive]: isMenuOpened,
+          [ menuStyle.menuOverlayActive ]: isMenuOpened,
         })}
         onClick={toggleMenu}
       ></div>
