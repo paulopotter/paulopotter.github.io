@@ -2,12 +2,12 @@
 import type { GetStaticProps, GetStaticPaths } from 'next';
 import markdown from "../services/markdown";
 import { getPost, getAllPosts, getRelatedPosts, getRelatedSeries } from "../services/api";
-import { PostContent } from "../components";
 import type { PostData } from "../components/types/posts.type";
+import { PostsView } from 'modules';
 
-const Page = ({ post }: {post: PostData}) => <PostContent post={post} />;
-
-export default Page;
+export default function PostsPage({ post }: {post: PostData}){
+   return (<PostsView post={post} />)
+}
 
 export async function getStaticProps({ params }): GetStaticProps {
   const post = getPost(params.slug, [
