@@ -1,5 +1,5 @@
 import {createUseStyles} from 'react-jss'
-import { THEME_VALUE } from '../config'
+import { THEME_VALUE } from '../../config'
 
 type StyleProp = {isDarkTheme: boolean}
 
