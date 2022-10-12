@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import ReactMarkdown from "react-markdown";
 import classNames from "classnames";
-import Link from "next/link";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 
-import { ThemeContext } from "../pages/_app";
-import { ListOfPostStyle } from "./styles/listOfPosts.sytle";
+import { ThemeContext } from "pages/_app";
+import CONFIGS from 'services/configs'
+import { Link } from 'components'
 import { PostData } from "./types/posts.type";
-import CONFIGS from '../services/configs'
+import { ListOfPostStyle } from "./styles/listOfPosts.sytle";
 
 interface ListProps {
   post: PostData,
@@ -34,14 +34,12 @@ export const ListOfPost = ({ post, index }: ListProps) => {
     >
       <div className={style.articleContent}>
         <header>
-          <Link href={`${SITE_URL}/${post.slug}`}>
-            <a className={style.titleLink}>
+          <Link href={`${SITE_URL}/${post.slug}`} className={style.titleLink}>
               {index === 0
                 ? post?.title
                 : post?.title?.length > 70
                 ? post.title.slice(0, 70) + "..."
                 : post.title }
-            </a>
           </Link>
         </header>
         { summary({ index, post }) }

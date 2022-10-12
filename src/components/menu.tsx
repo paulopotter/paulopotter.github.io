@@ -1,8 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
-import CONFIGS from "../services/configs";
-import { MenuStyle } from "./styles/menu.style";
 import classNames from "classnames";
-import { ThemeContext } from "../pages/_app";
+
+import CONFIGS from "services/configs";
+import { Link } from 'components'
+import { ThemeContext } from "pages/_app";
+import { MenuStyle } from "./styles/menu.style";
 
 const { MENU_LINKS } = CONFIGS;
 
@@ -65,7 +67,7 @@ export function Menu() {
         {
           Object.keys(MENU_LINKS)?.map((menuItem: string, index: number) => (
           <li className={menuStyle.menuListItem} key={`menu-${index}`}>
-            <a href={MENU_LINKS[ menuItem ]} tabIndex={!isMenuOpened ? -1 : 0}>{menuItem}</a>
+            <Link href={MENU_LINKS[ menuItem ]} tabIndex={!isMenuOpened ? -1 : 0}>{menuItem}</Link>
           </li>
           ))
         }

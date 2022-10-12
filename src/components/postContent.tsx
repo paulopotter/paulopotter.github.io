@@ -19,14 +19,13 @@ import markdown from "react-syntax-highlighter/dist/cjs/languages/prism/markdown
 import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 
-import { AuthorCard, Head } from ".";
+import { AuthorCard, Head, Link } from ".";
 import { ThemeContext } from "../pages/_app";
 import CONFIGS from "../services/configs";
 import { PostStyle } from "./styles/postContent.style";
 import RelatedPosts from "./relatedPosts";
 import type { PostData } from "./types/posts.type";
 import SeriesPosts from "./seriesPost";
-import Link from "next/link";
 
 const {
   SITE_URL,
@@ -127,8 +126,8 @@ export const PostContent = ({ post }: Props) => {
                 },
                 a({ className, children, ...props }) {
                   return (
-                    <Link href={props!.href!}>
-                      <a target={isExternalLink(props.href!) ? '_blank': '_self'} rel="noreferrer" className={className}>{children}</a>
+                    <Link href={props!.href!} className={className}>
+                      {children}
                     </Link>
                   )
                 },
@@ -217,8 +216,10 @@ const FigureCaption = ({ post, postStyle }: CoverImageProps): JSX.Element | null
     <figcaption className={postStyle.articleCoverCredit}>
       Créditos:{" "}
       {post?.cover_image_link ? (
-        <Link href={`${post.cover_image_link}`}>
-          <a target={isExternalLink(post.cover_image_link) ? '_blank': '_self'} rel="noreferrer">{post.cover_image_by || ""}</a>
+        <Link
+          href={post.cover_image_link}
+        >
+          {post.cover_image_by || ""}
         </Link>
       ) : (
         post?.cover_image_by || ""

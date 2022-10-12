@@ -5,6 +5,7 @@
     }
   ],
   "settings": {
-    "cSpell.language": "pt-BR,en,en-US,pt"
+    "cSpell.language": "pt-BR,en,en-US,pt",
+    "prettier.configPath": ""
   }
 }

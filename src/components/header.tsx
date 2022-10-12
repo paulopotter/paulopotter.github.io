@@ -1,21 +1,16 @@
-import { Context, useContext } from "react";
-import Link from "next/link";
-import CONFIGS from "../services/configs";
+import { Context, useContext } from 'react';
 
-import { ToggleThemeButton, Menu } from "./";
-import { HeaderStyle } from "./styles/header.style";
+import CONFIGS from 'services/configs';
+import { ToggleThemeButton, Menu, Link } from './';
 
-const {
-  SITE_URL,
-  SITE_NAME,
-  SITE_NAME_SUBTITLE
-  } = CONFIGS;
+import { HeaderStyle } from './styles/header.style';
+
+const { SITE_URL, SITE_NAME, SITE_NAME_SUBTITLE } = CONFIGS;
 
 interface HeaderProps {
   toggleTheme: () => void;
-  ThemeContext: Context<{ isDarkTheme: boolean }>
+  ThemeContext: Context<{ isDarkTheme: boolean }>;
 }
-
 
 export const Header = ({ toggleTheme, ThemeContext }: HeaderProps) => {
   const { isDarkTheme } = useContext(ThemeContext);
@@ -30,15 +25,23 @@ export const Header = ({ toggleTheme, ThemeContext }: HeaderProps) => {
         <div className={headerStyle.wrapper}>
           <Menu />
           <span className={headerStyle.title}>
-            <Link href={`${SITE_URL}`}>
-              <a
-                className={headerStyle.titleLink}
-                aria-label={`${SITE_NAME}. ${SITE_NAME_SUBTITLE}. Ir para página inicial.`}
-              >
-                <span className={headerStyle.titleName}>{SITE_NAME}</span>{" "}
-                {SITE_NAME_SUBTITLE}
-              </a>
+            {
+              window.location.pathname === '/' ?
+              (
+                <span className={headerStyle.titleLink}><span className={headerStyle.titleName}>{SITE_NAME}</span> {SITE_NAME_SUBTITLE}</span>
+              )
+              :
+              (
+
+            <Link
+              href={SITE_URL}
+              ariaLabel={`${SITE_NAME}. ${SITE_NAME_SUBTITLE}. Ir para página inicial.`}
+              className={headerStyle.titleLink}
+            >
+              <span className={headerStyle.titleName}>{SITE_NAME}</span> {SITE_NAME_SUBTITLE}
             </Link>
+              )
+            }
           </span>
           <ToggleThemeButton onClicked={toggleTheme} />
         </div>

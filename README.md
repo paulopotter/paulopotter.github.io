@@ -27,6 +27,7 @@ Aqui está a listagem de links que me ajudaram com essa migração e os links de
 - [feed - node rss](https://github.com/jpmonette/feed)
 - [next seo](https://github.com/garmeeh/next-seo)
 - [Yet Another React Lightbox](https://yet-another-react-lightbox.com/)
+- [Mindy js](https://github.com/oxich/mindyjs/tree/main/packages/icons)
 - rehype
 - remark:
   - [remark-figure](https://github.com/josestg/rehype-figure)

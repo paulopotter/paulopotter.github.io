@@ -1,10 +1,10 @@
+import classNames from 'classnames';
 import * as BSIcons from 'react-bootstrap-icons';
 
-import { AuthorCardStyle } from './styles/authorCard.style';
+import { Link } from 'components';
+import CONFIGS from 'services/configs';
 
-import CONFIGS from '../services/configs';
-import classNames from 'classnames';
-import Link from 'next/link';
+import { AuthorCardStyle } from './styles/authorCard.style';
 
 const { AUTHOR_IMG, SOCIAL, SITE_URL } = CONFIGS;
 
@@ -22,9 +22,7 @@ export function AuthorCard({ isDarkTheme = false }: {isDarkTheme?: boolean}) {
         id="authorImage"
       />
 
-      <Link href="author">
-        <a className={style.name}>Paulo Oliveira</a>
-      </Link>
+      <Link href="author" className={style.name}>Paulo Oliveira</Link>
 
       <ul className={style.socialList}>
         {SOCIAL?.map((social, index) => {
