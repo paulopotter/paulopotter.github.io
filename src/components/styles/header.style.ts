@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { THEME_VALUE, FONT } from '../../config/config.style'
+import { THEME_VALUE, FONT, MEDIA_QUERIES } from '../../config/config.style'
 
 type StyleProps = {isDarkTheme: boolean}
 
@@ -27,16 +27,12 @@ export const HeaderStyle = createUseStyles({
 
   header: {
     overflow: 'visible',
-    padding: '1.5rem 1rem',
+    padding: '1.5rem 0',
   },
   wrapper: {
     'max-width': 1400,
     margin: '0 auto',
-  },
-  title: {
-  'font-size': '1.25em',
-  'margin-left': '0.5em',
-  'vertical-align': 'middle',
+    display: 'flex',
   },
   titleLink: ({ isDarkTheme }: StyleProps) => ({
     'font-family': FONT.primary,
@@ -44,20 +40,32 @@ export const HeaderStyle = createUseStyles({
     'font-size': '1em',
     'font-weight': 400,
     'text-decoration': 'none !important',
-     color: [ THEME_VALUE(isDarkTheme, "text"), '!important' ],
+    color: [ THEME_VALUE(isDarkTheme, "text"), '!important' ],
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    margin: '0 auto',
 
-     '@media (max-width: 425px)': {
-       display: 'inline-grid',
+
+     [ `@media (min-width: ${MEDIA_QUERIES.xs})` ]: {
+        margin: 'auto',
+        marginLeft: '.5em',
+        flexDirection: 'row',
+        fontSize: '1.25em',
      },
+    //  '@media (max-width: 425px)': {
+    //    display: 'inline-grid',
+    //  },
   }),
   titleName: ({ isDarkTheme }: StyleProps) => ({
     'font-weight': 700,
     color: THEME_VALUE(isDarkTheme, "heading"),
+    marginRight: '10px',
 
-    '@media (max-width: 400px)': {
-      display: 'inline-block',
-      width: '80%',
-    }
+    // '@media (max-width: 400px)': {
+    //   display: 'inline-block',
+    //   width: '80%',
+    // }
   })
 
 

@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import { THEME_VALUE } from '../../config/config.style'
+import { THEME_VALUE, MEDIA_QUERIES } from '../../config/config.style'
 
 type StyleProp = {isDarkTheme: boolean}
 
@@ -8,7 +8,6 @@ export const ThemeButtonStyle = createUseStyles({
     padding: '0.5em',
     height: '3em',
     width: '3em',
-    position: 'absolute',
     top: "-3em",
     right: '3%',
     transition: 'transform 0.3s',
@@ -21,6 +20,10 @@ export const ThemeButtonStyle = createUseStyles({
 
     '&:active, &:hover, &:focus' : {
       'background-color': THEME_VALUE(isDarkTheme, "changeThemeButtonBg"),
+    },
+
+    [ `@media (min-width: ${MEDIA_QUERIES.xs})` ]: {
+      position: 'absolute',
     },
   }),
 

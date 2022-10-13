@@ -22,6 +22,7 @@ export const COLOR: Record<string, Record<string, string>> = {
     dated:' #858e94',
     heading:' #e7f5ff',
     link:' #79ddf5',
+    linkHover:' #79ddf5aa',
     tableHeaderBg:' #68757e',
     tableHeaderBgInverted:' #212121',
     tableHeaderColor:' white',
@@ -43,6 +44,7 @@ export const COLOR: Record<string, Record<string, string>> = {
     dated:' #717679',
     heading:' #384a56',
     link:' #6f11fb',
+    linkHover:' #6f11fbaa',
     related:' #9700a1',
     text:' #363d42',
     tableHeaderBg:' #68757e',
@@ -54,6 +56,7 @@ export const COLOR: Record<string, Record<string, string>> = {
 }
 
 export const MEDIA_QUERIES = {
+  xs: '525px',
   small: '767px',
   medium: '1023px',
 }

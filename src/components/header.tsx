@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { Context, useContext } from 'react';
 
 import CONFIGS from 'services/configs';
@@ -15,6 +16,7 @@ interface HeaderProps {
 export const Header = ({ toggleTheme, ThemeContext }: HeaderProps) => {
   const { isDarkTheme } = useContext(ThemeContext);
   const headerStyle = HeaderStyle({ isDarkTheme });
+  const router = useRouter();
 
   return (
     <>
@@ -24,15 +26,11 @@ export const Header = ({ toggleTheme, ThemeContext }: HeaderProps) => {
       <header className={headerStyle.header} id="start-page">
         <div className={headerStyle.wrapper}>
           <Menu />
-          <span className={headerStyle.title}>
-            {
-              window.location.pathname === '/' ?
-              (
-                <span className={headerStyle.titleLink}><span className={headerStyle.titleName}>{SITE_NAME}</span> {SITE_NAME_SUBTITLE}</span>
-              )
-              :
-              (
-
+          {router.pathname === '/' ? (
+            <span className={headerStyle.titleLink}>
+              <span className={headerStyle.titleName}>{SITE_NAME}</span> {SITE_NAME_SUBTITLE}
+            </span>
+          ) : (
             <Link
               href={SITE_URL}
               ariaLabel={`${SITE_NAME}. ${SITE_NAME_SUBTITLE}. Ir para página inicial.`}
@@ -40,9 +38,7 @@ export const Header = ({ toggleTheme, ThemeContext }: HeaderProps) => {
             >
               <span className={headerStyle.titleName}>{SITE_NAME}</span> {SITE_NAME_SUBTITLE}
             </Link>
-              )
-            }
-          </span>
+          )}
           <ToggleThemeButton onClicked={toggleTheme} />
         </div>
       </header>
