@@ -66,7 +66,7 @@ export const MenuStyle = createUseStyles({
     position: 'absolute',
     top: 0,
     right: 0,
-    transform: 'translateY(-140%)',
+    transform: 'translateY(-150%)',
     transition: 'transform 0.3s, opacity 0.3s',
     zIndex: 2,
   }),
@@ -74,7 +74,7 @@ export const MenuStyle = createUseStyles({
     '&$menuList':{
       borderTop: [ 2, 'dotted', THEME_VALUE(isDarkTheme, 'border') ],
       opacity: 1,
-      top: '140%',
+      top: '150%',
       transform: 'translateY(0)',
     }
   }),
