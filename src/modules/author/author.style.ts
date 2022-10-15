@@ -1,16 +1,13 @@
 import { createUseStyles } from 'react-jss'
-import { THEME_VALUE } from '../../config'
+import { THEME } from 'theme'
 
-type StyleProp = {isDarkTheme: boolean}
-
-export const AuthorStyle = createUseStyles({
-    content: ({ isDarkTheme }: StyleProp) => ({
+export const AuthorStyle = createUseStyles((theme: THEME)=> ({
+    content: {
       margin: '1rem .5rem',
       padding: '1rem',
-      backgroundColor: THEME_VALUE(isDarkTheme, 'card'),
-      boxShadow: `0.13em 0.13em 0.25em 0 ${THEME_VALUE(isDarkTheme, 'boxShadow')}`,
-    }),
-
+      backgroundColor: theme.card.background,
+      boxShadow: [ '0.13em','0.13em','0.25em','0', theme.boxShadow ],
+    },
     img: {
       borderRadius: '15%',
       margin: '0 1em 1em',
@@ -38,29 +35,6 @@ export const AuthorStyle = createUseStyles({
     sectionDivision: {
       clear: 'both',
     },
-
-    socialList: ({ isDarkTheme }: StyleProp) => ({
-      color: THEME_VALUE(isDarkTheme, 'heading'),
-      'font-size': '2em',
-    }),
-    socialItem: ({ isDarkTheme }: StyleProp) => ({
-      color: THEME_VALUE(isDarkTheme, 'link'),
-      'font-size': '1em',
-      display: 'inline-block',
-      margin: '0.2em',
-      width: '35px',
-      height: '35px',
-      verticalAlign: 'bottom',
-    }),
-    socialIcon: ({ isDarkTheme }: StyleProp) => ({
-      fill: THEME_VALUE(isDarkTheme, 'text'),
-      color: THEME_VALUE(isDarkTheme, 'text'),
-
-      '&:hover': {
-        fill: THEME_VALUE(isDarkTheme, 'link'),
-        color: THEME_VALUE(isDarkTheme, 'link'),
-      }
-    }),
 
     timeline: {
         borderLeft: '2px solid',
@@ -91,6 +65,29 @@ export const AuthorStyle = createUseStyles({
     languageIcon : {
       width: '4em !important',
       height: '4em !important',
-    }
+    },
+    socialList: {
+      color: theme.color.secondary,
+      fontSize: '2em',
+    },
+    socialItem: {
+      color: theme.link,
+      fontSize: '1em',
+      display: 'inline-block',
+      margin: '0.2em',
+      width: '35px',
+      height: '35px',
+      verticalAlign: 'bottom',
+    },
+    socialIcon: {
+      fill: theme.color.primary,
+      color: theme.color.primary,
+      width: '35px',
+      height: '35px',
 
-})
+      '&:hover': {
+        fill: theme.link,
+        color: theme.link,
+      }
+    },
+}))

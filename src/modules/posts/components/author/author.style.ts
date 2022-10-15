@@ -40,6 +40,8 @@ export const AuthorCardStyle = createUseStyles((theme: THEME) => ({
   socialIcon: {
     color: theme.color.primary,
     fill: theme.color.primary,
+    height: '35px',
+    width: '35px',
 
     '&:hover, a:focus &': {
       color: theme.link,

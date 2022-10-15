@@ -1,23 +1,21 @@
-import { useContext } from "react";
 import classNames from "classnames";
+import * as BSIcons from 'react-bootstrap-icons'
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
-
-dayjs.locale("pt-br");
-
-import * as BSIcons from 'react-bootstrap-icons'
+import { useTheme } from 'react-jss';
 
 import { Head, Link } from "components";
 import CONFIGS from "services/configs";
 import { AuthorStyle } from "./author.style";
-import { ThemeContext } from "pages/_app";
 import { CalendlySvg } from "assets/images";
+import { THEME } from 'theme';
 
-const { AUTHOR_IMG, SOCIAL, SITE_URL } = CONFIGS;
+dayjs.locale("pt-br");
+const { AUTHOR_IMG, SOCIAL } = CONFIGS;
 
 export function AuthorView() {
-  const { isDarkTheme } = useContext(ThemeContext);
-  const style = AuthorStyle({ isDarkTheme });
+  const theme: THEME = useTheme()
+  const style = AuthorStyle({ theme });
 
   const entryDate = "2013-10-01";
   const workLife = dayjs().diff(entryDate, "year", false);
