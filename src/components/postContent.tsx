@@ -23,10 +23,9 @@ import { Head, Link } from ".";
 import { ThemeContext } from "../pages/_app";
 import CONFIGS from "../services/configs";
 import { PostStyle } from "./styles/postContent.style";
-import RelatedPosts from "./relatedPosts";
 import type { PostData } from "./types/posts.type";
 
-import { Author as AuthorCard, Series as SeriesPosts } from 'modules/posts/components'
+import { Author as AuthorCard, Series as SeriesPosts, Related as  RelatedPosts } from 'modules/posts/components'
 
 const {
   SITE_URL,

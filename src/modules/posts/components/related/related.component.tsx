@@ -1,11 +1,11 @@
-import React from "react";
 import classNames from "classnames";
-import { RelatedPostsStyle } from "./styles/relatedPosts.style";
+import { RelatedPostsStyle } from "./related.style";
+import { useTheme } from 'react-jss';
+import { THEME } from 'theme';
 
 type RelatedProps = {
   nextPost?: posts,
   prevPost?: posts,
-  isDarkTheme: boolean
 }
 
 type posts = {
@@ -14,9 +14,10 @@ type posts = {
   title: string;
 }
 
-const RelatedPosts = ({ nextPost, prevPost, isDarkTheme }: RelatedProps) => {
-  // @ts-expect-error: erro de tema
-  const style = RelatedPostsStyle({ isDarkTheme });
+export const Related = ({ nextPost, prevPost }: RelatedProps): JSX.Element | null => {
+  const theme: THEME = useTheme()
+  const style = RelatedPostsStyle({ theme });
+  if(!prevPost && !nextPost) return null
 
   return(
     <nav className={style.wrapper}>
@@ -46,5 +47,3 @@ const RelatedPosts = ({ nextPost, prevPost, isDarkTheme }: RelatedProps) => {
     </nav>
   )
 }
-
-export default RelatedPosts
