@@ -24,6 +24,7 @@ export const THEME_DARK: THEME = {
   },
   color: {
     primary: TOKENS.COLOR_GAINSBORO,
+    secondary: TOKENS.COLOR_BUBBLES,
   },
   link: TOKENS.COLOR_MEDIUM_SKY_BLUE,
   outline: TOKENS.COLOR_MEDIUM_SKY_BLUE,

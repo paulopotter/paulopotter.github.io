@@ -54,9 +54,11 @@ export const AuthorStyle = createUseStyles({
     }),
     socialIcon: ({ isDarkTheme }: StyleProp) => ({
       fill: THEME_VALUE(isDarkTheme, 'text'),
+      color: THEME_VALUE(isDarkTheme, 'text'),
 
       '&:hover': {
         fill: THEME_VALUE(isDarkTheme, 'link'),
+        color: THEME_VALUE(isDarkTheme, 'link'),
       }
     }),
 

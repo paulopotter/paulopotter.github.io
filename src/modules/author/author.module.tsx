@@ -11,6 +11,7 @@ import { Head, Link } from "components";
 import CONFIGS from "services/configs";
 import { AuthorStyle } from "./author.style";
 import { ThemeContext } from "pages/_app";
+import { CalendlySvg } from "assets/images";
 
 const { AUTHOR_IMG, SOCIAL, SITE_URL } = CONFIGS;
 
@@ -51,7 +52,12 @@ export function AuthorView() {
                   <Link href={social.url} title={social.name} disableIcon >
                      {
                        social.name.toLowerCase() === 'calendly' ? (
-                        <img src={`${SITE_URL}/images/icons/calendly-logo.png `} className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`} />
+                        <CalendlySvg
+                          className={style.socialIcon}
+                          tabIndex={-1}
+                          alt={`${social.name}`}
+                          title={`${social.name}`}
+                        />
 
                        ) : (
                          <SocialIcon className={style.socialIcon} tabIndex={-1} alt={`${social.name}`} title={`${social.name}`} />

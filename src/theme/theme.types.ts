@@ -23,6 +23,7 @@ export interface THEME {
   };
   color: {
     primary: COLOR;
+    secondary: COLOR;
   };
   link: COLOR;
   outline: COLOR;

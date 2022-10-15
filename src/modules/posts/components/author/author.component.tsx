@@ -1,15 +1,17 @@
 import classNames from 'classnames';
 import * as BSIcons from 'react-bootstrap-icons';
-
+import { useTheme } from 'react-jss';
 import { Link } from 'components';
 import CONFIGS from 'services/configs';
+import { THEME } from 'theme';
+import { AuthorCardStyle } from './author.style';
+import { CalendlySvg } from 'assets/images';
 
-import { AuthorCardStyle } from './styles/authorCard.style';
+const { AUTHOR_IMG, SOCIAL } = CONFIGS;
 
-const { AUTHOR_IMG, SOCIAL, SITE_URL } = CONFIGS;
-
-export function AuthorCard({ isDarkTheme = false }: {isDarkTheme?: boolean}) {
-  const style = AuthorCardStyle({ isDarkTheme });
+export function Author() {
+  const theme: THEME = useTheme()
+  const style = AuthorCardStyle({ theme });
 
   return (
     <header className={ style.header }>
@@ -32,8 +34,7 @@ export function AuthorCard({ isDarkTheme = false }: {isDarkTheme?: boolean}) {
             <li className={style.socialItem} key={`${social.name}-${index}`}>
               <a href={social.url} title={social.name}>
                 {social.name.toLowerCase() === 'calendly' ? (
-                  <img
-                    src={`${SITE_URL}/images/icons/calendly-logo.png `}
+                  <CalendlySvg
                     className={style.socialIcon}
                     tabIndex={-1}
                     alt={`${social.name}`}

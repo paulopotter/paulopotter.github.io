@@ -19,13 +19,14 @@ import markdown from "react-syntax-highlighter/dist/cjs/languages/prism/markdown
 import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 
-import { AuthorCard, Head, Link } from ".";
+import { Head, Link } from ".";
 import { ThemeContext } from "../pages/_app";
 import CONFIGS from "../services/configs";
 import { PostStyle } from "./styles/postContent.style";
 import RelatedPosts from "./relatedPosts";
 import type { PostData } from "./types/posts.type";
 import SeriesPosts from "./seriesPost";
+import { Author as AuthorCard } from 'modules/posts/components'
 
 const {
   SITE_URL,
