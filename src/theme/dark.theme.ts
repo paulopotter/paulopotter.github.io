@@ -1,0 +1,45 @@
+import { THEME } from './theme.types';
+import * as TOKENS from './tokens';
+import { THEME_LIGHT } from './light.theme';
+
+export const THEME_DARK: THEME = {
+  background: TOKENS.COLOR_ONYX,
+  border: TOKENS.COLOR_PASTEL_BLUE,
+  boxShadow: TOKENS.COLOR_WHITE_ALPHA_05,
+  button: {
+    background: TOKENS.COLOR_ONYX,
+    color: TOKENS.COLOR_MEDIUM_SKY_BLUE,
+    inverted: {
+      background:THEME_LIGHT.button.background,
+      color:THEME_LIGHT.button.color,
+    }
+  },
+  card: {
+    background: TOKENS.COLOR_CHINESE_BLACK,
+  },
+  code: {
+    background: TOKENS.COLOR_BLACK_OLIVE,
+    color: TOKENS.COLOR_BEGONIA,
+  },
+  color: {
+    primary: TOKENS.COLOR_GAINSBORO,
+  },
+  link: TOKENS.COLOR_MEDIUM_SKY_BLUE,
+  related: TOKENS.COLOR_VIOLET,
+  table: {
+    header: {
+      background: {
+        primary: TOKENS.COLOR_AURO_METAL_SAURUS,
+        secondary: TOKENS.COLOR_RAISIN_BLACK,
+      },
+      color: TOKENS.COLOR_WHITE,
+    },
+    body: {
+      background: {
+        primary: TOKENS.COLOR_ROMAN_SILVER,
+        secondary: TOKENS.COLOR_CULTURED,
+      },
+      color: TOKENS.COLOR_ONYX,
+    }
+  }
+};
