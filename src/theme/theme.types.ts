@@ -25,6 +25,7 @@ export interface THEME {
     primary: COLOR;
   };
   link: COLOR;
+  outline: COLOR;
   related: COLOR;
   table: {
     header: {

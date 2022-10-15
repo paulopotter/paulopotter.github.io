@@ -25,8 +25,10 @@ export const ThemeButtonStyle = createUseStyles((theme: THEME) => ({
   },
 
   hasJs: {
-    '&$button': {
-      transform: 'translate(0, 100%)',
+    [ `@media (min-width: ${MEDIA_QUERIES.xs})` ]: {
+      '&$button': {
+        transform: 'translate(0, 100%)',
+      },
     },
   },
 

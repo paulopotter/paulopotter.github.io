@@ -25,6 +25,7 @@ export const THEME_LIGHT: THEME = {
     primary: TOKENS.COLOR_ONYX_LIGHT,
   },
   link: TOKENS.COLOR_ELETRIC_INDIGO,
+  outline: TOKENS.COLOR_ELETRIC_INDIGO,
   related: TOKENS.COLOR_VIOLET,
   table: {
     header: {

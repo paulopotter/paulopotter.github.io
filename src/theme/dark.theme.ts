@@ -26,6 +26,7 @@ export const THEME_DARK: THEME = {
     primary: TOKENS.COLOR_GAINSBORO,
   },
   link: TOKENS.COLOR_MEDIUM_SKY_BLUE,
+  outline: TOKENS.COLOR_MEDIUM_SKY_BLUE,
   related: TOKENS.COLOR_VIOLET,
   table: {
     header: {
