@@ -1,9 +1,7 @@
-import { useContext } from 'react';
 import { default as NextLink } from 'next/link';
 import { RiShareBoxLine } from '@mindyjs/icons';
 
 import CONFIGS from 'services/configs';
-import { ThemeContext } from 'pages/_app';
 import { LinkStyle } from './link.style';
 
 interface LinkProps {
@@ -25,9 +23,7 @@ export const Link = ({
   tabIndex,
   title,
 }: LinkProps): JSX.Element => {
-  const { isDarkTheme } = useContext(ThemeContext);
-  // @ts-expect-error: I will resolve-it
-  const style = LinkStyle({ isDarkTheme });
+  const style = LinkStyle();
 
   return isExternalLink(href) ? (
     <NextLink href={href}>

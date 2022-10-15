@@ -7,5 +7,4 @@ export const LinkStyle = createUseStyles({
       verticalAlign: 'top',
       width: '.9em',
   }
-
 });
