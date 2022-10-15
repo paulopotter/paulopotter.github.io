@@ -1,14 +1,14 @@
 import { createUseStyles } from 'react-jss'
-import { THEME_VALUE } from '../../config/config.style'
 
-export const SeriesPostsStyle = createUseStyles({
+import { THEME } from 'theme';
+
+export const SeriesPostsStyle = createUseStyles((theme: THEME) => ({
   wrapper: {
     border: '1px dashed',
     display: 'block',
-    padding: '1em',
     marginTop: '1.5em',
+    padding: '1em',
   },
-
   title: {
     fontStyle: 'italic',
   },
@@ -18,14 +18,15 @@ export const SeriesPostsStyle = createUseStyles({
   list: {
     marginLeft: '1rem',
   },
-  textHighlight: ({ isDarkTheme }: {isDarkTheme: boolean}) => ({
-    textTransform: 'uppercase',
-    margin: '0.7em 0',
-    color: THEME_VALUE(isDarkTheme, "related"),
+  textHighlight: {
+    color: theme.related,
     display: 'inline-block',
+    margin: '0.7em 0',
     position: 'relative',
-  }),
+    textTransform: 'uppercase',
+  },
+
   listItem: {
     listStyleType: 'circle'
   },
-})
+}))

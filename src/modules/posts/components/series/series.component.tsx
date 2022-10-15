@@ -1,9 +1,9 @@
-import React from "react";
-import { SeriesPostsStyle } from "./styles/seriesPosts.style";
+import { useTheme } from 'react-jss';
+import { THEME } from 'theme';
+import { SeriesPostsStyle } from "./series.style";
 
 type RelatedProps = {
-  posts?: posts[],
-  isDarkTheme: boolean
+  posts?: posts[]
 }
 
 type posts = {
@@ -12,10 +12,12 @@ type posts = {
   series?: string;
 }
 
-const SeriesPosts = ({ posts, isDarkTheme }: RelatedProps): JSX.Element | null => {
+export const Series = ({ posts }: RelatedProps): JSX.Element | null => {
+  const theme: THEME = useTheme()
+
   if(posts === undefined || posts?.length === 0) return null
 
-  const style = SeriesPostsStyle({ isDarkTheme });
+  const style = SeriesPostsStyle({ theme });
 
   const items = (post: posts): unknown => post?.slug ? (<a href={post.slug} >{post.title}</a>) : post.title
 
@@ -39,5 +41,3 @@ const SeriesPosts = ({ posts, isDarkTheme }: RelatedProps): JSX.Element | null =
     </div>
   )
 }
-
-export default SeriesPosts

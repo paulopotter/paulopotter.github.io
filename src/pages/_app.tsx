@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { JssProvider, ThemeProvider } from "react-jss";
+import { ThemeProvider } from "react-jss";
 import type { AppProps } from 'next/app';
 import '../styles/globals.css'
 
@@ -50,9 +50,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     canRender && (
       <ThemeProvider theme={THEME[ colorFamily ]}>
-      <ThemeContext.Provider value={{ isDarkTheme: isDark }}>
-        <JssProvider>
-          <Header toggleTheme={toggleTheme} ThemeContext={ThemeContext} />
+          <Header toggleTheme={toggleTheme} />
 
           <div className="wrapper_site container max-w-7xl">
             <div
@@ -63,8 +61,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             </div>
           </div>
           <Footer />
-        </JssProvider>
-      </ThemeContext.Provider>
       </ThemeProvider>
     )
   );
