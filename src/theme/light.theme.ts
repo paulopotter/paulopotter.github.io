@@ -1,18 +1,17 @@
 import { THEME } from './theme.types';
 import * as TOKENS from './tokens';
-import { THEME_DARK } from './dark.theme';
 
 export const THEME_LIGHT: THEME = {
+  name: 'light',
   background: TOKENS.COLOR_CULTURED,
   border: TOKENS.COLOR_PASTEL_BLUE,
   boxShadow: TOKENS.COLOR_BLACK_ALPHA_34,
   button: {
     background:TOKENS.COLOR_CULTURED,
     color:TOKENS.COLOR_ELETRIC_INDIGO,
-
     inverted: {
-      background:THEME_DARK.button.background,
-      color:THEME_DARK.button.color,
+      background: TOKENS.COLOR_ONYX,
+      color: TOKENS.COLOR_MEDIUM_SKY_BLUE,
     }
   },
   card: {

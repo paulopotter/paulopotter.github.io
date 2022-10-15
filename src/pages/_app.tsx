@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { JssProvider } from "react-jss";
+import { JssProvider, ThemeProvider } from "react-jss";
 import type { AppProps } from 'next/app';
 import '../styles/globals.css'
 
@@ -7,6 +7,7 @@ import { toggleThemeStorage } from "../helpers/toggleTheme";
 import { Footer, Header } from "../components";
 import { GlobalStyle } from "../styles/reset.style";
 import { ResetStyle } from "../styles/html.style";
+import THEME from "theme/theme";
 
 export const ThemeContext = createContext({ isDarkTheme: false });
 
@@ -44,8 +45,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const colorFamily = isDark ? 'dark' : 'light' ;
+
   return (
     canRender && (
+      <ThemeProvider theme={THEME[ colorFamily ]}>
       <ThemeContext.Provider value={{ isDarkTheme: isDark }}>
         <JssProvider>
           <Header toggleTheme={toggleTheme} ThemeContext={ThemeContext} />
@@ -61,6 +65,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <Footer />
         </JssProvider>
       </ThemeContext.Provider>
+      </ThemeProvider>
     )
   );
 }

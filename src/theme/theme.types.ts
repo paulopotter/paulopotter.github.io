@@ -1,6 +1,8 @@
 export type COLOR = `#${string}` | `rgba(${number}, ${number}, ${number}, ${number})`;
 
 export interface THEME {
+  // workaround to know theme name
+  name: string;
   background: COLOR;
   border: COLOR;
   boxShadow: COLOR;
