@@ -1,17 +1,18 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useTheme } from 'react-jss';
 import { useRouter } from 'next/router';
-
 import classNames from 'classnames';
 import { RiMenuLine } from '@mindyjs/icons';
 
 import CONFIGS from 'services/configs';
 import { Link } from '../navigations';
-import { ThemeContext } from 'pages/_app';
+import { THEME } from 'theme';
 import { MenuStyle } from './menu.style';
 
 const { MENU_LINKS } = CONFIGS;
 
 export function Menu() {
+  const theme: THEME = useTheme()
   const [ isMenuOpened, setMenuOpened ] = useState(false);
   const router = useRouter();
 
@@ -34,27 +35,25 @@ export function Menu() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ isMenuOpened ]);
 
-  const { isDarkTheme } = useContext(ThemeContext);
-  // @ts-expect-error: tema
-  const menuStyle = MenuStyle({ isDarkTheme });
+  const style = MenuStyle({ theme });
   return (
     <>
       <menu
-        className={classNames(menuStyle.menu, {
-          [ menuStyle.menuOpened ]: isMenuOpened,
+        className={classNames(style.menu, {
+          [ style.menuOpened ]: isMenuOpened,
         })}
       >
-        <button className={menuStyle.menuIcon} aria-label="Menu" onClick={toggleMenu}>
-          <RiMenuLine className={menuStyle.menuIconSVG} />
+        <button className={style.menuIcon} aria-label="Menu" onClick={toggleMenu}>
+          <RiMenuLine className={style.menuIconSVG} />
         </button>
         <ul
-          className={classNames(menuStyle.menuList, {
-            [ menuStyle.menuListActive ]: isMenuOpened,
+          className={classNames(style.menuList, {
+            [ style.menuListActive ]: isMenuOpened,
           })}
           aria-hidden={!isMenuOpened}
         >
           {Object.keys(MENU_LINKS)?.map((menuItem: string, index: number) => (
-            <li className={menuStyle.menuListItem} key={`menu-${index}`}>
+            <li className={style.menuListItem} key={`menu-${index}`}>
               {MENU_LINKS[ menuItem ] === router.pathname ? (
                 <span>{menuItem}</span>
               ) : (
@@ -67,8 +66,8 @@ export function Menu() {
         </ul>
       </menu>
       <div
-        className={classNames(menuStyle.menuOverlay, {
-          [ menuStyle.menuOverlayActive ]: isMenuOpened,
+        className={classNames(style.menuOverlay, {
+          [ style.menuOverlayActive ]: isMenuOpened,
         })}
         onClick={toggleMenu}
       ></div>

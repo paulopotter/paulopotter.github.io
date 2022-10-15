@@ -1,10 +1,10 @@
 import React from 'react';
+import { useTheme } from 'react-jss';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import { RiLightbulbFill } from '@mindyjs/icons';
 
 import { ThemeButtonStyle } from './theme-button.style';
-import { useTheme } from 'react-jss';
 import { THEME } from 'theme';
 
 export function ToggleThemeButton({ onClicked }: { onClicked?: () => void }) {
@@ -12,7 +12,7 @@ export function ToggleThemeButton({ onClicked }: { onClicked?: () => void }) {
   const isDarkTheme = theme.name === 'dark'
   const [ canAnimate, setCanAnimate ] = useState(false);
 
-  const style = ThemeButtonStyle({ theme });
+  const style = ThemeButtonStyle({ theme } );
 
   useEffect(() => {
     setTimeout(() => setCanAnimate(true), 1000);

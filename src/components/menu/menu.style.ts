@@ -1,8 +1,7 @@
-// @ts-nocheck
-import { createUseStyles } from 'react-jss'
-import { THEME_VALUE } from '../../config/config.style'
+import { createUseStyles } from 'react-jss';
+import { THEME } from 'theme';
 
-export const MenuStyle = createUseStyles({
+export const MenuStyle = createUseStyles((theme: THEME) => ({
   menu: {
     display: 'inline',
     paddingInlineStart: '0.5em',
@@ -12,18 +11,18 @@ export const MenuStyle = createUseStyles({
   menuOpened: {
     '&$menu': {
       transition: 'all 0.3s',
-    }
+    },
   },
   menuOverlay: {
     display: 'inline',
     height: 0,
     width: 0,
-    opacity: 0
+    opacity: 0,
   },
   menuOverlayActive: {
     '&$menuOverlay': {
       background: 'rgba(0,0,0,0.5)',
-      content: " ",
+      content: ' ',
       display: 'block',
       height: 'calc(100vh - 6em)',
       left: 0,
@@ -33,7 +32,7 @@ export const MenuStyle = createUseStyles({
       zIndex: 1,
       opacity: 1,
       transition: 'opacity 0.4s',
-    }
+    },
   },
   menuIcon: {
     backgroundColor: 'transparent',
@@ -45,18 +44,18 @@ export const MenuStyle = createUseStyles({
       backgroundColor: 'transparent',
     },
   },
-  menuIconSVG: ({ isDarkTheme }) => ({
-    color: THEME_VALUE( isDarkTheme,"link"),
+  menuIconSVG: {
+    color: theme.link,
     display: 'inline-block',
     height: '3em',
     width: '3em',
 
     '&:hover': {
-      color: `${THEME_VALUE( isDarkTheme,"linkHover")}`,
+      opacity: 0.8,
     },
-  }),
-  menuList: ({ isDarkTheme = false }) => ({
-    backgroundColor: THEME_VALUE(isDarkTheme, "background"),
+  },
+  menuList: {
+    backgroundColor: theme.background,
     margin: '0 auto',
     maxWidth: '1400px',
     width: '100vw',
@@ -69,18 +68,18 @@ export const MenuStyle = createUseStyles({
     transform: 'translateY(-150%)',
     transition: 'transform 0.3s, opacity 0.3s',
     zIndex: 2,
-  }),
-  menuListActive: ({ isDarkTheme = false }) => ({
-    '&$menuList':{
-      borderTop: [ 2, 'dotted', THEME_VALUE(isDarkTheme, 'border') ],
+  },
+  menuListActive: {
+    '&$menuList': {
+      borderTop: [ 2, 'dotted', theme.border ],
       opacity: 1,
       top: '150%',
       transform: 'translateY(0)',
-    }
-  }),
+    },
+  },
   menuListItem: {
     display: 'inline-block',
     fontSize: '1rem',
     padding: '1rem 2rem',
   },
-});
+}));
