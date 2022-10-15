@@ -22,6 +22,11 @@ export const ThemeButtonStyle = createUseStyles((theme: THEME) => ({
     [ `@media (min-width: ${MEDIA_QUERIES.xs})` ]: {
       position: 'absolute',
     },
+
+    [ `@media (min-width: ${MEDIA_QUERIES.xxl})` ]: {
+      left: '87%',
+      right: 'inherit',
+    },
   },
 
   hasJs: {
