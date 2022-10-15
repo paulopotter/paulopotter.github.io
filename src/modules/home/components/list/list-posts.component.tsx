@@ -1,14 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import ReactMarkdown from "react-markdown";
 import classNames from "classnames";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
+import { useTheme } from 'react-jss';
 
-import { ThemeContext } from "pages/_app";
 import CONFIGS from 'services/configs'
 import { Link } from 'components'
-import { PostData } from "./types/posts.type";
-import { ListOfPostStyle } from "./styles/listOfPosts.sytle";
+import { PostData } from "components/types/posts.type";
+import { THEME } from 'theme';
+import { ListOfPostStyle } from "./list-posts.style";
 
 interface ListProps {
   post: PostData,
@@ -22,8 +23,8 @@ const {
 } = CONFIGS
 
 export const ListOfPost = ({ post, index }: ListProps) => {
-  const { isDarkTheme } = useContext(ThemeContext);
-  const style = ListOfPostStyle({ isDarkTheme });
+  const theme: THEME = useTheme()
+  const style = ListOfPostStyle({ theme });
 
   return (
     <article

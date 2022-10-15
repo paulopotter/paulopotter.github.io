@@ -24,6 +24,7 @@ export const THEME_LIGHT: THEME = {
   color: {
     primary: TOKENS.COLOR_ONYX_LIGHT,
     secondary: TOKENS.COLOR_CHARCOAL,
+    tertiary: TOKENS.COLOR_SONIC_SILVER,
   },
   link: TOKENS.COLOR_ELETRIC_INDIGO,
   outline: TOKENS.COLOR_ELETRIC_INDIGO,

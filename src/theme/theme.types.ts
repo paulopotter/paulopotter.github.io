@@ -24,6 +24,7 @@ export interface THEME {
   color: {
     primary: COLOR;
     secondary: COLOR;
+    tertiary: COLOR;
   };
   link: COLOR;
   outline: COLOR;

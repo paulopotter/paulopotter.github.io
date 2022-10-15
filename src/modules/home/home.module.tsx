@@ -1,7 +1,7 @@
 import { Head } from '../../components';
 import { HomeStyle } from './home.style';
 import { PostData } from '../../components/types/posts.type';
-import { ListOfPost } from '../../components/listOfPosts';
+import { ListOfPost } from './components/';
 
 interface HomeView {
   posts: PostData[];
