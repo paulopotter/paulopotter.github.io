@@ -39,7 +39,7 @@ export const THEME_LIGHT: THEME = {
     },
     body: {
       background: {
-        primary: TOKENS.COLOR_AURO_METAL_SAURUS,
+        primary: TOKENS.COLOR_CULTURED,
         secondary: TOKENS.COLOR_SONIC_SILVER,
       },
       color: TOKENS.COLOR_CULTURED,

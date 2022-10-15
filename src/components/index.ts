@@ -1,7 +1,6 @@
 export * from './footer'
 export * from './_head'
 export * from './menu'
-export * from './postContent'
 export * from './header'
 export * from './types/posts.type'
 export * from './navigations'

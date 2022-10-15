@@ -40,8 +40,8 @@ export const THEME_DARK: THEME = {
     },
     body: {
       background: {
-        primary: TOKENS.COLOR_ROMAN_SILVER,
-        secondary: TOKENS.COLOR_CULTURED,
+        primary: TOKENS.COLOR_RAISIN_BLACK,
+        secondary: TOKENS.COLOR_ROMAN_SILVER,
       },
       color: TOKENS.COLOR_ONYX,
     }

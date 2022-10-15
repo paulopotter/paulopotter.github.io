@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import rehypeSlug from "rehype-slug";
@@ -18,14 +17,15 @@ import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
 import markdown from "react-syntax-highlighter/dist/cjs/languages/prism/markdown";
 import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import { useTheme } from 'react-jss';
+import { THEME } from 'theme';
 
-import { Head, Link } from ".";
-import { ThemeContext } from "../pages/_app";
-import CONFIGS from "../services/configs";
-import { PostStyle } from "./styles/postContent.style";
-import type { PostData } from "./types/posts.type";
+import { Head, Link } from "components";
+// import type { PostData } from "components/types/posts.type";
+import CONFIGS from "services/configs";
+import { PostStyle } from "./content.style";
 
-import { Author as AuthorCard, Series as SeriesPosts, Related as  RelatedPosts } from 'modules/posts/components'
+import { Author as AuthorCard, Series as SeriesPosts, Related as  RelatedPosts } from '../'
 
 const {
   SITE_URL,
@@ -44,9 +44,10 @@ SyntaxHighlighter.registerLanguage("bash", bash);
 SyntaxHighlighter.registerLanguage("markdown", markdown);
 SyntaxHighlighter.registerLanguage("json", json);
 
-export const PostContent = ({ post }: Props) => {
-  const { isDarkTheme } = useContext(ThemeContext);
-  const postStyle = PostStyle({ isDarkTheme });
+export const Post = ({ post }: Props) => {
+  const theme: THEME = useTheme()
+  const isDarkTheme = theme.name === 'dark'
+  const style = PostStyle({ theme });
 
   const [ codeTheme, setCodeTheme ] = useState(
     isDarkTheme ? materialOceanic : dracula
@@ -79,16 +80,16 @@ export const PostContent = ({ post }: Props) => {
           }
         }}
       ></Head>
-      <section className={postStyle.articleSection}>
-        <article className={postStyle.articleBody}>
-          <h1 className={postStyle.articleTitle}>
+      <section className={style.articleSection}>
+        <article className={style.articleBody}>
+          <h1 className={style.articleTitle}>
             {post.title} {post?.subtitle && <small> {post.subtitle} </small>}
           </h1>
           {post?.readingTime && (
             <small> Tempo médio de leitura: {post.readingTime}.</small>
           )}
-          <div className={postStyle.articleContent}>
-            <CoverImage post={post} postStyle={postStyle} />
+          <div className={style.articleContent}>
+            <CoverImage post={post} postStyle={style} />
 
             <ReactMarkdown
               skipHtml
@@ -96,7 +97,7 @@ export const PostContent = ({ post }: Props) => {
               rehypePlugins={[
                 rehypeRaw,
                 rehypeSlug,
-                [ rehypeFigure, { className: postStyle.contentFigure } ],
+                [ rehypeFigure, { className: style.contentFigure } ],
                 [
                   rehypeRewrite,
                   {
@@ -134,9 +135,9 @@ export const PostContent = ({ post }: Props) => {
                 img({ ...props }) {
                   // TODO: corrigir imagens e descrições
                   return (
-                    <figure className={postStyle.articleCover}>
+                    <figure className={style.articleCover}>
                       <img
-                        className={postStyle.articleCoverImg}
+                        className={style.articleCoverImg}
                         src={props.src}
                         alt={props.title ?? props.alt}
                       />
