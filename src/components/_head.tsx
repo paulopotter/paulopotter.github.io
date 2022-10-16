@@ -1,8 +1,9 @@
 import React from 'react';
 import NextHead from 'next/head';
-import CONFIGS from '../services/configs';
-import { COLOR } from 'config';
 import { NextSeo } from 'next-seo';
+
+import CONFIGS from '../services/configs';
+import { THEME } from 'theme';
 
 const {
   IS_DEV_MODE,
@@ -34,22 +35,21 @@ interface HeadProps {
   };
 }
 enum ImageExtensionWhitelist {
-  'jpeg',
-  'jpg',
-  'png',
-  'webp',
-  'gif',
+  jpeg = 'jpeg',
+  jpg  = 'jpg',
+  png  = 'png',
+  webp = 'webp',
+  gif  = 'gif',
 }
+
+type ImgWhitelist = keyof typeof ImageExtensionWhitelist;
 
 export const Head = ({ title = '', children = null, meta = {} }: HeadProps) => {
   const customTitle = `${IS_DEV_MODE ? '[LOCAL]' : ''} ${title ? title + ' -' : ''} ${TITLE}`;
   const description = meta?.description || SITE_DESCRIPTION;
   const canonical = `${meta?.ogUrl ?? SITE_URL}`;
-  const siteName = TITLE;
-  const getImageExtension: string = meta?.ogImage?.split('.').at(-1) ?? 'jpeg';
-  // @ts-expect-error: I dont know whyyy
-  const imageExtension: string =
-    ImageExtensionWhitelist[ImageExtensionWhitelist[getImageExtension]] ?? 'jpeg';
+  const getImageExtension: ImgWhitelist = meta?.ogImage?.split('.').at(-1) as ImgWhitelist ?? 'jpeg';
+  const imageExtension: ImgWhitelist = ImageExtensionWhitelist[getImageExtension] ?? 'jpeg';
   const image = {
     url: meta?.ogImage
       ? meta.ogImage.startsWith(SITE_URL)
@@ -70,12 +70,12 @@ export const Head = ({ title = '', children = null, meta = {} }: HeadProps) => {
           <meta
             name="theme-color"
             media="(prefers-color-scheme: dark)"
-            content={COLOR.dark.background}
+            content={THEME.dark.background}
           />
           <meta
             name="theme-color"
             media="(prefers-color-scheme: light)"
-            content={COLOR.light.background}
+            content={THEME.light.background}
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
           <link
@@ -101,7 +101,7 @@ export const Head = ({ title = '', children = null, meta = {} }: HeadProps) => {
         openGraph={{
           url: canonical,
           title: customTitle,
-          site_name: siteName,
+          site_name: TITLE,
           locale: DEFAULT_LANG,
           images: [{ ...image }],
           type: meta?.ogType ?? 'website',

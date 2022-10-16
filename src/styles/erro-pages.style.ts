@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import { FONT } from '../config';
+import { FONT } from 'theme';
 
 export const ErrorStyle = createUseStyles({
   messageTitle: {
