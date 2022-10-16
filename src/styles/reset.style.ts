@@ -9,6 +9,11 @@ export const GlobalStyle = createUseStyles<string, unknown, ITHEME>(( theme ) =>
       "&:focus": {
         outline: [ '3px', 'solid', theme.outline ],
       },
+
+      "&::selection": {
+        backgroundColor: theme.button.color,
+        color: theme.button.background,
+      }
     },
 
     body: {
