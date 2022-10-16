@@ -8,13 +8,13 @@ import { Head, Link } from "components";
 import CONFIGS from "services/configs";
 import { AuthorStyle } from "./author.style";
 import { CalendlySvg } from "assets/images";
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 
 dayjs.locale("pt-br");
 const { AUTHOR_IMG, SOCIAL } = CONFIGS;
 
 export function AuthorView() {
-  const theme: THEME = useTheme()
+  const theme: ITHEME = useTheme()
   const style = AuthorStyle({ theme });
 
   const entryDate = "2013-10-01";

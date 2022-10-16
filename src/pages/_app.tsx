@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeProvider } from "react-jss";
 import type { AppProps } from 'next/app';
 import '../styles/globals.css'
@@ -6,24 +6,21 @@ import '../styles/globals.css'
 import { toggleThemeStorage } from "../helpers/toggleTheme";
 import { Footer, Header } from "../components";
 import { GlobalStyle } from "../styles/reset.style";
-import { ResetStyle } from "../styles/html.style";
-import THEME from "theme/theme";
+import { ITHEME, THEME } from "../theme";
 
-export const ThemeContext = createContext({ isDarkTheme: false });
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const [ isDark, setIsDark ] = useState(false);
   const [ canRender, setCanRender ] = useState(false);
-  const darkTheme = ResetStyle({ isDarkTheme: true });
-  const lightTheme = ResetStyle({ isDarkTheme: false });
-  const themes = { light: lightTheme, dark: darkTheme };
+  const [ themeName, setThemeName ] = useState('light')
+  const theme: ITHEME = THEME[ themeName ]
+  GlobalStyle({ theme });
 
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    toggleThemeStorage(isDark, themes);
-  };
-  GlobalStyle();
+  const changeTheme = (themeName = 'light') => {
+    setThemeName(themeName);
+    toggleThemeStorage(themeName);
+  }
+
 
   useEffect(() => {
     const isSODarkMode =
@@ -31,26 +28,23 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       window.matchMedia("(prefers-color-scheme: dark)").matches;
 
     if (
-      isDark ||
-      (window.localStorage.getItem("isDarkMode") !== "false" && isSODarkMode)
+      window.localStorage.getItem("theme") === 'dark' ||
+      (window.localStorage.getItem("theme") === null && isSODarkMode)
     ) {
-      toggleTheme();
+      changeTheme('dark');
     }
 
     if(document.body.classList.length === 0) {
-      setIsDark(false);
-      toggleThemeStorage(true, themes);
+      toggleThemeStorage('light');
     }
     setCanRender(true);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const colorFamily = isDark ? 'dark' : 'light' ;
 
   return (
     canRender && (
-      <ThemeProvider theme={THEME[ colorFamily ]}>
-          <Header toggleTheme={toggleTheme} />
+      <ThemeProvider theme={THEME[ themeName ]}>
+          <Header toggleTheme={changeTheme} />
 
           <div className="wrapper_site container max-w-7xl">
             <div

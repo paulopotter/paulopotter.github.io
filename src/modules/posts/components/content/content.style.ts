@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss'
-import { THEME, FONT } from 'theme'
+import { ITHEME, FONT } from 'theme'
 
-export const PostStyle = createUseStyles((theme: THEME)=> ({
+export const PostStyle = createUseStyles((theme: ITHEME)=> ({
   articleSection: {
     backgroundColor: theme.card.background,
     boxShadow: [ '2px','2px','4px','0', theme.boxShadow ],
@@ -77,7 +77,7 @@ export const PostStyle = createUseStyles((theme: THEME)=> ({
     },
 }))
 
-const table = (theme: THEME) => ({
+const table = (theme: ITHEME) => ({
     '& thead tr': {
       backgroundColor: theme.table.header.background.primary,
       color: theme.table.header.color,

@@ -1,6 +1,6 @@
 export type COLOR = `#${string}` | `rgba(${number}, ${number}, ${number}, ${number})`;
 
-export interface THEME {
+export interface ITHEME {
   // workaround to know theme name
   name: string;
   background: COLOR;

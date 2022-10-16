@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss';
-import { THEME, FONT, MEDIA_QUERIES } from 'theme';
+import { ITHEME, FONT, MEDIA_QUERIES } from 'theme';
 
-export const ListOfPostStyle = createUseStyles((theme: THEME) => ({
+export const ListOfPostStyle = createUseStyles((theme: ITHEME) => ({
   article: {
     backgroundColor: theme.card.background,
     boxShadow: [ '2px', '2px', '4px', '0', theme.boxShadow ],
@@ -38,7 +38,7 @@ export const ListOfPostStyle = createUseStyles((theme: THEME) => ({
 
   },
   titleLink: {
-    color: theme.color.primary,
+    color: theme.link,
     fontFamily: FONT.primary,
     fontSize: '1.1em',
     fontWeight: 'bold',
@@ -46,7 +46,7 @@ export const ListOfPostStyle = createUseStyles((theme: THEME) => ({
     lineHeight: 1,
 
     '&:visited, &:focus': {
-      color: theme.color.primary,
+      color: theme.link,
     },
   },
 

@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss';
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 
-export const MenuStyle = createUseStyles((theme: THEME) => ({
+export const MenuStyle = createUseStyles((theme: ITHEME) => ({
   menu: {
     display: 'inline',
     paddingInlineStart: '0.5em',

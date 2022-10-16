@@ -4,10 +4,10 @@ import { useTheme } from 'react-jss';
 import { RiArrowUpCircleFill } from '@mindyjs/icons'
 
 import { FooterStyle } from "./footer.style";
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 
 export const Footer = () => {
-  const theme: THEME = useTheme()
+  const theme: ITHEME = useTheme()
   const [ showButton, setShowButton ] = useState(false);
 
   const style = FooterStyle({ theme });

@@ -3,14 +3,14 @@ import * as BSIcons from 'react-bootstrap-icons';
 import { useTheme } from 'react-jss';
 import { Link } from 'components';
 import CONFIGS from 'services/configs';
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 import { AuthorCardStyle } from './author.style';
 import { CalendlySvg } from 'assets/images';
 
 const { AUTHOR_IMG, SOCIAL } = CONFIGS;
 
 export function Author() {
-  const theme: THEME = useTheme()
+  const theme: ITHEME = useTheme()
   const style = AuthorCardStyle({ theme });
 
   return (

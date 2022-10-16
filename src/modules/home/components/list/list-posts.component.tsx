@@ -8,7 +8,7 @@ import { useTheme } from 'react-jss';
 import CONFIGS from 'services/configs'
 import { Link } from 'components'
 import { PostData } from "components/types/posts.type";
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 import { ListOfPostStyle } from "./list-posts.style";
 
 interface ListProps {
@@ -23,7 +23,7 @@ const {
 } = CONFIGS
 
 export const ListOfPost = ({ post, index }: ListProps) => {
-  const theme: THEME = useTheme()
+  const theme: ITHEME = useTheme()
   const style = ListOfPostStyle({ theme });
 
   return (

@@ -18,7 +18,7 @@ import markdown from "react-syntax-highlighter/dist/cjs/languages/prism/markdown
 import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { useTheme } from 'react-jss';
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 
 import { Head, Link } from "components";
 // import type { PostData } from "components/types/posts.type";
@@ -45,7 +45,7 @@ SyntaxHighlighter.registerLanguage("markdown", markdown);
 SyntaxHighlighter.registerLanguage("json", json);
 
 export const Post = ({ post }: Props) => {
-  const theme: THEME = useTheme()
+  const theme: ITHEME = useTheme()
   const isDarkTheme = theme.name === 'dark'
   const style = PostStyle({ theme });
 

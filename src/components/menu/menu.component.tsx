@@ -6,13 +6,13 @@ import { RiMenuLine } from '@mindyjs/icons';
 
 import CONFIGS from 'services/configs';
 import { Link } from '../navigations';
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 import { MenuStyle } from './menu.style';
 
 const { MENU_LINKS } = CONFIGS;
 
 export function Menu() {
-  const theme: THEME = useTheme()
+  const theme: ITHEME = useTheme()
   const [ isMenuOpened, setMenuOpened ] = useState(false);
   const router = useRouter();
 

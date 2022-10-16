@@ -5,10 +5,10 @@ import { useEffect, useState } from 'react';
 import { RiLightbulbFill } from '@mindyjs/icons';
 
 import { ThemeButtonStyle } from './theme-button.style';
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 
-export function ToggleThemeButton({ onClicked }: { onClicked?: () => void }) {
-  const theme: THEME = useTheme()
+export function ToggleThemeButton({ onClicked }: { onClicked?: (themeName: string) => void }) {
+  const theme: ITHEME = useTheme()
   const isDarkTheme = theme.name === 'dark'
   const [ canAnimate, setCanAnimate ] = useState(false);
 
@@ -19,7 +19,7 @@ export function ToggleThemeButton({ onClicked }: { onClicked?: () => void }) {
   }, [ canAnimate ]);
 
   const toggleButtonOnClick = (event: unknown) => {
-    onClicked?.();
+    onClicked?.(isDarkTheme ? 'light' : 'dark');
     // @ts-expect-error: ariaLabel realmente nao existe.
     event.currentTarget.ariaLabel = `Trocar para o tema ${isDarkTheme ? 'claro' : 'escuro'}`;
     // @ts-expect-error: window type dont have DISQUS

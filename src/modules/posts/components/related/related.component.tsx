@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { RelatedPostsStyle } from "./related.style";
 import { useTheme } from 'react-jss';
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 
 type RelatedProps = {
   nextPost?: posts,
@@ -15,7 +15,7 @@ type posts = {
 }
 
 export const Related = ({ nextPost, prevPost }: RelatedProps): JSX.Element | null => {
-  const theme: THEME = useTheme()
+  const theme: ITHEME = useTheme()
   const style = RelatedPostsStyle({ theme });
   if(!prevPost && !nextPost) return null
 

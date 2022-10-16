@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss'
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 
-export const AuthorCardStyle = createUseStyles((theme: THEME) => ({
+export const AuthorCardStyle = createUseStyles((theme: ITHEME) => ({
   header: {
     backgroundColor: theme.card.background,
     borderRadius: 20,

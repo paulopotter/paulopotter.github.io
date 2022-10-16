@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss';
-import { MEDIA_QUERIES, THEME, FONT } from 'theme';
+import { MEDIA_QUERIES, ITHEME, FONT } from 'theme';
 
-export const HeaderStyle = createUseStyles((theme: THEME) => ({
+export const HeaderStyle = createUseStyles((theme: ITHEME) => ({
   header: {
     overflow: 'visible',
     padding: '1.5rem 0',

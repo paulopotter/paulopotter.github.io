@@ -1,8 +1,8 @@
-import { THEME } from './theme.types';
+import { ITHEME } from './theme.types';
 import * as TOKENS from './tokens';
 // import { THEME_LIGHT } from './light.theme';
 
-export const THEME_DARK: THEME = {
+export const THEME_DARK: ITHEME = {
   name: 'dark',
   background: TOKENS.COLOR_ONYX,
   border: TOKENS.COLOR_PASTEL_BLUE,

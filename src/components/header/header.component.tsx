@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { useTheme } from 'react-jss';
 
 import CONFIGS from 'services/configs';
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 import { ToggleThemeButton, Menu, Link } from '..';
 
 import { HeaderStyle } from './header.style';
@@ -10,11 +10,11 @@ import { HeaderStyle } from './header.style';
 const { SITE_URL, SITE_NAME, SITE_NAME_SUBTITLE } = CONFIGS;
 
 interface HeaderProps {
-  toggleTheme: () => void;
+  toggleTheme: (themeName: string) => void;
 }
 
 export const Header = ({ toggleTheme }: HeaderProps) => {
-  const theme: THEME = useTheme();
+  const theme: ITHEME = useTheme();
   const router = useRouter();
   const style = HeaderStyle({ theme } );
 

@@ -1,5 +1,5 @@
 import { useTheme } from 'react-jss';
-import { THEME } from 'theme';
+import { ITHEME } from 'theme';
 import { SeriesPostsStyle } from "./series.style";
 
 type RelatedProps = {
@@ -13,7 +13,7 @@ type posts = {
 }
 
 export const Series = ({ posts }: RelatedProps): JSX.Element | null => {
-  const theme: THEME = useTheme()
+  const theme: ITHEME = useTheme()
 
   if(posts === undefined || posts?.length === 0) return null
 

@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss'
-import { THEME } from 'theme'
+import { ITHEME } from 'theme'
 
-export const AuthorStyle = createUseStyles((theme: THEME)=> ({
+export const AuthorStyle = createUseStyles((theme: ITHEME)=> ({
     content: {
       margin: '1rem .5rem',
       padding: '1rem',
