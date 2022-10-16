@@ -9,9 +9,11 @@ const postsDirectory = join(process.cwd(), 'src/posts');
 const getMarkdownsFiles = (): string[] => fs.readdirSync(postsDirectory);
 
 type RelatedPost = {
-  nextPost?: Record<string, unknown>;
-  prevPost?: Record<string, unknown>;
+  nextPost?: PostData;
+  prevPost?: PostData;
 };
+
+type PostKey = keyof PostData;
 
 /**
  * Busca um post baseado no nome do arquivo.
@@ -33,13 +35,12 @@ export function getPost(filename: string, fields: string[] = []): PostData | {} 
     return {};
   }
 
-  // @ts-expect-error: title was required but i dont have yet
-  const post: PostData = {};
+  const post = {} as PostData;
 
   if (fields.length === 0) fields = Object.keys(data);
 
   fields.map((field: string) => {
-    const lowerField = field.toLowerCase();
+    const lowerField: PostKey  = field.toLowerCase() as PostKey;
 
     if (!data?.[getParameterCaseInsensitive(data, 'title')]) {
       return;
@@ -66,7 +67,6 @@ export function getPost(filename: string, fields: string[] = []): PostData | {} 
           CONFIGS.SITE_URL + data[getParameterCaseInsensitive(data, field)].replace('./', '/');
         break;
       default:
-        // @ts-expect-error: one day I will see this error
         if (data[getParameterCaseInsensitive(data, field)])
           post[lowerField] = data[getParameterCaseInsensitive(data, field)];
         break;

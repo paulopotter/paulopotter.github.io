@@ -54,8 +54,10 @@ export function AuthorView() {
           <span>Entre em contato comigo!</span>
           <ul className={style.socialList}>
             {SOCIAL?.map((social, index) => {
-              // @ts-expect-error: I try to resolve after
-              const SocialIcon = BSIcons[social.name];
+              type foo = keyof typeof BSIcons;
+              const socialName: foo = social.name as foo
+
+              const SocialIcon = BSIcons[socialName] as unknown as any;
               return (
                 <li className={style.socialItem} key={`${social.name}-${index}`}>
                   <Link href={social.url} title={social.name} disableIcon>

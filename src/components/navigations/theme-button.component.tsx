@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { BaseSyntheticEvent } from 'react';
 import { useTheme } from 'react-jss';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
@@ -18,11 +18,10 @@ export function ToggleThemeButton({ onClicked }: { onClicked?: (themeName: strin
     setTimeout(() => setCanAnimate(true), 1000);
   }, [canAnimate]);
 
-  const toggleButtonOnClick = (event: unknown) => {
+  const toggleButtonOnClick = (event: BaseSyntheticEvent) => {
     onClicked?.(isDarkTheme ? 'light' : 'dark');
-    // @ts-expect-error: ariaLabel realmente nao existe.
+
     event.currentTarget.ariaLabel = `Trocar para o tema ${isDarkTheme ? 'claro' : 'escuro'}`;
-    // @ts-expect-error: window type dont have DISQUS
     window?.DISQUS?.host?._loadEmbed(); // to update disqus theme
   };
 

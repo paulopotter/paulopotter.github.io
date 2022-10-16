@@ -1,4 +1,4 @@
-export type PostData = {
+export interface PostData {
   title: string;
   category?: string[];
   content?: string;
@@ -32,4 +32,4 @@ export type PostData = {
       title: string;
     };
   };
-};
+}

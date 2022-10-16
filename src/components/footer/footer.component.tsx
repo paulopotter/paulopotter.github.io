@@ -15,8 +15,7 @@ export const Footer = () => {
   const backToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // @ts-expect-error: Existe carai
-    document.querySelector('#start-page menu button').focus();
+    document.querySelector<HTMLButtonElement>('#start-page menu button')!.focus();
   };
 
   useEffect(() => {
