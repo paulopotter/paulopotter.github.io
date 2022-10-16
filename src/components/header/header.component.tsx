@@ -16,7 +16,7 @@ interface HeaderProps {
 export const Header = ({ toggleTheme }: HeaderProps) => {
   const theme: ITHEME = useTheme();
   const router = useRouter();
-  const style = HeaderStyle({ theme } );
+  const style = HeaderStyle({ theme });
 
   return (
     <>

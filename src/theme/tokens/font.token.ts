@@ -3,5 +3,5 @@ export const FONT: Record<string, string | number> = {
   letterSpacing: 0.05,
   primary: 'Montserrat, sans-serif',
   secondary: 'Bitter, serif',
-  mono: 'Consolas, monospace'
-}
+  mono: 'Consolas, monospace',
+};

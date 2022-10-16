@@ -1,10 +1,10 @@
-import fs from "fs";
-import { Feed } from "feed";
-import { remark } from 'remark'
-import remarkHTML from "remark-html";
+import fs from 'fs';
+import { Feed } from 'feed';
+import { remark } from 'remark';
+import remarkHTML from 'remark-html';
 
-import { getAllPosts } from "./api";
-import CONFIGS from "./configs";
+import { getAllPosts } from './api';
+import CONFIGS from './configs';
 
 const {
   AUTHOR_EMAIL,
@@ -16,17 +16,10 @@ const {
   TITLE,
   SITE_URL,
   SITE_DESCRIPTION,
-} = CONFIGS
+} = CONFIGS;
 
 export default async function generateRssFeed() {
-  const posts = getAllPosts([
-    "title",
-    "slug",
-    "date",
-    "cover_image",
-    "summary",
-    "category",
-  ]);
+  const posts = getAllPosts(['title', 'slug', 'date', 'cover_image', 'summary', 'category']);
 
   const date = new Date();
   const author = {
@@ -46,19 +39,16 @@ export default async function generateRssFeed() {
     copyright: `All rights reserved ${date.getFullYear()}, ${AUTHOR}`,
     updated: date, // today's date
     feedLinks: {
-      atom1: `${FEED_DOMAIN}/${FEED_ALL_ATOM}`,  // xml format
-      rss2: `${FEED_DOMAIN}/${FEED_ALL_RSS}`,  // xml format
+      atom1: `${FEED_DOMAIN}/${FEED_ALL_ATOM}`, // xml format
+      rss2: `${FEED_DOMAIN}/${FEED_ALL_RSS}`, // xml format
       // json: `${siteURL}/rss/all.json`,// json fromat
     },
     author,
   });
 
-
-  posts.forEach((post) => {
+  posts.forEach(post => {
     const url = `${FEED_DOMAIN}/${post.slug}?resource=rss`;
-    const description = remark()
-    .use(remarkHTML)
-    .processSync(post.summary)
+    const description = remark().use(remarkHTML).processSync(post.summary);
 
     feed.addItem({
       title: post.title,
@@ -71,7 +61,7 @@ export default async function generateRssFeed() {
     });
   });
 
-  fs.mkdirSync("./public/rss", { recursive: true });
+  fs.mkdirSync('./public/rss', { recursive: true });
   fs.writeFileSync(`./public/${FEED_ALL_ATOM}`, feed.atom1());
   fs.writeFileSync(`./public/${FEED_ALL_RSS}`, feed.rss2());
   // fs.writeFileSync("./public/rss/all.json", feed.json1());

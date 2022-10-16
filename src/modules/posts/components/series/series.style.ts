@@ -1,4 +1,4 @@
-import { createUseStyles } from 'react-jss'
+import { createUseStyles } from 'react-jss';
 
 import { ITHEME } from 'theme';
 
@@ -27,6 +27,6 @@ export const SeriesPostsStyle = createUseStyles<string, unknown, ITHEME>((theme:
   },
 
   listItem: {
-    listStyleType: 'circle'
+    listStyleType: 'circle',
   },
-}))
+}));

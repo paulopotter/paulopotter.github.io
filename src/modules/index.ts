@@ -1,3 +1,3 @@
-export * from './author'
-export * from './home'
-export * from './posts'
+export * from './author';
+export * from './home';
+export * from './posts';

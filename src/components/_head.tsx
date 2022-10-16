@@ -1,7 +1,7 @@
-import React from "react";
-import NextHead from "next/head";
-import CONFIGS from "../services/configs";
-import { COLOR } from "config";
+import React from 'react';
+import NextHead from 'next/head';
+import CONFIGS from '../services/configs';
+import { COLOR } from 'config';
 import { NextSeo } from 'next-seo';
 
 const {
@@ -20,18 +20,18 @@ const {
 } = CONFIGS;
 
 interface HeadProps {
-  title?: string
-  children?: unknown
+  title?: string;
+  children?: unknown;
   meta?: {
-    description?: string
-    ogTitle?: string
-    ogDescription?: string
-    ogImage?: string
-    ogUrl?: string
-    ogType?: 'website' | 'article'
-    ogArticle?: Record<string, unknown>
-    twitterAlt?: string
-  }
+    description?: string;
+    ogTitle?: string;
+    ogDescription?: string;
+    ogImage?: string;
+    ogUrl?: string;
+    ogType?: 'website' | 'article';
+    ogArticle?: Record<string, unknown>;
+    twitterAlt?: string;
+  };
 }
 enum ImageExtensionWhitelist {
   'jpeg',
@@ -41,30 +41,31 @@ enum ImageExtensionWhitelist {
   'gif',
 }
 
-export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => {
-  const customTitle = `${IS_DEV_MODE ? '[LOCAL]' : ''} ${title ? title + " -" : ''} ${TITLE}`
-  const description = meta?.description || SITE_DESCRIPTION
-  const canonical = `${meta?.ogUrl ?? SITE_URL}`
-  const siteName = TITLE
-  const getImageExtension: string = meta?.ogImage?.split('.').at(-1) ?? 'jpeg'
+export const Head = ({ title = '', children = null, meta = {} }: HeadProps) => {
+  const customTitle = `${IS_DEV_MODE ? '[LOCAL]' : ''} ${title ? title + ' -' : ''} ${TITLE}`;
+  const description = meta?.description || SITE_DESCRIPTION;
+  const canonical = `${meta?.ogUrl ?? SITE_URL}`;
+  const siteName = TITLE;
+  const getImageExtension: string = meta?.ogImage?.split('.').at(-1) ?? 'jpeg';
   // @ts-expect-error: I dont know whyyy
-  const imageExtension: string = ImageExtensionWhitelist[ ImageExtensionWhitelist[ getImageExtension ] ] ?? 'jpeg'
+  const imageExtension: string =
+    ImageExtensionWhitelist[ImageExtensionWhitelist[getImageExtension]] ?? 'jpeg';
   const image = {
     url: meta?.ogImage
-          ? meta.ogImage.startsWith(SITE_URL)
-            ? meta.ogImage.replace('./', '')
-            : `${SITE_URL}/${meta?.ogImage.replace('./', '')}`
-          : `${AUTHOR_IMG}?s=1200`,
-    type: `image/${ imageExtension }`
-  }
-  const article = meta?.ogType === 'article' && meta?.ogArticle ? meta.ogArticle : {}
+      ? meta.ogImage.startsWith(SITE_URL)
+        ? meta.ogImage.replace('./', '')
+        : `${SITE_URL}/${meta?.ogImage.replace('./', '')}`
+      : `${AUTHOR_IMG}?s=1200`,
+    type: `image/${imageExtension}`,
+  };
+  const article = meta?.ogType === 'article' && meta?.ogArticle ? meta.ogArticle : {};
 
   return (
     <>
       <NextHead>
         <>
           <meta charSet="UTF-8" />
-          <title>{ customTitle }</title>
+          <title>{customTitle}</title>
           {/* META */}
           <meta
             name="theme-color"
@@ -76,11 +77,7 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => {
             media="(prefers-color-scheme: light)"
             content={COLOR.light.background}
           />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1"
-            key="viewport"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" key="viewport" />
           <link
             href={`${FEED_DOMAIN}/${FEED_ALL_RSS}`}
             type="application/rss+xml"
@@ -98,18 +95,18 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => {
         </>
       </NextHead>
       <NextSeo
-        title={ customTitle }
-        description={ description }
-        canonical={ canonical }
+        title={customTitle}
+        description={description}
+        canonical={canonical}
         openGraph={{
           url: canonical,
           title: customTitle,
           site_name: siteName,
           locale: DEFAULT_LANG,
-          images: [ { ...image } ],
+          images: [{ ...image }],
           type: meta?.ogType ?? 'website',
           description,
-          article
+          article,
         }}
         twitter={{
           handle: TWITTER_CREATOR,
@@ -122,28 +119,28 @@ export const Head = ({ title = "", children = null, meta = {} }: HeadProps) => {
             href: `${SITE_URL}/images/favicon.png`,
           },
           {
-            rel:"preconnect",
-            href:"https://www.google-analytics.com",
+            rel: 'preconnect',
+            href: 'https://www.google-analytics.com',
           },
           {
-            rel:"preconnect",
-            href:"https://www.googletagmanager.com",
+            rel: 'preconnect',
+            href: 'https://www.googletagmanager.com',
           },
           {
-            rel:"preconnect",
-            href:"https://fonts.googleapis.com/",
+            rel: 'preconnect',
+            href: 'https://fonts.googleapis.com/',
           },
           {
-            rel:"preconnect",
-            href:"https://pagead2.googlesyndication.com/",
+            rel: 'preconnect',
+            href: 'https://pagead2.googlesyndication.com/',
           },
           {
-            rel:"preconnect",
-            href:"https://fonts.gstatic.com",
-            crossOrigin: "anonymous",
+            rel: 'preconnect',
+            href: 'https://fonts.gstatic.com',
+            crossOrigin: 'anonymous',
           },
         ]}
       />
     </>
-)};
-
+  );
+};

@@ -9,6 +9,9 @@
     "start": "next start",
     "lint": "next lint",
     "lint:ts": "tsc --noEmit --incremental",
+    "lint:prettier": "prettier src --check",
+    "lint:prettier:fix": "yarn lint:prettier --write",
+    "lint:fix": "yarn lint:prettier:fix && yarn lint --fix",
     "export": "next export",
     "deploy": "yarn build && yarn export && yarn gh-pages -d out/ -t true -b main"
   },

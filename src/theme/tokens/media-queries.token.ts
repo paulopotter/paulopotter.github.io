@@ -3,4 +3,4 @@ export const MEDIA_QUERIES: Record<string, string> = {
   md: '768px',
   lg: '1000px',
   xxl: '1400px',
-}
+};

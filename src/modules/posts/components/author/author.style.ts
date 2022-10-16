@@ -1,4 +1,4 @@
-import { createUseStyles } from 'react-jss'
+import { createUseStyles } from 'react-jss';
 import { ITHEME } from 'theme';
 
 export const AuthorCardStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
@@ -48,5 +48,4 @@ export const AuthorCardStyle = createUseStyles<string, unknown, ITHEME>((theme: 
       fill: theme.link,
     },
   },
-
-}))
+}));

@@ -1,4 +1,4 @@
-import { createUseStyles } from 'react-jss'
+import { createUseStyles } from 'react-jss';
 
 export const HomeStyle = createUseStyles({
   content: {
@@ -6,5 +6,5 @@ export const HomeStyle = createUseStyles({
     'flex-direction': 'row',
     'flex-wrap': 'wrap',
     'justify-content': 'center',
-  }
-})
+  },
+});

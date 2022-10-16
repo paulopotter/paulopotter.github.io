@@ -1,1 +1,1 @@
-export * from './author.component'
+export * from './author.component';

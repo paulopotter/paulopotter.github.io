@@ -10,12 +10,11 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint", "react"],
+  "plugins": ["@typescript-eslint", "react", "prettier"],
   "rules": {
+    "@typescript-eslint/indent": ["error", 2],
     "react/react-in-jsx-scope": "off",
     "object-curly-spacing": ["error", "always"],
-    "array-bracket-spacing": ["error", "always"],
-    "computed-property-spacing": ["error", "always"],
     "@next/next/no-img-element": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-ts-comment": [
@@ -29,6 +28,5 @@
     "@typescript-eslint/no-non-null-assertion": "off",
     "import/no-anonymous-default-export": "off",
     "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }]
-  },
-  "ignorePatterns": ["/*", "!/src"]
+  }
 }

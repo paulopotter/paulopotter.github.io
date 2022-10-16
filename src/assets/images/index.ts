@@ -1,1 +1,1 @@
-export * from './calendly.icon'
+export * from './calendly.icon';

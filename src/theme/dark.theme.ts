@@ -11,9 +11,9 @@ export const THEME_DARK: ITHEME = {
     background: TOKENS.COLOR_ONYX,
     color: TOKENS.COLOR_MEDIUM_SKY_BLUE,
     inverted: {
-      background:TOKENS.COLOR_CULTURED,
-      color:TOKENS.COLOR_ELETRIC_INDIGO,
-    }
+      background: TOKENS.COLOR_CULTURED,
+      color: TOKENS.COLOR_ELETRIC_INDIGO,
+    },
   },
   card: {
     background: TOKENS.COLOR_CHINESE_BLACK,
@@ -44,6 +44,6 @@ export const THEME_DARK: ITHEME = {
         secondary: TOKENS.COLOR_ROMAN_SILVER,
       },
       color: TOKENS.COLOR_ONYX,
-    }
-  }
+    },
+  },
 };

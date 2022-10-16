@@ -27,14 +27,28 @@ export const Link = ({
 
   return isExternalLink(href) ? (
     <NextLink href={href}>
-      <a target="_blank" rel="noreferrer" tabIndex={tabIndex} title={title} className={className} aria-label={ariaLabel}>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        tabIndex={tabIndex}
+        title={title}
+        className={className}
+        aria-label={ariaLabel}
+      >
         {children}
         {!disableIcon && <RiShareBoxLine className={style.icon} />}
       </a>
     </NextLink>
   ) : (
     <NextLink href={href}>
-      <a target="_self" rel="noreferrer" tabIndex={tabIndex} title={title} className={className} aria-label={ariaLabel}>
+      <a
+        target="_self"
+        rel="noreferrer"
+        tabIndex={tabIndex}
+        title={title}
+        className={className}
+        aria-label={ariaLabel}
+      >
         {children}
       </a>
     </NextLink>

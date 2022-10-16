@@ -1,2 +1,2 @@
-export * from './link.component'
-export * from './theme-button.component'
+export * from './link.component';
+export * from './theme-button.component';

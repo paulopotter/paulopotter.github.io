@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import { MEDIA_QUERIES, ITHEME } from 'theme';
 
-export const FooterStyle = createUseStyles<string, unknown, ITHEME>(( theme: ITHEME ) => ({
+export const FooterStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
   backToTop: {
     alignItems: 'center',
     backgroundColor: theme.button.background,
@@ -14,14 +14,14 @@ export const FooterStyle = createUseStyles<string, unknown, ITHEME>(( theme: ITH
     transition: 'bottom 0.5s ease-out',
 
     '&:focus': {
-      outline: [ '3px','solid', theme.outline ],
+      outline: ['3px', 'solid', theme.outline],
     },
 
     '&:active, &:hover, &:focus': {
       backgroundColor: theme.button.background,
     },
 
-    [ `@media (min-width: ${MEDIA_QUERIES.xxl})` ]: {
+    [`@media (min-width: ${MEDIA_QUERIES.xxl})`]: {
       left: '87%',
       right: 'inherit',
     },
@@ -34,18 +34,16 @@ export const FooterStyle = createUseStyles<string, unknown, ITHEME>(( theme: ITH
 
     '&:hover $backToTopText': {
       display: 'block',
-    }
-
+    },
   },
   backToTopShow: {
     '&$backToTop': {
       bottom: 0,
-    }
+    },
   },
   backToTopText: {
     float: 'left',
     display: 'none',
     padding: '0 0.5em',
   },
-
-}))
+}));

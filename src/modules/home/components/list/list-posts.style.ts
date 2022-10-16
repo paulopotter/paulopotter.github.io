@@ -4,7 +4,7 @@ import { ITHEME, FONT, MEDIA_QUERIES } from 'theme';
 export const ListOfPostStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
   article: {
     backgroundColor: theme.card.background,
-    boxShadow: [ '2px', '2px', '4px', '0', theme.boxShadow ],
+    boxShadow: ['2px', '2px', '4px', '0', theme.boxShadow],
     display: 'flex',
     justifyContent: 'space-between',
     margin: '2em 1em',
@@ -14,7 +14,7 @@ export const ListOfPostStyle = createUseStyles<string, unknown, ITHEME>((theme: 
     position: 'relative',
     width: '45%',
 
-    [ `@media (max-width: ${MEDIA_QUERIES.xs})` ]: {
+    [`@media (max-width: ${MEDIA_QUERIES.xs})`]: {
       margin: '.5em 0',
       maxWidth: '100%',
       width: '100%',
@@ -30,12 +30,11 @@ export const ListOfPostStyle = createUseStyles<string, unknown, ITHEME>((theme: 
     flexDirection: 'column',
     justifyContent: 'space-between',
     width: '100%',
-    [ `@media (min-width: ${MEDIA_QUERIES.lg})` ]: {
-      ':not($articleFirst) > &':{
+    [`@media (min-width: ${MEDIA_QUERIES.lg})`]: {
+      ':not($articleFirst) > &': {
         width: 'calc(100% - 13em)',
-      }
+      },
     },
-
   },
   titleLink: {
     color: theme.link,
@@ -52,7 +51,7 @@ export const ListOfPostStyle = createUseStyles<string, unknown, ITHEME>((theme: 
 
   imageCover: {
     backgroundColor: theme.card.background,
-    boxShadow: [ '2px', '2px', '4px', '0', theme.boxShadow ],
+    boxShadow: ['2px', '2px', '4px', '0', theme.boxShadow],
     height: '11em',
     objectFit: 'cover',
     padding: '1em',
@@ -74,20 +73,20 @@ export const ListOfPostStyle = createUseStyles<string, unknown, ITHEME>((theme: 
     },
   },
   imageLink: {
+    display: 'block',
+
+    '$articleFirst &': {
+      position: 'relative',
+      width: '100%',
+      height: '15em',
+      padding: 0,
+      margin: '0 0 1em',
       display: 'block',
+    },
 
-      '$articleFirst &': {
-        position: 'relative',
-        width: '100%',
-        height: '15em',
-        padding: 0,
-        margin: '0 0 1em',
-        display: 'block',
-      },
-
-    [ `@media (max-width: ${MEDIA_QUERIES.lg})` ]: {
-        display: 'none',
-    }
+    [`@media (max-width: ${MEDIA_QUERIES.lg})`]: {
+      display: 'none',
+    },
   },
   category: {
     color: theme.color.tertiary,

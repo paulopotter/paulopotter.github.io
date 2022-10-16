@@ -1,52 +1,52 @@
-import { createUseStyles } from "react-jss";
-import { ITHEME, FONT } from "theme";
+import { createUseStyles } from 'react-jss';
+import { ITHEME, FONT } from 'theme';
 
-export const GlobalStyle = createUseStyles<string, unknown, ITHEME>(( theme ) => ({
-  "@global": {
-    "*": {
-      fontFamily: [ FONT.primary, FONT.secondary, FONT.mono, 'sans-serif', 'serif' ],
+export const GlobalStyle = createUseStyles<string, unknown, ITHEME>(theme => ({
+  '@global': {
+    '*': {
+      fontFamily: [FONT.primary, FONT.secondary, FONT.mono, 'sans-serif', 'serif'],
 
-      "&:focus": {
-        outline: [ '3px', 'solid', theme.outline ],
+      '&:focus': {
+        outline: ['3px', 'solid', theme.outline],
       },
 
-      "&::selection": {
+      '&::selection': {
         backgroundColor: theme.button.color,
         color: theme.button.background,
-      }
+      },
     },
 
     body: {
       backgroundColor: theme.background,
       color: theme.color.primary,
       minWidth: 320,
-      textRendering: "auto",
+      textRendering: 'auto',
     },
 
     a: {
-      "&:hover": {
+      '&:hover': {
         opacity: 0.8,
-        textDecoration: "underline",
+        textDecoration: 'underline',
       },
-      "&, &:hover, &:visited, &:active": {
+      '&, &:hover, &:visited, &:active': {
         color: theme.link,
       },
     },
 
-    "h1, h2, h3, h4, h5": {
+    'h1, h2, h3, h4, h5': {
       color: theme.color.secondary,
     },
 
-    "h2 a:hover": {
+    'h2 a:hover': {
       opacity: 0.5,
     },
 
-    ".footnotes ol li p": {
-      display: "inline-block",
-      marginTop: "1em",
+    '.footnotes ol li p': {
+      display: 'inline-block',
+      marginTop: '1em',
     },
 
-    'abbr': {
+    abbr: {
       cursor: 'help',
     },
   },

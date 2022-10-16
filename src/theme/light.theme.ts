@@ -7,12 +7,12 @@ export const THEME_LIGHT: ITHEME = {
   border: TOKENS.COLOR_PASTEL_BLUE,
   boxShadow: TOKENS.COLOR_BLACK_ALPHA_34,
   button: {
-    background:TOKENS.COLOR_CULTURED,
-    color:TOKENS.COLOR_ELETRIC_INDIGO,
+    background: TOKENS.COLOR_CULTURED,
+    color: TOKENS.COLOR_ELETRIC_INDIGO,
     inverted: {
       background: TOKENS.COLOR_ONYX,
       color: TOKENS.COLOR_MEDIUM_SKY_BLUE,
-    }
+    },
   },
   card: {
     background: TOKENS.COLOR_WHITE,
@@ -43,6 +43,6 @@ export const THEME_LIGHT: ITHEME = {
         secondary: TOKENS.COLOR_SONIC_SILVER,
       },
       color: TOKENS.COLOR_CULTURED,
-    }
-  }
+    },
+  },
 };

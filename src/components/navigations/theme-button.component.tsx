@@ -8,15 +8,15 @@ import { ThemeButtonStyle } from './theme-button.style';
 import { ITHEME } from 'theme';
 
 export function ToggleThemeButton({ onClicked }: { onClicked?: (themeName: string) => void }) {
-  const theme: ITHEME = useTheme()
-  const isDarkTheme = theme.name === 'dark'
-  const [ canAnimate, setCanAnimate ] = useState(false);
+  const theme: ITHEME = useTheme();
+  const isDarkTheme = theme.name === 'dark';
+  const [canAnimate, setCanAnimate] = useState(false);
 
-  const style = ThemeButtonStyle({ theme } );
+  const style = ThemeButtonStyle({ theme });
 
   useEffect(() => {
     setTimeout(() => setCanAnimate(true), 1000);
-  }, [ canAnimate ]);
+  }, [canAnimate]);
 
   const toggleButtonOnClick = (event: unknown) => {
     onClicked?.(isDarkTheme ? 'light' : 'dark');
@@ -26,8 +26,7 @@ export function ToggleThemeButton({ onClicked }: { onClicked?: (themeName: strin
     window?.DISQUS?.host?._loadEmbed(); // to update disqus theme
   };
 
-  const styleClass = classNames(style.button,
-  { [ style.hasJs ]: canAnimate } )
+  const styleClass = classNames(style.button, { [style.hasJs]: canAnimate });
 
   return (
     <button

@@ -14,11 +14,9 @@ export function HomeView({ posts }: HomeView): JSX.Element {
     <>
       <Head />
       <section className={homeStyle.content}>
-        {
-          posts?.map((post, index) => (
-            <ListOfPost key={index} post={post} index={index} />
-          ))
-        }
+        {posts?.map((post, index) => (
+          <ListOfPost key={index} post={post} index={index} />
+        ))}
       </section>
     </>
   );

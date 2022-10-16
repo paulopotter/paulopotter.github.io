@@ -19,18 +19,18 @@ export const ThemeButtonStyle = createUseStyles<string, unknown, ITHEME>((theme:
       backgroundColor: theme.button.inverted.background,
     },
 
-    [ `@media (min-width: ${MEDIA_QUERIES.xs})` ]: {
+    [`@media (min-width: ${MEDIA_QUERIES.xs})`]: {
       position: 'absolute',
     },
 
-    [ `@media (min-width: ${MEDIA_QUERIES.xxl})` ]: {
+    [`@media (min-width: ${MEDIA_QUERIES.xxl})`]: {
       left: '87%',
       right: 'inherit',
     },
   },
 
   hasJs: {
-    [ `@media (min-width: ${MEDIA_QUERIES.xs})` ]: {
+    [`@media (min-width: ${MEDIA_QUERIES.xs})`]: {
       '&$button': {
         transform: 'translate(0, 100%)',
       },

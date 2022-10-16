@@ -71,7 +71,7 @@ export const MenuStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME
   },
   menuListActive: {
     '&$menuList': {
-      borderTop: [ 2, 'dotted', theme.border ],
+      borderTop: [2, 'dotted', theme.border],
       opacity: 1,
       top: '150%',
       transform: 'translateY(0)',
