@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 
-import { PostData } from "components/types/posts.type";
+import type { PostData } from "modules/posts/posts.type";
 import { HomeView } from "modules";
 import CONFIGS from 'services/configs'
 import generateRssFeed from "services/generateRssFeed";

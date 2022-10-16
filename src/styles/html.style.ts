@@ -1,15 +1,15 @@
 import { createUseStyles } from 'react-jss'
-import { FONT, THEME_VALUE } from '../config'
+import { ITHEME, FONT } from 'theme'
 
-export const ResetStyle = createUseStyles({
-  body: ({ isDarkTheme }: {isDarkTheme: boolean}) => ({
+export const ResetStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
+  body: {
       "text-rendering": "auto",
       "min-width": 320,
-      "background-color": THEME_VALUE(isDarkTheme, "background"),
-      color: THEME_VALUE(isDarkTheme, "text"),
+      "background-color": theme.background,
+      color: theme.color.primary,
 
       '& *:focus': {
-          outline: `3px solid ${THEME_VALUE(isDarkTheme, 'link')}`,
+          outline: [ '3px', 'solid', theme.outline ],
       },
 
       '& a': {
@@ -18,18 +18,18 @@ export const ResetStyle = createUseStyles({
           "text-decoration": "underline",
         },
         "&, &:hover, &:visited, &:active": {
-          color: THEME_VALUE(isDarkTheme, "link"),
+          color: theme.link,
         },
       },
 
       "& h1, & h2, & h3, & h4, & h5": {
         'font-family': FONT.secondary,
-        color: THEME_VALUE(isDarkTheme, "heading"),
+        color: theme.color.secondary,
       },
 
       "& h2 a:hover": {
         opacity: 0.5,
-        color: THEME_VALUE(isDarkTheme, "link"),
-      },
-    }),
-})
+        color: theme.link,
+      }
+  } }
+))

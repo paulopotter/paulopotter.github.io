@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss'
 import { ITHEME, FONT } from 'theme'
 
-export const PostStyle = createUseStyles((theme: ITHEME)=> ({
+export const PostStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME)=> ({
   articleSection: {
     backgroundColor: theme.card.background,
     boxShadow: [ '2px','2px','4px','0', theme.boxShadow ],

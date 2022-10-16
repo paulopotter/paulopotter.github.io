@@ -3,7 +3,7 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import CONFIGS from './configs'
 
-import type { PostData } from '../components/types/posts.type';
+import type { PostData } from '../modules/posts/posts.type';
 
 const postsDirectory = join(process.cwd(), 'src/posts');
 const getMarkdownsFiles = (): string[] => fs.readdirSync(postsDirectory);

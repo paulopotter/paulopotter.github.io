@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 type Props = {
   className?: string;
   alt?: string;
@@ -11,7 +13,7 @@ export const CalendlySvg = ({ className, alt, title, tabIndex }: Props): JSX.Ele
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 687 708"
     width="16"
-    heigth="16"
+    height="16"
     className={className}
     alt={alt}
     title={title}

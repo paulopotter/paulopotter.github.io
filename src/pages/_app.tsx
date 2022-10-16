@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const [ canRender, setCanRender ] = useState(false);
   const [ themeName, setThemeName ] = useState('light')
   const theme: ITHEME = THEME[ themeName ]
-  GlobalStyle({ theme });
+  GlobalStyle( { theme } );
 
   const changeTheme = (themeName = 'light') => {
     setThemeName(themeName);

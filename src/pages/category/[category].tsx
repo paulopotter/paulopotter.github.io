@@ -4,7 +4,7 @@ import type { GetStaticProps, GetStaticPaths } from "next";
 import dayjs from "dayjs";
 import "dayjs/locale/pt-br";
 
-import { PostData } from "components/types/posts.type";
+import type { PostData } from "modules/posts/posts.type";
 import CONFIGS from "services/configs";
 import { getFiltredPosts } from "services/api";
 import { HomeView } from "modules";

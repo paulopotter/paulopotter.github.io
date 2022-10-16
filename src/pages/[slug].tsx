@@ -2,7 +2,7 @@
 import type { GetStaticProps, GetStaticPaths } from 'next';
 import markdown from "../services/markdown";
 import { getPost, getAllPosts, getRelatedPosts, getRelatedSeries } from "../services/api";
-import type { PostData } from "../components/types/posts.type";
+import type { PostData } from "../modules/posts/posts.type";
 import { PostsView } from 'modules';
 
 export default function PostsPage({ post }: {post: PostData}){

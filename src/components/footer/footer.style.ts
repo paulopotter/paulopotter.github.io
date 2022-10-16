@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import { MEDIA_QUERIES, ITHEME } from 'theme';
 
-export const FooterStyle = createUseStyles(( theme: ITHEME ) => ({
+export const FooterStyle = createUseStyles<string, unknown, ITHEME>(( theme: ITHEME ) => ({
   backToTop: {
     alignItems: 'center',
     backgroundColor: theme.button.background,

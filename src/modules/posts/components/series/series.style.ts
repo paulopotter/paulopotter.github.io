@@ -2,7 +2,7 @@ import { createUseStyles } from 'react-jss'
 
 import { ITHEME } from 'theme';
 
-export const SeriesPostsStyle = createUseStyles((theme: ITHEME) => ({
+export const SeriesPostsStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
   wrapper: {
     border: '1px dashed',
     display: 'block',

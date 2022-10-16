@@ -1,7 +1,7 @@
 import { createUseStyles } from "react-jss";
 import { ITHEME, FONT } from "theme";
 
-export const GlobalStyle = createUseStyles((theme: ITHEME) => ({
+export const GlobalStyle = createUseStyles<string, unknown, ITHEME>(( theme ) => ({
   "@global": {
     "*": {
       fontFamily: [ FONT.primary, FONT.secondary, FONT.mono, 'sans-serif', 'serif' ],

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -21,7 +22,7 @@ import { useTheme } from 'react-jss';
 import { ITHEME } from 'theme';
 
 import { Head, Link } from "components";
-// import type { PostData } from "components/types/posts.type";
+import type { PostData } from "../../posts.type";
 import CONFIGS from "services/configs";
 import { PostStyle } from "./content.style";
 
@@ -168,10 +169,9 @@ export const Post = ({ post }: Props) => {
             </ReactMarkdown>
           </div>
 
-          <AuthorCard isDarkTheme={isDarkTheme} />
-          <SeriesPosts posts={post?.series} isDarkTheme />
-
-          <RelatedPosts {...post.related} isDarkTheme />
+          <AuthorCard />
+          <SeriesPosts posts={post?.series} />
+          <RelatedPosts {...post.related} />
 
         </article>
       </section>

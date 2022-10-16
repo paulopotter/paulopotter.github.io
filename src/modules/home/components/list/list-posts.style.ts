@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import { ITHEME, FONT, MEDIA_QUERIES } from 'theme';
 
-export const ListOfPostStyle = createUseStyles((theme: ITHEME) => ({
+export const ListOfPostStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
   article: {
     backgroundColor: theme.card.background,
     boxShadow: [ '2px', '2px', '4px', '0', theme.boxShadow ],

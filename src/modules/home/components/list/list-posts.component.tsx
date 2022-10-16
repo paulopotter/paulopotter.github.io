@@ -7,7 +7,7 @@ import { useTheme } from 'react-jss';
 
 import CONFIGS from 'services/configs'
 import { Link } from 'components'
-import { PostData } from "components/types/posts.type";
+import type { PostData } from "modules/posts/posts.type";
 import { ITHEME } from 'theme';
 import { ListOfPostStyle } from "./list-posts.style";
 

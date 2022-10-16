@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import { ITHEME, MEDIA_QUERIES } from 'theme';
 
-export const ThemeButtonStyle = createUseStyles((theme: ITHEME) => ({
+export const ThemeButtonStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
   button: {
     padding: '0.5em',
     height: '3em',

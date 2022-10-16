@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss'
 import { ITHEME, MEDIA_QUERIES } from 'theme'
 
-export const RelatedPostsStyle = createUseStyles((theme: ITHEME) => ({
+export const RelatedPostsStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
   wrapper: {
     display: 'flex',
     justifyContent: 'space-between',
