@@ -22,6 +22,7 @@ export function Menu() {
 
   useEffect(() => {
     if (!isMenuOpened) {
+      document.getElementsByTagName('body')[0].removeAttribute("style");
       return;
     }
 
@@ -30,6 +31,7 @@ export function Menu() {
         toggleMenu();
       }
     };
+    document.getElementsByTagName('body')[0].style.overflow = 'hidden'
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
