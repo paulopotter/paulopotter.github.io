@@ -20,8 +20,7 @@ type PostKey = keyof PostData;
  * @param filename Slug ou nome do arquivo com extensão.
  * @param fields Campos do post que será retornado.
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
-export function getPost(filename: string, fields: string[] = []): PostData | {} {
+export function getPost(filename: string, fields: string[] = []): PostData | undefined {
   const slug = filename.replace(/\.md$/, ''); // Remover o .md do fim do arquivo
   const directory = join(postsDirectory, `${slug}.md`); // Buscando pelo nome do arquivo markdown, com o .md
   const fileContents = fs.readFileSync(directory, 'utf8'); // Ler o conteúdo do arquivo markdown
@@ -32,7 +31,7 @@ export function getPost(filename: string, fields: string[] = []): PostData | {} 
    */
   const { data, content } = matter(fileContents);
   if (!data) {
-    return {};
+    return;
   }
 
   const post = {} as PostData;
@@ -40,7 +39,7 @@ export function getPost(filename: string, fields: string[] = []): PostData | {} 
   if (fields.length === 0) fields = Object.keys(data);
 
   fields.map((field: string) => {
-    const lowerField: PostKey  = field.toLowerCase() as PostKey;
+    const lowerField: PostKey = field.toLowerCase() as PostKey;
 
     if (!data?.[getParameterCaseInsensitive(data, 'title')]) {
       return;

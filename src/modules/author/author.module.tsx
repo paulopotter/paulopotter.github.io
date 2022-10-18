@@ -55,7 +55,7 @@ export function AuthorView() {
           <ul className={style.socialList}>
             {SOCIAL?.map((social, index) => {
               type foo = keyof typeof BSIcons;
-              const socialName: foo = social.name as foo
+              const socialName: foo = social.name as foo;
 
               const SocialIcon = BSIcons[socialName] as unknown as any;
               return (

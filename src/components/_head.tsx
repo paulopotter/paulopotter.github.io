@@ -36,10 +36,10 @@ interface HeadProps {
 }
 enum ImageExtensionWhitelist {
   jpeg = 'jpeg',
-  jpg  = 'jpg',
-  png  = 'png',
+  jpg = 'jpg',
+  png = 'png',
   webp = 'webp',
-  gif  = 'gif',
+  gif = 'gif',
 }
 
 type ImgWhitelist = keyof typeof ImageExtensionWhitelist;
@@ -48,7 +48,8 @@ export const Head = ({ title = '', children = null, meta = {} }: HeadProps) => {
   const customTitle = `${IS_DEV_MODE ? '[LOCAL]' : ''} ${title ? title + ' -' : ''} ${TITLE}`;
   const description = meta?.description || SITE_DESCRIPTION;
   const canonical = `${meta?.ogUrl ?? SITE_URL}`;
-  const getImageExtension: ImgWhitelist = meta?.ogImage?.split('.').at(-1) as ImgWhitelist ?? 'jpeg';
+  const getImageExtension: ImgWhitelist =
+    (meta?.ogImage?.split('.').at(-1) as ImgWhitelist) ?? 'jpeg';
   const imageExtension: ImgWhitelist = ImageExtensionWhitelist[getImageExtension] ?? 'jpeg';
   const image = {
     url: meta?.ogImage

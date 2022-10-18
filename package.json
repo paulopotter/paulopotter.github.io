@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:all": "yarn lint:prettier && yarn lint && yarn lint:ts",
     "lint:ts": "tsc --noEmit --incremental",
     "lint:prettier": "prettier src --check",
     "lint:prettier:fix": "yarn lint:prettier --write",
