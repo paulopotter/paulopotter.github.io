@@ -1,7 +1,6 @@
 export const toggleThemeStorage = (themeName = 'light') => {
   const body = document.getElementsByTagName('body')[0];
-  const theme = body.classList.contains(themeName) || themeName;
 
-  window.localStorage.setItem('theme', `${theme}`);
+  window.localStorage.setItem('theme', `${themeName}`);
   body.className = themeName;
 };
