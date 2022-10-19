@@ -1,49 +1,43 @@
 import { ITHEME } from './theme.types';
 import * as TOKENS from './tokens';
-// import { THEME_LIGHT } from './light.theme';
 
 export const THEME_DARK: ITHEME = {
   name: 'dark',
   background: TOKENS.COLOR_ONYX,
-  border: TOKENS.COLOR_PASTEL_BLUE,
-  boxShadow: TOKENS.COLOR_WHITE_ALPHA_05,
+  border: TOKENS.COLOR_MEDIUM_SKY_BLUE_ALPHA_50,
+  boxShadow: TOKENS.COLOR_BLACK_ALPHA_10,
   button: {
-    background: TOKENS.COLOR_ONYX,
+    background: TOKENS.COLOR_DARK_JUNGLE_GREEN,
     color: TOKENS.COLOR_MEDIUM_SKY_BLUE,
-    inverted: {
-      background: TOKENS.COLOR_CULTURED,
-      color: TOKENS.COLOR_ELETRIC_INDIGO,
-    },
   },
   card: {
-    background: TOKENS.COLOR_CHINESE_BLACK,
+    background: TOKENS.COLOR_DARK_JUNGLE_GREEN,
   },
   code: {
-    background: TOKENS.COLOR_BLACK_OLIVE,
+    background: TOKENS.COLOR_WHITE_ALPHA_10,
     color: TOKENS.COLOR_BEGONIA,
   },
   color: {
-    primary: TOKENS.COLOR_GAINSBORO,
-    secondary: TOKENS.COLOR_BUBBLES,
-    tertiary: TOKENS.COLOR_ROMAN_SILVER,
+    primary: TOKENS.COLOR_SILVER_SAND,
+    secondary: TOKENS.COLOR_LIGHT_SILVER,
+    tertiary: TOKENS.COLOR_SILVER_SAND_ALPHA_70,
   },
   link: TOKENS.COLOR_MEDIUM_SKY_BLUE,
   outline: TOKENS.COLOR_MEDIUM_SKY_BLUE,
-  related: TOKENS.COLOR_VIOLET,
+  related: TOKENS.COLOR_SILVER_SAND_ALPHA_70,
   table: {
     header: {
       background: {
-        primary: TOKENS.COLOR_AURO_METAL_SAURUS,
-        secondary: TOKENS.COLOR_RAISIN_BLACK,
+        primary: TOKENS.COLOR_MEDIUM_SKY_BLUE_ALPHA_50,
+        secondary: TOKENS.COLOR_ONYX,
       },
-      color: TOKENS.COLOR_WHITE,
+      color: TOKENS.COLOR_CULTURED,
     },
     body: {
       background: {
-        primary: TOKENS.COLOR_RAISIN_BLACK,
-        secondary: TOKENS.COLOR_ROMAN_SILVER,
+        primary: TOKENS.COLOR_MEDIUM_SKY_BLUE_ALPHA_20,
+        secondary: TOKENS.COLOR_MEDIUM_SKY_BLUE_ALPHA_10,
       },
-      color: TOKENS.COLOR_ONYX,
     },
   },
 };

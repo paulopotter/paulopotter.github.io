@@ -20,6 +20,8 @@ export const SeriesPostsStyle = createUseStyles<string, unknown, ITHEME>((theme:
   },
   textHighlight: {
     color: theme.related,
+    fontWeight: '300',
+    fontStyle: 'italic',
     display: 'inline-block',
     margin: '0.7em 0',
     position: 'relative',

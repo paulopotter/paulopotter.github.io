@@ -1,4 +1,4 @@
-export type COLOR = `#${string}` | `rgba(${number}, ${number}, ${number}, ${number})`;
+export type COLOR = `#${string}` | `rgb(${number}, ${number}, ${number})` | `rgba(${number}, ${number}, ${number}, ${number})`;
 
 export interface ITHEME {
   // workaround to know theme name
@@ -9,10 +9,6 @@ export interface ITHEME {
   button: {
     background: COLOR;
     color: COLOR;
-    inverted: {
-      background: COLOR;
-      color: COLOR;
-    };
   };
   card: {
     background: COLOR;
@@ -42,7 +38,6 @@ export interface ITHEME {
         primary: COLOR;
         secondary: COLOR;
       };
-      color: COLOR;
     };
   };
 }

@@ -98,7 +98,6 @@ const table = (theme: ITHEME) => ({
       backgroundColor: theme.table.body.background.primary,
     },
     '&:hover': {
-      color: theme.table.body.color,
       backgroundColor: theme.table.body.background.secondary,
       cursor: 'default',
     },

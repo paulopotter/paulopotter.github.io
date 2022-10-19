@@ -1,3 +1,4 @@
+import { Link } from 'components';
 import { useTheme } from 'react-jss';
 import { ITHEME } from 'theme';
 import { SeriesPostsStyle } from './series.style';
@@ -19,8 +20,8 @@ export const Series = ({ posts }: RelatedProps): JSX.Element | null => {
 
   const style = SeriesPostsStyle({ theme });
 
-  const items = (post: posts): unknown =>
-    post?.slug ? <a href={post.slug}>{post.title}</a> : post.title;
+  const items = (post: posts): JSX.Element | unknown =>
+    post?.slug ? <Link href={post.slug}>{post.title}</Link> : post.title;
 
   return (
     <div className={style.wrapper}>

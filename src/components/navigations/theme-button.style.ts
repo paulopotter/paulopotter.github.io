@@ -10,13 +10,13 @@ export const ThemeButtonStyle = createUseStyles<string, unknown, ITHEME>((theme:
     right: '3%',
     transition: 'transform 0.3s',
     zIndex: 1,
-    backgroundColor: theme.button.inverted.background,
+    backgroundColor: theme.button.background,
 
     '&:focus': {
-      outline: `3px solid ${theme.button.inverted.color}`,
+      outline: `3px solid ${theme.button.color}`,
     },
     '&:active, &:hover, &:focus': {
-      backgroundColor: theme.button.inverted.background,
+      backgroundColor: theme.button.background,
     },
 
     [`@media (min-width: ${MEDIA_QUERIES.xs})`]: {
@@ -39,7 +39,7 @@ export const ThemeButtonStyle = createUseStyles<string, unknown, ITHEME>((theme:
 
   svg: {
     transform: 'rotate(180deg)',
-    color: theme.button.inverted.color,
+    color: theme.button.color,
     width: 32,
     height: 32,
   },
