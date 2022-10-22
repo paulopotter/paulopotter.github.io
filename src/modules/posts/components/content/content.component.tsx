@@ -6,7 +6,6 @@ import rehypeSlug from 'rehype-slug';
 import rehypeFigure from 'rehype-figure';
 import remarkGfm from 'remark-gfm';
 import rehypeRewrite from 'rehype-rewrite';
-import { DiscussionEmbed } from 'disqus-react';
 import { dracula, materialOceanic } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
 import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript';
@@ -24,6 +23,7 @@ import CONFIGS from 'services/configs';
 import { PostStyle } from './content.style';
 
 import { Author as AuthorCard, Series as SeriesPosts, Related as RelatedPosts } from '../';
+import { Comments } from '../comments';
 
 const { SITE_URL, DISQUS_SITENAME } = CONFIGS;
 
@@ -162,22 +162,8 @@ export const Post = ({ post }: Props) => {
         </article>
       </section>
       <section>
-        <DiscussionEmbed
-          shortname={DISQUS_SITENAME}
-          config={{
-            url: `${
-              window.location.href.indexOf('.html') > -1
-                ? window.location.href
-                : window.location.href + '.html'
-            }`,
-            identifier: `${
-              window.location.href.indexOf('.html') > -1
-                ? window.location.href
-                : window.location.href + '.html'
-            }`,
-            title: post.title,
-            language: 'pt_BR',
-          }}
+        <Comments
+          title={post.title}
         />
       </section>
     </>
