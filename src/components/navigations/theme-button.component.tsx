@@ -22,7 +22,9 @@ export function ToggleThemeButton({ onClicked }: { onClicked?: (themeName: strin
     onClicked?.(isDarkTheme ? 'light' : 'dark');
 
     event.currentTarget.ariaLabel = `Trocar para o tema ${isDarkTheme ? 'claro' : 'escuro'}`;
-    window?.DISQUS?.host?._loadEmbed(); // to update disqus theme
+    setTimeout(() => {
+      window?.DISQUS?.host?._loadEmbed(); // to update disqus theme
+    }, 1000);
   };
 
   const styleClass = classNames(style.button, { [style.hasJs]: canAnimate });
