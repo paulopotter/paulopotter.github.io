@@ -55,6 +55,6 @@ export const Link = ({
   );
 };
 
-const isExternalLink = (url: string): boolean =>
+export const isExternalLink = (url: string): boolean =>
   (url.indexOf('http://') === 0 || url.indexOf('https://') === 0) &&
   url.indexOf(CONFIGS.SITE_URL) === -1;

@@ -1,31 +1,30 @@
-/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import rehypeSlug from 'rehype-slug';
-import rehypeFigure from 'rehype-figure';
-import remarkGfm from 'remark-gfm';
-import rehypeRewrite from 'rehype-rewrite';
 import { dracula, materialOceanic } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
-import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript';
-import scss from 'react-syntax-highlighter/dist/cjs/languages/prism/scss';
-import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
-import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown';
-import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { useTheme } from 'react-jss';
+import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
+import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
+import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown';
+import ReactMarkdown from 'react-markdown';
+import rehypeFigure from 'rehype-figure';
+import rehypeRaw from 'rehype-raw';
+import rehypeRewrite from 'rehype-rewrite';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
+import scss from 'react-syntax-highlighter/dist/cjs/languages/prism/scss';
+import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
+import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript';
+
 import { ITHEME } from 'theme';
-
-import { Head, Link } from 'components';
-import type { PostData } from '../../posts.type';
 import CONFIGS from 'services/configs';
+import { Head, Link, Image, isExternalLink } from 'components';
+import { Author as AuthorCard, Series as SeriesPosts, Related as RelatedPosts, Comments } from '../';
+
+
 import { PostStyle } from './content.style';
+import type { PostData } from '../../posts.type';
 
-import { Author as AuthorCard, Series as SeriesPosts, Related as RelatedPosts } from '../';
-import { Comments } from '../comments';
-
-const { SITE_URL, DISQUS_SITENAME } = CONFIGS;
+const { SITE_URL } = CONFIGS;
 
 interface Props {
   post: PostData;
@@ -77,7 +76,20 @@ export const Post = ({ post }: Props) => {
           </h1>
           {post?.readingTime && <small> Tempo médio de leitura: {post.readingTime}.</small>}
           <div className={style.articleContent}>
-            <CoverImage post={post} postStyle={style} />
+            {
+              post?.cover_image && (
+                <Image
+                  src={post.cover_image}
+                  alt={post.cover_image_alt}
+                  className={style}
+                  caption={{
+                    link: post.cover_image_link,
+                    className: style,
+                    text: post.cover_image_by,
+                  }}
+                />
+              )
+            }
 
             <ReactMarkdown
               skipHtml
@@ -120,17 +132,19 @@ export const Post = ({ post }: Props) => {
                     </Link>
                   );
                 },
-                img({ ...props }) {
+                img({ ...props }: {
+                  src?: string
+                  title?: string
+                  alt?: string
+                }) {
                   // TODO: corrigir imagens e descrições
-                  return (
-                    <figure className={style.articleCover}>
-                      <img
-                        className={style.articleCoverImg}
-                        src={props.src}
-                        alt={props.title ?? props.alt}
-                      />
-                    </figure>
-                  );
+                  return props.src !== undefined ? (
+                    <Image
+                      className={style}
+                      src={props.src}
+                      alt={props.title ?? props.alt}
+                    />
+                  ) : null
                 },
                 code({ inline, className, children, ...props }) {
                   const match = /language-(\w+)/.exec(className || '');
@@ -169,42 +183,4 @@ export const Post = ({ post }: Props) => {
     </>
   );
 };
-
-interface CoverImageProps {
-  post: PostData;
-  postStyle: Record<string, string>;
-}
-
-const CoverImage = ({ post, postStyle }: CoverImageProps) => {
-  return (
-    <>
-      {post?.cover_image && (
-        <figure className={postStyle.articleCover}>
-          <img
-            className={postStyle.articleCoverImg}
-            src={fixImgSRC(post.cover_image)}
-            alt={`"${post?.cover_image_alt}"`}
-          />
-          <FigureCaption post={post} postStyle={postStyle} />
-        </figure>
-      )}
-    </>
-  );
-};
-
-const FigureCaption = ({ post, postStyle }: CoverImageProps): JSX.Element | null =>
-  post?.cover_image_by ? (
-    <figcaption className={postStyle.articleCoverCredit}>
-      Créditos:{' '}
-      {post?.cover_image_link ? (
-        <Link href={post.cover_image_link}>{post.cover_image_by || ''}</Link>
-      ) : (
-        post?.cover_image_by || ''
-      )}
-    </figcaption>
-  ) : null;
-
 const fixImgSRC = (src: string): string => (isExternalLink(src) ? src : src.replace('./', '../'));
-
-const isExternalLink = (url: string): boolean =>
-  url.indexOf('http://') == 0 || url.indexOf('https://') == 0;
