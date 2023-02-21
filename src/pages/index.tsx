@@ -16,7 +16,13 @@ export default function HomePage({ posts }: { posts: PostData[] }) {
 export async function getStaticProps() {
   await generateRssFeed();
 
-  const posts = getFiltredPosts(['title', 'slug', 'date', 'category', 'cover_image', 'summary']);
+  const posts = getFiltredPosts(
+    {
+      fields: [
+        'title', 'slug', 'date', 'category', 'cover_image', 'summary'
+      ]
+    }
+  );
 
   return {
     props: { posts },

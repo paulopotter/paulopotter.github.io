@@ -117,8 +117,10 @@ export const Post = ({ post }: Props) => {
               ]}
               components={{
                 h2({ className, children, ...props }) {
+                  // eslint-disable-next-line react/prop-types
                   return !props?.id?.includes('footnote') ? (
-                    <h2 id={props.id} className={className}>
+                  // eslint-disable-next-line react/prop-types
+                    <h2 id={props?.id} className={className}>
                       {children}
                     </h2>
                   ) : (

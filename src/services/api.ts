@@ -6,7 +6,13 @@ import CONFIGS from './configs';
 import type { PostData } from '../modules/posts/posts.type';
 
 const postsDirectory = join(process.cwd(), 'src/posts');
-const getMarkdownsFiles = (): string[] => fs.readdirSync(postsDirectory);
+const tipsDirectory = join(process.cwd(), 'src/tips');
+const getMarkdownsFiles = (directoryType: 'post' | 'tips' = 'post'): string[] => {
+  if(directoryType === "tips"){
+    return fs.readdirSync(tipsDirectory);
+  }
+  return fs.readdirSync(postsDirectory);
+}
 
 type RelatedPost = {
   nextPost?: PostData;
@@ -15,14 +21,22 @@ type RelatedPost = {
 
 type PostKey = keyof PostData;
 
+type getPostProps = {
+  filename: string,
+  fields?: string[],
+  postType?: 'post' | 'tips'
+}
 /**
  * Busca um post baseado no nome do arquivo.
  * @param filename Slug ou nome do arquivo com extensão.
  * @param fields Campos do post que será retornado.
  */
-export function getPost(filename: string, fields: string[] = []): PostData | undefined {
+export function getPost({ filename, fields = [], postType = 'post' }: getPostProps): PostData | undefined {
+  if(filename === undefined){
+    return
+  }
   const slug = filename.replace(/\.md$/, ''); // Remover o .md do fim do arquivo
-  const directory = join(postsDirectory, `${slug}.md`); // Buscando pelo nome do arquivo markdown, com o .md
+  const directory = join(postType === 'post' ? postsDirectory : tipsDirectory, `${slug}.md`); // Buscando pelo nome do arquivo markdown, com o .md
   const fileContents = fs.readFileSync(directory, 'utf8'); // Ler o conteúdo do arquivo markdown
 
   /**
@@ -93,19 +107,25 @@ function getSummary(content: string): string {
 export function getAllPosts(fields?: string[]): PostData[] {
   const slugs = getMarkdownsFiles();
   return slugs
-    .map((slug: string): PostData => getPost(slug, fields) as PostData)
+    .map((slug: string): PostData => getPost({ filename:slug, fields }) as PostData)
     .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
     .filter(post => Object.keys(post).length !== 0);
 }
 
+type getFiltredPostsProps = {
+  fields?: string[],
+  filter?: string[][]
+  postType?: 'post' | 'tips'
+
+}
 /**
  * Busca posts filtrado.
  * @param fields Lista de campos a serem retornardos
  * @param filter Array de array para filtrar
  * @return PostData[]
  */
-export function getFiltredPosts(fields?: string[], filter?: string[][]): PostData[] {
-  const allPosts = getAllPosts(fields);
+export function getFiltredPosts({ fields, filter, postType = 'post' }: getFiltredPostsProps): PostData[] {
+  const allPosts = postType === 'tips'? getAllTips() : getAllPosts(fields);
 
   if (filter === undefined || filter?.length === 0) return allPosts;
 
@@ -204,4 +224,13 @@ export function getRelatedSeries(serie: string, postTitle = ''): unknown {
 function getParameterCaseInsensitive(object: Record<string, unknown>, key: string): string {
   const asLowercase = key.toLowerCase();
   return Object.keys(object).find(key => key.toLowerCase() === asLowercase) || key;
+}
+
+
+export function getAllTips() {
+  const slugs = getMarkdownsFiles('tips');
+  return slugs
+    .map((slug: string): PostData => getPost({ filename: slug, postType: "tips" }) as PostData)
+    // .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
+    .filter(post => Object.keys(post).length !== 0);
 }

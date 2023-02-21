@@ -10,21 +10,23 @@ export default function PostsPage({ post }: { post: PostData }) {
 }
 
 export async function getStaticProps({ params }): GetStaticProps {
-  const post = getPost(params.slug, [
-    'title',
-    'date',
-    'author',
-    'slug',
-    'content',
-    'cover_image',
-    'cover_image_alt',
-    'cover_image_link',
-    'cover_image_by',
-    'category',
-    'summary',
-    'series',
-    'seriesRelated',
-  ]);
+  const post = getPost({
+    filename: params.slug,
+    fields: [
+      'title',
+      'date',
+      'author',
+      'slug',
+      'content',
+      'cover_image',
+      'cover_image_alt',
+      'cover_image_link',
+      'cover_image_by',
+      'category',
+      'summary',
+      'series',
+      'seriesRelated',
+    ] });
 
   const md = await markdown.toHTML(post.content);
   post.content = md.value;

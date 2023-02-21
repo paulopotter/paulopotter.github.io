@@ -58,6 +58,7 @@ const menu: {
     //  'Labs': '/labs',
     'Sobre Mim': '/author',
     //  'Talks / Palestras': '/talks',
+    'Faça seu orçamento!': '/estimate',
   },
 };
 

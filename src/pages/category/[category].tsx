@@ -17,10 +17,10 @@ export default function HomePage({ posts }: { posts: PostData[] }) {
 
 export async function getStaticProps({ params }): GetStaticProps {
   const { category } = params;
-  const posts = getFiltredPosts(
-    ['title', 'slug', 'date', 'category', 'cover_image', 'summary'],
-    [['category', category.toLowerCase()]]
-  );
+  const posts = getFiltredPosts({
+    fields: ['title', 'slug', 'date', 'category', 'cover_image', 'summary'],
+    filter: [['category', category.toLowerCase()]]
+  });
 
   return posts.length === 0
     ? { notFound: true }
@@ -30,7 +30,9 @@ export async function getStaticProps({ params }): GetStaticProps {
 }
 
 export function getStaticPaths(): GetStaticPaths {
-  const posts = getFiltredPosts(['category']);
+  const posts = getFiltredPosts({
+    fields: ['category']
+  });
   let categories = [];
   posts?.forEach(post => {
     categories.push(post.category);
