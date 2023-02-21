@@ -11,9 +11,9 @@ export const SectionStyle = createUseStyles<string, unknown, ITHEME>((theme: ITH
     justifyContent: 'space-between',
     minHeight: 150,
     position: 'relative',
+    flexDirection: 'column',
 
     [`@media (max-width: ${MEDIA_QUERIES.xs})`]: {
-      flexDirection: 'column',
       margin: '.5em 0',
       maxWidth: '100%',
       width: '100%',

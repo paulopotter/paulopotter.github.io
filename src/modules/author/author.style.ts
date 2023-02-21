@@ -1,12 +1,9 @@
 import { createUseStyles } from 'react-jss';
-import { ITHEME } from 'theme';
+import { ITHEME, MEDIA_QUERIES } from 'theme';
 
 export const AuthorStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
   content: {
-    margin: '1rem .5rem',
-    padding: '1rem',
-    backgroundColor: theme.card.background,
-    boxShadow: ['0.13em', '0.13em', '0.25em', '0', theme.boxShadow],
+    display: 'block',
   },
   img: {
     borderRadius: '15%',
@@ -14,6 +11,12 @@ export const AuthorStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHE
     display: 'inline-block',
     float: 'right',
     verticalAlign: 'top',
+
+    [`@media (max-width: ${MEDIA_QUERIES.xs})`]: {
+      display: 'block',
+      margin: '0 auto',
+      float: 'initial'
+    },
   },
 
   name: {
@@ -32,34 +35,13 @@ export const AuthorStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHE
     paddingRight: '1em',
   },
 
-  sectionDivision: {
-    clear: 'both',
-  },
-
-  timeline: {
-    borderLeft: '2px solid',
-  },
-
-  timelineMark: {
-    listStyle: 'inside disclosure-closed',
-    padding: '1em 0',
-
-    '&:first-of-type': {
-      padding: 0,
-    },
-  },
-  timelineDate: {
+  sectionTitle: {
+    fontSize: '1.5em',
     fontWeight: 'bold',
   },
-  timelineContent: {
-    display: 'block',
-    paddingLeft: '1em',
-  },
-  timelineJobTitle: {
-    fontSize: '1.2em',
-  },
-  timelineCompany: {
-    fontStyle: 'italic',
+
+  sectionDivision: {
+    clear: 'both',
   },
 
   languageIcon: {

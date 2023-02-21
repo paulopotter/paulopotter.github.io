@@ -7,7 +7,7 @@ import { LinkStyle } from './link.style';
 interface LinkProps {
   className?: string;
   ariaLabel?: string;
-  children: any;
+  children?: any;
   disableIcon?: boolean;
   href: string;
   tabIndex?: number;
@@ -35,7 +35,7 @@ export const Link = ({
         className={className}
         aria-label={ariaLabel}
       >
-        {children}
+        {children ?? href}
         {!disableIcon && <RiShareBoxLine className={style.icon} />}
       </a>
     </NextLink>
@@ -49,7 +49,7 @@ export const Link = ({
         className={className}
         aria-label={ariaLabel}
       >
-        {children}
+        {children ?? href}
       </a>
     </NextLink>
   );
