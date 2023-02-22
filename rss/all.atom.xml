@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://umdevqualquer.com.br</id>
     <title>Um dev qualquer || Paulo Oliveira</title>
-    <updated>2023-02-21T20:04:39.071Z</updated>
+    <updated>2023-02-22T12:00:44.466Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Paulo Oliveira</name>
@@ -18,7 +18,7 @@
         <title type="html"><![CDATA[Utilizando ARIA no seu projeto - Tooltip]]></title>
         <id>https://umdevqualquer.com.br/utilizando-aria-no-seu-projeto-tooltip?resource=rss</id>
         <link href="https://umdevqualquer.com.br/utilizando-aria-no-seu-projeto-tooltip?resource=rss"/>
-        <updated>2023-02-21T20:04:39.082Z</updated>
+        <updated>2023-02-22T12:00:44.495Z</updated>
         <summary type="html"><![CDATA[<p>Fala aê, como cê ta?!</p>
 <p>Continuando com a série de posts que estou fazendo sobre as propriedades ARIA, hoje é o dia da role <code>tooltip</code>.
 Essa é uma role bem simples e rápida, veja só...</p>
@@ -31,7 +31,7 @@ Essa é uma role bem simples e rápida, veja só...</p>
         <title type="html"><![CDATA[Palestra: Apps para SmartTv - BrazilJS Conf]]></title>
         <id>https://umdevqualquer.com.br/palestra-apps-para-smarttv-braziljs-conf?resource=rss</id>
         <link href="https://umdevqualquer.com.br/palestra-apps-para-smarttv-braziljs-conf?resource=rss"/>
-        <updated>2023-02-21T20:04:39.087Z</updated>
+        <updated>2023-02-22T12:00:44.500Z</updated>
         <summary type="html"><![CDATA[<p>E aê, belezinha?</p>
 <p>Ta aqui, como prometido no <a href="./braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo">meu último post</a>, o vídeo da minha palestra na Braziljs falando sobre TV.</p>
 ]]></summary>
@@ -44,7 +44,7 @@ Essa é uma role bem simples e rápida, veja só...</p>
         <title type="html"><![CDATA[BrazilJS Conf - Minha história com a maior conferência JS do mundo!]]></title>
         <id>https://umdevqualquer.com.br/braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo?resource=rss</id>
         <link href="https://umdevqualquer.com.br/braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo?resource=rss"/>
-        <updated>2023-02-21T20:04:39.088Z</updated>
+        <updated>2023-02-22T12:00:44.501Z</updated>
         <summary type="html"><![CDATA[<p>Hoje eu não vou falar de código. Vou falar de um sonho!
 Contarei desde quando eu fui pela primeira vez até como eu virei palestrante da BrazilJS 2021 😆</p>
 ]]></summary>
@@ -56,7 +56,7 @@ Contarei desde quando eu fui pela primeira vez até como eu virei palestrante da
         <title type="html"><![CDATA[Utilizando ARIA no seu projeto - Menu]]></title>
         <id>https://umdevqualquer.com.br/utilizando-aria-no-seu-projeto-menu?resource=rss</id>
         <link href="https://umdevqualquer.com.br/utilizando-aria-no-seu-projeto-menu?resource=rss"/>
-        <updated>2023-02-21T20:04:39.093Z</updated>
+        <updated>2023-02-22T12:00:44.509Z</updated>
         <summary type="html"><![CDATA[<p>Esse é o primeiro post da série que estarei fazendo sobre as propriedades ARIA para você saber como colocar no seu projeto.
 Para começar eu resolvi começar com a navegação, então estarei falando sobre as roles: <code>menu</code>, <code>menuitem</code> ou <code>menubar</code>.</p>
 ]]></summary>
@@ -68,7 +68,7 @@ Para começar eu resolvi começar com a navegação, então estarei falando sobr
         <title type="html"><![CDATA[Você já pensou sobre Acessibilidade (a11y)?]]></title>
         <id>https://umdevqualquer.com.br/voce-ja-pensou-sobre-acessibilidade-a11y?resource=rss</id>
         <link href="https://umdevqualquer.com.br/voce-ja-pensou-sobre-acessibilidade-a11y?resource=rss"/>
-        <updated>2023-02-21T20:04:39.095Z</updated>
+        <updated>2023-02-22T12:00:44.511Z</updated>
         <summary type="html"><![CDATA[<p>Hoje eu vou falar um pouco do ~pouco~ conhecimento que tenho sobre acessibilidade na web, e o porquê você deveria conhecer também.
 Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso incentive a você procurar saber mais também.</p>
 ]]></summary>
@@ -80,7 +80,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
         <title type="html"><![CDATA[Ellipsis em mais de uma linha apenas com css]]></title>
         <id>https://umdevqualquer.com.br/ellipsis-em-mais-de-uma-linha-apenas-com-css?resource=rss</id>
         <link href="https://umdevqualquer.com.br/ellipsis-em-mais-de-uma-linha-apenas-com-css?resource=rss"/>
-        <updated>2023-02-21T20:04:39.096Z</updated>
+        <updated>2023-02-22T12:00:44.517Z</updated>
         <summary type="html"><![CDATA[<p>Fala minha galera, hoje a dica é rápida.</p>
 <p>Complementando o <a href="./como-fazer-reticenciasellipsis-apenas-com-css.html">post feito antes</a>, onde e</p>
 ]]></summary>
@@ -92,7 +92,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
         <title type="html"><![CDATA[Meus plugins favoritos para vscode]]></title>
         <id>https://umdevqualquer.com.br/meus-plugins-favoritos-para-vscode?resource=rss</id>
         <link href="https://umdevqualquer.com.br/meus-plugins-favoritos-para-vscode?resource=rss"/>
-        <updated>2023-02-21T20:04:39.097Z</updated>
+        <updated>2023-02-22T12:00:44.517Z</updated>
         <summary type="html"><![CDATA[<p>Fala ae pessoal, tudo tranquilo?</p>
 <p>Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa querida internet procurando por plugins para facilitar a minha vida.</p>
 ]]></summary>
@@ -104,7 +104,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
         <title type="html"><![CDATA[Criando sua primeira APP para Smart TVs (Parte 2)]]></title>
         <id>https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2?resource=rss</id>
         <link href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs-parte-2?resource=rss"/>
-        <updated>2023-02-21T20:04:39.101Z</updated>
+        <updated>2023-02-22T12:00:44.527Z</updated>
         <summary type="html"><![CDATA[<p>Iai meu Polvo 🐙 como cês tão?</p>
 <p>Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.</p>
 ]]></summary>
@@ -117,7 +117,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
         <title type="html"><![CDATA[Criando sua primeira APP para Smart TVs]]></title>
         <id>https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs?resource=rss</id>
         <link href="https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs?resource=rss"/>
-        <updated>2023-02-21T20:04:39.103Z</updated>
+        <updated>2023-02-22T12:00:44.528Z</updated>
         <summary type="html"><![CDATA[<p>Fala ae, tranquilinho?</p>
 <p>Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido <a href="./como-e-o-desenvolvimento-para-smart-tvs.html">neste post</a>. Recomendo a leitura, é uma boa introdução.</p>
 ]]></summary>
@@ -130,7 +130,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
         <title type="html"><![CDATA[Como é o desenvolvimento para Smart TVs]]></title>
         <id>https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs?resource=rss</id>
         <link href="https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs?resource=rss"/>
-        <updated>2023-02-21T20:04:39.105Z</updated>
+        <updated>2023-02-22T12:00:44.534Z</updated>
         <summary type="html"><![CDATA[<p>Fala galera, blz?</p>
 <p>Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na <a href="https://globo.com">globo.com</a>, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.</p>
 ]]></summary>
@@ -143,7 +143,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
         <title type="html"><![CDATA[Google Assistant - o que é?]]></title>
         <id>https://umdevqualquer.com.br/google-assistant-o-que-e?resource=rss</id>
         <link href="https://umdevqualquer.com.br/google-assistant-o-que-e?resource=rss"/>
-        <updated>2023-02-21T20:04:39.109Z</updated>
+        <updated>2023-02-22T12:00:44.538Z</updated>
         <summary type="html"><![CDATA[<p>E ae, como vocês tão?</p>
 <p>E um hackday[^1] lá na <a href="https://globo.com">globo.com</a> eu tive a idéia de criar um assistente para um dos produtos da <a href="https://globo.com">globo.com</a>.</p>
 ]]></summary>
@@ -154,7 +154,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
         <title type="html"><![CDATA[Screamer-js - Um plugin js de notificação para Browser]]></title>
         <id>https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser?resource=rss</id>
         <link href="https://umdevqualquer.com.br/screamer-js-um-plugin-js-de-notificacao-para-browser?resource=rss"/>
-        <updated>2023-02-21T20:04:39.110Z</updated>
+        <updated>2023-02-22T12:00:44.538Z</updated>
         <summary type="html"><![CDATA[<p>Fala pessoal, como é que cês tão?! 😜</p>
 <p>Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser.</p>
 ]]></summary>
@@ -165,7 +165,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
         <title type="html"><![CDATA[Como fazer reticências(ellipsis) apenas com css]]></title>
         <id>https://umdevqualquer.com.br/como-fazer-reticenciasellipsis-apenas-com-css?resource=rss</id>
         <link href="https://umdevqualquer.com.br/como-fazer-reticenciasellipsis-apenas-com-css?resource=rss"/>
-        <updated>2023-02-21T20:04:39.111Z</updated>
+        <updated>2023-02-22T12:00:44.539Z</updated>
         <summary type="html"><![CDATA[<p>Fala pessoal, como é que cês tão?! 😜</p>
 <p>Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e colocar reticências apenas com CSS!</p>
 ]]></summary>
