@@ -24,33 +24,19 @@ export const Link = ({
   title,
 }: LinkProps): JSX.Element => {
   const style = LinkStyle();
+  const isExternal =  isExternalLink(href)
 
-  return isExternalLink(href) ? (
-    <NextLink href={href}>
-      <a
-        target="_blank"
-        rel="noreferrer"
-        tabIndex={tabIndex}
-        title={title}
-        className={className}
-        aria-label={ariaLabel}
-      >
-        {children ?? href}
-        {!disableIcon && <RiShareBoxLine className={style.icon} />}
-      </a>
-    </NextLink>
-  ) : (
-    <NextLink href={href}>
-      <a
-        target="_self"
-        rel="noreferrer"
-        tabIndex={tabIndex}
-        title={title}
-        className={className}
-        aria-label={ariaLabel}
-      >
-        {children ?? href}
-      </a>
+  return (
+    <NextLink href={href}
+      aria-label={ariaLabel}
+      className={className}
+      rel="noreferrer"
+      tabIndex={tabIndex}
+      target={isExternal ? "_blank" : "_self"}
+      title={title}
+    >
+      {children ?? href}
+      {(isExternal && !disableIcon) && <RiShareBoxLine className={style.icon} />}
     </NextLink>
   );
 };

@@ -1,5 +1,3 @@
-const withTM = require('next-transpile-modules')(['tailwindcss']);
-
 const withMDX = require('@next/mdx')({
   extension: /\.md?x?$/,
   options: {
@@ -19,5 +17,3 @@ module.exports = withMDX({
 module.exports = {
   trailingSlash: true,
 }
-
-module.exports = withTM({});

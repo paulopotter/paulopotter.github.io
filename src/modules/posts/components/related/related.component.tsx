@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import { RelatedPostsStyle } from './related.style';
 import { useTheme } from 'react-jss';
 import { ITHEME } from 'theme';
+import { Link } from 'components'
 
 type RelatedProps = {
   nextPost?: posts;
@@ -22,7 +23,7 @@ export const Related = ({ nextPost, prevPost }: RelatedProps): JSX.Element | nul
   return (
     <nav className={style.wrapper}>
       {prevPost && (
-        <a
+        <Link
           href={`./${prevPost.slug}`}
           className={classNames({
             [style.navLink]: true,
@@ -31,10 +32,10 @@ export const Related = ({ nextPost, prevPost }: RelatedProps): JSX.Element | nul
           })}
         >
           &lt; {prevPost.title}
-        </a>
+        </Link>
       )}
       {nextPost && (
-        <a
+        <Link
           href={`./${nextPost.slug}`}
           className={classNames({
             [style.navLink]: true,
@@ -43,7 +44,7 @@ export const Related = ({ nextPost, prevPost }: RelatedProps): JSX.Element | nul
           })}
         >
           {nextPost.title} &gt;
-        </a>
+        </Link>
       )}
     </nav>
   );
