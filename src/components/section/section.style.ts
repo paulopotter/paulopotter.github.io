@@ -14,7 +14,7 @@ export const SectionStyle = createUseStyles<string, unknown, ITHEME>((theme: ITH
     flexDirection: 'column',
 
     [`@media (max-width: ${MEDIA_QUERIES.xs})`]: {
-      margin: '.5em 0',
+      margin: '.5em 0 1em',
       maxWidth: '100%',
       width: '100%',
     },

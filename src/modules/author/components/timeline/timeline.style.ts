@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import { ITHEME } from 'theme';
 
-export const TimelineStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
+export const TimelineStyle = createUseStyles<string, unknown, ITHEME>(() => ({
 
   timeline: {
     borderLeft: '2px solid',

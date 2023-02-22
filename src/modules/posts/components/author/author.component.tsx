@@ -9,6 +9,8 @@ import { CalendlySvg } from 'assets/images';
 
 const { AUTHOR_IMG, SOCIAL } = CONFIGS;
 
+type BSIconKeysType = keyof typeof BSIcons;
+
 export function Author() {
   const theme: ITHEME = useTheme();
   const style = AuthorCardStyle({ theme });
@@ -23,38 +25,41 @@ export function Author() {
         className={classNames(style.img)}
         id="authorImage"
       />
+      <div>
+        <Link href="author" className={style.name}>
+          Paulo Oliveira
+        </Link>
 
-      <Link href="author" className={style.name}>
-        Paulo Oliveira
-      </Link>
+        <ul className={style.socialList}>
+          {SOCIAL?.map((social, index) => {
+            const socialName: BSIconKeysType = social.name as BSIconKeysType;
+            const SocialIcon = BSIcons[socialName] as unknown as any;
 
-      <ul className={style.socialList}>
-        {SOCIAL?.map((social, index) => {
-          // @ts-expect-error: I need tiping social
-          const SocialIcon = BSIcons[social.name];
-          return (
-            <li className={style.socialItem} key={`${social.name}-${index}`}>
-              <a href={social.url} title={social.name}>
-                {social.name.toLowerCase() === 'calendly' ? (
-                  <CalendlySvg
-                    className={style.socialIcon}
-                    tabIndex={-1}
-                    alt={`${social.name}`}
-                    title={`${social.name}`}
-                  />
-                ) : (
-                  <SocialIcon
-                    className={style.socialIcon}
-                    tabIndex={-1}
-                    alt={`${social.name}`}
-                    title={`${social.name}`}
-                  />
-                )}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+            return (
+              <li className={style.socialItem} key={`${social.name}-${index}`}>
+                <a href={social.url} className={style.socialItemLink} title={social.name}>
+                  {social.name.toLowerCase() === 'calendly' ? (
+                    <CalendlySvg
+                      className={style.socialIcon}
+                      tabIndex={-1}
+                      alt={`${social.name}`}
+                      title={`${social.name}`}
+                    />
+                  ) : (
+                    <SocialIcon
+                      className={style.socialIcon}
+                      tabIndex={-1}
+                      alt={`${social.name}`}
+                      title={`${social.name}`}
+                    />
+                  )}
+                  <span className={style.socialIconName}>{social.name}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </header>
   );
 }

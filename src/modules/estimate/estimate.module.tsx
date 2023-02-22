@@ -18,7 +18,7 @@ export function EstimateView() {
             minWidth: "320px",
             width: '100%',
             height: "740px",
-            margin: 0,
+            margin: '1em 0',
           }}>Carregando…</iframe>
 
         <span>
