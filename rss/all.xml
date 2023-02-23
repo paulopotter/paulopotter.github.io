@@ -4,7 +4,7 @@
         <title>Um dev qualquer || Paulo Oliveira</title>
         <link>https://umdevqualquer.com.br</link>
         <description>Blog pessoal onde mostro um pouco do meu aprendizado.</description>
-        <lastBuildDate>Wed, 22 Feb 2023 12:00:44 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 23 Feb 2023 00:39:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
@@ -75,18 +75,6 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <category>Acessibilidade</category>
             <category>Smart TV</category>
             <enclosure url="https://umdevqualquer.com.br/images/acessibility-uxplanet.jpeg" length="0" type="image/jpeg"/>
-        </item>
-        <item>
-            <title><![CDATA[Ellipsis em mais de uma linha apenas com css]]></title>
-            <link>https://umdevqualquer.com.br/ellipsis-em-mais-de-uma-linha-apenas-com-css?resource=rss</link>
-            <guid>https://umdevqualquer.com.br/ellipsis-em-mais-de-uma-linha-apenas-com-css?resource=rss</guid>
-            <pubDate>Tue, 16 Feb 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Fala minha galera, hoje a dica é rápida.</p>
-<p>Complementando o <a href="./como-fazer-reticenciasellipsis-apenas-com-css.html">post feito antes</a>, onde e</p>
-]]></description>
-            <category>Css</category>
-            <category>Tips</category>
-            <enclosure url="https://umdevqualquer.com.br/images/reticências.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Meus plugins favoritos para vscode]]></title>
@@ -160,18 +148,6 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
 ]]></description>
             <category>Js</category>
             <enclosure url="https://umdevqualquer.com.br/images/Screamer.png" length="0" type="image/png"/>
-        </item>
-        <item>
-            <title><![CDATA[Como fazer reticências(ellipsis) apenas com css]]></title>
-            <link>https://umdevqualquer.com.br/como-fazer-reticenciasellipsis-apenas-com-css?resource=rss</link>
-            <guid>https://umdevqualquer.com.br/como-fazer-reticenciasellipsis-apenas-com-css?resource=rss</guid>
-            <pubDate>Mon, 11 Sep 2017 00:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Fala pessoal, como é que cês tão?! 😜</p>
-<p>Hoje eu to vindo aqui para mostrar como fazer para dar um crop no texto e colocar reticências apenas com CSS!</p>
-]]></description>
-            <category>Css</category>
-            <category>Tips</category>
-            <enclosure url="https://umdevqualquer.com.br/images/reticências.jpg" length="0" type="image/jpg"/>
         </item>
     </channel>
 </rss>
