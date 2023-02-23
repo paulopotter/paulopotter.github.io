@@ -56,8 +56,9 @@ const menu: {
   MENU_LINKS: {
     Home: '/',
     //  'Labs': '/labs',
-    'Sobre Mim': '/author',
+    'Dicas / Snippets': '/tips',
     //  'Talks / Palestras': '/talks',
+    'Sobre Mim': '/author',
     'Faça seu orçamento!': '/estimate',
   },
 };

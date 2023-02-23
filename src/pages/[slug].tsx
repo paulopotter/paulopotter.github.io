@@ -1,5 +1,5 @@
 // @ts-nocheck
-import type { GetStaticProps, GetStaticPaths } from 'next';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import markdown from '../services/markdown';
 import { getPost, getAllPosts, getRelatedPosts, getRelatedSeries } from '../services/api';
 import type { PostData } from '../modules/posts/posts.type';

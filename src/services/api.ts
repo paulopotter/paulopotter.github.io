@@ -5,9 +5,11 @@ import CONFIGS from './configs';
 
 import type { PostData } from '../modules/posts/posts.type';
 
+type PostsType = 'post' | 'tips'
+
 const postsDirectory = join(process.cwd(), 'src/posts');
 const tipsDirectory = join(process.cwd(), 'src/tips');
-const getMarkdownsFiles = (directoryType: 'post' | 'tips' = 'post'): string[] => {
+const getMarkdownsFiles = (directoryType: PostsType = 'post'): string[] => {
   if(directoryType === "tips"){
     return fs.readdirSync(tipsDirectory);
   }
@@ -24,7 +26,7 @@ type PostKey = keyof PostData;
 type getPostProps = {
   filename: string,
   fields?: string[],
-  postType?: 'post' | 'tips'
+  postType?: PostsType
 }
 /**
  * Busca um post baseado no nome do arquivo.
@@ -100,32 +102,33 @@ function getSummary(content: string): string {
   return content.substr(0, substrLength);
 }
 
+
 /**
  * Busca todos os posts e retorna posts com os campos selecionados.
  * @param fields Lista de campos a serem retonados dos posts.
  */
 export function getAllPosts(fields?: string[]): PostData[] {
-  const slugs = getMarkdownsFiles();
+  const slugs = getMarkdownsFiles('post');
   return slugs
     .map((slug: string): PostData => getPost({ filename:slug, fields }) as PostData)
     .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
     .filter(post => Object.keys(post).length !== 0);
 }
 
-type getFiltredPostsProps = {
-  fields?: string[],
-  filter?: string[][]
-  postType?: 'post' | 'tips'
+// type getFiltredPostsProps = {
+//   fields?: string[],
+//   filter?: string[][]
+//   postType?: PostsType
 
-}
+// }
 /**
  * Busca posts filtrado.
  * @param fields Lista de campos a serem retornardos
  * @param filter Array de array para filtrar
  * @return PostData[]
  */
-export function getFiltredPosts({ fields, filter, postType = 'post' }: getFiltredPostsProps): PostData[] {
-  const allPosts = postType === 'tips'? getAllTips() : getAllPosts(fields);
+export function getFiltredPosts(fields?: string[], filter?: string[][]): PostData[] {
+  const allPosts =  getAllPosts(fields);
 
   if (filter === undefined || filter?.length === 0) return allPosts;
 
@@ -197,7 +200,7 @@ function filterRelatedPosts(
  * @param postTitle ?
  */
 export function getRelatedSeries(serie: string, postTitle = ''): unknown {
-  const posts = getAllPosts(['series', 'title', 'slug', 'date']);
+  const posts = getAllPosts( ['series', 'title', 'slug', 'date'] );
 
   const relatedPosts = posts
     // @ts-expect-error: i will grow up post type
@@ -226,11 +229,13 @@ function getParameterCaseInsensitive(object: Record<string, unknown>, key: strin
   return Object.keys(object).find(key => key.toLowerCase() === asLowercase) || key;
 }
 
-
-export function getAllTips() {
+type getAllTipsProps = {
+  fields?: string[]
+}
+export function getAllTips({ fields = [] }: getAllTipsProps) {
   const slugs = getMarkdownsFiles('tips');
   return slugs
-    .map((slug: string): PostData => getPost({ filename: slug, postType: "tips" }) as PostData)
-    // .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
+    .map((slug: string): PostData => getPost({ filename: slug, fields ,postType: "tips" }) as PostData)
+    .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
     .filter(post => Object.keys(post).length !== 0);
 }
