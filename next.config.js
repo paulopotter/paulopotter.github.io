@@ -1,3 +1,5 @@
+const withTM = require('next-transpile-modules')(['tailwindcss']);
+
 const withMDX = require('@next/mdx')({
   extension: /\.md?x?$/,
   options: {
@@ -7,13 +9,13 @@ const withMDX = require('@next/mdx')({
     // providerImportSource: "@mdx-js/react",
   },
 })
-
 module.exports = withMDX({
   // Append the default value with md extensions
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   target: 'serverless',
 })
-
 module.exports = {
   trailingSlash: true,
 }
+
+module.exports = withTM({});

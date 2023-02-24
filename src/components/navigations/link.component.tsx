@@ -27,16 +27,16 @@ export const Link = ({
   const isExternal =  isExternalLink(href)
 
   return (
-    <NextLink href={href}
-      aria-label={ariaLabel}
-      className={className}
-      rel="noreferrer"
-      tabIndex={tabIndex}
-      target={isExternal ? "_blank" : "_self"}
-      title={title}
-    >
-      {children ?? href}
-      {(isExternal && !disableIcon) && <RiShareBoxLine className={style.icon} />}
+    <NextLink href={href}>
+      <a aria-label={ariaLabel}
+        className={className}
+        rel="noreferrer"
+        tabIndex={tabIndex}
+        target={isExternal ? "_blank" : "_self"}
+        title={title}>
+        {children ?? href}
+        {(isExternal && !disableIcon) && <RiShareBoxLine className={style.icon} />}
+      </a>
     </NextLink>
   );
 };
