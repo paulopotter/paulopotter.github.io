@@ -23,6 +23,7 @@
     "removeComments": false,
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "strictNullChecks": true,
     "sourceMap": true,
     "strict": true,
     "target": "esnext"

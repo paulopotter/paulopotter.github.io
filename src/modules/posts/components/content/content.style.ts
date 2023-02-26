@@ -18,19 +18,6 @@ export const PostStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME
     fontSize: '2em',
     fontWeight: 'bold',
   },
-  articleCover: {
-    marginTop: '2em',
-    textAlign: 'center',
-  },
-  articleCoverImg: {
-    margin: ['0', 'auto'],
-    maxWidth: '100%',
-    textAlign: 'center',
-  },
-  articleCoverCredit: {
-    fontSize: '0.7em',
-    fontStyle: 'italic',
-  },
   articleContent: {
     fontSize: '1em',
 
@@ -70,10 +57,6 @@ export const PostStyle = createUseStyles<string, unknown, ITHEME>((theme: ITHEME
     },
 
     '& table': { ...table(theme) },
-  },
-  contentFigure: {
-    maxWidth: '100%',
-    textAlign: 'center',
   },
 }));
 

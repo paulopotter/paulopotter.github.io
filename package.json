@@ -4,8 +4,9 @@
   "private": true,
   "engines": {
     "node": ">=16",
+    "pnpm": ">=7",
     "yarn": ">=1.22",
-    "npm": "prefer-pnpm"
+    "npm": "please-prefer-pnpm"
   },
   "scripts": {
     "dev": "next dev",
