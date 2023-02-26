@@ -25,9 +25,7 @@
     "@babel/core": "^7.18.0",
     "@babel/plugin-proposal-logical-assignment-operators": "^7.17.12",
     "@mapbox/rehype-highlight-code-block": "^1.0.0",
-    "@mdx-js/loader": "^2.1.1",
     "@mindyjs/icons": "^0.1.6",
-    "@next/mdx": "^12.1.6",
     "classnames": "^2.3.1",
     "dayjs": "^1.11.3",
     "disqus-react": "^1.1.3",
@@ -36,7 +34,6 @@
     "jss-plugin-nested": "^10.9.0",
     "next": "^12.1.6",
     "next-seo": "^5.5.0",
-    "next-transpile-modules": "^9.0.0",
     "react": "^18.1.0",
     "react-bootstrap-icons": "^1.8.4",
     "react-devicons": "^2.14.0",
@@ -60,9 +57,7 @@
     "remark-remove-comments": "^0.2.0",
     "remark-unwrap-images": "^3.0.1",
     "slugify": "^1.6.5",
-    "styled-components": "^5.3.5",
-    "unified": "^10.1.2",
-    "yet-another-react-lightbox": "^2.1.1"
+    "unified": "^10.1.2"
   },
   "devDependencies": {
     "@babel/plugin-transform-typescript": "^7.18.1",

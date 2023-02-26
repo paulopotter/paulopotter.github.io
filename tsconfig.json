@@ -27,6 +27,6 @@
     "strict": true,
     "target": "esnext"
   },
-  "exclude": ["next.config.js", "**/*.md"],
+  "exclude": ["next.config.mjs", "**/*.md"],
   "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"]
 }

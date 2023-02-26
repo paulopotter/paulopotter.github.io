@@ -127,19 +127,6 @@ export function TipsView({ posts }: HomeView): JSX.Element {
                 {post.content!}
               </ReactMarkdown>
             </div>
-            {/* {summary({ index, post })}
-            <footer className={style.category}>
-              <span aria-label="Data de pulicação:">
-                {dayjs(post.date, DATE_DEFAULT_FORMAT, 'pt', true).format(POST_DATE_FORMAT).toString()}
-              </span>{' '}
-              -{' '}
-              {post?.category?.map((cat, categoryIndex, arr) => (
-                <span key={`${index}-category-${categoryIndex}`}>
-                  <Link href={`/category/${cat.toLowerCase()}`}>{cat.toUpperCase()}</Link>
-                  {categoryIndex < arr.length - 1 ? ' - ' : null}
-                </span>
-              ))}
-            </footer> */}
           </div>
         </article>
       ))}
