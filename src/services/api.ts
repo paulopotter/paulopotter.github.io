@@ -64,10 +64,21 @@ export function getPost({ filename, fields = [], postType = 'post' }: getPostPro
     }
     switch (lowerField) {
       case 'category':
-        post[lowerField] = data?.[getParameterCaseInsensitive(data, 'category')]
-          ?.split(',')
-          ?.map((item: string) => item.trim());
+        if(typeof data?.[getParameterCaseInsensitive(data, 'category')] === 'object'){
+          post[lowerField] = data?.[getParameterCaseInsensitive(data, 'category')]
+        } else {
+          post[lowerField] = data?.[getParameterCaseInsensitive(data, 'category')]
+            ?.split(',')
+            ?.map((item: string) => item.trim());
+        }
         break;
+      case 'date':
+        if(typeof data?.[getParameterCaseInsensitive(data, field)] === 'object') {
+          post[lowerField] = data?.[getParameterCaseInsensitive(data, field)].string
+        } else {
+          post[lowerField] = data?.[getParameterCaseInsensitive(data, field)]
+        }
+        break
       case 'content':
         post[lowerField] = content;
         break;
@@ -79,7 +90,7 @@ export function getPost({ filename, fields = [], postType = 'post' }: getPostPro
         break;
       case 'cover_image':
         post[lowerField] =
-          CONFIGS.SITE_URL + data[getParameterCaseInsensitive(data, field)].replace('./', '/');
+          CONFIGS.SITE_URL + data[getParameterCaseInsensitive(data, field)].replace('./', '/').replace('public/', '/');
         break;
       default:
         if (data[getParameterCaseInsensitive(data, field)])
