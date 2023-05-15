@@ -20,8 +20,8 @@ export interface PostMetaStructure {
   }
   category?: string[]
   cover_image_alt?: string
-  cover_image_link?: string
-  cover_image_by?: string
+  cover_image_link: string | null
+  cover_image_by?: string | null
   // Necessário para a integração com o notion
   Status: string
   // Gerado pelo o notion

@@ -4,9 +4,9 @@ import { Link } from '../navigations';
 import { ImagesStyle } from './image.style';
 
 type Caption = {
-  link?: string,
+  link?: string | null,
   className?: Record<string, string>,
-  text?: string
+  text?: string | null
 }
 interface IImage {
   alt?: string
@@ -46,7 +46,7 @@ const FigureCaption = ({
   className: aditionalClassName,
   text,
 }: Caption): JSX.Element | null => {
-  if(text === undefined) {
+  if(!text) {
     return null
   }
   const style = ImagesStyle()

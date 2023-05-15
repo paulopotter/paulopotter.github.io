@@ -1,7 +1,8 @@
 ---
 title: Screamer-js - Um plugin js de notificação para Browser
-Category: Js
-Date: "2017-09-13"
+category:
+ - Js
+date: "2017-09-13"
 cover_image: ./images/Screamer.png
 cover_image_alt: Screamer Logo
 ---
@@ -10,7 +11,7 @@ Fala pessoal, como é que cês tão?! 😜
 
 Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser.
 
-<!-- PELICAN_END_SUMMARY -->
+<!-- END_SUMMARY -->
 Em um hack-day[^1] na globo.com eu e o [Willian Justen](https://willianjusten.com.br/) fizemos um plugin javascript sanar esse problema. E esse foi quando o [Screamer-js](https://github.com/willianjusten/screamer-js) nasceu.
 
 

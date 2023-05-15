@@ -1,7 +1,9 @@
 ---
-Title: Como fazer reticências(ellipsis) apenas com css
-Category: Css, Tips
-Date: "2017-09-11"
+title: Como fazer reticências(ellipsis) apenas com css
+category:
+    - Css
+    - Tips
+date: "2017-09-11"
 
 ---
 

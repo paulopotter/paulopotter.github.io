@@ -1,8 +1,10 @@
 ---
-Title: Utilizando ARIA no seu projeto - Tooltip
-Category: Acessibilidade, HTML
-Date: '2022-07-17'
-Series: Utilizando ARIA no seu projeto
+title: Utilizando ARIA no seu projeto - Tooltip
+category:
+ - Acessibilidade
+ - HTML
+date: '2022-07-17'
+series: Utilizando ARIA no seu projeto
 cover_image: ./images/Utilizando Aria - Tooltip/tooltip-cover.webp
 cover_image_by: Imagem retirada do Google imagens
 cover_image_alt: Simbolo de acessibilidade com um tooltip
@@ -12,7 +14,7 @@ Fala aê, como cê ta?!
 Continuando com a série de posts que estou fazendo sobre as propriedades ARIA, hoje é o dia da role `tooltip`.
 Essa é uma role bem simples e rápida, veja só...
 
-<!-- PELICAN_END_SUMMARY -->
+<!-- END_SUMMARY -->
 
 ## Tooltip
 

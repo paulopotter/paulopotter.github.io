@@ -250,8 +250,8 @@ function formatPostMetaData(
     date: typeof metaData.date === 'object' ? metaData.date.string : metaData.date,
     cover_image: CONFIGS.SITE_URL + metaData.cover_image?.replace('./', '/')?.replace('public/', '/'),
     cover_image_alt: metaData.cover_image_alt,
-    cover_image_link: metaData?.cover_image_link,
-    cover_image_by: metaData?.cover_image_by,
+    cover_image_link: metaData?.cover_image_link || null,
+    cover_image_by: metaData?.cover_image_by || null,
     Status: metaData?.Status || 'Publicado',
     series: metaData?.series,
   }

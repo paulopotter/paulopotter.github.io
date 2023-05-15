@@ -1,8 +1,10 @@
 ---
-Title: Meus plugins favoritos para vscode
-Category: Lista, vscode
-Date: "2020-05-02"
-Series: Meus plugins favoritos
+title: Meus plugins favoritos para vscode
+category:
+ - Lista
+ - vscode
+date: "2020-05-02"
+series: Meus plugins favoritos
 cover_image: ./images/blake-connally-unsplash.jpg
 cover_image_alt: Settings image
 cover_image_by: Photo by Blake Connally on Unsplash
@@ -12,7 +14,7 @@ cover_image_link: https://unsplash.com/photos/B3l0g6HLxr8
 Fala ae pessoal, tudo tranquilo?
 
 Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa querida internet procurando por plugins para facilitar a minha vida.
-<!-- PELICAN_END_SUMMARY -->
+<!-- END_SUMMARY -->
 
 Hoje chegou a minha hora de fazer e eu resolvir começar com os plugins que eu uso no meu [VSCode](https://code.visualstudio.com/download). Esta é a seleção dos plugins que eu estou utilizando atualmente e alguns são aqueles que eu não consigo viver sem. Acredito que pelo menos um você vai se interessar (se é que você já não o usa).
 

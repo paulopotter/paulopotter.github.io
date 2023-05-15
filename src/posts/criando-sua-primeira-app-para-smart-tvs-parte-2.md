@@ -1,8 +1,11 @@
 ---
-Title: Criando sua primeira APP para Smart TVs (Parte 2)
-Category: Smart TV, Js, React
-Date: "2020-04-09"
-Series: Criando sua primeira APP para Smart TVs
+title: Criando sua primeira APP para Smart TVs (Parte 2)
+category:
+    - Smart TV
+    - Js
+    - React
+date: "2020-04-09"
+series: Criando sua primeira APP para Smart TVs
 cover_image: ./images/smart-tv-plex.jpg
 cover_image_by: Imagem retirada do Google
 cover_image_link: https://www.popsci.com/resizer/lU2v75pLrtqZZV7TOZsVmhM7YbI=/1782x1336/filters:focal(600x450:601x451)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/7SFVUBKE3F5G4N74QM7QJSGU4E.jpg
@@ -13,7 +16,7 @@ Iai meu Polvo 🐙 como cês tão?
 
 Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.
 
-<!-- PELICAN_END_SUMMARY -->
+<!-- END_SUMMARY -->
 
 ## Bug hunter:
 

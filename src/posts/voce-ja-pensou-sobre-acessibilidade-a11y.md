@@ -1,7 +1,9 @@
 ---
 title: Você já pensou sobre Acessibilidade (a11y)?
-Category: Acessibilidade, Smart TV
-Date: "2021-05-23"
+category:
+ - Acessibilidade
+ - Smart TV
+date: "2021-05-23"
 cover_image: ./images/acessibility-uxplanet.jpeg
 cover_image_by: Imagem retirada do UX Planet
 cover_image_link: https://uxplanet.org/web-accessibility-explained-c2408636eee0
@@ -10,7 +12,7 @@ cover_image_alt: Simbolo da acessibilidade para todos.
 
 Hoje eu vou falar um pouco do ~pouco~ conhecimento que tenho sobre acessibilidade na web, e o porquê você deveria conhecer também.<br/>
 Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso incentive a você procurar saber mais também.
-<!-- PELICAN_END_SUMMARY -->
+<!-- END_SUMMARY -->
 
 E já começo me desculpando, pois ainda não arrumei a acessibilidade do meu blog, mas sei que ele não está tão ruim quanto a maioria dos sites que encontramos por ai, mas pretendo subir algumas atualizações para melhorar a usabilidade dele para incluir a todos.
 

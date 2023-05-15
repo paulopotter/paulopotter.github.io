@@ -1,8 +1,9 @@
 ---
-Title: Google Assistant - o que é?
-Category: Google Assistant
-Series: Google Assistant
-Date: '2018-05-30'
+title: Google Assistant - o que é?
+category:
+ -  Google Assistant
+series: Google Assistant
+date: '2018-05-30'
 cover_image: './images/google-assistant-ios1.webp'
 cover_image_by: techcrunch.com
 cover_image_alt: Google Assistant IOS App
@@ -13,7 +14,7 @@ E ae, como vocês tão?
 
 E um hackday[^1] lá na [globo.com](https://globo.com) eu tive a idéia de criar um assistente para um dos produtos da [globo.com](https://globo.com).
 
-<!-- PELICAN_END_SUMMARY -->
+<!-- END_SUMMARY -->
 Hoje eu irei mostrar alguns conceitos e explicações sobre o Google Assistente, _e a partir do próximo post sobre o Assistant iremos criar um assistente nosso_ 😆 _com ou sem servidor próprio_.
 
 ## O que é?

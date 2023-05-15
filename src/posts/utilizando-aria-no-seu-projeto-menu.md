@@ -1,8 +1,10 @@
 ---
-Title: Utilizando ARIA no seu projeto - Menu
-Category: Acessibilidade, HTML
-Date: '2021-09-17'
-Series: Utilizando ARIA no seu projeto
+title: Utilizando ARIA no seu projeto - Menu
+category:
+ - Acessibilidade
+ - HTML
+date: '2021-09-17'
+series: Utilizando ARIA no seu projeto
 cover_image: ./images/teclado-botao-cadeirante.jpg
 cover_image_by: Imagem retirada do Google imagens
 cover_image_link: https://www.sabrehospitality.com/blog/wcag-is-your-hotel-fully-accessible-to-all-online-visitors/
@@ -11,7 +13,7 @@ cover_image_alt: Botão no teclado com o simbolo de um cadeirante.
 
 Esse é o primeiro post da série que estarei fazendo sobre as propriedades ARIA para você saber como colocar no seu projeto.
 Para começar eu resolvi começar com a navegação, então estarei falando sobre as roles: `menu`, `menuitem` ou `menubar`.
-<!-- PELICAN_END_SUMMARY -->
+<!-- END_SUMMARY -->
 
 A ideia é conseguir mostrar na prática como utilizar a propriedade ARIA do HTML e tentar descomplicar a documentação (pelo menos o que eu consegui entender).
 

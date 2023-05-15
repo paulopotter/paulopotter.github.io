@@ -1,7 +1,9 @@
 ---
-Title: BrazilJS Conf - Minha história com a maior conferência JS do mundo!
-Category: Smart TV, JS
-Date: '2021-11-21'
+title: BrazilJS Conf - Minha história com a maior conferência JS do mundo!
+category:
+    - Smart TV
+    - JS
+date: '2021-11-21'
 cover_image: ./images/minha-historia-com-braziljs/braziljs-conf-2021-banner.png
 cover_image_alt: Banner da BrazilJS conf 2021
 cover_image_link: "http://conf.braziljs.org"
@@ -10,7 +12,7 @@ cover_image_by: Brazil JS conf 2021
 
 Hoje eu não vou falar de código. Vou falar de um sonho!
 Contarei desde quando eu fui pela primeira vez até como eu virei palestrante da BrazilJS 2021 😆
-<!-- PELICAN_END_SUMMARY -->
+<!-- END_SUMMARY -->
 
 ## 2018
 

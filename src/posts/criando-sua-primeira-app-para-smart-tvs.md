@@ -1,8 +1,11 @@
 ---
-Title: Criando sua primeira APP para Smart TVs
-Category: Smart TV, Js, React
-Date: '2020-01-19'
-Series: Criando sua primeira APP para Smart TVs
+title: Criando sua primeira APP para Smart TVs
+category:
+    - Smart TV
+    - Js
+    - React
+date: '2020-01-19'
+series: Criando sua primeira APP para Smart TVs
 cover_image: ./images/smart-tv-pixabay.jpg
 cover_image_by: Imagem retirada de PixaBay
 cover_image_alt: Smart Tv from pixabay
@@ -12,7 +15,7 @@ cover_image_link: https://pixabay.com/pt/illustrations/remoto-controle-tela-tv-e
 Fala ae, tranquilinho?
 
 Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido [neste post](./como-e-o-desenvolvimento-para-smart-tvs.html). Recomendo a leitura, é uma boa introdução.
-<!-- PELICAN_END_SUMMARY -->
+<!-- END_SUMMARY -->
 
 Tendo a ideia de tentar passar por boa partes dos problemas que temos quando desenvolvemos app para TVs, pensei em vários tipos diferentes de exemplo de apps: galeria de fotos, app de streaming de música, app de streaming de animes (~para ter uma experiência melhor que a sua, Crunchyroll~)... Porém para ser algo mais rápido e simples, eu tive que me conter 🤪
 
