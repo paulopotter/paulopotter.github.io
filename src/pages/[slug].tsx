@@ -42,7 +42,6 @@ export async function getStaticProps({ params }): GetStaticProps {
 export function getStaticPaths(): GetStaticPaths {
   // Buscamos todos os slugs e date de todos os posts
   const posts = getAllPosts(['slug', 'series']);
-
   return {
     /**
      * Retornamos para cada rota o parâmetro slug,

@@ -3,7 +3,7 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import CONFIGS from './configs';
 
-import type { PostData } from '../modules/posts/posts.type';
+import type { PostData, PostMetaStructure } from '../modules/posts/posts.type';
 
 type PostsType = 'post' | 'tips'
 
@@ -21,7 +21,7 @@ type RelatedPost = {
   prevPost?: PostData;
 };
 
-type PostKey = keyof PostData;
+// type PostKey = keyof PostData;
 
 type getPostProps = {
   filename: string,
@@ -46,59 +46,34 @@ export function getPost({ filename, fields = [], postType = 'post' }: getPostPro
    * vem na chave data, e o conteúdo, dentro do content.
    */
   const { data, content } = matter(fileContents);
-  if (!data) {
+
+  if (!data || !data.title) {
     return;
   }
 
-  const post = {} as PostData;
+  const post = {
+    // ...data,
+    ...formatPostMetaData(data as PostMetaStructure),
+    summary: content ? getSummary(content) : undefined,
+    slug: slug,
+    content: content,
+  } as PostData;
 
-  if (fields.length === 0) fields = Object.keys(data);
+  if (fields.length === 0) {
+    return post
+  }
 
-  fields.map((field: string) => {
-    const lowerField: PostKey = field.toLowerCase() as PostKey;
+  const filtered = Object.keys(post)
+    .filter((key: string) => fields.includes(key as never))
+    .reduce((obj: Record<string, any>, key: string) => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      obj[key] = post?.[key];
+      return obj;
+    }, {}) as PostData;
 
-    if (!data?.[getParameterCaseInsensitive(data, 'title')]) {
-      return;
-    } else {
-      post['title'] = data[getParameterCaseInsensitive(data, 'title')];
-    }
-    switch (lowerField) {
-      case 'category':
-        if(typeof data?.[getParameterCaseInsensitive(data, 'category')] === 'object'){
-          post[lowerField] = data?.[getParameterCaseInsensitive(data, 'category')]
-        } else {
-          post[lowerField] = data?.[getParameterCaseInsensitive(data, 'category')]
-            ?.split(',')
-            ?.map((item: string) => item.trim());
-        }
-        break;
-      case 'date':
-        if(typeof data?.[getParameterCaseInsensitive(data, field)] === 'object') {
-          post[lowerField] = data?.[getParameterCaseInsensitive(data, field)].string
-        } else {
-          post[lowerField] = data?.[getParameterCaseInsensitive(data, field)]
-        }
-        break
-      case 'content':
-        post[lowerField] = content;
-        break;
-      case 'summary':
-        post[lowerField] = getSummary(content);
-        break;
-      case 'slug':
-        post[lowerField] = slug;
-        break;
-      case 'cover_image':
-        post[lowerField] =
-          CONFIGS.SITE_URL + data[getParameterCaseInsensitive(data, field)].replace('./', '/').replace('public/', '/');
-        break;
-      default:
-        if (data[getParameterCaseInsensitive(data, field)])
-          post[lowerField] = data[getParameterCaseInsensitive(data, field)];
-        break;
-    }
-  });
-  return post;
+
+  return filtered || {}
 }
 
 /**
@@ -106,11 +81,15 @@ export function getPost({ filename, fields = [], postType = 'post' }: getPostPro
  * @param content Corpo do post.
  */
 function getSummary(content: string): string {
-  const summaryKey = '<!-- PELICAN_END_SUMMARY -->';
-  const summaryKeyIndex = content.indexOf(summaryKey);
-  const substrLength = summaryKeyIndex > -1 ? summaryKeyIndex : 140;
+  const summaryStartKey = '<!-- START_SUMMARY -->';
+  const summaryStartKeyIndex = content.indexOf(summaryStartKey) || 0;
+  const summaryEndKey = '<!-- END_SUMMARY -->';
+  const summaryEndKeyIndex = content.indexOf(summaryEndKey);
+  const substrLength = summaryEndKeyIndex > -1 ? summaryEndKeyIndex : 140;
 
-  return content.substr(0, substrLength);
+  const startSubstr = summaryStartKeyIndex > 1 && summaryEndKeyIndex > summaryEndKeyIndex ? summaryStartKeyIndex : 0
+
+  return content.substr(startSubstr, substrLength);
 }
 
 
@@ -122,8 +101,10 @@ export function getAllPosts(fields?: string[]): PostData[] {
   const slugs = getMarkdownsFiles('post');
   return slugs
     .map((slug: string): PostData => getPost({ filename:slug, fields }) as PostData)
+    .filter(post => post)
+    // .filter(post => post.date)
     .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
-    .filter(post => Object.keys(post).length !== 0);
+    .filter(post => Object.keys(post)?.length !== 0);
 }
 
 // type getFiltredPostsProps = {
@@ -249,4 +230,31 @@ export function getAllTips({ fields = [] }: getAllTipsProps) {
     .map((slug: string): PostData => getPost({ filename: slug, fields ,postType: "tips" }) as PostData)
     .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
     .filter(post => Object.keys(post).length !== 0);
+}
+
+///
+
+
+function formatPostMetaData(
+  metaData: PostMetaStructure,
+  // fields = []
+): PostData | undefined {
+
+  if(!metaData.title){
+    return;
+  }
+
+  const post: PostData = {
+    title: metaData.title,
+    category: metaData?.category || ['Sem categoria'],
+    date: typeof metaData.date === 'object' ? metaData.date.string : metaData.date,
+    cover_image: CONFIGS.SITE_URL + metaData.cover_image?.replace('./', '/')?.replace('public/', '/'),
+    cover_image_alt: metaData.cover_image_alt,
+    cover_image_link: metaData?.cover_image_link,
+    cover_image_by: metaData?.cover_image_by,
+    Status: metaData?.Status || 'Publicado',
+    series: metaData?.series,
+  }
+
+  return post
 }
