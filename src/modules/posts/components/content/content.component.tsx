@@ -69,6 +69,8 @@ export const Post = ({ post }: Props) => {
           </div>
 
           <AuthorCard />
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/* @ts-ignore */}
           <SeriesPosts posts={post?.series} />
           <RelatedPosts {...post.related} />
         </article>

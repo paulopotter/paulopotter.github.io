@@ -195,7 +195,8 @@ export function getRelatedSeries(serie: string, postTitle = ''): unknown {
   const posts = getAllPosts( ['series', 'title', 'slug', 'date'] );
 
   const relatedPosts = posts
-    // @ts-expect-error: i will grow up post type
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore: i will grow up post type
     .filter((post: PostData) => serie !== undefined && post.series === serie);
 
   relatedPosts.map((post, index) => post.title === postTitle && delete relatedPosts[index].slug);
@@ -216,10 +217,10 @@ export function getRelatedSeries(serie: string, postTitle = ''): unknown {
  * @param {string} key key para ser buscada no objeto.
  * @returns {string} parameter.
  */
-function getParameterCaseInsensitive(object: Record<string, unknown>, key: string): string {
-  const asLowercase = key.toLowerCase();
-  return Object.keys(object).find(key => key.toLowerCase() === asLowercase) || key;
-}
+// function getParameterCaseInsensitive(object: Record<string, unknown>, key: string): string {
+//   const asLowercase = key.toLowerCase();
+//   return Object.keys(object).find(key => key.toLowerCase() === asLowercase) || key;
+// }
 
 type getAllTipsProps = {
   fields?: string[]

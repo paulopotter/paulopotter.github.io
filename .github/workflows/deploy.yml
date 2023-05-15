@@ -1,0 +1,43 @@
+name: Deploy para produção
+
+on:
+  push:
+    branches:
+      - nextjs
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # environment: production
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: 'yarn'
+          cache-dependency-path: '**/yarn.lock'
+
+      # - run: npm i @antfu/ni
+      - run: yarn install --frozen-lockfile
+      # - run: |
+      #     git config --local user.email "1867765+paulopotter@users.noreply.github.com"
+      #     git config --local user.name "[BOT] - um dev qualquer"
+      - run: yarn build
+      - run: yarn export
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: main
+          user_name: '[BOT] - um dev qualquer'
+          user_email: '1867765+paulopotter@users.noreply.github.com'
+          commit_message: 'Updates'
+
+      # - uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
