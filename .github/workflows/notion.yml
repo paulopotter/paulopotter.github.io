@@ -2,8 +2,11 @@ name: Sync Notion pages to posts
 
 on:
   push:
-    branches:
-      - nextjs
+    paths:
+      - 'src/posts/**'
+      - 'src/tips/**'
+  #   branches:
+  #     - nextjs
   schedule:
     - cron: '0 13 * * *' # daily
 
