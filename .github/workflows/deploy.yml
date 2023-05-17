@@ -1,4 +1,4 @@
-name: Deploy para produção
+name: Release
 
 on:
   push:
@@ -7,9 +7,29 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  changes:
     runs-on: ubuntu-latest
-    # environment: production
+    # Required permissions
+    permissions:
+      pull-requests: read
+    # Set job outputs to values from filter step
+    outputs:
+      content: ${{ steps.filter.outputs.content }}
+    steps:
+      - uses: actions/checkout@v3
+      # For pull requests it's not necessary to checkout the code
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            content:
+              - 'src/**'
+  deploy:
+    needs: changes
+    if: ${{ needs.changes.outputs.content == 'true' }}
+    runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - uses: actions/checkout@v3
 
@@ -20,13 +40,14 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: '**/yarn.lock'
 
-      # - run: npm i @antfu/ni
-      - run: yarn install --frozen-lockfile
-      # - run: |
-      #     git config --local user.email "1867765+paulopotter@users.noreply.github.com"
-      #     git config --local user.name "[BOT] - um dev qualquer"
-      - run: yarn build
-      - run: yarn export
+      - name: Install
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Export
+        run: yarn export
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -37,7 +58,3 @@ jobs:
           user_name: '[BOT] - um dev qualquer'
           user_email: '1867765+paulopotter@users.noreply.github.com'
           commit_message: 'Updates'
-
-      # - uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
