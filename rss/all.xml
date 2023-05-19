@@ -4,7 +4,7 @@
         <title>Um dev qualquer || Paulo Oliveira</title>
         <link>https://umdevqualquer.com.br</link>
         <description>Blog pessoal onde mostro um pouco do meu aprendizado.</description>
-        <lastBuildDate>Fri, 19 May 2023 12:07:24 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 19 May 2023 12:14:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
@@ -22,7 +22,6 @@
             <description><![CDATA[<p>Fala aê, como cê ta?!</p>
 <p>Continuando com a série de posts que estou fazendo sobre as propriedades ARIA, hoje é o dia da role <code>tooltip</code>.
 Essa é uma role bem simples e rápida, veja só...</p>
-<p>&#x3C;</p>
 ]]></description>
             <category>Acessibilidade</category>
             <category>HTML</category>
@@ -34,8 +33,7 @@ Essa é uma role bem simples e rápida, veja só...</p>
             <guid>https://umdevqualquer.com.br/palestra-apps-para-smarttv-braziljs-conf?resource=rss</guid>
             <pubDate>Thu, 30 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>E aê, belezinha?</p>
-<p>Ta aqui, como prometido no <a href="./braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo">meu último post</a>, o vídeo da minha palestra na Braziljs falando sobre TV.
-&#x3C;</p>
+<p>Ta aqui, como prometido no <a href="./braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo">meu último post</a>, o vídeo da minha palestra na Braziljs falando sobre TV.</p>
 ]]></description>
             <category>Smart TV</category>
             <category>JS</category>
@@ -48,8 +46,7 @@ Essa é uma role bem simples e rápida, veja só...</p>
             <guid>https://umdevqualquer.com.br/braziljs-conf-minha-historia-com-a-maior-conferencia-js-do-mundo?resource=rss</guid>
             <pubDate>Sun, 21 Nov 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>Hoje eu não vou falar de código. Vou falar de um sonho!
-Contarei desde quando eu fui pela primeira vez até como eu virei palestrante da BrazilJS 2021 😆
-&#x3C;</p>
+Contarei desde quando eu fui pela primeira vez até como eu virei palestrante da BrazilJS 2021 😆</p>
 ]]></description>
             <category>Smart TV</category>
             <category>JS</category>
@@ -61,8 +58,7 @@ Contarei desde quando eu fui pela primeira vez até como eu virei palestrante da
             <guid>https://umdevqualquer.com.br/utilizando-aria-no-seu-projeto-menu?resource=rss</guid>
             <pubDate>Fri, 17 Sep 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>Esse é o primeiro post da série que estarei fazendo sobre as propriedades ARIA para você saber como colocar no seu projeto.
-Para começar eu resolvi começar com a navegação, então estarei falando sobre as roles: <code>menu</code>, <code>menuitem</code> ou <code>menubar</code>.
-&#x3C;</p>
+Para começar eu resolvi começar com a navegação, então estarei falando sobre as roles: <code>menu</code>, <code>menuitem</code> ou <code>menubar</code>.</p>
 ]]></description>
             <category>Acessibilidade</category>
             <category>HTML</category>
@@ -74,8 +70,7 @@ Para começar eu resolvi começar com a navegação, então estarei falando sobr
             <guid>https://umdevqualquer.com.br/voce-ja-pensou-sobre-acessibilidade-a11y?resource=rss</guid>
             <pubDate>Sun, 23 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>Hoje eu vou falar um pouco do ~pouco~ conhecimento que tenho sobre acessibilidade na web, e o porquê você deveria conhecer também.
-Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso incentive a você procurar saber mais também.
-&#x3C;</p>
+Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso incentive a você procurar saber mais também.</p>
 ]]></description>
             <category>Acessibilidade</category>
             <category>Smart TV</category>
@@ -87,8 +82,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <guid>https://umdevqualquer.com.br/meus-plugins-favoritos-para-vscode?resource=rss</guid>
             <pubDate>Sat, 02 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>Fala ae pessoal, tudo tranquilo?</p>
-<p>Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa querida internet procurando por plugins para facilitar a minha vida.
-&#x3C;</p>
+<p>Hoje o post é um post rapidinho e é mais um daquele do tipo de lista. Vira e mexe eu me pego navegando pela a nossa querida internet procurando por plugins para facilitar a minha vida.</p>
 ]]></description>
             <category>Lista</category>
             <category>vscode</category>
@@ -101,7 +95,6 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <pubDate>Thu, 09 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>Iai meu Polvo 🐙 como cês tão?</p>
 <p>Dando continuidade a nossa série da criação de uma app para Smart Tvs, hoje nós iremos finalizar os testes e corrigir os bugs deixados no ultimo post.</p>
-<p>&#x3C;</p>
 ]]></description>
             <category>Smart TV</category>
             <category>Js</category>
@@ -114,8 +107,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <guid>https://umdevqualquer.com.br/criando-sua-primeira-app-para-smart-tvs?resource=rss</guid>
             <pubDate>Sun, 19 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>Fala ae, tranquilinho?</p>
-<p>Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido <a href="./como-e-o-desenvolvimento-para-smart-tvs.html">neste post</a>. Recomendo a leitura, é uma boa introdução.
-&#x3C;</p>
+<p>Hoje eu estou aqui para mostrar o desenvolvimento de uma app simples para Smart Tv. Como eu havia prometido <a href="./como-e-o-desenvolvimento-para-smart-tvs.html">neste post</a>. Recomendo a leitura, é uma boa introdução.</p>
 ]]></description>
             <category>Smart TV</category>
             <category>Js</category>
@@ -128,8 +120,7 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <guid>https://umdevqualquer.com.br/como-e-o-desenvolvimento-para-smart-tvs?resource=rss</guid>
             <pubDate>Wed, 09 Oct 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>Fala galera, blz?</p>
-<p>Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na <a href="https://globo.com">globo.com</a>, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.
-&#x3C;</p>
+<p>Há aproximadamente a 1 ano, tenho sido integrante de um time de Smart TVs na <a href="https://globo.com">globo.com</a>, estando a frente do time da app do globosat play e as vezes meto o meu bedelho no desenvolvimento do app do globo esporte para tv.</p>
 ]]></description>
             <category>Smart TV</category>
             <category>Js</category>
@@ -143,7 +134,6 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <pubDate>Wed, 30 May 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>E ae, como vocês tão?</p>
 <p>E um hackday[^1] lá na <a href="https://globo.com">globo.com</a> eu tive a idéia de criar um assistente para um dos produtos da <a href="https://globo.com">globo.com</a>.</p>
-<p>&#x3C;</p>
 ]]></description>
             <category>Google Assistant</category>
             <enclosure url="https://umdevqualquer.com.br/images/google-assistant-ios1.webp" length="0" type="image/webp"/>
@@ -155,7 +145,6 @@ Neste post, tentarei arranhar uma camada do que é esse mundo e espero que isso 
             <pubDate>Wed, 13 Sep 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<p>Fala pessoal, como é que cês tão?! 😜</p>
 <p>Em um dos projetos que trabalhamos na globo, era preciso uma notificação que demorasse mais para desaparecer e que independente da aba do browser nós estivéssemos nós deveríamos conseguir vê-la. Com isso tivemos a ideia de criar um notificador no browser.</p>
-<p>&#x3C;</p>
 ]]></description>
             <category>Js</category>
             <enclosure url="https://umdevqualquer.com.br/images/Screamer.png" length="0" type="image/png"/>
