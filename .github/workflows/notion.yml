@@ -1,14 +1,9 @@
 name: Sync Notion pages to posts
 
 on:
-  push:
-    paths:
-      - 'src/posts/**'
-      - 'src/tips/**'
   schedule:
-    - cron: '0 8 * * *' # daily
-
-  workflow_dispatch:
+    - cron: '*/15 * * * *' # daily
+      # - cron: '0 8,12 * * *' # daily
 
 jobs:
   get_and_commit_notions_posts:
@@ -39,5 +34,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
 
-      - name: Deploy
-        uses: ./.github/workflows/deploy.yml
+  Deploy:
+    needs: get_and_commit_notions_posts
+    uses: ./.github/workflows/deploy.yml
