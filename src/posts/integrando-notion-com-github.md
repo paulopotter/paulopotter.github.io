@@ -2,12 +2,12 @@
 id: 57f371b0-7921-43bf-8508-dd328909599d
 title: Integrando Notion com Github
 created_time: 2023-05-14T02:52:00.000Z
-last_edited_time: 2023-05-22T15:04:00.000Z
+last_edited_time: 2023-05-22T16:38:00.000Z
 cover_image: public/images/integrando-notion-com-github/Frame_1_XghZLEg0.png
 series: []
 date:
   type: string
-  string: 2023-05-22 16:18
+  string: 2023-05-22 16:39
 uri:
   type: string
   string: integrando-notion-com-github
@@ -24,35 +24,35 @@ Sim, o blog não morreu 😂, eu só não tenho conseguido escrever nada. Por ma
 
 Eu tenho estado muito ocupado e acabo não conseguido parar pra escrever, principalmente pela forma que eu preciso pra escrever. Meu blog é feito com NextJS e hospedado via Github pages e por isso, eu preciso ou estar no meu pc + escrever + realizar o build e postar ou baixar o projeto + instalar dependências + escrever + realizar o build e então postar. O que aumenta o “custo” na hora de escrever (*Resumindo, da preguiça!*).
 
-<!-- START_SUMMARY -→
+<!-- START_SUMMARY -->
 
 Mas como o titulo do post da o spoiler, eu descobri uma forma de facilitar a minha criação de post utilizando o poder do Notion, sem tirar a liberdade que eu possuo em ter o meu blog feito por mim e hospedado no Github pages.
 
-<!-- END_SUMMARY -→
+<!-- END_SUMMARY -->
 
-Eu tenho trabalhado muito voltado ao DX ( e esse assunto já está na lista de posts pra escrever ) mas eu mesmo não faço isso pra mim ( o clássico “_em casa de ferreiro, o espeto é de pau_” ).
+Eu tenho trabalhado muito voltado ao DX ( e esse assunto já está na lista de posts pra escrever ) mas eu mesmo não faço isso pra mim ( o clássico “*em casa de ferreiro, o espeto é de pau*” ).
 
 ## Conhecendo as ferramentas
 
-- [**Notion**](https://notion.so)
+*   [**Notion**](https://notion.so)
 
-	Onde eu pretendo escrever e gerenciar os posts do meu blog.
+    Onde eu pretendo escrever e gerenciar os posts do meu blog.
 
-	_Se você não conhece o_ [_Notion_](https://notion.so) _eu recomendo, é uma grande ferramenta que ajuda em vários pontos da minha vida._
+    *Se você não conhece o* [*Notion*](https://notion.so) *eu recomendo, é uma grande ferramenta que ajuda em vários pontos da minha vida.*
 
-- [**Github**](https://github.com) (Pages e Actions)
+*   [**Github**](https://github.com) (Pages e Actions)
 
-	Hoje eu já hospedo o meu blog via Github Pages, visto que o blog é estático e finalmente vou utilizar o Github Actions para fazer o build e o deploy do blog.
+    Hoje eu já hospedo o meu blog via Github Pages, visto que o blog é estático e finalmente vou utilizar o Github Actions para fazer o build e o deploy do blog.
 
-- [**Next JS**](https://nextjs.org/)
+*   [**Next JS**](https://nextjs.org/)
 
-	Para gerar os estáticos eu fiz o meu blog inteiro utilizando o Next.
+    Para gerar os estáticos eu fiz o meu blog inteiro utilizando o Next.
 
 ## Começando pelo o começo
 
 Eu, a um tempo, estava incomodado de não ter criado uma pipeline pra fazer os testes e o build/deploy do meu blog, mas mais incomodado ainda em não estar postando com frequência, principalmente porque hoje para mim é cansativo escrever um post.
 
-Hoje estou mais acostumado com o Gitlab CI, visto que na Globo usamos o Gitlab. Eu já conhecia o Github Actions, mas nunca havia mexido. Então acabava postergando o aprendizado e a utilização do Github actions. 
+Hoje estou mais acostumado com o Gitlab CI, visto que na Globo usamos o Gitlab. Eu já conhecia o Github Actions, mas nunca havia mexido. Então acabava postergando o aprendizado e a utilização do Github actions.
 
 Em um dado momento, dado a praticidade de utilizar o Notion, eu acabei me perguntado se não era possível integrar ele com o meu Blog, para facilitar o gerenciamento dos posts e assim me incentivar a escrever mais ( ainda mais porque eu to cheio de ideias de post mas sem saco de passar pelo o processo de escrita que possuo hoje ).
 
@@ -62,71 +62,71 @@ Chega de história, vamos para a ação!
 
 ## Notion
 
-Para facilitar a visualização, vamos começar adaptando o Notion para esperar a integração com o Github, para isso vamos criar uma pagina de database e nela vai ficar listada todos os posts que serão publicados no blog. Então coloque as propriedade que você quiser, no meu caso ficou assim: 
+Para facilitar a visualização, vamos começar adaptando o Notion para esperar a integração com o Github, para isso vamos criar uma pagina de database e nela vai ficar listada todos os posts que serão publicados no blog. Então coloque as propriedade que você quiser, no meu caso ficou assim:
 
-![Print da tela do database do notion com as colunas: Title, created_at, Status, Category](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d439790a-fcdc-4311-b2d1-286646825697/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T161853Z&X-Amz-Expires=3600&X-Amz-Signature=c6bb46de4e96b39e01eb806c27782346b37152e5e314f3e626dc946288914bbd&X-Amz-SignedHeaders=host&x-id=GetObject)
+![Print da tela do database do notion com as colunas: Title, created\_at, Status, Category](public/images/integrando-notion-com-github/Untitled_UOvGF0TT.png)
 
-_Os campos podem ser quais você quiser, porem é_ _**obrigatório**_ _possuir o campo “status” (ou outro que faça o mesmo trabalho, que você entenderá mais a frente)._ 
+*Os campos podem ser quais você quiser, porem é* ***obrigatório*** *possuir o campo “status” (ou outro que faça o mesmo trabalho, que você entenderá mais a frente).*
 
 Com essa tabela criada, já possuímos uma estrutura onde podemos criar todos os nossos post e, de brinde, criar status onde você pode saber se já está postado, escrevendo ou é apenas uma ideia.
 
 ### Iniciando a integração
 
-- Agora para preparar o terreno para integração vamos adicionar uma conexão, nas opções da tabela, vá até gerenciamento de conexão (Manage connections)
+*   Agora para preparar o terreno para integração vamos adicionar uma conexão, nas opções da tabela, vá até gerenciamento de conexão (Manage connections)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9cae4ff0-b558-4151-9420-31e5b3ef8dba/Screenshot_2023-05-13_at_22.15.11.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T161853Z&X-Amz-Expires=3600&X-Amz-Signature=da0fea41d29395f9e5d97ef4e1e04fd97a2e0d53ac4c98d6002810a828f16e46&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.15.11_dQFMXWf8.png)
 
-- Na janela que abrir, procure no fim da tela o campo: _Developer or manager integrations_
+*   Na janela que abrir, procure no fim da tela o campo: *Developer or manager integrations*
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b7490e14-1225-450c-bec9-994eb3381989/Screenshot_2023-05-13_at_22.15.33.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T161853Z&X-Amz-Expires=3600&X-Amz-Signature=574d18f9717325611f4e5ddae96beb0d6729e225f0e8b13148121915cc38ee7c&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.15.33_nLdfOHEv.png)
 
-- Ele vai te redirecionar até a area de integrações de api do Notion
+*   Ele vai te redirecionar até a area de integrações de api do Notion
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f3b965f3-b88f-4e8d-98cc-42ca7418be0c/Screenshot_2023-05-13_at_22.15.56.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T161853Z&X-Amz-Expires=3600&X-Amz-Signature=6096c4312aa82c96eb0f81c29cb21af625bfd7648c8be33c634ff9cae8637cb9&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.15.56_TyshPMJz.png)
 
-- Clique para adicionar uma nova integração ( New Integration ) e preencha o campo de Name com o nome que voce quiser dar, uma imagem para você saber o que você está associando e qual o workspace do notion essa api vai ser associada.
+*   Clique para adicionar uma nova integração ( New Integration ) e preencha o campo de Name com o nome que voce quiser dar, uma imagem para você saber o que você está associando e qual o workspace do notion essa api vai ser associada.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/755a0360-1355-49ab-a414-e5fb653b01b4/Screenshot_2023-05-13_at_22.17.13.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T161853Z&X-Amz-Expires=3600&X-Amz-Signature=43e9291d8d047ba400ed83859724256f1fbb4ef4d94faa17a44586fb723694a7&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.17.13_PMhozEqd.png)
 
 Após criado ele irá gerar uma **secret key,** guarde ela que iremos utiliza-la mais a frente. (Você consegue acessar ela a hora que você quiser, não se preocupe).
 
-- Depois disso, voltamos para a nossa tabela e acessamos a configuração dela, e no campo de conexão, a gente adiciona a  integração que acabamos de criar.
+*   Depois disso, voltamos para a nossa tabela e acessamos a configuração dela, e no campo de conexão, a gente adiciona a  integração que acabamos de criar.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8fea011f-4cf6-4d5d-a718-75598d883452/Screenshot_2023-05-13_at_22.18.47.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T161853Z&X-Amz-Expires=3600&X-Amz-Signature=fd359d415ea7adfa2f36f2ce13ef86b5b749f40975fb00a7abb1879ae20e62e8&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.18.47_IjrI60Fy.png)
 
 Pronto! A parte referente ao Notion foi finalizada 😄
 
 ## Github actions (Gh Actions)
 
-Eu não vou mostrar uma config completa e/ou explicar como funciona o Github Actions, até porque eu ainda estou aprendendo/ me entendendo com ele. 
+Eu não vou mostrar uma config completa e/ou explicar como funciona o Github Actions, até porque eu ainda estou aprendendo/ me entendendo com ele.
 
 ### Environments
 
-Vamos criar logo as nossas variáveis de ambiente para ser utilizada na pipeline. 
+Vamos criar logo as nossas variáveis de ambiente para ser utilizada na pipeline.
 
--  Vá até as configurações do seu projeto e acesse o menu “**Environments**”, 
+*   Vá até as configurações do seu projeto e acesse o menu “**Environments**”,
 
 Nessa tela você terá duas formas de criar variáveis de ambiente, uma secreta e outra aberta.
 
--  Na parte de criação das variáveis secretas, nós vamos criar duas: **NOTION_ROOT_PAGE_ID** e **NOTION_TOKEN**,  onde os valores deles serão a url da database do notion e a **secret key** obtido na explicação do Notion, respectivamente.
+*   Na parte de criação das variáveis secretas, nós vamos criar duas: **NOTION\_ROOT\_PAGE\_ID** e **NOTION\_TOKEN**,  onde os valores deles serão a url da database do notion e a **secret key** obtido na explicação do Notion, respectivamente.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/567d71da-3a4a-4b18-bd08-8c43347dca45/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T161853Z&X-Amz-Expires=3600&X-Amz-Signature=d8d235a754058221acfd4b65765ddd6a58d6abf2f981fe4a31a4f8bc0e575ce4&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](public/images/integrando-notion-com-github/Untitled_7bD9JTC7.png)
 
--  Na parte da criação das variáveis, eu preferi criar 3 variáveis, para me dar a liberdade de não ter que ficar mexendo no código toda hora que eu precisar alterar alguma info que a action usa para tratar os dados do notion. Essas variáveis são: **FILTER_PROP**, **FILTER_VALUES** e  **POST_URI**. Onde:
+*   Na parte da criação das variáveis, eu preferi criar 3 variáveis, para me dar a liberdade de não ter que ficar mexendo no código toda hora que eu precisar alterar alguma info que a action usa para tratar os dados do notion. Essas variáveis são: **FILTER\_PROP**, **FILTER\_VALUES** e  **POST\_URI**. Onde:
 
-	- **FILTER_PROP** fica o nome do campo onde eu quero que o Github filtre para saber qual o post ele terá que publicar.
+    *   **FILTER\_PROP** fica o nome do campo onde eu quero que o Github filtre para saber qual o post ele terá que publicar.
 
-	- **FILTER_VALUES** fica o valor do campo que, quando um post tiver esse valor no campo de filtro, será o indicativo para o Github para saber que é o post ele terá que publicar.
+    *   **FILTER\_VALUES** fica o valor do campo que, quando um post tiver esse valor no campo de filtro, será o indicativo para o Github para saber que é o post ele terá que publicar.
 
-	- **POST_URI** é o nome do campo onde ele vai usar o valor final (como o nome do post, por exemplo) para ajudar a montar o path de arquivos.
+    *   **POST\_URI** é o nome do campo onde ele vai usar o valor final (como o nome do post, por exemplo) para ajudar a montar o path de arquivos.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a644c908-9438-4510-b947-d8981a2e5d03/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T161853Z&X-Amz-Expires=3600&X-Amz-Signature=62308798f067b730ef204be7ed17beba004664c3c73f92e6942e66e046337734&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](public/images/integrando-notion-com-github/Untitled_9MEIPqCG.png)
 
 ### Criando seu job / action:
 
 Pesquisando, acabei caindo na action [Notion jam](https://github.com/victornpb/notion-jam), que pega os dados e gera um arquivo markdown. Também peguei outras actions, o [git auto commit action](https://github.com/stefanzweifel/git-auto-commit-action) e o [GitHub push action](https://github.com/ad-m/github-push-action) para poder fazer um commit e puxar o arquivo criado na branch que eu to usando.
 
-Para facilitar a explicação, eu vou colar o meu arquivo de actions aqui 
+Para facilitar a explicação, eu vou colar o meu arquivo de actions aqui
 
 ```yaml
 name: Sync Notion pages to posts
@@ -173,7 +173,7 @@ jobs:
 
 Para facilitar ainda mais a minha vida, eu consegui criar um template na hora de criar um post, dentro do notion, onde ele já preenche alguns campos para mim. Além de criar botões de criação rápida de post, onde ele já preenche alguns dados de acordo com o conteúdo do botão.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d16fe037-70ef-46ed-b684-c8fc02d3e6df/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T161853Z&X-Amz-Expires=3600&X-Amz-Signature=0816e7f0654da263b50da8a797337f26e72043f7ecd0da2c80277221f8a185a3&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](public/images/integrando-notion-com-github/Untitled_ZUOQtLmi.png)
 
 ## Thats all folks
 
