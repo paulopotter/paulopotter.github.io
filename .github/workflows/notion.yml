@@ -21,6 +21,7 @@ jobs:
           NOTION_SECRET: ${{ secrets.NOTION_TOKEN}}
           NOTION_DATABASE: ${{ secrets.NOTION_ROOT_PAGE_ID }}
           FILTER_PROP: ${{ vars.FILTER_PROP }}
+          FILTER_TYPE: ${{ vars.FILTER_TYPE }}
           FILTER_VALUES: ${{ vars.FILTER_VALUES }}
           ARTICLE_PATH: src/posts/${{ vars.POST_URI }}.md
           ASSETS_PATH: public/images/${{ vars.POST_URI }}/
