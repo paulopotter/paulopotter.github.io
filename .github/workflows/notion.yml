@@ -2,8 +2,9 @@ name: Sync Notion pages to posts
 
 on:
   schedule:
-    # - cron: '*/15 * * * *' # daily
-    - cron: '0 8,12,20 * * *' # daily
+    # - cron: '0 8 * * *' # daily
+    - cron: '*/10 * * * *' # daily
+
   workflow_dispatch:
 
 jobs:
