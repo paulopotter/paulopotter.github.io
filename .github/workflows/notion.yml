@@ -2,8 +2,8 @@ name: Sync Notion pages to posts
 
 on:
   schedule:
-    - cron: '*/15 * * * *' # daily
-      # - cron: '0 8,12 * * *' # daily
+    # - cron: '*/15 * * * *' # daily
+    - cron: '0 8,12,20 * * *' # daily
 
 jobs:
   get_and_commit_notions_posts:
