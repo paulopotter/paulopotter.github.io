@@ -2,12 +2,12 @@
 id: 57f371b0-7921-43bf-8508-dd328909599d
 title: Integrando Notion com Github
 created_time: 2023-05-14T02:52:00.000Z
-last_edited_time: 2023-05-22T12:57:00.000Z
+last_edited_time: 2023-05-22T14:20:00.000Z
 cover_image: public/images/integrando-notion-com-github/Frame_1_XghZLEg0.png
 series: []
 date:
   type: string
-  string: 2023-05-22 14:13
+  string: 2023-05-22 14:28
 uri:
   type: string
   string: integrando-notion-com-github
@@ -24,13 +24,13 @@ Sim, o blog não morreu 😂, eu só não tenho conseguido escrever nada. Por ma
 
 Eu tenho estado muito ocupado e acabo não conseguido parar pra escrever, principalmente pela forma que eu preciso pra escrever. Meu blog é feito com NextJS e hospedado via Github pages e por isso, eu preciso ou estar no meu pc + escrever + realizar o build e postar ou baixar o projeto + instalar dependências + escrever + realizar o build e então postar. O que aumenta o “custo” na hora de escrever (*Resumindo, da preguiça!*).
 
-\<!— Start\_Summary —>
+\<!— START\_SUMMARY —>
 
 Mas como o titulo do post da o spoiler, eu descobri uma forma de facilitar a minha criação de post utilizando o poder do Notion, sem tirar a liberdade que eu possuo em ter o meu blog feito por mim e hospedado no Github pages.
 
-*<!-- END_SUMMARY -->*
+*\<!— END\_SUMMARY —>*
 
-Eu tenho trabalhado muito voltado ao \<abbr *title***=**"Developer eXperience">DX</abbr> ( e esse assunto já está na lista de posts pra escrever ) mas eu mesmo não faço isso pra mim ( o clássico “*em casa de ferreiro, o espeto é de pau*” ).
+Eu tenho trabalhado muito voltado ao DX ( e esse assunto já está na lista de posts pra escrever ) mas eu mesmo não faço isso pra mim ( o clássico “*em casa de ferreiro, o espeto é de pau*” ).
 
 ## Conhecendo as ferramentas
 
