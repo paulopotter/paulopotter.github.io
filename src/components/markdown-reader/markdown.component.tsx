@@ -104,7 +104,7 @@ export function Markdown({ children }: MarkdownProp){
           // TODO: corrigir imagens e descrições
           return props.src !== undefined ? (
             <Image
-              src={props.src}
+              src={props.src?.replace('public/', '/')}
               alt={props.title ?? props.alt}
             />
           ) : null
