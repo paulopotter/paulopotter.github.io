@@ -2,12 +2,12 @@
 id: 57f371b0-7921-43bf-8508-dd328909599d
 title: Integrando Notion com Github
 created_time: 2023-05-14T02:52:00.000Z
-last_edited_time: 2023-05-22T16:38:00.000Z
+last_edited_time: 2023-05-22T16:44:00.000Z
 cover_image: public/images/integrando-notion-com-github/Frame_1_XghZLEg0.png
 series: []
 date:
   type: string
-  string: 2023-05-22 16:39
+  string: 2023-05-22 16:51
 uri:
   type: string
   string: integrando-notion-com-github
@@ -178,6 +178,12 @@ Para facilitar ainda mais a minha vida, eu consegui criar um template na hora de
 ## Thats all folks
 
 Eu ainda estou descobrindo o que eu posso fazer no Notion e isso refletir no meu Blog, ainda não sei se todas as funcionalidades que eu tenho no blog eu consigo criar via o Notion. Talvez, posts mais complexos ainda precisem ser manuais.
+
+As coisas que já descobri até então são:
+
+*   que é difícil utilizar tags HTML, pois quando chega via api, chega “encodada”.
+
+*   que mesmo se eu não editar ele busca o conteúdo novamente e faz um novo commit, vou precisar fazer um diff para nao ficar fazendo commit sem ter novas alterações.
 
 Ainda tenho como meta, conseguir ver uma forma de publicar nas redes sociais automaticamente, talvez até via Github actions também, mais infelizmente não vai ser dessa vez.
 
