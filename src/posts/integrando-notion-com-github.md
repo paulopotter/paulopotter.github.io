@@ -7,7 +7,7 @@ cover_image: public/images/integrando-notion-com-github/Frame_1_XghZLEg0.png
 series: []
 date:
   type: string
-  string: 2023-05-22 15:37
+  string: 2023-05-22 15:51
 uri:
   type: string
   string: integrando-notion-com-github
@@ -64,7 +64,7 @@ Chega de história, vamos para a ação!
 
 Para facilitar a visualização, vamos começar adaptando o Notion para esperar a integração com o Github, para isso vamos criar uma pagina de database e nela vai ficar listada todos os posts que serão publicados no blog. Então coloque as propriedade que você quiser, no meu caso ficou assim: 
 
-![Print da tela do database do notion com as colunas: Title, created_at, Status, Category](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d439790a-fcdc-4311-b2d1-286646825697/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T153753Z&X-Amz-Expires=3600&X-Amz-Signature=7e589b87b4523a81b098be8131a1161aec79194b2750a78254fab9b9ab91f36f&X-Amz-SignedHeaders=host&x-id=GetObject)
+![Print da tela do database do notion com as colunas: Title, created_at, Status, Category](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d439790a-fcdc-4311-b2d1-286646825697/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T155142Z&X-Amz-Expires=3600&X-Amz-Signature=bf059ce51b5fd860f712224d95379f759119c38d54c80eaf8b2bc3d34c6eb5ca&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 _Os campos podem ser quais você quiser, porem é_ _**obrigatório**_ _possuir o campo “status” (ou outro que faça o mesmo trabalho, que você entenderá mais a frente)._ 
 
@@ -74,25 +74,25 @@ Com essa tabela criada, já possuímos uma estrutura onde podemos criar todos os
 
 - Agora para preparar o terreno para integração vamos adicionar uma conexão, nas opções da tabela, vá até gerenciamento de conexão (Manage connections)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9cae4ff0-b558-4151-9420-31e5b3ef8dba/Screenshot_2023-05-13_at_22.15.11.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T153753Z&X-Amz-Expires=3600&X-Amz-Signature=1ca914c6a6114a854b46f0ab8f08dcf90ea3621fffa109f864db7369391a1386&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9cae4ff0-b558-4151-9420-31e5b3ef8dba/Screenshot_2023-05-13_at_22.15.11.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T155142Z&X-Amz-Expires=3600&X-Amz-Signature=e1f8eddcfa23b5714dbf951af29eb50ad72c3aeac5b267731a295c16d600b1e1&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 - Na janela que abrir, procure no fim da tela o campo: _Developer or manager integrations_
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b7490e14-1225-450c-bec9-994eb3381989/Screenshot_2023-05-13_at_22.15.33.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T153753Z&X-Amz-Expires=3600&X-Amz-Signature=a8bec7980579f4a6ac76aa0ed8f5eead1d423909277a3bc2e02593e03a770ae0&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b7490e14-1225-450c-bec9-994eb3381989/Screenshot_2023-05-13_at_22.15.33.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T155142Z&X-Amz-Expires=3600&X-Amz-Signature=4d36080a630105bdea948bbd8f9d53c56f5bb8bb8170a73c05b7c08c3195fee9&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 - Ele vai te redirecionar até a area de integrações de api do Notion
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f3b965f3-b88f-4e8d-98cc-42ca7418be0c/Screenshot_2023-05-13_at_22.15.56.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T153753Z&X-Amz-Expires=3600&X-Amz-Signature=a8d9329c8045cddcd4be75f2b211e32fac763525a2a2724288dd94cbdc267ca7&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f3b965f3-b88f-4e8d-98cc-42ca7418be0c/Screenshot_2023-05-13_at_22.15.56.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T155142Z&X-Amz-Expires=3600&X-Amz-Signature=1cb0d53f1f307ec9482705ea2450bac03b953cb2c538bc62d4cd02d75ad6c9fb&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 - Clique para adicionar uma nova integração ( New Integration ) e preencha o campo de Name com o nome que voce quiser dar, uma imagem para você saber o que você está associando e qual o workspace do notion essa api vai ser associada.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/755a0360-1355-49ab-a414-e5fb653b01b4/Screenshot_2023-05-13_at_22.17.13.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T153753Z&X-Amz-Expires=3600&X-Amz-Signature=8a7554a2c68de4c8c70b579c3b3a7cccffe5c3dc0ef1de3082dca0bca294fe70&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/755a0360-1355-49ab-a414-e5fb653b01b4/Screenshot_2023-05-13_at_22.17.13.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T155142Z&X-Amz-Expires=3600&X-Amz-Signature=e7cc05d3e26c4a1d970d39954de158b871f5c7976ed03b6869ac7450da0a2747&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 Após criado ele irá gerar uma **secret key,** guarde ela que iremos utiliza-la mais a frente. (Você consegue acessar ela a hora que você quiser, não se preocupe).
 
 - Depois disso, voltamos para a nossa tabela e acessamos a configuração dela, e no campo de conexão, a gente adiciona a  integração que acabamos de criar.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8fea011f-4cf6-4d5d-a718-75598d883452/Screenshot_2023-05-13_at_22.18.47.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T153753Z&X-Amz-Expires=3600&X-Amz-Signature=c6112e5f42e0145f4c1201df991a83f6442a2c48fae0d0022018fd0f34f668c7&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8fea011f-4cf6-4d5d-a718-75598d883452/Screenshot_2023-05-13_at_22.18.47.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T155142Z&X-Amz-Expires=3600&X-Amz-Signature=513b37a37905d578782477de232dd78f58eabdd5e54494e9aff259b34ce00e0e&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 Pronto! A parte referente ao Notion foi finalizada 😄
 
@@ -110,7 +110,7 @@ Nessa tela você terá duas formas de criar variáveis de ambiente, uma secreta 
 
 -  Na parte de criação das variáveis secretas, nós vamos criar duas: **NOTION_ROOT_PAGE_ID** e **NOTION_TOKEN**,  onde os valores deles serão a url da database do notion e a **secret key** obtido na explicação do Notion, respectivamente.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/567d71da-3a4a-4b18-bd08-8c43347dca45/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T153753Z&X-Amz-Expires=3600&X-Amz-Signature=416c9b19013202915daf47d920878f17e8c036540584e9f72be5cadee42f4783&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/567d71da-3a4a-4b18-bd08-8c43347dca45/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T155142Z&X-Amz-Expires=3600&X-Amz-Signature=b36b6ce85c81bc5fdb0867df119862c1b0f49ed60c8c74bd50271aaee96f3ecb&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 -  Na parte da criação das variáveis, eu preferi criar 3 variáveis, para me dar a liberdade de não ter que ficar mexendo no código toda hora que eu precisar alterar alguma info que a action usa para tratar os dados do notion. Essas variáveis são: **FILTER_PROP**, **FILTER_VALUES** e  **POST_URI**. Onde:
 
@@ -120,7 +120,7 @@ Nessa tela você terá duas formas de criar variáveis de ambiente, uma secreta 
 
 	- **POST_URI** é o nome do campo onde ele vai usar o valor final (como o nome do post, por exemplo) para ajudar a montar o path de arquivos.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a644c908-9438-4510-b947-d8981a2e5d03/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T153753Z&X-Amz-Expires=3600&X-Amz-Signature=71616ceba62458b94b8559021992e59392b4b2ef2e64aaac3f769fa5a5046894&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a644c908-9438-4510-b947-d8981a2e5d03/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T155142Z&X-Amz-Expires=3600&X-Amz-Signature=1a7e0a3794d01a0091544f916d34b5de46e0eeb0ba9c1f46e8372cfe71beb01b&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 ### Criando seu job / action:
 
@@ -173,7 +173,7 @@ jobs:
 
 Para facilitar ainda mais a minha vida, eu consegui criar um template na hora de criar um post, dentro do notion, onde ele já preenche alguns campos para mim. Além de criar botões de criação rápida de post, onde ele já preenche alguns dados de acordo com o conteúdo do botão.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d16fe037-70ef-46ed-b684-c8fc02d3e6df/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T153753Z&X-Amz-Expires=3600&X-Amz-Signature=298de5afe9773267115ffa8fcb312caa87a30b780b0a24015724973a9ec4475b&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d16fe037-70ef-46ed-b684-c8fc02d3e6df/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230522%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230522T155142Z&X-Amz-Expires=3600&X-Amz-Signature=00c9c64e72b7c4c0129214ebdf708ede55e3c2326cef53d9fd0605e3ad04d328&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 ## Thats all folks
 
