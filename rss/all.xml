@@ -4,7 +4,7 @@
         <title>Um dev qualquer || Paulo Oliveira</title>
         <link>https://umdevqualquer.com.br</link>
         <description>Blog pessoal onde mostro um pouco do meu aprendizado.</description>
-        <lastBuildDate>Mon, 22 May 2023 13:53:58 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 May 2023 14:16:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
@@ -18,7 +18,7 @@
             <title><![CDATA[Integrando Notion com Github]]></title>
             <link>https://umdevqualquer.com.br/integrando-notion-com-github?resource=rss</link>
             <guid>https://umdevqualquer.com.br/integrando-notion-com-github?resource=rss</guid>
-            <pubDate>Mon, 22 May 2023 13:36:00 GMT</pubDate>
+            <pubDate>Mon, 22 May 2023 13:51:00 GMT</pubDate>
             <description><![CDATA[<p>Fala pessoa, como cê tá?</p>
 <p>Sim, o blog não morreu 😂, eu só não tenho conseguido escrever nada. Por mais que meus posts sejam como especial de natal, que só aparece uma vez por ano e não necessariamente é tão bom 🤣🤣.</p>
 <p>Eu tenho estado muito ocupado e acabo não conseguido parar pra escrever, principalmente pela forma que eu preciso pra escrever. Meu blog é feito com NextJS e hospedado via Github pages e por isso, eu preciso ou estar no meu pc + escrever + realizar o build e postar ou baixar o projeto + instalar dependências + escrever + realizar o build e então postar. O que aumenta o “custo” na hora de escrever (<em>Resumindo, da preguiça!</em>).</p>
