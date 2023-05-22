@@ -4,7 +4,7 @@
         <title>Um dev qualquer || Paulo Oliveira</title>
         <link>https://umdevqualquer.com.br</link>
         <description>Blog pessoal onde mostro um pouco do meu aprendizado.</description>
-        <lastBuildDate>Mon, 22 May 2023 20:53:45 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 May 2023 21:15:15 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
@@ -18,7 +18,7 @@
             <title><![CDATA[Integrando Notion com Github]]></title>
             <link>https://umdevqualquer.com.br/integrando-notion-com-github?resource=rss</link>
             <guid>https://umdevqualquer.com.br/integrando-notion-com-github?resource=rss</guid>
-            <pubDate>Mon, 22 May 2023 23:36:00 GMT</pubDate>
+            <pubDate>Mon, 22 May 2023 23:51:00 GMT</pubDate>
             <description><![CDATA[<p>Mas como o titulo do post da o spoiler, eu descobri uma forma de facilitar a minha criação de post utilizando o poder do Notion, sem tirar a liberdade que eu possuo em ter o meu blog feito por mim e hospedado no Github pages.</p>
 ]]></description>
             <enclosure url="https://umdevqualquer.com.br/images/integrando-notion-com-github/Frame_1_XghZLEg0.png" length="0" type="image/png"/>
