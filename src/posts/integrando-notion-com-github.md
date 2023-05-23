@@ -7,7 +7,7 @@ cover_image: public/images/integrando-notion-com-github/Frame_1_XghZLEg0.png
 series: []
 date:
   type: string
-  string: 2023-05-22 21:36
+  string: 2023-05-23 08:22
 uri:
   type: string
   string: integrando-notion-com-github
