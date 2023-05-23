@@ -23,6 +23,7 @@ jobs:
           ASSETS_PATH: public/images/${{ vars.POST_URI }}/
           PARALLEL_PAGES: 25
           PARALLEL_DOWNLOADS_PER_PAGE: 3
+          SKIP_DOWNLOADED_IMAGES: true
           DOWNLOAD_IMAGE_TIMEOUT: 30
 
       - name: Save changes
