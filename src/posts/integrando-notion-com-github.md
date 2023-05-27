@@ -2,10 +2,10 @@
 id: 57f371b0-7921-43bf-8508-dd328909599d
 title: Integrando Notion com Github
 created_time: 2023-05-14T02:52:00.000Z
-last_edited_time: 2023-05-26T13:25:00.000Z
+last_edited_time: 2023-05-27T12:23:00.000Z
 cover_image: public/images/integrando-notion-com-github/Frame_1_XghZLEg0.png
 series: []
-date: 2023-05-26 13:25
+date: 2023-05-27 12:23
 uri: integrando-notion-com-github
 category:
   - Produtividade
@@ -62,7 +62,7 @@ Chega de história, vamos para a ação!
 
 Para facilitar a visualização, vamos começar adaptando o Notion para esperar a integração com o Github, para isso vamos criar uma pagina de database e nela vai ficar listada todos os posts que serão publicados no blog. Então coloque as propriedade que você quiser, no meu caso ficou assim:
 
-![Print da tela do database do notion com as colunas: Title, created\_at, Status, Category](public/images/integrando-notion-com-github/Untitled_UOvGF0TT.png)
+![Print da tela do database do notion com as colunas: Status, title, uri, date, category e series](public/images/integrando-notion-com-github/Untitled_HUmebZAL.png)
 
 *Os campos podem ser quais você quiser, porem é* ***obrigatório*** *possuir o campo “status” (ou outro que faça o mesmo trabalho, que você entenderá mais a frente).*
 
