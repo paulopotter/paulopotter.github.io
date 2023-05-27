@@ -2,10 +2,10 @@
 id: 57f371b0-7921-43bf-8508-dd328909599d
 title: Integrando Notion com Github
 created_time: 2023-05-14T02:52:00.000Z
-last_edited_time: 2023-05-27T12:23:00.000Z
+last_edited_time: 2023-05-27T12:49:00.000Z
 cover_image: public/images/integrando-notion-com-github/Frame_1_XghZLEg0.png
 series: []
-date: 2023-05-27 12:23
+date: 2023-05-27 12:49
 uri: integrando-notion-com-github
 category:
   - Produtividade
@@ -65,6 +65,8 @@ Para facilitar a visualização, vamos começar adaptando o Notion para esperar 
 ![Print da tela do database do notion com as colunas: Status, title, uri, date, category e series](public/images/integrando-notion-com-github/Untitled_HUmebZAL.png)
 
 *Os campos podem ser quais você quiser, porem é* ***obrigatório*** *possuir o campo “status” (ou outro que faça o mesmo trabalho, que você entenderá mais a frente).*
+
+> *Spoiler*: Até então, eu usava o campus “*Status*” como um do tipo `select` e depois eu descobri que já existia o tipo `status` , o que facilita muito a utilização mas que me deu muita dor de cabeça para resolver  isso.
 
 Com essa tabela criada, já possuímos uma estrutura onde podemos criar todos os nossos post e, de brinde, criar status onde você pode saber se já está postado, escrevendo ou é apenas uma ideia.
 
@@ -173,21 +175,33 @@ Para facilitar ainda mais a minha vida, eu consegui criar um template na hora de
 
 ![](public/images/integrando-notion-com-github/Untitled_ZUOQtLmi.png)
 
-## Thats all folks
+## Problemas e aprendizados
+
+### Não suporte a certas propriedades
+
+Como eu havia dito antes, eu resolvi trocar o tipo do campo “Status” de `select` para `status` e com isso a minha pipeline parou de funcionar e não só isso a “Categoria” não estava sendo exibida (e depois eu descobri que as “Series” também não).
+
+Depois de muito bater a cabeça eu descobri que a action “notion-jam” não dava suporte para os tipo `relation` (que são o caso dos campos “categoria” e “series”) e `status` o que fazia com que metade da preparação que eu havia criado, ir pelo o ralo a baixo.
+
+Então resolvi fazer um [fork da action](https://github.com/paulopotter/notion-jam) e adicionar o suporte eu mesmo para esses tipos e como adicional eu também corrigi uma parada que me incomodava quando eu usava o tipo `formula`.
+
+Já abri um [Pull Request para a action original](https://github.com/victornpb/notion-jam/pull/5) com essas mexidas, mas enquanto ele não aprova, eu estou usando o meu fork para rodar a minha pipeline. Caso você queira usar a minha action (ou usar a original quando já estiver mergeada), recomendo olhar o meu arquivo de action do blog, pois foram adicionados novos campos que eu não coloquei neste post.
+
+Nota adicional: caso você queira usar uma coluna que é uma relação com outra tabela, a outra tabela também precisa ter a integração que fizemos anteriormente. (apenas o passo 5 da integração)
+
+### Dificuldades
+
+Dois pontos que ainda não consegui resolver, mas devo atualizar o post quando descobrir são:
+
+*   que é difícil utilizar tags HTML, pois quando chega via api, chega “encodada”.  E hoje eu utilizo para gerar o resumo da home e do RSS. (Sim, o blog tem RSS).
+    Além disso o próprio notion formata o texto, hoje para conseguir usar algumas  tags HTML eu preciso escrever em outro lugar e depois copiar para o notion, para ele manter a tag sem formatar os caracteres.
+
+*   que mesmo se eu não editar um post, ele baixa o post novamente e faz um novo commit. E as vezes isso acaba falhando a pipe.
+    Vou precisar fazer um diff para não ficar fazendo commit sem ter novas alterações. Porém não estou conseguindo isso na pipe.
+
+## **That\`s all folks**
 
 Eu ainda estou descobrindo o que eu posso fazer no Notion e isso refletir no meu Blog, ainda não sei se todas as funcionalidades que eu tenho no blog eu consigo criar via o Notion. Talvez, posts mais complexos ainda precisem ser manuais.
-
-As coisas que já descobri até então são:
-
-*   que é difícil utilizar tags HTML, pois quando chega via api, chega “encodada”.
-
-*   que mesmo se eu não editar ele busca o conteúdo novamente e faz um novo commit, vou precisar fazer um diff para nao ficar fazendo commit sem ter novas alterações.
-
-*   Descobri que não funciona quando a coluna é uma relação com outra tabela, ou um status
-
-*   Resolvi fazer um fork para resolver o meu problema e pretendo fazer um PR
-
-*   Como eu tinha colunas que são do tipo relação, as tabelas relacionadas também tem que ter a integração.
 
 Ainda tenho como meta, conseguir ver uma forma de publicar nas redes sociais automaticamente, talvez até via Github actions também, mais infelizmente não vai ser dessa vez.
 
