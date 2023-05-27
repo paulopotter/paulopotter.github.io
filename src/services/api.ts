@@ -83,16 +83,16 @@ export function getPost({ filename, fields = [], postType = 'post' }: getPostPro
 function getSummary(content: string): string {
   const summaryStartKey = '<!-- START_SUMMARY -->';
   const summaryStartKeyIndex = content.indexOf(summaryStartKey);
-  const startSubstr = summaryStartKeyIndex > -1 ? summaryStartKeyIndex : 0
+  const startSubstr = summaryStartKeyIndex > -1 ? summaryStartKeyIndex + summaryStartKey.length : 0
 
   const summaryEndKey = '<!-- END_SUMMARY -->';
   const summaryEndKeyIndex = content.indexOf(summaryEndKey);
 
-  const substrLength = summaryEndKeyIndex > -1 && summaryEndKeyIndex > summaryStartKeyIndex ? summaryEndKeyIndex - summaryStartKeyIndex - 1 : 140;
+  const substrLength = summaryEndKeyIndex > -1 && summaryEndKeyIndex > startSubstr ? summaryEndKeyIndex - summaryEndKey.length - summaryStartKeyIndex - 2 : 140;
 
   const hasEllipse = summaryEndKeyIndex < 0 || summaryEndKeyIndex < summaryStartKeyIndex
 
-  return `${content.substr(startSubstr, substrLength)}${hasEllipse ? '...' : ''}`;
+  return `${content.substr(startSubstr, substrLength).trim()}${hasEllipse ? '...' : ''}`;
 }
 
 

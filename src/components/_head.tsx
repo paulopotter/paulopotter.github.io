@@ -91,22 +91,27 @@ export const Head = ({ title = '', children = null, meta = {} }: HeadProps) => {
             rel="alternate"
             title={`${TITLE} - Atom Feed`}
           />
+          <link
+            itemProp="thumbnailUrl"
+            href={image.url}
+          />
+
           {children}
           {/* Scripts */}
         </>
       </NextHead>
       <NextSeo
         title={customTitle}
-        description={description}
+        description={description.substring(0, 150).trim() + `${description.length > 150 ?  '...' : ''}`}
         canonical={canonical}
         openGraph={{
           url: canonical,
-          title: customTitle,
+          title: customTitle.substring(0, 32).trim() + `${customTitle.length > 32 ?  '...' : ''}`,
           site_name: TITLE,
           locale: DEFAULT_LANG,
           images: [{ ...image }],
           type: meta?.ogType ?? 'website',
-          description,
+          description: description.substring(0, 60).trim() + `${description.length > 60 ?  '...' : ''}`,
           article,
         }}
         twitter={{
