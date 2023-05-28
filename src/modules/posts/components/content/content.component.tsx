@@ -40,6 +40,7 @@ export const Post = ({ post }: Props) => {
             authors: [`${SITE_URL}/author`],
             tags: post?.category,
           },
+          wordcount: post.content?.length,
         }}
       ></Head>
       <section className={style.articleSection}>

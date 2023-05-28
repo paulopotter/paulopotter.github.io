@@ -7,6 +7,7 @@ import { THEME } from 'theme';
 
 const {
   IS_DEV_MODE,
+  AUTHOR,
   AUTHOR_IMG,
   FEED_ALL_ATOM,
   FEED_ALL_RSS,
@@ -32,6 +33,7 @@ interface HeadProps {
     ogType?: 'website' | 'article';
     ogArticle?: Record<string, unknown>;
     twitterAlt?: string;
+    wordcount?: number
   };
 }
 enum ImageExtensionWhitelist {
@@ -60,6 +62,30 @@ export const Head = ({ title = '', children = null, meta = {} }: HeadProps) => {
     type: `image/${imageExtension}`,
   };
   const article = meta?.ogType === 'article' && meta?.ogArticle ? meta.ogArticle : {};
+
+  const isArticle = meta?.ogType === 'article'
+
+  let ldJSON = {
+    "@context": "https://schema.org",
+    "@type": isArticle ? "TechArticle": 'WebPage',
+    headline: customTitle,
+    description: description,
+    image: meta?.ogImage,
+    url: meta?.ogUrl,
+    author: {
+      "@type": "Person",
+      name: AUTHOR,
+      url: `${SITE_URL}/author`,
+    },
+    keywords: meta?.ogArticle?.tags,
+  }
+
+  if(isArticle){
+    ldJSON = { ...ldJSON, ...{
+      wordcount : meta?.wordcount,
+      datePublished : meta?.ogArticle?.publishedTime,
+    } }
+  }
 
   return (
     <>
@@ -95,9 +121,13 @@ export const Head = ({ title = '', children = null, meta = {} }: HeadProps) => {
             itemProp="thumbnailUrl"
             href={image.url}
           />
-
           {children}
           {/* Scripts */}
+          <script type="application/ld+json">
+            {
+              JSON.stringify(ldJSON)
+            }
+          </script>
         </>
       </NextHead>
       <NextSeo
