@@ -33,13 +33,13 @@ Eu tenho trabalhado muito voltado ao DX ( e esse assunto já está na lista de p
 
 ## Conhecendo as ferramentas
 
-*   [**Notion**](https://notion.so)
+*   [**Notion**](https://notion.so/)
 
     Onde eu pretendo escrever e gerenciar os posts do meu blog.
 
-    *Se você não conhece o* [*Notion*](https://notion.so) *eu recomendo, é uma grande ferramenta que ajuda em vários pontos da minha vida.*
+    *Se você não conhece o* [*Notion*](https://notion.so/) *eu recomendo, é uma grande ferramenta que ajuda em vários pontos da minha vida.*
 
-*   [**Github**](https://github.com) (Pages e Actions)
+*   [**Github**](https://github.com/) (Pages e Actions)
 
     Hoje eu já hospedo o meu blog via Github Pages, visto que o blog é estático e finalmente vou utilizar o Github Actions para fazer o build e o deploy do blog.
 
