@@ -45,8 +45,6 @@ Eu tenho trabalhado muito voltado ao DX ( e esse assunto já está na lista de p
 
 *   [**Next JS**](https://nextjs.org/)
 
-    Para gerar os estáticos eu fiz o meu blog inteiro utilizando o Next.
-
 ## Começando pelo o começo
 
 Eu, a um tempo, estava incomodado de não ter criado uma pipeline pra fazer os testes e o build/deploy do meu blog, mas mais incomodado ainda em não estar postando com frequência, principalmente porque hoje para mim é cansativo escrever um post.
