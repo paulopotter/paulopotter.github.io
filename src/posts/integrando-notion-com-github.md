@@ -9,7 +9,7 @@ series: []
 date: 2023-05-27 16:50
 uri: integrando-notion-com-github
 category:
-  - Produtividade
+  - null
   - Automação
 cover_image_alt: Imagem com a logo da notion + logo github actions
 Status: Publicado
