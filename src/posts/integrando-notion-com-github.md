@@ -75,7 +75,7 @@ Com essa tabela criada, já possuímos uma estrutura onde podemos criar todos os
 
 *   Agora para preparar o terreno para integração vamos adicionar uma conexão, nas opções da tabela, vá até gerenciamento de conexão (Manage connections)
 
-![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.15.11_dQFMXWf8.png)
+![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.15.11_MrwGbdGu.png)
 
 *   Na janela que abrir, procure no fim da tela o campo: *Developer or manager integrations*
 
@@ -174,7 +174,7 @@ jobs:
 
 Para facilitar ainda mais a minha vida, eu consegui criar um template na hora de criar um post, dentro do notion, onde ele já preenche alguns campos para mim. Além de criar botões de criação rápida de post, onde ele já preenche alguns dados de acordo com o conteúdo do botão.
 
-![](public/images/integrando-notion-com-github/Untitled_ZUOQtLmi.png)
+![](public/images/integrando-notion-com-github/Untitled_eYlw5f4q.png)
 
 ## Problemas e aprendizados
 
