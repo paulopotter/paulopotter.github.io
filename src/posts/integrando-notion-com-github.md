@@ -87,7 +87,7 @@ Com essa tabela criada, já possuímos uma estrutura onde podemos criar todos os
 
 *   Clique para adicionar uma nova integração ( New Integration ) e preencha o campo de Name com o nome que voce quiser dar, uma imagem para você saber o que você está associando e qual o workspace do notion essa api vai ser associada.
 
-![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.17.13_PMhozEqd.png)
+![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.17.13_Phkhc4Mp.png)
 
 Após criado ele irá gerar uma **secret key,** guarde ela que iremos utiliza-la mais a frente. (Você consegue acessar ela a hora que você quiser, não se preocupe).
 
