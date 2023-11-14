@@ -3,7 +3,7 @@ id: 822c0eb9-b9d8-4f9f-b502-dd34a2e6ece9
 title: Meus 10 anos de Globo
 created_time: 2023-07-29T18:33:00.000Z
 last_edited_time: 2023-09-07T12:19:00.000Z
-cover_image: public/images/meus-10-anos-de-globo/logo_globo_horizontal-laranja_BqHrsrLJ.png
+cover_image: public/images/meus-10-anos-de-globo/logo_globo_horizontal-laranja_R1u1wb52.png
 icon_emoji: 🥳
 Date: null
 series: []
@@ -14,7 +14,7 @@ category:
 cover_image_alt: Logo Globo
 cover_image_by: Globo
 Status: Publicado
-_thumbnail: public/images/meus-10-anos-de-globo/logo_globo_horizontal-laranja_BqHrsrLJ.png
+_thumbnail: public/images/meus-10-anos-de-globo/logo_globo_horizontal-laranja_R1u1wb52.png
 
 ---
 
@@ -58,7 +58,7 @@ Entrei no time *Jornalismo 1*, que cuidava do portal do **G1**, **Paparazzo** e 
 
 ## Que comecem os ~~jogos~~ desafios
 
-![Fonte: Google imagens](public/images/meus-10-anos-de-globo/Untitled_YDJzzsZ1.png)
+![Fonte: Google imagens](public/images/meus-10-anos-de-globo/Untitled_vW4UIJyk.png)
 
 Assim que eu entrei, eu sabia programar apenas em PHP e um cadinho de Javascript, porém os projetos eram todos em Python com Django. Logo estava na hora de aprender, e aprender bastante, pois eu tinha que aprender uma nova linguagem e perder os vícios que havia adquirido do PHP. Nessa época eu aprendi duas coisas que guardo para a vida e tento espalhar para todos a minha volta: **Cultura do Feedback** e **Disponibilidade**.
 

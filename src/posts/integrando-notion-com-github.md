@@ -93,7 +93,7 @@ Após criado ele irá gerar uma **secret key,** guarde ela que iremos utiliza-la
 
 *   Depois disso, voltamos para a nossa tabela e acessamos a configuração dela, e no campo de conexão, a gente adiciona a  integração que acabamos de criar.
 
-![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.18.47_IjrI60Fy.png)
+![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.18.47_ceLhH8eS.png)
 
 Pronto! A parte referente ao Notion foi finalizada 😄
 
