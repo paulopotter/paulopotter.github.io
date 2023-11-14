@@ -54,7 +54,7 @@ Processos de empresa grande, muitas pessoas falando a mesma língua (tecnologia)
 
 Entrei no time *Jornalismo 1*, que cuidava do portal do **G1**, **Paparazzo** e **Ego.** Com um time, que me ensinou e mostrou um mundo novo! Obrigado Herman, Fleury, Tarsis e Abreu, vocês foram fundamentais para a minha carreira!
 
-![Fonte: Google Imagens](public/images/meus-10-anos-de-globo/Untitled_x3SOtWmo.png)
+![Fonte: Google Imagens](public/images/meus-10-anos-de-globo/Untitled_9pW9sLPT.png)
 
 ## Que comecem os ~~jogos~~ desafios
 

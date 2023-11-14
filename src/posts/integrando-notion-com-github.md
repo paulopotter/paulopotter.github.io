@@ -3,7 +3,7 @@ id: 57f371b0-7921-43bf-8508-dd328909599d
 title: Integrando Notion com Github
 created_time: 2023-05-14T02:52:00.000Z
 last_edited_time: 2023-05-27T16:50:00.000Z
-cover_image: public/images/integrando-notion-com-github/Frame_1_XghZLEg0.png
+cover_image: public/images/integrando-notion-com-github/Frame_1_IeNLNpP5.png
 Date: null
 series: []
 date: 2023-05-27 16:50
@@ -13,7 +13,7 @@ category:
   - Automação
 cover_image_alt: Imagem com a logo da notion + logo github actions
 Status: Publicado
-_thumbnail: public/images/integrando-notion-com-github/Frame_1_XghZLEg0.png
+_thumbnail: public/images/integrando-notion-com-github/Frame_1_IeNLNpP5.png
 
 ---
 
@@ -63,7 +63,7 @@ Chega de história, vamos para a ação!
 
 Para facilitar a visualização, vamos começar adaptando o Notion para esperar a integração com o Github, para isso vamos criar uma pagina de database e nela vai ficar listada todos os posts que serão publicados no blog. Então coloque as propriedade que você quiser, no meu caso ficou assim:
 
-![Print da tela do database do notion com as colunas: Status, title, uri, date, category e series](public/images/integrando-notion-com-github/Untitled_HUmebZAL.png)
+![Print da tela do database do notion com as colunas: Status, title, uri, date, category e series](public/images/integrando-notion-com-github/Untitled_eiWcVbHV.png)
 
 *Os campos podem ser quais você quiser, porem é* ***obrigatório*** *possuir o campo “status” (ou outro que faça o mesmo trabalho, que você entenderá mais a frente).*
 
@@ -79,11 +79,11 @@ Com essa tabela criada, já possuímos uma estrutura onde podemos criar todos os
 
 *   Na janela que abrir, procure no fim da tela o campo: *Developer or manager integrations*
 
-![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.15.33_nLdfOHEv.png)
+![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.15.33_steevlxE.png)
 
 *   Ele vai te redirecionar até a area de integrações de api do Notion
 
-![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.15.56_TyshPMJz.png)
+![](public/images/integrando-notion-com-github/Screenshot_2023-05-13_at_22.15.56_ov6UkFNN.png)
 
 *   Clique para adicionar uma nova integração ( New Integration ) e preencha o campo de Name com o nome que voce quiser dar, uma imagem para você saber o que você está associando e qual o workspace do notion essa api vai ser associada.
 
@@ -111,7 +111,7 @@ Nessa tela você terá duas formas de criar variáveis de ambiente, uma secreta 
 
 *   Na parte de criação das variáveis secretas, nós vamos criar duas: **NOTION\_ROOT\_PAGE\_ID** e **NOTION\_TOKEN**,  onde os valores deles serão a url da database do notion e a **secret key** obtido na explicação do Notion, respectivamente.
 
-![](public/images/integrando-notion-com-github/Untitled_7bD9JTC7.png)
+![](public/images/integrando-notion-com-github/Untitled_PZuYnY8i.png)
 
 *   Na parte da criação das variáveis, eu preferi criar 3 variáveis, para me dar a liberdade de não ter que ficar mexendo no código toda hora que eu precisar alterar alguma info que a action usa para tratar os dados do notion. Essas variáveis são: **FILTER\_PROP**, **FILTER\_VALUES** e  **POST\_URI**. Onde:
 
