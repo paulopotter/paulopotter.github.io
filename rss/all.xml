@@ -4,7 +4,7 @@
         <title>Um dev qualquer || Paulo Oliveira</title>
         <link>https://umdevqualquer.com.br</link>
         <description>Blog pessoal onde mostro um pouco do meu aprendizado.</description>
-        <lastBuildDate>Tue, 14 Nov 2023 08:18:28 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 14 Nov 2023 12:27:14 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
@@ -34,7 +34,7 @@
 ]]></description>
             <category>Produtividade</category>
             <category>Automação</category>
-            <enclosure url="https://umdevqualquer.com.br/images/integrando-notion-com-github/Frame_1_XghZLEg0.png" length="0" type="image/png"/>
+            <enclosure url="https://umdevqualquer.com.br/images/integrando-notion-com-github/Frame_1_IeNLNpP5.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Utilizando ARIA no seu projeto - Tooltip]]></title>
