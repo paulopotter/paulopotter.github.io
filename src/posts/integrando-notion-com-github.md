@@ -121,7 +121,7 @@ Nessa tela você terá duas formas de criar variáveis de ambiente, uma secreta 
 
     *   **POST\_URI** é o nome do campo onde ele vai usar o valor final (como o nome do post, por exemplo) para ajudar a montar o path de arquivos.
 
-![](public/images/integrando-notion-com-github/Untitled_9MEIPqCG.png)
+![](public/images/integrando-notion-com-github/Untitled_dfykuUjD.png)
 
 ### Criando seu job / action:
 
