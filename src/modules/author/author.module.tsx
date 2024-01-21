@@ -30,86 +30,131 @@ export function AuthorView() {
           subtitle: 'MSA RH Consultoria',
           content: [
             <p key="job-estag-msa">
-          Participei no desenvolvimento e manutenção do sistema de gerenciamento de
-          estágiários da Vale.
-            </p>
+              Participei no desenvolvimento e manutenção do sistema de gerenciamento de estágiários
+              da Vale.
+            </p>,
           ],
-        }
+        },
       ],
     },
     {
       mark: 2013,
-      data: [{
-        title: 'Estágio em Desenvolvimento',
-        subtitle: 'Globo.com',
-        content: [
-          <p key="job-estag-globo">
-            Participei na manutenção e desenvolvimento de features dos sites:{' '}
-            <Link href="https://g1.globo.com">G1</Link>,{' '}
-            <Link href="https://ge.globo.com/cartola/">Cartola</Link> e{' '}
-            <Link href="https://ge.globo">GE(Globoesporte)</Link>.
-          </p>
-        ] }
-      ]
+      data: [
+        {
+          title: 'Estágio em Desenvolvimento',
+          subtitle: 'Globo.com',
+          content: [
+            <p key="job-estag-globo">
+              Participei na manutenção e desenvolvimento de features dos sites:{' '}
+              <Link href="https://g1.globo.com">G1</Link>,{' '}
+              <Link href="https://ge.globo.com/cartola/">Cartola</Link> e{' '}
+              <Link href="https://ge.globo">GE(Globoesporte)</Link>.
+            </p>,
+          ],
+        },
+      ],
     },
     {
       mark: '2015 - Atual',
-      data: [{
-        title: 'Desenvolvedor',
-        subtitle: 'Grupo Globo (HUB digital / antiga globo.com)',
-        content:[
-          <p key='job-desenvolvedor-content-0'>
-          Participei na manutenção e desenvolvimento de features do site:{' '}
-            <Link href="https://ge.globo">GE(Globoesporte)</Link>.
-          </p>,
-          <p key='job-desenvolvedor-content-1'>
-          Participei na manutenção e desenvolvimento de features do APP para Smart TVs: Canais
-          globo (Antigo globosatplay) e Globoplay.
-          </p>,
-          <p key='job-desenvolvedor-content-2'>
-          Hoje atuo no time de pesquisa e desenvolvimento para a melhoria das APP de tv do
-          Globoplay, tanto para o usuário final quanto para os desenvolvedores.
-          </p>
-        ] }
-      ]
+      data: [
+        {
+          title: 'Desenvolvedor',
+          subtitle: 'Grupo Globo (HUB digital / antiga globo.com)',
+          content: [
+            <p key="job-desenvolvedor-content-0">
+              Participei na manutenção e desenvolvimento de features do site:{' '}
+              <Link href="https://ge.globo">GE(Globoesporte)</Link>.
+            </p>,
+            <p key="job-desenvolvedor-content-1">
+              Participei na manutenção e desenvolvimento de features do APP para Smart TVs: Canais
+              globo (Antigo globosatplay) e Globoplay.
+            </p>,
+            <p key="job-desenvolvedor-content-2">
+              Hoje atuo no time de pesquisa e desenvolvimento para a melhoria das APP de tv do
+              Globoplay, tanto para o usuário final quanto para os desenvolvedores.
+            </p>,
+          ],
+        },
+      ],
     },
-  ]
+  ];
 
   const freelaTimeline = [
     {
       mark: 2022,
-      data: [{
-        title: 'Moga Festival',
-        subtitle: 'Rethink',
-        content: [
-          <div key='content-moga-0'>
-            <ul>
-              <li><b>Site</b>: <Link href="https://mogafestival.com/" /></li>
-              <li><b>Stack de desenvolvimento</b>: NextJs</li>
-              <li><b>Desafios</b>: Ajudar no desenvolvimento do novo hostsite do festival.</li>
-            </ul>
-          </div>
-        ]
-      }],
+      data: [
+        {
+          title: 'Moga Festival',
+          subtitle: 'Rethink',
+          content: [
+            <div key="content-moga-0">
+              <ul>
+                <li>
+                  <b>Site</b>: <Link href="https://mogafestival.com/" />
+                </li>
+                <li>
+                  <b>Stack de desenvolvimento</b>: NextJs
+                </li>
+                <li>
+                  <b>Desafios</b>: Ajudar no desenvolvimento do novo hostsite do festival.
+                </li>
+              </ul>
+            </div>,
+          ],
+        },
+      ],
     },
     {
       mark: 2023,
-      data: [{
-        title: 'Projeto Interno',
-        subtitle: 'Firedev',
-        content: [
-          <div key='content-firedev-0'>
-            <ul>
-              <li><b>Site</b>: <Link href='https://firedev.com.br/' /></li>
-              <li><b>Stack de desenvolvimento</b>: React, styled component, Material UI</li>
-              <li><b>Desafios</b>: Ajudar no desenvolvimento de uma plataforma geração de CRUD interna.</li>
-            </ul>
-          </div>
-        ]
-      }],
+      data: [
+        {
+          title: 'Projeto Interno',
+          subtitle: 'Firedev',
+          content: [
+            <div key="content-firedev-0">
+              <ul>
+                <li>
+                  <b>Site</b>: <Link href="https://firedev.com.br/" />
+                </li>
+                <li>
+                  <b>Stack de desenvolvimento</b>: React, styled component, Material UI
+                </li>
+                <li>
+                  <b>Desafios</b>: Ajudar no desenvolvimento de uma plataforma geração de CRUD
+                  interna.
+                </li>
+              </ul>
+            </div>,
+          ],
+        },
+      ],
     },
-
-  ]
+    {
+      mark: 2024,
+      data: [
+        {
+          title: 'Projeto whitelabel para Smart Tv',
+          subtitle: 'Zoe web',
+          content: [
+            <div key="content-zoeweb-0">
+              <ul>
+                <li>
+                  <b>Site</b>: <Link href="https://zoeweb.com.br/" />
+                </li>
+                <li>
+                  <b>Stack de desenvolvimento</b>: React
+                </li>
+                <li>
+                  <b>Desafios</b>: Ajudar no desenvolvimento de uma app para Smart TVs com a
+                  facilidade de reaproveitar o projetos para os seus outros clientes.
+                </li>
+              </ul>
+            </div>,
+          ],
+        },
+      ],
+    },
+  ];
 
   return (
     <>
@@ -175,20 +220,16 @@ export function AuthorView() {
         </section>
 
         <section className={classNames(style.section, style.sectionDivision)}>
-          <Timeline
-            content={jobTimeline}
-          />
+          <Timeline content={jobTimeline} />
         </section>
       </Section>
       <Section>
-        <h3 className={style.sectionTitle} >Outros Projetos:</h3>
+        <h3 className={style.sectionTitle}>Outros Projetos:</h3>
         <section className={classNames(style.section, style.sectionDivision)}>
-          <Timeline
-            content={freelaTimeline}
-          />
+          <Timeline content={freelaTimeline} />
           <br />
           <p>
-            Deseja fazer parte desta lista? <Link href='estimate'>Faça seu orçamento!</Link>
+            Deseja fazer parte desta lista? <Link href="estimate">Faça seu orçamento!</Link>
           </p>
         </section>
       </Section>
