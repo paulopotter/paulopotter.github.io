@@ -31,7 +31,7 @@ const author = {
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/paulofrauches',
+      url: 'https://twitter.com/o_umdevqualquer',
     },
     {
       name: 'Calendly',
@@ -41,8 +41,8 @@ const author = {
 };
 
 const socialShare = {
-  TWITTER_SITE: '@paulofrauches',
-  TWITTER_CREATOR: '@paulofrauches',
+  TWITTER_SITE: '@o_umdevqualquer',
+  TWITTER_CREATOR: '@o_umdevqualquer',
   TWITTER_CARD: 'summary_large_image',
 };
 
