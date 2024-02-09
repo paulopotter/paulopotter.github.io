@@ -1,0 +1,14 @@
+{
+  "rendering_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "keyboard": {
+    "use": true,
+    "color": "WHITE"
+  },
+  "mode": "key",
+  "user_agent": "",
+  "console_log": true,
+  "picture_quality": "PQ_LEVEL_LOW"
+}
