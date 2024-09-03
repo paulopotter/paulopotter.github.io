@@ -197,7 +197,7 @@ export function AuthorView() {
               return (
                 <li className={style.socialItem} key={`${social.name}-${index}`}>
                   <Link href={social.url} title={social.name} disableIcon>
-                    {social.name.toLowerCase() === 'calendly' ? (
+                    {social.name.toLowerCase() === 'cal' ? (
                       <CalendlySvg
                         className={style.socialIcon}
                         tabIndex={-1}

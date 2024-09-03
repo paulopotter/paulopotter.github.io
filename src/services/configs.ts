@@ -34,8 +34,8 @@ const author = {
       url: 'https://twitter.com/o_umdevqualquer',
     },
     {
-      name: 'Calendly',
-      url: 'https://calendly.com/umdevqualquer',
+      name: 'Cal',
+      url: 'https://app.cal.com/umdevqualquer',
     },
   ],
 };
