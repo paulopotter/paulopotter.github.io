@@ -38,7 +38,41 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
+  get_and_commit_notions_tips:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@v3
 
-  Deploy:
+      - name: notion-jam
+        # uses: victornpb/notion-jam@v0.0.13
+        uses: paulopotter/notion-jam@main
+        with:
+          NOTION_SECRET: ${{ secrets.NOTION_TOKEN}}
+          NOTION_DATABASE: ${{ secrets.NOTION_ROOT_PAGE_ID }}
+          FILTER_PROP: ${{ vars.FILTER_PROP }}
+          FILTER_TYPE: ${{ vars.FILTER_TYPE }}
+          FILTER_VALUES: ${{ vars.FILTER_VALUES }}
+          ARTICLE_PATH: src/tips/${{ vars.POST_URI }}.md
+          ASSETS_PATH: public/images/${{ vars.POST_URI }}/
+          PARALLEL_PAGES: 25
+          PARALLEL_DOWNLOADS_PER_PAGE: 3
+          SKIP_DOWNLOADED_IMAGES: true
+          DOWNLOAD_IMAGE_TIMEOUT: 30
+
+      - name: Save changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'docs: add new tips'
+      - uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+  Deploy_Posts:
     needs: get_and_commit_notions_posts
+    uses: ./.github/workflows/deploy.yml
+
+  Deploy_Tips:
+    needs: get_and_commit_notions_tips
     uses: ./.github/workflows/deploy.yml
