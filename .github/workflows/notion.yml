@@ -30,26 +30,12 @@ jobs:
           SKIP_DOWNLOADED_IMAGES: true
           DOWNLOAD_IMAGE_TIMEOUT: 30
 
-      - name: Save changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: 'docs: add new post'
-      - uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-  get_and_commit_notions_tips:
-    runs-on: ubuntu-latest
-    environment: github-pages
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: notion-jam
+      - name: notion-jam-tips
         # uses: victornpb/notion-jam@v0.0.13
         uses: paulopotter/notion-jam@main
         with:
           NOTION_SECRET: ${{ secrets.NOTION_TOKEN}}
-          NOTION_DATABASE: ${{ secrets.NOTION_ROOT_PAGE_ID }}
+          NOTION_DATABASE: ${{ secrets.NOTION_ROOT_TIPS_PAGE_ID }}
           FILTER_PROP: ${{ vars.FILTER_PROP }}
           FILTER_TYPE: ${{ vars.FILTER_TYPE }}
           FILTER_VALUES: ${{ vars.FILTER_VALUES }}
@@ -63,7 +49,7 @@ jobs:
       - name: Save changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: 'docs: add new tips'
+          commit_message: 'docs: add new post'
       - uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -71,8 +57,4 @@ jobs:
 
   Deploy_Posts:
     needs: get_and_commit_notions_posts
-    uses: ./.github/workflows/deploy.yml
-
-  Deploy_Tips:
-    needs: get_and_commit_notions_tips
     uses: ./.github/workflows/deploy.yml
