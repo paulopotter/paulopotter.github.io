@@ -7,7 +7,6 @@ import { useTheme } from 'react-jss';
 import { Head, Link, Section } from 'components';
 import CONFIGS from 'services/configs';
 import { AuthorStyle } from './author.style';
-import { CalendlySvg } from 'assets/images';
 import { ITHEME } from 'theme';
 import { Timeline } from './components';
 

@@ -5,7 +5,6 @@ import { Link } from 'components';
 import CONFIGS from 'services/configs';
 import { ITHEME } from 'theme';
 import { AuthorCardStyle } from './author.style';
-import { CalendlySvg } from 'assets/images';
 
 const { AUTHOR_IMG, SOCIAL } = CONFIGS;
 
