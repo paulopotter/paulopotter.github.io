@@ -32,27 +32,20 @@ export function Author() {
 
         <ul className={style.socialList}>
           {SOCIAL?.map((social, index) => {
-            const socialName: BSIconKeysType = social.name as BSIconKeysType;
+            const socialName: BSIconKeysType = social.name.toLowerCase().startsWith('cal')
+              ? 'CalendarEvent'
+              : (social.name as BSIconKeysType);
             const SocialIcon = BSIcons[socialName] as unknown as any;
 
             return (
               <li className={style.socialItem} key={`${social.name}-${index}`}>
                 <a href={social.url} className={style.socialItemLink} title={social.name}>
-                  {social.name.toLowerCase() === 'calendly' ? (
-                    <CalendlySvg
-                      className={style.socialIcon}
-                      tabIndex={-1}
-                      alt={`${social.name}`}
-                      title={`${social.name}`}
-                    />
-                  ) : (
-                    <SocialIcon
-                      className={style.socialIcon}
-                      tabIndex={-1}
-                      alt={`${social.name}`}
-                      title={`${social.name}`}
-                    />
-                  )}
+                  <SocialIcon
+                    className={style.socialIcon}
+                    tabIndex={-1}
+                    alt={`${social.name}`}
+                    title={`${social.name}`}
+                  />
                   <span className={style.socialIconName}>{social.name}</span>
                 </a>
               </li>

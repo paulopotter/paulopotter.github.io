@@ -191,27 +191,20 @@ export function AuthorView() {
           <ul className={style.socialList}>
             {SOCIAL?.map((social, index) => {
               type BSIconKeysType = keyof typeof BSIcons;
-              const socialName: BSIconKeysType = social.name as BSIconKeysType;
+              const socialName: BSIconKeysType = social.name.toLowerCase().startsWith('cal')
+                ? 'CalendarEvent'
+                : (social.name as BSIconKeysType);
 
               const SocialIcon = BSIcons[socialName] as unknown as any;
               return (
                 <li className={style.socialItem} key={`${social.name}-${index}`}>
                   <Link href={social.url} title={social.name} disableIcon>
-                    {social.name.toLowerCase() === 'cal' ? (
-                      <CalendlySvg
-                        className={style.socialIcon}
-                        tabIndex={-1}
-                        alt={`${social.name}`}
-                        title={`${social.name}`}
-                      />
-                    ) : (
-                      <SocialIcon
-                        className={style.socialIcon}
-                        tabIndex={-1}
-                        alt={`${social.name}`}
-                        title={`${social.name}`}
-                      />
-                    )}
+                    <SocialIcon
+                      className={style.socialIcon}
+                      tabIndex={-1}
+                      alt={`${social.name}`}
+                      title={`${social.name}`}
+                    />
                   </Link>
                 </li>
               );
