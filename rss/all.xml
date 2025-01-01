@@ -4,7 +4,7 @@
         <title>Um dev qualquer || Paulo Oliveira</title>
         <link>https://umdevqualquer.com.br</link>
         <description>Blog pessoal onde mostro um pouco do meu aprendizado.</description>
-        <lastBuildDate>Tue, 31 Dec 2024 18:23:26 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Jan 2025 08:22:54 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>pt-BR</language>
@@ -13,7 +13,7 @@
             <url>https://umdevqualquer.com.br/images/favicon.ico</url>
             <link>https://umdevqualquer.com.br</link>
         </image>
-        <copyright>All rights reserved 2024, Paulo Oliveira</copyright>
+        <copyright>All rights reserved 2025, Paulo Oliveira</copyright>
         <item>
             <title><![CDATA[Integrando Notion com Github]]></title>
             <link>https://umdevqualquer.com.br/integrando-notion-com-github?resource=rss</link>
