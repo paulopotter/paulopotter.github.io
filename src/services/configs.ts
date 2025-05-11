@@ -59,6 +59,7 @@ const menu: {
     'Dicas / Snippets': '/tips',
     //  'Talks / Palestras': '/talks',
     'Sobre Mim': '/author',
+    'Recomendações de compra': '/sales',
     'Faça seu orçamento!': '/estimate',
   },
 };

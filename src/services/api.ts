@@ -5,16 +5,19 @@ import CONFIGS from './configs';
 
 import type { PostData, PostMetaStructure } from '../modules/posts/posts.type';
 
-type PostsType = 'post' | 'tips'
+type PostsType = 'post' | 'tips' | 'sales';
 
 const postsDirectory = join(process.cwd(), 'src/posts');
 const tipsDirectory = join(process.cwd(), 'src/tips');
+const salesDirectory = join(process.cwd(), 'src/sales');
 const getMarkdownsFiles = (directoryType: PostsType = 'post'): string[] => {
-  if(directoryType === "tips"){
+  if (directoryType === 'tips') {
     return fs.readdirSync(tipsDirectory);
+  } else if (directoryType === 'sales') {
+    return fs.readdirSync(salesDirectory);
   }
   return fs.readdirSync(postsDirectory);
-}
+};
 
 type RelatedPost = {
   nextPost?: PostData;
@@ -24,21 +27,30 @@ type RelatedPost = {
 // type PostKey = keyof PostData;
 
 type getPostProps = {
-  filename: string,
-  fields?: string[],
-  postType?: PostsType
-}
+  filename: string;
+  fields?: string[];
+  postType?: PostsType;
+};
 /**
  * Busca um post baseado no nome do arquivo.
  * @param filename Slug ou nome do arquivo com extensão.
  * @param fields Campos do post que será retornado.
  */
-export function getPost({ filename, fields = [], postType = 'post' }: getPostProps): PostData | undefined {
-  if(filename === undefined){
-    return
+export function getPost({
+  filename,
+  fields = [],
+  postType = 'post',
+}: getPostProps): PostData | undefined {
+  if (filename === undefined) {
+    return;
   }
   const slug = filename.replace(/\.md$/, ''); // Remover o .md do fim do arquivo
-  const directory = join(postType === 'post' ? postsDirectory : tipsDirectory, `${slug}.md`); // Buscando pelo nome do arquivo markdown, com o .md
+  const directoryByType = {
+    post: postsDirectory,
+    tips: tipsDirectory,
+    sales: salesDirectory,
+  };
+  const directory = join(directoryByType[postType], `${slug}.md`); // Buscando pelo nome do arquivo markdown, com o .md
   const fileContents = fs.readFileSync(directory, 'utf8'); // Ler o conteúdo do arquivo markdown
 
   /**
@@ -60,7 +72,7 @@ export function getPost({ filename, fields = [], postType = 'post' }: getPostPro
   } as PostData;
 
   if (fields.length === 0) {
-    return post
+    return post;
   }
 
   const filtered = Object.keys(post)
@@ -72,8 +84,7 @@ export function getPost({ filename, fields = [], postType = 'post' }: getPostPro
       return obj;
     }, {}) as PostData;
 
-
-  return filtered || {}
+  return filtered || {};
 }
 
 /**
@@ -83,18 +94,20 @@ export function getPost({ filename, fields = [], postType = 'post' }: getPostPro
 function getSummary(content: string): string {
   const summaryStartKey = '<!-- START_SUMMARY -->';
   const summaryStartKeyIndex = content.indexOf(summaryStartKey);
-  const startSubstr = summaryStartKeyIndex > -1 ? summaryStartKeyIndex + summaryStartKey.length : 0
+  const startSubstr = summaryStartKeyIndex > -1 ? summaryStartKeyIndex + summaryStartKey.length : 0;
 
   const summaryEndKey = '<!-- END_SUMMARY -->';
   const summaryEndKeyIndex = content.indexOf(summaryEndKey);
 
-  const substrLength = summaryEndKeyIndex > -1 && summaryEndKeyIndex > startSubstr ? summaryEndKeyIndex - summaryEndKey.length - summaryStartKeyIndex - 2 : 140;
+  const substrLength =
+    summaryEndKeyIndex > -1 && summaryEndKeyIndex > startSubstr
+      ? summaryEndKeyIndex - summaryEndKey.length - summaryStartKeyIndex - 2
+      : 140;
 
-  const hasEllipse = summaryEndKeyIndex < 0 || summaryEndKeyIndex < summaryStartKeyIndex
+  const hasEllipse = summaryEndKeyIndex < 0 || summaryEndKeyIndex < summaryStartKeyIndex;
 
   return `${content.substr(startSubstr, substrLength).trim()}${hasEllipse ? '...' : ''}`;
 }
-
 
 /**
  * Busca todos os posts e retorna posts com os campos selecionados.
@@ -102,12 +115,14 @@ function getSummary(content: string): string {
  */
 export function getAllPosts(fields?: string[]): PostData[] {
   const slugs = getMarkdownsFiles('post');
-  return slugs
-    .map((slug: string): PostData => getPost({ filename:slug, fields }) as PostData)
-    .filter(post => post)
-    // .filter(post => post.date)
-    .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
-    .filter(post => Object.keys(post)?.length !== 0);
+  return (
+    slugs
+      .map((slug: string): PostData => getPost({ filename: slug, fields }) as PostData)
+      .filter(post => post)
+      // .filter(post => post.date)
+      .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
+      .filter(post => Object.keys(post)?.length !== 0)
+  );
 }
 
 // type getFiltredPostsProps = {
@@ -123,7 +138,7 @@ export function getAllPosts(fields?: string[]): PostData[] {
  * @return PostData[]
  */
 export function getFiltredPosts(fields?: string[], filter?: string[][]): PostData[] {
-  const allPosts =  getAllPosts(fields);
+  const allPosts = getAllPosts(fields);
 
   if (filter === undefined || filter?.length === 0) return allPosts;
 
@@ -195,7 +210,7 @@ function filterRelatedPosts(
  * @param postTitle ?
  */
 export function getRelatedSeries(serie: string, postTitle = ''): unknown {
-  const posts = getAllPosts( ['series', 'title', 'slug', 'date'] );
+  const posts = getAllPosts(['series', 'title', 'slug']);
 
   const relatedPosts = posts
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -226,12 +241,28 @@ export function getRelatedSeries(serie: string, postTitle = ''): unknown {
 // }
 
 type getAllTipsProps = {
-  fields?: string[]
-}
+  fields?: string[];
+};
 export function getAllTips({ fields = [] }: getAllTipsProps) {
   const slugs = getMarkdownsFiles('tips');
   return slugs
-    .map((slug: string): PostData => getPost({ filename: slug, fields ,postType: "tips" }) as PostData)
+    .map(
+      (slug: string): PostData => getPost({ filename: slug, fields, postType: 'tips' }) as PostData
+    )
+    .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
+    .filter(post => Object.keys(post).length !== 0);
+}
+
+//
+type getAllSalesProps = {
+  fields?: string[];
+};
+export function getAllSales({ fields = [] }: getAllSalesProps) {
+  const slugs = getMarkdownsFiles('sales');
+  return slugs
+    .map(
+      (slug: string): PostData => getPost({ filename: slug, fields, postType: 'sales' }) as PostData
+    )
     .sort((a, b): number => new Date(b.date!).getTime() - new Date(a.date!).getTime())
     .filter(post => Object.keys(post).length !== 0);
 }
