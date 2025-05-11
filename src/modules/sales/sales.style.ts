@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import { ITHEME, MEDIA_QUERIES } from 'theme';
+import { ITHEME } from 'theme';
 
 export const SalesStyles = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
   articleTitleContent: {
