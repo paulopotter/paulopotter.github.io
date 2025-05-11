@@ -51,7 +51,7 @@ jobs:
         uses: paulopotter/notion-jam@main
         with:
           NOTION_SECRET: ${{ secrets.NOTION_TOKEN}}
-          NOTION_DATABASE: ${{ secrets.NOTION_ROOT_TIPS_PAGE_ID }}
+          NOTION_DATABASE: ${{ secrets.NOTION_ROOT_SALES_PAGE_ID }}
           FILTER_PROP: ${{ vars.FILTER_PROP }}
           FILTER_TYPE: ${{ vars.FILTER_TYPE }}
           FILTER_VALUES: ${{ vars.FILTER_VALUES }}
