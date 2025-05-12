@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import { ITHEME } from 'theme';
+import { FONT, ITHEME } from 'theme';
 
 export const SalesStyles = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
   articleTitleContent: {
@@ -20,14 +20,13 @@ export const SalesStyles = createUseStyles<string, unknown, ITHEME>((theme: ITHE
     fontStyle: 'italic',
   },
 
-  tabs: {
-  },
+  tabs: {},
   oneTab: {
     '&$tabPanel': {
       background: 'none',
       border: 'none',
       padding: 0,
-    }
+    },
   },
   tabList: {
     display: 'flex',
@@ -50,5 +49,49 @@ export const SalesStyles = createUseStyles<string, unknown, ITHEME>((theme: ITHE
     margin: ['0', 'auto'],
     padding: ['2em', '1em'],
     border: `1px solid ${theme.color.primary}`,
+
+    '& h3': {
+      fontFamily: FONT.secondary,
+      fontSize: '1.2em',
+      fontWeight: 'bold',
+    },
+
+    '& h4': {
+      // fontFamily: FONT.secondary,
+      fontSize: '1.1em',
+    },
+
+    '& figure': {
+      maxWidth: '350px',
+      float: 'left',
+      clear: 'left',
+      marginBottom: '1em',
+    },
+
+    '& table': {
+      '& *': {
+        fontWeight: 'normal',
+      },
+      '& th:first-child, & td:first-child': {
+        textAlign: 'right',
+        // fontWeight: 'bold',
+        fontStyle: 'italic',
+        paddingRight: '3px',
+        verticalAlign: 'baseline',
+      },
+      '& th:last-child *': {
+        fontWeight: 'bold',
+      },
+      '& th:last-child, & td:last-child': {
+        textAlign: 'left',
+        paddingLeft: '6px',
+        verticalAlign: 'bottom',
+      },
+    },
+
+    '& hr': {
+      clear: 'both',
+      margin: '1em 0',
+    },
   },
 }));
