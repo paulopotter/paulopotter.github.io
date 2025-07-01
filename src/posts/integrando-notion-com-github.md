@@ -9,7 +9,7 @@ series: []
 date: 2024-10-02 11:24
 uri: integrando-notion-com-github
 category:
-  - Produtividade
+  - null
   - Automação
 cover_image_alt: Imagem com a logo da notion + logo github actions
 Status: Publicado
