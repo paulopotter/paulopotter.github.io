@@ -1,29 +1,27 @@
 import React from 'react';
-import { DiscussionEmbed } from 'disqus-react';
-import CONFIGS from 'services/configs';
+import Giscus from '@giscus/react';
+import { useTheme } from 'react-jss';
+import { ITHEME } from 'theme';
 
-const { DEFAULT_LANG , DISQUS_SITENAME } = CONFIGS;
 
-type CommentsProps = {
-  title: string
-}
-
-export const Comments = ({ title }: CommentsProps): JSX.Element => {
-  const url = `${
-    window.location.href.indexOf('.html') > -1
-      ? window.location.href
-      : window.location.href + '.html'
-  }`
+export const Comments = (): JSX.Element => {
+  const theme: ITHEME = useTheme();
+  const isLightTheme = theme.name === 'light';
 
   return (
-    <DiscussionEmbed
-      shortname={DISQUS_SITENAME}
-      config={{
-        url: url,
-        identifier: url,
-        title: title,
-        language: DEFAULT_LANG.replace('-', '_'),
-      }}
+    <Giscus
+      id="comments"
+      repo="paulopotter/paulopotter.github.io"
+      repoId="MDEwOlJlcG9zaXRvcnk0NDM1MzMxMA=="
+      category="Q&A"
+      categoryId="DIC_kwDOAqTHHs4Ctltk"
+      mapping="title"
+      reactionsEnabled="1"
+      emitMetadata="0"
+      inputPosition="top"
+      theme={isLightTheme === true ? 'catppuccin_latte' : 'dark_dimmed'}
+      lang="pt"
+      loading="lazy"
     />
-  )
-}
+  );
+};

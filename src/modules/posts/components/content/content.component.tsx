@@ -50,23 +50,19 @@ export const Post = ({ post }: Props) => {
           </h1>
           {post?.readingTime && <small> Tempo médio de leitura: {post.readingTime}.</small>}
           <div className={style.articleContent}>
-            {
-              post?.cover_image && (
-                <Image
-                  src={post.cover_image}
-                  alt={post.cover_image_alt}
-                  className={style}
-                  caption={{
-                    link: post.cover_image_link,
-                    className: style,
-                    text: post.cover_image_by,
-                  }}
-                />
-              )
-            }
-            <Markdown>
-              { post.content as any }
-            </Markdown>
+            {post?.cover_image && (
+              <Image
+                src={post.cover_image}
+                alt={post.cover_image_alt}
+                className={style}
+                caption={{
+                  link: post.cover_image_link,
+                  className: style,
+                  text: post.cover_image_by,
+                }}
+              />
+            )}
+            <Markdown>{post.content as any}</Markdown>
           </div>
 
           <AuthorCard />
@@ -77,9 +73,7 @@ export const Post = ({ post }: Props) => {
         </article>
       </section>
       <section>
-        <Comments
-          title={post.title}
-        />
+        <Comments />
       </section>
     </>
   );
