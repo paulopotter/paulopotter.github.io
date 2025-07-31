@@ -65,7 +65,18 @@ export const SalesStyles = createUseStyles<string, unknown, ITHEME>((theme: ITHE
       maxWidth: '350px',
       float: 'left',
       clear: 'left',
-      marginBottom: '1em',
+      paddingBottom: '1em',
+
+      '& figure': {
+        paddingBottom: '0',
+      },
+
+      '& figcaption': {
+        fontSize: '0.6em',
+        fontStyle: 'italic',
+        marginTop: '0.3em',
+        position: 'relative',
+      },
     },
 
     '& table': {
@@ -74,12 +85,11 @@ export const SalesStyles = createUseStyles<string, unknown, ITHEME>((theme: ITHE
       },
       '& th:first-child, & td:first-child': {
         textAlign: 'right',
-        // fontWeight: 'bold',
         fontStyle: 'italic',
         paddingRight: '3px',
         verticalAlign: 'baseline',
       },
-      '& th:last-child *': {
+      '& th:last-child *, & th:last-child': {
         fontWeight: 'bold',
       },
       '& th:last-child, & td:last-child': {
