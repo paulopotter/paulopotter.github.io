@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import { FONT, ITHEME } from 'theme';
+import { FONT, ITHEME, MEDIA_QUERIES } from 'theme';
 
 export const SalesStyles = createUseStyles<string, unknown, ITHEME>((theme: ITHEME) => ({
   articleTitleContent: {
@@ -49,11 +49,13 @@ export const SalesStyles = createUseStyles<string, unknown, ITHEME>((theme: ITHE
     margin: ['0', 'auto'],
     padding: ['2em', '1em'],
     border: `1px solid ${theme.color.primary}`,
+    display: 'block',
 
     '& h3': {
       fontFamily: FONT.secondary,
       fontSize: '1.2em',
       fontWeight: 'bold',
+      clear: 'both',
     },
 
     '& h4': {
@@ -80,16 +82,42 @@ export const SalesStyles = createUseStyles<string, unknown, ITHEME>((theme: ITHE
     },
 
     '& table': {
+      float: 'left',
+      clear: 'right',
+      marginTop: '2em',
+      width: 'calc(100% - 360px)',
+
+      [`@media (max-width: ${MEDIA_QUERIES.xs})`]: {
+        width: '100%',
+        display: 'block',
+        border: `1px solid ${theme.color.primary}`,
+
+        '& th, & td': {
+          display: 'block',
+          width: '100%',
+          textAlign: 'left',
+        },
+      },
       '& *': {
         fontWeight: 'normal',
       },
+
+      '& tr': {
+        borderBottom: `1px dashed ${theme.color.primary}`,
+      },
+
+      '& tr th': {
+        borderBottom: `1px solid ${theme.color.primary}`,
+        [`@media (max-width: ${MEDIA_QUERIES.xs})`]: {
+          borderBottom: 'none',
+        },
+      },
       '& th:first-child, & td:first-child': {
-        textAlign: 'right',
+        textAlign: 'left',
         fontStyle: 'italic',
-        paddingRight: '3px',
         verticalAlign: 'baseline',
       },
-      '& th:last-child *, & th:last-child': {
+      '& th:last-child *, & th:last-child, & th strong': {
         fontWeight: 'bold',
       },
       '& th:last-child, & td:last-child': {
