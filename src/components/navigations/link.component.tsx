@@ -1,5 +1,5 @@
 import { default as NextLink } from 'next/link';
-import { RiShareBoxLine } from '@mindyjs/icons';
+import RiShareBoxLine from 'remixicon-react/ShareBoxLineIcon';
 
 import CONFIGS from 'services/configs';
 import { LinkStyle } from './link.style';

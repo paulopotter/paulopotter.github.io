@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { useTheme } from 'react-jss';
-import { RiArrowUpCircleFill } from '@mindyjs/icons';
+import RiArrowUpCircleFill from 'remixicon-react/ArrowUpCircleFillIcon';
 
 import { FooterStyle } from './footer.style';
 import { ITHEME } from 'theme';

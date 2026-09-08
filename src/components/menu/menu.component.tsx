@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTheme } from 'react-jss';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
-import { RiMenuLine } from '@mindyjs/icons';
+import RiMenuLine from 'remixicon-react/MenuLineIcon';
 
 import CONFIGS from 'services/configs';
 import { Link } from '../navigations';

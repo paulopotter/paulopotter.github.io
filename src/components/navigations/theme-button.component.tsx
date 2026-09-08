@@ -2,7 +2,7 @@ import React, { BaseSyntheticEvent } from 'react';
 import { useTheme } from 'react-jss';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
-import { RiLightbulbFill } from '@mindyjs/icons';
+import RiLightbulbFill from 'remixicon-react/LightbulbFillIcon';
 
 import { ThemeButtonStyle } from './theme-button.style';
 import { ITHEME } from 'theme';
